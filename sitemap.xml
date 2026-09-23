@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Homepage -->
+  <url>
+    <loc>https://huzikit.com/</loc>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- 1. Text Tools -->
+  <url><loc>https://huzikit.com/texttools/word-counter.html</loc><priority>0.8</priority></url>
+  <url><loc>https://huzikit.com/texttools/character-counter.html</loc><priority>0.8</priority></url>
+  <url><loc>https://huzikit.com/texttools/case-converter.html</loc><priority>0.8</priority></url>
+  <url><loc>https://huzikit.com/texttools/remove-duplicate-lines.html</loc><priority>0.8</priority></url>
+  <url><loc>https://huzikit.com/texttools/lorem-ipsum-generator.html</loc><priority>0.8</priority></url>
+  <url><loc>https://huzikit.com/texttools/password-generator.html</loc><priority>0.8</priority></url>
+  <url><loc>https://huzikit.com/texttools/text-reverser.html</loc><priority>0.8</priority></url>
+  <url><loc>https://huzikit.com/texttools/online-notepad.html</loc><priority>0.8</priority></url>
+
+  <!-- 2. Calculators -->
+  <url><loc>https://huzikit.com/calculators/age-calculator.html</loc><priority>0.8</priority></url>
+  <url><loc>https://huzikit.com/calculators/bmi-calculator.html</loc><priority>0.8</priority></url>
+  <url><loc>https://huzikit.com/calculators/percentage-calculator.html</loc><priority>0.8</priority></url>
+  <url><loc>https://huzikit.com/calculators/calorie-calculator.html</loc><priority>0.8</priority></url>
+  <url><loc>https://huzikit.com/calculators/discount-calculator.html</loc><priority>0.8</priority></url>
+  <url><loc>https://huzikit.com/calculators/savings-goal-calculator.html</loc><priority>0.8</priority></url>
+  <url><loc>https://huzikit.com/calculators/tip-calculator.html</loc><priority>0.8</priority></url>
+  <url><loc>https://huzikit.com/calculators/gpa-calculator.html</loc><priority>0.8</priority></url>
+
+  <!-- 3. Image & PDF -->
+  <url><loc>https://huzikit.com/imagepdf/image-compressor.html</loc><priority>0.8</priority></url>
+  <url><loc>https://huzikit.com/imagepdf/image-resizer.html</loc><priority>0.8</priority></url>
+  <url><loc>https://huzikit.com/imagepdf/pdf-to-word.html</loc><priority>0.8</priority></url>
+  <url><loc>https://huzikit.com/imagepdf/jpg-to-png.html</loc><priority>0.8</priority></url>
+  <url><loc>https://huzikit.com/imagepdf/color-picker.html</loc><priority>0.8</priority></url>
+  <url><loc>https://huzikit.com/imagepdf/qr-code-generator.html</loc><priority>0.8</priority></url>
+
+  <!-- 4. Developer -->
+  <url><loc>https://huzikit.com/developer/json-formatter.html</loc><priority>0.8</priority></url>
+  <url><loc>https://huzikit.com/developer/base64-encoder-decoder.html</loc><priority>0.8</priority></url>
+  <url><loc>https://huzikit.com/developer/url-encoder-decoder.html</loc><priority>0.8</priority></url>
+  <url><loc>https://huzikit.com/developer/meta-tag-generator.html</loc><priority>0.8</priority></url>
+  <url><loc>https://huzikit.com/developer/regex-tester.html</loc><priority>0.8</priority></url>
+  <url><loc>https://huzikit.com/developer/markdown-to-html.html</loc><priority>0.8</priority></url>
+  <url><loc>https://huzikit.com/developer/css-minifier.html</loc><priority>0.8</priority></url>
+  <url><loc>https://huzikit.com/developer/unix-timestamp.html</loc><priority>0.8</priority></url>
+
+  <!-- Legal & Support Pages -->
+  <url><loc>https://huzikit.com/privacy-policies.html</loc><priority>0.4</priority></url>
+  <url><loc>https://huzikit.com/Termsofservices.html</loc><priority>0.4</priority></url>
+  <url><loc>https://huzikit.com/contact-us.html</loc><priority>0.5</priority></url>
+  <url><loc>https://huzikit.com/disclamier.html</loc><priority>0.4</priority></url>
+  <url><loc>https://huzikit.com/toolpage.html</loc><priority>0.5</priority></url>
+</urlset>
