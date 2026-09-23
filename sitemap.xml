@@ -1,213 +1,161 @@
-### Homepage
-
-```html
-<link rel="canonical" href="https://huzikit.com/" />
-```
-
-### Text Tools
-
-**1. Word Counter**
-
-```html
-<link rel="canonical" href="https://huzikit.com/texttools/word-counter.html" />
-```
-
-**2. Character Counter**
-
-```html
-<link rel="canonical" href="https://huzikit.com/texttools/character-counter.html" />
-```
-
-**3. Case Converter**
-
-```html
-<link rel="canonical" href="https://huzikit.com/texttools/case-converter.html" />
-```
-
-**4. Remove Duplicate Lines**
-
-```html
-
-<link rel="canonical" href="https://huzikit.com/texttools/remove-duplicate-lines.html" />
-```
-
-**5. Lorem Ipsum Generator**
-
-```html
-<link rel="canonical" href="https://huzikit.com/texttools/loremipsumgenerator.html" />
-```
-
-**6. Password Generator**
-
-```html
-<link rel="canonical" href="https://huzikit.com/texttools/passwordgenerator.html" />
-```
-
-**7. Text Reverser**
-
-```html
-<link rel="canonical" href="https://huzikit.com/texttools/text-reverser.html" />
-```
-
-**8. Online Notepad**
-
-```html
-<link rel="canonical" href="https://huzikit.com/texttools/onlinenotepad.html" />
-```
-
-### Calculators
-
-**9. Age Calculator**
-
-```html
-<link rel="canonical" href="https://huzikit.com/calculator/agecalculator.html" />
-```
-
-**10. BMI Calculator**
-
-```html
-<link rel="canonical" href="https://huzikit.com/calculator/bmi-calculator.html" />
-```
-
-**11. Percentage Calculator**
-
-```html
-<link rel="canonical" href="https://huzikit.com/calculator/percentage-calculator.html" />
-```
-
-**12. Calorie Calculator**
-
-```html
-<link rel="canonical" href="https://huzikit.com/calculator/Calorie-Calculator.html" />
-```
-
-**13. Discount Calculator**
-
-```html
-<link rel="canonical" href="https://huzikit.com/calculator/discount-calculator.html" />
-```
-
-**14. Savings & Goal Calculator**
-
-```html
-<link rel="canonical" href="https://huzikit.com/calculator/saving&amp;goalcalculator.html" />
-```
-
-**15. Tip Calculator**
-
-```html
-<link rel="canonical" href="https://huzikit.com/calculator/tip-calculator.html" />
-```
-
-**16. GPA Calculator**
-
-```html
-<link rel="canonical" href="https://huzikit.com/calculator/gpa-calculator.html" />
-```
-
-### Image & PDF
-
-**17. Image Compressor**
-
-```html
-<link rel="canonical" href="https://huzikit.com/image&amp;pdf/image-compressor.html" />
-```
-
-**18. Image Resizer**
-
-```html
-<link rel="canonical" href="https://huzikit.com/image&amp;pdf/image-resizer.html" />
-```
-
-**19. PDF to Word**
-
-```html
-<link rel="canonical" href="https://huzikit.com/image&amp;pdf/pdftowordconverter.html" />
-```
-
-**20. JPG to PNG**
-
-```html
-<link rel="canonical" href="https://huzikit.com/image&amp;pdf/jpg-to-png.html" />
-```
-
-**21. Color Picker / HEX**
-
-```html
-<link rel="canonical" href="https://huzikit.com/image&amp;pdf/colorpicker.html" />
-```
-
-**22. QR Code Generator**
-
-```html
-<link rel="canonical" href="https://huzikit.com/image&amp;pdf/QRGenrator.html" />
-```
-
-### Developer Tools
-
-**23. JSON Formatter**
-
-```html
-<link rel="canonical" href="https://huzikit.com/developertools/JSONFORMATTER.html" />
-```
-
-**24. Base64 Encoder/Decoder**
-
-```html
-<link rel="canonical" href="https://huzikit.com/developertools/base64encoderdecoder.html" />
-```
-
-**25. URL Encoder/Decoder**
-
-```html
-<link rel="canonical" href="https://huzikit.com/developertools/urlencoderdecoder.html" />
-```
-
-**26. Meta Tag Generator**
-
-```html
-<link rel="canonical" href="https://huzikit.com/developertools/meta-tag-generator.html" />
-```
-
-**27. Regex Tester**
-
-```html
-<link rel="canonical" href="https://huzikit.com/developertools/regextester.html" />
-```
-
-**28. Markdown to HTML**
-
-```html
-<link rel="canonical" href="https://huzikit.com/developertools/markdownhtml.html" />
-```
-
-**29. CSS Minifier**
-
-```html
-<link rel="canonical" href="https://huzikit.com/developertools/cssminifier.html" />
-```
-
-**30. Unix Timestamp**
-
-```html
-<link rel="canonical" href="https://huzikit.com/developertools/unixtimestamp.html" />
-```
-
-### Main / Company Pages
-
-```html id="4e9m2x"
-<!-- About -->
-<link rel="canonical" href="https://huzikit.com/about.html" />
-
-<!-- Disclaimer -->
-<link rel="canonical" href="https://huzikit.com/disclamier.html" />
-
-<!-- Privacy Policy -->
-<link rel="canonical" href="https://huzikit.com/privacy-policies.html" />
-
-<!-- Terms of Service -->
-<link rel="canonical" href="https://huzikit.com/Termsofservices.html" />
-
-<!-- Contact -->
-<link rel="canonical" href="https://huzikit.com/contact-us.html" />
-```
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <!-- Homepage -->
+    <url>
+        <loc>https://huzikit.com/</loc>
+        <changefreq>daily</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- Text Tools -->
+    <url>
+        <loc>https://huzikit.com/texttools/word-counter.html</loc>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://huzikit.com/texttools/character-counter.html</loc>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://huzikit.com/texttools/case-converter.html</loc>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://huzikit.com/texttools/remove-duplicate-lines.html</loc>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://huzikit.com/texttools/loremipsumgenerator.html</loc>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://huzikit.com/texttools/passwordgenerator.html</loc>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://huzikit.com/texttools/text-reverser.html</loc>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://huzikit.com/texttools/onlinenotepad.html</loc>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Calculators -->
+    <url>
+        <loc>https://huzikit.com/calculator/agecalculator.html</loc>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://huzikit.com/calculator/bmi-calculator.html</loc>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://huzikit.com/calculator/percentage-calculator.html</loc>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://huzikit.com/calculator/Calorie-Calculator.html</loc>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://huzikit.com/calculator/discount-calculator.html</loc>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://huzikit.com/calculator/saving&amp;goalcalculator.html</loc>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://huzikit.com/calculator/tip-calculator.html</loc>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://huzikit.com/calculator/gpa-calculator.html</loc>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Image & PDF -->
+    <url>
+        <loc>https://huzikit.com/image&amp;pdf/image-compressor.html</loc>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://huzikit.com/image&amp;pdf/image-resizer.html</loc>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://huzikit.com/image&amp;pdf/pdftowordconverter.html</loc>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://huzikit.com/image&amp;pdf/jpg-to-png.html</loc>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://huzikit.com/image&amp;pdf/colorpicker.html</loc>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://huzikit.com/image&amp;pdf/QRGenrator.html</loc>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Developer Tools -->
+    <url>
+        <loc>https://huzikit.com/developertools/JSONFORMATTER.html</loc>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://huzikit.com/developertools/base64encoderdecoder.html</loc>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://huzikit.com/developertools/urlencoderdecoder.html</loc>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://huzikit.com/developertools/meta-tag-generator.html</loc>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://huzikit.com/developertools/regextester.html</loc>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://huzikit.com/developertools/markdownhtml.html</loc>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://huzikit.com/developertools/cssminifier.html</loc>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://huzikit.com/developertools/unixtimestamp.html</loc>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Main / Company Pages -->
+    <url>
+        <loc>https://huzikit.com/about.html</loc>
+        <priority>0.4</priority>
+    </url>
+    <url>
+        <loc>https://huzikit.com/disclamier.html</loc>
+        <priority>0.4</priority>
+    </url>
+    <url>
+        <loc>https://huzikit.com/privacy-policies.html</loc>
+        <priority>0.4</priority>
+    </url>
+    <url>
+        <loc>https://huzikit.com/Termsofservices.html</loc>
+        <priority>0.4</priority>
+    </url>
+    <url>
+        <loc>https://huzikit.com/contact-us.html</loc>
+        <priority>0.5</priority>
+    </url>
+
+</urlset>
