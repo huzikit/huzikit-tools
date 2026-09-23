@@ -1,0 +1,1153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMI Calculator – Calculate Your Body Mass Index | HuziKit</title>
+    <meta
+      name="description"
+      content="Calculate your body mass index instantly with HuziKit's free BMI calculator. Supports metric (kg/cm) and imperial (lb/ft) units with instant results and categories. No signup required."
+    />
+    <link
+      rel="canonical"
+      href="https://huzikit.com/calculator/bmi-calculator"
+    />
+
+    <!-- Open Graph -->
+    <meta
+      property="og:title"
+      content="BMI Calculator – Calculate Your Body Mass Index | HuziKit"
+    />
+    <meta
+      property="og:description"
+      content="Calculate your body mass index instantly with HuziKit's free BMI calculator. Supports metric and imperial units with instant results."
+    />
+    <meta
+      property="og:url"
+      content="https://huzikit.com/calculator/bmi-calculator"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="HuziKit" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="BMI Calculator – Calculate Your Body Mass Index | HuziKit"
+    />
+    <meta
+      name="twitter:description"
+      content="Calculate your body mass index instantly with HuziKit free BMI calculator."
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lexend:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheet -->
+    <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="/calculator/bmi-calculator.css" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "HuziKit BMI Calculator",
+        "url": "https://huzikit.com/calculator/bmi-calculator",
+        "applicationCategory": "HealthApplication",
+        "operatingSystem": "All",
+        "browserRequirements": "Requires JavaScript. Requires HTML5.",
+        "description": "Free online Body Mass Index (BMI) calculator supporting metric and imperial units with instant category evaluation.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://huzikit.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Calculators",
+            "item": "https://huzikit.com/toolpage"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "BMI Calculator",
+            "item": "https://huzikit.com/calculator/bmi-calculator"
+          }
+        ]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is BMI?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "BMI stands for Body Mass Index, a value derived from the mass and height of a person to estimate body tissue mass."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How is BMI calculated?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "In metric units, BMI is weight in kilograms divided by height in meters squared (kg/m²)."
+            }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Global Navbar -->
+    <header class="navbar-header" id="navbar">
+      <div class="nav-container">
+        <a href="/" class="nav-logo" aria-label="HuziKit Home">
+          <span class="logo-text">HuziKit</span>
+        </a>
+
+        <nav class="nav-menu" aria-label="Main Navigation">
+          <div class="nav-dropdown">
+            <button class="dropdown-toggle" aria-expanded="false">
+              Text Tools <span class="arrow">▼</span>
+            </button>
+            <div class="dropdown-menu">
+              <a href="/texttools/word-counter.html">Word Counter</a>
+              <a href="/texttools/character-counter.html">Character Counter</a>
+              <a href="/texttools/case-converter.html">Case Converter</a>
+              <a href="/texttools/remove-duplicate-lines.html"
+                >Remove Duplicates</a
+              >
+              <a href="/texttools/loremipsumgenerator.html">Lorem Ipsum</a>
+              <a href="/texttools/passwordgenerator.html">Password Generator</a>
+              <a href="/texttools/text-reverser.html">Text Reverser</a>
+              <a href="/texttools/onlinenotepad.html">Online Notepad</a>
+            </div>
+          </div>
+
+          <div class="nav-dropdown">
+            <button class="dropdown-toggle active" aria-expanded="false">
+              Calculators <span class="arrow">▼</span>
+            </button>
+            <div class="dropdown-menu">
+              <a href="/calculator/agecalculator.html">Age Calculator</a>
+              <a href="/calculator/bmi-calculator.html" class="active"
+                >BMI Calculator</a
+              >
+              <a href="/calculator/percentage-calculator.html"
+                >Percentage Calculator</a
+              >
+              <a href="/calculator/Calorie-Calculator.html"
+                >Calorie Calculator</a
+              >
+              <a href="/calculator/discount-calculator.html"
+                >Discount Calculator</a
+              >
+              <a href="/calculator/saving&goalcalculator.html"
+                >Savings&Goal Calculator</a
+              >
+              <a href="/calculator/tip-calculator.html">Tip Calculator</a>
+              <a href="/calculator/gpa-calculator.html">GPA Calculator</a>
+            </div>
+          </div>
+
+          <div class="nav-dropdown">
+            <button class="dropdown-toggle" aria-expanded="false">
+              Image & PDF <span class="arrow">▼</span>
+            </button>
+            <div class="dropdown-menu">
+              <a href="/image&pdf/image-compressor.html">Image Compressor</a>
+              <a href="/image&pdf/image-resizer.html">Image Resizer</a>
+              <a href="/image&pdf/pdftowordconverter.html">PDF to Word</a>
+              <a href="/image&pdf/jpg-to-png.html">JPG to PNG</a>
+              <a href="/image&pdf/colorpicker.html">Color Picker</a>
+              <a href="/image&pdf/QRGenrator.html">QR Code Generator</a>
+            </div>
+          </div>
+
+          <div class="nav-dropdown">
+            <button class="dropdown-toggle" aria-expanded="false">
+              Developer <span class="arrow">▼</span>
+            </button>
+            <div class="dropdown-menu">
+              <a href="/developertools/JSONFORMATTER.html">JSON Formatter</a>
+              <a href="/developertools/base64encoderdecoder.html"
+                >Base64 Utility</a
+              >
+              <a href="/developertools/urlencoderdecoder.html">URL Encoder</a>
+              <a href="/developertools/meta-tag-generator.html"
+                >Meta Tag Generator</a
+              >
+              <a href="/developertools/regextester.html">Regex Tester</a>
+              <a href="/developertools/markdownhtml.html">Markdown to HTML</a>
+              <a href="/developertools/cssminifier.html">CSS Minifier</a>
+              <a href="/developertools/unixtimestamp.html">Unix Timestamp</a>
+            </div>
+          </div>
+          <a href="/about.html" class="nav-link">About</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button
+            class="search-trigger-btn"
+            id="searchTriggerBtn"
+            aria-label="Open Search"
+          >
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <span class="search-kbd"><kbd>Ctrl</kbd>+<kbd>K</kbd></span>
+          </button>
+          <button
+            class="hamburger-btn"
+            id="hamburgerBtn"
+            aria-label="Open Mobile Menu"
+            aria-expanded="false"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+    <div class="mobile-menu-drawer" id="mobileMenuDrawer" aria-hidden="true">
+      <div class="mobile-menu-header">
+        <a href="/" class="nav-logo">
+          <span class="logo-text">HuziKit</span>
+        </a>
+        <button
+          class="mobile-close-btn"
+          id="mobileCloseBtn"
+          aria-label="Close Mobile Menu"
+        >
+          &times;
+        </button>
+      </div>
+      <div class="mobile-menu-body">
+        <div class="mobile-accordion">
+          <button class="mobile-acc-header" aria-expanded="false">
+            Text Tools <span class="arrow">▼</span>
+          </button>
+          <div class="mobile-acc-content">
+            <a href="/texttools/word-counter.html">Word Counter</a>
+            <a href="/texttools/character-counter.html">Character Counter</a>
+            <a href="/texttools/case-converter.html">Case Converter</a>
+            <a href="/texttools/remove-duplicate-lines.html"
+              >Remove Duplicates</a
+            >
+            <a href="/texttools/loremipsumgenerator.html">Lorem Ipsum</a>
+            <a href="/texttools/passwordgenerator.html">Password Generator</a>
+            <a href="/texttools/text-reverser.html">Text Reverser</a>
+            <a href="/texttools/onlinenotepad.html">Online Notepad</a>
+          </div>
+        </div>
+
+        <div class="mobile-accordion">
+          <button class="mobile-acc-header active" aria-expanded="false">
+            Calculators <span class="arrow">▼</span>
+          </button>
+          <div class="mobile-acc-content" style="display: block">
+            <a href="/calculator/agecalculator.html">Age Calculator</a>
+            <a href="/calculator/bmi-calculator.html" class="active"
+              >BMI Calculator</a
+            >
+            <a href="/calculator/percentage-calculator.html"
+              >Percentage Calculator</a
+            >
+            <a href="/calculator/Calorie-Calculator.html">Calorie Calculator</a>
+            <a href="/calculator/discount-calculator.html"
+              >Discount Calculator</a
+            >
+            <a href="/calculator/saving&goalcalculator.html"
+              >Savings&Goal Calculator</a
+            >
+            <a href="/calculator/tip-calculator.html">Tip Calculator</a>
+            <a href="/calculator/gpa-calculator.html">GPA Calculator</a>
+          </div>
+        </div>
+
+        <div class="mobile-accordion">
+          <button class="mobile-acc-header" aria-expanded="false">
+            Image & PDF <span class="arrow">▼</span>
+          </button>
+          <div class="mobile-acc-content">
+            <a href="/image&pdf/image-compressor.html">Image Compressor</a>
+            <a href="/image&pdf/image-resizer.html">Image Resizer</a>
+            <a href="/image&pdf/pdftowordconverter.html">PDF to Word</a>
+            <a href="/image&pdf/jpg-to-png.html">JPG to PNG</a>
+            <a href="/image&pdf/colorpicker.html">Color Picker</a>
+            <a href="/image&pdf/QRGenrator.html">QR Code Generator</a>
+          </div>
+        </div>
+
+        <div class="mobile-accordion">
+          <button class="mobile-acc-header" aria-expanded="false">
+            Developer <span class="arrow">▼</span>
+          </button>
+          <div class="mobile-acc-content">
+            <a href="/developertools/JSONFORMATTER.html">JSON Formatter</a>
+            <a href="/developertools/base64encoderdecoder.html"
+              >Base64 Utility</a
+            >
+            <a href="/developertools/urlencoderdecoder.html">URL Encoder</a>
+            <a href="/developertools/meta-tag-generator.html"
+              >Meta Tag Generator</a
+            >
+            <a href="/developertools/regextester.html">Regex Tester</a>
+            <a href="/developertools/markdownhtml.html">Markdown to HTML</a>
+            <a href="/developertools/cssminifier.html">CSS Minifier</a>
+            <a href="/developertools/unixtimestamp.html">Unix Timestamp</a>
+          </div>
+        </div>
+
+        <div class="mobile-links-single">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Search Modal -->
+    <div class="search-modal-overlay" id="searchModalOverlay">
+      <div
+        class="search-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Search Tools"
+      >
+        <div class="search-modal-header">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search across all 30 HuziKit tools..."
+            autocomplete="off"
+          />
+          <button
+            class="search-close-btn"
+            id="searchCloseBtn"
+            aria-label="Close Search"
+          >
+            &times;
+          </button>
+        </div>
+        <div class="search-modal-body" id="searchResultsContainer">
+          <div class="search-hint">
+            Start typing to search tools by name, category, or keyword...
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main id="main-content">
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="container hero-grid">
+          <div class="hero-content">
+            <div class="badge-pill">
+              <span class="dot"></span> Free Health Utility Suite
+            </div>
+            <h1>Free BMI Calculator</h1>
+            <p>
+              Calculate your Body Mass Index instantly using your height and
+              weight, understand your BMI category, and view your result in a
+              clear, easy-to-understand format.
+            </p>
+            <div class="trust-indicators">
+              <span class="trust-item"
+                ><svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                Free to use</span
+              >
+              <span class="trust-item"
+                ><svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                Instant results</span
+              >
+              <span class="trust-item"
+                ><svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                No signup</span
+              >
+              <span class="trust-item"
+                ><svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                Browser-based</span
+              >
+            </div>
+          </div>
+          <div class="hero-visual">
+            <div class="glass-dashboard-card">
+              <div class="dash-header">
+                <span class="dash-title">Body Mass Index</span>
+                <span class="dash-badge">Live Preview</span>
+              </div>
+              <div class="dash-metric-display">
+                <span class="dash-number">22.4</span>
+                <span class="dash-label normal">Normal Weight</span>
+              </div>
+              <div class="dash-progress-track">
+                <div class="dash-progress-fill" style="width: 56%"></div>
+              </div>
+              <div class="dash-footer-info">
+                <span>Height: 175 cm</span>
+                <span>Weight: 68.5 kg</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Main Calculator Section -->
+      <section class="calculator-section">
+        <div class="container">
+          <div class="calculator-wrapper">
+            <div class="calculator-card">
+              <div class="calc-header-area">
+                <h2>Body Mass Index Calculator</h2>
+                <p>
+                  Select your preferred unit system, enter your metrics, and
+                  calculate your BMI instantly.
+                </p>
+              </div>
+
+              <!-- Unit Selector Tabs -->
+              <div class="unit-selector" role="tablist">
+                <button
+                  class="unit-tab active"
+                  id="metricTab"
+                  role="tab"
+                  aria-selected="true"
+                  data-unit="metric"
+                >
+                  Metric Units (cm / kg)
+                </button>
+                <button
+                  class="unit-tab"
+                  id="imperialTab"
+                  role="tab"
+                  aria-selected="false"
+                  data-unit="imperial"
+                >
+                  Imperial Units (ft+in / lb)
+                </button>
+              </div>
+
+              <!-- Calculator Form -->
+              <form id="bmiForm" novalidate>
+                <!-- Metric Inputs Group -->
+                <div class="input-group-pane" id="metricInputs">
+                  <div class="form-control-wrap">
+                    <label for="heightCm">Height (cm)</label>
+                    <div class="input-with-icon">
+                      <input
+                        type="number"
+                        id="heightCm"
+                        placeholder="e.g. 175"
+                        min="50"
+                        max="300"
+                        step="0.1"
+                      />
+                      <span class="unit-suffix">cm</span>
+                    </div>
+                    <span class="error-message" id="heightCmError"
+                      >Please enter a valid height between 50 and 300 cm.</span
+                    >
+                  </div>
+
+                  <div class="form-control-wrap">
+                    <label for="weightKg">Weight (kg)</label>
+                    <div class="input-with-icon">
+                      <input
+                        type="number"
+                        id="weightKg"
+                        placeholder="e.g. 70"
+                        min="10"
+                        max="500"
+                        step="0.1"
+                      />
+                      <span class="unit-suffix">kg</span>
+                    </div>
+                    <span class="error-message" id="weightKgError"
+                      >Please enter a valid weight between 10 and 500 kg.</span
+                    >
+                  </div>
+                </div>
+
+                <!-- Imperial Inputs Group -->
+                <div
+                  class="input-group-pane"
+                  id="imperialInputs"
+                  style="display: none"
+                >
+                  <div class="form-control-wrap">
+                    <label>Height</label>
+                    <div class="imperial-height-row">
+                      <div class="input-with-icon">
+                        <input
+                          type="number"
+                          id="heightFt"
+                          placeholder="Feet"
+                          min="1"
+                          max="8"
+                          step="1"
+                        />
+                        <span class="unit-suffix">ft</span>
+                      </div>
+                      <div class="input-with-icon">
+                        <input
+                          type="number"
+                          id="heightIn"
+                          placeholder="Inches"
+                          min="0"
+                          max="11"
+                          step="0.1"
+                        />
+                        <span class="unit-suffix">in</span>
+                      </div>
+                    </div>
+                    <span class="error-message" id="heightImperialError"
+                      >Please enter a valid height in feet and inches.</span
+                    >
+                  </div>
+
+                  <div class="form-control-wrap">
+                    <label for="weightLb">Weight (lbs)</label>
+                    <div class="input-with-icon">
+                      <input
+                        type="number"
+                        id="weightLb"
+                        placeholder="e.g. 154"
+                        min="20"
+                        max="1000"
+                        step="0.1"
+                      />
+                      <span class="unit-suffix">lb</span>
+                    </div>
+                    <span class="error-message" id="weightLbError"
+                      >Please enter a valid weight between 20 and 1000
+                      lbs.</span
+                    >
+                  </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="calc-action-buttons">
+                  <button type="submit" class="btn-primary" id="calculateBtn">
+                    Calculate BMI
+                  </button>
+                  <button type="button" class="btn-secondary" id="resetBtn">
+                    Reset
+                  </button>
+                </div>
+              </form>
+
+              <!-- Result Dashboard (Hidden by default) -->
+              <div
+                class="result-dashboard"
+                id="resultDashboard"
+                style="display: none"
+                aria-live="polite"
+              >
+                <div class="result-header-row">
+                  <h3>Your Result</h3>
+                  <button
+                    class="btn-copy-result"
+                    id="copyResultBtn"
+                    title="Copy result details"
+                  >
+                    <svg
+                      width="15"
+                      height="15"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <rect
+                        x="9"
+                        y="9"
+                        width="13"
+                        height="13"
+                        rx="2"
+                        ry="2"
+                      ></rect>
+                      <path
+                        d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                      ></path>
+                    </svg>
+                    Copy Result
+                  </button>
+                </div>
+                <div class="result-display-card">
+                  <div class="bmi-number-box">
+                    <span class="bmi-value-title">Your BMI</span>
+                    <div class="bmi-big-number" id="bmiResultNumber">22.4</div>
+                  </div>
+                  <div class="bmi-status-box">
+                    <span class="bmi-category-badge" id="bmiCategoryBadge"
+                      >Normal Weight</span
+                    >
+                    <p
+                      class="bmi-interpretation-text"
+                      id="bmiInterpretationText"
+                    >
+                      Your BMI falls within the normal-weight range for adults.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Visual BMI Scale -->
+                <div class="bmi-scale-container">
+                  <h4>BMI Scale Indicator</h4>
+                  <div class="bmi-scale-bar">
+                    <div
+                      class="scale-segment underweight"
+                      title="Underweight (< 18.5)"
+                    >
+                      Underweight
+                    </div>
+                    <div
+                      class="scale-segment normal"
+                      title="Normal (18.5 - 24.9)"
+                    >
+                      Normal
+                    </div>
+                    <div
+                      class="scale-segment overweight"
+                      title="Overweight (25.0 - 29.9)"
+                    >
+                      Overweight
+                    </div>
+                    <div class="scale-segment obesity" title="Obesity (≥ 30.0)">
+                      Obesity
+                    </div>
+                    <div
+                      class="bmi-scale-marker"
+                      id="bmiScaleMarker"
+                      style="left: 35%"
+                    >
+                      <div class="marker-tooltip" id="markerTooltip">22.4</div>
+                    </div>
+                  </div>
+                  <div class="scale-ranges">
+                    <span>&lt; 18.5</span>
+                    <span>18.5</span>
+                    <span>25.0</span>
+                    <span>30.0</span>
+                    <span>&gt; 40</span>
+                  </div>
+                </div>
+
+                <div class="health-disclaimer-box">
+                  <strong>Important Note:</strong> BMI is a general screening
+                  measure and should not be used as a medical diagnosis.
+                  Individual health depends on many factors including body
+                  composition, age, and medical history.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- AdSense Slot Placeholder -->
+      <div class="adsense-container container">
+        <div class="adsense-placeholder">Advertisement Space</div>
+      </div>
+
+      <!-- Educational / SEO Content Section -->
+      <section class="content-article-section container">
+        <div class="article-wrapper">
+          <h2>Understanding Body Mass Index (BMI)</h2>
+          <p>
+            Body Mass Index (BMI) is a widely accepted numerical value
+            calculated from an individual's weight and height. It serves as a
+            rapid, inexpensive, and non-invasive screening tool to categorize
+            individuals into different weight categories—ranging from
+            underweight to severe obesity. Developed in the 19th century by
+            Lambert Adolphe Jacques Quételet, the BMI formula remains a standard
+            metric in clinical and fitness evaluations worldwide.
+          </p>
+
+          <h3>BMI Categories for Adults</h3>
+          <p>
+            According to World Health Organization (WHO) guidelines, adult BMI
+            scores are categorized into four primary brackets:
+          </p>
+
+          <div class="table-responsive">
+            <table class="seo-data-table">
+              <thead>
+                <tr>
+                  <th>Category</th>
+                  <th>BMI Range (kg/m²)</th>
+                  <th>Health Implication / Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Underweight</strong></td>
+                  <td>Below 18.5</td>
+                  <td>
+                    May indicate nutritional deficiency or underlying health
+                    concerns.
+                  </td>
+                </tr>
+                <tr>
+                  <td><strong>Normal Weight</strong></td>
+                  <td>18.5 – 24.9</td>
+                  <td>
+                    Associated with optimal health outcomes and lower chronic
+                    disease risk.
+                  </td>
+                </tr>
+                <tr>
+                  <td><strong>Overweight</strong></td>
+                  <td>25.0 – 29.9</td>
+                  <td>
+                    Indicates excess body weight relative to height; moderate
+                    risk increase.
+                  </td>
+                </tr>
+                <tr>
+                  <td><strong>Obesity</strong></td>
+                  <td>30.0 and above</td>
+                  <td>
+                    Elevated risk for metabolic conditions, cardiovascular
+                    strain, and joint stress.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h3>How BMI is Calculated</h3>
+          <p>
+            The calculation of Body Mass Index utilizes either metric or
+            imperial units through straightforward mathematical equations:
+          </p>
+          <ul>
+            <li>
+              <strong>Metric Formula:</strong> $\text{BMI} = \frac{\text{weight
+              in kg}}{(\text{height in meters})^2}$
+            </li>
+            <li>
+              <strong>Imperial Formula:</strong> $\text{BMI} = \frac{703 \times
+              \text{weight in lbs}}{(\text{height in inches})^2}$
+            </li>
+          </ul>
+
+          <h3>Limitations and Considerations of BMI</h3>
+          <p>
+            While the HuziKit BMI Calculator provides an immediate and
+            convenient screening score, it is essential to understand its
+            inherent limitations. BMI does not differentiate between body fat,
+            bone density, and muscle mass. Consequently, highly trained athletes
+            or bodybuilders may possess a high BMI score despite having very low
+            body fat percentages. Similarly, older adults may have higher body
+            fat percentages even with a normal BMI due to muscle mass reduction
+            over time. For a comprehensive health assessment, BMI should always
+            be evaluated alongside waist circumference, body fat percentage,
+            diet, and cardiovascular fitness.
+          </p>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="faq-section container">
+        <div class="faq-wrapper">
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq-accordion-group">
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is BMI? <span class="faq-arrow">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  BMI stands for Body Mass Index. It is an index of
+                  weight-for-height that is commonly used to classify
+                  underweight, overweight, and obesity in adults.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                How is BMI calculated? <span class="faq-arrow">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  BMI is calculated by dividing your weight in kilograms by your
+                  height in meters squared (kg/m²), or using pounds and inches
+                  with the imperial formula.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What is a healthy BMI range for adults?
+                <span class="faq-arrow">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  A normal and healthy BMI range for adults is between 18.5 and
+                  24.9 kg/m².
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                What does my BMI number mean? <span class="faq-arrow">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Your number places you into a category: Underweight
+                  (&lt;18.5), Normal (18.5-24.9), Overweight (25-29.9), or
+                  Obesity (≥30).
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Can I calculate BMI in kilograms and centimeters?
+                <span class="faq-arrow">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Yes, simply select the Metric Units tab on the calculator to
+                  enter your height in centimeters and weight in kilograms.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Can I calculate BMI in pounds and feet?
+                <span class="faq-arrow">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Yes, select the Imperial Units tab to input your height in
+                  feet and inches along with your weight in pounds.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Is BMI the same for children and adults?
+                <span class="faq-arrow">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  No, BMI for children and teens is age- and sex-specific, often
+                  referred to as BMI-for-age percentiles.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Does BMI measure body fat directly?
+                <span class="faq-arrow">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  No, BMI is an estimator based on height and weight and does
+                  not directly measure body fat percentage or muscle
+                  composition.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Is BMI a medical diagnosis? <span class="faq-arrow">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  No, BMI is a screening tool. Only a qualified physician can
+                  make health diagnoses after thorough physical evaluations.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Is the HuziKit BMI Calculator free?
+                <span class="faq-arrow">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Yes, all HuziKit calculators and utilities are 100% free to
+                  use with no hidden subscriptions or paywalls.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Does HuziKit store my BMI information?
+                <span class="faq-arrow">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  No, all calculations are performed locally inside your web
+                  browser. Your health data never leaves your device.
+                </p>
+              </div>
+            </div>
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                Can I use the BMI Calculator on mobile?
+                <span class="faq-arrow">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Yes, the HuziKit platform is fully responsive and optimized
+                  for smartphones, tablets, laptops, and desktop computers.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Related Tools Section -->
+      <section class="related-tools-section container">
+        <div class="related-wrapper">
+          <h3>Related Free HuziKit Utilities</h3>
+          <div class="related-grid">
+            <a href="/calculator/agecalculator.html" class="related-card">
+              <h4>Age Calculator</h4>
+              <p>Calculate exact age in years, months, and days instantly.</p>
+            </a>
+            <a href="/calculator/Calorie-Calculator.html" class="related-card">
+              <h4>Calorie Calculator</h4>
+              <p>Estimate daily caloric needs based on activity level.</p>
+            </a>
+            <a
+              href="/calculator/percentage-calculator.html"
+              class="related-card"
+            >
+              <h4>Percentage Calculator</h4>
+              <p>Compute percentage increase, decrease, and ratios.</p>
+            </a>
+            <a href="/calculator/discount-calculator.html" class="related-card">
+              <h4>Discount Calculator</h4>
+              <p>Calculate sale prices, savings, and final totals.</p>
+            </a>
+            <a
+              href="/calculator/saving&goalcalculator.html"
+              class="related-card"
+            >
+              <h4>Savings&Goal Calculator</h4>
+              <p>Plan financial milestones and compound interest growth.</p>
+            </a>
+            <a href="/calculator/gpa-calculator.html" class="related-card">
+              <h4>GPA Calculator</h4>
+              <p>Calculate cumulative grade point averages quickly.</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Final CTA Section -->
+      <section class="final-cta-section container">
+        <div class="cta-banner">
+          <h3>Explore More Free Tools from HuziKit</h3>
+          <p>
+            Discover our complete collection of lightning-fast web utilities,
+            text processors, and developer tools designed for maximum
+            efficiency.
+          </p>
+          <a href="/toolpage.html" class="btn-primary cta-btn"
+            >Explore All Utilities</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <!-- Global Footer -->
+    <footer class="footer-section">
+      <div class="container footer-grid">
+        <div class="footer-col-brand">
+          <a href="/" class="footer-logo">
+            <span class="logo-text">HuziKit</span>
+          </a>
+          <p class="footer-bio">
+            The ultimate modern suite of lightning-fast, secure online web
+            utilities, calculators, and developer tools.
+          </p>
+          <div class="social-links">
+            <a
+              href="https://x.com/huzikitoffical"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="X (Twitter)"
+            >
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Text & Dev Tools</h4>
+          <ul>
+            <li>
+              <a href="/texttools/word-counter.html">Word Counter</a>
+            </li>
+            <li>
+              <a href="/texttools/case-converter.html">Case Converter</a>
+            </li>
+            <li>
+              <a href="/developertools/JSONFORMATTER.html">JSON Formatter</a>
+            </li>
+            <li>
+              <a href="/developertools/base64encoderdecoder.html"
+                >Base64 Utility</a
+              >
+            </li>
+            <li>
+              <a href="/developertools/regextester.html">Regex Tester</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Calculators & Image</h4>
+          <ul>
+            <li>
+              <a href="/calculator/agecalculator.html">Age Calculator</a>
+            </li>
+            <li>
+              <a
+                href="/calculator/bmi-calculator.html"
+                class="active-footer-link"
+                >BMI Calculator</a
+              >
+            </li>
+            <li>
+              <a href="/image&pdf/image-compressor.html">Image Compressor</a>
+            </li>
+            <li>
+              <a href="/image&pdf/QRGenrator.html">QR Code Generator</a>
+            </li>
+            <li>
+              <a href="/image&pdf/colorpicker.html">Color Picker</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company & Legal</h4>
+          <ul>
+            <li><a href="/about.html">About HuziKit</a></li>
+            <li><a href="/disclamier.html">Disclaimer</a></li>
+            <li>
+              <a href="/privacy-policies.html">Privacy Policy</a>
+            </li>
+            <li>
+              <a href="/Termsofservices.html">Terms of Service</a>
+            </li>
+            <li><a href="/contact-us.html">Contact Support</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="container footer-bottom">
+        <p>&copy; 2026 HuziKit.com. All rights reserved.</p>
+        <p>Built with speed, security, and precision.</p>
+      </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div class="toast-notification" id="toastNotification" aria-hidden="true">
+      BMI result copied successfully
+    </div>
+
+    <!-- JavaScript -->
+    <script src="/calculator/bmi-calculator.js"></script>
+  </body>
+</html>

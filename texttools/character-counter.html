@@ -1,0 +1,955 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Free Character Counter Online – Count Characters & Words | HuziKit
+    </title>
+    <meta
+      name="description"
+      content="Use HuziKit's free online character counter to instantly count characters, words, sentences, and paragraphs. Enjoy instant results with no signup required."
+    />
+    <link
+      rel="canonical"
+      href="https://huzikit.com/texttools/character-counter"
+    />
+
+    <!-- Google Fonts: Lexend & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lexend:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/texttools/character-counter.css" />
+    <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon" />
+
+    <!-- Structured Data: WebApplication -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "HuziKitCharacter Counter",
+        "url": "https://huzikit.com/character-counter/",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "All",
+        "browserRequirements": "Requires JavaScript. Requires HTML5.",
+        "description": "Free online character and word counter tool with real-time statistics, reading time, speaking time, and export options.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      }
+    </script>
+
+    <!-- Structured Data: BreadcrumbList -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://huzikit.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Text Tools",
+            "item": "https://huzikit.com/word-counter/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Character Counter",
+            "item": "https://huzikit.com/character-counter/"
+          }
+        ]
+      }
+    </script>
+
+    <!-- Structured Data: FAQPage -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is a character counter?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A character counter is a digital tool that instantly calculates the exact number of characters, words, sentences, and paragraphs in your text."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do spaces count as characters?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, standard character counts include spaces. However, HuziKit also provides a separate count for characters without spaces."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is HuziKit Character Counter free?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, 100% free with no sign-ups, subscriptions, or artificial limits."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does HuziKit store my text?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No, all text processing happens entirely within your web browser for complete privacy and security."
+            }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Global HuziKit Navbar -->
+    <header class="site-header">
+      <div class="nav-container">
+        <a href="/index.html" class="brand-logo">
+          <span class="brand-name">HuziKit</span>
+        </a>
+
+        <nav class="desktop-nav">
+          <div class="dropdown">
+            <button class="dropdown-toggle" aria-expanded="false">
+              Text Tools <span class="chevron">▼</span>
+            </button>
+            <div class="dropdown-menu">
+              <a href="/texttools/word-counter.html">Word Counter</a>
+              <a href="/texttools/character-counter.html" class="active"
+                >Character Counter</a
+              >
+              <a href="/texttools/case-converter.html">Case Converter</a>
+              <a href="/texttools/remove-duplicate-lines.html"
+                >Remove Duplicates</a
+              >
+              <a href="/texttools/loremipsumgenerator.html">Lorem Ipsum</a>
+              <a href="/texttools/passwordgenerator.html">Password Generator</a>
+              <a href="/texttools/text-reverser.html">Text Reverser</a>
+              <a href="/texttools/onlinenotepad.html">Online Notepad</a>
+            </div>
+          </div>
+
+          <div class="dropdown">
+            <button class="dropdown-toggle" aria-expanded="false">
+              Calculators <span class="chevron">▼</span>
+            </button>
+            <div class="dropdown-menu">
+              <a href="/calculator/agecalculator.html">Age Calculator</a>
+              <a href="/calculator/bmi-calculator.html">BMI Calculator</a>
+              <a href="/calculator/percentage-calculator.html"
+                >Percentage Calculator</a
+              >
+              <a href="/calculator/Calorie-Calculator.html"
+                >Calorie Calculator</a
+              >
+              <a href="/calculator/discount-calculator.html"
+                >Discount Calculator</a
+              >
+              <a href="/calculator/saving&goalcalculator.html"
+                >Savings&Goal Calculator</a
+              >
+              <a href="/calculator/tip-calculator.html">Tip Calculator</a>
+              <a href="/calculator/gpa-calculator.html">GPA Calculator</a>
+            </div>
+          </div>
+
+          <div class="dropdown">
+            <button class="dropdown-toggle" aria-expanded="false">
+              Image & PDF <span class="chevron">▼</span>
+            </button>
+            <div class="dropdown-menu">
+              <a href="/image&pdf/image-compressor.html">Image Compressor</a>
+              <a href="/image&pdf/image-resizer.html">Image Resizer</a>
+              <a href="/image&pdf/pdftowordconverter.html">PDF to Word</a>
+              <a href="/image&pdf/jpg-to-png.html">JPG to PNG</a>
+              <a href="/image&pdf/colorpicker.html">Color Picker</a>
+              <a href="/image&pdf/QRGenrator.html">QR Code Generator</a>
+            </div>
+          </div>
+
+          <div class="dropdown">
+            <button class="dropdown-toggle" aria-expanded="false">
+              Developer <span class="chevron">▼</span>
+            </button>
+            <div class="dropdown-menu">
+              <a href="/developertools/JSONFORMATTER.html">JSON Formatter</a>
+              <a href="/developertools/base64encoderdecoder.html"
+                >Base64 Utility</a
+              >
+              <a href="/developertools/urlencoderdecoder.html">URL Encoder</a>
+              <a href="/developertools/meta-tag-generator.html"
+                >Meta Tag Generator</a
+              >
+              <a href="/developertools/regextester.html">Regex Tester</a>
+              <a href="/developertools/markdownhtml.html">Markdown to HTML</a>
+              <a href="/developertools/cssminifier.html">CSS Minifier</a>
+              <a href="/developertools/unixtimestamp.html">Unix Timestamp</a>
+            </div>
+          </div>
+          <a href="/about.html" class="nav-link">About</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button
+            id="searchOpenBtn"
+            class="search-trigger-btn"
+            aria-label="Search tools"
+          >
+            <svg
+              class="search-icon-svg"
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+          <button
+            id="hamburgerBtn"
+            class="hamburger-btn"
+            aria-label="Toggle navigation menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobileDrawer" class="mobile-drawer" aria-hidden="true">
+      <div class="mobile-drawer-overlay"></div>
+      <div class="mobile-drawer-content">
+        <div class="mobile-drawer-header">
+          <a href="/" class="brand-logo">
+            <span class="brand-name">HuziKit</span>
+          </a>
+          <button
+            id="mobileCloseBtn"
+            class="mobile-close-btn"
+            aria-label="Close menu"
+          >
+            &times;
+          </button>
+        </div>
+        <div class="mobile-nav-links">
+          <div class="mobile-accordion">
+            <button class="mobile-accordion-toggle">
+              Text Tools <span class="chevron">▼</span>
+            </button>
+            <div class="mobile-accordion-content">
+              <a href="/texttools/word-counter.html">Word Counter</a>
+              <a href="/texttools/character-counter.html">Character Counter</a>
+              <a href="/texttools/case-converter.html">Case Converter</a>
+              <a href="/texttools/remove-duplicate-lines.html"
+                >Remove Duplicates</a
+              >
+              <a href="/texttools/loremipsumgenerator.html">Lorem Ipsum</a>
+              <a href="/texttools/passwordgenerator.html">Password Generator</a>
+              <a href="/texttools/text-reverser.html">Text Reverser</a>
+              <a href="/texttools/onlinenotepad.html">Online Notepad</a>
+            </div>
+          </div>
+          <div class="mobile-accordion">
+            <button class="mobile-accordion-toggle">
+              Calculators <span class="chevron">▼</span>
+            </button>
+            <div class="mobile-accordion-content">
+              <a href="/calculator/agecalculator.html">Age Calculator</a>
+              <a href="/calculator/bmi-calculator.html">BMI Calculator</a>
+              <a href="/calculator/percentage-calculator.html"
+                >Percentage Calculator</a
+              >
+              <a href="/calculator/Calorie-Calculator.html"
+                >Calorie Calculator</a
+              >
+              <a href="/calculator/discount-calculator.html"
+                >Discount Calculator</a
+              >
+              <a href="/calculator/saving&goalcalculator.html"
+                >Savings&Goal Calculator</a
+              >
+              <a href="/calculator/tip-calculator.html">Tip Calculator</a>
+              <a href="/calculator/gpa-calculator.html">GPA Calculator</a>
+            </div>
+          </div>
+          <div class="mobile-accordion">
+            <button class="mobile-accordion-toggle">
+              Image & PDF <span class="chevron">▼</span>
+            </button>
+            <div class="mobile-accordion-content">
+              <a href="/image&pdf/image-compressor.html">Image Compressor</a>
+              <a href="/image&pdf/image-resizer.html">Image Resizer</a>
+              <a href="/image&pdf/pdftowordconverter.html">PDF to Word</a>
+              <a href="/image&pdf/jpg-to-png.html">JPG to PNG</a>
+              <a href="/image&pdf/colorpicker.html">Color Picker</a>
+              <a href="/image&pdf/QRGenrator.html">QR Code Generator</a>
+            </div>
+          </div>
+          <div class="mobile-accordion">
+            <button class="mobile-accordion-toggle">
+              Developer <span class="chevron">▼</span>
+            </button>
+            <div class="mobile-accordion-content">
+              <a href="/developertools/JSONFORMATTER.html">JSON Formatter</a>
+              <a href="/developertools/base64encoderdecoder.html"
+                >Base64 Utility</a
+              >
+              <a href="/developertools/urlencoderdecoder.html">URL Encoder</a>
+              <a href="/developertools/meta-tag-generator.html"
+                >Meta Tag Generator</a
+              >
+              <a href="/developertools/regextester.html">Regex Tester</a>
+              <a href="/developertools/markdownhtml.html">Markdown to HTML</a>
+              <a href="/developertools/cssminifier.html">CSS Minifier</a>
+              <a href="/developertools/unixtimestamp.html">Unix Timestamp</a>
+            </div>
+          </div>
+          <a href="/about.html" class="mobile-nav-link">About</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Search Modal Overlay -->
+    <div id="searchModal" class="search-modal-overlay" aria-hidden="true">
+      <div class="search-modal-container">
+        <div class="search-modal-input-wrapper">
+          <svg
+            class="search-modal-icon"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search HuziKit tools..."
+            autocomplete="off"
+          />
+          <button id="searchCloseBtn" class="search-modal-close-btn">
+            &times;
+          </button>
+        </div>
+        <div id="searchResults" class="search-results-list">
+          <!-- Results dynamically rendered via JS -->
+        </div>
+        <div class="search-modal-footer">
+          <span>Use <kbd>↑</kbd> <kbd>↓</kbd> to navigate</span>
+          <span><kbd>Esc</kbd> to close</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content Wrapper -->
+    <main>
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="hero-glow"></div>
+        <div class="container hero-content-grid">
+          <div class="hero-text-col">
+            <div class="badge-pill">
+              <span class="badge-dot"></span> Free Online Utility
+            </div>
+            <h1 class="hero-title">Free Online Character Counter</h1>
+            <p class="hero-subtitle">
+              Instantly count characters, characters without spaces, words,
+              sentences, paragraphs, lines, spaces, reading time, and speaking
+              time with zero latency.
+            </p>
+            <div class="hero-cta-group">
+              <a href="#toolSection" class="btn btn-primary">Start Counting</a>
+              <a href="/toolpage.html" class="btn btn-secondary"
+                >Explore Text Tools</a
+              >
+            </div>
+          </div>
+          <div class="hero-visual-col">
+            <div class="hero-glass-card floating-card">
+              <div class="card-top-bar">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <span class="card-title-bar">HuziKit Live Engine</span>
+              </div>
+              <div class="card-mock-content">
+                <div class="mock-stat-pill">
+                  Characters: <strong id="mockCharVal">248</strong>
+                </div>
+                <div class="mock-stat-pill">
+                  Words: <strong id="mockWordVal">38</strong>
+                </div>
+                <div class="mock-stat-pill">
+                  Reading Time: <strong id="mockReadVal">12s</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Breadcrumb -->
+      <div class="breadcrumb-wrapper">
+        <div class="container">
+          <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+            <a href="/">Home</a>
+            <span class="separator">→</span>
+            <a href="/toolpage.html">Text Tools</a>
+            <span class="separator">→</span>
+            <span class="current">Character Counter</span>
+          </nav>
+        </div>
+      </div>
+
+      <!-- Main Character Counter Tool Section -->
+      <section id="toolSection" class="tool-section">
+        <div class="container">
+          <div class="tool-card">
+            <!-- Textarea Header / Toolbar -->
+            <div class="tool-toolbar">
+              <div class="toolbar-title">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"
+                  ></path>
+                  <path
+                    d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"
+                  ></path>
+                </svg>
+                <span>Text Editor & Analyzer</span>
+              </div>
+              <div class="toolbar-actions">
+                <button
+                  id="sampleBtn"
+                  class="tool-btn"
+                  title="Insert sample text"
+                >
+                  Sample Text
+                </button>
+                <button id="clearBtn" class="tool-btn" title="Clear all text">
+                  Clear
+                </button>
+              </div>
+            </div>
+
+            <!-- Main Textarea -->
+            <div class="textarea-wrapper">
+              <textarea
+                id="textInput"
+                placeholder="Start typing or paste your text here..."
+                autofocus
+              ></textarea>
+            </div>
+
+            <!-- Primary Actions Bar -->
+            <div class="primary-actions-bar">
+              <button id="copyBtn" class="btn btn-primary">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path
+                    d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                  ></path>
+                </svg>
+                Copy Text
+              </button>
+              <button id="copyStatsBtn" class="btn btn-secondary">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"
+                  ></path>
+                  <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+                </svg>
+                Copy Statistics
+              </button>
+              <button id="downloadBtn" class="btn btn-secondary">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                Download TXT
+              </button>
+            </div>
+
+            <!-- Real-Time Statistics Grid -->
+            <div class="stats-grid">
+              <div class="stat-card">
+                <span class="stat-label">Characters</span>
+                <span id="statChars" class="stat-value">0</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-label">Characters (No Spaces)</span>
+                <span id="statCharsNoSpaces" class="stat-value">0</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-label">Words</span>
+                <span id="statWords" class="stat-value">0</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-label">Sentences</span>
+                <span id="statSentences" class="stat-value">0</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-label">Paragraphs</span>
+                <span id="statParagraphs" class="stat-value">0</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-label">Lines</span>
+                <span id="statLines" class="stat-value">0</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-label">Spaces</span>
+                <span id="statSpaces" class="stat-value">0</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-label">Reading Time</span>
+                <span id="statReadingTime" class="stat-value">0 sec</span>
+              </div>
+              <div class="stat-card">
+                <span class="stat-label">Speaking Time</span>
+                <span id="statSpeakingTime" class="stat-value">0 sec</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Content & GEO Optimization Section -->
+      <section class="content-section">
+        <div class="container content-container">
+          <article class="seo-article">
+            <h2>What is a Character Counter?</h2>
+            <p>
+              A character counter is an online utility designed to count every
+              single letter, number, punctuation mark, and whitespace in a given
+              block of text. Whether you are drafting a tweet, crafting meta
+              descriptions for search engine optimization, or formatting an
+              academic essay with strict character limits, our tool delivers
+              instantaneous and pinpoint accuracy.
+            </p>
+
+            <h2>What Does HuziKit Character Counter Measure?</h2>
+            <p>
+              Our advanced Unicode-aware processing engine calculates
+              comprehensive metrics simultaneously:
+            </p>
+            <ul>
+              <li>
+                <strong>Characters:</strong> Total number of symbols including
+                letters, digits, spaces, and punctuation.
+              </li>
+              <li>
+                <strong>Characters Without Spaces:</strong> The exact character
+                count excluding all whitespace characters.
+              </li>
+              <li>
+                <strong>Words:</strong> Total word count separated by spaces or
+                punctuation boundaries.
+              </li>
+              <li>
+                <strong>Sentences & Paragraphs:</strong> Structural counts based
+                on terminal punctuation (. ! ?) and line breaks.
+              </li>
+              <li>
+                <strong>Reading & Speaking Times:</strong> Estimated durations
+                based on average human reading speeds (200 words per minute) and
+                speech rates (130 words per minute).
+              </li>
+            </ul>
+
+            <h2>Why Use HuziKit Character Counter?</h2>
+            <p>
+              HuziKit is built for speed, privacy, and precision. With a modern
+              luxury interface and zero distractions, you can optimize your
+              content seamlessly. All processing happens locally in your
+              browser, ensuring your notes, code snippets, and confidential
+              drafts remain entirely private.
+            </p>
+
+            <div class="geo-qa-box">
+              <h3>Frequently Answered Questions for AI & Search Engines</h3>
+              <div class="geo-qa-item">
+                <h4>Do spaces count as characters?</h4>
+                <p>
+                  Yes, spaces are counted as characters in standard counts.
+                  HuziKit displays both metrics side-by-side.
+                </p>
+              </div>
+              <div class="geo-qa-item">
+                <h4>Is the HuziKit Character Counter free?</h4>
+                <p>
+                  Yes, the tool is completely free with no usage caps,
+                  registration requirements, or hidden fees.
+                </p>
+              </div>
+              <div class="geo-qa-item">
+                <h4>Does HuziKit store user text?</h4>
+                <p>
+                  No text is ever uploaded to external servers; all operations
+                  execute securely within your browser.
+                </p>
+              </div>
+            </div>
+          </article>
+
+          <!-- FAQ Accordion Section -->
+          <div class="faq-section">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-accordion">
+              <div class="faq-item">
+                <button class="faq-question">
+                  What is a character counter? <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>
+                    A character counter is a digital tool that instantly
+                    calculates the exact number of characters, words, sentences,
+                    and paragraphs in your text.
+                  </p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question">
+                  How does a character counter work?
+                  <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>
+                    It scans your text input in real-time using optimized string
+                    algorithms to compute metrics instantly as you type.
+                  </p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question">
+                  Do spaces count as characters? <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>
+                    Yes, standard character counts include spaces. However,
+                    HuziKit also provides a separate count for characters
+                    without spaces.
+                  </p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question">
+                  What is the difference between character count and word count?
+                  <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>
+                    Character count measures every single keystroke (letters,
+                    spaces, punctuation), whereas word count measures discrete
+                    words separated by spaces.
+                  </p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question">
+                  Can I count characters without spaces?
+                  <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>
+                    Yes, our tool automatically calculates and displays your
+                    character count excluding all spaces in real-time.
+                  </p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question">
+                  Does punctuation count? <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>
+                    Yes, punctuation marks such as commas, periods, quotation
+                    marks, and symbols are counted as individual characters.
+                  </p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question">
+                  Can I use this for essays? <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>
+                    Absolutely! Students and academics use HuziKit to verify
+                    word and character counts for assignments and research
+                    papers.
+                  </p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question">
+                  Can I use it for social media character limits?
+                  <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>
+                    Yes, it is ideal for checking character limits on platforms
+                    like X (Twitter), Instagram captions, LinkedIn posts, and
+                    meta descriptions.
+                  </p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question">
+                  Does it work on mobile? <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>
+                    Yes, the interface is fully responsive and optimized for
+                    smartphones, tablets, laptops, and desktop computers.
+                  </p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question">
+                  Is HuziKit Character Counter free?
+                  <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>
+                    Yes, 100% free with no sign-ups, subscriptions, or
+                    artificial limits.
+                  </p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question">
+                  Does HuziKit store my text? <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>
+                    No, all text processing happens entirely within your web
+                    browser for complete privacy and security.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Related Tools Section -->
+          <div class="related-tools-section">
+            <h2>Related Text & Utility Tools</h2>
+            <div class="related-grid">
+              <a href="/texttools/word-counter.html" class="related-card">
+                <h3>Word Counter</h3>
+                <p>
+                  Count words, sentences, and vocabulary density effortlessly.
+                </p>
+              </a>
+              <a href="/texttools/case-converter.html" class="related-card">
+                <h3>Case Converter</h3>
+                <p>
+                  Convert text to uppercase, lowercase, title case, and
+                  camelCase.
+                </p>
+              </a>
+              <a href="/texttools/text-reverser.html" class="related-card">
+                <h3>Text Reverser</h3>
+                <p>
+                  Reverse text strings, words, or character order instantly.
+                </p>
+              </a>
+              <a
+                href="/texttools/loremipsumgenerator.html"
+                class="related-card"
+              >
+                <h3>Lorem Ipsum Generator</h3>
+                <p>Generate placeholder dummy text for design mockups.</p>
+              </a>
+              <a
+                href="/texttools/remove-duplicate-lines.html"
+                class="related-card"
+              >
+                <h3>Remove Duplicate Lines</h3>
+                <p>
+                  Clean up text lists by removing duplicate entries instantly.
+                </p>
+              </a>
+              <a href="/texttools/onlinenotepad.html" class="related-card">
+                <h3>Online Notepad</h3>
+                <p>A fast, secure, browser-based scratchpad for quick notes.</p>
+              </a>
+            </div>
+          </div>
+
+          <!-- Final CTA Section -->
+          <div class="final-cta-card">
+            <h2>Explore More Free HuziKit Tools</h2>
+            <p>
+              HuziKit provides an extensive suite of lightning-fast web
+              utilities, text tools, converters, calculators, and developer
+              tools designed to streamline your daily workflow.
+            </p>
+            <a href="/toolpage.html" class="btn btn-primary"
+              >Browse All Tools</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Premium Footer -->
+    <footer class="site-footer">
+      <div class="container footer-container">
+        <div class="footer-col-brand">
+          <a href="/" class="brand-logo">
+            <span class="brand-name">HuziKit</span>
+          </a>
+          <p class="footer-bio">
+            The ultimate modern suite of lightning-fast, secure online web
+            utilities, calculators, and developer tools.
+          </p>
+          <div class="footer-social">
+            <a
+              href="https://x.com/huzikitoffical"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="X / Twitter"
+            >
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col-links">
+          <h4>Text & Dev Tools</h4>
+          <ul>
+            <li>
+              <a href="/texttools/word-counter.html">Word Counter</a>
+            </li>
+            <li>
+              <a href="/texttools/case-converter.html">Case Converter</a>
+            </li>
+            <li>
+              <a href="/developertools/JSONFORMATTER.html">JSON Formatter</a>
+            </li>
+            <li>
+              <a href="/developertools/base64encoderdecoder.html"
+                >Base64 Utility</a
+              >
+            </li>
+            <li>
+              <a href="/developertools/regextester.html">Regex Tester</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-col-links">
+          <h4>Calculators & Image</h4>
+          <ul>
+            <li>
+              <a href="/calculator/agecalculator.html">Age Calculator</a>
+            </li>
+            <li>
+              <a href="/calculator/bmi-calculator.html">BMI Calculator</a>
+            </li>
+            <li>
+              <a href="/image&pdf/image-compressor.html">Image Compressor</a>
+            </li>
+            <li>
+              <a href="/image&pdf/QRGenrator.html">QR Code Generator</a>
+            </li>
+            <li>
+              <a href="/image&pdf/colorpicker.html">Color Picker</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-col-links">
+          <h4>Company & Legal</h4>
+          <ul>
+            <li><a href="/about.html">About HuziKit</a></li>
+            <li><a href="/disclamier.html">Disclaimer</a></li>
+            <li>
+              <a href="/privacy-policies.html">Privacy Policy</a>
+            </li>
+            <li>
+              <a href="/Termsofservices.html">Terms of Service</a>
+            </li>
+            <li><a href="/contact-us.html">Contact Support</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="container footer-bottom-flex">
+          <p>© 2026 HuziKit.com. All rights reserved.</p>
+          <p>Built with speed, security, and precision.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toastNotification" class="toast-notification">
+      Text copied successfully
+    </div>
+
+    <script src="/texttools/character-counter.js"></script>
+  </body>
+</html>

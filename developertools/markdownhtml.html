@@ -1,0 +1,3457 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Primary SEO Metadata -->
+    <title>
+      Free Markdown to HTML Converter Online — Convert Markdown to HTML |
+      Huzikit
+    </title>
+    <meta
+      name="description"
+      content="Convert Markdown to clean, semantic, and sanitized HTML in real-time with Huzikit's free online Markdown to HTML converter. Features live dual-pane preview, syntax toolbar, document statistics, and instant file export."
+    />
+    <meta
+      name="keywords"
+      content="Markdown to HTML, Markdown to HTML converter, Markdown converter, Markdown HTML converter, convert Markdown to HTML, online Markdown to HTML converter, free Markdown to HTML converter, Markdown editor, Markdown preview, Markdown parser, Markdown to HTML online, convert Markdown online, Markdown code generator, HTML from Markdown"
+    />
+    <meta
+      name="robots"
+      content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+    />
+    <link
+      rel="canonical"
+      href="https://huzikit.com/developertools/markdownhtml.html"
+    />
+    <meta name="theme-color" content="#4F46E5" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://huzikit.com/developertools/markdownhtml.html"
+    />
+    <meta
+      property="og:title"
+      content="Free Markdown to HTML Converter Online — Convert Markdown to HTML | Huzikit"
+    />
+    <meta
+      property="og:description"
+      content="Convert Markdown to clean, semantic, and sanitized HTML in real-time with Huzikit's free online converter. Includes live dual-pane preview, formatting toolbar, and instant export."
+    />
+    <meta property="og:site_name" content="Huzikit" />
+
+    <!-- Twitter / X Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:url"
+      content="https://huzikit.com/developertools/markdownhtml.html"
+    />
+    <meta
+      name="twitter:title"
+      content="Free Markdown to HTML Converter Online — Convert Markdown to HTML | Huzikit"
+    />
+    <meta
+      name="twitter:description"
+      content="Convert Markdown to clean, semantic, and sanitized HTML in real-time. 100% browser-based, private, and instant."
+    />
+
+    <!-- Typography: Lexend (Headings) & Inter (UI/Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lexend:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- External Parsers (Marked & DOMPurify) with autonomous built-in fallback -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/marked@15.0.7/marked.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/dompurify@3.2.4/dist/purify.min.js"
+      defer
+    ></script>
+
+    <!-- Huzikit Locked Brand Stylesheet -->
+    <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="/developertools/markdownhtml.css" />
+
+    <!-- JSON-LD Structured Data: WebApplication -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Markdown to HTML Converter",
+        "alternateName": "Huzikit Markdown to HTML Converter",
+        "url": "https://huzikit.com/developertools/markdownhtml.html",
+        "description": "Free online developer utility to convert Markdown into sanitized, semantic HTML in real-time with dual-pane preview and export tools.",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "All",
+        "browserRequirements": "Requires JavaScript. Requires HTML5.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "creator": {
+          "@type": "Organization",
+          "name": "Huzikit",
+          "url": "https://huzikit.com"
+        }
+      }
+    </script>
+
+    <!-- JSON-LD Structured Data: BreadcrumbList -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://huzikit.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Developer",
+            "item": "https://huzikit.com/developertools/markdownhtml.html"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Markdown to HTML",
+            "item": "https://huzikit.com/developertools/markdownhtml.html"
+          }
+        ]
+      }
+    </script>
+
+    <!-- JSON-LD Structured Data: FAQPage -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is Markdown?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Markdown is a lightweight markup language created by John Gruber in 2004 that allows writers and developers to format plain text using simple punctuation characters, which easily converts into structurally valid HTML."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is HTML?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "HTML (HyperText Markup Language) is the standard markup language used to structure web pages and their content using tags like headings, paragraphs, lists, links, tables, and images."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What does a Markdown to HTML converter do?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A Markdown to HTML converter parses Markdown syntax (such as hashes for headings, asterisks for bolding, and brackets for links) and transforms them into corresponding semantic HTML tags suitable for publishing on websites, documentation portals, and blogs."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is this Markdown to HTML converter free?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, Huzikit's Markdown to HTML converter is completely free to use with no account required, no usage limitations, and no watermarks."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does the converter work online?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, it works entirely in your modern web browser online and can even function offline once the page is loaded because conversion is performed locally on your device."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What Markdown syntax is supported?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The converter supports CommonMark and GitHub Flavored Markdown (GFM), including headings (H1-H6), bold, italic, strikethrough, blockquotes, ordered and unordered lists, task lists, code blocks with language labels, inline code, tables, images, links, and horizontal rules."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I convert Markdown with code blocks?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, fenced code blocks using triple backticks with optional language identifiers (such as javascript, python, css, or html) are fully supported and rendered inside pre and code tags."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can Markdown tables be converted?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, GitHub Flavored Markdown pipe tables with header rows, alignment colons, and data cells are parsed into clean HTML tables wrapped in responsive containers."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I download the generated HTML?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, you can download a complete HTML file with embedded responsive styling or copy the raw HTML fragment directly to your clipboard."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I preview the generated HTML?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, the workspace provides a dual-tab output panel allowing you to toggle between a live visual preview and formatted HTML source code."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is my Markdown uploaded to a server?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Processing happens entirely within your web browser using client-side JavaScript. Your text and documents are never sent to external servers."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I use the generated HTML on my website?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, the output produces clean, semantic, and sanitized standard HTML5 markup ready to be pasted directly into WordPress, Webflow, static site generators, email newsletters, or custom web projects."
+            }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <a href="#main-converter-workspace" class="skip-link"
+      >Skip to main converter</a
+    >
+
+    <!-- ==========================================================================
+       GLOBAL SITE HEADER & NAVIGATION (LOCKED HUZIKIT STRUCTURE)
+       ========================================================================== -->
+    <header class="site-header" id="site-header">
+      <div class="container nav-wrapper">
+        <!-- Brand Logo -->
+        <a
+          href="/"
+          class="brand-logo"
+          id="brand-logo-link"
+          aria-label="Huzikit Home"
+        >
+          <span>Huzikit</span>
+        </a>
+
+        <!-- Desktop Navigation Bar (Exact 6 Items + Search) -->
+        <nav class="desktop-nav" aria-label="Main Navigation">
+          <!-- 1. Text Tools -->
+          <div class="nav-item">
+            <button
+              type="button"
+              class="nav-link"
+              aria-expanded="false"
+              aria-haspopup="true"
+            >
+              Text Tools
+              <svg
+                class="chevron-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="m6 9 6 6 6-6" />
+              </svg>
+            </button>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="/texttools/word-counter.html" class="dropdown-link"
+                  >Word Counter</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/texttools/character-counter.html"
+                  class="dropdown-link"
+                  >Character Counter</a
+                >
+              </li>
+              <li>
+                <a href="/texttools/case-converter.html" class="dropdown-link"
+                  >Case Converter</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/texttools/remove-duplicate-lines.html"
+                  class="dropdown-link"
+                  >Remove Duplicate Lines</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/texttools/loremipsumgenerator.html"
+                  class="dropdown-link"
+                  >Lorem Ipsum Generator</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/texttools/passwordgenerator.html"
+                  class="dropdown-link"
+                  >Password Generator</a
+                >
+              </li>
+              <li>
+                <a href="/texttools/text-reverser.html" class="dropdown-link"
+                  >Text Reverser</a
+                >
+              </li>
+              <li>
+                <a href="/texttools/onlinenotepad.html" class="dropdown-link"
+                  >Online Notepad</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- 2. Calculators -->
+          <div class="nav-item">
+            <button
+              type="button"
+              class="nav-link"
+              aria-expanded="false"
+              aria-haspopup="true"
+            >
+              Calculators
+              <svg
+                class="chevron-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="m6 9 6 6 6-6" />
+              </svg>
+            </button>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="/calculator/agecalculator.html" class="dropdown-link"
+                  >Age Calculator</a
+                >
+              </li>
+              <li>
+                <a href="/calculator/bmi-calculator.html" class="dropdown-link"
+                  >BMI Calculator</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/calculator/percentage-calculator.html"
+                  class="dropdown-link"
+                  >Percentage Calculator</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/calculator/Calorie-Calculator.html"
+                  class="dropdown-link"
+                  >Calorie Calculator</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/calculator/discount-calculator.html"
+                  class="dropdown-link"
+                  >Discount Calculator</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/calculator/saving&goalcalculator.html"
+                  class="dropdown-link"
+                  >Savings & Goal Calculator</a
+                >
+              </li>
+              <li>
+                <a href="/calculator/tip-calculator.html" class="dropdown-link"
+                  >Tip Calculator</a
+                >
+              </li>
+              <li>
+                <a href="/calculator/gpa-calculator.html" class="dropdown-link"
+                  >GPA Calculator</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- 3. Image & PDF -->
+          <div class="nav-item">
+            <button
+              type="button"
+              class="nav-link"
+              aria-expanded="false"
+              aria-haspopup="true"
+            >
+              Image & PDF
+              <svg
+                class="chevron-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="m6 9 6 6 6-6" />
+              </svg>
+            </button>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="/image&pdf/image-compressor.html" class="dropdown-link"
+                  >Image Compressor</a
+                >
+              </li>
+              <li>
+                <a href="/image&pdf/image-resizer.html" class="dropdown-link"
+                  >Image Resizer</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/image&pdf/pdftowordconverter.html"
+                  class="dropdown-link"
+                  >PDF to Word</a
+                >
+              </li>
+              <li>
+                <a href="/image&pdf/jpg-to-png.html" class="dropdown-link"
+                  >JPG to PNG</a
+                >
+              </li>
+              <li>
+                <a href="/image&pdf/colorpicker.html" class="dropdown-link"
+                  >Color Picker / HEX</a
+                >
+              </li>
+              <li>
+                <a href="/image&pdf/QRGenrator.html" class="dropdown-link"
+                  >QR Code Generator</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- 4. Developer (Active Category) -->
+          <div class="nav-item">
+            <button
+              type="button"
+              class="nav-link active"
+              aria-expanded="false"
+              aria-haspopup="true"
+            >
+              Developer
+              <svg
+                class="chevron-icon"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="m6 9 6 6 6-6" />
+              </svg>
+            </button>
+            <ul class="dropdown-menu">
+              <li>
+                <a
+                  href="/developertools/JSONFORMATTER.html"
+                  class="dropdown-link"
+                  >JSON Formatter</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/developertools/base64encoderdecoder.html"
+                  class="dropdown-link"
+                  >Base64 Encoder/Decoder</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/developertools/urlencoderdecoder.html"
+                  class="dropdown-link"
+                  >URL Encoder/Decoder</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/developertools/meta-tag-generator.html"
+                  class="dropdown-link"
+                  >Meta Tag Generator</a
+                >
+              </li>
+              <li>
+                <a href="/developertools/regextester.html" class="dropdown-link"
+                  >Regex Tester</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/developertools/markdownhtml.html"
+                  class="dropdown-link active-item"
+                  >Markdown to HTML</a
+                >
+              </li>
+              <li>
+                <a href="/developertools/cssminifier.html" class="dropdown-link"
+                  >CSS Minifier</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/developertools/unixtimestamp.html"
+                  class="dropdown-link"
+                  >Unix Timestamp</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- 6. About -->
+          <div class="nav-item">
+            <a href="/about.html" class="nav-link">About</a>
+          </div>
+        </nav>
+
+        <!-- Right Header Actions (Search Button + Mobile Hamburger) -->
+        <div class="header-actions">
+          <button
+            type="button"
+            class="search-trigger-btn"
+            id="search-trigger-btn"
+            aria-label="Open search modal (Ctrl+K)"
+          >
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <circle cx="11" cy="11" r="8" />
+              <path d="m21 21-4.3-4.3" />
+            </svg>
+            <span>Search tools</span>
+            <kbd class="search-shortcut">⌘K</kbd>
+          </button>
+
+          <button
+            type="button"
+            class="mobile-toggle-btn"
+            id="mobile-toggle-btn"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
+            aria-controls="mobile-nav-drawer"
+          >
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <line x1="4" x2="20" y1="6" y2="6" class="hamburger-line"></line>
+              <line
+                x1="4"
+                x2="20"
+                y1="12"
+                y2="12"
+                class="hamburger-line"
+              ></line>
+              <line
+                x1="4"
+                x2="20"
+                y1="18"
+                y2="18"
+                class="hamburger-line"
+              ></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Backdrop & Navigation Drawer -->
+    <div class="mobile-menu-backdrop" id="mobile-menu-backdrop"></div>
+    <div
+      class="mobile-nav-drawer"
+      id="mobile-nav-drawer"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Mobile Navigation"
+    >
+      <div class="mobile-drawer-header">
+        <div class="brand-logo">
+          <span>Huzikit</span>
+        </div>
+        <button
+          type="button"
+          class="mobile-close-btn"
+          id="mobile-close-btn"
+          aria-label="Close navigation menu"
+        >
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <path d="M18 6 6 18" />
+            <path d="m6 6 12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="mobile-drawer-body">
+        <!-- Mobile Accordion: Text Tools -->
+        <div class="mobile-accordion-item">
+          <button type="button" class="mobile-accordion-btn">
+            Text Tools
+            <svg
+              class="chevron-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="m6 9 6 6 6-6" />
+            </svg>
+          </button>
+          <div class="mobile-accordion-content">
+            <a href="/texttools/word-counter.html" class="mobile-sublink"
+              >Word Counter</a
+            >
+            <a href="/texttools/character-counter.html" class="mobile-sublink"
+              >Character Counter</a
+            >
+            <a href="/texttools/case-converter.html" class="mobile-sublink"
+              >Case Converter</a
+            >
+            <a
+              href="/texttools/remove-duplicate-lines.html"
+              class="mobile-sublink"
+              >Remove Duplicate Lines</a
+            >
+            <a href="/texttools/loremipsumgenerator.html" class="mobile-sublink"
+              >Lorem Ipsum Generator</a
+            >
+            <a href="/texttools/passwordgenerator.html" class="mobile-sublink"
+              >Password Generator</a
+            >
+            <a href="/texttools/text-reverser.html" class="mobile-sublink"
+              >Text Reverser</a
+            >
+            <a href="/texttools/onlinenotepad.html" class="mobile-sublink"
+              >Online Notepad</a
+            >
+          </div>
+        </div>
+
+        <!-- Mobile Accordion: Calculators -->
+        <div class="mobile-accordion-item">
+          <button type="button" class="mobile-accordion-btn">
+            Calculators
+            <svg
+              class="chevron-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="m6 9 6 6 6-6" />
+            </svg>
+          </button>
+          <div class="mobile-accordion-content">
+            <a href="/calculator/agecalculator.html" class="mobile-sublink"
+              >Age Calculator</a
+            >
+            <a href="/calculator/bmi-calculator.html" class="mobile-sublink"
+              >BMI Calculator</a
+            >
+            <a
+              href="/calculator/percentage-calculator.html"
+              class="mobile-sublink"
+              >Percentage Calculator</a
+            >
+            <a href="/calculator/Calorie-Calculator.html" class="mobile-sublink"
+              >Calorie Calculator</a
+            >
+            <a
+              href="/calculator/discount-calculator.html"
+              class="mobile-sublink"
+              >Discount Calculator</a
+            >
+            <a
+              href="/calculator/saving&goalcalculator.html"
+              class="mobile-sublink"
+              >Savings & Goal Calculator</a
+            >
+            <a href="/calculator/tip-calculator.html" class="mobile-sublink"
+              >Tip Calculator</a
+            >
+            <a href="/calculator/gpa-calculator.html" class="mobile-sublink"
+              >GPA Calculator</a
+            >
+          </div>
+        </div>
+
+        <!-- Mobile Accordion: Image & PDF -->
+        <div class="mobile-accordion-item">
+          <button type="button" class="mobile-accordion-btn">
+            Image & PDF
+            <svg
+              class="chevron-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="m6 9 6 6 6-6" />
+            </svg>
+          </button>
+          <div class="mobile-accordion-content">
+            <a href="/image&pdf/image-compressor.html" class="mobile-sublink"
+              >Image Compressor</a
+            >
+            <a href="/image&pdf/image-resizer.html" class="mobile-sublink"
+              >Image Resizer</a
+            >
+            <a href="/image&pdf/pdftowordconverter.html" class="mobile-sublink"
+              >PDF to Word</a
+            >
+            <a href="/image&pdf/jpg-to-png.html" class="mobile-sublink"
+              >JPG to PNG</a
+            >
+            <a href="/image&pdf/colorpicker.html" class="mobile-sublink"
+              >Color Picker / HEX</a
+            >
+            <a href="/image&pdf/QRGenrator.html" class="mobile-sublink"
+              >QR Code Generator</a
+            >
+          </div>
+        </div>
+
+        <!-- Mobile Accordion: Developer -->
+        <div class="mobile-accordion-item expanded">
+          <button type="button" class="mobile-accordion-btn">
+            Developer
+            <svg
+              class="chevron-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="m6 9 6 6 6-6" />
+            </svg>
+          </button>
+          <div class="mobile-accordion-content">
+            <a href="/developertools/JSONFORMATTER.html" class="mobile-sublink"
+              >JSON Formatter</a
+            >
+            <a
+              href="/developertools/base64encoderdecoder.html"
+              class="mobile-sublink"
+              >Base64 Encoder/Decoder</a
+            >
+            <a
+              href="/developertools/urlencoderdecoder.html"
+              class="mobile-sublink"
+              >URL Encoder/Decoder</a
+            >
+            <a
+              href="/developertools/meta-tag-generator.html"
+              class="mobile-sublink"
+              >Meta Tag Generator</a
+            >
+            <a href="/developertools/regextester.html" class="mobile-sublink"
+              >Regex Tester</a
+            >
+            <a
+              href="/developertools/markdownhtml.html"
+              class="mobile-sublink"
+              style="color: var(--primary); font-weight: 600"
+              >Markdown to HTML</a
+            >
+            <a href="/developertools/cssminifier.html" class="mobile-sublink"
+              >CSS Minifier</a
+            >
+            <a href="/developertools/unixtimestamp.html" class="mobile-sublink"
+              >Unix Timestamp</a
+            >
+          </div>
+        </div>
+
+        <!-- Direct Links -->
+        <a href="/about.html" class="mobile-direct-link">About Huzikit</a>
+      </div>
+    </div>
+
+    <!-- Global Search Modal (Search all 30 tools) -->
+    <div
+      class="search-modal-backdrop"
+      id="search-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Tool Search"
+    >
+      <div class="search-modal-dialog">
+        <div class="search-input-header">
+          <svg
+            class="search-icon-svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            <circle cx="11" cy="11" r="8" />
+            <path d="m21 21-4.3-4.3" />
+          </svg>
+          <input
+            type="text"
+            class="search-input-field"
+            id="search-input"
+            placeholder="Search 30+ developer tools & utilities..."
+            autocomplete="off"
+          />
+          <button
+            type="button"
+            class="search-close-key"
+            id="search-close-btn"
+            aria-label="Close search"
+          >
+            ESC
+          </button>
+        </div>
+        <ul class="search-results-list" id="search-results-list">
+          <!-- Injected via JavaScript -->
+        </ul>
+      </div>
+    </div>
+
+    <!-- ==========================================================================
+       HERO SECTION WITH LIGHTWEIGHT 3D CONVERSION VISUAL
+       ========================================================================== -->
+    <main id="main-content">
+      <section class="hero-section" id="hero">
+        <div class="container hero-grid">
+          <div class="hero-content-col">
+            <!-- Breadcrumb Navigation -->
+            <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+              <ol class="breadcrumb-list">
+                <li class="breadcrumb-item"><a href="/">Home</a></li>
+                <li class="breadcrumb-separator">/</li>
+                <li class="breadcrumb-item">
+                  <a href="/developertools/markdownhtml.html">Developer</a>
+                </li>
+                <li class="breadcrumb-separator">/</li>
+                <li class="breadcrumb-current" aria-current="page">
+                  Markdown to HTML
+                </li>
+              </ol>
+            </nav>
+
+            <!-- Category and Privacy Badges -->
+            <div class="hero-badge-row">
+              <span class="category-badge">Developer Tools</span>
+              <span class="privacy-badge">
+                <span class="privacy-dot"></span>
+                Client-side processing • Zero server uploads
+              </span>
+            </div>
+
+            <!-- Main Title & Description -->
+            <h1 class="hero-title">Free Markdown to HTML Converter Online</h1>
+            <p class="hero-description">
+              Transform plain Markdown into clean, semantic, and sanitized HTML
+              in real-time. Designed for developers, technical writers, and
+              content creators with live dual-pane preview, rich formatting
+              toolbar, document analytics, and instant file export.
+            </p>
+
+            <!-- Value Proposition Feature Pills -->
+            <div class="hero-tags-row">
+              <span class="feature-pill">
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                Live Dual-Pane Preview
+              </span>
+              <span class="feature-pill">
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                CommonMark & GFM Support
+              </span>
+              <span class="feature-pill">
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                DOMPurify Sanitization
+              </span>
+              <span class="feature-pill">
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                HTML & MD File Export
+              </span>
+            </div>
+          </div>
+
+          <!-- Lightweight 3D CSS Conversion Stage (No Three.js / Zero Bloat) -->
+          <div class="hero-visual-stage" aria-hidden="true">
+            <div class="transformation-card-group">
+              <!-- Top Floating Card: Markdown Document -->
+              <div class="iso-card iso-card-markdown">
+                <div class="iso-header">
+                  <span>INPUT.MD</span>
+                  <span class="iso-highlight-val">CommonMark</span>
+                </div>
+                <div class="iso-code-sample">
+                  # Production API - [x] **Zero Latency** - [ ] Safe
+                  \`DOMPurify\` | Col | Type |
+                </div>
+              </div>
+
+              <!-- Transformation Connecting Node -->
+              <div class="converter-connector-node">
+                <div class="node-pill">
+                  <svg
+                    class="node-pulse-icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="m21.5 2-19 19" />
+                    <path d="M22 16V2h-14" />
+                    <path d="M2 8v14h14" />
+                  </svg>
+                  <span>PARSE & SANITIZE</span>
+                </div>
+              </div>
+
+              <!-- Bottom Floating Card: Clean HTML Output -->
+              <div class="iso-card iso-card-html">
+                <div class="iso-header">
+                  <span>OUTPUT.HTML</span>
+                  <span class="iso-highlight-tag">Semantic HTML5</span>
+                </div>
+                <div class="iso-code-sample">
+                  &lt;<span class="iso-highlight-tag">h1</span>&gt;Production
+                  API&lt;/<span class="iso-highlight-tag">h1</span>&gt;
+                  &lt;<span class="iso-highlight-tag">ul</span>
+                  <span class="iso-highlight-val">class="task-list"</span>&gt;
+                  &lt;<span class="iso-highlight-tag">li</span>&gt;&lt;<span
+                    class="iso-highlight-tag"
+                    >strong</span
+                  >&gt;Zero Latency&lt;/<span class="iso-highlight-tag"
+                    >strong</span
+                  >&gt;
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+         MAIN CONVERTER WORKSPACE (DUAL-PANE DEVELOPER INTERFACE)
+         ========================================================================== -->
+      <section class="workspace-section" id="main-converter-workspace">
+        <div class="container">
+          <div class="workspace-container">
+            <div class="workspace-grid">
+              <!-- LEFT PANEL: MARKDOWN INPUT & EDITOR -->
+              <div class="workspace-panel panel-editor-side">
+                <!-- Editor Header -->
+                <div class="panel-header">
+                  <div class="panel-title-area">
+                    <span class="panel-title">Markdown Input</span>
+                    <span
+                      class="status-badge status-ready"
+                      id="editor-status-badge"
+                      >Ready</span
+                    >
+                  </div>
+                  <div class="panel-actions-row">
+                    <button
+                      type="button"
+                      class="tool-btn"
+                      id="btn-upload"
+                      title="Upload Markdown file from disk"
+                    >
+                      <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                      >
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                        <polyline points="17 8 12 3 7 8" />
+                        <line x1="12" x2="12" y1="3" y2="15" />
+                      </svg>
+                      <span>Upload</span>
+                    </button>
+                    <button
+                      type="button"
+                      class="tool-btn"
+                      id="btn-reset-sample"
+                      title="Load rich default Markdown sample"
+                    >
+                      <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                      >
+                        <path
+                          d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"
+                        />
+                        <path d="M3 3v5h5" />
+                      </svg>
+                      <span>Sample</span>
+                    </button>
+                    <button
+                      type="button"
+                      class="tool-btn"
+                      id="btn-clear"
+                      title="Clear all editor text"
+                    >
+                      <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                      >
+                        <path d="M3 6h18" />
+                        <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6" />
+                        <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2" />
+                      </svg>
+                      <span>Clear</span>
+                    </button>
+                    <button
+                      type="button"
+                      class="tool-btn tool-btn-icon-only"
+                      id="btn-copy-markdown"
+                      title="Copy Markdown to clipboard"
+                      aria-label="Copy Markdown"
+                    >
+                      <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                      >
+                        <rect
+                          width="14"
+                          height="14"
+                          x="8"
+                          y="8"
+                          rx="2"
+                          ry="2"
+                        />
+                        <path
+                          d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"
+                        />
+                      </svg>
+                    </button>
+                    <button
+                      type="button"
+                      class="tool-btn tool-btn-icon-only"
+                      id="btn-download-markdown"
+                      title="Download .md file"
+                      aria-label="Download Markdown file"
+                    >
+                      <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                      >
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                        <polyline points="7 10 12 15 17 10" />
+                        <line x1="12" x2="12" y1="15" y2="3" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Formatting Toolbar -->
+                <div
+                  class="markdown-toolbar"
+                  role="toolbar"
+                  aria-label="Markdown formatting toolbar"
+                >
+                  <!-- Heading Selector -->
+                  <div class="toolbar-group">
+                    <select
+                      class="tb-select"
+                      id="tb-heading-select"
+                      aria-label="Heading Level"
+                    >
+                      <option value="" disabled selected>Headings</option>
+                      <option value="#">H1 Heading</option>
+                      <option value="##">H2 Heading</option>
+                      <option value="###">H3 Heading</option>
+                      <option value="####">H4 Heading</option>
+                    </select>
+                  </div>
+
+                  <div class="toolbar-separator"></div>
+
+                  <!-- Inline Formats -->
+                  <div class="toolbar-group">
+                    <button
+                      type="button"
+                      class="tb-btn"
+                      data-tb-action="bold"
+                      title="Bold (Ctrl+B)"
+                      aria-label="Bold"
+                    >
+                      <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path d="M6 12h9a4 4 0 0 0 0-8H6v8Z" />
+                        <path d="M6 12h10a4 4 0 0 1 0 8H6v-8Z" />
+                      </svg>
+                    </button>
+                    <button
+                      type="button"
+                      class="tb-btn"
+                      data-tb-action="italic"
+                      title="Italic (Ctrl+I)"
+                      aria-label="Italic"
+                    >
+                      <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <line x1="19" x2="10" y1="4" y2="4" />
+                        <line x1="14" x2="5" y1="20" y2="20" />
+                        <line x1="15" x2="9" y1="4" y2="20" />
+                      </svg>
+                    </button>
+                    <button
+                      type="button"
+                      class="tb-btn"
+                      data-tb-action="strike"
+                      title="Strikethrough"
+                      aria-label="Strikethrough"
+                    >
+                      <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path d="M16 4H9a3 3 0 0 0-2.83 4" />
+                        <path d="M14 12a4 4 0 0 1 0 8H6" />
+                        <line x1="4" x2="20" y1="12" y2="12" />
+                      </svg>
+                    </button>
+                  </div>
+
+                  <div class="toolbar-separator"></div>
+
+                  <!-- Media & Links -->
+                  <div class="toolbar-group">
+                    <button
+                      type="button"
+                      class="tb-btn"
+                      data-tb-action="link"
+                      title="Insert Link"
+                      aria-label="Insert Link"
+                    >
+                      <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path
+                          d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"
+                        />
+                        <path
+                          d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"
+                        />
+                      </svg>
+                    </button>
+                    <button
+                      type="button"
+                      class="tb-btn"
+                      data-tb-action="image"
+                      title="Insert Image"
+                      aria-label="Insert Image"
+                    >
+                      <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect
+                          width="18"
+                          height="18"
+                          x="3"
+                          y="3"
+                          rx="2"
+                          ry="2"
+                        />
+                        <circle cx="9" cy="9" r="2" />
+                        <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />
+                      </svg>
+                    </button>
+                    <button
+                      type="button"
+                      class="tb-btn"
+                      data-tb-action="quote"
+                      title="Blockquote"
+                      aria-label="Blockquote"
+                    >
+                      <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path
+                          d="M3 21c3 0 7-1 7-8V5c0-1.25-.756-2.017-2-2H4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"
+                        />
+                        <path
+                          d="M15 21c3 0 7-1 7-8V5c0-1.25-.757-2.017-2-2h-4c-1.25 0-2 .75-2 1.972V11c0 1.25.75 2 2 2 1 0 1 0 1 1v1c0 1-1 2-2 2s-1 .008-1 1.031V20c0 1 0 1 1 1z"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+
+                  <div class="toolbar-separator"></div>
+
+                  <!-- Code -->
+                  <div class="toolbar-group">
+                    <button
+                      type="button"
+                      class="tb-btn"
+                      data-tb-action="code-inline"
+                      title="Inline Code"
+                      aria-label="Inline Code"
+                    >
+                      <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <polyline points="16 18 22 12 16 6" />
+                        <polyline points="8 6 2 12 8 18" />
+                      </svg>
+                    </button>
+                    <button
+                      type="button"
+                      class="tb-btn"
+                      data-tb-action="code-block"
+                      title="Fenced Code Block"
+                      aria-label="Code Block"
+                    >
+                      <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect width="18" height="18" x="3" y="3" rx="2" />
+                        <path d="m10 10-2 2 2 2" />
+                        <path d="m14 14 2-2-2-2" />
+                      </svg>
+                    </button>
+                  </div>
+
+                  <div class="toolbar-separator"></div>
+
+                  <!-- Lists & Tables -->
+                  <div class="toolbar-group">
+                    <button
+                      type="button"
+                      class="tb-btn"
+                      data-tb-action="ul"
+                      title="Unordered List"
+                      aria-label="Unordered List"
+                    >
+                      <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <line x1="8" x2="21" y1="6" y2="6" />
+                        <line x1="8" x2="21" y1="12" y2="12" />
+                        <line x1="8" x2="21" y1="18" y2="18" />
+                        <line x1="3" x2="3.01" y1="6" y2="6" />
+                        <line x1="3" x2="3.01" y1="12" y2="12" />
+                        <line x1="3" x2="3.01" y1="18" y2="18" />
+                      </svg>
+                    </button>
+                    <button
+                      type="button"
+                      class="tb-btn"
+                      data-tb-action="ol"
+                      title="Ordered List"
+                      aria-label="Ordered List"
+                    >
+                      <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <line x1="10" x2="21" y1="6" y2="6" />
+                        <line x1="10" x2="21" y1="12" y2="12" />
+                        <line x1="10" x2="21" y1="18" y2="18" />
+                        <path d="M4 6h1v4" />
+                        <path d="M4 10h2" />
+                        <path d="M6 18H4c0-1 2-2 2-3s-1-1.5-2-1" />
+                      </svg>
+                    </button>
+                    <button
+                      type="button"
+                      class="tb-btn"
+                      data-tb-action="task"
+                      title="Task List"
+                      aria-label="Task List"
+                    >
+                      <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect width="6" height="6" x="3" y="5" rx="1" />
+                        <path d="m5 8 1 1 2-2" />
+                        <line x1="12" x2="21" y1="8" y2="8" />
+                        <rect width="6" height="6" x="3" y="15" rx="1" />
+                        <line x1="12" x2="21" y1="18" y2="18" />
+                      </svg>
+                    </button>
+                    <button
+                      type="button"
+                      class="tb-btn"
+                      data-tb-action="table"
+                      title="Insert Table"
+                      aria-label="Insert Table"
+                    >
+                      <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <rect width="18" height="18" x="3" y="3" rx="2" />
+                        <path d="M3 9h18" />
+                        <path d="M3 15h18" />
+                        <path d="M9 3v18" />
+                      </svg>
+                    </button>
+                    <button
+                      type="button"
+                      class="tb-btn"
+                      data-tb-action="hr"
+                      title="Horizontal Rule"
+                      aria-label="Horizontal Rule"
+                    >
+                      <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <line x1="5" x2="19" y1="12" y2="12" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Textarea & Line Numbers Editor Area -->
+                <div class="editor-workspace-wrap" id="editor-wrapper">
+                  <div
+                    class="line-numbers-gutter"
+                    id="line-gutter"
+                    aria-hidden="true"
+                  >
+                    1
+                  </div>
+                  <div class="editor-textarea-wrapper">
+                    <textarea
+                      class="markdown-textarea"
+                      id="markdown-input"
+                      spellcheck="false"
+                      placeholder="Type or paste your Markdown content here, or drop a .md file..."
+                      aria-label="Markdown text editor"
+                    ></textarea>
+
+                    <!-- Drag and Drop Overlay -->
+                    <div
+                      class="drop-zone-overlay"
+                      id="drop-zone-overlay"
+                      aria-hidden="true"
+                    >
+                      <svg
+                        class="drop-icon-pulse"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      >
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                        <polyline points="7 10 12 15 17 10" />
+                        <line x1="12" x2="12" y1="15" y2="3" />
+                      </svg>
+                      <div>
+                        <strong
+                          style="
+                            font-size: 1.1rem;
+                            display: block;
+                            margin-bottom: 4px;
+                          "
+                          >Drop Markdown File Here</strong
+                        >
+                        <span>Supports .md, .markdown, .txt (up to 5MB)</span>
+                      </div>
+                    </div>
+                  </div>
+                  <input
+                    type="file"
+                    id="file-upload-input"
+                    class="hidden-file-input"
+                    accept=".md,.markdown,.txt"
+                    aria-hidden="true"
+                  />
+                </div>
+
+                <!-- Editor Footer Stats -->
+                <div class="panel-footer-stats">
+                  <div class="stats-pill-group">
+                    <span class="stats-pill-item"
+                      >Lines: <strong id="input-line-count">0</strong></span
+                    >
+                    <span class="stats-pill-item"
+                      >Words: <strong id="input-word-count">0</strong></span
+                    >
+                    <span class="stats-pill-item"
+                      >Chars: <strong id="input-char-count">0</strong></span
+                    >
+                  </div>
+                  <span style="color: var(--ink-faint)">Live Sync Active</span>
+                </div>
+              </div>
+
+              <!-- RIGHT PANEL: HTML OUTPUT & LIVE PREVIEW -->
+              <div class="workspace-panel panel-output-side">
+                <!-- Output Header -->
+                <div class="panel-header">
+                  <div class="panel-title-area">
+                    <span class="panel-title">HTML Output</span>
+                    <!-- Segmented View Switcher Tabs -->
+                    <div
+                      class="view-tabs-group"
+                      role="tablist"
+                      aria-label="Output view modes"
+                    >
+                      <button
+                        type="button"
+                        class="tab-btn active"
+                        id="tab-preview-btn"
+                        role="tab"
+                        aria-selected="true"
+                        aria-controls="preview-pane"
+                      >
+                        <svg
+                          width="14"
+                          height="14"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          aria-hidden="true"
+                        >
+                          <path
+                            d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"
+                          />
+                          <circle cx="12" cy="12" r="3" />
+                        </svg>
+                        Preview
+                      </button>
+                      <button
+                        type="button"
+                        class="tab-btn"
+                        id="tab-html-btn"
+                        role="tab"
+                        aria-selected="false"
+                        aria-controls="html-source-pane"
+                      >
+                        <svg
+                          width="14"
+                          height="14"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          aria-hidden="true"
+                        >
+                          <polyline points="16 18 22 12 16 6" />
+                          <polyline points="8 6 2 12 8 18" />
+                        </svg>
+                        HTML Code
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="panel-actions-row">
+                    <button
+                      type="button"
+                      class="tool-btn tool-btn-primary"
+                      id="btn-copy-html"
+                      title="Copy generated HTML to clipboard"
+                    >
+                      <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                      >
+                        <rect
+                          width="14"
+                          height="14"
+                          x="8"
+                          y="8"
+                          rx="2"
+                          ry="2"
+                        />
+                        <path
+                          d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"
+                        />
+                      </svg>
+                      <span>Copy HTML</span>
+                    </button>
+                    <button
+                      type="button"
+                      class="tool-btn"
+                      id="btn-download-html"
+                      title="Download standalone .html file"
+                    >
+                      <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                      >
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                        <polyline points="7 10 12 15 17 10" />
+                        <line x1="12" x2="12" y1="15" y2="3" />
+                      </svg>
+                      <span>Download</span>
+                    </button>
+                    <button
+                      type="button"
+                      class="tool-btn"
+                      id="btn-beautify-html"
+                      title="Toggle beautified / formatted HTML"
+                    >
+                      <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                      >
+                        <path d="m21 16-4 4-4-4" />
+                        <path d="M17 20V4" />
+                        <path d="m3 8 4-4 4 4" />
+                        <path d="M7 4v16" />
+                      </svg>
+                      <span>Beautify</span>
+                    </button>
+                    <button
+                      type="button"
+                      class="tool-btn"
+                      id="btn-select-all-html"
+                      title="Select all HTML code"
+                    >
+                      Select All
+                    </button>
+                    <button
+                      type="button"
+                      class="tool-btn"
+                      id="btn-manual-convert"
+                      title="Trigger instant manual parse"
+                    >
+                      Convert
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Output Display Stage -->
+                <div class="output-display-stage">
+                  <!-- TAB 1: Live Rendered Markdown Preview -->
+                  <div
+                    class="preview-pane"
+                    id="preview-pane"
+                    role="tabpanel"
+                    aria-label="Rendered Preview"
+                  >
+                    <!-- Rendered via JavaScript -->
+                  </div>
+
+                  <!-- TAB 2: HTML Source Code Viewer -->
+                  <div
+                    class="html-source-pane hidden"
+                    id="html-source-pane"
+                    role="tabpanel"
+                    aria-label="HTML Source View"
+                  >
+                    <pre
+                      class="html-code-pre"
+                      id="html-code-pre"
+                    ><code></code></pre>
+                  </div>
+                </div>
+
+                <!-- Output Footer Stats -->
+                <div class="panel-footer-stats">
+                  <div class="stats-pill-group">
+                    <span class="stats-pill-item"
+                      >Size: <strong id="output-size-count">0 B</strong></span
+                    >
+                    <span class="stats-pill-item"
+                      >Lines: <strong id="output-line-count">0</strong></span
+                    >
+                  </div>
+                  <span
+                    class="status-badge status-ready"
+                    id="output-status-badge"
+                    >Converted</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <!-- Quick Preset Snippet Bar -->
+            <div class="sample-presets-bar">
+              <span class="preset-label">Templates:</span>
+              <button
+                type="button"
+                class="preset-chip-btn"
+                data-preset="default"
+              >
+                Full Showcase
+              </button>
+              <button type="button" class="preset-chip-btn" data-preset="docs">
+                API Documentation
+              </button>
+              <button
+                type="button"
+                class="preset-chip-btn"
+                data-preset="tables"
+              >
+                Tables & Tasks
+              </button>
+              <button type="button" class="preset-chip-btn" data-preset="blog">
+                Clean Blog Post
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+         DOCUMENT METRICS & REAL-TIME STATISTICS DASHBOARD
+         ========================================================================== -->
+      <section class="metrics-section" id="document-metrics">
+        <div class="container">
+          <div class="section-header-compact">
+            <h2 class="section-title">Document Statistics Dashboard</h2>
+            <p class="section-subtitle">
+              Real-time calculated metrics across your Markdown input and
+              rendered HTML output.
+            </p>
+          </div>
+
+          <div class="metrics-grid">
+            <!-- MD Characters -->
+            <div class="metric-card">
+              <span class="metric-label">MD Chars</span>
+              <span class="metric-value" id="metric-md-chars">0</span>
+              <span class="metric-sub">Raw input length</span>
+            </div>
+
+            <!-- MD Words -->
+            <div class="metric-card">
+              <span class="metric-label">MD Words</span>
+              <span class="metric-value" id="metric-md-words">0</span>
+              <span class="metric-sub">Word frequency</span>
+            </div>
+
+            <!-- MD Lines -->
+            <div class="metric-card">
+              <span class="metric-label">MD Lines</span>
+              <span class="metric-value" id="metric-md-lines">0</span>
+              <span class="metric-sub">Newline count</span>
+            </div>
+
+            <!-- HTML Chars -->
+            <div class="metric-card">
+              <span class="metric-label">HTML Chars</span>
+              <span class="metric-value" id="metric-html-chars">0</span>
+              <span class="metric-sub">Markup string length</span>
+            </div>
+
+            <!-- HTML Lines -->
+            <div class="metric-card">
+              <span class="metric-label">HTML Lines</span>
+              <span class="metric-value" id="metric-html-lines">0</span>
+              <span class="metric-sub">Generated output</span>
+            </div>
+
+            <!-- Headings -->
+            <div class="metric-card">
+              <span class="metric-label">Headings</span>
+              <span class="metric-value" id="metric-headings">0</span>
+              <span class="metric-sub">H1 - H6 count</span>
+            </div>
+
+            <!-- Links -->
+            <div class="metric-card">
+              <span class="metric-label">Links</span>
+              <span class="metric-value" id="metric-links">0</span>
+              <span class="metric-sub">Anchor elements</span>
+            </div>
+
+            <!-- Images -->
+            <div class="metric-card">
+              <span class="metric-label">Images</span>
+              <span class="metric-value" id="metric-images">0</span>
+              <span class="metric-sub">Embedded media</span>
+            </div>
+
+            <!-- Lists -->
+            <div class="metric-card">
+              <span class="metric-label">Lists</span>
+              <span class="metric-value" id="metric-lists">0</span>
+              <span class="metric-sub">Ordered / Unordered</span>
+            </div>
+
+            <!-- Code Blocks -->
+            <div class="metric-card">
+              <span class="metric-label">Code Blocks</span>
+              <span class="metric-value" id="metric-code-blocks">0</span>
+              <span class="metric-sub">Fenced pre/code</span>
+            </div>
+
+            <!-- Tables -->
+            <div class="metric-card">
+              <span class="metric-label">Tables</span>
+              <span class="metric-value" id="metric-tables">0</span>
+              <span class="metric-sub">GFM Data grids</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+         HTML STRUCTURE ANALYZER PANEL
+         ========================================================================== -->
+      <section class="analyzer-section" id="html-analyzer">
+        <div class="container">
+          <div class="analyzer-card">
+            <div class="section-header-compact">
+              <h2 class="section-title">HTML Structure Analyzer</h2>
+              <p class="section-subtitle">
+                Deep structural breakdown of tags generated from your current
+                Markdown document.
+              </p>
+            </div>
+
+            <div class="analyzer-grid">
+              <!-- Box 1: Core Tag Volume -->
+              <div class="analyzer-box">
+                <div class="analyzer-box-title">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <circle cx="12" cy="12" r="10" />
+                    <line x1="12" x2="12" y1="8" y2="12" />
+                    <line x1="12" x2="12.01" y1="16" y2="16" />
+                  </svg>
+                  <span>Tag Density</span>
+                </div>
+                <div class="analyzer-row">
+                  <span class="analyzer-row-name">Total Generated Tags:</span>
+                  <span class="analyzer-row-badge" id="analyzer-total-tags"
+                    >0</span
+                  >
+                </div>
+                <div class="analyzer-row">
+                  <span class="analyzer-row-name">Unique Tag Types:</span>
+                  <span class="analyzer-row-badge" id="analyzer-unique-tags"
+                    >0</span
+                  >
+                </div>
+                <div class="analyzer-row">
+                  <span class="analyzer-row-name"
+                    >Paragraph Elements (&lt;p&gt;):</span
+                  >
+                  <span class="analyzer-row-badge" id="analyzer-paragraphs"
+                    >0</span
+                  >
+                </div>
+              </div>
+
+              <!-- Box 2: Heading & Hyperlink Structure -->
+              <div class="analyzer-box">
+                <div class="analyzer-box-title">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <polyline points="4 7 4 4 20 4 20 7" />
+                    <line x1="9" x2="15" y1="20" y2="20" />
+                    <line x1="12" x2="12" y1="4" y2="20" />
+                  </svg>
+                  <span>Hierarchy & Links</span>
+                </div>
+                <div class="analyzer-row">
+                  <span class="analyzer-row-name">Headings (H1–H6):</span>
+                  <span class="analyzer-row-badge" id="analyzer-headings"
+                    >0</span
+                  >
+                </div>
+                <div class="analyzer-row">
+                  <span class="analyzer-row-name">Hyperlinks (&lt;a&gt;):</span>
+                  <span class="analyzer-row-badge" id="analyzer-links">0</span>
+                </div>
+                <div class="analyzer-row">
+                  <span class="analyzer-row-name"
+                    >Image Tags (&lt;img&gt;):</span
+                  >
+                  <span class="analyzer-row-badge" id="analyzer-images">0</span>
+                </div>
+              </div>
+
+              <!-- Box 3: Complex Components -->
+              <div class="analyzer-box">
+                <div class="analyzer-box-title">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <rect width="18" height="18" x="3" y="3" rx="2" />
+                    <path d="M3 9h18" />
+                    <path d="M9 21V9" />
+                  </svg>
+                  <span>Components</span>
+                </div>
+                <div class="analyzer-row">
+                  <span class="analyzer-row-name"
+                    >List Structures (&lt;ul&gt;, &lt;ol&gt;):</span
+                  >
+                  <span class="analyzer-row-badge" id="analyzer-lists">0</span>
+                </div>
+                <div class="analyzer-row">
+                  <span class="analyzer-row-name">Tables (&lt;table&gt;):</span>
+                  <span class="analyzer-row-badge" id="analyzer-tables">0</span>
+                </div>
+                <div class="analyzer-row">
+                  <span class="analyzer-row-name"
+                    >Code Blocks (&lt;pre&gt;):</span
+                  >
+                  <span class="analyzer-row-badge" id="analyzer-code-blocks"
+                    >0</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+         MARKDOWN CHEAT SHEET (QUICK COPY CARDS)
+         ========================================================================== -->
+      <section class="cheatsheet-section" id="cheatsheet">
+        <div class="container">
+          <div class="section-header-compact">
+            <h2 class="section-title">Markdown Syntax Quick Reference</h2>
+            <p class="section-subtitle">
+              Click "Copy" on any card to grab the syntax directly into your
+              clipboard.
+            </p>
+          </div>
+
+          <div class="cheatsheet-grid">
+            <!-- Card: Headings -->
+            <div class="cheat-card">
+              <div class="cheat-header">
+                <span class="cheat-title">Headings (H1–H3)</span>
+                <button type="button" class="cheat-copy-btn">Copy</button>
+              </div>
+              <code class="cheat-code"
+                ># H1 Heading&#10;## H2 Heading&#10;### H3 Heading</code
+              >
+            </div>
+
+            <!-- Card: Bold & Italic -->
+            <div class="cheat-card">
+              <div class="cheat-header">
+                <span class="cheat-title">Bold & Italic</span>
+                <button type="button" class="cheat-copy-btn">Copy</button>
+              </div>
+              <code class="cheat-code"
+                >**Bold text**&#10;*Italic text*&#10;***Bold and italic***</code
+              >
+            </div>
+
+            <!-- Card: Strikethrough -->
+            <div class="cheat-card">
+              <div class="cheat-header">
+                <span class="cheat-title">Strikethrough</span>
+                <button type="button" class="cheat-copy-btn">Copy</button>
+              </div>
+              <code class="cheat-code">~~Deprecated text~~</code>
+            </div>
+
+            <!-- Card: Links -->
+            <div class="cheat-card">
+              <div class="cheat-header">
+                <span class="cheat-title">Links</span>
+                <button type="button" class="cheat-copy-btn">Copy</button>
+              </div>
+              <code class="cheat-code"
+                >[Huzikit Tools](https://huzikit.com)</code
+              >
+            </div>
+
+            <!-- Card: Images -->
+            <div class="cheat-card">
+              <div class="cheat-header">
+                <span class="cheat-title">Images</span>
+                <button type="button" class="cheat-copy-btn">Copy</button>
+              </div>
+              <code class="cheat-code"
+                >![Alt text](https://example.com/photo.jpg)</code
+              >
+            </div>
+
+            <!-- Card: Blockquotes -->
+            <div class="cheat-card">
+              <div class="cheat-header">
+                <span class="cheat-title">Blockquotes</span>
+                <button type="button" class="cheat-copy-btn">Copy</button>
+              </div>
+              <code class="cheat-code"
+                >&gt; Essential developer documentation</code
+              >
+            </div>
+
+            <!-- Card: Lists -->
+            <div class="cheat-card">
+              <div class="cheat-header">
+                <span class="cheat-title">Lists (Ordered & Unordered)</span>
+                <button type="button" class="cheat-copy-btn">Copy</button>
+              </div>
+              <code class="cheat-code"
+                >- Bullet point one&#10;- Bullet point two&#10;1. Numbered
+                item&#10;2. Second item</code
+              >
+            </div>
+
+            <!-- Card: Task Lists -->
+            <div class="cheat-card">
+              <div class="cheat-header">
+                <span class="cheat-title">Task Lists</span>
+                <button type="button" class="cheat-copy-btn">Copy</button>
+              </div>
+              <code class="cheat-code"
+                >- [ ] Pending action&#10;- [x] Completed task</code
+              >
+            </div>
+
+            <!-- Card: Code Blocks -->
+            <div class="cheat-card">
+              <div class="cheat-header">
+                <span class="cheat-title">Code Blocks</span>
+                <button type="button" class="cheat-copy-btn">Copy</button>
+              </div>
+              <code class="cheat-code"
+                >```javascript&#10;const isReady =
+                true;&#10;console.log(isReady);&#10;```</code
+              >
+            </div>
+
+            <!-- Card: Tables -->
+            <div class="cheat-card">
+              <div class="cheat-header">
+                <span class="cheat-title">Tables</span>
+                <button type="button" class="cheat-copy-btn">Copy</button>
+              </div>
+              <code class="cheat-code"
+                >| Name | Role | Status |&#10;| :--- | :---: | ---: |&#10;| Dev
+                | Lead | Active |</code
+              >
+            </div>
+
+            <!-- Card: Inline Code -->
+            <div class="cheat-card">
+              <div class="cheat-header">
+                <span class="cheat-title">Inline Code</span>
+                <button type="button" class="cheat-copy-btn">Copy</button>
+              </div>
+              <code class="cheat-code">Use `npm install marked` to run.</code>
+            </div>
+
+            <!-- Card: Horizontal Rule -->
+            <div class="cheat-card">
+              <div class="cheat-header">
+                <span class="cheat-title">Horizontal Rule</span>
+                <button type="button" class="cheat-copy-btn">Copy</button>
+              </div>
+              <code class="cheat-code">---</code>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+         LOCAL STORAGE DOCUMENT HISTORY (BROWSER-SIDE ONLY)
+         ========================================================================== -->
+      <section class="history-section" id="local-history">
+        <div class="container">
+          <div class="history-card">
+            <div class="history-header">
+              <div>
+                <h2
+                  class="section-title"
+                  style="font-size: 1.35rem; margin-bottom: 4px"
+                >
+                  Local Document History
+                </h2>
+                <p class="section-subtitle">
+                  Store recent snapshots inside your browser. No files or text
+                  ever leave your computer.
+                </p>
+              </div>
+              <div style="display: flex; gap: 8px">
+                <button
+                  type="button"
+                  class="tool-btn tool-btn-primary"
+                  id="btn-save-snapshot"
+                >
+                  Save Snapshot
+                </button>
+                <button type="button" class="tool-btn" id="btn-clear-history">
+                  Clear History
+                </button>
+              </div>
+            </div>
+
+            <div class="history-list" id="history-list">
+              <!-- Injected via JavaScript from localStorage -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+         GEO & AI SEARCH OPTIMIZATION (ANSWER-FIRST KNOWLEDGE BLOCKS)
+         ========================================================================== -->
+      <section class="geo-answers-section" id="ai-quick-answers">
+        <div class="container">
+          <div class="section-header-compact">
+            <h2 class="section-title">
+              Direct Answers for Developers & AI Search
+            </h2>
+            <p class="section-subtitle">
+              Fast, factual answers addressing common Markdown to HTML
+              questions.
+            </p>
+          </div>
+
+          <div class="geo-grid">
+            <!-- Question 1 -->
+            <div class="geo-card">
+              <h3 class="geo-question">
+                What is a Markdown to HTML converter?
+              </h3>
+              <p class="geo-answer">
+                A Markdown to HTML converter is a developer utility that parses
+                human-readable Markdown formatting syntax (such as hash
+                characters for headings, asterisks for emphasis, backticks for
+                code, and pipes for tables) and generates syntactically valid,
+                semantic HTML5 elements ready for rendering in web browsers.
+              </p>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="geo-card">
+              <h3 class="geo-question">How do you convert Markdown to HTML?</h3>
+              <p class="geo-answer">
+                Paste or type your Markdown into the left editor panel of
+                Huzikit's converter. The engine automatically parses your syntax
+                in real-time, validates the Abstract Syntax Tree (AST), applies
+                DOMPurify sanitization, and outputs clean HTML in the right
+                panel with instant live preview and one-click copy or download.
+              </p>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="geo-card">
+              <h3 class="geo-question">What Markdown syntax is supported?</h3>
+              <p class="geo-answer">
+                Full CommonMark and GitHub Flavored Markdown (GFM) standards are
+                supported: headings (H1 to H6), bold, italics, strikethrough,
+                blockquotes, ordered lists, unordered lists, interactive task
+                list checkboxes, inline code, fenced code blocks with language
+                indicators, tables, images, and horizontal rules.
+              </p>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="geo-card">
+              <h3 class="geo-question">Is Markdown to HTML conversion free?</h3>
+              <p class="geo-answer">
+                Yes, Huzikit's online converter is 100% free forever. There are
+                no paywalls, registration forms, rate limits, or advertising
+                watermarks attached to your generated code.
+              </p>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="geo-card">
+              <h3 class="geo-question">
+                Does this tool send my Markdown to a server?
+              </h3>
+              <p class="geo-answer">
+                No. Huzikit processes all Markdown exclusively on the client
+                side using local browser memory and web workers. Your documents,
+                notes, and sensitive code snippets never touch external servers
+                or backend databases.
+              </p>
+            </div>
+
+            <!-- Question 6 -->
+            <div class="geo-card">
+              <h3 class="geo-question">
+                Can I use the output in production websites?
+              </h3>
+              <p class="geo-answer">
+                Yes. The generated HTML uses standard HTML5 tags and can be
+                pasted directly into static site generators, WordPress, Ghost,
+                Substack, web frameworks (React, Vue, Next.js), documentation
+                engines, or email newsletter templates.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+         COMPREHENSIVE EDUCATIONAL REFERENCE (1,200–1,700 WORDS)
+         ========================================================================== -->
+      <article class="educational-section" id="educational-guide">
+        <div class="container edu-prose">
+          <h2>Complete Guide to Markdown and HTML Conversion</h2>
+
+          <p>
+            In modern web development, technical documentation, and content
+            publishing, <strong>Markdown</strong> and <strong>HTML</strong> form
+            the fundamental bridge between human-friendly writing and
+            machine-readable web rendering. Understanding how Markdown
+            transforms into HTML, the underlying parsing mechanics, and the
+            security boundaries involved is essential for engineers,
+            documentation specialists, and content creators.
+          </p>
+
+          <h3>1. What is Markdown?</h3>
+          <p>
+            Created in 2004 by John Gruber with substantial contributions from
+            Aaron Swartz, Markdown is a lightweight text-formatting syntax
+            designed with one core philosophy: plain text should be easy to read
+            and easy to write. Unlike verbose markup languages that require
+            opening and closing tags, Markdown relies on familiar punctuation
+            conventions already used in plain text emails. A line beginning with
+            <code>#</code> becomes a top-level heading, words wrapped in
+            <code>**</code> become bold, and bracketed text followed by
+            parentheses forms an anchor link.
+          </p>
+          <p>
+            Because of its simplicity and readability, Markdown has become the
+            de facto standard for software documentation (such as GitHub
+            <code>README.md</code> files), technical blogging platforms, static
+            site generators (like Hugo, Astro, and Jekyll), and team
+            communication platforms.
+          </p>
+
+          <h3>2. What is HTML?</h3>
+          <p>
+            HTML, or <strong>HyperText Markup Language</strong>, is the
+            universal standard for creating web documents. Defined by the W3C
+            and the WHATWG, HTML uses tags enclosed in angle brackets (such as
+            <code>&lt;h1&gt;</code>, <code>&lt;p&gt;</code>,
+            <code>&lt;article&gt;</code>, and <code>&lt;table&gt;</code>) to
+            instruct web browsers how to structure and present content. While
+            powerful and expressive, writing raw HTML by hand for long-form
+            prose is slow, error-prone, and visually cluttered.
+          </p>
+
+          <div class="edu-highlight-box">
+            <p>
+              <strong>Core Synergy:</strong> Markdown solves the human authoring
+              challenge, while HTML provides the browser rendering target.
+              Converting Markdown to HTML allows creators to write with maximum
+              speed while producing web-standard output.
+            </p>
+          </div>
+
+          <h3>3. How Markdown Conversion Works: The Parsing Pipeline</h3>
+          <p>
+            Transforming Markdown into valid HTML is not a simple string
+            replacement. A production-grade converter operates through a
+            multi-stage compilation pipeline:
+          </p>
+          <ol>
+            <li>
+              <strong>Lexical Analysis (Tokenization):</strong> The parser
+              breaks the raw text stream into individual syntactic tokens such
+              as heading tokens, paragraph boundaries, list indicators, and code
+              fence markers.
+            </li>
+            <li>
+              <strong>Abstract Syntax Tree (AST) Generation:</strong> Tokens are
+              structured into a hierarchical tree representing the document's
+              nested logical relationships (e.g., nested ordered list items
+              inside blockquotes).
+            </li>
+            <li>
+              <strong>HTML Transformation:</strong> The compiler traverses the
+              AST and generates corresponding semantic HTML tags according to
+              CommonMark or GitHub Flavored Markdown rules.
+            </li>
+            <li>
+              <strong>Sanitization & Hardening:</strong> Before displaying or
+              executing generated markup, the converter filters dangerous
+              attributes (such as <code>onclick</code> or
+              <code>javascript:</code> URLs) using strict DOM purification
+              rules.
+            </li>
+          </ol>
+
+          <h3>4. CommonMark vs. GitHub Flavored Markdown (GFM)</h3>
+          <p>
+            Over time, variations of Markdown emerged, leading to inconsistent
+            rendering across tools. In 2014, the
+            <strong>CommonMark</strong> specification was established to provide
+            an unambiguous, rigorous standard for Markdown syntax. GitHub
+            expanded on CommonMark with
+            <strong>GitHub Flavored Markdown (GFM)</strong>, introducing vital
+            extensions for software teams:
+          </p>
+          <ul>
+            <li>
+              <strong>Markdown Tables:</strong> Creating structured tabular data
+              using pipe characters (<code>|</code>) and delimiter hyphens.
+            </li>
+            <li>
+              <strong>Task Lists:</strong> Interactive checkboxes formatted with
+              <code>- [ ]</code> and <code>- [x]</code>.
+            </li>
+            <li>
+              <strong>Strikethrough:</strong> Formatting deprecated text using
+              double tildes (<code>~~text~~</code>).
+            </li>
+            <li>
+              <strong>Autolinks:</strong> Automatically recognizing raw URLs and
+              converting them into clickable links.
+            </li>
+            <li>
+              <strong>Fenced Code Blocks:</strong> Syntax blocks enclosed in
+              triple backticks with language tags for syntax highlighting.
+            </li>
+          </ul>
+          <p>
+            Huzikit's converter fully supports both CommonMark and GitHub
+            Flavored Markdown extensions to ensure full compatibility with
+            modern engineering workflows.
+          </p>
+
+          <h3>5. Essential Markdown Syntax Elements</h3>
+          <p>
+            Here is a breakdown of the core syntax patterns and their direct
+            HTML translations:
+          </p>
+          <ul>
+            <li>
+              <strong>Headings:</strong> <code># Title</code> maps to
+              <code>&lt;h1&gt;Title&lt;/h1&gt;</code>; six levels are available
+              (<code>#</code> through <code>######</code>).
+            </li>
+            <li>
+              <strong>Emphasis:</strong> <code>**Bold**</code> becomes
+              <code>&lt;strong&gt;Bold&lt;/strong&gt;</code>, while
+              <code>*Italic*</code> maps to
+              <code>&lt;em&gt;Italic&lt;/em&gt;</code>.
+            </li>
+            <li>
+              <strong>Blockquotes:</strong> Prefixing a line with
+              <code>&gt;</code> wraps content in
+              <code
+                >&lt;blockquote&gt;&lt;p&gt;...&lt;/p&gt;&lt;/blockquote&gt;</code
+              >.
+            </li>
+            <li>
+              <strong>Lists:</strong> Lines beginning with hyphens, asterisks,
+              or numbers automatically group into <code>&lt;ul&gt;</code> or
+              <code>&lt;ol&gt;</code> parent containers with nested
+              <code>&lt;li&gt;</code> items.
+            </li>
+            <li>
+              <strong>Code Elements:</strong> Inline code enclosed in single
+              backticks becomes <code>&lt;code&gt;</code>, while multi-line
+              fenced code becomes
+              <code>&lt;pre&gt;&lt;code class="language-xyz"&gt;</code>.
+            </li>
+            <li>
+              <strong>Tables:</strong> Column delimiters generate semantic
+              <code>&lt;table&gt;</code>, <code>&lt;thead&gt;</code>,
+              <code>&lt;tbody&gt;</code>, <code>&lt;tr&gt;</code>,
+              <code>&lt;th&gt;</code>, and <code>&lt;td&gt;</code> tags.
+            </li>
+          </ul>
+
+          <h3>6. Security and XSS Protection</h3>
+          <p>
+            Because standard Markdown specifications permit embedding raw HTML
+            inside documents, untrusted Markdown presents a critical security
+            vulnerability known as <strong>Cross-Site Scripting (XSS)</strong>.
+            If a user pastes Markdown containing a malicious payload such as:
+          </p>
+          <p>
+            <code>&lt;script&gt;stealCookies();&lt;/script&gt;</code> or
+            <code>&lt;img src="invalid" onerror="maliciousAction()"&gt;</code>
+          </p>
+          <p>
+            An unsanitized converter would execute that code within the user's
+            active session. Huzikit prevents this attack vector by implementing
+            defense-in-depth sanitization:
+          </p>
+          <ul>
+            <li>
+              <strong>Script Stripping:</strong> All
+              <code>&lt;script&gt;</code>, <code>&lt;iframe&gt;</code>, and
+              <code>&lt;object&gt;</code> tags are completely removed.
+            </li>
+            <li>
+              <strong>Attribute Cleansing:</strong> Inline event handlers (e.g.,
+              <code>onload</code>, <code>onerror</code>, <code>onclick</code>)
+              are stripped from all elements.
+            </li>
+            <li>
+              <strong>Protocol Verification:</strong> Hyperlinks and image
+              sources using <code>javascript:</code>, <code>data:</code>, or
+              <code>vbscript:</code> protocols are neutralized.
+            </li>
+            <li>
+              <strong>Safe Referrer Attributes:</strong> All outgoing external
+              links are automatically tagged with
+              <code>rel="noopener noreferrer"</code> and
+              <code>target="_blank"</code>.
+            </li>
+          </ul>
+
+          <h3>7. Common Markdown Authoring Mistakes</h3>
+          <p>
+            When drafting documents in Markdown, authors often encounter
+            unexpected rendering artifacts due to subtle syntax nuances:
+          </p>
+          <ol>
+            <li>
+              <strong>Missing Space After Hash:</strong> Writing
+              <code>#Heading</code> instead of <code># Heading</code> will treat
+              the text as a literal hashtag rather than a header in CommonMark.
+            </li>
+            <li>
+              <strong>Consecutive Line Merging:</strong> In standard Markdown,
+              hitting Enter once does not create a paragraph break; lines are
+              merged into a single paragraph unless separated by a blank line or
+              two trailing spaces.
+            </li>
+            <li>
+              <strong>Malformed Tables:</strong> Omitting the header delimiter
+              line (e.g., <code>|---|---|</code>) prevents the parser from
+              recognizing the table structure.
+            </li>
+            <li>
+              <strong>Unescaped Special Characters:</strong> Forgetting to
+              escape asterisks or underscores in math formulas (e.g., using
+              <code>\*</code> instead of <code>*</code>) causes accidental
+              italics.
+            </li>
+          </ol>
+
+          <h3>8. Modern Developer Workflow Integration</h3>
+          <p>
+            Converting Markdown to clean HTML is a routine requirement in
+            engineering toolchains. Developers use this utility for:
+          </p>
+          <ul>
+            <li>
+              <strong>Email Newsletter Composition:</strong> Drafting content in
+              clean Markdown and converting it to HTML for email campaign
+              platforms.
+            </li>
+            <li>
+              <strong>Static Documentation:</strong> Creating documentation
+              pages and converting them for CMS platforms that accept raw HTML
+              fragments.
+            </li>
+            <li>
+              <strong>Content Migration:</strong> Moving technical guides from
+              GitHub wikis into enterprise knowledge bases.
+            </li>
+            <li>
+              <strong>Quick Formatting Checks:</strong> Verifying how README
+              tables, task lists, and syntax blocks will look when rendered live
+              on the web.
+            </li>
+          </ul>
+        </div>
+      </article>
+
+      <!-- ==========================================================================
+         FAQ SECTION (ACCESSIBLE ACCORDION WITH KEYBOARD SUPPORT)
+         ========================================================================== -->
+      <section class="faq-section" id="faq">
+        <div class="container faq-container">
+          <div class="section-header-compact" style="text-align: center">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <p class="section-subtitle">
+              Everything you need to know about Huzikit's Markdown to HTML
+              converter.
+            </p>
+          </div>
+
+          <div class="faq-accordion-group">
+            <!-- FAQ 1 -->
+            <div class="faq-item">
+              <button
+                type="button"
+                class="faq-question-btn"
+                aria-expanded="false"
+              >
+                <span>What is Markdown?</span>
+                <svg
+                  class="chevron-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </button>
+              <div class="faq-answer-pane">
+                <p class="faq-answer-text">
+                  Markdown is a lightweight markup language created by John
+                  Gruber in 2004 that allows writers and developers to format
+                  plain text using simple punctuation characters, which easily
+                  converts into structurally valid HTML.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="faq-item">
+              <button
+                type="button"
+                class="faq-question-btn"
+                aria-expanded="false"
+              >
+                <span>What is HTML?</span>
+                <svg
+                  class="chevron-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </button>
+              <div class="faq-answer-pane">
+                <p class="faq-answer-text">
+                  HTML (HyperText Markup Language) is the standard markup
+                  language used to structure web pages and their content using
+                  tags like headings, paragraphs, lists, links, tables, and
+                  images.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="faq-item">
+              <button
+                type="button"
+                class="faq-question-btn"
+                aria-expanded="false"
+              >
+                <span>What does a Markdown to HTML converter do?</span>
+                <svg
+                  class="chevron-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </button>
+              <div class="faq-answer-pane">
+                <p class="faq-answer-text">
+                  A Markdown to HTML converter parses Markdown syntax (such as
+                  hashes for headings, asterisks for bolding, and brackets for
+                  links) and transforms them into corresponding semantic HTML
+                  tags suitable for publishing on websites, documentation
+                  portals, and blogs.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="faq-item">
+              <button
+                type="button"
+                class="faq-question-btn"
+                aria-expanded="false"
+              >
+                <span>Is this Markdown to HTML converter free?</span>
+                <svg
+                  class="chevron-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </button>
+              <div class="faq-answer-pane">
+                <p class="faq-answer-text">
+                  Yes, Huzikit's Markdown to HTML converter is completely free
+                  to use with no account required, no usage limitations, and no
+                  watermarks.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ 5 -->
+            <div class="faq-item">
+              <button
+                type="button"
+                class="faq-question-btn"
+                aria-expanded="false"
+              >
+                <span>Does the converter work online?</span>
+                <svg
+                  class="chevron-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </button>
+              <div class="faq-answer-pane">
+                <p class="faq-answer-text">
+                  Yes, it works entirely in your modern web browser online and
+                  can even function offline once the page is loaded because
+                  conversion is performed locally on your device.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ 6 -->
+            <div class="faq-item">
+              <button
+                type="button"
+                class="faq-question-btn"
+                aria-expanded="false"
+              >
+                <span>What Markdown syntax is supported?</span>
+                <svg
+                  class="chevron-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </button>
+              <div class="faq-answer-pane">
+                <p class="faq-answer-text">
+                  The converter supports CommonMark and GitHub Flavored Markdown
+                  (GFM), including headings (H1-H6), bold, italic,
+                  strikethrough, blockquotes, ordered and unordered lists, task
+                  lists, code blocks with language labels, inline code, tables,
+                  images, links, and horizontal rules.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ 7 -->
+            <div class="faq-item">
+              <button
+                type="button"
+                class="faq-question-btn"
+                aria-expanded="false"
+              >
+                <span>Can I convert Markdown with code blocks?</span>
+                <svg
+                  class="chevron-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </button>
+              <div class="faq-answer-pane">
+                <p class="faq-answer-text">
+                  Yes, fenced code blocks using triple backticks with optional
+                  language identifiers (such as javascript, python, css, or
+                  html) are fully supported and rendered inside pre and code
+                  tags.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ 8 -->
+            <div class="faq-item">
+              <button
+                type="button"
+                class="faq-question-btn"
+                aria-expanded="false"
+              >
+                <span>Can Markdown tables be converted?</span>
+                <svg
+                  class="chevron-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </button>
+              <div class="faq-answer-pane">
+                <p class="faq-answer-text">
+                  Yes, GitHub Flavored Markdown pipe tables with header rows,
+                  alignment colons, and data cells are parsed into clean HTML
+                  tables wrapped in responsive containers.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ 9 -->
+            <div class="faq-item">
+              <button
+                type="button"
+                class="faq-question-btn"
+                aria-expanded="false"
+              >
+                <span>Can I download the generated HTML?</span>
+                <svg
+                  class="chevron-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </button>
+              <div class="faq-answer-pane">
+                <p class="faq-answer-text">
+                  Yes, you can download a complete HTML file with embedded
+                  responsive styling or copy the raw HTML fragment directly to
+                  your clipboard.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ 10 -->
+            <div class="faq-item">
+              <button
+                type="button"
+                class="faq-question-btn"
+                aria-expanded="false"
+              >
+                <span>Can I preview the generated HTML?</span>
+                <svg
+                  class="chevron-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </button>
+              <div class="faq-answer-pane">
+                <p class="faq-answer-text">
+                  Yes, the workspace provides a dual-tab output panel allowing
+                  you to toggle between a live visual preview and formatted HTML
+                  source code.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ 11 -->
+            <div class="faq-item">
+              <button
+                type="button"
+                class="faq-question-btn"
+                aria-expanded="false"
+              >
+                <span>Is my Markdown uploaded to a server?</span>
+                <svg
+                  class="chevron-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </button>
+              <div class="faq-answer-pane">
+                <p class="faq-answer-text">
+                  No. Processing happens entirely within your web browser using
+                  client-side JavaScript. Your text and documents are never sent
+                  to external servers.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ 12 -->
+            <div class="faq-item">
+              <button
+                type="button"
+                class="faq-question-btn"
+                aria-expanded="false"
+              >
+                <span>Can I use the generated HTML on my website?</span>
+                <svg
+                  class="chevron-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </button>
+              <div class="faq-answer-pane">
+                <p class="faq-answer-text">
+                  Yes, the output produces clean, semantic, and sanitized
+                  standard HTML5 markup ready to be pasted directly into
+                  WordPress, Webflow, static site generators, email newsletters,
+                  or custom web projects.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+         RELATED DEVELOPER TOOLS (EXACT HUZIKIT ROUTES)
+         ========================================================================== -->
+      <section class="related-section" id="related-tools">
+        <div class="container">
+          <div class="section-header-compact">
+            <h2 class="section-title">Related Developer Tools</h2>
+            <p class="section-subtitle">
+              Explore other fast, secure utilities from the Huzikit developer
+              collection.
+            </p>
+          </div>
+
+          <div class="related-grid">
+            <!-- Tool 1: JSON Formatter -->
+            <a href="/developertools/JSONFORMATTER.html" class="related-card">
+              <div class="related-icon">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M4 4v5a3 3 0 0 0 3 3h1" />
+                  <path d="M4 20v-5a3 3 0 0 1 3-3h1" />
+                  <path d="M20 4v5a3 3 0 0 1-3 3h-1" />
+                  <path d="M20 20v-5a3 3 0 0 0-3-3h-1" />
+                </svg>
+              </div>
+              <div class="related-info">
+                <span class="related-name">JSON Formatter</span>
+                <span class="related-desc"
+                  >Validate, beautify, and inspect complex JSON data payloads in
+                  seconds.</span
+                >
+              </div>
+            </a>
+
+            <!-- Tool 2: CSS Minifier -->
+            <a href="/developertools/cssminifier.html" class="related-card">
+              <div class="related-icon">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="m16 18 6-6-6-6" />
+                  <path d="m8 6-6 6 6 6" />
+                </svg>
+              </div>
+              <div class="related-info">
+                <span class="related-name">CSS Minifier</span>
+                <span class="related-desc"
+                  >Compress stylesheet file sizes and eliminate redundant rules
+                  for faster load times.</span
+                >
+              </div>
+            </a>
+
+            <!-- Tool 3: Meta Tag Generator -->
+            <a
+              href="/developertools/meta-tag-generator.html"
+              class="related-card"
+            >
+              <div class="related-icon">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20" />
+                  <path d="M2 12h20" />
+                </svg>
+              </div>
+              <div class="related-info">
+                <span class="related-name">Meta Tag Generator</span>
+                <span class="related-desc"
+                  >Generate OpenGraph, Twitter, and SEO metadata tags for modern
+                  web applications.</span
+                >
+              </div>
+            </a>
+
+            <!-- Tool 4: Regex Tester -->
+            <a href="/developertools/regextester.html" class="related-card">
+              <div class="related-icon">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <circle cx="12" cy="12" r="10" />
+                  <path d="m15 9-6 6" />
+                  <path d="m9 9 6 6" />
+                </svg>
+              </div>
+              <div class="related-info">
+                <span class="related-name">Regex Tester</span>
+                <span class="related-desc"
+                  >Test regular expressions against sample text with live
+                  highlighting and group inspection.</span
+                >
+              </div>
+            </a>
+
+            <!-- Tool 5: Base64 Encoder/Decoder -->
+            <a
+              href="/developertools/base64encoderdecoder.html"
+              class="related-card"
+            >
+              <div class="related-icon">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <rect width="8" height="8" x="2" y="2" rx="2" />
+                  <rect width="8" height="8" x="14" y="2" rx="2" />
+                  <rect width="8" height="8" x="2" y="14" rx="2" />
+                  <rect width="8" height="8" x="14" y="14" rx="2" />
+                </svg>
+              </div>
+              <div class="related-info">
+                <span class="related-name">Base64 Encoder/Decoder</span>
+                <span class="related-desc"
+                  >Convert plain strings and binary payloads into standard
+                  Base64 encoding.</span
+                >
+              </div>
+            </a>
+
+            <!-- Tool 6: URL Encoder/Decoder -->
+            <a
+              href="/developertools/urlencoderdecoder.html"
+              class="related-card"
+            >
+              <div class="related-icon">
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"
+                  />
+                  <path
+                    d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"
+                  />
+                </svg>
+              </div>
+              <div class="related-info">
+                <span class="related-name">URL Encoder/Decoder</span>
+                <span class="related-desc"
+                  >Safely encode special characters for uniform resource
+                  identifiers and query parameters.</span
+                >
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+         CALL TO ACTION SECTION (CTA)
+         ========================================================================== -->
+      <section class="cta-section">
+        <div class="container">
+          <div class="cta-box">
+            <h2 class="cta-title">
+              Convert Markdown into clean HTML in seconds.
+            </h2>
+            <p class="cta-desc">
+              Experience lightning-fast parsing, live preview rendering, and
+              reliable document exports without registration or server delays.
+            </p>
+            <a
+              href="#main-converter-workspace"
+              class="tool-btn tool-btn-primary"
+              style="
+                padding: 12px 28px;
+                font-size: 0.9375rem;
+                border-radius: var(--radius-md);
+              "
+            >
+              <span>Start Converting Now</span>
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <line x1="5" x2="19" y1="12" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ==========================================================================
+       SITE FOOTER (LOCKED HUZIKIT CONTENT & PRODUCTION ROUTES)
+       ========================================================================== -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top-grid">
+          <!-- Brand Bio Column -->
+          <div class="footer-brand-col">
+            <a href="/" class="footer-logo">
+              <span>Huzikit</span>
+            </a>
+            <p class="footer-bio">
+              The ultimate modern suite of lightning-fast, secure online web
+              utilities, calculators, and developer tools.
+            </p>
+            <div>
+              <a
+                href="https://x.com/huzikitoffical"
+                class="footer-social-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M4 4l11.733 16h4.267l-11.733 -16z" />
+                  <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" />
+                </svg>
+                <span>Follow @huzikitoffical on X</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Column 1: Text & Dev Tools -->
+          <div>
+            <h3 class="footer-col-title">Text & Dev Tools</h3>
+            <ul class="footer-nav-list">
+              <li>
+                <a href="/texttools/word-counter.html" class="footer-link"
+                  >Word Counter</a
+                >
+              </li>
+              <li>
+                <a href="/texttools/case-converter.html" class="footer-link"
+                  >Case Converter</a
+                >
+              </li>
+              <li>
+                <a href="/developertools/JSONFORMATTER.html" class="footer-link"
+                  >JSON Formatter</a
+                >
+              </li>
+              <li>
+                <a
+                  href="/developertools/base64encoderdecoder.html"
+                  class="footer-link"
+                  >Base64 Utility</a
+                >
+              </li>
+              <li>
+                <a href="/developertools/regextester.html" class="footer-link"
+                  >Regex Tester</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 2: Calculators & Image -->
+          <div>
+            <h3 class="footer-col-title">Calculators & Image</h3>
+            <ul class="footer-nav-list">
+              <li>
+                <a href="/calculator/agecalculator.html" class="footer-link"
+                  >Age Calculator</a
+                >
+              </li>
+              <li>
+                <a href="/calculator/bmi-calculator.html" class="footer-link"
+                  >BMI Calculator</a
+                >
+              </li>
+              <li>
+                <a href="/image&pdf/image-compressor.html" class="footer-link"
+                  >Image Compressor</a
+                >
+              </li>
+              <li>
+                <a href="/image&pdf/QRGenrator.html" class="footer-link"
+                  >QR Code Generator</a
+                >
+              </li>
+              <li>
+                <a href="/image&pdf/colorpicker.html" class="footer-link"
+                  >Color Picker</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Company & Legal -->
+          <div>
+            <h3 class="footer-col-title">Company & Legal</h3>
+            <ul class="footer-nav-list">
+              <li>
+                <a href="/about.html" class="footer-link">About Huzikit</a>
+              </li>
+              <li>
+                <a href="/disclamier.html" class="footer-link">Disclaimer</a>
+              </li>
+              <li>
+                <a href="/privacy-policies.html" class="footer-link"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a href="/Termsofservices.html" class="footer-link"
+                  >Terms of Service</a
+                >
+              </li>
+              <li>
+                <a href="/contact-us.html" class="footer-link"
+                  >Contact Support</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Bottom Copyright Bar -->
+        <div class="footer-bottom-bar">
+          <span>© 2026 Huzikit.com. All rights reserved.</span>
+          <span class="footer-tagline"
+            >Built with speed, security, and precision.</span
+          >
+        </div>
+      </div>
+    </footer>
+
+    <!-- Floating Toast Notification Feedback -->
+    <div
+      class="toast-notification"
+      id="toast-notification"
+      role="status"
+      aria-live="polite"
+    >
+      <svg
+        width="18"
+        height="18"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="var(--success)"
+        stroke-width="2.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <polyline points="20 6 9 17 4 12" />
+      </svg>
+      <span id="toast-message">Action completed successfully</span>
+    </div>
+
+    <!-- Primary Application Logic -->
+    <script src="/developertools/markdownhtml.js"></script>
+  </body>
+</html>

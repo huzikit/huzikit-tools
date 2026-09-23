@@ -1,0 +1,2361 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO Primary & Meta Tags -->
+    <title>
+      Free Base64 Encoder & Decoder Online — Text, Files & Images | Huzikit
+    </title>
+    <meta
+      name="description"
+      content="Free online Base64 encoder and decoder utility supporting UTF-8 Unicode, binary files, images, Data URLs, URL-safe Base64, and HEX conversion with 100% client-side browser processing."
+    />
+    <link
+      rel="canonical"
+      href="https://huzikit.com/developertools/base64encoderdecoder.html"
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://huzikit.com/developertools/base64encoderdecoder.html"
+    />
+    <meta
+      property="og:title"
+      content="Free Base64 Encoder & Decoder Online — Text, Files & Images | Huzikit"
+    />
+    <meta
+      property="og:description"
+      content="Encode and decode text, binary files, and image data with full UTF-8 Unicode, URL-safe Base64, and Data URI support directly in your browser."
+    />
+    <meta property="og:site_name" content="Huzikit" />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Free Base64 Encoder & Decoder Online — Text, Files & Images | Huzikit"
+    />
+    <meta
+      name="twitter:description"
+      content="Free browser-based Base64 utility for developers and technical users. Supports UTF-8, binary files, images, Data URIs, and URL-safe Base64."
+    />
+
+    <!-- Google Fonts: Lexend & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- External Stylesheet -->
+    <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="/developertools/base64encoderdecoder.css" />
+
+    <!-- Structured Data: WebApplication, BreadcrumbList, FAQPage -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebApplication",
+            "name": "Huzikit Base64 Encoder & Decoder",
+            "url": "https://huzikit.com/developertools/base64encoderdecoder.html",
+            "applicationCategory": "DeveloperApplication",
+            "operatingSystem": "All",
+            "description": "Professional browser-based Base64 utility supporting UTF-8 text, binary files, images, Data URIs, URL-safe Base64, and HEX conversion.",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://huzikit.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Developer Tools",
+                "item": "https://huzikit.com/toolpage.html"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Base64 Encoder / Decoder",
+                "item": "https://huzikit.com/developertools/base64encoderdecoder.html"
+              }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is Base64?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Base64 is a binary-to-text encoding scheme that represents binary data in an ASCII string format using an alphabet of 64 characters (A-Z, a-z, 0-9, +, and /). It is designed to safely transmit binary data through systems designed only for text."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is Base64 encryption?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. Base64 is an encoding method, not encryption. It does not hide data, require a key, or provide confidentiality. Anyone can decode Base64 in milliseconds without credentials."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does Base64 reduce or compress file size?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. Base64 actually increases data size by approximately 33%. Every 3 bytes of binary data (24 bits) are converted into 4 ASCII characters (32 bits), creating noticeable overhead."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is URL-safe Base64?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "URL-safe Base64 replaces the standard characters '+' and '/' with '-' (dash) and '_' (underscore), so the encoded string can be placed inside URL query parameters, paths, or web tokens (like JWTs) without percent-encoding."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Are my files and text sent to a server?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. Huzikit processes 100% of your text, files, and image data locally in your browser using modern JavaScript FileReader and TypedArray APIs. No data ever leaves your device."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <!-- =========================================================================
+       GLOBAL HUZIKIT NAVBAR
+       ========================================================================= -->
+    <header class="site-header" id="site-header">
+      <div class="container">
+        <div class="nav-wrapper">
+          <!-- Brand Logo -->
+          <a href="/" class="brand-logo" id="brand-logo">
+            <div class="brand-name">Huzikit</div>
+          </a>
+
+          <!-- Desktop Navigation Items -->
+          <nav class="desktop-nav" aria-label="Main Navigation">
+            <!-- 1. Text Tools Dropdown -->
+            <div class="nav-item">
+              <button
+                class="dropdown-trigger"
+                aria-expanded="false"
+                aria-haspopup="true"
+              >
+                Text Tools
+                <svg
+                  class="dropdown-arrow"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div class="dropdown-menu">
+                <a href="/texttools/word-counter.html" class="dropdown-item"
+                  >Word Counter</a
+                >
+                <a
+                  href="/texttools/character-counter.html"
+                  class="dropdown-item"
+                  >Character Counter</a
+                >
+                <a href="/texttools/case-converter.html" class="dropdown-item"
+                  >Case Converter</a
+                >
+                <a
+                  href="/texttools/remove-duplicate-lines.html"
+                  class="dropdown-item"
+                  >Remove Duplicate Lines</a
+                >
+                <a
+                  href="/texttools/loremipsumgenerator.html"
+                  class="dropdown-item"
+                  >Lorem Ipsum Generator</a
+                >
+                <a
+                  href="/texttools/passwordgenerator.html"
+                  class="dropdown-item"
+                  >Password Generator</a
+                >
+                <a href="/texttools/text-reverser.html" class="dropdown-item"
+                  >Text Reverser</a
+                >
+                <a href="/texttools/onlinenotepad.html" class="dropdown-item"
+                  >Online Notepad</a
+                >
+              </div>
+            </div>
+
+            <!-- 2. Calculators Dropdown -->
+            <div class="nav-item">
+              <button
+                class="dropdown-trigger"
+                aria-expanded="false"
+                aria-haspopup="true"
+              >
+                Calculators
+                <svg
+                  class="dropdown-arrow"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div class="dropdown-menu">
+                <a href="/calculator/agecalculator.html" class="dropdown-item"
+                  >Age Calculator</a
+                >
+                <a href="/calculator/bmi-calculator.html" class="dropdown-item"
+                  >BMI Calculator</a
+                >
+                <a
+                  href="/calculator/percentage-calculator.html"
+                  class="dropdown-item"
+                  >Percentage Calculator</a
+                >
+                <a
+                  href="/calculator/Calorie-Calculator.html"
+                  class="dropdown-item"
+                  >Calorie Calculator</a
+                >
+                <a
+                  href="/calculator/discount-calculator.html"
+                  class="dropdown-item"
+                  >Discount Calculator</a
+                >
+                <a
+                  href="/calculator/saving&goalcalculator.html"
+                  class="dropdown-item"
+                  >Saving & Goal Calculator</a
+                >
+                <a href="/calculator/tip-calculator.html" class="dropdown-item"
+                  >Tip Calculator</a
+                >
+                <a href="/calculator/gpa-calculator.html" class="dropdown-item"
+                  >GPA Calculator</a
+                >
+              </div>
+            </div>
+
+            <!-- 3. Image & PDF Dropdown -->
+            <div class="nav-item">
+              <button
+                class="dropdown-trigger"
+                aria-expanded="false"
+                aria-haspopup="true"
+              >
+                Image & PDF
+                <svg
+                  class="dropdown-arrow"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div class="dropdown-menu">
+                <a href="/image&pdf/image-compressor.html" class="dropdown-item"
+                  >Image Compressor</a
+                >
+                <a href="/image&pdf/image-resizer.html" class="dropdown-item"
+                  >Image Resizer</a
+                >
+                <a
+                  href="/image&pdf/pdftowordconverter.html"
+                  class="dropdown-item"
+                  >PDF to Word Converter</a
+                >
+                <a href="/image&pdf/jpg-to-png.html" class="dropdown-item"
+                  >JPG to PNG</a
+                >
+                <a href="/image&pdf/colorpicker.html" class="dropdown-item"
+                  >Color Picker</a
+                >
+                <a href="/image&pdf/QRGenrator.html" class="dropdown-item"
+                  >QR Code Generator</a
+                >
+              </div>
+            </div>
+
+            <!-- 4. Developer Tools Dropdown -->
+            <div class="nav-item">
+              <button
+                class="dropdown-trigger"
+                aria-expanded="false"
+                aria-haspopup="true"
+              >
+                Developer
+                <svg
+                  class="dropdown-arrow"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div class="dropdown-menu">
+                <a
+                  href="/developertools/JSONFORMATTER.html"
+                  class="dropdown-item"
+                  >JSON Formatter</a
+                >
+                <a
+                  href="/developertools/base64encoderdecoder.html"
+                  class="dropdown-item active"
+                  >Base64 Encoder / Decoder
+                  <span class="dropdown-item-badge">Active</span></a
+                >
+                <a
+                  href="/developertools/urlencoderdecoder.html"
+                  class="dropdown-item"
+                  >URL Encoder / Decoder</a
+                >
+                <a
+                  href="/developertools/meta-tag-generator.html"
+                  class="dropdown-item"
+                  >Meta Tag Generator</a
+                >
+                <a href="/developertools/regextester.html" class="dropdown-item"
+                  >Regex Tester</a
+                >
+                <a
+                  href="/developertools/markdownhtml.html"
+                  class="dropdown-item"
+                  >Markdown to HTML</a
+                >
+                <a href="/developertools/cssminifier.html" class="dropdown-item"
+                  >CSS Minifier</a
+                >
+                <a
+                  href="/developertools/unixtimestamp.html"
+                  class="dropdown-item"
+                  >Unix Timestamp</a
+                >
+              </div>
+            </div>
+
+            <!-- 5. About Link -->
+            <div class="nav-item">
+              <a href="https://huzikit.com/about/" class="nav-link">About</a>
+            </div>
+          </nav>
+
+          <!-- Right Header Actions (Search & Mobile Hamburger) -->
+          <div class="nav-actions">
+            <button
+              class="search-trigger-btn"
+              id="header-search-btn"
+              aria-label="Search all 30 Huzikit tools"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <span class="search-label">Search tools...</span>
+              <kbd class="kbd-shortcut">Ctrl K</kbd>
+            </button>
+
+            <!-- Mobile Hamburger Toggle -->
+            <button
+              class="hamburger-btn"
+              id="hamburger-btn"
+              aria-label="Open mobile menu"
+              aria-expanded="false"
+            >
+              <span class="hamburger-line"></span>
+              <span class="hamburger-line"></span>
+              <span class="hamburger-line"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Drawer Menu -->
+    <div class="mobile-drawer-overlay" id="mobile-drawer-overlay"></div>
+    <div
+      class="mobile-drawer"
+      id="mobile-drawer"
+      aria-label="Mobile Navigation Menu"
+    >
+      <div class="mobile-drawer-header">
+        <div class="brand-logo">
+          <div class="brand-badge-icon">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+            >
+              <path
+                d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
+              />
+            </svg>
+          </div>
+          <div class="brand-name">Huzi<span>kit</span></div>
+        </div>
+        <button
+          class="pane-tool-btn"
+          id="mobile-drawer-close"
+          aria-label="Close menu"
+          onclick="document.getElementById('hamburger-btn').click()"
+          style="font-size: 1.2rem"
+        >
+          ✕
+        </button>
+      </div>
+
+      <div class="mobile-drawer-content">
+        <!-- Text Tools Accordion -->
+        <div class="mobile-accordion-group">
+          <button class="mobile-accordion-btn" aria-expanded="false">
+            Text Tools
+            <svg
+              class="dropdown-arrow"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+            >
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="mobile-accordion-list">
+            <a href="/texttools/word-counter.html">Word Counter</a>
+            <a href="/texttools/character-counter.html">Character Counter</a>
+            <a href="/texttools/case-converter.html">Case Converter</a>
+            <a href="/texttools/remove-duplicate-lines.html"
+              >Remove Duplicate Lines</a
+            >
+            <a href="/texttools/loremipsumgenerator.html"
+              >Lorem Ipsum Generator</a
+            >
+            <a href="/texttools/passwordgenerator.html">Password Generator</a>
+            <a href="/texttools/text-reverser.html">Text Reverser</a>
+            <a href="/texttools/onlinenotepad.html">Online Notepad</a>
+          </div>
+        </div>
+
+        <!-- Calculators Accordion -->
+        <div class="mobile-accordion-group">
+          <button class="mobile-accordion-btn" aria-expanded="false">
+            Calculators
+            <svg
+              class="dropdown-arrow"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+            >
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="mobile-accordion-list">
+            <a href="/calculator/agecalculator.html">Age Calculator</a>
+            <a href="/calculator/bmi-calculator.html">BMI Calculator</a>
+            <a href="/calculator/percentage-calculator.html"
+              >Percentage Calculator</a
+            >
+            <a href="/calculator/Calorie-Calculator.html">Calorie Calculator</a>
+            <a href="/calculator/discount-calculator.html"
+              >Discount Calculator</a
+            >
+            <a href="/calculator/saving&goalcalculator.html"
+              >Saving & Goal Calculator</a
+            >
+            <a href="/calculator/tip-calculator.html">Tip Calculator</a>
+            <a href="/calculator/gpa-calculator.html">GPA Calculator</a>
+          </div>
+        </div>
+
+        <!-- Image & PDF Accordion -->
+        <div class="mobile-accordion-group">
+          <button class="mobile-accordion-btn" aria-expanded="false">
+            Image & PDF
+            <svg
+              class="dropdown-arrow"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+            >
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="mobile-accordion-list">
+            <a href="/image&pdf/image-compressor.html">Image Compressor</a>
+            <a href="/image&pdf/image-resizer.html">Image Resizer</a>
+            <a href="/image&pdf/pdftowordconverter.html"
+              >PDF to Word Converter</a
+            >
+            <a href="/image&pdf/jpg-to-png.html">JPG to PNG</a>
+            <a href="/image&pdf/colorpicker.html">Color Picker</a>
+            <a href="/image&pdf/QRGenrator.html">QR Code Generator</a>
+          </div>
+        </div>
+
+        <!-- Developer Accordion -->
+        <div class="mobile-accordion-group">
+          <button class="mobile-accordion-btn" aria-expanded="true">
+            Developer Tools
+            <svg
+              class="dropdown-arrow"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+            >
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="mobile-accordion-list open">
+            <a href="/developertools/JSONFORMATTER.html">JSON Formatter</a>
+            <a href="/developertools/base64encoderdecoder.html" class="active"
+              >Base64 Encoder / Decoder</a
+            >
+            <a href="/developertools/urlencoderdecoder.html"
+              >URL Encoder / Decoder</a
+            >
+            <a href="/developertools/meta-tag-generator.html"
+              >Meta Tag Generator</a
+            >
+            <a href="/developertools/regextester.html">Regex Tester</a>
+            <a href="/developertools/markdownhtml.html">Markdown to HTML</a>
+            <a href="/developertools/cssminifier.html">CSS Minifier</a>
+            <a href="/developertools/unixtimestamp.html">Unix Timestamp</a>
+          </div>
+        </div>
+
+        <!-- Direct links -->
+        <a href="https://huzikit.com/about/" class="mobile-direct-link"
+          >About Huzikit</a
+        >
+        <a href="https://huzikit.com/contact/" class="mobile-direct-link"
+          >Contact Support</a
+        >
+      </div>
+    </div>
+
+    <!-- =========================================================================
+       BREADCRUMB
+       ========================================================================= -->
+    <div class="breadcrumb-section">
+      <div class="container">
+        <ul class="breadcrumb-list" aria-label="Breadcrumb">
+          <li class="breadcrumb-item">
+            <a href="https://huzikit.com/">Home</a>
+          </li>
+          <li class="breadcrumb-separator">/</li>
+          <li class="breadcrumb-item">
+            <a href="/developertools/JSONFORMATTER.html">Developer</a>
+          </li>
+          <li class="breadcrumb-separator">/</li>
+          <li class="breadcrumb-item current" aria-current="page">
+            Base64 Encoder / Decoder
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- =========================================================================
+       HERO SECTION & 3D LIGHTWEIGHT VISUAL
+       ========================================================================= -->
+    <section class="hero-section" id="hero-section">
+      <div class="container">
+        <div class="hero-grid">
+          <!-- Hero Text -->
+          <div>
+            <div class="hero-badge">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+              100% Client-Side • No Data Uploads
+            </div>
+            <h1 class="hero-title">Free Base64 Encoder & Decoder Online</h1>
+            <p class="hero-description">
+              Encode and decode text, files, and supported image data while
+              working with UTF-8, URL-safe Base64, and Data URLs. Built for
+              developers, designers, and API engineers with zero data
+              transmission.
+            </p>
+
+            <div class="hero-trust-badges">
+              <div class="trust-badge">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                Full UTF-8 & Emoji Support
+              </div>
+              <div class="trust-badge">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                Binary-Safe File Reader
+              </div>
+              <div class="trust-badge">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                URL-Safe Base64 (- and _)
+              </div>
+              <div class="trust-badge">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                Data URI Generation
+              </div>
+            </div>
+          </div>
+
+          <!-- 3D Perspective Visual (No heavy libraries, CSS 3D Transforms) -->
+          <div class="hero-visual-container" aria-hidden="true">
+            <div class="hero-3d-stage" id="hero-3d-stage">
+              <div class="card-3d" id="card-3d-1">
+                <div class="card-3d-left">
+                  <span class="card-3d-tag">RAW</span>
+                  <span class="card-3d-content">Hello Huzikit! 👋</span>
+                </div>
+                <span class="card-3d-pill">UTF-8</span>
+              </div>
+
+              <div class="flow-connector">
+                <span>Encoding (24-bit ➔ 6-bit)</span>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </div>
+
+              <div class="card-3d" id="card-3d-2">
+                <div class="card-3d-left">
+                  <span
+                    class="card-3d-tag"
+                    style="
+                      background: var(--primary-light);
+                      color: var(--primary);
+                    "
+                    >B64</span
+                  >
+                  <span class="card-3d-content"
+                    >SGVsbG8gSHV6aWtpdCEg8J+Riw==</span
+                  >
+                </div>
+                <span
+                  class="card-3d-pill"
+                  style="background: #ecfdf5; color: #065f46"
+                  >RFC 4648</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+       MAIN WORKSPACE SECTION
+       ========================================================================= -->
+    <main class="workspace-section" id="workspace-section">
+      <div class="container">
+        <div class="workspace-card" id="main-tool-card">
+          <!-- Workspace Tabs Navigation -->
+          <div class="workspace-tabs-nav" role="tablist">
+            <button
+              class="tool-tab-btn active"
+              data-tab="text"
+              role="tab"
+              id="tab-btn-text"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <line x1="17" y1="10" x2="3" y2="10"></line>
+                <line x1="21" y1="6" x2="3" y2="6"></line>
+                <line x1="21" y1="14" x2="3" y2="14"></line>
+                <line x1="17" y1="18" x2="3" y2="18"></line>
+              </svg>
+              Text Base64
+            </button>
+
+            <button
+              class="tool-tab-btn"
+              data-tab="file"
+              role="tab"
+              id="tab-btn-file"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                ></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="12" y1="18" x2="12" y2="12"></line>
+                <line x1="9" y1="15" x2="15" y2="15"></line>
+              </svg>
+              File & Image
+            </button>
+
+            <button
+              class="tool-tab-btn"
+              data-tab="hex"
+              role="tab"
+              id="tab-btn-hex"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+              Base64 ↔ Hex & Bytes
+            </button>
+
+            <button
+              class="tool-tab-btn"
+              data-tab="batch"
+              role="tab"
+              id="tab-btn-batch"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+              </svg>
+              Batch Queue
+            </button>
+          </div>
+
+          <!-- ===================================================================
+             TAB 1: TEXT BASE64 ENCODER & DECODER
+             =================================================================== -->
+          <div class="tab-panel active" id="tab-text" role="tabpanel">
+            <!-- Tool Controls & Action Bar -->
+            <div class="tool-controls-bar">
+              <div class="mode-toggle-group">
+                <button
+                  class="mode-btn active"
+                  id="btn-mode-encode"
+                  type="button"
+                >
+                  Encode
+                </button>
+                <button class="mode-btn" id="btn-mode-decode" type="button">
+                  Decode
+                </button>
+              </div>
+
+              <div class="action-buttons-group">
+                <button
+                  class="btn-secondary"
+                  id="btn-auto-detect"
+                  type="button"
+                  title="Analyze input format"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 14 14"></polyline>
+                  </svg>
+                  Auto Detect
+                </button>
+
+                <button
+                  class="btn-secondary"
+                  id="btn-swap"
+                  type="button"
+                  title="Swap input and output"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <polyline points="17 1 21 5 17 9"></polyline>
+                    <path d="M3 11V9a4 4 0 0 1 4-4h14"></path>
+                    <polyline points="7 23 3 19 7 15"></polyline>
+                    <path d="M21 13v2a4 4 0 0 1-4 4H3"></path>
+                  </svg>
+                  Swap
+                </button>
+
+                <button
+                  class="btn-secondary"
+                  id="btn-example"
+                  type="button"
+                  title="Load sample Unicode text"
+                >
+                  Load Example
+                </button>
+
+                <button
+                  class="btn-secondary"
+                  id="btn-clear"
+                  type="button"
+                  title="Clear text areas"
+                >
+                  Clear
+                </button>
+              </div>
+            </div>
+
+            <!-- Dual Column Editors -->
+            <div class="editor-grid">
+              <!-- Input Editor -->
+              <div class="editor-pane">
+                <div class="pane-header">
+                  <div class="pane-title">
+                    <span id="input-pane-title">Text / Raw Input</span>
+                    <span class="pane-title-badge">UTF-8</span>
+                  </div>
+                  <div class="pane-tools">
+                    <button
+                      class="pane-tool-btn"
+                      type="button"
+                      onclick="
+                        document.getElementById('input-text').value = '';
+                        document
+                          .getElementById('input-text')
+                          .dispatchEvent(new Event('input'));
+                      "
+                    >
+                      Clear
+                    </button>
+                  </div>
+                </div>
+
+                <div class="editor-box">
+                  <textarea
+                    class="code-textarea"
+                    id="input-text"
+                    placeholder="Type, paste, or drop your UTF-8 text, Unicode, emojis, or code here..."
+                    spellcheck="false"
+                  ></textarea>
+
+                  <div class="editor-footer-metrics">
+                    <div class="metrics-left">
+                      <span class="metric-item"
+                        >Chars: <span id="input-char-count">0</span></span
+                      >
+                      <span class="metric-item"
+                        >UTF-8 Bytes: <span id="input-byte-count">0</span></span
+                      >
+                    </div>
+                    <div class="metrics-right">
+                      <span>Input Ready</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Output Editor -->
+              <div class="editor-pane">
+                <div class="pane-header">
+                  <div class="pane-title">
+                    <span id="output-pane-title">Base64 Output</span>
+                    <span class="pane-title-badge">RFC 4648</span>
+                  </div>
+                  <div class="pane-tools">
+                    <button
+                      class="pane-tool-btn"
+                      id="btn-copy-output"
+                      type="button"
+                    >
+                      Copy
+                    </button>
+                    <button
+                      class="pane-tool-btn"
+                      id="btn-download-text"
+                      type="button"
+                    >
+                      Download .txt
+                    </button>
+                  </div>
+                </div>
+
+                <div class="editor-box">
+                  <textarea
+                    class="code-textarea"
+                    id="output-text"
+                    placeholder="Base64 encoded string will appear here..."
+                    readonly
+                    spellcheck="false"
+                  ></textarea>
+
+                  <div class="editor-footer-metrics">
+                    <div class="metrics-left">
+                      <span class="metric-item"
+                        >Length: <span id="output-char-count">0</span></span
+                      >
+                      <span class="metric-item"
+                        >Bytes: <span id="output-byte-count">0</span></span
+                      >
+                    </div>
+                    <div class="metrics-right">
+                      <button
+                        class="btn-secondary"
+                        style="padding: 2px 8px; font-size: 0.72rem"
+                        id="btn-data-uri"
+                        type="button"
+                      >
+                        Copy as Data URI
+                      </button>
+                      <button
+                        class="btn-secondary"
+                        style="padding: 2px 8px; font-size: 0.72rem"
+                        id="btn-download-file"
+                        type="button"
+                      >
+                        Download as File
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Format Options Toolbar -->
+            <div class="options-bar">
+              <div class="options-group">
+                <label class="custom-checkbox-label" for="opt-url-safe">
+                  <input
+                    class="custom-checkbox"
+                    type="checkbox"
+                    id="opt-url-safe"
+                  />
+                  <span>URL-safe Base64 (replace + / with - _)</span>
+                </label>
+
+                <label class="custom-checkbox-label" for="opt-padding">
+                  <input
+                    class="custom-checkbox"
+                    type="checkbox"
+                    id="opt-padding"
+                    checked
+                  />
+                  <span>Keep Base64 padding (=)</span>
+                </label>
+              </div>
+
+              <div class="options-group">
+                <div class="select-control-wrap">
+                  <label for="opt-wrap">Line Wrapping:</label>
+                  <select class="custom-select" id="opt-wrap">
+                    <option value="0">No wrapping (standard)</option>
+                    <option value="64">64 characters (MIME / RFC 2045)</option>
+                    <option value="76">76 characters (PEM / RFC 1421)</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <!-- Status & Validation Alert Banner -->
+            <div class="status-banner status-neutral" id="status-banner">
+              <div class="status-banner-content">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="12" y1="16" x2="12" y2="12"></line>
+                  <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                </svg>
+                <span id="status-text"
+                  >Ready — Type or paste text above to begin</span
+                >
+              </div>
+              <span style="font-size: 0.78rem; opacity: 0.8"
+                >Local Engine Active</span
+              >
+            </div>
+
+            <!-- Live Image Preview (when decoding image Base64 or Data URI) -->
+            <div class="image-preview-card" id="image-preview-card">
+              <div class="pane-title" style="margin-bottom: 4px">
+                <span>Decoded Image Preview</span>
+              </div>
+              <div class="image-preview-frame">
+                <img
+                  id="image-preview-img"
+                  src=""
+                  alt="Decoded Base64 Preview"
+                />
+              </div>
+              <div class="image-preview-details">
+                Dimensions:
+                <span
+                  id="image-dimensions"
+                  style="font-weight: 600; color: var(--ink)"
+                  >Detecting...</span
+                >
+              </div>
+            </div>
+
+            <!-- Size Analyzer Micro-Card -->
+            <div class="size-analyzer-card">
+              <div class="analyzer-metric">
+                <span class="analyzer-label">Original Size</span>
+                <span class="analyzer-value" id="stat-original-size">0 B</span>
+                <span class="analyzer-note">Raw unencoded bytes</span>
+              </div>
+
+              <div class="analyzer-metric">
+                <span class="analyzer-label">Base64 Size</span>
+                <span class="analyzer-value" id="stat-encoded-size">0 B</span>
+                <span class="analyzer-note">ASCII text payload</span>
+              </div>
+
+              <div class="analyzer-metric">
+                <span class="analyzer-label">Size Overhead</span>
+                <span
+                  class="analyzer-value overhead-value"
+                  id="stat-overhead-pct"
+                  >0%</span
+                >
+                <span class="analyzer-note">~33% expansion ratio</span>
+              </div>
+            </div>
+
+            <!-- Local History Snippet List -->
+            <div class="history-section">
+              <div class="history-header">
+                <div class="history-title">
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polyline points="12 6 12 12 14 14"></polyline>
+                  </svg>
+                  Recent Local Operations
+                </div>
+                <button
+                  class="pane-tool-btn"
+                  id="btn-clear-history"
+                  type="button"
+                >
+                  Clear History
+                </button>
+              </div>
+              <div class="history-list" id="history-list">
+                <!-- Rendered via JavaScript -->
+              </div>
+            </div>
+          </div>
+
+          <!-- ===================================================================
+             TAB 2: BINARY FILE & IMAGE ENCODER
+             =================================================================== -->
+          <div class="tab-panel" id="tab-file" role="tabpanel">
+            <div class="file-dropzone" id="file-dropzone">
+              <input type="file" id="file-input" class="hidden-file-input" />
+              <div class="dropzone-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="17 8 12 3 7 8"></polyline>
+                  <line x1="12" y1="3" x2="12" y2="15"></line>
+                </svg>
+              </div>
+              <div class="dropzone-title">
+                Drag & Drop Any File or Image to Encode
+              </div>
+              <p class="dropzone-subtitle">
+                Supports PNG, JPEG, WebP, SVG, PDF, TXT, JSON, CSV, ZIP, and
+                binary files up to 25 MB. Processed 100% locally in browser
+                memory.
+              </p>
+            </div>
+
+            <!-- File Metadata Card -->
+            <div class="file-meta-box" id="file-meta-box">
+              <div class="file-meta-top">
+                <div class="file-name-wrap">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"
+                    ></path>
+                    <polyline points="13 2 13 9 20 9"></polyline>
+                  </svg>
+                  <span class="file-name-text" id="file-name-text"
+                    >filename.ext</span
+                  >
+                </div>
+                <div class="file-meta-stats">
+                  <span>Size: <strong id="file-meta-size">0 B</strong></span>
+                  <span>MIME: <strong id="file-meta-mime">auto</strong></span>
+                </div>
+              </div>
+
+              <div style="display: flex; gap: 8px">
+                <button class="btn-primary" id="btn-file-encode" type="button">
+                  Encode to Base64
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- ===================================================================
+             TAB 3: BASE64 ↔ HEX & BYTE INSPECTOR
+             =================================================================== -->
+          <div class="tab-panel" id="tab-hex" role="tabpanel">
+            <div class="hex-inspector-wrap">
+              <div class="tool-controls-bar">
+                <div class="action-buttons-group">
+                  <button class="btn-primary" id="btn-b64-to-hex" type="button">
+                    Base64 ➔ Hex
+                  </button>
+                  <button
+                    class="btn-secondary"
+                    id="btn-hex-to-b64"
+                    type="button"
+                  >
+                    Hex ➔ Base64
+                  </button>
+                </div>
+                <span style="font-size: 0.82rem; color: var(--ink-faint)"
+                  >Binary Byte Breakdown</span
+                >
+              </div>
+
+              <div class="editor-grid">
+                <div class="editor-pane">
+                  <div class="pane-header">
+                    <span class="pane-title">Input (Base64 or Hex)</span>
+                  </div>
+                  <div class="editor-box" style="min-height: 160px">
+                    <textarea
+                      class="code-textarea"
+                      id="hex-input"
+                      placeholder="Enter Base64 string or Hex bytes (e.g., 48 65 6C 6C 6F)..."
+                      style="min-height: 140px"
+                    ></textarea>
+                  </div>
+                </div>
+
+                <div class="editor-pane">
+                  <div class="pane-header">
+                    <span class="pane-title">Hexadecimal Output</span>
+                  </div>
+                  <div class="editor-box" style="min-height: 160px">
+                    <textarea
+                      class="code-textarea"
+                      id="hex-output"
+                      placeholder="Hex string representation..."
+                      readonly
+                      style="min-height: 140px"
+                    ></textarea>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Byte Inspector Table (First 256 bytes preview) -->
+              <div>
+                <div class="pane-title" style="margin-bottom: 8px">
+                  <span>Hex / ASCII Memory Inspector (First 256 Bytes)</span>
+                </div>
+                <div class="byte-table-container">
+                  <table class="byte-table">
+                    <thead>
+                      <tr>
+                        <th style="width: 120px">Offset</th>
+                        <th>Hexadecimal Bytes</th>
+                        <th style="width: 160px">ASCII Text</th>
+                      </tr>
+                    </thead>
+                    <tbody id="byte-table-body">
+                      <tr>
+                        <td
+                          colspan="3"
+                          style="
+                            text-align: center;
+                            color: var(--ink-faint);
+                            padding: 24px;
+                          "
+                        >
+                          Click "Base64 ➔ Hex" above to inspect decoded binary
+                          bytes.
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ===================================================================
+             TAB 4: BATCH QUEUE ENCODING
+             =================================================================== -->
+          <div class="tab-panel" id="tab-batch" role="tabpanel">
+            <div class="batch-controls-top">
+              <div class="action-buttons-group">
+                <button
+                  class="btn-primary"
+                  id="btn-batch-encode-all"
+                  type="button"
+                >
+                  Encode All in Queue
+                </button>
+                <button
+                  class="btn-secondary"
+                  id="btn-batch-clear"
+                  type="button"
+                >
+                  Clear Queue
+                </button>
+              </div>
+              <span style="font-size: 0.82rem; color: var(--ink-soft)"
+                >Client-side multi-file queue</span
+              >
+            </div>
+
+            <div
+              class="file-dropzone"
+              id="batch-dropzone"
+              style="padding: 24px; margin-bottom: 16px"
+            >
+              <input
+                type="file"
+                id="batch-input"
+                class="hidden-file-input"
+                multiple
+              />
+              <div class="dropzone-title" style="font-size: 1rem">
+                Click or Drag Multiple Files Here
+              </div>
+              <p class="dropzone-subtitle" style="font-size: 0.8rem">
+                Select 2 or more files to encode in batch.
+              </p>
+            </div>
+
+            <div class="batch-queue-list" id="batch-queue-list">
+              <div
+                style="
+                  text-align: center;
+                  padding: 24px;
+                  color: var(--ink-faint);
+                "
+              >
+                Batch queue is empty. Drag and drop multiple files above.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- =========================================================================
+       EDUCATIONAL SECTIONS & MICRO-CARDS (GEO & AI Search Answer-First)
+       ========================================================================= -->
+    <section class="education-section" id="education-section">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-eyebrow">Developer Knowledge Base</span>
+          <h2 class="section-h2">
+            Understanding Base64 Encoding, UTF-8 & Architecture
+          </h2>
+          <p class="section-lead">
+            Technical insights into how 24-bit binary chunks map to 64 ASCII
+            characters, why Base64 is not encryption, and how modern developers
+            avoid Unicode truncation defects.
+          </p>
+        </div>
+
+        <!-- Educational Micro-cards -->
+        <div class="microcards-grid">
+          <div class="microcard">
+            <div class="microcard-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M4 7V4h16v3M9 20h6M12 4v16" />
+              </svg>
+            </div>
+            <h3 class="microcard-title">What is Base64?</h3>
+            <p class="microcard-body">
+              Base64 is a binary-to-text encoding format formalized in RFC 4648.
+              It takes raw binary data (such as compiled code, files, or UTF-8
+              bytes) and represents it using a safe 64-character subset of ASCII
+              printable characters.
+            </p>
+          </div>
+
+          <div class="microcard">
+            <div class="microcard-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+            </div>
+            <h3 class="microcard-title">Is Base64 Encryption?</h3>
+            <p class="microcard-body">
+              <strong>No, never.</strong> Base64 is an encoding method, not
+              encryption. It contains no secret key, provides zero data
+              confidentiality, and can be reversed instantaneously by any
+              machine or human with a Base64 table.
+            </p>
+          </div>
+
+          <div class="microcard">
+            <div class="microcard-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                <polyline points="17 6 23 6 23 12"></polyline>
+              </svg>
+            </div>
+            <h3 class="microcard-title">Does Base64 Compress Files?</h3>
+            <p class="microcard-body">
+              <strong>No.</strong> Base64 actually increases data volume by
+              ~33.3%. Every 3 bytes of raw binary (24 bits) are expanded into 4
+              ASCII characters (32 bits), plus occasional padding characters.
+            </p>
+          </div>
+
+          <div class="microcard">
+            <div class="microcard-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="2" y1="12" x2="22" y2="12"></line>
+                <path
+                  d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="microcard-title">What is URL-Safe Base64?</h3>
+            <p class="microcard-body">
+              Standard Base64 uses <code>+</code> and <code>/</code>, which have
+              reserved syntactic meanings in URL paths and query strings.
+              URL-safe Base64 substitutes <code>-</code> for <code>+</code> and
+              <code>_</code> for <code>/</code>.
+            </p>
+          </div>
+
+          <div class="microcard">
+            <div class="microcard-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                <polyline points="21 15 16 10 5 21"></polyline>
+              </svg>
+            </div>
+            <h3 class="microcard-title">What is a Base64 Data URI?</h3>
+            <p class="microcard-body">
+              A Data URI prefixes raw Base64 data with a MIME descriptor:
+              <code>data:[mime-type];base64,[payload]</code>. This allows
+              embedding images, fonts, or SVGs directly in HTML and CSS without
+              separate HTTP roundtrips.
+            </p>
+          </div>
+
+          <div class="microcard">
+            <div class="microcard-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <h3 class="microcard-title">Is Base64 Safe for Passwords?</h3>
+            <p class="microcard-body">
+              <strong>Absolutely not.</strong> Storing passwords as Base64 is
+              equivalent to storing them in clear plaintext. Passwords must
+              always be salted and hashed using modern cryptographic algorithms
+              like Argon2id or bcrypt.
+            </p>
+          </div>
+        </div>
+
+        <!-- Comprehensive Technical Content (1,200+ Words) -->
+        <div class="deep-content-wrap">
+          <div class="content-block">
+            <h3>
+              1. How Base64 Mathematical Encoding Operates (The 6-Bit Division)
+            </h3>
+            <p>
+              Computers store digital data in 8-bit octets (bytes), representing
+              256 unique permutations per byte. However, legacy communication
+              protocols—such as early SMTP email relays and terminal transport
+              systems—were designed to handle only 7-bit US-ASCII characters.
+              Passing raw binary bytes through these systems often led to
+              transmission failures, control character triggers (such as
+              <code>NUL</code> or <code>CRLF</code> mismatches), or byte
+              truncation.
+            </p>
+            <p>
+              Base64 solves this by taking groups of three 8-bit bytes (a total
+              of 24 bits) and dividing them evenly into four 6-bit units:
+            </p>
+            <div class="code-snippet-box">
+              Original Binary Bytes (3 x 8-bit = 24 bits): [ 01001000 ] [
+              01100101 ] [ 01101100 ] -> Letters: 'H', 'e', 'l' Regrouped into
+              6-bit units (4 x 6-bit = 24 bits): [ 010010 ] [ 000110 ] [ 010101
+              ] [ 101100 ] Index: 18 Index: 6 Index: 21 Index: 44 Alphabet: 'S'
+              Alphabet: 'G' Alphabet: 'V' Alphabet: 's' Base64 Encoded Output:
+              "SGVs"
+            </div>
+            <p>
+              Each 6-bit index corresponds directly to an entry in the standard
+              Base64 index table: uppercase letters <code>A-Z</code> (indices
+              0–25), lowercase letters <code>a-z</code> (indices 26–51),
+              numerals <code>0-9</code> (indices 52–61), plus sign
+              <code>+</code> (index 62), and slash <code>/</code> (index 63).
+            </p>
+          </div>
+
+          <div class="content-block">
+            <h3>2. Base64 vs. Compression vs. Encryption Comparison</h3>
+            <p>
+              One of the most persistent misconceptions among new software
+              developers is confusing encoding with compression or cryptography.
+              The table below delineates the structural differences:
+            </p>
+
+            <div class="comparison-table-wrap">
+              <table class="comparison-table">
+                <thead>
+                  <tr>
+                    <th>Concept</th>
+                    <th>Primary Purpose</th>
+                    <th>Data Size Impact</th>
+                    <th>Security Level</th>
+                    <th>Requires Key?</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Base64 Encoding</strong></td>
+                    <td>Transport binary safely over ASCII channels</td>
+                    <td><strong>Increases ~33.3%</strong></td>
+                    <td>Zero (Reversible by anyone)</td>
+                    <td>No</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Compression (Gzip, Brotli)</strong></td>
+                    <td>Eliminate redundancy and save storage</td>
+                    <td><strong>Decreases by 40–80%</strong></td>
+                    <td>Zero (Standard algorithm)</td>
+                    <td>No</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Encryption (AES-256, RSA)</strong></td>
+                    <td>Ensure confidentiality against adversaries</td>
+                    <td>Slight increase (Padding / IV)</td>
+                    <td>Cryptographically Secure</td>
+                    <td>Yes (Secret / Private Key)</td>
+                  </tr>
+                  <tr>
+                    <td><strong>URL / Percent Encoding</strong></td>
+                    <td>Escape reserved URI octets (%20, %2F)</td>
+                    <td>Expands escaped characters (3x)</td>
+                    <td>Zero</td>
+                    <td>No</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="content-block">
+            <h3>
+              3. Why Naive JavaScript <code>btoa()</code> Fails on Modern
+              Unicode
+            </h3>
+            <p>
+              Many legacy browser tutorials suggest using the native JavaScript
+              <code>window.btoa()</code> function for Base64 encoding. However,
+              <code>btoa()</code> was designed in the early days of the web and
+              strictly expects strings where every character code fits within
+              the Latin-1 (ISO-8859-1) range (character codes 0 through 255).
+            </p>
+            <p>
+              If you attempt to execute <code>btoa("Hello 👋")</code> or pass
+              multi-byte characters in Urdu, Arabic, Chinese, Japanese, or
+              Cyrillic, JavaScript throws an unhandled exception:
+            </p>
+            <div class="code-snippet-box">
+              Uncaught DOMException: Failed to execute 'btoa' on 'Window': The
+              string to be encoded contains characters outside of the Latin1
+              range.
+            </div>
+            <p>
+              <strong>The Huzikit Solution:</strong> Our encoder uses the
+              modern, standardized <code>TextEncoder</code> interface to convert
+              JavaScript's UTF-16 code units into an authentic UTF-8
+              <code>Uint8Array</code>. We then convert those discrete byte
+              octets in safe chunks of 8,192 bytes before applying Base64
+              framing. On decode, the binary stream is decoded back into text
+              using <code>TextDecoder('utf-8', { fatal: true })</code>, ensuring
+              flawless multi-byte fidelity without memory leaks or call stack
+              overflow.
+            </p>
+          </div>
+
+          <div class="content-block">
+            <h3>4. Practical Developer Use Cases for Base64</h3>
+            <ul>
+              <li>
+                <strong>HTTP Basic Authentication:</strong> When transmitting
+                client credentials over an HTTPS connection, the
+                <code>Authorization: Basic &lt;credentials&gt;</code> header
+                expects the username and password formatted as
+                <code>username:password</code> encoded in Base64.
+              </li>
+              <li>
+                <strong>Inlining Small Graphic Assets (Data URIs):</strong> Web
+                performance optimization sometimes calls for eliminating HTTP
+                roundtrips on small logos, icons, or background SVG patterns by
+                embedding them directly inside CSS rules:
+                <code
+                  >background-image: url("data:image/svg+xml;base64,...");</code
+                >.
+              </li>
+              <li>
+                <strong>HTML5 Canvas Image Exports:</strong> The
+                <code>HTMLCanvasElement.toDataURL('image/png')</code> method
+                returns a Base64-encoded Data URI representing the canvas pixel
+                data, which can then be displayed in an
+                <code>&lt;img&gt;</code> tag or saved to disk.
+              </li>
+              <li>
+                <strong>JSON Web Tokens (JWTs):</strong> The header and payload
+                of a standard JWT are serialized JSON objects encoded in
+                URL-safe Base64 without padding, separated by period delimiters
+                (<code>header.payload.signature</code>).
+              </li>
+              <li>
+                <strong>Email MIME Attachments:</strong> The Multipurpose
+                Internet Mail Extensions (MIME) standard (RFC 2045) encodes
+                email attachments (PDFs, spreadsheets, images) in Base64 with
+                64-character line breaks to prevent legacy mail gateways from
+                corrupting binary bytes.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+       FREQUENTLY ASKED QUESTIONS (FAQ)
+       ========================================================================= -->
+    <section class="faq-section" id="faq-section">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-eyebrow">Common Inquiries</span>
+          <h2 class="section-h2">Frequently Asked Questions</h2>
+          <p class="section-lead">
+            Clear, honest answers about Base64 encoding, security, performance,
+            and browser-side execution.
+          </p>
+        </div>
+
+        <div class="faq-list">
+          <!-- FAQ 1 -->
+          <div class="faq-item">
+            <button
+              class="faq-trigger"
+              aria-expanded="false"
+              aria-controls="faq-ans-1"
+            >
+              <span>What is Base64?</span>
+              <svg
+                class="faq-icon-arrow"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+              >
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-content" id="faq-ans-1">
+              Base64 is a binary-to-text encoding format that translates
+              arbitrary binary sequences or multi-byte text into a safe
+              64-character alphabet consisting of <code>A-Z</code>,
+              <code>a-z</code>, <code>0-9</code>, <code>+</code>, and
+              <code>/</code>, with <code>=</code> used for padding. Its primary
+              function is allowing binary files and text to traverse
+              communication channels designed solely for printable ASCII.
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item">
+            <button
+              class="faq-trigger"
+              aria-expanded="false"
+              aria-controls="faq-ans-2"
+            >
+              <span>What does a Base64 encoder do?</span>
+              <svg
+                class="faq-icon-arrow"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+              >
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-content" id="faq-ans-2">
+              A Base64 encoder takes binary data (or text strings converted into
+              bytes via character encodings like UTF-8), reads them in 24-bit
+              blocks (3 bytes), and partitions those 24 bits into four 6-bit
+              values. Each 6-bit value is then mapped to its corresponding
+              character in the 64-symbol Base64 index table.
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item">
+            <button
+              class="faq-trigger"
+              aria-expanded="false"
+              aria-controls="faq-ans-3"
+            >
+              <span>What does a Base64 decoder do?</span>
+              <svg
+                class="faq-icon-arrow"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+              >
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-content" id="faq-ans-3">
+              A Base64 decoder performs the reverse operation: it maps each
+              6-bit character from the encoded string back into its numeric
+              index, reassembles those 6-bit numbers into 8-bit bytes (octets),
+              and outputs the exact original binary file or UTF-8 text string
+              without loss.
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item">
+            <button
+              class="faq-trigger"
+              aria-expanded="false"
+              aria-controls="faq-ans-4"
+            >
+              <span>Is Base64 encryption?</span>
+              <svg
+                class="faq-icon-arrow"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+              >
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-content" id="faq-ans-4">
+              No. Base64 is strictly an encoding format, not encryption. It
+              provides zero security, does not utilize cryptographic keys, and
+              cannot protect passwords, tokens, or private data. Anyone who
+              receives Base64 can decode it instantly.
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-item">
+            <button
+              class="faq-trigger"
+              aria-expanded="false"
+              aria-controls="faq-ans-5"
+            >
+              <span>Does Base64 reduce file size?</span>
+              <svg
+                class="faq-icon-arrow"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+              >
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-content" id="faq-ans-5">
+              No. Base64 increases data size by roughly 33.3%. Because 3 bytes
+              (24 bits) of raw data require 4 ASCII characters (32 bits) to
+              represent, the resulting text stream is always larger than the
+              original binary input.
+            </div>
+          </div>
+
+          <!-- FAQ 6 -->
+          <div class="faq-item">
+            <button
+              class="faq-trigger"
+              aria-expanded="false"
+              aria-controls="faq-ans-6"
+            >
+              <span>Can I encode an image or PDF to Base64?</span>
+              <svg
+                class="faq-icon-arrow"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+              >
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-content" id="faq-ans-6">
+              Yes. By switching to the "File & Image" tab on Huzikit, you can
+              select or drag and drop any image (PNG, JPEG, WebP, SVG, GIF) or
+              document (PDF, ZIP, CSV). Huzikit reads the raw binary bytes
+              through the browser's <code>FileReader</code> API and outputs the
+              clean Base64 string.
+            </div>
+          </div>
+
+          <!-- FAQ 7 -->
+          <div class="faq-item">
+            <button
+              class="faq-trigger"
+              aria-expanded="false"
+              aria-controls="faq-ans-7"
+            >
+              <span
+                >Can I decode Base64 back into an image or downloadable
+                file?</span
+              >
+              <svg
+                class="faq-icon-arrow"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+              >
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-content" id="faq-ans-7">
+              Yes. When you paste Base64 image data or a Data URI into the
+              workspace, Huzikit decodes the bytes, renders an immediate visual
+              preview, and provides a "Download as File" button that
+              reconstructs an authentic binary <code>Blob</code> and downloads
+              it directly to your device.
+            </div>
+          </div>
+
+          <!-- FAQ 8 -->
+          <div class="faq-item">
+            <button
+              class="faq-trigger"
+              aria-expanded="false"
+              aria-controls="faq-ans-8"
+            >
+              <span>What is URL-safe Base64?</span>
+              <svg
+                class="faq-icon-arrow"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+              >
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-content" id="faq-ans-8">
+              Standard Base64 contains characters <code>+</code> and
+              <code>/</code>, which can cause routing and parsing errors when
+              used inside web URLs or URL query parameters. URL-safe Base64
+              substitutes <code>+</code> with <code>-</code> (dash) and
+              <code>/</code> with <code>_</code> (underscore), making the string
+              directly embeddable in URLs.
+            </div>
+          </div>
+
+          <!-- FAQ 9 -->
+          <div class="faq-item">
+            <button
+              class="faq-trigger"
+              aria-expanded="false"
+              aria-controls="faq-ans-9"
+            >
+              <span>What is a Base64 Data URI?</span>
+              <svg
+                class="faq-icon-arrow"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+              >
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-content" id="faq-ans-9">
+              A Data URI follows the uniform format
+              <code>data:[mediatype];base64,[data]</code>. It enables inlining
+              binary assets directly into web pages, email templates, or
+              stylesheets without saving the asset as a separate file on a web
+              server.
+            </div>
+          </div>
+
+          <!-- FAQ 10 -->
+          <div class="faq-item">
+            <button
+              class="faq-trigger"
+              aria-expanded="false"
+              aria-controls="faq-ans-10"
+            >
+              <span>Does this tool support Unicode and non-English text?</span>
+              <svg
+                class="faq-icon-arrow"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+              >
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-content" id="faq-ans-10">
+              Yes. Huzikit incorporates complete UTF-8 encoding support via the
+              native <code>TextEncoder</code> and <code>TextDecoder</code> web
+              standards. Accented characters, Urdu, Arabic, Chinese, Japanese,
+              Korean, Cyrillic, and emojis (e.g., 🚀, 👋) encode and decode with
+              100% precision.
+            </div>
+          </div>
+
+          <!-- FAQ 11 -->
+          <div class="faq-item">
+            <button
+              class="faq-trigger"
+              aria-expanded="false"
+              aria-controls="faq-ans-11"
+            >
+              <span>Is Huzikit Base64 Encoder / Decoder free to use?</span>
+              <svg
+                class="faq-icon-arrow"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+              >
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-content" id="faq-ans-11">
+              Yes, completely free. There are no subscriptions, no premium
+              feature locks, no usage limits, and no accounts required. All
+              advanced capabilities (URL-safe mode, batch queues, binary file
+              exports, and hex conversion) are accessible to all users.
+            </div>
+          </div>
+
+          <!-- FAQ 12 -->
+          <div class="faq-item">
+            <button
+              class="faq-trigger"
+              aria-expanded="false"
+              aria-controls="faq-ans-12"
+            >
+              <span
+                >Are my files or sensitive data uploaded to your server?</span
+              >
+              <svg
+                class="faq-icon-arrow"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+              >
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-content" id="faq-ans-12">
+              No. Every operation—including text encoding, binary file reading,
+              image rendering, and hex conversion—runs exclusively in your
+              browser using client-side JavaScript. No data is ever transmitted
+              to an external server.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+       RELATED TOOLS SECTION
+       ========================================================================= -->
+    <section class="related-tools-section" id="related-tools-section">
+      <div class="container">
+        <div class="section-head" style="margin-bottom: 24px">
+          <span class="section-eyebrow">Explore Huzikit</span>
+          <h2 class="section-h2" style="font-size: 1.5rem">
+            Related Developer & Utility Tools
+          </h2>
+        </div>
+
+        <div class="related-grid">
+          <a
+            href="/developertools/JSONFORMATTER.html"
+            class="related-tool-card"
+          >
+            <div class="related-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+            </div>
+            <div class="related-info">
+              <span class="related-name">JSON Formatter</span>
+              <span class="related-cat">Developer Tools</span>
+            </div>
+          </a>
+
+          <a
+            href="/developertools/urlencoderdecoder.html"
+            class="related-tool-card"
+          >
+            <div class="related-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"
+                ></path>
+                <path
+                  d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"
+                ></path>
+              </svg>
+            </div>
+            <div class="related-info">
+              <span class="related-name">URL Encoder / Decoder</span>
+              <span class="related-cat">Developer Tools</span>
+            </div>
+          </a>
+
+          <a href="/developertools/regextester.html" class="related-tool-card">
+            <div class="related-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="8" x2="12" y2="12"></line>
+                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+              </svg>
+            </div>
+            <div class="related-info">
+              <span class="related-name">Regex Tester</span>
+              <span class="related-cat">Developer Tools</span>
+            </div>
+          </a>
+
+          <a href="/developertools/markdownhtml.html" class="related-tool-card">
+            <div class="related-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                ></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+              </svg>
+            </div>
+            <div class="related-info">
+              <span class="related-name">Markdown to HTML</span>
+              <span class="related-cat">Developer Tools</span>
+            </div>
+          </a>
+
+          <a href="/developertools/cssminifier.html" class="related-tool-card">
+            <div class="related-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <line x1="4" y1="21" x2="4" y2="14"></line>
+                <line x1="4" y1="10" x2="4" y2="3"></line>
+                <line x1="12" y1="21" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12" y2="3"></line>
+                <line x1="20" y1="21" x2="20" y2="16"></line>
+                <line x1="20" y1="12" x2="20" y2="3"></line>
+              </svg>
+            </div>
+            <div class="related-info">
+              <span class="related-name">CSS Minifier</span>
+              <span class="related-cat">Developer Tools</span>
+            </div>
+          </a>
+
+          <a href="/image&pdf/colorpicker.html" class="related-tool-card">
+            <div class="related-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+              </svg>
+            </div>
+            <div class="related-info">
+              <span class="related-name">Color Picker</span>
+              <span class="related-cat">Image & PDF</span>
+            </div>
+          </a>
+
+          <a href="/image&pdf/image-compressor.html" class="related-tool-card">
+            <div class="related-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <polyline points="4 14 10 14 10 20"></polyline>
+                <polyline points="20 10 14 10 14 4"></polyline>
+              </svg>
+            </div>
+            <div class="related-info">
+              <span class="related-name">Image Compressor</span>
+              <span class="related-cat">Image & PDF</span>
+            </div>
+          </a>
+
+          <a href="/image&pdf/jpg-to-png.html" class="related-tool-card">
+            <div class="related-icon">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+              </svg>
+            </div>
+            <div class="related-info">
+              <span class="related-name">JPG to PNG</span>
+              <span class="related-cat">Image & PDF</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+       GLOBAL HUZIKIT DARK FOOTER
+       ========================================================================= -->
+    <footer class="site-footer" id="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <!-- Brand Bio Column -->
+          <div class="footer-brand">
+            <a href="/" class="footer-logo">
+              <span>Huzikit</span>
+            </a>
+            <p class="footer-bio">
+              The ultimate modern suite of lightning-fast, secure online web
+              utilities, calculators, and developer tools.
+            </p>
+            <div class="footer-social-links">
+              <a
+                href="https://x.com/huzikitoffical"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-btn"
+                aria-label="Huzikit on X/Twitter"
+              >
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Column 1: Text & Dev Tools -->
+          <div>
+            <h4 class="footer-column-title">Text & Dev Tools</h4>
+            <ul class="footer-links-list">
+              <li>
+                <a href="/texttools/word-counter.html">Word Counter</a>
+              </li>
+              <li>
+                <a href="/texttools/case-converter.html">Case Converter</a>
+              </li>
+              <li>
+                <a href="/developertools/JSONFORMATTER.html">JSON Formatter</a>
+              </li>
+              <li>
+                <a href="/developertools/base64encoderdecoder.html"
+                  >Base64 Utility</a
+                >
+              </li>
+              <li>
+                <a href="/developertools/regextester.html">Regex Tester</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 2: Calculators & Image -->
+          <div>
+            <h4 class="footer-column-title">Calculators & Image</h4>
+            <ul class="footer-links-list">
+              <li>
+                <a href="/calculator/agecalculator.html">Age Calculator</a>
+              </li>
+              <li>
+                <a href="/calculator/bmi-calculator.html">BMI Calculator</a>
+              </li>
+              <li>
+                <a href="/image&pdf/image-compressor.html">Image Compressor</a>
+              </li>
+              <li>
+                <a href="/image&pdf/QRGenrator.html">QR Code Generator</a>
+              </li>
+              <li>
+                <a href="/image&pdf/colorpicker.html">Color Picker</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Company & Legal -->
+          <div>
+            <h4 class="footer-column-title">Company & Legal</h4>
+            <ul class="footer-links-list">
+              <li><a href="/about.html">About Huzikit</a></li>
+              <li><a href="/disclamier.html">Disclaimer</a></li>
+              <li>
+                <a href="/privacy-policies.html">Privacy Policy</a>
+              </li>
+              <li>
+                <a href="/Termsofservices.html">Terms of Service</a>
+              </li>
+              <li>
+                <a href="/contact-us.html">Contact Support</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Footer Bottom Bar -->
+        <div class="footer-bottom">
+          <div>&copy; 2026 Huzikit.com. All rights reserved.</div>
+          <div class="footer-tagline">
+            Built with speed, security, and precision.
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- =========================================================================
+       GLOBAL SEARCH MODAL (All 30 Tools)
+       ========================================================================= -->
+    <div
+      class="search-modal-backdrop"
+      id="search-modal-backdrop"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Search all tools"
+    >
+      <div class="search-modal-dialog">
+        <div class="search-input-wrap">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input
+            type="text"
+            class="search-input-field"
+            id="search-input-field"
+            placeholder="Search by tool name, keyword, or category..."
+            autocomplete="off"
+          />
+          <button class="search-close-btn" id="search-close-btn" type="button">
+            ESC
+          </button>
+        </div>
+
+        <div class="search-results-list" id="search-results-list">
+          <!-- Filtered items dynamically rendered by base64encoderdecoder.js -->
+        </div>
+
+        <div class="search-modal-footer">
+          <span
+            >Navigation: <kbd class="kbd-shortcut">↑</kbd>
+            <kbd class="kbd-shortcut">↓</kbd> to cycle</span
+          >
+          <span>Press <kbd class="kbd-shortcut">ESC</kbd> to close</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast Notification Alert -->
+    <div class="toast-notice" id="toast-notice" role="alert" aria-live="polite">
+      <svg
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2.5"
+      >
+        <polyline points="20 6 9 17 4 12"></polyline>
+      </svg>
+      <span id="toast-message">Copied to clipboard</span>
+    </div>
+
+    <!-- External Vanilla JavaScript -->
+    <script src="/developertools/baseencoderdecoder.js"></script>
+  </body>
+</html>

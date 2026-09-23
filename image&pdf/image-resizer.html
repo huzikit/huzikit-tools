@@ -1,0 +1,3117 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Free Image Resizer Online — Resize JPG, PNG &amp; WebP | Huzikit
+    </title>
+    <meta
+      name="description"
+      content="Resize JPG, PNG, and WebP images online for free. Custom dimensions, aspect ratio lock, percentage scaling, batch processing, and quality control with Huzikit."
+    />
+    <link
+      rel="canonical"
+      href="https://huzikit.com/image&amp;pdf/image-resizer.html"
+    />
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Free Image Resizer Online — Resize JPG, PNG &amp; WebP | Huzikit"
+    />
+    <meta
+      property="og:description"
+      content="Resize JPG, PNG, and WebP images online for free. Custom dimensions, aspect ratio lock, batch processing, and quality control with Huzikit."
+    />
+    <meta
+      property="og:url"
+      content="https://huzikit.com/image&amp;pdf/image-resizer.html"
+    />
+    <meta property="og:site_name" content="Huzikit" />
+    <meta
+      property="og:image"
+      content="https://huzikit.com/assets/og-image-resizer.png"
+    />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Free Image Resizer Online — Resize JPG, PNG &amp; WebP | Huzikit"
+    />
+    <meta
+      name="twitter:description"
+      content="Resize JPG, PNG, and WebP images online for free. Custom dimensions, aspect ratio lock, batch processing, and quality control with Huzikit."
+    />
+    <meta
+      name="twitter:image"
+      content="https://huzikit.com/assets/og-image-resizer.png"
+    />
+
+    <!-- Google Fonts: Inter & Lexend -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- JSZip for reliable zip downloads -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+
+    <!-- Huzikit Image Resizer Stylesheet -->
+    <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="/image&pdf/image-resizer.css" />
+
+    <!-- Structured Data: WebApplication, BreadcrumbList, FAQPage -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebApplication",
+            "@id": "https://huzikit.com/image&pdf/image-resizer.html#app",
+            "name": "Huzikit Image Resizer",
+            "url": "https://huzikit.com/image&pdf/image-resizer.html",
+            "applicationCategory": "MultimediaApplication",
+            "operatingSystem": "All",
+            "description": "Free client-side image resizer for JPG, PNG, and WebP images with aspect ratio lock, percentage scaling, quality control, and batch processing.",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://huzikit.com/image&pdf/image-resizer.html#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://huzikit.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Image & PDF",
+                "item": "https://huzikit.com/toolpage.html"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Image Resizer",
+                "item": "https://huzikit.com/image&pdf/image-resizer.html"
+              }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://huzikit.com/image&pdf/image-resizer.html#faq",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is an image resizer?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "An image resizer is a utility that recalculates the pixel width and height of an image file. It adjusts the physical pixel grid of the image, allowing you to reduce its size for faster web loading, format it for specific social media requirements, or change display proportions."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do I resize an image online?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Upload your JPG, PNG, or WebP file into Huzikit Image Resizer, choose your target width and height or pick a preset, maintain or unlock the aspect ratio, select your preferred output format and quality, and click Download."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I resize JPG images?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, Huzikit supports full standard JPG and JPEG image resizing with custom lossy compression quality controls from 10% to 100%."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I resize PNG images?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, you can upload and resize PNG images. Full transparency channels (alpha transparency) are preserved when outputting to PNG or WebP."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I resize WebP images?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, WebP is natively supported for both input and output with high-efficiency compression and full transparency support."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I resize multiple images at once?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, Huzikit provides batch resizing completely free. You can upload multiple images, apply dimension settings, process them all in parallel, and download them individually or as a single ZIP archive."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do I keep the original aspect ratio?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Keep the 'Lock Aspect Ratio' toggle active. When locked, changing the width automatically calculates the proportionate height, and changing height recalculates width, preventing stretching or distortion."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I resize an image by percentage?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, you can click percentage chips (25%, 50%, 75%, 100%, 125%, 150%) or type any custom percentage to scale both dimensions proportionately."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does resizing reduce image quality?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Downscaling (reducing dimensions) discards redundant pixels while retaining high visual sharpness. Huzikit uses high-quality bicubic canvas interpolation to avoid jagged edges or pixelation."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What does prevent upscaling mean?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "When enabled, 'Prevent Upscaling' ensures an image is never enlarged beyond its native dimensions, preventing visual blurriness and unnecessary file size expansion."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What happens to EXIF metadata?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Standard browser canvas processing strips embedded EXIF, GPS location coordinates, and camera serial data. This protects your personal privacy and reduces unnecessary metadata overhead."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I resize images directly in my browser?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, Huzikit processes all image transformations entirely on the client side using your device's browser engine. Your images are never transmitted to an external server."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Header / Navigation Bar -->
+    <header class="site-header" id="siteHeader">
+      <div class="nav-container">
+        <!-- Brand Logo -->
+        <a href="/" class="brand-logo" id="brandLogo" aria-label="Huzikit Home">
+          <span class="logo-text">Huzikit</span>
+        </a>
+
+        <!-- Desktop Navigation Menu -->
+        <nav class="desktop-nav" id="desktopNav" aria-label="Main Navigation">
+          <ul class="nav-menu" role="menubar">
+            <!-- Text Tools Dropdown -->
+            <li class="nav-item has-dropdown" role="none">
+              <button
+                type="button"
+                class="dropdown-trigger"
+                id="dropdownTextTrigger"
+                aria-haspopup="true"
+                aria-expanded="false"
+                aria-controls="dropdownTextMenu"
+              >
+                <span>Text Tools</span>
+                <svg
+                  class="dropdown-icon"
+                  width="12"
+                  height="12"
+                  viewBox="0 0 12 12"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M2.5 4.5L6 8L9.5 4.5"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              <div
+                class="dropdown-menu"
+                id="dropdownTextMenu"
+                role="menu"
+                aria-labelledby="dropdownTextTrigger"
+              >
+                <a
+                  href="/texttools/word-counter.html"
+                  class="dropdown-link"
+                  role="menuitem"
+                  >Word Counter</a
+                >
+                <a
+                  href="/texttools/character-counter.html"
+                  class="dropdown-link"
+                  role="menuitem"
+                  >Character Counter</a
+                >
+                <a
+                  href="/texttools/case-converter.html"
+                  class="dropdown-link"
+                  role="menuitem"
+                  >Case Converter</a
+                >
+                <a
+                  href="/texttools/remove-duplicate-lines.html"
+                  class="dropdown-link"
+                  role="menuitem"
+                  >Remove Duplicate Lines</a
+                >
+                <a
+                  href="/texttools/loremipsumgenerator.html"
+                  class="dropdown-link"
+                  role="menuitem"
+                  >Lorem Ipsum Generator</a
+                >
+                <a
+                  href="/texttools/passwordgenerator.html"
+                  class="dropdown-link"
+                  role="menuitem"
+                  >Password Generator</a
+                >
+                <a
+                  href="/texttools/text-reverser.html"
+                  class="dropdown-link"
+                  role="menuitem"
+                  >Text Reverser</a
+                >
+                <a
+                  href="/texttools/onlinenotepad.html"
+                  class="dropdown-link"
+                  role="menuitem"
+                  >Online Notepad</a
+                >
+              </div>
+            </li>
+
+            <!-- Calculators Dropdown -->
+            <li class="nav-item has-dropdown" role="none">
+              <button
+                type="button"
+                class="dropdown-trigger"
+                id="dropdownCalcTrigger"
+                aria-haspopup="true"
+                aria-expanded="false"
+                aria-controls="dropdownCalcMenu"
+              >
+                <span>Calculators</span>
+                <svg
+                  class="dropdown-icon"
+                  width="12"
+                  height="12"
+                  viewBox="0 0 12 12"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M2.5 4.5L6 8L9.5 4.5"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              <div
+                class="dropdown-menu"
+                id="dropdownCalcMenu"
+                role="menu"
+                aria-labelledby="dropdownCalcTrigger"
+              >
+                <a
+                  href="/calculator/agecalculator.html"
+                  class="dropdown-link"
+                  role="menuitem"
+                  >Age Calculator</a
+                >
+                <a
+                  href="/calculator/bmi-calculator.html"
+                  class="dropdown-link"
+                  role="menuitem"
+                  >BMI Calculator</a
+                >
+                <a
+                  href="/calculator/percentage-calculator.html"
+                  class="dropdown-link"
+                  role="menuitem"
+                  >Percentage Calculator</a
+                >
+                <a
+                  href="/calculator/Calorie-Calculator.html"
+                  class="dropdown-link"
+                  role="menuitem"
+                  >Calorie Calculator</a
+                >
+                <a
+                  href="/calculator/discount-calculator.html"
+                  class="dropdown-link"
+                  role="menuitem"
+                  >Discount Calculator</a
+                >
+                <a
+                  href="/calculator/saving&goalcalculator.html"
+                  class="dropdown-link"
+                  role="menuitem"
+                  >Savings &amp; Goal Calculator</a
+                >
+                <a
+                  href="/calculator/tip-calculator.html"
+                  class="dropdown-link"
+                  role="menuitem"
+                  >Tip Calculator</a
+                >
+                <a
+                  href="/calculator/gpa-calculator.html"
+                  class="dropdown-link"
+                  role="menuitem"
+                  >GPA Calculator</a
+                >
+              </div>
+            </li>
+
+            <!-- Image & PDF Dropdown -->
+            <li class="nav-item has-dropdown" role="none">
+              <button
+                type="button"
+                class="dropdown-trigger active-category"
+                id="dropdownImgTrigger"
+                aria-haspopup="true"
+                aria-expanded="false"
+                aria-controls="dropdownImgMenu"
+              >
+                <span>Image &amp; PDF</span>
+                <svg
+                  class="dropdown-icon"
+                  width="12"
+                  height="12"
+                  viewBox="0 0 12 12"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M2.5 4.5L6 8L9.5 4.5"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              <div
+                class="dropdown-menu"
+                id="dropdownImgMenu"
+                role="menu"
+                aria-labelledby="dropdownImgTrigger"
+              >
+                <a
+                  href="/image&pdf/image-compressor.html"
+                  class="dropdown-link"
+                  role="menuitem"
+                  >Image Compressor</a
+                >
+                <a
+                  href="/image&pdf/image-resizer.html"
+                  class="dropdown-link current-page"
+                  role="menuitem"
+                  aria-current="page"
+                  >Image Resizer</a
+                >
+                <a
+                  href="/image&pdf/pdftowordconverter.html"
+                  class="dropdown-link"
+                  role="menuitem"
+                  >PDF to Word</a
+                >
+                <a
+                  href="/image&pdf/jpg-to-png.html"
+                  class="dropdown-link"
+                  role="menuitem"
+                  >JPG to PNG</a
+                >
+                <a
+                  href="/image&pdf/colorpicker.html"
+                  class="dropdown-link"
+                  role="menuitem"
+                  >Color Picker / HEX</a
+                >
+                <a
+                  href="/image&pdf/QRGenrator.html"
+                  class="dropdown-link"
+                  role="menuitem"
+                  >QR Code Generator</a
+                >
+              </div>
+            </li>
+
+            <!-- Developer Dropdown -->
+            <li class="nav-item has-dropdown" role="none">
+              <button
+                type="button"
+                class="dropdown-trigger"
+                id="dropdownDevTrigger"
+                aria-haspopup="true"
+                aria-expanded="false"
+                aria-controls="dropdownDevMenu"
+              >
+                <span>Developer</span>
+                <svg
+                  class="dropdown-icon"
+                  width="12"
+                  height="12"
+                  viewBox="0 0 12 12"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M2.5 4.5L6 8L9.5 4.5"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              <div
+                class="dropdown-menu"
+                id="dropdownDevMenu"
+                role="menu"
+                aria-labelledby="dropdownDevTrigger"
+              >
+                <a
+                  href="/developertools/jsonformatter.html"
+                  class="dropdown-link"
+                  role="menuitem"
+                  >JSON Formatter</a
+                >
+                <a
+                  href="/developertools/base64encoderdecoder.html"
+                  class="dropdown-link"
+                  role="menuitem"
+                  >Base64 Encoder/Decoder</a
+                >
+                <a
+                  href="/developertools/urlencoderdecoder.html"
+                  class="dropdown-link"
+                  role="menuitem"
+                  >URL Encoder/Decoder</a
+                >
+                <a
+                  href="/developertools/meta-tag-generator.html"
+                  class="dropdown-link"
+                  role="menuitem"
+                  >Meta Tag Generator</a
+                >
+                <a
+                  href="/developertools/regextester.html"
+                  class="dropdown-link"
+                  role="menuitem"
+                  >Regex Tester</a
+                >
+                <a
+                  href="/developertools/markdownhtml.html"
+                  class="dropdown-link"
+                  role="menuitem"
+                  >Markdown to HTML</a
+                >
+                <a
+                  href="/developertools/cssminifier.html"
+                  class="dropdown-link"
+                  role="menuitem"
+                  >CSS Minifier</a
+                >
+                <a
+                  href="/developertools/unixtimestamp.html"
+                  class="dropdown-link"
+                  role="menuitem"
+                  >Unix Timestamp</a
+                >
+              </div>
+            </li>
+
+            <!-- Static Links -->
+            <li class="nav-item" role="none">
+              <a href="/about.html" class="nav-link" role="menuitem">About</a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Header Actions -->
+        <div class="header-actions">
+          <!-- Search Trigger -->
+          <button
+            type="button"
+            class="search-btn"
+            id="searchOpenBtn"
+            aria-label="Search tools (Ctrl+K)"
+          >
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <span class="search-hint">Search</span>
+            <kbd class="search-kbd" aria-hidden="true">⌘K</kbd>
+          </button>
+
+          <!-- Mobile Hamburger Button -->
+          <button
+            type="button"
+            class="mobile-toggle"
+            id="mobileToggle"
+            aria-expanded="false"
+            aria-controls="mobileDrawer"
+            aria-label="Toggle navigation menu"
+          >
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Drawer Navigation -->
+    <div class="mobile-drawer" id="mobileDrawer" aria-hidden="true">
+      <div class="drawer-header">
+        <a href="/" class="brand-logo" aria-label="Huzikit Home">
+          <span class="logo-mark" aria-hidden="true">H</span>
+          <span class="logo-text">Huzikit<span class="logo-dot">.</span></span>
+        </a>
+        <button
+          type="button"
+          class="drawer-close"
+          id="drawerCloseBtn"
+          aria-label="Close menu"
+        >
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Search bar inside mobile drawer -->
+      <div class="drawer-search-box">
+        <button
+          type="button"
+          class="drawer-search-btn"
+          id="mobileSearchTrigger"
+        >
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <span>Search all 30 Huzikit tools...</span>
+        </button>
+      </div>
+
+      <div class="drawer-nav">
+        <!-- Mobile Accordions -->
+        <div class="mobile-acc-group">
+          <button
+            type="button"
+            class="mobile-acc-trigger"
+            aria-expanded="false"
+          >
+            <span>Text Tools</span>
+            <svg
+              class="dropdown-icon"
+              width="14"
+              height="14"
+              viewBox="0 0 12 12"
+              fill="none"
+            >
+              <path
+                d="M2.5 4.5L6 8L9.5 4.5"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+              />
+            </svg>
+          </button>
+          <div class="mobile-acc-content">
+            <a href="/textools/wordcounter.html" class="mobile-nav-link"
+              >Word Counter</a
+            >
+            <a href="/textools/charactercounter.html" class="mobile-nav-link"
+              >Character Counter</a
+            >
+            <a href="/textools/caseconverter.html" class="mobile-nav-link"
+              >Case Converter</a
+            >
+            <a
+              href="/textools/removeduplicatelines.html"
+              class="mobile-nav-link"
+              >Remove Duplicate Lines</a
+            >
+            <a href="/textools/loremipsumgenerator.html" class="mobile-nav-link"
+              >Lorem Ipsum Generator</a
+            >
+            <a href="/textools/passwordgenerator.html" class="mobile-nav-link"
+              >Password Generator</a
+            >
+            <a href="/textools/textreverser.html" class="mobile-nav-link"
+              >Text Reverser</a
+            >
+            <a href="/textools/onlinenotepad.html" class="mobile-nav-link"
+              >Online Notepad</a
+            >
+          </div>
+        </div>
+
+        <div class="mobile-acc-group">
+          <button
+            type="button"
+            class="mobile-acc-trigger"
+            aria-expanded="false"
+          >
+            <span>Calculators</span>
+            <svg
+              class="dropdown-icon"
+              width="14"
+              height="14"
+              viewBox="0 0 12 12"
+              fill="none"
+            >
+              <path
+                d="M2.5 4.5L6 8L9.5 4.5"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+              />
+            </svg>
+          </button>
+          <div class="mobile-acc-content">
+            <a href="/calculator/agecalculator.html" class="mobile-nav-link"
+              >Age Calculator</a
+            >
+            <a href="/calculator/bmicalculator" class="mobile-nav-link"
+              >BMI Calculator</a
+            >
+            <a
+              href="/calculator/percentagecalculator.html"
+              class="mobile-nav-link"
+              >Percentage Calculator</a
+            >
+            <a href="/calculator/caloriecalculator.html" class="mobile-nav-link"
+              >Calorie Calculator</a
+            >
+            <a
+              href="/calculator/discountcalculator.html"
+              class="mobile-nav-link"
+              >Discount Calculator</a
+            >
+            <a href="/calculator/savingscalculator.html" class="mobile-nav-link"
+              >Savings &amp; Goal Calculator</a
+            >
+            <a href="/calculator/tipcalculator.html" class="mobile-nav-link"
+              >Tip Calculator</a
+            >
+            <a href="/calculator/gpacalculator.html" class="mobile-nav-link"
+              >GPA Calculator</a
+            >
+          </div>
+        </div>
+
+        <div class="mobile-acc-group">
+          <button type="button" class="mobile-acc-trigger" aria-expanded="true">
+            <span>Image &amp; PDF</span>
+            <svg
+              class="dropdown-icon"
+              width="14"
+              height="14"
+              viewBox="0 0 12 12"
+              fill="none"
+            >
+              <path
+                d="M2.5 4.5L6 8L9.5 4.5"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+              />
+            </svg>
+          </button>
+          <div class="mobile-acc-content show">
+            <a href="/image&pdf/imagecompressor.html" class="mobile-nav-link"
+              >Image Compressor</a
+            >
+            <a
+              href="/image&pdf/image-resizer.html"
+              class="mobile-nav-link current-page"
+              >Image Resizer</a
+            >
+            <a href="/image&pdf/pdftoword.html" class="mobile-nav-link"
+              >PDF to Word</a
+            >
+            <a href="/image&pdf/jpgtopng.html" class="mobile-nav-link"
+              >JPG to PNG</a
+            >
+            <a href="/image&pdf/colorpicker.html" class="mobile-nav-link"
+              >Color Picker / HEX</a
+            >
+            <a href="/image&pdf/qrcodegenerator.html" class="mobile-nav-link"
+              >QR Code Generator</a
+            >
+          </div>
+        </div>
+
+        <div class="mobile-acc-group">
+          <button
+            type="button"
+            class="mobile-acc-trigger"
+            aria-expanded="false"
+          >
+            <span>Developer</span>
+            <svg
+              class="dropdown-icon"
+              width="14"
+              height="14"
+              viewBox="0 0 12 12"
+              fill="none"
+            >
+              <path
+                d="M2.5 4.5L6 8L9.5 4.5"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+              />
+            </svg>
+          </button>
+          <div class="mobile-acc-content">
+            <a href="/developertools/jsonformatter.html" class="mobile-nav-link"
+              >JSON Formatter</a
+            >
+            <a
+              href="/developertools/base64encoderdecoder.html"
+              class="mobile-nav-link"
+              >Base64 Encoder/Decoder</a
+            >
+            <a
+              href="/developertools/urlencoderdecoder.html"
+              class="mobile-nav-link"
+              >URL Encoder/Decoder</a
+            >
+            <a
+              href="/developertools/metateggenrator.html"
+              class="mobile-nav-link"
+              >Meta Tag Generator</a
+            >
+            <a href="/developertools/regextester.html" class="mobile-nav-link"
+              >Regex Tester</a
+            >
+            <a
+              href="/developertools/markdowntohtml.html"
+              class="mobile-nav-link"
+              >Markdown to HTML</a
+            >
+            <a href="/developertools/cssminifier.html" class="mobile-nav-link"
+              >CSS Minifier</a
+            >
+            <a href="/developertools/unixtimestamp.html" class="mobile-nav-link"
+              >Unix Timestamp</a
+            >
+          </div>
+        </div>
+
+        <div class="drawer-standalone-links">
+          <a href="/about.html" class="mobile-nav-link">About Huzikit</a>
+          <a href="/blog.html" class="mobile-nav-link">Blog &amp; Insights</a>
+        </div>
+      </div>
+    </div>
+    <div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+    <!-- Main Content -->
+    <main id="mainContent">
+      <!-- Breadcrumbs -->
+      <div class="page-container breadcrumb-container">
+        <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+          <ol class="breadcrumb-list">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-separator" aria-hidden="true">/</li>
+            <li class="breadcrumb-item">
+              <a href="/image&pdf/colorpicker.html">Image &amp; PDF</a>
+            </li>
+            <li class="breadcrumb-separator" aria-hidden="true">/</li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Image Resizer
+            </li>
+          </ol>
+        </nav>
+      </div>
+
+      <!-- Luxury Hero Section -->
+      <section class="hero-section" id="heroSection">
+        <div class="page-container hero-grid">
+          <div class="hero-content">
+            <div class="hero-badge">
+              <span class="badge-dot" aria-hidden="true"></span>
+              <span>100% Free • Private In-Browser Resizing</span>
+            </div>
+            <h1 class="hero-title" id="pageTitle">Free Image Resizer Online</h1>
+            <p class="hero-lead">
+              Resize JPG, PNG, and WebP images online with pixel-accurate
+              dimensions, aspect-ratio lock, percentage scaling, quality
+              optimization, and bulk batch processing. All advanced features
+              completely free, secure, and executed client-side in your browser.
+            </p>
+
+            <div class="hero-highlights">
+              <div class="highlight-item">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Batch Multi-File Queue</span>
+              </div>
+              <div class="highlight-item">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Aspect Ratio Lock &amp; Presets</span>
+              </div>
+              <div class="highlight-item">
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                <span>Zero Quality Distortion</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero 3D Transformation Display -->
+          <div class="hero-visual" aria-hidden="true">
+            <div class="perspective-stage">
+              <div class="card-3d-scene">
+                <!-- Original Layer -->
+                <div class="visual-card card-original">
+                  <div class="card-header-bar">
+                    <span class="tag-badge">ORIGINAL</span>
+                    <span class="res-badge">1920 × 1080</span>
+                  </div>
+                  <div class="card-preview-art bg-gradient-orig">
+                    <div class="art-grid-lines"></div>
+                    <div class="art-circle"></div>
+                  </div>
+                  <div class="card-footer-info">
+                    <span>source_photo.jpg</span>
+                    <span class="size-text">2.40 MB</span>
+                  </div>
+                </div>
+
+                <!-- Animated Resize Indicator -->
+                <div class="visual-connector">
+                  <div class="connector-line"></div>
+                  <div class="connector-pill">
+                    <span class="pill-icon">↓</span>
+                    <span class="pill-text">RESIZE</span>
+                    <span class="pill-icon">↓</span>
+                  </div>
+                  <div class="connector-line"></div>
+                </div>
+
+                <!-- Resized Layer -->
+                <div class="visual-card card-resized">
+                  <div class="card-header-bar">
+                    <span class="tag-badge brand-badge">OPTIMIZED</span>
+                    <span class="res-badge accent-res">1200 × 675</span>
+                  </div>
+                  <div class="card-preview-art bg-gradient-opt">
+                    <div class="art-grid-lines"></div>
+                    <div class="art-circle smaller-circle"></div>
+                  </div>
+                  <div class="card-footer-info">
+                    <span>source_photo-resized.webp</span>
+                    <span class="size-text savings-text">380 KB (-84%)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Resizer Application Core Area -->
+      <section
+        class="tool-section"
+        id="resizerApp"
+        aria-label="Image Resizer Tool"
+      >
+        <div class="page-container">
+          <!-- Live Toast & Status Feedback -->
+          <div
+            class="toast-region"
+            id="toastRegion"
+            role="status"
+            aria-live="polite"
+          ></div>
+
+          <!-- 1. Upload Box -->
+          <div
+            class="upload-card"
+            id="dropZone"
+            tabindex="0"
+            role="button"
+            aria-label="Upload images: Drag and drop or press Enter to browse files"
+          >
+            <input
+              type="file"
+              id="fileInput"
+              multiple
+              accept="image/jpeg,image/png,image/webp"
+              class="sr-only"
+              aria-label="Select JPG, PNG, or WebP files"
+            />
+
+            <div class="upload-body">
+              <div class="upload-icon-wrap" aria-hidden="true">
+                <svg
+                  width="40"
+                  height="40"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="17 8 12 3 7 8"></polyline>
+                  <line x1="12" y1="3" x2="12" y2="15"></line>
+                </svg>
+              </div>
+              <h2 class="upload-heading">Select or Drop Images to Resize</h2>
+              <p class="upload-sub">
+                Upload single or multiple images. Supports
+                <strong>JPG, JPEG, PNG, and WebP</strong> up to 50MB per file.
+              </p>
+              <div class="upload-button-wrapper">
+                <button
+                  type="button"
+                  class="btn btn-primary btn-upload-cta"
+                  id="browseBtn"
+                >
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M12 5v14M5 12h14"></path>
+                  </svg>
+                  <span>Browse Images</span>
+                </button>
+              </div>
+              <p class="upload-privacy-note">
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <rect
+                    x="3"
+                    y="11"
+                    width="18"
+                    height="11"
+                    rx="2"
+                    ry="2"
+                  ></rect>
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                </svg>
+                <span
+                  >Files never leave your device. Processed client-side via
+                  browser canvas.</span
+                >
+              </p>
+            </div>
+          </div>
+
+          <!-- 2. Application Workspace (Revealed when files are loaded) -->
+          <div class="workspace-card" id="workspaceArea" hidden>
+            <!-- Queue Header & Bulk Toolbar -->
+            <div class="workspace-header">
+              <div class="queue-status">
+                <h3 class="queue-title">Uploaded Queue</h3>
+                <span class="queue-count-badge" id="queueCountBadge"
+                  >0 images</span
+                >
+              </div>
+
+              <div class="queue-actions">
+                <button type="button" class="btn btn-primary" id="resizeAllBtn">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <polyline points="23 4 23 10 17 10"></polyline>
+                    <polyline points="1 20 1 14 7 14"></polyline>
+                    <path
+                      d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"
+                    ></path>
+                  </svg>
+                  <span>Resize All</span>
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  id="downloadAllBtn"
+                  disabled
+                >
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                  <span>Download All (ZIP)</span>
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-ghost"
+                  id="resetSettingsBtn"
+                  title="Reset controls to default"
+                >
+                  <span>Reset Settings</span>
+                </button>
+                <button
+                  type="button"
+                  class="btn btn-ghost btn-danger-ghost"
+                  id="clearAllBtn"
+                  title="Clear all images"
+                >
+                  <span>Clear All</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Batch Progress Indicator -->
+            <div
+              class="batch-progress-box"
+              id="batchProgressBar"
+              hidden
+              aria-hidden="true"
+            >
+              <div class="progress-meta">
+                <span class="progress-label" id="batchProgressLabel"
+                  >Processing 0 of 0...</span
+                >
+                <span class="progress-percentage" id="batchProgressPercent"
+                  >0%</span
+                >
+              </div>
+              <div class="progress-track">
+                <div
+                  class="progress-fill"
+                  id="batchProgressFill"
+                  style="width: 0%"
+                ></div>
+              </div>
+            </div>
+
+            <!-- Interactive Workspace Grid: Controls + Preview -->
+            <div class="workspace-grid">
+              <!-- Left Column: Controls & Settings -->
+              <div class="controls-column">
+                <div class="controls-panel">
+                  <div class="panel-section-title">
+                    <span class="section-number">1</span>
+                    <h4>Resize Dimensions</h4>
+                  </div>
+
+                  <!-- Dimension Mode Selector: Pixels vs Percentage -->
+                  <div
+                    class="mode-tabs"
+                    role="tablist"
+                    aria-label="Resize calculation method"
+                  >
+                    <button
+                      type="button"
+                      class="tab-btn active"
+                      id="modePixelsTab"
+                      role="tab"
+                      aria-selected="true"
+                      aria-controls="pixelsPanel"
+                    >
+                      Custom Pixels
+                    </button>
+                    <button
+                      type="button"
+                      class="tab-btn"
+                      id="modePercentTab"
+                      role="tab"
+                      aria-selected="false"
+                      aria-controls="percentPanel"
+                    >
+                      By Percentage
+                    </button>
+                  </div>
+
+                  <!-- Mode Panel 1: Pixels -->
+                  <div
+                    class="tab-panel"
+                    id="pixelsPanel"
+                    role="tabpanel"
+                    aria-labelledby="modePixelsTab"
+                  >
+                    <!-- Width & Height with Lock -->
+                    <div class="dimensions-input-group">
+                      <div class="input-field">
+                        <label for="inputWidth">Width (px)</label>
+                        <div class="input-with-unit">
+                          <input
+                            type="number"
+                            id="inputWidth"
+                            min="1"
+                            max="16384"
+                            step="1"
+                            placeholder="Width"
+                            aria-describedby="widthHelp"
+                          />
+                          <span class="unit-tag">px</span>
+                        </div>
+                      </div>
+
+                      <!-- Aspect Ratio Lock Button -->
+                      <div class="lock-btn-wrapper">
+                        <button
+                          type="button"
+                          class="lock-toggle locked"
+                          id="lockRatioBtn"
+                          aria-pressed="true"
+                          title="Lock Aspect Ratio (Active)"
+                        >
+                          <svg
+                            class="icon-locked"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            aria-hidden="true"
+                          >
+                            <rect
+                              x="3"
+                              y="11"
+                              width="18"
+                              height="11"
+                              rx="2"
+                              ry="2"
+                            ></rect>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                          </svg>
+                          <svg
+                            class="icon-unlocked"
+                            width="20"
+                            height="20"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            aria-hidden="true"
+                          >
+                            <rect
+                              x="3"
+                              y="11"
+                              width="18"
+                              height="11"
+                              rx="2"
+                              ry="2"
+                            ></rect>
+                            <path d="M7 11V7a5 5 0 0 1 9.9-1"></path>
+                          </svg>
+                          <span class="sr-only">Toggle Aspect Ratio Lock</span>
+                        </button>
+                        <span class="lock-status-label" id="lockRatioLabel"
+                          >Ratio Locked</span
+                        >
+                      </div>
+
+                      <div class="input-field">
+                        <label for="inputHeight">Height (px)</label>
+                        <div class="input-with-unit">
+                          <input
+                            type="number"
+                            id="inputHeight"
+                            min="1"
+                            max="16384"
+                            step="1"
+                            placeholder="Height"
+                            aria-describedby="heightHelp"
+                          />
+                          <span class="unit-tag">px</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="dimension-quick-actions">
+                      <button
+                        type="button"
+                        class="btn-micro"
+                        id="swapDimensionsBtn"
+                        title="Swap Width and Height"
+                      >
+                        <svg
+                          width="14"
+                          height="14"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          aria-hidden="true"
+                        >
+                          <polyline points="17 1 21 5 17 9"></polyline>
+                          <path d="M3 11V9a4 4 0 0 1 4-4h14"></path>
+                          <polyline points="7 23 3 19 7 15"></polyline>
+                          <path d="M21 13v2a4 4 0 0 1-4 4H3"></path>
+                        </svg>
+                        <span>Swap W / H</span>
+                      </button>
+                      <button
+                        type="button"
+                        class="btn-micro"
+                        id="resetToOriginalBtn"
+                      >
+                        <span>Restore Original Dimensions</span>
+                      </button>
+                    </div>
+
+                    <!-- Presets List -->
+                    <div class="presets-section">
+                      <div class="presets-label">
+                        <span>Social Media &amp; Standard Presets</span>
+                      </div>
+                      <div
+                        class="presets-grid"
+                        role="group"
+                        aria-label="Dimension Presets"
+                      >
+                        <!-- Social presets -->
+                        <button
+                          type="button"
+                          class="preset-chip"
+                          data-w="1080"
+                          data-h="1080"
+                          title="Instagram Square Post (1:1)"
+                        >
+                          <span class="preset-name">IG Square</span>
+                          <span class="preset-res">1080 × 1080</span>
+                        </button>
+                        <button
+                          type="button"
+                          class="preset-chip"
+                          data-w="1080"
+                          data-h="1350"
+                          title="Instagram Portrait Post (4:5)"
+                        >
+                          <span class="preset-name">IG Portrait</span>
+                          <span class="preset-res">1080 × 1350</span>
+                        </button>
+                        <button
+                          type="button"
+                          class="preset-chip"
+                          data-w="1200"
+                          data-h="630"
+                          title="Facebook Shared Post (1.91:1)"
+                        >
+                          <span class="preset-name">Facebook Post</span>
+                          <span class="preset-res">1200 × 630</span>
+                        </button>
+                        <button
+                          type="button"
+                          class="preset-chip"
+                          data-w="1280"
+                          data-h="720"
+                          title="YouTube Video Thumbnail (16:9)"
+                        >
+                          <span class="preset-name">YT Thumbnail</span>
+                          <span class="preset-res">1280 × 720</span>
+                        </button>
+                        <button
+                          type="button"
+                          class="preset-chip"
+                          data-w="1200"
+                          data-h="627"
+                          title="LinkedIn Feed Post"
+                        >
+                          <span class="preset-name">LinkedIn Post</span>
+                          <span class="preset-res">1200 × 627</span>
+                        </button>
+                        <!-- Standard Display sizes -->
+                        <button
+                          type="button"
+                          class="preset-chip"
+                          data-w="1920"
+                          data-h="1080"
+                          title="Full HD (16:9)"
+                        >
+                          <span class="preset-name">Full HD</span>
+                          <span class="preset-res">1920 × 1080</span>
+                        </button>
+                        <button
+                          type="button"
+                          class="preset-chip"
+                          data-w="1280"
+                          data-h="720"
+                          title="Standard HD (16:9)"
+                        >
+                          <span class="preset-name">HD 720p</span>
+                          <span class="preset-res">1280 × 720</span>
+                        </button>
+                        <button
+                          type="button"
+                          class="preset-chip"
+                          data-w="1024"
+                          data-h="768"
+                          title="XGA (4:3)"
+                        >
+                          <span class="preset-name">XGA</span>
+                          <span class="preset-res">1024 × 768</span>
+                        </button>
+                        <button
+                          type="button"
+                          class="preset-chip"
+                          data-w="800"
+                          data-h="600"
+                          title="SVGA (4:3)"
+                        >
+                          <span class="preset-name">SVGA</span>
+                          <span class="preset-res">800 × 600</span>
+                        </button>
+                        <button
+                          type="button"
+                          class="preset-chip"
+                          data-w="640"
+                          data-h="480"
+                          title="VGA (4:3)"
+                        >
+                          <span class="preset-name">VGA</span>
+                          <span class="preset-res">640 × 480</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Mode Panel 2: Percentage -->
+                  <div
+                    class="tab-panel"
+                    id="percentPanel"
+                    role="tabpanel"
+                    aria-labelledby="modePercentTab"
+                    hidden
+                  >
+                    <div
+                      class="percentage-chips"
+                      role="group"
+                      aria-label="Resize by percentage"
+                    >
+                      <button
+                        type="button"
+                        class="percent-chip"
+                        data-percent="25"
+                      >
+                        25%
+                      </button>
+                      <button
+                        type="button"
+                        class="percent-chip active"
+                        data-percent="50"
+                      >
+                        50%
+                      </button>
+                      <button
+                        type="button"
+                        class="percent-chip"
+                        data-percent="75"
+                      >
+                        75%
+                      </button>
+                      <button
+                        type="button"
+                        class="percent-chip"
+                        data-percent="100"
+                      >
+                        100%
+                      </button>
+                      <button
+                        type="button"
+                        class="percent-chip"
+                        data-percent="125"
+                      >
+                        125%
+                      </button>
+                      <button
+                        type="button"
+                        class="percent-chip"
+                        data-percent="150"
+                      >
+                        150%
+                      </button>
+                    </div>
+
+                    <div class="custom-percent-wrap">
+                      <label for="customPercentInput">Custom Percentage:</label>
+                      <div class="percent-input-box">
+                        <input
+                          type="number"
+                          id="customPercentInput"
+                          min="1"
+                          max="500"
+                          value="50"
+                          step="1"
+                        />
+                        <span class="unit-tag">%</span>
+                        <button
+                          type="button"
+                          class="btn btn-secondary btn-sm"
+                          id="applyPercentBtn"
+                        >
+                          Apply
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="panel-divider"></div>
+
+                  <!-- Section 2: Proportional Limits & Upscaling Rules -->
+                  <div class="panel-section-title">
+                    <span class="section-number">2</span>
+                    <h4>Scaling &amp; Dimension Guards</h4>
+                  </div>
+
+                  <div class="switches-list">
+                    <!-- Prevent Upscaling -->
+                    <div class="switch-row">
+                      <div class="switch-meta">
+                        <label for="preventUpscaleToggle" class="switch-title"
+                          >Prevent Upscaling</label
+                        >
+                        <span class="switch-sub"
+                          >Never enlarge images past their native pixel bounds.
+                          Protects against pixelation and blur.</span
+                        >
+                      </div>
+                      <label class="toggle-switch">
+                        <input
+                          type="checkbox"
+                          id="preventUpscaleToggle"
+                          checked
+                        />
+                        <span class="toggle-slider"></span>
+                      </label>
+                    </div>
+
+                    <!-- Maximum Dimensions Mode -->
+                    <div class="switch-row">
+                      <div class="switch-meta">
+                        <label for="maxBoundsToggle" class="switch-title"
+                          >Fit Inside Maximum Bounds</label
+                        >
+                        <span class="switch-sub"
+                          >Scale proportionally so width and height fit inside
+                          designated maximum boundaries without
+                          distortion.</span
+                        >
+                      </div>
+                      <label class="toggle-switch">
+                        <input type="checkbox" id="maxBoundsToggle" />
+                        <span class="toggle-slider"></span>
+                      </label>
+                    </div>
+                  </div>
+
+                  <!-- Maximum Bounds Inputs (shown when toggle is ON) -->
+                  <div class="max-bounds-box" id="maxBoundsBox" hidden>
+                    <div class="dimensions-input-group">
+                      <div class="input-field">
+                        <label for="maxBoundWidth">Max Width (px)</label>
+                        <input
+                          type="number"
+                          id="maxBoundWidth"
+                          min="1"
+                          max="16384"
+                          placeholder="e.g. 1920"
+                        />
+                      </div>
+                      <div class="input-field">
+                        <label for="maxBoundHeight">Max Height (px)</label>
+                        <input
+                          type="number"
+                          id="maxBoundHeight"
+                          min="1"
+                          max="16384"
+                          placeholder="e.g. 1080"
+                        />
+                      </div>
+                    </div>
+                    <button
+                      type="button"
+                      class="btn btn-secondary btn-sm"
+                      id="applyMaxBoundsBtn"
+                    >
+                      Calculate Fits
+                    </button>
+                  </div>
+
+                  <div class="panel-divider"></div>
+
+                  <!-- Section 3: Output Format & Quality Slider -->
+                  <div class="panel-section-title">
+                    <span class="section-number">3</span>
+                    <h4>Output Format &amp; Quality</h4>
+                  </div>
+
+                  <div class="format-quality-group">
+                    <!-- Output Format Dropdown -->
+                    <div class="input-field">
+                      <label for="outputFormatSelect">Target Format</label>
+                      <select id="outputFormatSelect" class="styled-select">
+                        <option value="auto">
+                          Auto (Match Original Format)
+                        </option>
+                        <option value="image/jpeg">JPG / JPEG (.jpg)</option>
+                        <option value="image/png">
+                          PNG (.png — Preserves Transparency)
+                        </option>
+                        <option value="image/webp">
+                          WebP (.webp — High Efficiency)
+                        </option>
+                      </select>
+                    </div>
+
+                    <!-- Quality Slider -->
+                    <div class="quality-slider-block">
+                      <div class="slider-header">
+                        <label for="qualityRange">Compression Quality</label>
+                        <span class="quality-value-badge" id="qualityValueBadge"
+                          >80%</span
+                        >
+                      </div>
+                      <input
+                        type="range"
+                        id="qualityRange"
+                        min="10"
+                        max="100"
+                        value="80"
+                        step="1"
+                        class="styled-range"
+                      />
+                      <div class="slider-labels">
+                        <span>Smaller File (10%)</span>
+                        <span>Balanced (80%)</span>
+                        <span>Maximum (100%)</span>
+                      </div>
+                      <p class="quality-note" id="pngQualityNote" hidden>
+                        <em
+                          >Note: PNG format uses lossless compression; quality
+                          adjustments apply strictly to JPG and WebP
+                          outputs.</em
+                        >
+                      </p>
+                    </div>
+
+                    <!-- Background Color for JPEG (Transparency Replacement) -->
+                    <div class="bg-color-field" id="jpegBgField" hidden>
+                      <label for="jpegBgColor"
+                        >JPEG Transparency Fill Color</label
+                      >
+                      <div class="color-picker-wrap">
+                        <input
+                          type="color"
+                          id="jpegBgColor"
+                          value="#ffffff"
+                          class="color-swatch"
+                        />
+                        <span class="color-hex-text" id="jpegBgHex"
+                          >#FFFFFF (White Default)</span
+                        >
+                      </div>
+                      <p class="field-help-text">
+                        JPEG does not support alpha transparency. Transparent
+                        PNG or WebP areas will be rendered on this background
+                        color.
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Apply Single Image Action -->
+                  <div class="panel-footer-actions">
+                    <button
+                      type="button"
+                      class="btn btn-primary btn-block btn-lg"
+                      id="applyCurrentResizeBtn"
+                    >
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        aria-hidden="true"
+                      >
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                      <span>Resize Selected Image</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right Column: Before / After Comparison & Queue -->
+              <div class="preview-column">
+                <!-- Active Image Before / After Card -->
+                <div class="comparison-card" id="comparisonCard">
+                  <div class="comparison-header">
+                    <div class="comp-title-block">
+                      <h4 class="comparison-title" id="activeImageName">
+                        No image selected
+                      </h4>
+                      <span class="comp-status-tag" id="activeImageStatus"
+                        >Ready</span
+                      >
+                    </div>
+                    <div class="comp-actions" id="activeImageActions">
+                      <button
+                        type="button"
+                        class="btn btn-primary btn-sm"
+                        id="downloadActiveBtn"
+                        disabled
+                      >
+                        <svg
+                          width="14"
+                          height="14"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          aria-hidden="true"
+                        >
+                          <path
+                            d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+                          ></path>
+                          <polyline points="7 10 12 15 17 10"></polyline>
+                          <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                        <span>Download</span>
+                      </button>
+                    </div>
+                  </div>
+
+                  <!-- Comparison Displays: Original vs Resized -->
+                  <div class="comparison-body">
+                    <!-- Original Card -->
+                    <div class="comp-side">
+                      <div class="side-badge">ORIGINAL</div>
+                      <div class="preview-frame">
+                        <img
+                          id="previewOriginalImg"
+                          src=""
+                          alt="Original preview"
+                          class="preview-image"
+                        />
+                      </div>
+                      <div class="side-stats">
+                        <div class="stat-row">
+                          <span class="stat-label">Dimensions:</span>
+                          <span class="stat-value" id="statOrigDims"
+                            >0 × 0 px</span
+                          >
+                        </div>
+                        <div class="stat-row">
+                          <span class="stat-label">File Size:</span>
+                          <span class="stat-value" id="statOrigSize">0 KB</span>
+                        </div>
+                        <div class="stat-row">
+                          <span class="stat-label">Format:</span>
+                          <span class="stat-value" id="statOrigFormat">—</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Resized Output Card -->
+                    <div class="comp-side output-side">
+                      <div class="side-badge brand-badge">RESIZED RESULT</div>
+                      <div class="preview-frame">
+                        <img
+                          id="previewResizedImg"
+                          src=""
+                          alt="Resized output preview"
+                          class="preview-image"
+                          hidden
+                        />
+                        <div
+                          class="preview-empty-state"
+                          id="previewResizedPlaceholder"
+                        >
+                          <svg
+                            width="32"
+                            height="32"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="1.6"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          >
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="8" x2="12" y2="12"></line>
+                            <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                          </svg>
+                          <span
+                            >Click "Resize Selected Image" or "Resize All" to
+                            process</span
+                          >
+                        </div>
+                      </div>
+                      <div class="side-stats">
+                        <div class="stat-row">
+                          <span class="stat-label">Dimensions:</span>
+                          <span
+                            class="stat-value highlight-val"
+                            id="statResizedDims"
+                            >—</span
+                          >
+                        </div>
+                        <div class="stat-row">
+                          <span class="stat-label">File Size:</span>
+                          <span
+                            class="stat-value highlight-val"
+                            id="statResizedSize"
+                            >—</span
+                          >
+                        </div>
+                        <div class="stat-row">
+                          <span class="stat-label">Size Change:</span>
+                          <span
+                            class="stat-value badge-savings"
+                            id="statSizeDiff"
+                            >—</span
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Uploaded Files List / Queue Display -->
+                <div class="queue-list-card">
+                  <div class="queue-list-header">
+                    <h5>Batch File Queue</h5>
+                    <span class="queue-sub-hint"
+                      >Click any file row to inspect in comparison view</span
+                    >
+                  </div>
+                  <div
+                    class="queue-items-container"
+                    id="queueItemsList"
+                    role="list"
+                  >
+                    <!-- File items rendered by JS -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- GEO / AI Search Answer-First Section -->
+      <section
+        class="quick-answers-section"
+        id="quickAnswers"
+        aria-labelledby="qaSectionTitle"
+      >
+        <div class="page-container">
+          <div class="section-header">
+            <span class="section-eyebrow">FAST KNOWLEDGE</span>
+            <h2 class="section-title" id="qaSectionTitle">
+              Quick Answers &amp; Common Resizing Questions
+            </h2>
+            <p class="section-desc">
+              Direct, accurate technical explanations on image resizing,
+              formats, aspect ratios, and compression.
+            </p>
+          </div>
+
+          <div class="qa-grid">
+            <!-- QA 1 -->
+            <article class="qa-card">
+              <h3 class="qa-question">What is an image resizer?</h3>
+              <p class="qa-answer">
+                An image resizer is a digital utility that alters the physical
+                pixel grid of a raster image. By interpolating existing pixels,
+                it recalculates image width and height to fit specific screen
+                dimensions, print specifications, or social platform bounds
+                without needing heavy desktop photo software.
+              </p>
+            </article>
+
+            <!-- QA 2 -->
+            <article class="qa-card">
+              <h3 class="qa-question">How do I resize an image online?</h3>
+              <div class="qa-answer">
+                <ol class="qa-steps">
+                  <li>
+                    <strong>Upload:</strong> Drag and drop your JPG, PNG, or
+                    WebP into Huzikit.
+                  </li>
+                  <li>
+                    <strong>Specify Dimensions:</strong> Enter target width and
+                    height or pick a preset like 1080×1080.
+                  </li>
+                  <li>
+                    <strong>Lock Ratio:</strong> Keep the aspect-ratio lock
+                    active to prevent image distortion.
+                  </li>
+                  <li>
+                    <strong>Configure Format:</strong> Choose your target output
+                    format and adjust the quality slider.
+                  </li>
+                  <li>
+                    <strong>Download:</strong> Click Resize and download your
+                    optimized image file instantly.
+                  </li>
+                </ol>
+              </div>
+            </article>
+
+            <!-- QA 3 -->
+            <article class="qa-card">
+              <h3 class="qa-question">
+                Can I resize JPG, PNG and WebP images?
+              </h3>
+              <p class="qa-answer">
+                Yes. Huzikit natively accepts all three major web image formats.
+                JPG images are optimized with high-performance lossy
+                compression. PNG images maintain full transparent background
+                layers (alpha channels). WebP images provide next-generation
+                compression with support for both transparency and ultra-compact
+                file weights.
+              </p>
+            </article>
+
+            <!-- QA 4 -->
+            <article class="qa-card">
+              <h3 class="qa-question">Can I resize multiple images at once?</h3>
+              <p class="qa-answer">
+                Yes, batch resizing is completely free on Huzikit. You can drag
+                and drop dozens of images into the upload queue, apply unified
+                dimension settings or social presets, process the entire queue
+                with one click, and download the finished results individually
+                or packaged in a single ZIP archive.
+              </p>
+            </article>
+
+            <!-- QA 5 -->
+            <article class="qa-card">
+              <h3 class="qa-question">
+                How do I resize an image without distortion?
+              </h3>
+              <p class="qa-answer">
+                Always ensure the <strong>Aspect Ratio Lock</strong> is enabled
+                before modifying dimensions. The lock enforces mathematical
+                proportionality between horizontal and vertical pixels (Width ÷
+                Height). When you enter a new width, height updates
+                proportionally, eliminating unwanted stretching or squashing.
+              </p>
+            </article>
+
+            <!-- QA 6 -->
+            <article class="qa-card">
+              <h3 class="qa-question">Does resizing reduce image file size?</h3>
+              <p class="qa-answer">
+                Downscaling image dimensions significantly reduces file size
+                because fewer pixels require digital storage. For example,
+                scaling a 4000×3000 photo (12 megapixels) to 1200×900 (1.08
+                megapixels) removes over 90% of the raw pixel data, often
+                dropping file weights from 5MB down to under 300KB.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Comprehensive Educational SEO Content (1200+ Words) -->
+      <section class="educational-content-section" id="deepGuide">
+        <div class="page-container content-container">
+          <div class="article-lead-block">
+            <span class="section-eyebrow">COMPREHENSIVE GUIDE</span>
+            <h2>
+              The Ultimate Guide to Digital Image Resizing, Aspect Ratios, and
+              Web Performance
+            </h2>
+            <p>
+              Whether you are an e-commerce merchant optimizing product photos,
+              a web developer striving for perfect Core Web Vitals, or a content
+              creator preparing social media posts, mastering image dimensions
+              and compression is essential. Here is everything you need to know
+              about resizing digital graphics efficiently.
+            </p>
+          </div>
+
+          <article class="longform-article">
+            <h3>
+              1. Understanding Image Dimensions: Pixels vs. Resolution vs. File
+              Size
+            </h3>
+            <p>
+              Digital images are composed of discrete colored dots known as
+              <strong>pixels (px)</strong>. When an image file is described as
+              1920 × 1080, it contains 1,920 horizontal columns and 1,080
+              vertical rows of pixels, totaling 2,073,600 individual color
+              samples.
+            </p>
+            <p>
+              Many people confuse pixel dimensions with
+              <em>resolution (DPI or PPI)</em>. DPI (dots per inch) is primarily
+              relevant to physical print output on paper, indicating how densely
+              printer nozzles place ink droplets. On digital screens, screen
+              density (such as Retina 2x or 3x displays) dictates how many
+              device pixels render each CSS pixel. Changing DPI metadata in an
+              image file without changing its pixel dimensions has zero impact
+              on its visual size or loading speed on the web. True image
+              resizing requires recalculating the actual pixel grid.
+            </p>
+
+            <div class="content-table-wrapper">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th scope="col">Concept</th>
+                    <th scope="col">Measurement</th>
+                    <th scope="col">Direct Web Impact</th>
+                    <th scope="col">How Huzikit Handles It</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Pixel Dimensions</strong></td>
+                    <td>Width × Height (e.g. 1920×1080)</td>
+                    <td>
+                      Determines physical screen footprint and memory
+                      consumption
+                    </td>
+                    <td>
+                      Recalculates exact canvas pixel buffers using bicubic
+                      smoothing
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Aspect Ratio</strong></td>
+                    <td>Proportional relationship (e.g. 16:9, 1:1)</td>
+                    <td>Prevents squished faces or warped product graphics</td>
+                    <td>
+                      Instant mathematical lock calculates corresponding axis
+                      automatically
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>File Weight</strong></td>
+                    <td>Kilobytes (KB) or Megabytes (MB)</td>
+                    <td>
+                      Directly impacts page load time, bandwidth, and SEO
+                      ranking
+                    </td>
+                    <td>
+                      Reduces pixel counts and applies lossy/lossless encoders
+                    </td>
+                  </tr>
+                  <tr>
+                    <td><strong>Color Depth / Alpha</strong></td>
+                    <td>8-bit, 24-bit, 32-bit (RGBA)</td>
+                    <td>
+                      Determines color richness and transparent background
+                      support
+                    </td>
+                    <td>
+                      Preserves transparent pixels for PNG and WebP formats
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3>2. Aspect Ratio Math &amp; Preventing Visual Distortion</h3>
+            <p>
+              The aspect ratio of an image is the proportional relationship
+              between its width and height, represented as <code>W : H</code>.
+              For instance, high-definition television and modern computer
+              displays typically use a 16:9 aspect ratio. Traditional
+              photography frequently uses 3:2, while classic computer displays
+              and tablet screens often employ 4:3.
+            </p>
+            <p>
+              When an image is resized without maintaining this mathematical
+              ratio, objects in the picture become visually distorted—either
+              stretched horizontally (making subjects appear wider) or
+              compressed vertically.
+            </p>
+            <p>
+              The mathematical formula used by Huzikit to maintain aspect ratio
+              during width modification is:
+            </p>
+            <div class="formula-box">
+              <code
+                >Target Height = Math.round(Target Width / (Original Width /
+                Original Height))</code
+              >
+            </div>
+            <p>
+              Similarly, when you specify a new target height, Huzikit
+              calculates:
+            </p>
+            <div class="formula-box">
+              <code
+                >Target Width = Math.round(Target Height * (Original Width /
+                Original Height))</code
+              >
+            </div>
+
+            <h3>
+              3. Standard Dimension Cheat Sheet for Social Media &amp; Web (2026
+              Guidelines)
+            </h3>
+            <p>
+              Social media platforms continuously update their algorithmic feeds
+              and image rendering containers. Using incorrect dimensions leads
+              to automatic aggressive server-side cropping, blurred
+              downsampling, or awkward black letterbox bars. Huzikit comes
+              pre-loaded with official 2026 dimension presets:
+            </p>
+
+            <div class="content-table-wrapper">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th scope="col">Platform &amp; Format</th>
+                    <th scope="col">Recommended Size</th>
+                    <th scope="col">Aspect Ratio</th>
+                    <th scope="col">Best File Format</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Instagram Feed Square</td>
+                    <td>1080 × 1080 px</td>
+                    <td>1:1</td>
+                    <td>JPG (High Quality) or WebP</td>
+                  </tr>
+                  <tr>
+                    <td>Instagram Portrait / Reel Cover</td>
+                    <td>1080 × 1350 px</td>
+                    <td>4:5</td>
+                    <td>JPG or WebP</td>
+                  </tr>
+                  <tr>
+                    <td>Facebook Feed Link &amp; Share</td>
+                    <td>1200 × 630 px</td>
+                    <td>1.91:1</td>
+                    <td>JPG or WebP</td>
+                  </tr>
+                  <tr>
+                    <td>YouTube Video Thumbnail</td>
+                    <td>1280 × 720 px (Min 640px)</td>
+                    <td>16:9</td>
+                    <td>JPG or PNG (&lt; 2MB limit)</td>
+                  </tr>
+                  <tr>
+                    <td>LinkedIn Feed Update</td>
+                    <td>1200 × 627 px</td>
+                    <td>1.91:1</td>
+                    <td>JPG or PNG</td>
+                  </tr>
+                  <tr>
+                    <td>Twitter / X Timeline Post</td>
+                    <td>1200 × 675 px</td>
+                    <td>16:9</td>
+                    <td>JPG or WebP</td>
+                  </tr>
+                  <tr>
+                    <td>Full HD Website Hero Banner</td>
+                    <td>1920 × 1080 px</td>
+                    <td>16:9</td>
+                    <td>WebP (Compressed &lt; 250 KB)</td>
+                  </tr>
+                  <tr>
+                    <td>Standard Blog Content Figure</td>
+                    <td>1200 × 800 px</td>
+                    <td>3:2</td>
+                    <td>WebP or JPG</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <h3>4. Choosing the Optimal Output Format: JPG vs. PNG vs. WebP</h3>
+            <p>
+              Selecting the right format after resizing is just as critical as
+              choosing the right dimensions. Different file formats use
+              fundamentally different compression algorithms:
+            </p>
+            <ul class="article-list">
+              <li>
+                <strong>JPG / JPEG:</strong> The global standard for
+                photographic imagery. JPEG uses lossy discrete cosine transform
+                compression, allowing you to dramatically shrink file weights by
+                discarding subtle color variations invisible to the human eye.
+                JPEG does not support transparency; any transparent areas will
+                be filled with a solid background color.
+              </li>
+              <li>
+                <strong>PNG (Portable Network Graphics):</strong> A lossless
+                bitmap format engineered for graphics with sharp lines, text
+                overlays, digital diagrams, and logos. PNG supports 8-bit and
+                24-bit transparent alpha channels. Because it is lossless, PNG
+                files are substantially heavier than JPEGs for photographs.
+              </li>
+              <li>
+                <strong>WebP:</strong> Developed by Google, WebP provides both
+                superior lossy and lossless compression. WebP files are on
+                average 25% to 35% smaller than comparable JPEGs at equivalent
+                visual fidelity, while simultaneously supporting alpha
+                transparency. WebP is supported across 97%+ of all active web
+                browsers worldwide.
+              </li>
+            </ul>
+
+            <h3>5. The Danger of Upscaling (Enlarging Smaller Images)</h3>
+            <p>
+              When you downscale an image (for example, taking a 4000px camera
+              photo down to 1200px for a website), the algorithm averages
+              neighboring pixels together, preserving sharp edges and detail.
+            </p>
+            <p>
+              However, when you <strong>upscale</strong> an image (taking a
+              600px image and forcing it to become 1800px), the computer has to
+              invent pixels that do not exist. Traditional browser canvas
+              algorithms interpolate the space between pixels, resulting in
+              noticeable blurriness, pixelation, and artifacts.
+            </p>
+            <p>
+              Huzikit includes a dedicated
+              <strong>Prevent Upscaling</strong> guard. When checked, if your
+              requested dimensions exceed the image's original dimensions,
+              Huzikit automatically clamps the dimensions to the original
+              boundaries, ensuring your files remain sharp and uncompromised.
+            </p>
+
+            <h3>6. Client-Side Processing &amp; Absolute Privacy</h3>
+            <p>
+              Unlike traditional file-conversion websites that upload your
+              personal photographs to remote servers where they may linger on
+              temporary cloud hard drives, Huzikit operates
+              <strong>100% client-side</strong>. All resizing calculations,
+              canvas draws, and format encodings happen directly within your
+              browser's V8 or JavaScriptCore runtime engine on your local
+              machine.
+            </p>
+            <p>
+              Furthermore, browser canvas rendering automatically strips out
+              embedded EXIF camera metadata, lens serial numbers, and sensitive
+              GPS geolocation coordinates. Your private photos stay on your
+              device, and your output files are clean, lean, and ready for
+              public publication.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- FAQ Accordion Section -->
+      <section class="faq-section" id="faqSection" aria-labelledby="faqHeading">
+        <div class="page-container">
+          <div class="section-header">
+            <span class="section-eyebrow">HELP &amp; FAQ</span>
+            <h2 class="section-title" id="faqHeading">
+              Frequently Asked Questions
+            </h2>
+            <p class="section-desc">
+              Got questions about online image resizing? Find thorough answers
+              below.
+            </p>
+          </div>
+
+          <div class="faq-accordion" id="faqAccordion">
+            <!-- FAQ 1 -->
+            <div class="faq-item">
+              <button
+                type="button"
+                class="faq-trigger"
+                id="faqBtn1"
+                aria-expanded="false"
+                aria-controls="faqPanel1"
+              >
+                <span class="faq-title">1. What is an image resizer?</span>
+                <svg
+                  class="faq-icon"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div
+                class="faq-panel"
+                id="faqPanel1"
+                role="region"
+                aria-labelledby="faqBtn1"
+                hidden
+              >
+                <div class="faq-body">
+                  An image resizer is a software tool that alters the physical
+                  pixel dimensions (width and height) of a bitmap graphic. By
+                  changing the pixel resolution, it allows you to fit graphics
+                  into specific web containers, meet social media upload
+                  specifications, reduce bandwidth consumption, and optimize
+                  page load speeds.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="faq-item">
+              <button
+                type="button"
+                class="faq-trigger"
+                id="faqBtn2"
+                aria-expanded="false"
+                aria-controls="faqPanel2"
+              >
+                <span class="faq-title"
+                  >2. How do I resize an image online?</span
+                >
+                <svg
+                  class="faq-icon"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div
+                class="faq-panel"
+                id="faqPanel2"
+                role="region"
+                aria-labelledby="faqBtn2"
+                hidden
+              >
+                <div class="faq-body">
+                  To resize an image on Huzikit: (1) Select or drag-and-drop
+                  your image files into the upload box. (2) Adjust your desired
+                  width and height, or choose a pre-configured social media
+                  preset. (3) Ensure the aspect ratio lock is active if you wish
+                  to prevent stretching. (4) Set your target format (JPG, PNG,
+                  WebP) and quality level. (5) Click "Resize All" or "Resize
+                  Selected Image", and download your generated files.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="faq-item">
+              <button
+                type="button"
+                class="faq-trigger"
+                id="faqBtn3"
+                aria-expanded="false"
+                aria-controls="faqPanel3"
+              >
+                <span class="faq-title">3. Can I resize JPG images?</span>
+                <svg
+                  class="faq-icon"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div
+                class="faq-panel"
+                id="faqPanel3"
+                role="region"
+                aria-labelledby="faqBtn3"
+                hidden
+              >
+                <div class="faq-body">
+                  Yes, JPG/JPEG files are fully supported. You can upload photos
+                  taken with any digital camera or smartphone and downscale them
+                  to any resolution. When saving as JPG, you can also use our
+                  quality slider (10% to 100%) to compress the file size to your
+                  exact requirements.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="faq-item">
+              <button
+                type="button"
+                class="faq-trigger"
+                id="faqBtn4"
+                aria-expanded="false"
+                aria-controls="faqPanel4"
+              >
+                <span class="faq-title">4. Can I resize PNG images?</span>
+                <svg
+                  class="faq-icon"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div
+                class="faq-panel"
+                id="faqPanel4"
+                role="region"
+                aria-labelledby="faqBtn4"
+                hidden
+              >
+                <div class="faq-body">
+                  Yes, PNG images are supported. If your PNG file has a
+                  transparent background (such as an icon, logo, or cutout),
+                  Huzikit preserves this transparency layer when saving to PNG
+                  or WebP output formats.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 5 -->
+            <div class="faq-item">
+              <button
+                type="button"
+                class="faq-trigger"
+                id="faqBtn5"
+                aria-expanded="false"
+                aria-controls="faqPanel5"
+              >
+                <span class="faq-title">5. Can I resize WebP images?</span>
+                <svg
+                  class="faq-icon"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div
+                class="faq-panel"
+                id="faqPanel5"
+                role="region"
+                aria-labelledby="faqBtn5"
+                hidden
+              >
+                <div class="faq-body">
+                  Yes, WebP is completely supported for both uploading and
+                  generating. WebP is highly recommended for modern websites as
+                  it typically yields file sizes 30% smaller than standard JPEGs
+                  while retaining excellent clarity.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 6 -->
+            <div class="faq-item">
+              <button
+                type="button"
+                class="faq-trigger"
+                id="faqBtn6"
+                aria-expanded="false"
+                aria-controls="faqPanel6"
+              >
+                <span class="faq-title"
+                  >6. Can I resize multiple images at once?</span
+                >
+                <svg
+                  class="faq-icon"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div
+                class="faq-panel"
+                id="faqPanel6"
+                role="region"
+                aria-labelledby="faqBtn6"
+                hidden
+              >
+                <div class="faq-body">
+                  Yes. You can select or drop multiple images into the queue
+                  simultaneously. Click "Resize All", and our multi-file batch
+                  engine will process each item sequentially with a real-time
+                  progress indicator. You can then download all files as a
+                  convenient ZIP package.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 7 -->
+            <div class="faq-item">
+              <button
+                type="button"
+                class="faq-trigger"
+                id="faqBtn7"
+                aria-expanded="false"
+                aria-controls="faqPanel7"
+              >
+                <span class="faq-title"
+                  >7. How do I keep the original aspect ratio?</span
+                >
+                <svg
+                  class="faq-icon"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div
+                class="faq-panel"
+                id="faqPanel7"
+                role="region"
+                aria-labelledby="faqBtn7"
+                hidden
+              >
+                <div class="faq-body">
+                  Ensure the "Lock Aspect Ratio" button is activated (indicated
+                  by the purple locked padlock icon). When locked, altering
+                  either the width or height input automatically calculates the
+                  matching dimension based on the original image proportions.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 8 -->
+            <div class="faq-item">
+              <button
+                type="button"
+                class="faq-trigger"
+                id="faqBtn8"
+                aria-expanded="false"
+                aria-controls="faqPanel8"
+              >
+                <span class="faq-title"
+                  >8. Can I resize an image by percentage?</span
+                >
+                <svg
+                  class="faq-icon"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div
+                class="faq-panel"
+                id="faqPanel8"
+                role="region"
+                aria-labelledby="faqBtn8"
+                hidden
+              >
+                <div class="faq-body">
+                  Yes! Switch to the "By Percentage" tab above the dimension
+                  inputs. You can choose quick presets such as 25%, 50%, 75%,
+                  100%, 125%, 150%, or type any custom percentage (such as 33%
+                  or 80%) to scale both dimensions in exact proportion.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 9 -->
+            <div class="faq-item">
+              <button
+                type="button"
+                class="faq-trigger"
+                id="faqBtn9"
+                aria-expanded="false"
+                aria-controls="faqPanel9"
+              >
+                <span class="faq-title"
+                  >9. Does resizing reduce image quality?</span
+                >
+                <svg
+                  class="faq-icon"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div
+                class="faq-panel"
+                id="faqPanel9"
+                role="region"
+                aria-labelledby="faqBtn9"
+                hidden
+              >
+                <div class="faq-body">
+                  Downscaling (reducing dimensions) does not reduce perceived
+                  visual quality; in fact, downscaled images often appear
+                  crisper on screens. Huzikit uses high-quality bicubic
+                  interpolation filters to ensure smooth transitions without
+                  jagged pixel edges. If you also wish to compress file weight
+                  further, you can adjust the quality slider.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 10 -->
+            <div class="faq-item">
+              <button
+                type="button"
+                class="faq-trigger"
+                id="faqBtn10"
+                aria-expanded="false"
+                aria-controls="faqPanel10"
+              >
+                <span class="faq-title"
+                  >10. What does prevent upscaling mean?</span
+                >
+                <svg
+                  class="faq-icon"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div
+                class="faq-panel"
+                id="faqPanel10"
+                role="region"
+                aria-labelledby="faqBtn10"
+                hidden
+              >
+                <div class="faq-body">
+                  Upscaling occurs when an image is stretched beyond its
+                  original pixel dimensions (for example, enlarging an 800×600
+                  image to 1600×1200), which causes severe blurriness. When
+                  "Prevent Upscaling" is turned on, Huzikit prevents dimensions
+                  from exceeding the original image limits.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 11 -->
+            <div class="faq-item">
+              <button
+                type="button"
+                class="faq-trigger"
+                id="faqBtn11"
+                aria-expanded="false"
+                aria-controls="faqPanel11"
+              >
+                <span class="faq-title"
+                  >11. What happens to EXIF metadata?</span
+                >
+                <svg
+                  class="faq-icon"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div
+                class="faq-panel"
+                id="faqPanel11"
+                role="region"
+                aria-labelledby="faqBtn11"
+                hidden
+              >
+                <div class="faq-body">
+                  Browser HTML5 canvas processing strips out embedded EXIF
+                  camera metadata, GPS location coordinates, and date/time
+                  stamps. This is a privacy-protective feature that protects
+                  your personal location data and prevents bloat from
+                  unnecessary metadata in web files.
+                </div>
+              </div>
+            </div>
+
+            <!-- FAQ 12 -->
+            <div class="faq-item">
+              <button
+                type="button"
+                class="faq-trigger"
+                id="faqBtn12"
+                aria-expanded="false"
+                aria-controls="faqPanel12"
+              >
+                <span class="faq-title"
+                  >12. Can I resize images directly in my browser?</span
+                >
+                <svg
+                  class="faq-icon"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div
+                class="faq-panel"
+                id="faqPanel12"
+                role="region"
+                aria-labelledby="faqBtn12"
+                hidden
+              >
+                <div class="faq-body">
+                  Yes. Huzikit Image Resizer runs 100% inside your web browser
+                  using HTML5 Canvas, the File API, and Blob encoding. Your
+                  files are never uploaded to any remote server, guaranteeing
+                  immediate speed, zero queue delays, and maximum data privacy.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Global Footer -->
+    <footer class="site-footer" id="siteFooter">
+      <div class="page-container footer-container">
+        <!-- Footer Brand Column -->
+        <div class="footer-brand-col">
+          <a href="/" class="brand-logo" aria-label="Huzikit Home">
+            <span class="logo-mark" aria-hidden="true">H</span>
+            <span class="logo-text"
+              >Huzikit<span class="logo-dot">.</span></span
+            >
+          </a>
+          <p class="footer-bio">
+            The ultimate modern suite of lightning-fast, secure online web
+            utilities, calculators, and developer tools.
+          </p>
+          <div class="footer-social">
+            <a
+              href="https://x.com/huzikitoffical"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-link"
+              aria-label="Follow Huzikit on X / Twitter"
+            >
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                />
+              </svg>
+              <span>@huzikitoffical</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Footer Column 1: Text & Dev Tools -->
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">Text &amp; Dev Tools</h4>
+          <ul class="footer-link-list">
+            <li><a href="/textools/word-counter.html">Word Counter</a></li>
+            <li><a href="/textools/case-converter.html">Case Converter</a></li>
+            <li>
+              <a href="/developertools/JSONFORMATTER.html">JSON Formatter</a>
+            </li>
+            <li>
+              <a href="/developertools/base64encoderdecoder.html"
+                >Base64 Utility</a
+              >
+            </li>
+            <li><a href="/developertools/regextester.html">Regex Tester</a></li>
+          </ul>
+        </div>
+
+        <!-- Footer Column 2: Calculators & Image -->
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">Calculators &amp; Image</h4>
+          <ul class="footer-link-list">
+            <li><a href="/calculator/agecalculator.html">Age Calculator</a></li>
+            <li>
+              <a href="/calculator/bmi-calculator.html">BMI Calculator</a>
+            </li>
+            <li>
+              <a href="/image&pdf/image-compressor.html">Image Compressor</a>
+            </li>
+            <li>
+              <a href="/image&pdf/QRGenrator.html">QR Code Generator</a>
+            </li>
+            <li><a href="/image&pdf/colorpicker.html">Color Picker</a></li>
+          </ul>
+        </div>
+
+        <!-- Footer Column 3: Company & Legal -->
+        <div class="footer-links-col">
+          <h4 class="footer-col-title">Company &amp; Legal</h4>
+          <ul class="footer-link-list">
+            <li><a href="/about.html">About Huzikit</a></li>
+            <li><a href="/disclamier.html">Disclaimer</a></li>
+            <li><a href="/privacy-policies.html">Privacy Policy</a></li>
+            <li><a href="/Termsofservices.html">Terms of Service</a></li>
+            <li><a href="/contact-us.html">Contact Support</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Footer Copyright Bar -->
+      <div class="footer-bottom">
+        <div class="page-container footer-bottom-inner">
+          <p class="copyright-text">
+            &copy; 2026 Huzikit.com. All rights reserved.
+          </p>
+          <p class="tagline-text">Built with speed, security, and precision.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Huzikit Global Search Modal -->
+    <div
+      class="search-modal-backdrop"
+      id="searchModalBackdrop"
+      aria-hidden="true"
+    >
+      <div
+        class="search-dialog"
+        id="searchDialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="searchDialogTitle"
+      >
+        <div class="search-dialog-header">
+          <div class="search-input-wrapper">
+            <svg
+              class="search-modal-icon"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input
+              type="text"
+              id="globalSearchInput"
+              class="search-modal-input"
+              placeholder="Search all 30 tools (e.g. resizer, calculator, JSON, word)..."
+              autocomplete="off"
+              spellcheck="false"
+            />
+            <button
+              type="button"
+              class="search-clear-btn"
+              id="searchClearBtn"
+              aria-label="Clear search input"
+              hidden
+            >
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </button>
+          </div>
+          <button
+            type="button"
+            class="search-close-btn"
+            id="searchCloseBtn"
+            aria-label="Close search (Esc)"
+          >
+            <kbd>ESC</kbd>
+          </button>
+        </div>
+
+        <!-- Category Filter Pills -->
+        <div
+          class="search-filter-pills"
+          role="tablist"
+          aria-label="Filter tools by category"
+        >
+          <button
+            type="button"
+            class="filter-pill active"
+            data-category="all"
+            role="tab"
+            aria-selected="true"
+          >
+            All Tools (30)
+          </button>
+          <button
+            type="button"
+            class="filter-pill"
+            data-category="Image &amp; PDF"
+            role="tab"
+            aria-selected="false"
+          >
+            Image &amp; PDF
+          </button>
+          <button
+            type="button"
+            class="filter-pill"
+            data-category="Calculators"
+            role="tab"
+            aria-selected="false"
+          >
+            Calculators
+          </button>
+          <button
+            type="button"
+            class="filter-pill"
+            data-category="Text Tools"
+            role="tab"
+            aria-selected="false"
+          >
+            Text Tools
+          </button>
+          <button
+            type="button"
+            class="filter-pill"
+            data-category="Developer"
+            role="tab"
+            aria-selected="false"
+          >
+            Developer
+          </button>
+        </div>
+
+        <!-- Search Results Box -->
+        <div class="search-results-list" id="searchResultsList" role="listbox">
+          <!-- Search items dynamically injected by JS -->
+        </div>
+
+        <div class="search-dialog-footer">
+          <span class="search-footer-hint"
+            >Press <kbd>↑</kbd> <kbd>↓</kbd> to navigate, <kbd>Enter</kbd> to
+            select, <kbd>ESC</kbd> to exit</span
+          >
+          <span class="search-powered">Huzikit QuickNav</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Huzikit Image Resizer Engine Script -->
+    <script src="/image&pdf/image-resizer.js"></script>
+  </body>
+</html>

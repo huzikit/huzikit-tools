@@ -1,0 +1,1619 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Notepad – Free Private Notepad Online | HuziKit</title>
+    <meta
+      name="description"
+      content="Write and save notes instantly with HuziKit's free Online Notepad. Auto-saves locally in your browser, works offline-style, and never uploads your notes."
+    />
+    <link rel="canonical" href="https://huzikit.com/texttools/onlinenotepad" />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="HuziKit" />
+    <meta name="theme-color" content="#4F46E5" />
+
+    <!-- Open Graph -->
+    <meta
+      property="og:title"
+      content="Online Notepad – Free Private Notepad Online | HuziKit"
+    />
+    <meta
+      property="og:description"
+      content="Write and save notes instantly with HuziKit free Online Notepad. Auto-saves locally in your browser, works offline-style, and never uploads your notes."
+    />
+    <meta
+      property="og:image"
+      content="https://huzikitcom/assets/huzikit.png"
+    />
+    <meta property="og:url" content="https://huzikit.com/texttools/onlinenotepad" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Online Notepad – Free Private Notepad Online | HuziKit"
+    />
+    <meta
+      name="twitter:description"
+      content="Write and save notes instantly with HuziKit free Online Notepad. Auto-saves locally in your browser, works offline-style, and never uploads your notes."
+    />
+    <meta
+      name="twitter:image"
+      content="https://huzikit.com/assets/huzikit.png"
+    />
+
+    <!-- Icons — official Huzikit logo -->
+    <link rel="icon" type="image/png" href="/images/huzikit.png" />
+    <link rel="apple-touch-icon" href="/images/huzikit.png" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=Fira+Code:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/texttools/onlinenotepad.css" />
+    <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon" />
+
+    <!-- JSON-LD: WebApplication -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Online Notepad",
+        "url": "https://huzikit.com/texttools/onlinenotepad",
+        "applicationCategory": "Utility",
+        "operatingSystem": "Any",
+        "browserRequirements": "Requires JavaScript",
+        "description": "Free online notepad that saves notes locally in your browser, with word count, find in note, import/export and fullscreen distraction-free writing.",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "ratingCount": "2130"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "HuziKit",
+          "logo": "https://huzikit.com/assets/huzikit.png"
+        },
+        "author": { "@type": "Organization", "name": "Huzikit" }
+      }
+    </script>
+
+    <!-- JSON-LD: BreadcrumbList -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://huzikit.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Text Tools",
+            "item": "https://huzikit.com/toolpage"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Online Notepad",
+            "item": "https://huzikit.com/texttools/onlinenotepad"
+          }
+        ]
+      }
+    </script>
+
+    <!-- JSON-LD: FAQPage -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is an online notepad?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "An online notepad is a simple text editor that runs in your browser, letting you write and keep notes without installing any software."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is the Huzikit Online Notepad free?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. It is completely free to use with no sign-up and no limits on how much you write."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Are my notes saved online?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Your notes are saved locally in your browser and are not sent to Huzikit servers by this tool."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does HuziKit store my notes?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Note content stays in your browser's local storage on your own device and is never transmitted anywhere."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I use the notepad without an account?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. There is no sign-up or account required — just open the page and start writing."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I download my notes?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. You can download your note as a .txt file at any time using the Download button."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I import a TXT file?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Use the Import button to load a .txt file from your device directly into the editor. The file is processed locally and never uploaded."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does the online notepad work on mobile?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. The notepad is fully responsive and works on phones, tablets and desktops."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I use it for study notes?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Many students use it for quick study notes, lecture notes, and drafts thanks to auto-save and instant word counts."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is this online notepad private?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Your notes are saved locally in your browser and are not sent to HuziKit servers by this tool, so only you have access to them on your device."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does local browser storage work?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The notepad uses your browser's localStorage to keep a copy of your note on your device, so it's still there the next time you open the page in the same browser."
+            }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <!-- ============ NAVBAR ============ -->
+    <header class="navbar" id="navbar">
+      <div class="navbar-inner">
+        <a href="/" class="navbar-brand" aria-label="Huzikit Home">
+          <span class="brand-name">HuziKit</span>
+        </a>
+        <nav class="navbar-center" aria-label="Primary">
+          <ul class="nav-list">
+            <li class="nav-item has-dropdown">
+              <button
+                class="nav-link dropdown-trigger"
+                aria-expanded="false"
+                aria-controls="dd-text"
+              >
+                Text Tools
+                <svg
+                  class="chevron"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M6 9l6 6 6-6"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              <div class="dropdown" id="dd-text">
+                <div class="dropdown-header">
+                  <h3>Text Tools</h3>
+                  <p>Text editing and writing productivity tools.</p>
+                </div>
+                <div class="dropdown-grid">
+                  <a href="/texttools/word-counter.html">Word Counter</a>
+                  <a href="/texttools/character-counter.html"
+                    >Character Counter</a
+                  >
+                  <a href="/texttools/case-converter.html">Case Converter</a>
+                  <a href="/texttools/remove-duplicate-lines.html"
+                    >Remove Duplicate Lines</a
+                  >
+                  <a href="/texttools/loremipsumgenerator.html"
+                    >Lorem Ipsum Generator</a
+                  >
+                  <a href="/texttools/passwordgenerator.html"
+                    >Password Generator</a
+                  >
+                  <a href="/texttools/text-reverser.html">Text Reverser</a>
+                  <a href="/texttools/onlinenotepad.html" class="active"
+                    >Online Notepad</a
+                  >
+                </div>
+                <a href="/toolpage.html" class="dropdown-viewall"
+                  >View all Text Tools →</a
+                >
+              </div>
+            </li>
+            <li class="nav-item has-dropdown">
+              <button
+                class="nav-link dropdown-trigger"
+                aria-expanded="false"
+                aria-controls="dd-calc"
+              >
+                Calculators
+                <svg
+                  class="chevron"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M6 9l6 6 6-6"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              <div class="dropdown" id="dd-calc">
+                <div class="dropdown-header">
+                  <h3>Calculators</h3>
+                  <p>Everyday calculation tools.</p>
+                </div>
+                <div class="dropdown-grid">
+                  <a href="/calculator/agecalculator.html">Age Calculator</a>
+                  <a href="/calculator/bmi-calculator.html">BMI Calculator</a>
+                  <a href="/calculator/percentage-calculator.html"
+                    >Percentage Calculator</a
+                  >
+                  <a href="/calculator/Calorie-Calculator.html"
+                    >Calorie Calculator</a
+                  >
+                  <a href="/calculator/discount-calculator.html"
+                    >Discount Calculator</a
+                  >
+                  <a href="/calculator/saving&goalcalculator.html"
+                    >Savings&Goal Calculator</a
+                  >
+                  <a href="/calculator/tip-calculator.html">Tip Calculator</a>
+                  <a href="/calculator/gpa-calculator.html">GPA Calculator</a>
+                </div>
+                <a href="/toolpage.html" class="dropdown-viewall"
+                  >View all Calculators →</a
+                >
+              </div>
+            </li>
+            <li class="nav-item has-dropdown">
+              <button
+                class="nav-link dropdown-trigger"
+                aria-expanded="false"
+                aria-controls="dd-image"
+              >
+                Image &amp; PDF
+                <svg
+                  class="chevron"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M6 9l6 6 6-6"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              <div class="dropdown" id="dd-image">
+                <div class="dropdown-header">
+                  <h3>Image &amp; PDF</h3>
+                  <p>Image editing and PDF utilities.</p>
+                </div>
+                <div class="dropdown-grid">
+                  <a href="/image&pdf/image-compressor.html"
+                    >Image Compressor</a
+                  >
+                  <a href="/image&pdf/image-resizer.html">Image Resizer</a>
+                  <a href="/image&pdf/pdftowordconverter.html">PDF to Word</a>
+                  <a href="/image&pdf/jpg-to-png.html">JPG to PNG</a>
+                  <a href="/image&pdf/colorpicker.html">Color Picker / HEX</a>
+                  <a href="/image&pdf/QRGenrator.html">QR Code Generator</a>
+                </div>
+                <a href="/toolpage.html" class="dropdown-viewall"
+                  >View all Image &amp; PDF Tools →</a
+                >
+              </div>
+            </li>
+            <li class="nav-item has-dropdown">
+              <button
+                class="nav-link dropdown-trigger"
+                aria-expanded="false"
+                aria-controls="dd-dev"
+              >
+                Developer
+                <svg
+                  class="chevron"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M6 9l6 6 6-6"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+              <div class="dropdown" id="dd-dev">
+                <div class="dropdown-header">
+                  <h3>Developer</h3>
+                  <p>Developer productivity tools.</p>
+                </div>
+                <div class="dropdown-grid">
+                  <a href="/developertools/JSONFORMATTER.html"
+                    >JSON Formatter</a
+                  >
+                  <a href="/developertools/base64encoderdecoder.html"
+                    >Base64 Encoder / Decoder</a
+                  >
+                  <a href="/developertools/urlencoderdecoder.html"
+                    >URL Encoder / Decoder</a
+                  >
+                  <a href="/developertools/meta-tag-generator.html"
+                    >Meta Tag Generator</a
+                  >
+                  <a href="/developertools/regextester.html">Regex Tester</a>
+                  <a href="/developertools/markdownhtml.html"
+                    >Markdown to HTML</a
+                  >
+                  <a href="/developertools/cssminifier.html">CSS Minifier</a>
+                  <a href="/developertools/unixtimestamp.html"
+                    >Unix Timestamp Converter</a
+                  >
+                </div>
+                <a href="/toolpage.html" class="dropdown-viewall"
+                  >View all Developer Tools →</a
+                >
+              </div>
+            </li>
+            <li class="nav-item">
+              <a href="/about.html" class="nav-link">About</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="navbar-right">
+          <button class="search-btn" id="searchBtn" aria-label="Open search">
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              aria-hidden="true"
+            >
+              <circle
+                cx="11"
+                cy="11"
+                r="7"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+              <path
+                d="M21 21l-4.3-4.3"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+            <span class="search-kbd">Ctrl K</span>
+          </button>
+          <button
+            class="hamburger"
+            id="hamburgerBtn"
+            aria-label="Open menu"
+            aria-expanded="false"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ============ MOBILE DRAWER ============ -->
+    <div class="mobile-drawer" id="mobileDrawer">
+      <div class="mobile-drawer-header">
+        <span class="brand-name">HuziKit</span>
+        <button class="drawer-close" id="drawerClose" aria-label="Close menu">
+          ✕
+        </button>
+      </div>
+      <div class="mobile-accordion" id="mobileAccordion">
+        <button class="accordion-trigger" aria-expanded="false">
+          Text Tools
+        </button>
+        <div class="accordion-panel">
+          <a href="/texttools/word-counter.html">Word Counter</a>
+          <a href="/texttools/character-counter.html">Character Counter</a>
+          <a href="/texttools/case-converter.html">Case Converter</a>
+          <a href="/texttools/remove-duplicate-lines.html"
+            >Remove Duplicate Lines</a
+          >
+          <a href="/texttools/loremipsumgenerator.html"
+            >Lorem Ipsum Generator</a
+          >
+          <a href="/texttools/passwordgenerator.html">Password Generator</a>
+          <a href="/texttools/text-reverser.html">Text Reverser</a>
+          <a href="/texttools/onlinenotepad.html">Online Notepad</a>
+        </div>
+        <button class="accordion-trigger" aria-expanded="false">
+          Calculators
+        </button>
+        <div class="accordion-panel">
+          <a href="/calculator/agecalculator.html">Age Calculator</a>
+          <a href="/calculator/bmi-calculator.html">BMI Calculator</a>
+          <a href="/calculator/percentage-calculator.html"
+            >Percentage Calculator</a
+          >
+          <a href="/calculator/Calorie-Calculator.html">Calorie Calculator</a>
+          <a href="/calculator/discount-calculator.html">Discount Calculator</a>
+          <a href="/calculator/saving&goalcalculator.html"
+            >Savings&Goal Calculator</a
+          >
+          <a href="/calculator/tip-calculator.html">Tip Calculator</a>
+          <a href="/calculator/gpa-calculator.html">GPA Calculator</a>
+        </div>
+        <button class="accordion-trigger" aria-expanded="false">
+          Image &amp; PDF
+        </button>
+        <div class="accordion-panel">
+          <a href="/image&pdf/image-compressor.html">Image Compressor</a>
+          <a href="/image&pdf/image-resizer.html">Image Resizer</a>
+          <a href="/image&pdf/pdftowordconverter.html">PDF to Word</a>
+          <a href="/image&pdf/jpg-to-png.html">JPG to PNG</a>
+          <a href="/image&pdf/colorpicker.html">Color Picker / HEX</a>
+          <a href="/image&pdf/QRGenrator.html">QR Code Generator</a>
+        </div>
+        <button class="accordion-trigger" aria-expanded="false">
+          Developer
+        </button>
+        <div class="accordion-panel">
+          <a href="/developertools/JSONFORMATTER.html">JSON Formatter</a>
+          <a href="/developertools/base64encoderdecoder.html"
+            >Base64 Encoder / Decoder</a
+          >
+          <a href="/developertools/urlencoderdecoder.html"
+            >URL Encoder / Decoder</a
+          >
+          <a href="/developertools/meta-tag-generator.html"
+            >Meta Tag Generator</a
+          >
+          <a href="/developertools/regextester.html">Regex Tester</a>
+          <a href="/developertools/markdownhtml.html">Markdown to HTML</a>
+          <a href="/developertools/cssminifier.html">CSS Minifier</a>
+          <a href="/tools/unix-timestamp">Unix Timestamp Converter</a>
+        </div>
+        <a href="/about.html" class="mobile-plain-link">About</a>
+      </div>
+    </div>
+    <div class="drawer-overlay" id="drawerOverlay"></div>
+
+    <!-- ============ SEARCH OVERLAY ============ -->
+    <div
+      class="search-overlay"
+      id="searchOverlay"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Search tools"
+    >
+      <div class="search-panel">
+        <div class="search-input-row">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            aria-hidden="true"
+          >
+            <circle
+              cx="11"
+              cy="11"
+              r="7"
+              stroke="currentColor"
+              stroke-width="2"
+            />
+            <path
+              d="M21 21l-4.3-4.3"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search tools..."
+            aria-label="Search tools"
+            autocomplete="off"
+          />
+          <button id="searchClose" aria-label="Close search">Esc</button>
+        </div>
+        <div id="searchResults" class="search-results"></div>
+      </div>
+    </div>
+
+    <!-- ============ MAIN CONTENT ============ -->
+    <main id="main-content">
+      <!-- ============ PREMIUM HERO ============ -->
+      <section class="hero" id="hero">
+        <div class="hero-bg" aria-hidden="true">
+          <div class="hero-mesh"></div>
+          <div class="hero-grid"></div>
+          <div class="hero-noise"></div>
+          <div class="hero-glow"></div>
+          <span class="particle p1"></span>
+          <span class="particle p2"></span>
+          <span class="particle p3"></span>
+          <span class="particle p4"></span>
+          <span class="particle p5"></span>
+          <span class="particle p6"></span>
+        </div>
+
+        <div class="hero-inner">
+          <!-- LEFT COLUMN -->
+          <div class="hero-left" data-reveal="fade-up">
+            <span class="hero-badge">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z"
+                  fill="currentColor"
+                />
+              </svg>
+              Notes stay on your device — never uploaded
+            </span>
+
+            <h1>
+              A clean notepad
+              <span class="hero-highlight">that just works.</span>
+            </h1>
+
+            <p class="hero-desc">
+              Write, save and organize notes instantly in your browser. No
+              sign-up, no clutter — just a fast, private notepad that auto-saves
+              as you type.
+            </p>
+
+            <div class="hero-ctas">
+              <a
+                href="#toolCard"
+                class="btn btn-primary btn-lg btn-glow"
+                id="heroCta"
+              >
+                Start Writing
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M5 12h14M13 5l7 7-7 7"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </a>
+              <a href="#faq" class="btn btn-secondary-outline btn-lg"
+                >How it works</a
+              >
+            </div>
+
+            <div class="hero-trust">
+              <div class="trust-item">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                  />
+                </svg>
+                Saved locally in your browser
+              </div>
+              <div class="trust-item">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M13 2L4 14h6l-1 8 9-12h-6l1-8z"
+                    stroke="currentColor"
+                    stroke-width="1.6"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                Auto-saves as you type
+              </div>
+            </div>
+
+            <div class="hero-stats">
+              <div class="hero-stat">
+                <span class="hero-stat-value" data-count="0" data-static="Auto"
+                  >Auto</span
+                >
+                <span class="hero-stat-label">Save Mode</span>
+              </div>
+              <div class="hero-stat">
+                <span class="hero-stat-value" data-count="45000" data-suffix="+"
+                  >0</span
+                >
+                <span class="hero-stat-label">Monthly Users</span>
+              </div>
+              <div class="hero-stat">
+                <span class="hero-stat-value" data-static="0ms">0ms</span>
+                <span class="hero-stat-label">Server Delay</span>
+              </div>
+            </div>
+
+            <div class="hero-pills">
+              <span class="feature-pill">Auto-Save</span>
+              <span class="feature-pill">Find in Note</span>
+              <span class="feature-pill">Fullscreen Mode</span>
+              <span class="feature-pill">Import / Export</span>
+              <span class="feature-pill">+3 more</span>
+            </div>
+          </div>
+
+          <!-- RIGHT COLUMN — 3D SCENE -->
+          <div class="hero-right" data-reveal="zoom-in">
+            <div class="scene" id="heroScene">
+              <div class="ring ring-1" aria-hidden="true"></div>
+              <div class="ring ring-2" aria-hidden="true"></div>
+
+              <span class="orb orb-a" aria-hidden="true"></span>
+              <span class="orb orb-b" aria-hidden="true"></span>
+
+              <div class="glass-card card-main card-notepad" data-depth="30">
+                <div class="glass-card-shine"></div>
+                <div class="notepad-header">
+                  <span class="lorem-dots"><i></i><i></i><i></i></span>
+                  <span class="dedupe-badge">Saved locally</span>
+                </div>
+                <p class="notepad-title-preview">My Notes</p>
+                <p class="notepad-line notepad-line-1"></p>
+                <p class="notepad-line notepad-line-2"></p>
+                <p class="notepad-line notepad-line-3"></p>
+                <span class="notepad-cursor" aria-hidden="true"></span>
+                <div class="card-footer-preview">
+                  <span>128 words</span>
+                  <span>Auto-saved</span>
+                </div>
+              </div>
+
+              <div class="glass-card card-float card-float-1" data-depth="55">
+                <div class="glass-card-shine"></div>
+                <span class="mini-icon">⌘S</span>
+                <span class="mini-label">Auto-Save</span>
+              </div>
+
+              <div class="glass-card card-float card-float-2" data-depth="70">
+                <div class="glass-card-shine"></div>
+                <span class="mini-icon">🔍</span>
+                <span class="mini-label">Find in Note</span>
+              </div>
+
+              <div class="glass-card card-float card-float-3" data-depth="45">
+                <div class="glass-card-shine"></div>
+                <span class="mini-icon">⛶</span>
+                <span class="mini-label">Fullscreen</span>
+              </div>
+
+              <div
+                class="shape shape-tri"
+                data-depth="60"
+                aria-hidden="true"
+              ></div>
+              <div
+                class="shape shape-square"
+                data-depth="40"
+                aria-hidden="true"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="/">Home</a></li>
+          <li><a href="/tools#text-tools">Text Tools</a></li>
+          <li aria-current="page">Online Notepad</li>
+        </ol>
+      </nav>
+
+      <!-- Notepad Tool -->
+      <section class="tool-section" data-reveal="fade-up">
+        <div class="tool-card notepad-card" id="toolCard">
+          <div class="notepad-titlebar">
+            <label for="noteTitle" class="visually-hidden">Note title</label>
+            <input
+              type="text"
+              id="noteTitle"
+              class="note-title-input"
+              placeholder="Untitled Note"
+              maxlength="120"
+              autocomplete="off"
+            />
+            <span
+              class="save-status"
+              id="saveStatus"
+              role="status"
+              aria-live="polite"
+              >Saved locally</span
+            >
+          </div>
+
+          <div
+            class="notepad-toolbar"
+            role="toolbar"
+            aria-label="Notepad tools"
+          >
+            <button
+              class="toolbar-btn"
+              id="newNoteBtn"
+              title="New Note (Ctrl+N)"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M12 5v14M5 12h14"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+              <span>New</span>
+            </button>
+            <button class="toolbar-btn" id="importBtn" title="Import TXT">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M12 3v12m0 0l-4-4m4 4l4-4M5 19h14"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span>Import</span>
+            </button>
+            <input
+              type="file"
+              id="importFileInput"
+              accept=".txt,text/plain"
+              class="visually-hidden"
+              aria-hidden="true"
+              tabindex="-1"
+            />
+            <button class="toolbar-btn" id="downloadBtn" title="Download TXT">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M12 3v12m0 0l4-4m-4 4l-4-4M5 19h14"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span>Download</span>
+            </button>
+            <button class="toolbar-btn" id="printBtn" title="Print">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M6 9V3h12v6M6 18H4a1 1 0 01-1-1v-5a1 1 0 011-1h16a1 1 0 011 1v5a1 1 0 01-1 1h-2M6 14h12v7H6z"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span>Print</span>
+            </button>
+            <button class="toolbar-btn" id="copyBtn" title="Copy (Ctrl+C)">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <rect
+                  x="9"
+                  y="9"
+                  width="12"
+                  height="12"
+                  rx="2"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+                <path
+                  d="M5 15H4a1 1 0 01-1-1V4a1 1 0 011-1h10a1 1 0 011 1v1"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+              </svg>
+              <span>Copy</span>
+            </button>
+            <button
+              class="toolbar-btn"
+              id="selectAllBtn"
+              title="Select All (Ctrl+A)"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <rect
+                  x="3"
+                  y="3"
+                  width="18"
+                  height="18"
+                  rx="2"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-dasharray="3 3"
+                />
+              </svg>
+              <span>Select All</span>
+            </button>
+            <button class="toolbar-btn" id="findBtn" title="Find (Ctrl+F)">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <circle
+                  cx="11"
+                  cy="11"
+                  r="7"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+                <path
+                  d="M21 21l-4.3-4.3"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+              <span>Find</span>
+            </button>
+            <button class="toolbar-btn" id="fullscreenBtn" title="Fullscreen">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span>Fullscreen</span>
+            </button>
+            <button
+              class="toolbar-btn toolbar-btn-danger"
+              id="clearBtn"
+              title="Clear"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M4 7h16M9 7V4h6v3M6 7l1 13a1 1 0 001 1h8a1 1 0 001-1l1-13"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <span>Clear</span>
+            </button>
+          </div>
+
+          <!-- Find bar -->
+          <div class="find-bar" id="findBar" hidden>
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              aria-hidden="true"
+            >
+              <circle
+                cx="11"
+                cy="11"
+                r="7"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+              <path
+                d="M21 21l-4.3-4.3"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+            <label for="findInput" class="visually-hidden">Find in note</label>
+            <input
+              type="text"
+              id="findInput"
+              placeholder="Find in note..."
+              autocomplete="off"
+            />
+            <span class="find-count" id="findCount">0 / 0</span>
+            <button
+              class="pw-icon-btn"
+              id="findPrevBtn"
+              aria-label="Previous match"
+              title="Previous match"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M18 15l-6-6-6 6"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <button
+              class="pw-icon-btn"
+              id="findNextBtn"
+              aria-label="Next match"
+              title="Next match"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M6 9l6 6 6-6"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <button
+              class="pw-icon-btn"
+              id="findCloseBtn"
+              aria-label="Close find"
+              title="Close (Esc)"
+            >
+              ✕
+            </button>
+          </div>
+
+          <label for="noteEditor" class="visually-hidden">Note content</label>
+          <textarea
+            id="noteEditor"
+            class="notepad-editor"
+            placeholder="Start writing... your note saves automatically."
+            spellcheck="true"
+          ></textarea>
+
+          <div class="stats-row stats-row-6">
+            <div class="stat-card">
+              <span class="stat-value" id="statWords">0</span>
+              <span class="stat-label">Words</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-value" id="statChars">0</span>
+              <span class="stat-label">Characters</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-value" id="statCharsNoSpaces">0</span>
+              <span class="stat-label">Chars (no spaces)</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-value" id="statLines">0</span>
+              <span class="stat-label">Lines</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-value" id="statParagraphs">0</span>
+              <span class="stat-label">Paragraphs</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-value" id="statReadTime">0s</span>
+              <span class="stat-label">Reading Time</span>
+            </div>
+          </div>
+
+          <p class="privacy-note">
+            Your notes are saved locally in your browser and are not sent to
+            Huzikit servers by this tool.
+          </p>
+
+          <p class="kbd-hint">
+            Shortcuts: <kbd>Ctrl</kbd>+<kbd>S</kbd> save · <kbd>Ctrl</kbd>+<kbd
+              >N</kbd
+            >
+            new · <kbd>Ctrl</kbd>+<kbd>F</kbd> find · <kbd>Ctrl</kbd>+<kbd
+              >Z</kbd
+            >
+            undo · <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Z</kbd> redo ·
+            <kbd>Esc</kbd> exit fullscreen
+          </p>
+        </div>
+      </section>
+
+      <!-- Features -->
+      <section class="content-section" data-reveal="fade-up">
+        <article class="content-article">
+          <h2>What Is an Online Notepad?</h2>
+          <p>
+            An online notepad is a simple text editor that runs entirely in your
+            browser, letting you write and keep notes without installing any
+            software. Huzikit Online Notepad goes further than a bare textarea
+            — it automatically saves your work to your browser's local storage,
+            tracks word and character counts as you type, and includes tools
+            like Find in Note, fullscreen distraction-free writing, and TXT
+            import and export.
+          </p>
+
+          <h2>How Does an Online Notepad Work?</h2>
+          <p>
+            Every keystroke you type is held in the editor and, after a brief
+            pause, automatically written to your browser's local storage using
+            the standard <code>localStorage</code> API. That means your note
+            persists even if you close the tab or restart your browser — as long
+            as you return on the same device and browser, your last note is
+            restored automatically. Nothing is sent to a server in this process;
+            the save happens entirely on your machine.
+          </p>
+
+          <h2>How to Use the Huzikit Online Notepad</h2>
+          <ol>
+            <li>
+              Click into the editor and start typing — there's nothing to set up
+              first.
+            </li>
+            <li>
+              Optionally give your note a title; it defaults to "Untitled Note"
+              if left blank.
+            </li>
+            <li>
+              Watch the save status indicator confirm your note is saved locally
+              as you write.
+            </li>
+            <li>
+              Use the toolbar to copy, download, print, import a file, or search
+              within your note.
+            </li>
+            <li>
+              Switch to fullscreen mode for distraction-free writing when you
+              need to focus.
+            </li>
+          </ol>
+
+          <h2>Why Use an Online Notepad?</h2>
+          <p>
+            A browser-based notepad removes the friction of opening a separate
+            application every time you need to jot something down. It's already
+            open in the same window as everything else you're working on, loads
+            instantly, and requires no installation, updates or account. For
+            short-lived notes — a phone number, a quick draft, a snippet of code
+            — that speed matters more than a full word processor's feature set.
+          </p>
+
+          <h2>Benefits of Online Note Taking</h2>
+          <ul>
+            <li>Nothing to install — works instantly in any modern browser</li>
+            <li>
+              Auto-save means you rarely lose work, even after an accidental tab
+              close
+            </li>
+            <li>
+              Live word, character and reading-time statistics as you write
+            </li>
+            <li>
+              Find in Note makes it fast to locate a specific detail in a long
+              note
+            </li>
+            <li>
+              Import an existing .txt file to keep editing where you left off
+            </li>
+            <li>
+              Download your note as a .txt file whenever you want a permanent
+              copy
+            </li>
+            <li>
+              Fullscreen mode removes distractions for focused writing sessions
+            </li>
+          </ul>
+
+          <h2>Online Notepad vs Traditional Notepad</h2>
+          <p>
+            A traditional desktop notepad application is tied to one computer
+            and requires you to manually save and manage files on disk.
+            HuziKit Online Notepad is available the moment you open a browser
+            tab, remembers your note automatically between visits on the same
+            device, and adds features a bare-bones native notepad typically
+            lacks — live statistics, in-note search, and one-click export to a
+            real .txt file whenever you need one.
+          </p>
+
+          <h2>Privacy and Local Storage</h2>
+          <p>
+            Your notes are saved locally in your browser and are not sent to
+            HuziKit servers by this tool. The editor writes to your browser's
+            <code>localStorage</code>, a storage mechanism built into every
+            modern browser that keeps data on your own device. Clearing your
+            browser data, using a different browser, or switching to
+            private/incognito mode will not carry the note over, since local
+            storage is scoped to that specific browser profile.
+          </p>
+        </article>
+      </section>
+
+      <!-- Use Cases -->
+      <section class="content-section" data-reveal="fade-up">
+        <article class="content-article">
+          <h2>Who Uses an Online Notepad?</h2>
+          <ul>
+            <li>
+              <strong>Students</strong> — quick lecture notes, study summaries
+              and revision lists
+            </li>
+            <li>
+              <strong>Writers</strong> — capture ideas and early drafts before
+              moving them into a full document
+            </li>
+            <li>
+              <strong>Developers &amp; Programmers</strong> — jot down code
+              snippets, TODOs or command references
+            </li>
+            <li>
+              <strong>Researchers</strong> — collect quotes, references and
+              observations while reading
+            </li>
+            <li>
+              <strong>Content Creators</strong> — outline scripts, captions or
+              post ideas on the fly
+            </li>
+            <li>
+              <strong>Freelancers</strong> — keep quick client notes or project
+              reminders during calls
+            </li>
+            <li>
+              <strong>Professionals</strong> — meeting notes, to-do lists and
+              temporary reminders during the workday
+            </li>
+          </ul>
+
+          <h2>Common Note Types</h2>
+          <ul>
+            <li>
+              <strong>Quick Notes</strong> — a fast place to jot something down
+              before you forget it
+            </li>
+            <li>
+              <strong>Study Notes</strong> — organize key points while reading
+              or attending a lecture
+            </li>
+            <li>
+              <strong>Code Notes</strong> — store snippets, commands or
+              configuration values temporarily
+            </li>
+            <li>
+              <strong>Meeting Notes</strong> — capture decisions and action
+              items as a call happens
+            </li>
+            <li>
+              <strong>To-Do Notes</strong> — a simple running list of tasks for
+              the day
+            </li>
+            <li>
+              <strong>Writing Drafts</strong> — rough out a paragraph or email
+              before refining it elsewhere
+            </li>
+            <li>
+              <strong>Temporary Notes</strong> — anything you only need to keep
+              for a few minutes or hours
+            </li>
+            <li>
+              <strong>Distraction-Free Writing</strong> — use fullscreen mode to
+              focus on a single block of writing
+            </li>
+          </ul>
+
+          <h2 id="faq">Frequently Asked Questions</h2>
+          <div class="faq-list">
+            <details>
+              <summary>What is an online notepad?</summary>
+              <p>
+                An online notepad is a simple text editor that runs in your
+                browser, letting you write and keep notes without installing any
+                software.
+              </p>
+            </details>
+            <details>
+              <summary>Is the Huzikit Online Notepad free?</summary>
+              <p>
+                Yes. It is completely free to use with no sign-up and no limits
+                on how much you write.
+              </p>
+            </details>
+            <details>
+              <summary>Are my notes saved online?</summary>
+              <p>
+                No. Your notes are saved locally in your browser and are not
+                sent to HuziKit servers by this tool.
+              </p>
+            </details>
+            <details>
+              <summary>Does HuziKit store my notes?</summary>
+              <p>
+                No. Note content stays in your browser's local storage on your
+                own device and is never transmitted anywhere.
+              </p>
+            </details>
+            <details>
+              <summary>Can I use the notepad without an account?</summary>
+              <p>
+                Yes. There is no sign-up or account required — just open the
+                page and start writing.
+              </p>
+            </details>
+            <details>
+              <summary>Can I download my notes?</summary>
+              <p>
+                Yes. You can download your note as a .txt file at any time using
+                the Download button.
+              </p>
+            </details>
+            <details>
+              <summary>Can I import a TXT file?</summary>
+              <p>
+                Yes. Use the Import button to load a .txt file from your device
+                directly into the editor. The file is processed locally and
+                never uploaded.
+              </p>
+            </details>
+            <details>
+              <summary>Does the online notepad work on mobile?</summary>
+              <p>
+                Yes. The notepad is fully responsive and works on phones,
+                tablets and desktops.
+              </p>
+            </details>
+            <details>
+              <summary>Can I use it for study notes?</summary>
+              <p>
+                Yes. Many students use it for quick study notes, lecture notes,
+                and drafts thanks to auto-save and instant word counts.
+              </p>
+            </details>
+            <details>
+              <summary>Is this online notepad private?</summary>
+              <p>
+                Your notes are saved locally in your browser and are not sent to
+                Huzikit's servers by this tool, so only you have access to them
+                on your device.
+              </p>
+            </details>
+            <details>
+              <summary>How does local browser storage work?</summary>
+              <p>
+                The notepad uses your browser's localStorage to keep a copy of
+                your note on your device, so it's still there the next time you
+                open the page in the same browser.
+              </p>
+            </details>
+          </div>
+        </article>
+      </section>
+
+      <!-- Related Tools -->
+      <section class="related-section" data-reveal="fade-up">
+        <h2>Related Tools</h2>
+        <div class="related-grid">
+          <a href="/texttools/word-counter.html" class="related-card">
+            <span class="related-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M4 6h16M4 12h16M4 18h10"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </span>
+            <span class="related-title">Word Counter</span>
+            <span class="related-desc"
+              >Count words, characters and reading time instantly.</span
+            >
+          </a>
+          <a href="/texttools/character-counter.html" class="related-card">
+            <span class="related-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M6 4v16M18 4v16M6 12h12"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </span>
+            <span class="related-title">Character Counter</span>
+            <span class="related-desc"
+              >Track character counts with live limits.</span
+            >
+          </a>
+          <a href="/texttools/case-converter.html" class="related-card">
+            <span class="related-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M6 4h9M6 4v16M6 20h9M14 8l4-4 4 4M18 4v16"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </span>
+            <span class="related-title">Case Converter</span>
+            <span class="related-desc"
+              >Switch text between upper, lower, title and sentence case.</span
+            >
+          </a>
+          <a href="/texttools/text-reverser.html" class="related-card">
+            <span class="related-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M7 7l-4 5 4 5M17 7l4 5-4 5"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </span>
+            <span class="related-title">Text Reverser</span>
+            <span class="related-desc"
+              >Reverse text, words, lines or sentences in one click.</span
+            >
+          </a>
+          <a href="/texttools/remove-duplicate-lines.html" class="related-card">
+            <span class="related-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M4 6h16M4 12h10M4 18h16"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </span>
+            <span class="related-title">Remove Duplicate Lines</span>
+            <span class="related-desc"
+              >Clean up lists by removing duplicate entries.</span
+            >
+          </a>
+          <a href="/texttools/loremipsumgenerator.html" class="related-card">
+            <span class="related-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M4 6h16M4 10h16M4 14h10M4 18h7"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </span>
+            <span class="related-title">Lorem Ipsum Generator</span>
+            <span class="related-desc"
+              >Generate placeholder text for mockups and layouts.</span
+            >
+          </a>
+          <a href="/texttools/passwordgenerator.html" class="related-card">
+            <span class="related-icon" aria-hidden="true">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6l8-4z"
+                  stroke="currentColor"
+                  stroke-width="2"
+                />
+              </svg>
+            </span>
+            <span class="related-title">Password Generator</span>
+            <span class="related-desc"
+              >Generate strong, secure passwords instantly.</span
+            >
+          </a>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section class="cta-section" data-reveal="fade-up">
+        <div class="cta-inner">
+          <h2>Explore more free tools on HuziKit</h2>
+          <p>Fast, private, and built for speed — no sign-up required.</p>
+          <a href="/toolpage.html" class="btn btn-primary btn-lg"
+            >Browse All Tools</a
+          >
+        </div>
+      </section>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+   <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col brand-col">
+            <a
+              href="index.html"
+              class="brand-logo footer-logo"
+              aria-label="HuziKit Home"
+            >
+              <span class="brand-name">HuziKit</span>
+            </a>
+            <p class="footer-tagline">
+              The ultimate modern suite of lightning-fast, secure online web
+              utilities, calculators, and developer tools.
+            </p>
+            <div class="social-links">
+              <a
+                href="https://x.com/huzikitoffical"
+                aria-label="Twitter"
+                target="_blank"
+                rel="noopener"
+              >
+              <i class="fa-brands fa-instagram"></i>
+               <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                    <path
+                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                  />
+
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h4>Text & Dev Tools</h4>
+            <ul class="footer-links">
+              <li><a href="/texttools/word-counter.html">Word Counter</a></li>
+              <li><a href="/texttools/case-converter.html">Case Converter</a></li>
+              <li><a href="/developertools/JSONFORMATTER.html">JSON Formatter</a></li>
+              <li><a href="/developertools/base64encoderdecoder.html">Base64 Utility</a></li>
+              <li><a href="/developertools/regextester.html">Regex Tester</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Calculators & Image</h4>
+            <ul class="footer-links">
+              <li><a href="/calculator/agecalculator.html">Age Calculator</a></li>
+              <li><a href="/calculator/bmi calculator.html">BMI Calculator</a></li>
+              <li><a href="/image&pdf/image-compressor.html">Image Compressor</a></li>
+              <li><a href="/image&pdf/QRGenrator.html">QR Code Generator</a></li>
+              <li><a href="/image&pdf/colorpicker.html">Color Picker</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Company & Legal</h4>
+            <ul class="footer-links">
+              <li><a href="/about.html">About HuziKit</a></li>
+              <li><a href="/disclamier.html">Disclaimer</a></li>
+              <li><a href="/privacy-policies.html">Privacy Policy</a></li>
+              <li><a href="/Termsofservices.html">Terms of Service</a></li>
+              <li><a href="/contact-us.html">Contact Support</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            &copy; 2026 Huzikit.com. All rights reserved. Built with speed,
+            security, and precision.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Global Command Search Modal -->
+    <div class="search-modal-overlay" id="searchModalOverlay">
+      <div class="search-modal-box">
+        <div class="search-modal-header">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <circle cx="11" cy="11" r="8" />
+            <path d="M21 21l-4.35-4.35" />
+          </svg>
+          <input
+            type="text"
+            id="modalSearchInput"
+            placeholder="Type to search any tool across Huzikit..."
+            autocomplete="off"
+          />
+          <button class="modal-close-btn" id="modalCloseBtn">&times;</button>
+        </div>
+        <div class="search-modal-results" id="modalSearchResults">
+          <div class="search-hint">
+            Start typing a tool name (e.g., 'Word Counter', 'BMI', 'JSON')...
+          </div>
+        </div>
+        <div class="search-modal-footer">
+          <span>Navigate with <kbd>↑</kbd> <kbd>↓</kbd></span>
+          <span>Select with <kbd>Enter</kbd></span>
+          <span>Close with <kbd>Esc</kbd></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript File -->
+    <script src="/texttools/onlinenotepad.js"></script>
+  </body>
+</html>

@@ -1,0 +1,2978 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <title>
+      Word Counter — Free Online Character, Sentence &amp; Readability Counter |
+      Huzikit
+    </title>
+    <meta
+      name="description"
+      content="Count words, characters, sentences, paragraphs, syllables, and estimated reading time in real time. Features Flesch readability, keyword density, and Unicode segmentation. 100% private."
+    />
+    <meta
+      name="keywords"
+      content="word counter, character counter, sentence counter, reading time calculator, flesch reading ease, keyword density analyzer, writing analytics, huzikit"
+    />
+    <link rel="canonical" href="https://huzikit.com/texttools/word-counter" />
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://huzikit.com/texttools/word-counter" />
+    <meta
+      property="og:title"
+      content="Word Counter — Free Online Writing &amp; Readability Analytics | Huzikit"
+    />
+    <meta
+      property="og:description"
+      content="Real-time word, character, and sentence counting with advanced readability and vocabulary metrics. Fast, secure, and client-side private."
+    />
+    <meta property="og:site_name" content="Huzikit" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@huzioffical" />
+    <meta
+      name="twitter:title"
+      content="Word Counter — Free Online Writing &amp; Readability Analytics | Huzikit"
+    />
+    <meta
+      name="twitter:description"
+      content="Accurate Unicode word counting, readability indices, and keyword density. 100% free and client-side private."
+    />
+
+    <!-- Google Fonts: Lexend (Display) + Inter (Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/texttools/word-counter.css" />
+    <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon">
+
+    <!-- Huzikit Word Counter Master Stylesheet -->
+
+    <!-- Structured Data: WebApplication + FAQPage -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebApplication",
+            "name": "Huzikit Word Counter",
+            "url": "https://huzikit.com/texttools/word-counter",
+            "applicationCategory": "UtilitiesApplication",
+            "operatingSystem": "All",
+            "description": "Comprehensive client-side word counter, character counter, sentence analyzer, and Flesch readability estimator.",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            }
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is a word counter?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A word counter is a digital utility that scans your input text and calculates the exact number of words, characters, sentences, paragraphs, and reading times."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How does Huzikit Word Counter count words accurately?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Huzikit uses the browser native Intl.Segmenter API, ensuring accurate word and grapheme segmentation across multiple languages without punctuation inflation."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is my text saved on any server?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. All processing happens 100% locally inside your device browser memory. Huzikit never transmits your text over the internet."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <!-- ========================================================================
+       HEADER & NAVIGATION (LOCKED SPECIFICATION)
+       ======================================================================== -->
+    <header class="site-header" id="site-header">
+      <div class="container">
+        <div class="nav-wrap">
+          <!-- Logo -->
+          <a
+            href="/"
+            class="brand-link"
+            aria-label="Huzikit Home"
+            <span>Huzikit</span>
+          </a>
+
+          <!-- Desktop Navigation Bar -->
+          <nav class="nav-desktop" aria-label="Main Navigation">
+            <!-- 1. Text Tools Dropdown -->
+            <div class="nav-item">
+              <button
+                class="nav-dropdown-btn"
+                aria-expanded="false"
+                aria-haspopup="true"
+              >
+                <span>Text Tools</span>
+                <svg
+                  class="chevron"
+                  width="12"
+                  height="12"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div class="nav-dropdown-menu">
+                <a href="/word-counter.html" class="dropdown-link active"
+                  >Word Counter</a
+                >
+                <a
+                  href="/texttools/character-counter.html"
+                  class="dropdown-link"
+                  >Character Counter</a
+                >
+                <a href="/texttools/case-converter.html" class="dropdown-link"
+                  >Case Converter</a
+                >
+                <a
+                  href="/texttools/remove-duplicate-lines.html"
+                  class="dropdown-link"
+                  >Remove Duplicate Lines</a
+                >
+                <a href="/texttools/text-reverser.html" class="dropdown-link"
+                  >Text Reverser</a
+                >
+                <a href="/texttools/onlinenotepad.html" class="dropdown-link"
+                  >Online Notepad</a
+                >
+                <a
+                  href="/texttools/loremipsumgenerator.html"
+                  class="dropdown-link"
+                  >Lorem Ipsum Generator</a
+                >
+                <a
+                  href="/texttools/add-prefix-suffix.html"
+                  class="dropdown-link"
+                  >Add Prefix &amp; Suffix</a
+                >
+              </div>
+            </div>
+
+            <!-- 2. Calculators Dropdown -->
+            <div class="nav-item">
+              <button
+                class="nav-dropdown-btn"
+                aria-expanded="false"
+                aria-haspopup="true"
+              >
+                <span>Calculators</span>
+                <svg
+                  class="chevron"
+                  width="12"
+                  height="12"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div class="nav-dropdown-menu">
+                <a href="/calculators/age-calculator.html" class="dropdown-link"
+                  >Age Calculator</a
+                >
+                <a href="/calculators/bmi-calculator.html" class="dropdown-link"
+                  >BMI Calculator</a
+                >
+                <a
+                  href="/calculators/percentage-calculator.html"
+                  class="dropdown-link"
+                  >Percentage Calculator</a
+                >
+                <a
+                  href="/calculators/discount-calculator.html"
+                  class="dropdown-link"
+                  >Discount Calculator</a
+                >
+                <a
+                  href="/calculators/loan-emi-calculator.html"
+                  class="dropdown-link"
+                  >Loan EMI Calculator</a
+                >
+                <a href="/calculators/gpa-calculator.html" class="dropdown-link"
+                  >GPA Calculator</a
+                >
+                <a
+                  href="/calculators/scientific-calculator.html"
+                  class="dropdown-link"
+                  >Scientific Calculator</a
+                >
+                <a href="/calculators/tip-calculator.html" class="dropdown-link"
+                  >Tip Calculator</a
+                >
+              </div>
+            </div>
+
+            <!-- 3. Image & PDF Dropdown -->
+            <div class="nav-item">
+              <button
+                class="nav-dropdown-btn"
+                aria-expanded="false"
+                aria-haspopup="true"
+              >
+                <span>Image &amp; PDF</span>
+                <svg
+                  class="chevron"
+                  width="12"
+                  height="12"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div class="nav-dropdown-menu">
+                <a href="/imagepdf/image-compressor.html" class="dropdown-link"
+                  >Image Compressor</a
+                >
+                <a href="/imagepdf/image-to-pdf.html" class="dropdown-link"
+                  >Image to PDF</a
+                >
+                <a href="/imagepdf/pdf-to-image.html" class="dropdown-link"
+                  >PDF to Image</a
+                >
+                <a href="/imagepdf/qr-code-generator.html" class="dropdown-link"
+                  >QR Code Generator</a
+                >
+                <a href="/imagepdf/color-picker.html" class="dropdown-link"
+                  >Color Picker &amp; Palette</a
+                >
+                <a href="/imagepdf/svg-optimizer.html" class="dropdown-link"
+                  >SVG Optimizer</a
+                >
+              </div>
+            </div>
+
+            <!-- 4. Developer Dropdown -->
+            <div class="nav-item">
+              <button
+                class="nav-dropdown-btn"
+                aria-expanded="false"
+                aria-haspopup="true"
+              >
+                <span>Developer</span>
+                <svg
+                  class="chevron"
+                  width="12"
+                  height="12"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div class="nav-dropdown-menu">
+                <a href="/developer/json-formatter.html" class="dropdown-link"
+                  >JSON Formatter</a
+                >
+                <a
+                  href="/developer/base64-encode-decode.html"
+                  class="dropdown-link"
+                  >Base64 Encoder/Decoder</a
+                >
+                <a
+                  href="/developer/url-encoder-decoder.html"
+                  class="dropdown-link"
+                  >URL Encoder/Decoder</a
+                >
+                <a
+                  href="/developer/html-entity-encoder.html"
+                  class="dropdown-link"
+                  >HTML Entity Encoder</a
+                >
+                <a
+                  href="/developer/md5-hash-generator.html"
+                  class="dropdown-link"
+                  >MD5 Hash Generator</a
+                >
+                <a href="/developer/uuid-generator.html" class="dropdown-link"
+                  >UUID/GUID Generator</a
+                >
+                <a href="/developer/css-minifier.html" class="dropdown-link"
+                  >CSS Minifier</a
+                >
+                <a href="/developer/jwt-decoder.html" class="dropdown-link"
+                  >JWT Decoder</a
+                >
+              </div>
+            </div>
+            <!-- About -->
+            <div class="nav-item">
+              <a href="/about.html" class="nav-link">About</a>
+            </div>
+          </nav>
+
+          <!-- Search Trigger & Mobile Hamburger -->
+          <div class="nav-actions">
+            <button
+              class="search-trigger-btn"
+              id="search-trigger"
+              aria-label="Search all tools (Ctrl+K)"
+            >
+              <svg
+                width="15"
+                height="15"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+              >
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <span>Search</span>
+              <kbd class="search-shortcut-tag">⌘K</kbd>
+            </button>
+
+            <button
+              class="hamburger-btn"
+              id="mobile-menu-trigger"
+              aria-label="Open navigation menu"
+              aria-expanded="false"
+              aria-controls="mobile-nav-drawer"
+            >
+              <svg
+                width="22"
+                height="22"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+              >
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ========================================================================
+       MOBILE NAVIGATION DRAWER (ACCORDIONS + TOUCH TARGETS)
+       ======================================================================== -->
+    <div class="mobile-nav-backdrop" id="mobile-backdrop"></div>
+    <aside
+      class="mobile-nav-drawer"
+      id="mobile-nav-drawer"
+      aria-label="Mobile Navigation"
+      aria-hidden="true"
+    >
+      <div class="mobile-nav-header">
+        <a href="/" class="brand-link">
+          <span>Huzikit</span>
+        </a>
+        <button
+          class="mobile-close-btn"
+          id="mobile-close-btn"
+          aria-label="Close navigation menu"
+        >
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.2"
+          >
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <div class="mobile-nav-body">
+        <!-- 1. Text Tools Accordion -->
+        <div class="mobile-accordion-item">
+          <button class="mobile-accordion-trigger" aria-expanded="true">
+            <span>Text Tools (8)</span>
+            <svg
+              class="chevron"
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+            >
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="mobile-accordion-content expanded">
+            <a href="/word-counter.html" class="mobile-accordion-link active"
+              >Word Counter</a
+            >
+            <a
+              href="/texttools/character-counter.html"
+              class="mobile-accordion-link"
+              >Character Counter</a
+            >
+            <a
+              href="/texttools/case-converter.html"
+              class="mobile-accordion-link"
+              >Case Converter</a
+            >
+            <a
+              href="/texttools/remove-duplicate-lines.html"
+              class="mobile-accordion-link"
+              >Remove Duplicate Lines</a
+            >
+            <a
+              href="/texttools/text-reverser.html"
+              class="mobile-accordion-link"
+              >Text Reverser</a
+            >
+            <a
+              href="/texttools/onlinenotepad.html"
+              class="mobile-accordion-link"
+              >Online Notepad</a
+            >
+            <a
+              href="/texttools/loremipsumgenerator.html"
+              class="mobile-accordion-link"
+              >Lorem Ipsum Generator</a
+            >
+            <a
+              href="/texttools/add-prefix-suffix.html"
+              class="mobile-accordion-link"
+              >Add Prefix &amp; Suffix</a
+            >
+          </div>
+        </div>
+
+        <!-- 2. Calculators Accordion -->
+        <div class="mobile-accordion-item">
+          <button class="mobile-accordion-trigger" aria-expanded="false">
+            <span>Calculators (8)</span>
+            <svg
+              class="chevron"
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+            >
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="mobile-accordion-content">
+            <a
+              href="/calculators/age-calculator.html"
+              class="mobile-accordion-link"
+              >Age Calculator</a
+            >
+            <a
+              href="/calculators/bmi-calculator.html"
+              class="mobile-accordion-link"
+              >BMI Calculator</a
+            >
+            <a
+              href="/calculators/percentage-calculator.html"
+              class="mobile-accordion-link"
+              >Percentage Calculator</a
+            >
+            <a
+              href="/calculators/discount-calculator.html"
+              class="mobile-accordion-link"
+              >Discount Calculator</a
+            >
+            <a
+              href="/calculators/loan-emi-calculator.html"
+              class="mobile-accordion-link"
+              >Loan EMI Calculator</a
+            >
+            <a
+              href="/calculators/gpa-calculator.html"
+              class="mobile-accordion-link"
+              >GPA Calculator</a
+            >
+            <a
+              href="/calculators/scientific-calculator.html"
+              class="mobile-accordion-link"
+              >Scientific Calculator</a
+            >
+            <a
+              href="/calculators/tip-calculator.html"
+              class="mobile-accordion-link"
+              >Tip Calculator</a
+            >
+          </div>
+        </div>
+
+        <!-- 3. Image & PDF Accordion -->
+        <div class="mobile-accordion-item">
+          <button class="mobile-accordion-trigger" aria-expanded="false">
+            <span>Image &amp; PDF (6)</span>
+            <svg
+              class="chevron"
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+            >
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="mobile-accordion-content">
+            <a
+              href="/imagepdf/image-compressor.html"
+              class="mobile-accordion-link"
+              >Image Compressor</a
+            >
+            <a href="/imagepdf/image-to-pdf.html" class="mobile-accordion-link"
+              >Image to PDF</a
+            >
+            <a href="/imagepdf/pdf-to-image.html" class="mobile-accordion-link"
+              >PDF to Image</a
+            >
+            <a
+              href="/imagepdf/qr-code-generator.html"
+              class="mobile-accordion-link"
+              >QR Code Generator</a
+            >
+            <a href="/imagepdf/color-picker.html" class="mobile-accordion-link"
+              >Color Picker</a
+            >
+            <a href="/imagepdf/svg-optimizer.html" class="mobile-accordion-link"
+              >SVG Optimizer</a
+            >
+          </div>
+        </div>
+
+        <!-- 4. Developer Accordion -->
+        <div class="mobile-accordion-item">
+          <button class="mobile-accordion-trigger" aria-expanded="false">
+            <span>Developer (8)</span>
+            <svg
+              class="chevron"
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+            >
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <div class="mobile-accordion-content">
+            <a
+              href="/developer/json-formatter.html"
+              class="mobile-accordion-link"
+              >JSON Formatter</a
+            >
+            <a
+              href="/developer/base64-encode-decode.html"
+              class="mobile-accordion-link"
+              >Base64 Utility</a
+            >
+            <a
+              href="/developer/url-encoder-decoder.html"
+              class="mobile-accordion-link"
+              >URL Encoder/Decoder</a
+            >
+            <a
+              href="/developer/html-entity-encoder.html"
+              class="mobile-accordion-link"
+              >HTML Entity Encoder</a
+            >
+            <a
+              href="/developer/md5-hash-generator.html"
+              class="mobile-accordion-link"
+              >MD5 Hash Generator</a
+            >
+            <a
+              href="/developer/uuid-generator.html"
+              class="mobile-accordion-link"
+              >UUID Generator</a
+            >
+            <a href="/developer/css-minifier.html" class="mobile-accordion-link"
+              >CSS Minifier</a
+            >
+            <a href="/developer/jwt-decoder.html" class="mobile-accordion-link"
+              >JWT Decoder</a
+            >
+          </div>
+        </div>
+
+        <!-- Direct links in drawer -->
+        <a href="/about.html" class="mobile-direct-link">About Huzikit</a>
+      </div>
+    </aside>
+
+    <!-- ========================================================================
+       SEARCH MODAL (ALL 30 TOOLS WITH LIVE FILTERING)
+       ======================================================================== -->
+    <div
+      class="search-modal-backdrop"
+      id="search-modal"
+      aria-hidden="true"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Tool Search"
+    >
+      <div class="search-modal-card">
+        <div class="search-modal-header">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.2"
+            style="color: var(--primary)"
+          >
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input
+            type="text"
+            class="search-input-field"
+            id="search-input"
+            placeholder="Search 30+ tools (e.g., word, pdf, json, bmi)..."
+            autocomplete="off"
+          />
+          <button
+            class="search-close-btn"
+            id="search-close-btn"
+            aria-label="Close search"
+          >
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.2"
+            >
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+
+        <div class="search-categories-bar">
+          <button class="search-filter-chip active" data-filter="all">
+            All (30)
+          </button>
+          <button class="search-filter-chip" data-filter="text">
+            Text Tools (8)
+          </button>
+          <button class="search-filter-chip" data-filter="calculator">
+            Calculators (8)
+          </button>
+          <button class="search-filter-chip" data-filter="image">
+            Image &amp; PDF (6)
+          </button>
+          <button class="search-filter-chip" data-filter="developer">
+            Developer (8)
+          </button>
+        </div>
+
+        <ul class="search-results-list" id="search-results">
+          <!-- Dynamically injected via word-counter.js -->
+        </ul>
+      </div>
+    </div>
+
+    <!-- ========================================================================
+       MAIN APPLICATION LAYOUT
+       ======================================================================== -->
+    <main class="main-content" id="main-content">
+      <div class="container">
+        <!-- HERO BANNER SECTION -->
+        <section class="hero-section" aria-label="Word Counter Overview">
+          <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+            <ol class="breadcrumb-list">
+              <li><a href="/">Home</a></li>
+              <li class="breadcrumb-separator">/</li>
+              <li><a href="/toolpage.html">Text Tools</a></li>
+              <li class="breadcrumb-separator">/</li>
+              <li
+                aria-current="page"
+                style="color: var(--ink); font-weight: 600"
+              >
+                Word Counter
+              </li>
+            </ol>
+          </nav>
+
+          <div class="hero-grid">
+            <div>
+              <div class="hero-badge">
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.2"
+                >
+                  <path
+                    d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"
+                  />
+                </svg>
+                <span>Text Analytics &amp; Readability Suite</span>
+              </div>
+              <h1 class="hero-title">Professional Online Word Counter</h1>
+              <p class="hero-subtitle">
+                Analyze word count, character density, sentence boundaries,
+                syllable complexity, and Flesch readability in real time with
+                client-side Unicode segmentation.
+              </p>
+              <div class="hero-tags">
+                <span class="hero-tag">Intl.Segmenter Unicode Engine</span>
+                <span class="hero-tag">Flesch Reading Ease</span>
+                <span class="hero-tag">Zero Server Payloads</span>
+                <span class="hero-tag">Offline Capable</span>
+              </div>
+            </div>
+
+            <!-- Hero Visual: 3D Interactive Telemetry Card -->
+            <div class="hero-visual-card">
+              <div class="visual-3d-inner">
+                <div class="visual-header">
+                  <span class="visual-badge">Live Document Telemetry</span>
+                  <div class="visual-pulse-dot" title="Active Analysis"></div>
+                </div>
+                <div class="visual-stat-row">
+                  <div class="visual-stat-item">
+                    <span class="visual-stat-label">Segmented Words</span>
+                    <span class="visual-stat-val" id="visual-words">0</span>
+                  </div>
+                  <div class="visual-stat-item">
+                    <span class="visual-stat-label">Total Characters</span>
+                    <span class="visual-stat-val" id="visual-chars">0</span>
+                  </div>
+                  <div class="visual-stat-item">
+                    <span class="visual-stat-label">Estimated Reading</span>
+                    <span class="visual-stat-val" id="visual-read">0s</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- PRIMARY WORKSPACE (TOOLBAR + TEXTAREA + STATUS) -->
+        <section
+          class="workspace-card"
+          id="workspace-card"
+          aria-label="Word Counter Workspace"
+        >
+          <!-- Toolbar -->
+          <div class="workspace-toolbar">
+            <div class="toolbar-group">
+              <!-- Sample Texts -->
+              <select
+                class="tool-select"
+                id="sample-text-select"
+                aria-label="Load Sample Text"
+              >
+                <option value="" disabled selected>Load Sample Text...</option>
+                <option value="blog">Blog Paragraph</option>
+                <option value="academic">Academic Paper</option>
+                <option value="business">Business Copy</option>
+                <option value="product">Product Description</option>
+                <option value="story">Short Story</option>
+                <option value="technical">Technical Writing</option>
+              </select>
+
+              <!-- Undo / Redo -->
+              <button
+                class="tool-btn"
+                id="btn-undo"
+                title="Undo (Ctrl+Z)"
+                aria-label="Undo"
+              >
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.2"
+                >
+                  <path d="M3 7v6h6"></path>
+                  <path d="M21 17a9 9 0 0 0-9-9 9 9 0 0 0-6 2.3L3 13"></path>
+                </svg>
+              </button>
+              <button
+                class="tool-btn"
+                id="btn-redo"
+                title="Redo (Ctrl+Y)"
+                aria-label="Redo"
+              >
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.2"
+                >
+                  <path d="M21 7v6h-6"></path>
+                  <path d="M3 17a9 9 0 0 1 9-9 9 9 0 0 1 6 2.3l3 2.7"></path>
+                </svg>
+              </button>
+
+              <!-- Clear & Reset -->
+              <button class="tool-btn" id="btn-clear" aria-label="Clear Editor">
+                Clear
+              </button>
+              <button
+                class="tool-btn"
+                id="btn-reset"
+                aria-label="Reset to default sample"
+              >
+                Reset
+              </button>
+              <button
+                class="tool-btn"
+                id="btn-copy-text"
+                aria-label="Copy editor text"
+              >
+                Copy
+              </button>
+              <button
+                class="tool-btn"
+                id="btn-paste-text"
+                aria-label="Paste text from clipboard"
+              >
+                Paste
+              </button>
+            </div>
+
+            <div class="toolbar-group">
+              <!-- Find & Replace Toggle -->
+              <button
+                class="tool-btn"
+                id="btn-toggle-find"
+                aria-label="Toggle Find and Replace"
+              >
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.2"
+                >
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+                <span>Find</span>
+              </button>
+
+              <!-- Text Cleaner Select -->
+              <select
+                class="tool-select"
+                id="select-text-cleaner"
+                aria-label="Text Cleaner Options"
+              >
+                <option value="" disabled selected>Text Cleanup...</option>
+                <option value="spaces">Remove Extra Spaces</option>
+                <option value="lines">Remove Empty Lines</option>
+                <option value="trim">Trim Trailing Whitespace</option>
+                <option value="punctuation">Clean Repeated Punctuation</option>
+                <option value="quotes">Normalize Curly Quotes</option>
+              </select>
+
+              <!-- Case Transform Select -->
+              <select
+                class="tool-select"
+                id="select-transform"
+                aria-label="Transform Letter Case"
+              >
+                <option value="" disabled selected>Case Transform...</option>
+                <option value="upper">UPPERCASE</option>
+                <option value="lower">lowercase</option>
+                <option value="title">Title Case</option>
+                <option value="sentence">Sentence case</option>
+              </select>
+
+              <!-- Writing Goals Preset -->
+              <select
+                class="tool-select"
+                id="goal-preset-select"
+                aria-label="Writing Goal Preset"
+              >
+                <option value="0">Writing Goal: Off</option>
+                <option value="twitter">Social Post (280 chars)</option>
+                <option value="500">Short Article (500 words)</option>
+                <option value="1500">Blog Post (1,500 words)</option>
+                <option value="2500">Academic Essay (2,500 words)</option>
+                <option value="5000">Chapter Draft (5,000 words)</option>
+              </select>
+
+              <!-- Compare Mode Toggle -->
+              <button
+                class="tool-btn"
+                id="btn-toggle-compare"
+                aria-label="Compare two texts"
+              >
+                Compare
+              </button>
+
+              <!-- Focus Mode & Fullscreen -->
+              <button
+                class="tool-btn"
+                id="btn-focus-mode"
+                title="Focus Mode (ESC to exit)"
+                aria-label="Toggle Focus Mode"
+              >
+                Focus
+              </button>
+              <button
+                class="tool-btn"
+                id="btn-fullscreen"
+                title="Fullscreen Mode"
+                aria-label="Toggle Fullscreen"
+              >
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.2"
+                >
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <polyline points="9 21 3 21 3 15"></polyline>
+                  <line x1="21" y1="3" x2="14" y2="10"></line>
+                  <line x1="3" y1="21" x2="10" y2="14"></line>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Find & Replace Expandable Drawer -->
+          <div class="find-replace-drawer" id="find-replace-drawer">
+            <div class="find-input-wrap">
+              <input
+                type="text"
+                class="find-input"
+                id="find-input"
+                placeholder="Find text..."
+                aria-label="Text to find"
+              />
+            </div>
+            <div class="find-input-wrap">
+              <input
+                type="text"
+                class="find-input"
+                id="replace-input"
+                placeholder="Replace with..."
+                aria-label="Text to replace with"
+              />
+            </div>
+            <div class="toolbar-group">
+              <label class="filter-toggle-label"
+                ><input type="checkbox" id="find-match-case" /> Case
+                sensitive</label
+              >
+              <label class="filter-toggle-label"
+                ><input type="checkbox" id="find-whole-word" /> Whole
+                word</label
+              >
+              <button class="tool-btn" id="btn-replace-one">Replace One</button>
+              <button class="tool-btn tool-btn-primary" id="btn-replace-all">
+                Replace All
+              </button>
+            </div>
+          </div>
+
+          <!-- Goal Progress Strip (Active Goal) -->
+          <div class="goal-progress-strip" id="goal-progress-strip">
+            <div class="goal-meta">
+              <span
+                ><strong>Target Goal:</strong>
+                <span id="goal-current-val">0</span> /
+                <span id="goal-target-val">0</span></span
+              >
+              <span id="goal-remaining-val">0 remaining</span>
+              <span
+                ><strong>Progress:</strong>
+                <span id="goal-percent-val">0%</span></span
+              >
+            </div>
+            <div class="goal-progress-track">
+              <div class="goal-progress-bar" id="goal-track"></div>
+            </div>
+          </div>
+
+          <!-- Primary Textarea Workspace -->
+          <div class="editor-container">
+            <textarea
+              class="main-textarea"
+              id="main-editor"
+              placeholder="Type or paste your text here to analyze word count, character count, sentence structure, readability, and vocabulary metrics in real time..."
+              aria-label="Text Editor Workspace"
+              spellcheck="true"
+            ></textarea>
+          </div>
+
+          <!-- Bottom Workspace Status Bar -->
+          <div class="editor-status-bar">
+            <div class="status-pills">
+              <span id="status-graphemes">0 graphemes</span>
+              <span>•</span>
+              <span id="status-lines">0 lines</span>
+              <span class="selection-badge" id="selection-badge"
+                >Selected: 0 words</span
+              >
+            </div>
+
+            <div class="toolbar-group">
+              <div style="display: flex; align-items: center; gap: 6px">
+                <span style="font-size: 0.78rem; color: var(--ink-faint)"
+                  >Reading Speed:</span
+                >
+                <select
+                  class="tool-select"
+                  id="reading-speed-select"
+                  style="min-height: 34px; padding: 4px 8px; font-size: 0.78rem"
+                  aria-label="Reading Speed Selector"
+                >
+                  <option value="130">Slow (130 WPM)</option>
+                  <option value="225" selected>Average (225 WPM)</option>
+                  <option value="300">Fast (300 WPM)</option>
+                </select>
+              </div>
+              <button
+                class="tool-btn"
+                id="btn-toggle-history"
+                style="min-height: 34px; padding: 4px 10px; font-size: 0.78rem"
+              >
+                Draft History
+              </button>
+              <button
+                class="tool-btn"
+                id="btn-copy-summary"
+                style="min-height: 34px; padding: 4px 10px; font-size: 0.78rem"
+              >
+                Copy Stats
+              </button>
+              <button
+                class="tool-btn"
+                id="btn-download-text"
+                style="min-height: 34px; padding: 4px 10px; font-size: 0.78rem"
+              >
+                Export .txt
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- CORE LIVE METRICS GRID (8 HIGH-IMPACT CARDS) -->
+        <section class="metrics-grid" aria-label="Live Writing Metrics Summary">
+          <!-- 1. Words -->
+          <div class="metric-card highlight">
+            <div class="metric-label-row">
+              <span class="metric-title">Words</span>
+              <svg
+                class="metric-icon"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+              >
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                <path
+                  d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"
+                ></path>
+              </svg>
+            </div>
+            <div class="metric-number" id="metric-words">0</div>
+            <div class="metric-subtext">Unicode segmented tokens</div>
+          </div>
+
+          <!-- 2. Characters -->
+          <div class="metric-card">
+            <div class="metric-label-row">
+              <span class="metric-title">Characters</span>
+              <svg
+                class="metric-icon"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+              >
+                <polyline points="4 7 4 4 20 4 20 7"></polyline>
+                <line x1="9" y1="20" x2="15" y2="20"></line>
+                <line x1="12" y1="4" x2="12" y2="20"></line>
+              </svg>
+            </div>
+            <div class="metric-number" id="metric-chars">0</div>
+            <div class="metric-subtext">
+              <span id="metric-chars-no-space">0</span> without spaces
+            </div>
+          </div>
+
+          <!-- 3. Sentences -->
+          <div class="metric-card">
+            <div class="metric-label-row">
+              <span class="metric-title">Sentences</span>
+              <svg
+                class="metric-icon"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+              >
+                <line x1="4" y1="6" x2="20" y2="6"></line>
+                <line x1="4" y1="12" x2="14" y2="12"></line>
+                <line x1="4" y1="18" x2="18" y2="18"></line>
+              </svg>
+            </div>
+            <div class="metric-number" id="metric-sentences">0</div>
+            <div class="metric-subtext">Grammatical clause boundaries</div>
+          </div>
+
+          <!-- 4. Paragraphs -->
+          <div class="metric-card">
+            <div class="metric-label-row">
+              <span class="metric-title">Paragraphs</span>
+              <svg
+                class="metric-icon"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+              >
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="9" y1="3" x2="9" y2="21"></line>
+              </svg>
+            </div>
+            <div class="metric-number" id="metric-paragraphs">0</div>
+            <div class="metric-subtext">
+              <span id="metric-lines">0</span> total line breaks
+            </div>
+          </div>
+
+          <!-- 5. Reading Time -->
+          <div class="metric-card">
+            <div class="metric-label-row">
+              <span class="metric-title">Reading Time</span>
+              <svg
+                class="metric-icon"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+              >
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+            <div class="metric-number" id="metric-reading-time">0 sec</div>
+            <div class="metric-subtext">Estimated at 225 WPM</div>
+          </div>
+
+          <!-- 6. Speaking Time -->
+          <div class="metric-card">
+            <div class="metric-label-row">
+              <span class="metric-title">Speaking Time</span>
+              <svg
+                class="metric-icon"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+              >
+                <path
+                  d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"
+                ></path>
+                <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
+              </svg>
+            </div>
+            <div class="metric-number" id="metric-speaking-time">0 sec</div>
+            <div class="metric-subtext">Speech pace (~140 WPM)</div>
+          </div>
+
+          <!-- 7. Unique Words -->
+          <div class="metric-card">
+            <div class="metric-label-row">
+              <span class="metric-title">Unique Words</span>
+              <svg
+                class="metric-icon"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+              >
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="8" x2="12" y2="16"></line>
+                <line x1="8" y1="12" x2="16" y2="12"></line>
+              </svg>
+            </div>
+            <div class="metric-number" id="metric-unique-words">0</div>
+            <div class="metric-subtext">Distinct vocabulary tokens</div>
+          </div>
+
+          <!-- 8. Lexical Diversity -->
+          <div class="metric-card highlight">
+            <div class="metric-label-row">
+              <span class="metric-title">Lexical Diversity</span>
+              <svg
+                class="metric-icon"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+              >
+                <path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path>
+                <path d="M22 12A10 10 0 0 0 12 2v10z"></path>
+              </svg>
+            </div>
+            <div class="metric-number" id="metric-lexical-diversity">0%</div>
+            <div class="metric-subtext">Unique ÷ Total word ratio</div>
+          </div>
+        </section>
+
+        <!-- TEXT COMPARISON DRAWER -->
+        <section
+          class="comparison-section"
+          id="comparison-section"
+          aria-label="Text Comparison Tool"
+        >
+          <div class="section-header-block">
+            <span class="section-tag">Comparison Studio</span>
+            <h2 class="section-heading" style="font-size: 1.4rem">
+              Compare Two Text Versions
+            </h2>
+            <p class="section-desc">
+              Instantly calculate delta variances in word count, character
+              expansion, sentences, and paragraphs.
+            </p>
+          </div>
+
+          <div class="comparison-editors-grid">
+            <div class="compare-editor-box">
+              <label class="compare-label" for="compare-text-a"
+                >Original Draft (Text A):</label
+              >
+              <textarea
+                class="compare-textarea"
+                id="compare-text-a"
+                placeholder="Paste Version A..."
+              ></textarea>
+            </div>
+            <div class="compare-editor-box">
+              <label class="compare-label" for="compare-text-b"
+                >Revised Draft (Text B):</label
+              >
+              <textarea
+                class="compare-textarea"
+                id="compare-text-b"
+                placeholder="Paste Version B..."
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="comparison-results-grid">
+            <div class="diff-card">
+              <div class="diff-metric-name">Words Variance</div>
+              <div class="diff-values" id="diff-words">
+                <span class="diff-val-a">0</span>
+                <span class="diff-badge diff-same">0</span>
+              </div>
+            </div>
+            <div class="diff-card">
+              <div class="diff-metric-name">Characters Variance</div>
+              <div class="diff-values" id="diff-chars">
+                <span class="diff-val-a">0</span>
+                <span class="diff-badge diff-same">0</span>
+              </div>
+            </div>
+            <div class="diff-card">
+              <div class="diff-metric-name">Sentences Variance</div>
+              <div class="diff-values" id="diff-sentences">
+                <span class="diff-val-a">0</span>
+                <span class="diff-badge diff-same">0</span>
+              </div>
+            </div>
+            <div class="diff-card">
+              <div class="diff-metric-name">Paragraphs Variance</div>
+              <div class="diff-values" id="diff-paragraphs">
+                <span class="diff-val-a">0</span>
+                <span class="diff-badge diff-same">0</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- LOCAL DRAFT HISTORY DRAWER -->
+        <section
+          class="history-section"
+          id="history-section"
+          aria-label="Local Draft History"
+        >
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              flex-wrap: wrap;
+              gap: 12px;
+            "
+          >
+            <div>
+              <h3
+                style="
+                  font-family: var(--font-heading);
+                  font-size: 1.15rem;
+                  color: var(--ink);
+                "
+              >
+                Local Draft History
+              </h3>
+              <p style="font-size: 0.82rem; color: var(--ink-soft)">
+                Stored exclusively in your local browser storage. Never
+                transmitted externally.
+              </p>
+            </div>
+            <div
+              style="
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                flex-wrap: wrap;
+              "
+            >
+              <label class="filter-toggle-label"
+                ><input type="checkbox" id="toggle-disable-history" /> Disable
+                History</label
+              >
+              <button
+                class="tool-btn"
+                id="btn-clear-history"
+                style="color: #dc2626"
+              >
+                Clear All History
+              </button>
+            </div>
+          </div>
+          <p
+            id="history-empty"
+            style="
+              padding: 24px;
+              text-align: center;
+              color: var(--ink-faint);
+              font-size: 0.9rem;
+            "
+          >
+            No saved drafts in local storage yet.
+          </p>
+          <div class="history-list" id="history-list"></div>
+        </section>
+
+        <!-- ADVANCED WRITING ANALYTICS DASHBOARD (TABS) -->
+        <section
+          class="analytics-section"
+          id="analytics-dashboard"
+          aria-label="Advanced Writing Analytics"
+        >
+          <div class="section-header-block">
+            <span class="section-tag">Writing Intelligence</span>
+            <h2 class="section-heading">Writing Analytics Dashboard</h2>
+            <p class="section-desc">
+              Comprehensive structural metrics, readability equations,
+              vocabulary distributions, and objective editorial audits.
+            </p>
+          </div>
+
+          <!-- Navigation Tabs -->
+          <nav class="analytics-tabs-nav" aria-label="Analytics Category Tabs">
+            <button class="tab-btn active" data-tab="overview">
+              Overview &amp; Structure
+            </button>
+            <button class="tab-btn" data-tab="readability">
+              Readability &amp; Grade
+            </button>
+            <button class="tab-btn" data-tab="health">Writing Health</button>
+            <button class="tab-btn" data-tab="frequency">Word Frequency</button>
+            <button class="tab-btn" data-tab="keywords">Keyword Density</button>
+            <button class="tab-btn" data-tab="phrases">Repeated Phrases</button>
+          </nav>
+
+          <!-- TAB 1: OVERVIEW & STRUCTURE -->
+          <div class="tab-panel active" id="tab-overview">
+            <div class="analytics-grid-two">
+              <!-- Sentence Metrics & Distribution -->
+              <div class="analytics-card">
+                <h3 class="analytics-card-title">
+                  <span>Sentence Analytics</span>
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.2"
+                    style="color: var(--primary)"
+                  >
+                    <line x1="4" y1="6" x2="20" y2="6"></line>
+                    <line x1="4" y1="12" x2="14" y2="12"></line>
+                    <line x1="4" y1="18" x2="18" y2="18"></line>
+                  </svg>
+                </h3>
+                <div class="stat-triplet-grid">
+                  <div class="stat-triplet-box">
+                    <div class="stat-triplet-label">Average</div>
+                    <div class="stat-triplet-value" id="avg-words-sentence">
+                      0 words
+                    </div>
+                  </div>
+                  <div class="stat-triplet-box">
+                    <div class="stat-triplet-label">Shortest</div>
+                    <div class="stat-triplet-value" id="shortest-sentence">
+                      0 words
+                    </div>
+                  </div>
+                  <div class="stat-triplet-box">
+                    <div class="stat-triplet-label">Longest</div>
+                    <div class="stat-triplet-value" id="longest-sentence">
+                      0 words
+                    </div>
+                  </div>
+                </div>
+                <h4
+                  style="
+                    font-size: 0.85rem;
+                    font-weight: 700;
+                    color: var(--ink);
+                    margin-bottom: 10px;
+                  "
+                >
+                  Sentence Length Distribution:
+                </h4>
+                <div class="dist-list" id="dist-sentence-list"></div>
+              </div>
+
+              <!-- Paragraph Metrics & Distribution -->
+              <div class="analytics-card">
+                <h3 class="analytics-card-title">
+                  <span>Paragraph Analytics</span>
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.2"
+                    style="color: var(--primary)"
+                  >
+                    <rect
+                      x="3"
+                      y="3"
+                      width="18"
+                      height="18"
+                      rx="2"
+                      ry="2"
+                    ></rect>
+                    <line x1="9" y1="3" x2="9" y2="21"></line>
+                  </svg>
+                </h3>
+                <div class="stat-triplet-grid">
+                  <div class="stat-triplet-box">
+                    <div class="stat-triplet-label">Average</div>
+                    <div class="stat-triplet-value" id="avg-words-paragraph">
+                      0 words
+                    </div>
+                  </div>
+                  <div class="stat-triplet-box">
+                    <div class="stat-triplet-label">Shortest</div>
+                    <div class="stat-triplet-value" id="shortest-paragraph">
+                      0 words
+                    </div>
+                  </div>
+                  <div class="stat-triplet-box">
+                    <div class="stat-triplet-label">Longest</div>
+                    <div class="stat-triplet-value" id="longest-paragraph">
+                      0 words
+                    </div>
+                  </div>
+                </div>
+                <h4
+                  style="
+                    font-size: 0.85rem;
+                    font-weight: 700;
+                    color: var(--ink);
+                    margin-bottom: 10px;
+                  "
+                >
+                  Paragraph Density Distribution:
+                </h4>
+                <div class="dist-list" id="dist-paragraph-list"></div>
+              </div>
+
+              <!-- Word Length & Vocabulary Variety -->
+              <div class="analytics-card">
+                <h3 class="analytics-card-title">
+                  <span>Word Length &amp; Vocabulary</span>
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.2"
+                    style="color: var(--primary)"
+                  >
+                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                    <path
+                      d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"
+                    ></path>
+                  </svg>
+                </h3>
+                <div style="display: flex; flex-direction: column; gap: 12px">
+                  <div
+                    style="
+                      display: flex;
+                      justify-content: space-between;
+                      padding-bottom: 8px;
+                      border-bottom: 1px solid var(--line-soft);
+                    "
+                  >
+                    <span style="font-size: 0.88rem; color: var(--ink-soft)"
+                      >Average Word Length:</span
+                    >
+                    <strong id="avg-word-length">0 chars</strong>
+                  </div>
+                  <div
+                    style="
+                      display: flex;
+                      justify-content: space-between;
+                      padding-bottom: 8px;
+                      border-bottom: 1px solid var(--line-soft);
+                    "
+                  >
+                    <span style="font-size: 0.88rem; color: var(--ink-soft)"
+                      >Shortest Word:</span
+                    >
+                    <strong id="shortest-word">—</strong>
+                  </div>
+                  <div
+                    style="
+                      display: flex;
+                      justify-content: space-between;
+                      padding-bottom: 8px;
+                      border-bottom: 1px solid var(--line-soft);
+                    "
+                  >
+                    <span style="font-size: 0.88rem; color: var(--ink-soft)"
+                      >Longest Word:</span
+                    >
+                    <strong id="longest-word">—</strong>
+                  </div>
+                  <div
+                    style="
+                      display: flex;
+                      justify-content: space-between;
+                      padding-bottom: 8px;
+                      border-bottom: 1px solid var(--line-soft);
+                    "
+                  >
+                    <span style="font-size: 0.88rem; color: var(--ink-soft)"
+                      >Repeated Words Count:</span
+                    >
+                    <strong id="repeated-word-count">0</strong>
+                  </div>
+                  <div style="display: flex; justify-content: space-between">
+                    <span style="font-size: 0.88rem; color: var(--ink-soft)"
+                      >Repetition Percentage:</span
+                    >
+                    <strong id="repeated-word-pct">0%</strong>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Document Structure Map -->
+              <div class="analytics-card">
+                <h3 class="analytics-card-title">
+                  <span>Document Structure Map</span>
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.2"
+                    style="color: var(--primary)"
+                  >
+                    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                    <polyline points="2 17 12 22 22 17"></polyline>
+                    <polyline points="2 12 12 17 22 12"></polyline>
+                  </svg>
+                </h3>
+                <p
+                  style="
+                    font-size: 0.82rem;
+                    color: var(--ink-soft);
+                    margin-bottom: 12px;
+                  "
+                >
+                  Pattern-based detection of heading-like lines, list items, and
+                  paragraph sections.
+                </p>
+                <div class="responsive-table-wrap">
+                  <table class="analytics-table">
+                    <thead>
+                      <tr>
+                        <th>Element</th>
+                        <th>Location</th>
+                        <th>Content Pattern</th>
+                      </tr>
+                    </thead>
+                    <tbody id="doc-structure-body">
+                      <!-- Injected via JS -->
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 2: READABILITY & GRADE -->
+          <div class="tab-panel" id="tab-readability">
+            <div class="analytics-grid-two">
+              <!-- Flesch Reading Ease Gauge Card -->
+              <div class="analytics-card">
+                <h3 class="analytics-card-title">Flesch Reading Ease</h3>
+                <div class="readability-gauge-wrap">
+                  <div
+                    class="gauge-circle"
+                    id="gauge-circle"
+                    style="--score: 0"
+                  >
+                    <div class="gauge-inner" id="gauge-score">—</div>
+                  </div>
+                  <div class="gauge-details">
+                    <div class="gauge-label" id="gauge-label">
+                      Calculating...
+                    </div>
+                    <div class="gauge-desc" id="gauge-desc">
+                      Type or paste text to compute readability index.
+                    </div>
+                  </div>
+                </div>
+                <div class="readability-notice">
+                  <strong>Formula Note:</strong>
+                  <code
+                    >206.835 - 1.015(Words/Sentences) -
+                    84.6(Syllables/Words)</code
+                  >. Standard score ranges: 90-100 (Very Easy), 60-70
+                  (Standard), 0-30 (Academic/Very Confusing).
+                </div>
+              </div>
+
+              <!-- Grade Level & Syllables Breakdown -->
+              <div class="analytics-card">
+                <h3 class="analytics-card-title">Flesch-Kincaid Grade Level</h3>
+                <div
+                  style="
+                    background: var(--bg-soft);
+                    border-radius: var(--radius-md);
+                    padding: 16px;
+                    margin-block: 12px;
+                    text-align: center;
+                  "
+                >
+                  <div
+                    style="
+                      font-size: 0.75rem;
+                      font-weight: 700;
+                      color: var(--ink-faint);
+                      text-transform: uppercase;
+                    "
+                  >
+                    Required Reading Level
+                  </div>
+                  <div
+                    style="
+                      font-family: var(--font-heading);
+                      font-size: 2rem;
+                      font-weight: 800;
+                      color: var(--primary);
+                    "
+                    id="flesch-grade"
+                  >
+                    —
+                  </div>
+                  <div style="font-size: 0.82rem; color: var(--ink-soft)">
+                    Corresponds to US school grade comprehension level.
+                  </div>
+                </div>
+                <div
+                  class="stat-triplet-grid"
+                  style="
+                    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+                  "
+                >
+                  <div
+                    style="
+                      background: var(--white);
+                      border: 1px solid var(--line);
+                      border-radius: var(--radius-md);
+                      padding: 12px;
+                    "
+                  >
+                    <div
+                      style="
+                        font-size: 0.75rem;
+                        color: var(--ink-faint);
+                        text-transform: uppercase;
+                      "
+                    >
+                      Total Syllables
+                    </div>
+                    <div
+                      style="
+                        font-size: 1.25rem;
+                        font-weight: 700;
+                        color: var(--ink);
+                      "
+                      id="syllables-count"
+                    >
+                      0
+                    </div>
+                  </div>
+                  <div
+                    style="
+                      background: var(--white);
+                      border: 1px solid var(--line);
+                      border-radius: var(--radius-md);
+                      padding: 12px;
+                    "
+                  >
+                    <div
+                      style="
+                        font-size: 0.75rem;
+                        color: var(--ink-faint);
+                        text-transform: uppercase;
+                      "
+                    >
+                      Complex Words (3+ syl)
+                    </div>
+                    <div
+                      style="
+                        font-size: 1.25rem;
+                        font-weight: 700;
+                        color: var(--accent);
+                      "
+                      id="complex-words-count"
+                    >
+                      0
+                    </div>
+                  </div>
+                </div>
+                <div class="readability-notice" style="margin-top: 14px">
+                  <strong>Honest Scope:</strong> Readability formulas are
+                  algorithmic models calibrated for standard English prose.
+                  Non-English or specialized code will reflect approximate
+                  estimations.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 3: WRITING HEALTH -->
+          <div class="tab-panel" id="tab-health">
+            <div class="analytics-card">
+              <h3 class="analytics-card-title">
+                <span>Writing Health &amp; Structural Insights</span>
+                <span
+                  style="
+                    font-size: 0.8rem;
+                    font-weight: 500;
+                    color: var(--ink-faint);
+                  "
+                  >Pattern Detection Engine</span
+                >
+              </h3>
+              <p
+                style="
+                  font-size: 0.9rem;
+                  color: var(--ink-soft);
+                  margin-bottom: 18px;
+                "
+              >
+                Objective pattern detections highlighting sentence pacing,
+                excessive whitespace, repeated punctuation clusters, and
+                potential passive voice phrasing.
+              </p>
+              <div class="health-checklist" id="health-checklist">
+                <!-- Dynamically populated via JS -->
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 4: WORD FREQUENCY -->
+          <div class="tab-panel" id="tab-frequency">
+            <div class="analytics-card">
+              <div class="table-filter-bar">
+                <h3 class="analytics-card-title" style="margin-bottom: 0">
+                  Most Frequent Words
+                </h3>
+                <div
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 12px;
+                    flex-wrap: wrap;
+                  "
+                >
+                  <label class="filter-toggle-label"
+                    ><input type="checkbox" id="toggle-stop-words" checked />
+                    Ignore Stop Words</label
+                  >
+                </div>
+              </div>
+              <div class="responsive-table-wrap">
+                <table class="analytics-table">
+                  <thead>
+                    <tr>
+                      <th>Word / Term</th>
+                      <th>Occurrences</th>
+                      <th>Frequency</th>
+                    </tr>
+                  </thead>
+                  <tbody id="freq-table-body">
+                    <!-- Injected via JS -->
+                  </tbody>
+                </table>
+              </div>
+
+              <div style="margin-top: 18px">
+                <h4
+                  style="
+                    font-size: 0.88rem;
+                    font-weight: 700;
+                    color: var(--ink);
+                    margin-bottom: 8px;
+                  "
+                >
+                  Top Semantic Terms:
+                </h4>
+                <div class="hero-tags" id="top-terms-list"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 5: KEYWORD DENSITY -->
+          <div class="tab-panel" id="tab-keywords">
+            <div class="analytics-card">
+              <h3 class="analytics-card-title">
+                Target Keyword Density Analyzer
+              </h3>
+              <p
+                style="
+                  font-size: 0.88rem;
+                  color: var(--ink-soft);
+                  margin-bottom: 14px;
+                "
+              >
+                Input one or more target keywords separated by commas to measure
+                occurrence counts and overall density ratios.
+              </p>
+              <div
+                style="
+                  display: flex;
+                  gap: 10px;
+                  margin-bottom: 16px;
+                  flex-wrap: wrap;
+                "
+              >
+                <input
+                  type="text"
+                  class="find-input"
+                  id="keyword-input"
+                  placeholder="e.g. content, writing, readability, Huzikit"
+                  style="flex: 1; min-width: 0; width: 100%"
+                  aria-label="Enter keywords to track"
+                />
+              </div>
+              <div class="responsive-table-wrap">
+                <table class="analytics-table">
+                  <thead>
+                    <tr>
+                      <th>Keyword</th>
+                      <th>Count</th>
+                      <th>Density %</th>
+                      <th>First Occurrence</th>
+                    </tr>
+                  </thead>
+                  <tbody id="keyword-results-body">
+                    <tr>
+                      <td
+                        colspan="4"
+                        style="text-align: center; color: var(--ink-faint)"
+                      >
+                        Enter keywords above to analyze density
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- TAB 6: REPEATED PHRASES -->
+          <div class="tab-panel" id="tab-phrases">
+            <div class="analytics-card">
+              <div class="table-filter-bar">
+                <h3 class="analytics-card-title" style="margin-bottom: 0">
+                  Repeated N-Gram Phrases
+                </h3>
+                <div
+                  style="
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    flex-wrap: wrap;
+                  "
+                >
+                  <label style="font-size: 0.82rem; color: var(--ink-soft)"
+                    >Phrase Length:</label
+                  >
+                  <select
+                    class="tool-select"
+                    id="phrase-ngram-select"
+                    aria-label="N-Gram Phrase Length"
+                  >
+                    <option value="2" selected>2-Word Phrases (Bigrams)</option>
+                    <option value="3">3-Word Phrases (Trigrams)</option>
+                    <option value="4">4-Word Phrases (Quadgrams)</option>
+                  </select>
+                  <label style="font-size: 0.82rem; color: var(--ink-soft)"
+                    >Min Count:</label
+                  >
+                  <select
+                    class="tool-select"
+                    id="phrase-threshold-select"
+                    aria-label="Minimum Occurrences Threshold"
+                  >
+                    <option value="2" selected>&ge; 2 times</option>
+                    <option value="3">&ge; 3 times</option>
+                    <option value="4">&ge; 4 times</option>
+                  </select>
+                </div>
+              </div>
+              <div class="responsive-table-wrap">
+                <table class="analytics-table">
+                  <thead>
+                    <tr>
+                      <th>Repeated Phrase</th>
+                      <th>Occurrences</th>
+                      <th>Relative Share</th>
+                    </tr>
+                  </thead>
+                  <tbody id="phrase-results-body">
+                    <!-- Injected via JS -->
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- EDUCATIONAL CONTENT & DIRECT ANSWER SECTION -->
+        <article
+          class="article-section"
+          id="educational-guide"
+          aria-label="Comprehensive Word Counter Guide"
+        >
+          <div class="article-body">
+            <header>
+              <span class="section-tag"
+                >Editorial Reference &amp; Computational Linguistics</span
+              >
+              <h2>
+                The Comprehensive Guide to Word Counting &amp; Writing Analytics
+              </h2>
+            </header>
+
+            <!-- Direct Answer Block 1 (GEO / AI Search) -->
+            <div class="direct-answer-card">
+              <strong>What is a Word Counter?</strong>
+              <p>
+                A word counter is a digital textual analysis utility that
+                segments a written document into individual lexical tokens to
+                determine the exact total number of words. Advanced writing
+                analytics tools also calculate character lengths (with and
+                without whitespace), grammatical sentence boundaries, paragraph
+                counts, syllable complexity, estimated reading times, and
+                vocabulary richness metrics such as lexical diversity.
+              </p>
+            </div>
+
+            <h3>Understanding Word Count vs. Character Count</h3>
+            <p>
+              In digital publishing and content engineering, measuring text
+              volume involves two complementary dimensions: word count and
+              character count. While word count quantifies conceptual
+              discourse—indicating the depth, pacing, and thoroughness of an
+              argument—character count reflects precise typographic footprint
+              and storage constraints.
+            </p>
+            <p>
+              Platforms such as social networks, SMS gateways, search engine
+              meta descriptions, and database columns impose strict character
+              thresholds. For example, search engine snippets typically truncate
+              after approximately 155 to 160 characters, while social publishing
+              tools may restrict micro-copy to 280 characters. Conversely,
+              academic essays, legal briefs, and journalistic articles rely on
+              word counts to gauge cognitive rigor and narrative balance.
+            </p>
+
+            <!-- Direct Answer Block 2 -->
+            <div class="direct-answer-card">
+              <strong
+                >How do modern word counters segment text accurately?</strong
+              >
+              <p>
+                Primitive tools use basic whitespace splitting (<code
+                  >text.split(" ")</code
+                >), which miscounts tabs, consecutive line breaks, punctuation
+                marks, and non-spaced international scripts. Huzikit Word
+                Counter uses modern Unicode-aware boundary segmentation via
+                <code>Intl.Segmenter</code>, accurately parsing complex
+                typography, hyphenated compounds, right-to-left languages (such
+                as Urdu and Arabic), and logographic scripts (such as Chinese
+                and Japanese).
+              </p>
+            </div>
+
+            <h3>The Mathematics of Reading &amp; Speaking Time</h3>
+            <p>
+              Estimating audience engagement duration is an indispensable step
+              when preparing public speeches, podcasts, blog posts, video
+              scripts, or instructional copy. Rather than presenting subjective
+              guesses, Huzikit computes durations using established empirical
+              benchmarks from psycholinguistic research:
+            </p>
+            <div class="article-table-wrap">
+              <table class="article-table">
+                <thead>
+                  <tr>
+                    <th>Medium / Pace</th>
+                    <th>Speed (Words / Minute)</th>
+                    <th>Practical Application</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Silent Reading (Average)</td>
+                    <td>200 – 250 WPM</td>
+                    <td>Blog articles, news editorials, documentation</td>
+                  </tr>
+                  <tr>
+                    <td>Silent Reading (Rapid)</td>
+                    <td>280 – 350 WPM</td>
+                    <td>Skimming, scanning, executive summaries</td>
+                  </tr>
+                  <tr>
+                    <td>Spoken Audio / Podcasting</td>
+                    <td>130 – 160 WPM</td>
+                    <td>Keynotes, presentation slides, YouTube scripts</td>
+                  </tr>
+                  <tr>
+                    <td>Slow Spoken / Voiceover</td>
+                    <td>100 – 125 WPM</td>
+                    <td>
+                      Technical instruction, audiobooks, accessibility reading
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>
+              By dividing the total segmented word count by the chosen WPM rate,
+              the tool calculates the total seconds and presents clean,
+              human-readable representations (such as "4 min 18 sec").
+            </p>
+
+            <h3>Readability Metrics: Flesch Reading Ease &amp; Grade Level</h3>
+            <p>
+              Readability formulas assess the syntactic and vocabulary
+              complexity of a text. The two most recognized formulas implemented
+              in Huzikit are:
+            </p>
+            <p>
+              <strong>1. Flesch Reading Ease:</strong> Developed by Rudolf
+              Flesch in 1948, this index awards higher scores to texts featuring
+              shorter sentences and lower syllable counts per word. A score of
+              60 to 70 is considered standard reading ease, readable by an
+              average eighth-grade student, whereas scores below 30 denote
+              difficult, dense academic or legal syntax.
+            </p>
+            <p>
+              <strong>2. Flesch-Kincaid Grade Level:</strong> Calibrated for the
+              United States Navy in 1975, this formula translates textual
+              metrics into an estimated US educational grade level. A grade of
+              8.0 indicates that an eighth-grader can comprehend the core thesis
+              on initial reading.
+            </p>
+            <p>
+              <em>Crucial Linguistic Disclaimer:</em> These formulas are
+              calibrated specifically around Germanic-Romance syllable patterns
+              and English syntax rules. Non-English scripts (such as Urdu,
+              Arabic, Chinese, or Hindi) operate under fundamentally distinct
+              morphological systems; therefore, readability scores are honest
+              heuristic estimates for English prose.
+            </p>
+
+            <h3>Lexical Diversity &amp; The Type-Token Ratio (TTR)</h3>
+            <p>
+              Lexical diversity measures the variety of vocabulary within a
+              passage. The classic computational metric is the Type-Token Ratio,
+              calculated as:
+            </p>
+            <div class="direct-answer-card">
+              <strong>Type-Token Ratio Formula:</strong>
+              <code
+                >Lexical Diversity % = (Unique Distinct Words ÷ Total Word
+                Count) × 100</code
+              >
+            </div>
+            <p>
+              A high lexical diversity percentage signifies rich, varied diction
+              with minimal repetition, characteristic of literary fiction and
+              specialized technical commentary. A lower percentage often
+              reflects intentional keyword repetition (common in search engine
+              copywriting) or conversational directness. Because TTR naturally
+              declines as document length increases, writers should assess
+              lexical variety relative to genre expectations.
+            </p>
+
+            <h3>Keyword Density &amp; Search Optimization Principles</h3>
+            <p>
+              Keyword density represents the percentage of times a given phrase
+              appears relative to total words. In historical SEO, marketers
+              attempted to manipulate ranking algorithms through repetitive
+              keyword insertion ("keyword stuffing"). Modern search engines rely
+              on semantic vector embeddings, entity graphs, and natural user
+              helpfulness signals.
+            </p>
+            <p>
+              Consequently, Huzikit Word Counter provides keyword tracking as an
+              objective textual clarity indicator—ensuring that writers maintain
+              topical coherence and avoid unintentional redundancy without
+              making unsupported ranking claims.
+            </p>
+
+            <h3>Writing Targets Across Disciplines</h3>
+            <p>
+              Target word counts vary dramatically across creative, academic,
+              and professional communication channels:
+            </p>
+            <ul
+              style="
+                padding-left: 24px;
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+              "
+            >
+              <li>
+                <strong>Social Micro-copy:</strong> 1 to 50 words (280
+                characters for Twitter/X; 125 characters for meta descriptions).
+              </li>
+              <li>
+                <strong>Corporate Email &amp; Memoranda:</strong> 75 to 250
+                words prioritizing brevity and unambiguous calls to action.
+              </li>
+              <li>
+                <strong>Standard Web Editorial / Blog Post:</strong> 800 to
+                1,800 words offering practical problem-solving depth.
+              </li>
+              <li>
+                <strong>Long-Form Definitive Guide:</strong> 2,000 to 4,500
+                words covering comprehensive multi-angle topics.
+              </li>
+              <li>
+                <strong>Academic Research Paper:</strong> 3,000 to 8,000 words
+                including methodology, literature review, and citations.
+              </li>
+              <li>
+                <strong>Book Chapters:</strong> 2,500 to 5,000 words per
+                chapter.
+              </li>
+            </ul>
+
+            <h3>Client-Side Processing &amp; Privacy Protection</h3>
+            <p>
+              In an era where online web tools frequently harvest user data,
+              confidentiality is paramount. Huzikit Word Counter operates
+              entirely on client-side JavaScript execution. Whether you paste
+              proprietary corporate strategies, unreleased literary drafts, or
+              personal academic essays, your text never leaves your browser
+              window. Zero network payloads are transmitted, and local history
+              is stored solely inside your browser's private local storage
+              space.
+            </p>
+          </div>
+        </article>
+
+        <!-- INTERACTIVE FAQ ACCORDION SECTION (12 ITEMS) -->
+        <section
+          class="faq-section"
+          id="faq-section"
+          aria-label="Frequently Asked Questions"
+        >
+          <div class="section-header-block">
+            <span class="section-tag">Help &amp; Documentation</span>
+            <h2 class="section-heading">Frequently Asked Questions</h2>
+            <p class="section-desc">
+              Answers to common inquiries regarding word counting accuracy,
+              unicode support, formulas, and privacy.
+            </p>
+          </div>
+
+          <div class="faq-list">
+            <!-- 1 -->
+            <div class="faq-item">
+              <button class="faq-trigger" aria-expanded="false">
+                <span>What is a word counter?</span>
+                <svg
+                  class="chevron"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div class="faq-answer">
+                A word counter is a digital utility that scans your input text
+                and calculates the exact number of words, characters, sentences,
+                paragraphs, and reading times. It helps writers, editors,
+                students, and marketers meet publishing guidelines and track
+                writing health.
+              </div>
+            </div>
+
+            <!-- 2 -->
+            <div class="faq-item">
+              <button class="faq-trigger" aria-expanded="false">
+                <span
+                  >How does Huzikit Word Counter count words accurately?</span
+                >
+                <svg
+                  class="chevron"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div class="faq-answer">
+                Unlike basic scripts that split solely on spaces, Huzikit
+                utilizes the browser's native <code>Intl.Segmenter</code> API.
+                This identifies authentic word-like lexical tokens, handles
+                multi-byte characters, and prevents punctuation marks, tabs, or
+                blank lines from artificially inflating counts.
+              </div>
+            </div>
+
+            <!-- 3 -->
+            <div class="faq-item">
+              <button class="faq-trigger" aria-expanded="false">
+                <span>Does it count characters with and without spaces?</span>
+                <svg
+                  class="chevron"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div class="faq-answer">
+                Yes. Huzikit displays total characters (including spaces and
+                line breaks), characters excluding whitespace, and grapheme
+                clusters (which accurately count complex emojis and combining
+                accents as single human-perceived characters).
+              </div>
+            </div>
+
+            <!-- 4 -->
+            <div class="faq-item">
+              <button class="faq-trigger" aria-expanded="false">
+                <span>How is estimated reading time calculated?</span>
+                <svg
+                  class="chevron"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div class="faq-answer">
+                Reading time divides total word count by average adult reading
+                speed. By default, Huzikit uses the standard research benchmark
+                of 225 words per minute (WPM). You can easily adjust this to
+                Slow (130 WPM) or Fast (300 WPM) in the bottom workspace bar.
+              </div>
+            </div>
+
+            <!-- 5 -->
+            <div class="faq-item">
+              <button class="faq-trigger" aria-expanded="false">
+                <span
+                  >Does it support Urdu, Arabic, Chinese, and other
+                  languages?</span
+                >
+                <svg
+                  class="chevron"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div class="faq-answer">
+                Yes. Huzikit's Unicode segmentation engine natively processes
+                right-to-left scripts like Arabic and Urdu, CJK characters
+                (Chinese, Japanese, Korean), Cyrillic, Devanagari (Hindi), and
+                Latin characters with diverse diacritics.
+              </div>
+            </div>
+
+            <!-- 6 -->
+            <div class="faq-item">
+              <button class="faq-trigger" aria-expanded="false">
+                <span>How are sentences and paragraphs identified?</span>
+                <svg
+                  class="chevron"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div class="faq-answer">
+                Sentences are isolated using terminal grammatical punctuation
+                marks (. ! ? ؟ 。) followed by whitespace, with smart boundary
+                detection to avoid false splits on decimals and abbreviation
+                dots. Paragraphs are measured as non-empty text blocks separated
+                by newlines.
+              </div>
+            </div>
+
+            <!-- 7 -->
+            <div class="faq-item">
+              <button class="faq-trigger" aria-expanded="false">
+                <span
+                  >What is lexical diversity and how should I interpret
+                  it?</span
+                >
+                <svg
+                  class="chevron"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div class="faq-answer">
+                Lexical diversity is the percentage of unique words relative to
+                total words. A higher percentage reflects broader vocabulary
+                range. It naturally decreases as text grows longer, so compare
+                your score against similar document types.
+              </div>
+            </div>
+
+            <!-- 8 -->
+            <div class="faq-item">
+              <button class="faq-trigger" aria-expanded="false">
+                <span>What is keyword density and how is it measured?</span>
+                <svg
+                  class="chevron"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div class="faq-answer">
+                Keyword density calculates what fraction of your total word
+                count consists of a chosen keyword phrase. Enter any term in the
+                Keyword Density tab to monitor repetition and ensure natural
+                pacing.
+              </div>
+            </div>
+
+            <!-- 9 -->
+            <div class="faq-item">
+              <button class="faq-trigger" aria-expanded="false">
+                <span>Can I analyze long books, essays, and documents?</span>
+                <svg
+                  class="chevron"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div class="faq-answer">
+                Yes. Huzikit is architected with dual-tier computation: basic
+                metrics calculate instantly while complex algorithms (n-grams,
+                readability, frequency) are debounced to prevent browser lag
+                even on manuscripts exceeding 50,000 words.
+              </div>
+            </div>
+
+            <!-- 10 -->
+            <div class="faq-item">
+              <button class="faq-trigger" aria-expanded="false">
+                <span>Is my text uploaded or stored on any server?</span>
+                <svg
+                  class="chevron"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div class="faq-answer">
+                No. All processing happens 100% locally inside your device's
+                browser memory. Huzikit never transmits your text over the
+                internet or saves it on any external cloud server.
+              </div>
+            </div>
+
+            <!-- 11 -->
+            <div class="faq-item">
+              <button class="faq-trigger" aria-expanded="false">
+                <span
+                  >Does Huzikit use artificial intelligence to score
+                  writing?</span
+                >
+                <svg
+                  class="chevron"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div class="faq-answer">
+                No. Huzikit uses transparent, deterministic mathematical
+                algorithms and established linguistics formulas (such as Flesch
+                Reading Ease and Type-Token Ratio). We do not display fabricated
+                "AI writing scores".
+              </div>
+            </div>
+
+            <!-- 12 -->
+            <div class="faq-item">
+              <button class="faq-trigger" aria-expanded="false">
+                <span>Is Huzikit Word Counter completely free?</span>
+                <svg
+                  class="chevron"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div class="faq-answer">
+                Yes, Huzikit Word Counter is completely free, unlimited, and
+                accessible on all desktop and mobile devices without
+                registration.
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- RELATED TOOLS SECTION (6 LOCKED ROUTES) -->
+        <section
+          class="related-tools-section"
+          id="related-tools-section"
+          aria-label="Related Writing Utilities"
+        >
+          <div class="section-header-block">
+            <span class="section-tag">Explore More</span>
+            <h2 class="section-heading">Related Text Tools</h2>
+            <p class="section-desc">
+              Explore companion utilities designed to format, clean, and
+              generate content seamlessly.
+            </p>
+          </div>
+
+          <div class="related-grid">
+            <!-- 1. Character Counter -->
+            <div class="related-card">
+              <div>
+                <h3 class="related-card-title">
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.2"
+                    style="color: var(--primary)"
+                  >
+                    <polyline points="4 7 4 4 20 4 20 7"></polyline>
+                    <line x1="12" y1="4" x2="12" y2="20"></line>
+                  </svg>
+                  <span>Character Counter</span>
+                </h3>
+                <p class="related-card-desc">
+                  Audit character limits for social platforms, meta tags, and
+                  SMS constraints with precision.
+                </p>
+              </div>
+              <a href="/texttools/character-counter.html" class="related-link">
+                <span>Launch Tool</span>
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+
+            <!-- 2. Case Converter -->
+            <div class="related-card">
+              <div>
+                <h3 class="related-card-title">
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.2"
+                    style="color: var(--primary)"
+                  >
+                    <polyline points="4 7 4 4 20 4 20 7"></polyline>
+                    <line x1="9" y1="20" x2="15" y2="20"></line>
+                  </svg>
+                  <span>Case Converter</span>
+                </h3>
+                <p class="related-card-desc">
+                  Transform letter casing across UPPERCASE, lowercase, Title
+                  Case, camelCase, and slug styles.
+                </p>
+              </div>
+              <a href="/texttools/case-converter.html" class="related-link">
+                <span>Launch Tool</span>
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+
+            <!-- 3. Remove Duplicate Lines -->
+            <div class="related-card">
+              <div>
+                <h3 class="related-card-title">
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.2"
+                    style="color: var(--primary)"
+                  >
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                  </svg>
+                  <span>Remove Duplicate Lines</span>
+                </h3>
+                <p class="related-card-desc">
+                  Deduplicate email lists, text datasets, keywords, and code
+                  lines instantly with zero loss.
+                </p>
+              </div>
+              <a
+                href="/texttools/remove-duplicate-lines.html"
+                class="related-link"
+              >
+                <span>Launch Tool</span>
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+
+            <!-- 4. Text Reverser -->
+            <div class="related-card">
+              <div>
+                <h3 class="related-card-title">
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.2"
+                    style="color: var(--primary)"
+                  >
+                    <polyline points="1 4 1 10 7 10"></polyline>
+                    <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
+                  </svg>
+                  <span>Text Reverser</span>
+                </h3>
+                <p class="related-card-desc">
+                  Reverse strings, backwards lettering, mirror formatting, and
+                  inverted word sequences.
+                </p>
+              </div>
+              <a href="/texttools/text-reverser.html" class="related-link">
+                <span>Launch Tool</span>
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+
+            <!-- 5. Online Notepad -->
+            <div class="related-card">
+              <div>
+                <h3 class="related-card-title">
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.2"
+                    style="color: var(--primary)"
+                  >
+                    <path
+                      d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                    ></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                  </svg>
+                  <span>Online Notepad</span>
+                </h3>
+                <p class="related-card-desc">
+                  Distraction-free, fast scratchpad with browser auto-save for
+                  drafting notes and quick ideas.
+                </p>
+              </div>
+              <a href="/texttools/onlinenotepad.html" class="related-link">
+                <span>Launch Tool</span>
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+
+            <!-- 6. Lorem Ipsum Generator -->
+            <div class="related-card">
+              <div>
+                <h3 class="related-card-title">
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.2"
+                    style="color: var(--primary)"
+                  >
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <line x1="12" y1="16" x2="12" y2="12"></line>
+                    <line x1="12" y1="8" x2="12.01" y2="8"></line>
+                  </svg>
+                  <span>Lorem Ipsum Generator</span>
+                </h3>
+                <p class="related-card-desc">
+                  Generate custom paragraphs, sentences, and words of
+                  placeholder text for UI layouts.
+                </p>
+              </div>
+              <a
+                href="/texttools/loremipsumgenerator.html"
+                class="related-link"
+              >
+                <span>Launch Tool</span>
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- ========================================================================
+       FOOTER (LOCKED SPECIFICATION)
+       ======================================================================== -->
+    <footer class="site-footer" id="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <!-- Brand & Bio Block -->
+          <div class="footer-brand-block">
+            <a href="/" class="footer-logo">Huzikit</a>
+            <p class="footer-bio">
+              The ultimate modern suite of lightning-fast, secure online web
+              utilities, calculators, and developer tools.
+            </p>
+            <div class="footer-tagline">
+              Built with speed, security, and precision.
+            </div>
+            <div>
+              <a
+                href="https://x.com/huzikitoffical"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="footer-social-link"
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                  />
+                </svg>
+                <span>Follow @huzikitoffical</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Col 1: Text & Dev Tools -->
+          <div>
+            <h4 class="footer-col-title">Text &amp; Dev Tools</h4>
+            <ul class="footer-links-list">
+              <li>
+                <a href="/texttools/word-counter.html">Word Counter</a>
+              </li>
+              <li>
+                <a href="/texttools/case-converter.html">Case Converter</a>
+              </li>
+              <li>
+                <a href="/developertools/JSONFORMATTER.html">JSON Formatter</a>
+              </li>
+              <li><a href="/developertools/base64encoderdecoder.html">Base64 Utility</a></li>
+              <li>
+                <a href="/developertools/regextester.html">Regex Tester</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Col 2: Calculators & Image -->
+          <div>
+            <h4 class="footer-col-title">Calculators &amp; Image</h4>
+            <ul class="footer-links-list">
+              <li>
+                <a href="/calculator/agecalculator.html">Age Calculator</a>
+              </li>
+              <li>
+                <a href="/calculator/bmi-calculator.html">BMI Calculator</a>
+              </li>
+              <li>
+                <a href="/image&pdf/image-compressor.html"
+                  >Image Compressor</a
+                >
+              </li>
+              <li>
+                <a href="/image&pdf/QRGenrator.html"
+                  >QR Code Generator</a
+                >
+              </li>
+              <li>
+                <a href="/image&pdf/colorpicker.html">Color Picker</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Col 3: Company & Legal -->
+          <div>
+            <h4 class="footer-col-title">Company &amp; Legal</h4>
+            <ul class="footer-links-list">
+              <li><a href="/about.html">About Huzikit</a></li>
+              <li><a href="/disclamier.html">Disclaimer</a></li>
+              <li>
+                <a href="/privacy-policies.html">Privacy Policy</a>
+              </li>
+              <li>
+                <a href="/Termsofservices.html"
+                  >Terms of Service</a
+                >
+              </li>
+              <li>
+                <a href="/contact-us.html">Contact Support</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="footer-bottom-bar">
+          <div>&copy; 2026 Huzikit.com. All rights reserved.</div>
+          <div>
+            Free online utilities &bull; Zero external data tracking &bull;
+            Privacy guaranteed
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Toast Notification Container -->
+    <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+    <!-- Huzikit Word Counter Master Engine -->
+    <script src="/texttools/word-counter.js"></script>
+  </body>
+</html>

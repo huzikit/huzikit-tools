@@ -1,0 +1,1154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Free GPA Calculator Online — Calculate Your GPA | Huzikit</title>
+    <meta
+      name="description"
+      content="Calculate your semester, cumulative, and weighted GPA instantly with our free online GPA calculator. Features custom scales, target GPA planner, and quality points."
+    />
+    <link
+      rel="canonical"
+      href="https://huzikit.com/calculator/gpa-calculator"
+    />
+
+    <!-- Open Graph / Social -->
+    <meta property="OG:type" content="website" />
+    <meta
+      property="OG:url"
+      content="https://huzikit.com/calculator/gpa-calculator"
+    />
+    <meta
+      property="OG:title"
+      content="Free GPA Calculator Online — Calculate Your GPA | Huzikit"
+    />
+    <meta
+      property="OG:description"
+      content="Calculate your semester, cumulative, and weighted GPA instantly with our free online GPA calculator."
+    />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Free GPA Calculator Online — Calculate Your GPA | Huzikit"
+    />
+    <meta
+      name="twitter:description"
+      content="Calculate your semester, cumulative, and weighted GPA instantly with our free online GPA calculator."
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/calculator/gpa-calculator.css" />
+    <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon" />
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Huzikit Premium GPA Calculator",
+        "url": "https://huzikit.com/calculator/gpa-calculator",
+        "description": "Free online GPA calculator to compute semester, cumulative, and weighted grade point averages with customizable grading scales.",
+        "applicationCategory": "EducationalApplication",
+        "operatingSystem": "All",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://huzikit.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Calculators",
+            "item": "https://huzikit.com/toolpage/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "GPA Calculator",
+            "item": "https://huzikit.com//calculator/gpa-calculator"
+          }
+        ]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is a GPA calculator?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A GPA calculator is a digital tool that computes your Grade Point Average based on course credit hours and corresponding grade points achieved."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I calculate my GPA?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "GPA is calculated by dividing your total quality points by your total credit hours earned across all courses."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the GPA formula?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The standard weighted GPA formula is GPA = Total Quality Points ÷ Total Credit Hours, where Quality Points equal Credit Hours multiplied by Grade Points."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How are credit hours used in GPA?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Credit hours represent the weight or value of a course. Courses with more credit hours have a larger mathematical impact on your overall GPA."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What are quality points?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Quality points are calculated by multiplying the numerical grade points earned in a course by the credit hours assigned to that course."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I calculate cumulative GPA?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, you can combine your previous academic record with your current semester performance using our cumulative GPA calculator module."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I calculate GPA on a 4.0 scale?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, the default setting is a standard 4.0 scale, and you can also switch to 5.0, 10.0, or custom grading scales."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can GPA scales differ between universities?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, different institutions use varying grade point mappings (e.g., minus grades or 5.0 scales). You can use our Custom Grade Scale feature to match your school."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I use a custom grading scale?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, expand the Custom Grade Scale section to define and apply your exact institutional grade-to-point mapping."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is this GPA calculator free?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, the Huzikit GPA calculator is 100% free with no registration or hidden fees required."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is my GPA data stored online?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No, your data is securely stored entirely within your local browser storage using localStorage and is never transmitted to any external server."
+            }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header class="site-header">
+      <div class="nav-container">
+        <a href="/" class="brand-logo">
+          <span class="logo-text">Huzikit</span>
+        </a>
+
+        <nav class="desktop-nav">
+          <div class="dropdown">
+            <button class="drop-btn" aria-expanded="false">
+              Text Tools <span class="arrow">▼</span>
+            </button>
+            <div class="dropdown-content">
+              <a href="/texttools/word-counter.html">Word Counter</a>
+              <a href="/texttools/character-counter.html">Character Counter</a>
+              <a href="/texttools/case-converter.html">Case Converter</a>
+              <a href="/texttools/remove-duplicate-lines.html"
+                >Remove Duplicate Lines</a
+              >
+              <a href="/texttools/loremipsumgenerator.html"
+                >Lorem Ipsum Generator</a
+              >
+              <a href="/texttools/passwordgenerator.html">Password Generator</a>
+              <a href="/texttools/text-reverser.html">Text Reverser</a>
+              <a href="/texttools/onlinenotepad.html">Online Notepad</a>
+            </div>
+          </div>
+
+          <div class="dropdown">
+            <button class="drop-btn" aria-expanded="false">
+              Calculators <span class="arrow">▼</span>
+            </button>
+            <div class="dropdown-content">
+              <a href="/calculator/agecalculator.html">Age Calculator</a>
+              <a href="/calculator/bmi-calculator.html">BMI Calculator</a>
+              <a href="/calculator/percentage-calculator.html"
+                >Percentage Calculator</a
+              >
+              <a href="/calculator/Calorie-Calculator.html"
+                >Calorie Calculator</a
+              >
+              <a href="/calculator/discount-calculator.html"
+                >Discount Calculator</a
+              >
+              <a href="/calculator/saving&goalcalculator.html"
+                >Savings & Goal Calculator</a
+              >
+              <a href="/calculator/tip-calculator.html">Tip Calculator</a>
+              <a href="/calculator/gpa-calculator.html" class="active"
+                >GPA Calculator</a
+              >
+            </div>
+          </div>
+
+          <div class="dropdown">
+            <button class="drop-btn" aria-expanded="false">
+              Image & PDF <span class="arrow">▼</span>
+            </button>
+            <div class="dropdown-content">
+              <a href="/image&pdf/image-compressor.html">Image Compressor</a>
+              <a href="/image&pdf/image-resizer.html">Image Resizer</a>
+              <a href="/image&pdf/pdftowordconverter.html">PDF to Word</a>
+              <a href="/image&pdf/jpg-to-png.html">JPG to PNG</a>
+              <a href="/image&pdf/colorpicker.html">Color Picker / HEX</a>
+              <a href="/image&pdf/QRGenrator.html">QR Code Generator</a>
+            </div>
+          </div>
+
+          <div class="dropdown">
+            <button class="drop-btn" aria-expanded="false">
+              Developer <span class="arrow">▼</span>
+            </button>
+            <div class="dropdown-content">
+              <a href="/developertools/JSONFORMATTER.html">JSON Formatter</a>
+              <a href="/developertools/base64encoderdecoder.html"
+                >Base64 Encoder/Decoder</a
+              >
+              <a href="/developertools/urlencoderdecoder.html"
+                >URL Encoder/Decoder</a
+              >
+              <a href="/developertools/meta-tag-generator.html"
+                >Meta Tag Generator</a
+              >
+              <a href="/developertools/regextester.html">Regex Tester</a>
+              <a href="/developertools/markdownhtml.html">Markdown to HTML</a>
+              <a href="/developertools/cssminifier.html">CSS Minifier</a>
+              <a href="/developertools/unixtimestamp.html">Unix Timestamp</a>
+            </div>
+          </div>
+
+          <a href="/about.html" class="nav-link">About</a>
+        </nav>
+
+        <div class="nav-actions">
+          <button
+            class="search-trigger-btn"
+            id="searchTrigger"
+            aria-label="Search tools"
+          >
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle cx="11" cy="11" r="8" />
+              <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+            <span class="search-shortcut">Ctrl+K</span>
+          </button>
+          <button
+            class="hamburger"
+            id="hamburgerBtn"
+            aria-label="Toggle Menu"
+            aria-expanded="false"
+          >
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobileMenu">
+      <div class="mobile-menu-content">
+        <div class="mobile-menu-header">
+          <span class="brand-logo">Huzikit</span>
+          <button class="mobile-close" id="mobileClose" aria-label="Close menu">
+            &times;
+          </button>
+        </div>
+        <div class="mobile-nav-links">
+          <div class="mobile-accordion">
+            <button class="acc-btn">Text Tools</button>
+            <div class="acc-content">
+              <a href="/texttools/word-counter.html">Word Counter</a>
+              <a href="/texttools/character-counter.html">Character Counter</a>
+              <a href="/texttools/case-converter.html">Case Converter</a>
+              <a href="/texttools/remove-duplicate-lines.html"
+                >Remove Duplicate Lines</a
+              >
+              <a href="/texttools/loremipsumgenerator.html"
+                >Lorem Ipsum Generator</a
+              >
+              <a href="/texttools/passwordgenerator.html">Password Generator</a>
+              <a href="/texttools/text-reverser.html">Text Reverser</a>
+              <a href="/texttools/onlinenotepad.html">Online Notepad</a>
+            </div>
+          </div>
+          <div class="mobile-accordion">
+            <button class="acc-btn">Calculators</button>
+            <div class="acc-content">
+              <a href="/calculator/agecalculator.html">Age Calculator</a>
+              <a href="/calculator/bmi-calculator.html">BMI Calculator</a>
+              <a href="/calculator/percentage-calculator.html"
+                >Percentage Calculator</a
+              >
+              <a href="/calculator/Calorie-Calculator.html"
+                >Calorie Calculator</a
+              >
+              <a href="/calculator/discount-calculator.html"
+                >Discount Calculator</a
+              >
+              <a href="/calculator/saving&goalcalculator.html"
+                >Savings & Goal Calculator</a
+              >
+              <a href="/calculator/tip-calculator.html">Tip Calculator</a>
+              <a href="/calculator/gpa-calculator.html">GPA Calculator</a>
+            </div>
+          </div>
+          <div class="mobile-accordion">
+            <button class="acc-btn">Image & PDF</button>
+            <div class="acc-content">
+              <a href="/image&pdf/image-compressor.html">Image Compressor</a>
+              <a href="/image&pdf/image-resizer.html">Image Resizer</a>
+              <a href="/image&pdf/pdftowordconverter.html">PDF to Word</a>
+              <a href="/image&pdf/jpg-to-png.html">JPG to PNG</a>
+              <a href="/image&pdf/colorpicker.html">Color Picker / HEX</a>
+              <a href="/image&pdf/QRGenrator.html">QR Code Generator</a>
+            </div>
+          </div>
+          <div class="mobile-accordion">
+            <button class="acc-btn">Developer Tools</button>
+            <div class="acc-content">
+              <a href="/developertools/JSONFORMATTER.html">JSON Formatter</a>
+              <a href="/developertools/base64encoderdecoder.html"
+                >Base64 Encoder/Decoder</a
+              >
+              <a href="/developertools/urlencoderdecoder.html"
+                >URL Encoder/Decoder</a
+              >
+              <a href="/developertools/meta-tag-generator.html"
+                >Meta Tag Generator</a
+              >
+              <a href="/developertools/regextester.html">Regex Tester</a>
+              <a href="/developertools/markdownhtml.html">Markdown to HTML</a>
+              <a href="/developertools/cssminifier.html">CSS Minifier</a>
+              <a href="/developertools/unixtimestamp.html">Unix Timestamp</a>
+            </div>
+          </div>
+          <a href="/about.html" class="mobile-link">About</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Search Modal -->
+    <div
+      class="search-modal-backdrop"
+      id="searchModal"
+      role="dialog"
+      aria-hidden="true"
+    >
+      <div class="search-modal-container">
+        <div class="search-input-wrapper">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <circle cx="11" cy="11" r="8" />
+            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+          </svg>
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search 30+ tools (e.g. Word Counter, GPA, BMI)..."
+            autocomplete="off"
+          />
+          <button class="search-modal-close" id="searchModalClose">
+            &times;
+          </button>
+        </div>
+        <div class="search-results-container" id="searchResults">
+          <div class="search-hint">
+            Type to instantly search web utilities and calculators.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="container hero-grid">
+          <div class="hero-text">
+            <div class="hero-badge">FREE ACADEMIC UTILITY</div>
+            <h1 class="hero-title">Free GPA Calculator Online</h1>
+            <p class="hero-desc">
+              Calculate your semester GPA, cumulative GPA, weighted grades,
+              course quality points, and plan target academic outcomes instantly
+              with enterprise-grade precision and zero server tracking.
+            </p>
+            <div class="hero-actions">
+              <a href="#calculator" class="btn btn-primary"
+                >Start Calculating</a
+              >
+              <button class="btn btn-secondary" id="heroLoadExampleBtn">
+                Load Example
+              </button>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <div class="glass-card-3d">
+              <div class="card-header-3d">
+                <span>Semester Summary</span>
+                <span class="badge-pill">4.0 Scale</span>
+              </div>
+              <div class="card-gpa-display">
+                <span class="gpa-big-number">3.75</span>
+                <span class="gpa-big-label">Current GPA</span>
+              </div>
+              <div class="card-metrics-grid">
+                <div class="metric-box">
+                  <span class="m-val">12</span>
+                  <span class="m-lbl">Credits</span>
+                </div>
+                <div class="metric-box">
+                  <span class="m-val">45.00</span>
+                  <span class="m-lbl">Quality Pts</span>
+                </div>
+                <div class="metric-box">
+                  <span class="m-val">4</span>
+                  <span class="m-lbl">Courses</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Calculator Interface Section -->
+      <section class="calculator-section" id="calculator">
+        <div class="container">
+          <div class="app-card">
+            <!-- Config Controls -->
+            <div class="calc-config-bar">
+              <div class="config-group">
+                <label for="gpaScaleSelect">GPA Scale:</label>
+                <select id="gpaScaleSelect" class="form-select">
+                  <option value="4.0" selected>4.0 Scale</option>
+                  <option value="5.0">5.0 Scale</option>
+                  <option value="10.0">10.0 Scale</option>
+                  <option value="custom">Custom Scale</option>
+                </select>
+              </div>
+              <div class="config-actions">
+                <button class="btn-icon-text" id="addCourseBtn">
+                  + Add Course
+                </button>
+                <button class="btn-icon-text text-secondary-btn" id="resetBtn">
+                  Reset
+                </button>
+                <button
+                  class="btn-icon-text text-secondary-btn"
+                  id="saveLocalBtn"
+                >
+                  Save Progress
+                </button>
+                <button
+                  class="btn-icon-text text-secondary-btn"
+                  id="copySummaryBtn"
+                >
+                  Copy Summary
+                </button>
+              </div>
+            </div>
+
+            <div class="scale-warning-note">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <line x1="12" y1="16" x2="12" y2="12" />
+                <line x1="12" y1="8" x2="12.01" y2="8" />
+              </svg>
+              <span
+                >Grade-point values can vary by institution. If your university
+                uses a different grading scale, select Custom Scale or adjust
+                the scale to match your institution's official grading
+                policy.</span
+              >
+            </div>
+
+            <!-- Course Table Container -->
+            <div class="table-responsive-wrapper">
+              <table class="course-table" id="courseTable">
+                <thead>
+                  <tr>
+                    <th>Course Name</th>
+                    <th>Credit Hours</th>
+                    <th>Grade</th>
+                    <th>Grade Points</th>
+                    <th>Quality Points</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody id="courseTableBody">
+                  <!-- Dynamic Rows -->
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Result Dashboard Card -->
+            <div class="result-dashboard">
+              <div class="result-main-card">
+                <div class="result-main-number-wrap">
+                  <span class="result-gpa-val" id="resultGpa">3.75</span>
+                  <span class="result-gpa-lbl">Current GPA</span>
+                </div>
+                <div class="gpa-meter-container">
+                  <div class="gpa-meter-bar">
+                    <div
+                      class="gpa-meter-fill"
+                      id="gpaMeterFill"
+                      style="width: 93.75%"
+                    ></div>
+                  </div>
+                  <div class="gpa-meter-markers">
+                    <span>0.00</span>
+                    <span id="meterMaxLabel">4.00</span>
+                  </div>
+                </div>
+                <div class="gpa-status-text" id="gpaStatusMsg">
+                  Strong academic result
+                </div>
+              </div>
+
+              <div class="result-stats-grid">
+                <div class="stat-card">
+                  <span class="stat-value" id="resultCredits">12</span>
+                  <span class="stat-label">Total Credits</span>
+                </div>
+                <div class="stat-card">
+                  <span class="stat-value" id="resultQualityPoints">45.00</span>
+                  <span class="stat-label">Quality Points</span>
+                </div>
+                <div class="stat-card">
+                  <span class="stat-value" id="resultCourseCount">4</span>
+                  <span class="stat-label">Courses</span>
+                </div>
+                <div class="stat-card">
+                  <span class="stat-value" id="resultScaleDisplay"
+                    >4.0 Scale</span
+                  >
+                  <span class="stat-label">GPA Scale</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Custom Grade Scale Expandable Section -->
+            <div
+              class="expandable-section"
+              id="customScaleSection"
+              style="display: none"
+            >
+              <div class="expandable-header">
+                <h3>Custom Grade Scale Editor</h3>
+                <p>
+                  Define custom numerical grade points for each letter grade.
+                </p>
+              </div>
+              <div class="custom-scale-grid" id="customScaleGrid">
+                <!-- Populated via JS -->
+              </div>
+              <div class="custom-scale-actions">
+                <button class="btn btn-primary" id="applyCustomScaleBtn">
+                  Apply Custom Scale
+                </button>
+                <button class="btn btn-secondary" id="resetCustomScaleBtn">
+                  Reset Default Scale
+                </button>
+              </div>
+            </div>
+
+            <!-- Advanced Calculators Tabs / Accordions -->
+            <div class="advanced-tools-grid">
+              <!-- Cumulative GPA Calculator -->
+              <div class="adv-card">
+                <h3>Cumulative GPA Calculator</h3>
+                <p>
+                  Combine your previous academic record with your current
+                  semester performance.
+                </p>
+                <div class="form-row-grid">
+                  <div class="form-group">
+                    <label for="prevGpaInput">Previous GPA</label>
+                    <input
+                      type="number"
+                      id="prevGpaInput"
+                      step="0.01"
+                      min="0"
+                      placeholder="e.g. 3.50"
+                      class="form-control"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="prevCredInput">Previous Credits</label>
+                    <input
+                      type="number"
+                      id="prevCredInput"
+                      step="0.5"
+                      min="0"
+                      placeholder="e.g. 30"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+                <div class="adv-result-box" id="cumulativeResultBox">
+                  <span>Cumulative GPA: <strong>—</strong></span>
+                </div>
+              </div>
+
+              <!-- Target GPA / What-If Planner -->
+              <div class="adv-card">
+                <h3>Target GPA Calculator</h3>
+                <p>
+                  Calculate the average GPA needed over upcoming credits to
+                  reach your goal.
+                </p>
+                <div class="form-row-grid">
+                  <div class="form-group">
+                    <label for="targetGpaInput">Target GPA</label>
+                    <input
+                      type="number"
+                      id="targetGpaInput"
+                      step="0.01"
+                      min="0"
+                      placeholder="e.g. 3.80"
+                      class="form-control"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="upcomingCredInput">Upcoming Credits</label>
+                    <input
+                      type="number"
+                      id="upcomingCredInput"
+                      step="0.5"
+                      min="0"
+                      placeholder="e.g. 15"
+                      class="form-control"
+                    />
+                  </div>
+                </div>
+                <div class="adv-result-box" id="targetResultBox">
+                  <span>Required GPA: <strong>—</strong></span>
+                </div>
+              </div>
+            </div>
+
+            <!-- What-If Course Planning -->
+            <div class="adv-card full-width-card">
+              <h3>GPA What-If Planner</h3>
+              <p>
+                Add hypothetical future courses to project your semester outcome
+                without modifying your main course list.
+              </p>
+              <div class="whatif-row">
+                <input
+                  type="text"
+                  id="whatIfName"
+                  placeholder="Hypothetical Course"
+                  class="form-control"
+                />
+                <input
+                  type="number"
+                  id="whatIfCreds"
+                  placeholder="Credits"
+                  step="0.5"
+                  min="0.5"
+                  class="form-control"
+                />
+                <select id="whatIfGrade" class="form-select">
+                  <option value="4.00">A / A+</option>
+                  <option value="3.70">A-</option>
+                  <option value="3.30">B+</option>
+                  <option value="3.00">B</option>
+                  <option value="2.70">B-</option>
+                  <option value="2.30">C+</option>
+                  <option value="2.00">C</option>
+                  <option value="1.00">D</option>
+                  <option value="0.00">F</option>
+                </select>
+                <button class="btn btn-primary" id="addWhatIfBtn">
+                  Add Projection
+                </button>
+              </div>
+              <div id="whatIfResultsList" class="whatif-list"></div>
+            </div>
+
+            <!-- Storage Privacy Notice -->
+            <div class="storage-notice">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+              </svg>
+              <span
+                >Your calculator data is stored locally in your browser
+                (localStorage). No data is ever transmitted to a server.</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SEO / GEO Supporting Content Section -->
+      <section class="seo-content-section">
+        <div class="container article-container">
+          <article>
+            <h2>What Is a GPA?</h2>
+            <p>
+              A Grade Point Average (GPA) is a standard numerical calculation
+              used by secondary schools, colleges, and universities worldwide to
+              quantify a student's academic achievement. By converting letter
+              grades (such as A, B, C, D, or F) into numerical values
+              (traditionally on a 4.0 scale), academic institutions can
+              aggregate student performance across varying courses, credit
+              weights, and semesters into a single comprehensive metric.
+            </p>
+
+            <h2>How Does a GPA Calculator Work?</h2>
+            <p>
+              A digital GPA calculator automates the arithmetic required to
+              evaluate academic performance. Instead of manually multiplying
+              credit weights by individual grade values and dividing by total
+              credit hours, an online calculator performs real-time computations
+              whenever you adjust your course names, credits, or grades. This
+              provides instant feedback for academic advising, honors
+              eligibility, and scholarship applications.
+            </p>
+
+            <h2>How to Calculate GPA</h2>
+            <p>
+              To calculate your Grade Point Average manually, you use the
+              standard weighted GPA formula:
+            </p>
+            <div class="formula-box">
+              $$\text{GPA} = \frac{\text{Total Quality Points}}{\text{Total
+              Credit Hours}}$$
+            </div>
+            <p>
+              For each course, you multiply the credit hours by the grade point
+              equivalent to determine the quality points. You then sum all
+              quality points and divide by the sum of all credit hours
+              attempted.
+            </p>
+
+            <h2>How Quality Points Are Calculated</h2>
+            <p>
+              Quality points represent the weighted value of your academic
+              grade. The fundamental mathematical equation is:
+            </p>
+            <div class="formula-box">
+              $$\text{Quality Points} = \text{Credit Hours} \times \text{Grade
+              Points}$$
+            </div>
+            <p>
+              For example, if you earn an <strong>A</strong> (worth 4.00 grade
+              points) in a <strong>3-credit</strong> mathematics course, your
+              quality points for that class equal $3 \times 4.00 = 12.00$.
+            </p>
+
+            <h2>How to Calculate Cumulative GPA</h2>
+            <p>
+              Your cumulative GPA accounts for your entire academic history
+              across multiple semesters. To compute it accurately, combine your
+              previous academic record with your current semester record using
+              the weighted formula:
+            </p>
+            <div class="formula-box">
+              $$\text{Cumulative GPA} = \frac{(\text{Previous GPA} \times
+              \text{Previous Credits}) + (\text{Current GPA} \times
+              \text{Current Credits})}{\text{Previous Credits} + \text{Current
+              Credits}}$$
+            </div>
+            <p>
+              Note that this calculation assumes both GPAs are computed on the
+              identical grading scale (e.g., a standard 4.0 scale).
+            </p>
+
+            <h2>What Is a 4.0 GPA Scale?</h2>
+            <p>
+              The 4.0 GPA scale is the most widely adopted grading system in
+              North American higher education. In this system, an
+              <strong>A</strong> corresponds to 4.0 points, a
+              <strong>B</strong> to 3.0 points, a <strong>C</strong> to 2.0
+              points, a <strong>D</strong> to 1.0 point, and an
+              <strong>F</strong> to 0.0 points. Plus (+) and minus (-) modifiers
+              generally add or subtract 0.30 points (e.g., B+ equals 3.30).
+              However, grading policies vary significantly between institutions,
+              making customizable calculators essential.
+            </p>
+
+            <h2>How to Improve Your GPA</h2>
+            <p>
+              Improving a low GPA requires strategic academic planning. Focus on
+              enrolling in courses with balanced credit distributions, utilizing
+              office hours, taking advantage of peer tutoring, and projecting
+              upcoming semester requirements using target GPA calculators to
+              determine necessary grade thresholds.
+            </p>
+
+            <h2>Complete GPA Calculation Example</h2>
+            <p>Consider the following semester schedule:</p>
+            <ul class="example-list">
+              <li>
+                <strong>Mathematics:</strong> 3 credits, Grade A (4.00) → 12.00
+                Quality Points
+              </li>
+              <li>
+                <strong>English Composition:</strong> 3 credits, Grade B+ (3.30)
+                → 9.90 Quality Points
+              </li>
+              <li>
+                <strong>Physics:</strong> 4 credits, Grade A- (3.70) → 14.80
+                Quality Points
+              </li>
+              <li>
+                <strong>Computer Science:</strong> 3 credits, Grade A (4.00) →
+                12.00 Quality Points
+              </li>
+            </ul>
+            <p><strong>Total Credits:</strong> $3 + 3 + 4 + 3 = 13$ credits.</p>
+            <p>
+              <strong>Total Quality Points:</strong> $12.00 + 9.90 + 14.80 +
+              12.00 = 48.70$ points.
+            </p>
+            <p>
+              <strong>Final GPA:</strong> $48.70 \div 13 = 3.746$ (rounded to
+              3.75).
+            </p>
+          </article>
+
+          <!-- FAQ Section -->
+          <section class="faq-section" id="faqSection">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-accordion-list">
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  <span>What is a GPA calculator?</span>
+                  <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>
+                    A GPA calculator is a digital tool that computes your Grade
+                    Point Average based on course credit hours and corresponding
+                    grade points achieved.
+                  </p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  <span>How do I calculate my GPA?</span>
+                  <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>
+                    GPA is calculated by dividing your total quality points by
+                    your total credit hours earned across all courses.
+                  </p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  <span>What is the GPA formula?</span>
+                  <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>
+                    The standard weighted GPA formula is GPA = Total Quality
+                    Points ÷ Total Credit Hours, where Quality Points equal
+                    Credit Hours multiplied by Grade Points.
+                  </p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  <span>How are credit hours used in GPA?</span>
+                  <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>
+                    Credit hours represent the weight or value of a course.
+                    Courses with more credit hours have a larger mathematical
+                    impact on your overall GPA.
+                  </p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  <span>What are quality points?</span>
+                  <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>
+                    Quality points are calculated by multiplying the numerical
+                    grade points earned in a course by the credit hours assigned
+                    to that course.
+                  </p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  <span>Can I calculate cumulative GPA?</span>
+                  <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>
+                    Yes, you can combine your previous academic record with your
+                    current semester performance using our cumulative GPA
+                    calculator module.
+                  </p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  <span>Can I calculate GPA on a 4.0 scale?</span>
+                  <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>
+                    Yes, the default setting is a standard 4.0 scale, and you
+                    can also switch to 5.0, 10.0, or custom grading scales.
+                  </p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  <span>Can GPA scales differ between universities?</span>
+                  <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>
+                    Yes, different institutions use varying grade point mappings
+                    (e.g., minus grades or 5.0 scales). You can use our Custom
+                    Grade Scale feature to match your school.
+                  </p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  <span>Can I use a custom grading scale?</span>
+                  <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>
+                    Yes, expand the Custom Grade Scale section to define and
+                    apply your exact institutional grade-to-point mapping.
+                  </p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  <span>Is this GPA calculator free?</span>
+                  <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>
+                    Yes, the Huzikit GPA calculator is 100% free with no
+                    registration or hidden fees required.
+                  </p>
+                </div>
+              </div>
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  <span>Is my GPA data stored online?</span>
+                  <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                  <p>
+                    No, your data is securely stored entirely within your local
+                    browser storage using localStorage and is never transmitted
+                    to any external server.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-col-brand">
+          <a href="/" class="brand-logo footer-logo">
+            <span class="logo-text">Huzikit</span>
+          </a>
+          <p class="footer-bio">
+            The ultimate modern suite of lightning-fast, secure online web
+            utilities, calculators, and developer tools.
+          </p>
+          <div class="social-links">
+            <a
+              href="https://x.com/huzikitoffical"
+              target="_blank"
+              rel="noopener"
+              aria-label="X / Twitter"
+            >
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Text & Dev Tools</h4>
+          <ul>
+            <li>
+              <a href="/texttools/word-counter.html">Word Counter</a>
+            </li>
+            <li>
+              <a href="/texttools/case-converter.html">Case Converter</a>
+            </li>
+            <li>
+              <a href="/developertools/JSONFORMATTER.html">JSON Formatter</a>
+            </li>
+            <li>
+              <a href="/developertools/base64encoderdecoder.html"
+                >Base64 Utility</a
+              >
+            </li>
+            <li>
+              <a href="/developertools/regextester.html">Regex Tester</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Calculators & Image</h4>
+          <ul>
+            <li>
+              <a href="/calculator/agecalculator.html">Age Calculator</a>
+            </li>
+            <li>
+              <a href="/calculator/bmi-calculator.html">BMI Calculator</a>
+            </li>
+            <li>
+              <a href="/image&pdf/image-compressor.html">Image Compressor</a>
+            </li>
+            <li>
+              <a href="/image&pdf/QRGenrator.html">QR Code Generator</a>
+            </li>
+            <li>
+              <a href="/image&pdf/colorpicker.html">Color Picker</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company & Legal</h4>
+          <ul>
+            <li><a href="/about.html">About Huzikit</a></li>
+            <li><a href="/disclamier.html">Disclaimer</a></li>
+            <li>
+              <a href="/privacy-policies.html">Privacy Policy</a>
+            </li>
+            <li>
+              <a href="/Termsofservices.html">Terms of Service</a>
+            </li>
+            <li><a href="/contact-us.html">Contact Support</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom container">
+        <p>&copy; 2026 Huzikit.com. All rights reserved.</p>
+        <p>Built with speed, security, and precision.</p>
+      </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div class="toast-notification" id="toastNotification">
+      Copied to clipboard!
+    </div>
+
+    <script src="/calculator/gpa-calculator.js"></script>
+  </body>
+</html>

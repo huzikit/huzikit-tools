@@ -1,0 +1,1229 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Free Savings & Goal Calculator – Plan Your Savings | HuziKit</title>
+    <meta
+      name="description"
+      content="Estimate how long it takes to reach your savings goal and calculate required regular contributions with compound interest using HuziKit free online calculator."
+    />
+    <link
+      rel="canonical"
+      href="https://huzikit.com/calculator/savings&goalcalculator"
+    />
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://huzikitcom/calculator/savings&goalcalculator"
+    />
+    <meta
+      property="og:title"
+      content="Free Savings & Goal Calculator – Plan Your Savings | HuziKit"
+    />
+    <meta
+      property="og:description"
+      content="Estimate how long it takes to reach your savings goal and calculate required regular contributions with compound interest using HuziKit free online calculator."
+    />
+    <meta property="og:site_name" content="HuziKit" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Free Savings & Goal Calculator – Plan Your Savings | HuziKit"
+    />
+    <meta
+      name="twitter:description"
+      content="Estimate how long it takes to reach your savings goal and calculate required regular contributions with compound interest using HuziKit free online calculator."
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheet -->
+    <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="/calculator/saving&calculator.css" />
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Savings & Goal Calculator",
+        "url": "https://huzikit.com/calculator/savings-goal-calculator/",
+        "description": "Calculate how long it takes to reach savings goals or determine required regular contributions with compound interest.",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "All",
+        "browserRequirements": "Requires JavaScript. Requires HTML5.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://huzikit.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Calculators",
+            "item": "https://huzikit.com/toolpage"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Savings & Goal Calculator",
+            "item": "https://huzikit.com/calculator/savings&goalcalculator"
+          }
+        ]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "PnQ",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A Savings & Goal Calculator is a free online financial tool designed to help you determine either how long it will take to reach a specific financial target or how much you need to save regularly based on your timeline, current savings, and expected interest rate."
+            },
+            "name": "What is a Savings & Goal Calculator?"
+          },
+          {
+            "@type": "PnQ",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, our calculator fully supports 0% interest rate scenarios, calculating pure contributions over time without compounding growth."
+            },
+            "name": "Can it calculate 0% interest?"
+          },
+          {
+            "@type": "PnQ",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "This calculator provides estimates for educational purposes only. Actual savings results may differ due to variable rates, fees, taxes, and contribution timing."
+            },
+            "name": "Are results guaranteed or financial advice?"
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <!-- GLOBAL NAVBAR -->
+    <header class="site-header" id="site-header">
+      <div class="nav-container">
+        <a href="/" class="brand-logo" aria-label="HuziKit Home">
+          <span class="logo-text">HuziKit</span>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="desktop-nav" aria-label="Main Navigation">
+          <ul class="nav-list">
+            <!-- Category 1: Text Tools -->
+            <li class="nav-item dropdown">
+              <button
+                class="dropdown-toggle"
+                aria-expanded="false"
+                aria-haspopup="true"
+              >
+                Text Tools <span class="chevron" aria-hidden="true">▾</span>
+              </button>
+              <div class="dropdown-menu">
+                <div class="dropdown-grid">
+                  <a href="/texttools/word-counter.html" class="dropdown-link">
+                    <span class="tool-name">Word Counter</span>
+                    <span class="tool-desc"
+                      >Count words, characters & paragraphs</span
+                    >
+                  </a>
+                  <a
+                    href="/texttools/character-counter.html"
+                    class="dropdown-link"
+                  >
+                    <span class="tool-name">Character Counter</span>
+                    <span class="tool-desc"
+                      >Track character counts instantly</span
+                    >
+                  </a>
+                  <a
+                    href="/texttools/case-converter.html"
+                    class="dropdown-link"
+                  >
+                    <span class="tool-name">Case Converter</span>
+                    <span class="tool-desc"
+                      >Uppercase, lowercase, title case</span
+                    >
+                  </a>
+                  <a
+                    href="/texttools/remove-duplicate-lines.html"
+                    class="dropdown-link"
+                  >
+                    <span class="tool-name">Remove Duplicate Lines</span>
+                    <span class="tool-desc">Clean up text lists fast</span>
+                  </a>
+                  <a
+                    href="/texttools/loremipsumgenerator.html"
+                    class="dropdown-link"
+                  >
+                    <span class="tool-name">Lorem Ipsum Generator</span>
+                    <span class="tool-desc">Placeholder text for designs</span>
+                  </a>
+                  <a
+                    href="/texttools/passwordgenerator.html"
+                    class="dropdown-link"
+                  >
+                    <span class="tool-name">Password Generator</span>
+                    <span class="tool-desc">Secure randomized passwords</span>
+                  </a>
+                  <a href="/texttools/text-reverser.html" class="dropdown-link">
+                    <span class="tool-name">Text Reverser</span>
+                    <span class="tool-desc">Reverse words or letters</span>
+                  </a>
+                  <a href="/texttools/onlinenotepad.html" class="dropdown-link">
+                    <span class="tool-name">Online Notepad</span>
+                    <span class="tool-desc">Quick browser scratchpad</span>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <!-- Category 2: Calculators -->
+            <li class="nav-item dropdown">
+              <button
+                class="dropdown-toggle active"
+                aria-expanded="false"
+                aria-haspopup="true"
+              >
+                Calculators <span class="chevron" aria-hidden="true">▾</span>
+              </button>
+              <div class="dropdown-menu">
+                <div class="dropdown-grid">
+                  <a
+                    href="/calculator/agecalculator.html"
+                    class="dropdown-link"
+                  >
+                    <span class="tool-name">Age Calculator</span>
+                    <span class="tool-desc">Exact age & date intervals</span>
+                  </a>
+                  <a
+                    href="/calculator/bmi-calculator.html"
+                    class="dropdown-link"
+                  >
+                    <span class="tool-name">BMI Calculator</span>
+                    <span class="tool-desc">Body mass index metrics</span>
+                  </a>
+                  <a
+                    href="/calculator/percentage-calculator.html"
+                    class="dropdown-link"
+                  >
+                    <span class="tool-name">Percentage Calculator</span>
+                    <span class="tool-desc">Calculate % increases & drops</span>
+                  </a>
+                  <a
+                    href="/calculator/Calorie-Calculator.html"
+                    class="dropdown-link"
+                  >
+                    <span class="tool-name">Calorie Calculator</span>
+                    <span class="tool-desc">Daily energy expenditure</span>
+                  </a>
+                  <a
+                    href="/calculator/discount-calculator.html"
+                    class="dropdown-link"
+                  >
+                    <span class="tool-name">Discount Calculator</span>
+                    <span class="tool-desc">Sale prices & savings</span>
+                  </a>
+                  <a
+                    href="/calculator/saving&goalcalculator.html"
+                    class="dropdown-link current"
+                  >
+                    <span class="tool-name">Savings & Goal Calculator</span>
+                    <span class="tool-desc"
+                      >Plan goals & compound interest</span
+                    >
+                  </a>
+                  <a
+                    href="/calculator/tip-calculator.html"
+                    class="dropdown-link"
+                  >
+                    <span class="tool-name">Tip Calculator</span>
+                    <span class="tool-desc">Split bills & tips easily</span>
+                  </a>
+                  <a
+                    href="/calculator/gpa-calculator.html"
+                    class="dropdown-link"
+                  >
+                    <span class="tool-name">GPA Calculator</span>
+                    <span class="tool-desc">Semester grade point average</span>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <!-- Category 3: Image & PDF -->
+            <li class="nav-item dropdown">
+              <button
+                class="dropdown-toggle"
+                aria-expanded="false"
+                aria-haspopup="true"
+              >
+                Image & PDF <span class="chevron" aria-hidden="true">▾</span>
+              </button>
+              <div class="dropdown-menu">
+                <div class="dropdown-grid">
+                  <a
+                    href="/image&pdf/image-compressor.html"
+                    class="dropdown-link"
+                  >
+                    <span class="tool-name">Image Compressor</span>
+                    <span class="tool-desc">Optimize image file sizes</span>
+                  </a>
+                  <a href="/image&pdf/image-resizer.html" class="dropdown-link">
+                    <span class="tool-name">Image Resizer</span>
+                    <span class="tool-desc">Resize dimensions securely</span>
+                  </a>
+                  <a
+                    href="/image&pdf/pdftowordconverter.html"
+                    class="dropdown-link"
+                  >
+                    <span class="tool-name">PDF to Word</span>
+                    <span class="tool-desc">Document format conversion</span>
+                  </a>
+                  <a
+                    href="/image&pdf/pdftowordconverter.html"
+                    class="dropdown-link"
+                  >
+                    <span class="tool-name">JPG to PNG</span>
+                    <span class="tool-desc">Raster format conversion</span>
+                  </a>
+                  <a href="/image&pdf/colorpicker.html" class="dropdown-link">
+                    <span class="tool-name">Color Picker / HEX</span>
+                    <span class="tool-desc">Extract color codes</span>
+                  </a>
+                  <a href="/image&pdf/QRGenrator.html" class="dropdown-link">
+                    <span class="tool-name">QR Code Generator</span>
+                    <span class="tool-desc">Custom scannable QR codes</span>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <!-- Category 4: Developer -->
+            <li class="nav-item dropdown">
+              <button
+                class="dropdown-toggle"
+                aria-expanded="false"
+                aria-haspopup="true"
+              >
+                Developer <span class="chevron" aria-hidden="true">▾</span>
+              </button>
+              <div class="dropdown-menu">
+                <div class="dropdown-grid">
+                  <a
+                    href="/developertools/JSONFORMATTER.html"
+                    class="dropdown-link"
+                  >
+                    <span class="tool-name">JSON Formatter</span>
+                    <span class="tool-desc">Validate & beautify JSON</span>
+                  </a>
+                  <a
+                    href="/developertools/base64encoderdecoder.html"
+                    class="dropdown-link"
+                  >
+                    <span class="tool-name">Base64 Encoder/Decoder</span>
+                    <span class="tool-desc">Encode string data safely</span>
+                  </a>
+                  <a
+                    href="/developertools/urlencoderdecoder.html"
+                    class="dropdown-link"
+                  >
+                    <span class="tool-name">URL Encoder/Decoder</span>
+                    <span class="tool-desc">Percent encoding utilities</span>
+                  </a>
+                  <a
+                    href="/developertools/meta-tag-generator.html"
+                    class="dropdown-link"
+                  >
+                    <span class="tool-name">Meta Tag Generator</span>
+                    <span class="tool-desc">SEO meta tags & previews</span>
+                  </a>
+                  <a
+                    href="/developertools/regextester.html"
+                    class="dropdown-link"
+                  >
+                    <span class="tool-name">Regex Tester</span>
+                    <span class="tool-desc">Test regular expressions</span>
+                  </a>
+                  <a
+                    href="/developertools/markdownhtml.html"
+                    class="dropdown-link"
+                  >
+                    <span class="tool-name">Markdown to HTML</span>
+                    <span class="tool-desc">Compile markdown syntax</span>
+                  </a>
+                  <a
+                    href="/developertools/cssminifier.html"
+                    class="dropdown-link"
+                  >
+                    <span class="tool-name">CSS Minifier</span>
+                    <span class="tool-desc">Compress stylesheets</span>
+                  </a>
+                  <a
+                    href="/developertools/unixtimestamp.html"
+                    class="dropdown-link"
+                  >
+                    <span class="tool-name">Unix Timestamp</span>
+                    <span class="tool-desc">Convert epoch time formats</span>
+                  </a>
+                </div>
+              </div>
+            </li>
+
+            <!-- Simple Links -->
+            <li class="nav-item">
+              <a href="/about.html" class="nav-link">About</a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Navbar Actions -->
+        <div class="nav-actions">
+          <button
+            class="search-trigger-btn"
+            id="search-trigger-btn"
+            aria-label="Open search (Ctrl+K)"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <span class="search-shortcut">Ctrl+K</span>
+          </button>
+          <button
+            class="mobile-menu-toggle"
+            id="mobile-menu-toggle"
+            aria-label="Toggle mobile menu"
+            aria-expanded="false"
+          >
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+            <span class="hamburger-bar"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Navigation Panel -->
+    <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
+    <div class="mobile-nav-panel" id="mobile-nav-panel" aria-hidden="true">
+      <div class="mobile-nav-header">
+        <a href="/" class="brand-logo">
+          <span class="logo-text">HuziKit</span>
+        </a>
+        <button
+          class="mobile-close-btn"
+          id="mobile-close-btn"
+          aria-label="Close mobile menu"
+        >
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+      <div class="mobile-nav-body">
+        <ul class="mobile-accordion-list">
+          <!-- Accordion 1: Text Tools -->
+          <li class="mobile-accordion-item">
+            <button class="mobile-accordion-btn" aria-expanded="false">
+              <span>Text Tools</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="mobile-accordion-content">
+              <a href="/texttools/word-counter.html">Word Counter</a>
+              <a href="/texttools/character-counter.html">Character Counter</a>
+              <a href="/texttools/case-converter.html">Case Converter</a>
+              <a href="/texttools/remove-duplicate-lines.html"
+                >Remove Duplicate Lines</a
+              >
+              <a href="/texttools/loremipsumgenerator.html"
+                >Lorem Ipsum Generator</a
+              >
+              <a href="/texttools/passwordgenerator.html">Password Generator</a>
+              <a href="/texttools/text-reverser.html">Text Reverser</a>
+              <a href="/texttools/onlinenotepad.html">Online Notepad</a>
+            </div>
+          </li>
+
+          <!-- Accordion 2: Calculators -->
+          <li class="mobile-accordion-item">
+            <button class="mobile-accordion-btn" aria-expanded="false">
+              <span>Calculators</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="mobile-accordion-content">
+              <a href="/calculator/agecalculator.html">Age Calculator</a>
+              <a href="/calculator/bmi-calculator.html">BMI Calculator</a>
+              <a href="/calculator/percentage-calculator.html"
+                >Percentage Calculator</a
+              >
+              <a href="/calculator/Calorie-Calculator.html"
+                >Calorie Calculator</a
+              >
+              <a href="/calculator/discount-calculator.html"
+                >Discount Calculator</a
+              >
+              <a href="/calculator/saving&goalcalculator.html" class="current"
+                >Savings & Goal Calculator</a
+              >
+              <a href="/calculator/tip-calculator.html">Tip Calculator</a>
+              <a href="/calculator/gpa-calculator.html">GPA Calculator</a>
+            </div>
+          </li>
+
+          <!-- Accordion 3: Image & PDF -->
+          <li class="mobile-accordion-item">
+            <button class="mobile-accordion-btn" aria-expanded="false">
+              <span>Image & PDF</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="mobile-accordion-content">
+              <a href="/image&pdf/image-compressor.html">Image Compressor</a>
+              <a href="/image&pdf/image-resizer.html">Image Resizer</a>
+              <a href="/image&pdf/pdftowordconverter.html">PDF to Word</a>
+              <a href="/image&pdf/jpg-to-png.html">JPG to PNG</a>
+              <a href="/image&pdf/colorpicker.html">Color Picker / HEX</a>
+              <a href="/image&pdf/QRGenrator.html">QR Code Generator</a>
+            </div>
+          </li>
+
+          <!-- Accordion 4: Developer -->
+          <li class="mobile-accordion-item">
+            <button class="mobile-accordion-btn" aria-expanded="false">
+              <span>Developer</span>
+              <span class="accordion-icon">+</span>
+            </button>
+            <div class="mobile-accordion-content">
+              <a href="/developertools/JSONFORMATTER.html">JSON Formatter</a>
+              <a href="/developertools/base64encoderdecoder.html"
+                >Base64 Encoder/Decoder</a
+              >
+              <a href="/developertools/urlencoderdecoder.html"
+                >URL Encoder/Decoder</a
+              >
+              <a href="/developertools/meta-tag-generator.html"
+                >Meta Tag Generator</a
+              >
+              <a href="/developertools/regextester.html">Regex Tester</a>
+              <a href="/developertools/markdownhtml.html">Markdown to HTML</a>
+              <a href="/developertools/cssminifier.html">CSS Minifier</a>
+              <a href="/developertools/unixtimestamp.html">Unix Timestamp</a>
+            </div>
+          </li>
+        </ul>
+
+        <div class="mobile-simple-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- SEARCH MODAL -->
+    <div
+      class="search-modal-backdrop"
+      id="search-modal-backdrop"
+      aria-hidden="true"
+    >
+      <div
+        class="search-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Search tools"
+      >
+        <div class="search-input-wrapper">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input
+            type="text"
+            id="global-search-input"
+            placeholder="Search across all 30 tools, & about..."
+            autocomplete="off"
+          />
+          <button
+            class="search-close-btn"
+            id="search-close-btn"
+            aria-label="Close search"
+          >
+            ESC
+          </button>
+        </div>
+        <div class="search-results-container" id="search-results-container">
+          <div class="search-hint">Type to search HuziKit tools...</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAIN CONTENT AREA -->
+    <main id="main-content">
+      <!-- HERO SECTION -->
+      <section class="hero-section">
+        <div class="hero-bg-mesh"></div>
+        <div class="container hero-container">
+          <div class="hero-content">
+            <div class="badge-pill">Free Financial Tool</div>
+            <h1>Free Savings & Goal Calculator</h1>
+            <p class="hero-subtitle">
+              Estimate how long it may take to reach a savings goal and how much
+              you may need to save regularly with compounding growth.
+            </p>
+            <div class="hero-cta-group">
+              <a
+                href="#calculator-card"
+                class="btn btn-primary"
+                id="hero-cta-btn"
+                >Calculate My Goal</a
+              >
+              <a href="#how-to-use" class="btn btn-secondary">How It Works</a>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <div class="floating-goal-card" id="floating-goal-card">
+              <div class="card-header-flex">
+                <span class="goal-label">Emergency Fund</span>
+                <span class="goal-badge">Active</span>
+              </div>
+              <div class="card-amount">$10,000.00</div>
+              <div class="card-progress-bar">
+                <div class="card-progress-fill" style="width: 65%"></div>
+              </div>
+              <div class="card-footer-flex">
+                <span>Saved: $6,500</span>
+                <span class="accent-text">65% Reached</span>
+              </div>
+              <div class="orbit-shape shape-1"></div>
+              <div class="orbit-shape shape-2"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CALCULATOR SECTION -->
+      <section class="calculator-section container" id="calculator-card">
+        <div class="calculator-wrapper">
+          <!-- Mode Switcher -->
+          <div class="calc-mode-switcher" role="tablist">
+            <button
+              class="mode-btn active"
+              role="tab"
+              aria-selected="true"
+              data-mode="time"
+            >
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+              How Long Will It Take?
+            </button>
+            <button
+              class="mode-btn"
+              role="tab"
+              aria-selected="false"
+              data-mode="contribution"
+            >
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <line x1="12" y1="1" x2="12" y2="23"></line>
+                <path
+                  d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"
+                ></path>
+              </svg>
+              How Much Should I Save?
+            </button>
+          </div>
+
+          <!-- Presets Bar -->
+          <div class="presets-toolbar">
+            <span class="presets-label">Quick Presets:</span>
+            <div class="presets-chips">
+              <button class="preset-chip" data-preset="emergency">
+                Emergency Fund
+              </button>
+              <button class="preset-chip" data-preset="vacation">
+                Vacation
+              </button>
+              <button class="preset-chip" data-preset="laptop">
+                New Laptop
+              </button>
+              <button class="preset-chip" data-preset="car">
+                Car Down Payment
+              </button>
+              <button class="preset-chip" data-preset="home">
+                Home Deposit
+              </button>
+            </div>
+          </div>
+
+          <div class="calculator-grid">
+            <!-- LEFT: INPUTS -->
+            <div class="calc-inputs-pane">
+              <div class="input-group">
+                <label for="currency-select">Currency</label>
+                <select id="currency-select" class="form-control">
+                  <option value="USD" selected>USD ($)</option>
+                  <option value="CAD">CAD ($)</option>
+                  <option value="GBP">GBP (£)</option>
+                  <option value="AUD">AUD ($)</option>
+                  <option value="EUR">EUR (€)</option>
+                </select>
+              </div>
+
+              <div class="input-group">
+                <label for="savings-goal">Savings Goal</label>
+                <div class="input-prefix-wrapper">
+                  <span class="input-prefix" id="currency-symbol">$</span>
+                  <input
+                    type="number"
+                    id="savings-goal"
+                    class="form-control with-prefix"
+                    value="10000"
+                    min="1"
+                    step="any"
+                  />
+                </div>
+              </div>
+
+              <div class="input-group">
+                <label for="current-savings">Current Savings</label>
+                <div class="input-prefix-wrapper">
+                  <span class="input-prefix curr-sym">$</span>
+                  <input
+                    type="number"
+                    id="current-savings"
+                    class="form-control with-prefix"
+                    value="1000"
+                    min="0"
+                    step="any"
+                  />
+                </div>
+              </div>
+
+              <!-- Dynamic Input based on Mode -->
+              <div class="input-group" id="dynamic-input-group">
+                <!-- Mode Time: Show Regular Contribution -->
+                <div id="wrapper-contribution" class="mode-dependent-field">
+                  <label for="regular-contribution">Regular Contribution</label>
+                  <div class="input-prefix-wrapper">
+                    <span class="input-prefix curr-sym">$</span>
+                    <input
+                      type="number"
+                      id="regular-contribution"
+                      class="form-control with-prefix"
+                      value="250"
+                      min="0"
+                      step="any"
+                    />
+                  </div>
+                </div>
+                <!-- Mode Contribution: Show Timeframe -->
+                <div
+                  id="wrapper-timeframe"
+                  class="mode-dependent-field"
+                  style="display: none"
+                >
+                  <label for="target-timeframe">Target Timeframe (Years)</label>
+                  <input
+                    type="number"
+                    id="target-timeframe"
+                    class="form-control"
+                    value="3"
+                    min="0.1"
+                    max="100"
+                    step="0.5"
+                  />
+                </div>
+              </div>
+
+              <div class="input-row-dual">
+                <div class="input-group">
+                  <label for="contribution-freq">Contribution Frequency</label>
+                  <select id="contribution-freq" class="form-control">
+                    <option value="weekly">Weekly</option>
+                    <option value="biweekly">Biweekly</option>
+                    <option value="monthly" selected>Monthly</option>
+                    <option value="yearly">Yearly</option>
+                  </select>
+                </div>
+                <div class="input-group">
+                  <label for="compounding-freq">Compounding Frequency</label>
+                  <select id="compounding-freq" class="form-control">
+                    <option value="daily">Daily</option>
+                    <option value="monthly" selected>Monthly</option>
+                    <option value="quarterly">Quarterly</option>
+                    <option value="semiannually">Semi-annually</option>
+                    <option value="annually">Annually</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="input-group">
+                <label for="interest-rate">Annual Interest Rate (%)</label>
+                <input
+                  type="number"
+                  id="interest-rate"
+                  class="form-control"
+                  value="4.5"
+                  min="0"
+                  max="100"
+                  step="0.1"
+                />
+              </div>
+
+              <div class="calc-action-buttons">
+                <button class="btn btn-primary btn-block" id="calculate-btn">
+                  Calculate Goal
+                </button>
+                <button
+                  class="btn btn-outline"
+                  id="reset-btn"
+                  title="Reset Calculator"
+                >
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"
+                    ></path>
+                    <path d="M3 3v5h5"></path>
+                  </svg>
+                  Reset
+                </button>
+              </div>
+            </div>
+
+            <!-- RIGHT: RESULTS -->
+            <div class="calc-results-pane" id="calc-results-pane">
+              <div class="results-header-banner">
+                <span class="results-subtitle" id="result-headline-sub"
+                  >Estimated Time to Goal</span
+                >
+                <div class="primary-result-highlight" id="primary-result-value">
+                  2 years 9 months
+                </div>
+                <div class="estimated-date-badge" id="estimated-date-badge">
+                  Estimated Date: June 2029
+                </div>
+              </div>
+
+              <!-- Progress Bar Container -->
+              <div class="progress-section-card">
+                <div class="progress-meta-flex">
+                  <span id="progress-text-fraction">$2,000 / $10,000</span>
+                  <span id="progress-text-percent">20%</span>
+                </div>
+                <div class="main-progress-track">
+                  <div
+                    class="main-progress-bar"
+                    id="main-progress-bar"
+                    style="width: 20%"
+                  ></div>
+                </div>
+              </div>
+
+              <!-- Breakdown Metric Grid -->
+              <div class="metrics-grid-compact">
+                <div class="metric-card-mini">
+                  <span class="metric-lbl">Remaining Amount</span>
+                  <span class="metric-val" id="res-remaining">$8,000.00</span>
+                </div>
+                <div class="metric-card-mini">
+                  <span class="metric-lbl">Total Contributions</span>
+                  <span class="metric-val" id="res-contributions"
+                    >$8,250.00</span
+                  >
+                </div>
+                <div class="metric-card-mini">
+                  <span class="metric-lbl">Estimated Interest</span>
+                  <span class="metric-val" id="res-interest">$750.00</span>
+                </div>
+                <div class="metric-card-mini">
+                  <span class="metric-lbl">Projected Balance</span>
+                  <span class="metric-val" id="res-balance">$10,000.00</span>
+                </div>
+              </div>
+
+              <!-- Secondary Actions -->
+              <div class="results-action-bar">
+                <button class="btn btn-secondary btn-sm" id="copy-results-btn">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <rect
+                      x="9"
+                      y="9"
+                      width="13"
+                      height="13"
+                      rx="2"
+                      ry="2"
+                    ></rect>
+                    <path
+                      d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                    ></path>
+                  </svg>
+                  Copy Results
+                </button>
+                <button
+                  class="btn btn-secondary btn-sm"
+                  id="download-results-btn"
+                >
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                  Download TXT
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Yearly Breakdown Table Section -->
+          <div class="breakdown-collapsible-section">
+            <div class="breakdown-header-flex">
+              <h3>Yearly Savings Breakdown</h3>
+              <button
+                class="btn btn-outline btn-sm"
+                id="toggle-breakdown-btn"
+                aria-expanded="false"
+              >
+                View Breakdown Table
+              </button>
+            </div>
+            <div
+              class="breakdown-table-wrapper"
+              id="breakdown-table-wrapper"
+              style="display: none"
+            >
+              <table class="breakdown-table">
+                <thead>
+                  <tr>
+                    <th>Year</th>
+                    <th>Starting Balance</th>
+                    <th>Contributions</th>
+                    <th>Interest Earned</th>
+                    <th>Ending Balance</th>
+                  </tr>
+                </thead>
+                <tbody id="breakdown-tbody">
+                  <!-- Dynamically populated rows -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ADVERTISERS / ADSENSE RESERVED SLOT -->
+      <section
+        class="container ad-wrapper-section"
+        aria-label="Sponsored Content"
+      >
+        <div class="ad-placeholder-box">
+          <span>Advertisement</span>
+        </div>
+      </section>
+
+      <!-- EDUCATIONAL CONTENT & GEO OPTIMIZED SECTIONS -->
+      <section class="content-article-section container">
+        <div class="article-inner-wrapper">
+          <h2 id="what-is-a-savings-goal-calculator">
+            What is a Savings & Goal Calculator?
+          </h2>
+          <p>
+            A Savings & Goal Calculator is an essential financial planning
+            instrument designed to project how your money grows over time.
+            Whether you are building an emergency fund, saving for a down
+            payment on a car or home, or setting aside funds for a major
+            purchase, knowing the exact trajectory of your capital helps remove
+            uncertainty. By combining your starting balance, regular deposits,
+            contribution frequency, and annual compound interest rates, this
+            tool maps out an accurate timeline to success.
+          </p>
+
+          <h2 id="how-does-it-work">
+            How Does Compound Interest Accelerate Your Savings?
+          </h2>
+          <p>
+            Compound interest is often described as earning interest on your
+            interest. Unlike simple interest, which is calculated solely on your
+            principal starting amount, compound interest calculates returns on
+            both your initial deposit and the accumulated interest from prior
+            periods. The frequency of compounding—whether daily, monthly,
+            quarterly, or annually—directly influences how quickly your balance
+            accelerates. Regular contributions further amplify this effect by
+            continuously increasing the principal base generating returns.
+          </p>
+
+          <h2 id="how-much-should-i-save">
+            How Much Should I Save Each Month?
+          </h2>
+          <p>
+            Determining your monthly savings target depends heavily on your
+            specific financial goals and target timeframe. Using the second mode
+            of our calculator ("How Much Should I Save?"), you can input your
+            desired target date and let the algorithm reverse-engineer the exact
+            recurring contribution required. Financial experts often suggest the
+            50/30/20 rule as a benchmark, allocating 50% of income to needs, 30%
+            to wants, and 20% to savings and debt reduction.
+          </p>
+
+          <div class="faq-accordion-container" id="how-to-use">
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span>How do I use the HuziKit Savings & Goal Calculator?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Simply enter your target savings goal, current savings,
+                  regular contribution amount, preferred contribution frequency,
+                  and estimated annual interest rate. Click "Calculate Goal" to
+                  instantly view your timeline, breakdown metrics, and estimated
+                  goal completion date.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span>Can this calculator handle 0% interest scenarios?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Yes. If your interest rate is set to 0%, the calculator
+                  accurately computes your timeline or required contributions
+                  based purely on linear additions without any compounding
+                  growth.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question" aria-expanded="false">
+                <span>Are these savings projections guaranteed?</span>
+                <span class="faq-icon">+</span>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Calculations provide mathematical estimates based on constant
+                  rates and regular contributions. Actual financial returns may
+                  vary due to changing interest rates, account fees, taxes, and
+                  deposit timing.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Financial Disclaimer -->
+          <div class="financial-disclaimer-box">
+            <strong>Financial Disclaimer:</strong> This calculator provides
+            estimates for educational purposes only. Actual savings results may
+            differ because rates, fees, taxes, account terms and contribution
+            timing can vary. It is not financial advice.
+          </div>
+        </div>
+      </section>
+
+      <!-- RELATED TOOLS SECTION -->
+      <section class="related-tools-section container">
+        <h3>Explore Related Free Tools</h3>
+        <div class="related-tools-grid">
+          <a href="/calculator/percentage-calculator.html" class="related-card">
+            <h4>Percentage Calculator</h4>
+            <p>
+              Calculate percentage increases, decreases, and differences
+              instantly.
+            </p>
+          </a>
+          <a href="/calculator/discount-calculator.html" class="related-card">
+            <h4>Discount Calculator</h4>
+            <p>
+              Figure out sale prices, markdown percentages, and money saved.
+            </p>
+          </a>
+          <a href="/calculator/agecalculator.html" class="related-card">
+            <h4>Age Calculator</h4>
+            <p>Calculate exact age in years, months, weeks, and days.</p>
+          </a>
+          <a href="/calculator/gpa-calculator.html" class="related-card">
+            <h4>GPA Calculator</h4>
+            <p>
+              Easily calculate your semester and cumulative grade point average.
+            </p>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- TOAST NOTIFICATION -->
+    <div class="toast-notification" id="toast-notification" aria-hidden="true">
+      <span id="toast-message">Action completed successfully.</span>
+    </div>
+
+    <!-- GLOBAL FOOTER -->
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-col-brand">
+          <a href="/" class="brand-logo footer-logo">
+            <span class="logo-text">HuziKit</span>
+          </a>
+          <p class="footer-tagline">
+            HuziKit is your destination for 30 free, fast, and secure online
+            productivity, math, image, and developer utilities.
+          </p>
+          <div class="footer-social-links">
+            <span class="copyright-text"
+              >© 2026 HuziKit.com. All rights reserved.</span
+            >
+          </div>
+        </div>
+
+        <div class="footer-col-links">
+          <h4>Text & Dev Tools</h4>
+          <ul>
+            <li><a href="/texttools/word-counter.html">Word Counter</a></li>
+            <li><a href="/texttools/case-converter.html">Case Converter</a></li>
+            <li>
+              <a href="/developertools/JSONFORMATTER.html">JSON Formatter</a>
+            </li>
+            <li>
+              <a href="/developertools/base64encoderdecoder.html"
+                >Base64 Utility</a
+              >
+            </li>
+            <li>
+              <a href="/developertools/regextester.html">Regex Tester</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-col-links">
+          <h4>Calculators & Image</h4>
+          <ul>
+            <li><a href="/calculator/agecalculator.html">Age Calculator</a></li>
+            <li>
+              <a href="/calculator/bmi-calculator.html">BMI Calculator</a>
+            </li>
+            <li>
+              <a href="/image&pdf/image-compressor.html">Image Compressor</a>
+            </li>
+            <li>
+              <a href="/image&pdf/QRGenrator.html">QR Code Generator</a>
+            </li>
+            <li>
+              <a href="/image&pdf/colorpicker.html">Color Picker</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-col-links">
+          <h4>Company & Legal</h4>
+          <ul>
+            <li><a href="/about.html">About HuziKit</a></li>
+            <li><a href="/disclamier.html">Disclaimer</a></li>
+            <li>
+              <a href="/privacy-policies.html">Privacy Policy</a>
+            </li>
+            <li>
+              <a href="/Termsofservices.html">Terms of Service</a>
+            </li>
+            <li>
+              <a href="/contact-us.html">Contact Support</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Script File -->
+    <script src="/calculator/saving&goalcalculator.js"></script>
+  </body>
+</html>

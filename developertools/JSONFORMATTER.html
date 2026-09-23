@@ -1,0 +1,2863 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Free JSON Formatter &amp; Validator Online — Beautify, Minify &amp; View
+      JSON | Huzikit
+    </title>
+    <meta
+      name="description"
+      content="Free online JSON formatter, validator, beautifier, minifier, tree viewer, analyzer, and diff compare tool. Format, validate, and debug JSON directly in your browser with complete privacy."
+    />
+    <meta
+      name="keywords"
+      content="JSON Formatter, JSON formatter online, free JSON formatter, JSON validator, JSON beautifier, JSON minifier, JSON viewer, JSON editor, JSON parser, format JSON online, validate JSON online, pretty print JSON, JSON tree viewer, JSON compare, JSON diff, JSON analyzer, JSON to CSV"
+    />
+    <link
+      rel="canonical"
+      href="https://huzikit.com/developertools/JSONFORMATTER.html"
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://huzikit.com/developertools/JSONFORMATTER.html"
+    />
+    <meta
+      property="og:title"
+      content="Free JSON Formatter &amp; Validator Online — Beautify, Minify &amp; View JSON | Huzikit"
+    />
+    <meta
+      property="og:description"
+      content="Professional developer-grade JSON utility. Format, validate, minify, inspect, search, compare, and convert JSON instantly in your browser."
+    />
+    <meta property="og:site_name" content="Huzikit" />
+    <meta
+      property="og:image"
+      content="https://huzikit.com/assets/og-jsonformatter.png"
+    />
+
+    <!-- Twitter / X Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@huzikitoffical" />
+    <meta
+      name="twitter:title"
+      content="Free JSON Formatter &amp; Validator Online — Beautify, Minify &amp; View JSON | Huzikit"
+    />
+    <meta
+      name="twitter:description"
+      content="Professional developer-grade JSON utility. Format, validate, minify, inspect, search, compare, and convert JSON instantly in your browser."
+    />
+    <meta
+      name="twitter:image"
+      content="https://huzikit.com/assets/og-jsonformatter.png"
+    />
+
+    <!-- Typography: Lexend (Headings) + Inter (Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Huzikit JSON Formatter Stylesheet -->
+    <link rel="stylesheet" href="/developertools/jsonformatter.css" />
+    <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon" />
+
+    <!-- Structured Data: WebApplication, BreadcrumbList, FAQPage -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebApplication",
+            "@id": "https://huzikit.com/developertools/JSONFORMATTER.html#webapp",
+            "name": "Huzikit JSON Formatter & Validator",
+            "url": "https://huzikit.com/developertools/JSONFORMATTER.html",
+            "applicationCategory": "DeveloperApplication",
+            "operatingSystem": "All",
+            "description": "A fast, professional, privacy-friendly browser-based JSON utility for developers to format, validate, minify, inspect, diff, and convert JSON.",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://huzikit.com/developertools/JSONFORMATTER.html#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://huzikit.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Developer Tools",
+                "item": "https://huzikit.com/developertools/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "JSON Formatter",
+                "item": "https://huzikit.com/developertools/JSONFORMATTER.html"
+              }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://huzikit.com/developertools/JSONFORMATTER.html#faq",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is a JSON Formatter?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A JSON formatter (also known as a JSON beautifier or pretty-printer) is a developer tool that parses raw, unformatted, or minified JSON text and structures it with standardized indentation, line breaks, and whitespace so it is easy for humans to read, understand, and debug."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do I format JSON online with Huzikit?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Paste or type your JSON code into the editor, or drag and drop a .json file. Click the 'Format JSON' button or enable 'Format on paste'. Huzikit will parse the document, validate its syntax, and instantly generate clean, formatted JSON with your chosen indentation."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How does JSON validation work?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Validation checks the input string against standard ECMA-404 / RFC 8259 JSON syntax rules. If syntax errors exist—such as missing quotes around keys, trailing commas, or unclosed brackets—Huzikit detects the exact line and column position of the error so you can resolve it quickly."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the difference between JSON formatting and minification?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Formatting adds indentation and line breaks to maximize readability for software engineers. Minification strips away all non-essential whitespace, line feeds, and indentation to produce the smallest possible byte payload, reducing network transfer times and API bandwidth."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I compare two JSON objects or files?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Switch to the 'Diff / Compare' tab in Huzikit. Paste your original JSON into Input A and the revised version into Input B, then click 'Compare JSON'. The tool structurally compares both objects and details added properties, removed keys, and modified values."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is my JSON data sent to a server or stored?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. All JSON processing, formatting, validation, sorting, comparison, and conversion happen 100% locally in your web browser using standard client-side JavaScript. Your data, API keys, credentials, and payloads never leave your computer."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <!-- ========================================================================
+       GLOBAL HUZIKIT NAVBAR
+       ======================================================================== -->
+    <header class="hz-header">
+      <div class="hz-container">
+        <nav class="hz-nav-inner" aria-label="Main Navigation">
+          <!-- Brand Logo -->
+          <a href="/" class="hz-brand">
+            <span class="hz-brand-text">Huzikit</span>
+          </a>
+
+          <!-- Desktop Navigation Items -->
+          <ul class="hz-nav-desktop" role="menubar">
+            <!-- Text Tools Dropdown -->
+            <li class="hz-nav-item" role="none">
+              <a
+                href="/texttools/word-counter.html"
+                class="hz-nav-link"
+                role="menuitem"
+                aria-haspopup="true"
+              >
+                Text Tools
+                <svg
+                  class="hz-chevron"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </a>
+              <ul class="hz-dropdown" role="menu" aria-label="Text Tools">
+                <li role="none">
+                  <a
+                    href="/texttools/word-counter.html"
+                    class="hz-dropdown-link"
+                    role="menuitem"
+                    >Word Counter</a
+                  >
+                </li>
+                <li role="none">
+                  <a
+                    href="/texttools/character-counter.html"
+                    class="hz-dropdown-link"
+                    role="menuitem"
+                    >Character Counter</a
+                  >
+                </li>
+                <li role="none">
+                  <a
+                    href="/texttools/case-converter.html"
+                    class="hz-dropdown-link"
+                    role="menuitem"
+                    >Case Converter</a
+                  >
+                </li>
+                <li role="none">
+                  <a
+                    href="/texttools/remove-duplicate-lines.html"
+                    class="hz-dropdown-link"
+                    role="menuitem"
+                    >Remove Duplicate Lines</a
+                  >
+                </li>
+                <li role="none">
+                  <a
+                    href="/texttools/loremipsumgenerator.html"
+                    class="hz-dropdown-link"
+                    role="menuitem"
+                    >Lorem Ipsum Generator</a
+                  >
+                </li>
+                <li role="none">
+                  <a
+                    href="/texttools/passwordgenerator.html"
+                    class="hz-dropdown-link"
+                    role="menuitem"
+                    >Password Generator</a
+                  >
+                </li>
+                <li role="none">
+                  <a
+                    href="/texttools/text-reverser.html"
+                    class="hz-dropdown-link"
+                    role="menuitem"
+                    >Text Reverser</a
+                  >
+                </li>
+                <li role="none">
+                  <a
+                    href="/texttools/onlinenotepad.html"
+                    class="hz-dropdown-link"
+                    role="menuitem"
+                    >Online Notepad</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- Calculators Dropdown -->
+            <li class="hz-nav-item" role="none">
+              <a
+                href="/calculator/agecalculator.html"
+                class="hz-nav-link"
+                role="menuitem"
+                aria-haspopup="true"
+              >
+                Calculators
+                <svg
+                  class="hz-chevron"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </a>
+              <ul class="hz-dropdown" role="menu" aria-label="Calculators">
+                <li role="none">
+                  <a
+                    href="/calculator/agecalculator.html"
+                    class="hz-dropdown-link"
+                    role="menuitem"
+                    >Age Calculator</a
+                  >
+                </li>
+                <li role="none">
+                  <a
+                    href="/calculator/bmi-calculator.html"
+                    class="hz-dropdown-link"
+                    role="menuitem"
+                    >BMI Calculator</a
+                  >
+                </li>
+                <li role="none">
+                  <a
+                    href="/calculator/percentage-calculator.html"
+                    class="hz-dropdown-link"
+                    role="menuitem"
+                    >Percentage Calculator</a
+                  >
+                </li>
+                <li role="none">
+                  <a
+                    href="/calculator/Calorie-Calculator.html"
+                    class="hz-dropdown-link"
+                    role="menuitem"
+                    >Calorie Calculator</a
+                  >
+                </li>
+                <li role="none">
+                  <a
+                    href="/calculator/discount-calculator.html"
+                    class="hz-dropdown-link"
+                    role="menuitem"
+                    >Discount Calculator</a
+                  >
+                </li>
+                <li role="none">
+                  <a
+                    href="/calculator/saving&goalcalculator.html"
+                    class="hz-dropdown-link"
+                    role="menuitem"
+                    >Saving &amp; Goal Calculator</a
+                  >
+                </li>
+                <li role="none">
+                  <a
+                    href="/calculator/tip-calculator.html"
+                    class="hz-dropdown-link"
+                    role="menuitem"
+                    >Tip Calculator</a
+                  >
+                </li>
+                <li role="none">
+                  <a
+                    href="/calculator/gpa-calculator.html"
+                    class="hz-dropdown-link"
+                    role="menuitem"
+                    >GPA Calculator</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- Image & PDF Dropdown -->
+            <li class="hz-nav-item" role="none">
+              <a
+                href="/image&pdf/image-compressor.html"
+                class="hz-nav-link"
+                role="menuitem"
+                aria-haspopup="true"
+              >
+                Image &amp; PDF
+                <svg
+                  class="hz-chevron"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </a>
+              <ul
+                class="hz-dropdown"
+                role="menu"
+                aria-label="Image & PDF Tools"
+              >
+                <li role="none">
+                  <a
+                    href="/image&pdf/image-compressor.html"
+                    class="hz-dropdown-link"
+                    role="menuitem"
+                    >Image Compressor</a
+                  >
+                </li>
+                <li role="none">
+                  <a
+                    href="/image&pdf/image-resizer.html"
+                    class="hz-dropdown-link"
+                    role="menuitem"
+                    >Image Resizer</a
+                  >
+                </li>
+                <li role="none">
+                  <a
+                    href="/image&pdf/pdftowordconverter.html"
+                    class="hz-dropdown-link"
+                    role="menuitem"
+                    >PDF to Word Converter</a
+                  >
+                </li>
+                <li role="none">
+                  <a
+                    href="/image&pdf/jpg-to-png.html"
+                    class="hz-dropdown-link"
+                    role="menuitem"
+                    >JPG to PNG Converter</a
+                  >
+                </li>
+                <li role="none">
+                  <a
+                    href="/image&pdf/colorpicker.html"
+                    class="hz-dropdown-link"
+                    role="menuitem"
+                    >Color Picker</a
+                  >
+                </li>
+                <li role="none">
+                  <a
+                    href="/image&pdf/QRGenrator.html"
+                    class="hz-dropdown-link"
+                    role="menuitem"
+                    >QR Code Generator</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- Developer Dropdown (Active Category) -->
+            <li class="hz-nav-item active" role="none">
+              <a
+                href="/developertools/JSONFORMATTER.html"
+                class="hz-nav-link"
+                role="menuitem"
+                aria-haspopup="true"
+              >
+                Developer
+                <svg
+                  class="hz-chevron"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </a>
+              <ul class="hz-dropdown" role="menu" aria-label="Developer Tools">
+                <li role="none">
+                  <a
+                    href="/developertools/JSONFORMATTER.html"
+                    class="hz-dropdown-link current"
+                    role="menuitem"
+                    >JSON Formatter</a
+                  >
+                </li>
+                <li role="none">
+                  <a
+                    href="/developertools/base64encoderdecoder.html"
+                    class="hz-dropdown-link"
+                    role="menuitem"
+                    >Base64 Encoder/Decoder</a
+                  >
+                </li>
+                <li role="none">
+                  <a
+                    href="/developertools/urlencoderdecoder.html"
+                    class="hz-dropdown-link"
+                    role="menuitem"
+                    >URL Encoder/Decoder</a
+                  >
+                </li>
+                <li role="none">
+                  <a
+                    href="/developertools/meta-tag-generator.html"
+                    class="hz-dropdown-link"
+                    role="menuitem"
+                    >Meta Tag Generator</a
+                  >
+                </li>
+                <li role="none">
+                  <a
+                    href="/developertools/regextester.html"
+                    class="hz-dropdown-link"
+                    role="menuitem"
+                    >Regex Tester</a
+                  >
+                </li>
+                <li role="none">
+                  <a
+                    href="/developertools/markdownhtml.html"
+                    class="hz-dropdown-link"
+                    role="menuitem"
+                    >Markdown to HTML</a
+                  >
+                </li>
+                <li role="none">
+                  <a
+                    href="/developertools/cssminifier.html"
+                    class="hz-dropdown-link"
+                    role="menuitem"
+                    >CSS Minifier</a
+                  >
+                </li>
+                <li role="none">
+                  <a
+                    href="/developertools/unixtimestamp.html"
+                    class="hz-dropdown-link"
+                    role="menuitem"
+                    >Unix Timestamp</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- About link -->
+            <li class="hz-nav-item" role="none">
+              <a href="/about.html" class="hz-nav-link" role="menuitem"
+                >About</a
+              >
+            </li>
+          </ul>
+
+          <!-- Right Header Actions (Search & Mobile Hamburger) -->
+          <div class="hz-nav-actions">
+            <button
+              type="button"
+              class="hz-search-trigger"
+              id="hz-desktop-search-trigger"
+              aria-label="Search all Huzikit tools"
+            >
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.2"
+              >
+                <circle cx="11" cy="11" r="8" />
+                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+              </svg>
+              <span>Search tools...</span>
+              <kbd>Ctrl K</kbd>
+            </button>
+
+            <button
+              type="button"
+              class="hz-hamburger-btn"
+              id="hz-hamburger-btn"
+              aria-label="Toggle navigation menu"
+              aria-expanded="false"
+            >
+              <div class="hz-hamburger-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- ========================================================================
+       MOBILE NAVIGATION DRAWER
+       ======================================================================== -->
+    <div
+      class="hz-mobile-menu"
+      id="hz-mobile-menu"
+      aria-label="Mobile Navigation"
+    >
+      <button type="button" class="hz-mobile-search-btn">
+        <svg
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2.2"
+        >
+          <circle cx="11" cy="11" r="8" />
+          <line x1="21" y1="21" x2="16.65" y2="16.65" />
+        </svg>
+        <span>Search 30+ Huzikit tools...</span>
+      </button>
+
+      <!-- Accordion Category 1: Text Tools -->
+      <div class="hz-mobile-accordion">
+        <button
+          type="button"
+          class="hz-accordion-trigger"
+          aria-expanded="false"
+        >
+          <span>Text Tools</span>
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+          >
+            <polyline points="6 9 12 15 18 9" />
+          </svg>
+        </button>
+        <ul class="hz-accordion-content">
+          <li><a href="/texttools/word-counter.html">Word Counter</a></li>
+          <li>
+            <a href="/texttools/character-counter.html">Character Counter</a>
+          </li>
+          <li><a href="/texttools/case-converter.html">Case Converter</a></li>
+          <li>
+            <a href="/texttools/remove-duplicate-lines.html"
+              >Remove Duplicate Lines</a
+            >
+          </li>
+          <li>
+            <a href="/texttools/loremipsumgenerator.html"
+              >Lorem Ipsum Generator</a
+            >
+          </li>
+          <li>
+            <a href="/texttools/passwordgenerator.html">Password Generator</a>
+          </li>
+          <li><a href="/texttools/text-reverser.html">Text Reverser</a></li>
+          <li><a href="/texttools/onlinenotepad.html">Online Notepad</a></li>
+        </ul>
+      </div>
+
+      <!-- Accordion Category 2: Calculators -->
+      <div class="hz-mobile-accordion">
+        <button
+          type="button"
+          class="hz-accordion-trigger"
+          aria-expanded="false"
+        >
+          <span>Calculators</span>
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+          >
+            <polyline points="6 9 12 15 18 9" />
+          </svg>
+        </button>
+        <ul class="hz-accordion-content">
+          <li><a href="/calculator/agecalculator.html">Age Calculator</a></li>
+          <li><a href="/calculator/bmi-calculator.html">BMI Calculator</a></li>
+          <li>
+            <a href="/calculator/percentage-calculator.html"
+              >Percentage Calculator</a
+            >
+          </li>
+          <li>
+            <a href="/calculator/Calorie-Calculator.html">Calorie Calculator</a>
+          </li>
+          <li>
+            <a href="/calculator/discount-calculator.html"
+              >Discount Calculator</a
+            >
+          </li>
+          <li>
+            <a href="/calculator/saving&goalcalculator.html"
+              >Saving &amp; Goal Calculator</a
+            >
+          </li>
+          <li><a href="/calculator/tip-calculator.html">Tip Calculator</a></li>
+          <li><a href="/calculator/gpa-calculator.html">GPA Calculator</a></li>
+        </ul>
+      </div>
+
+      <!-- Accordion Category 3: Image & PDF -->
+      <div class="hz-mobile-accordion">
+        <button
+          type="button"
+          class="hz-accordion-trigger"
+          aria-expanded="false"
+        >
+          <span>Image &amp; PDF</span>
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+          >
+            <polyline points="6 9 12 15 18 9" />
+          </svg>
+        </button>
+        <ul class="hz-accordion-content">
+          <li>
+            <a href="/image&pdf/image-compressor.html">Image Compressor</a>
+          </li>
+          <li><a href="/image&pdf/image-resizer.html">Image Resizer</a></li>
+          <li>
+            <a href="/image&pdf/pdftowordconverter.html"
+              >PDF to Word Converter</a
+            >
+          </li>
+          <li><a href="/image&pdf/jpg-to-png.html">JPG to PNG Converter</a></li>
+          <li><a href="/image&pdf/colorpicker.html">Color Picker</a></li>
+          <li><a href="/image&pdf/QRGenrator.html">QR Code Generator</a></li>
+        </ul>
+      </div>
+
+      <!-- Accordion Category 4: Developer Tools -->
+      <div class="hz-mobile-accordion">
+        <button type="button" class="hz-accordion-trigger" aria-expanded="true">
+          <span>Developer Tools</span>
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+          >
+            <polyline points="6 9 12 15 18 9" />
+          </svg>
+        </button>
+        <ul class="hz-accordion-content open">
+          <li>
+            <a href="/developertools/JSONFORMATTER.html" class="current"
+              >JSON Formatter</a
+            >
+          </li>
+          <li>
+            <a href="/developertools/base64encoderdecoder.html"
+              >Base64 Encoder/Decoder</a
+            >
+          </li>
+          <li>
+            <a href="/developertools/urlencoderdecoder.html"
+              >URL Encoder/Decoder</a
+            >
+          </li>
+          <li>
+            <a href="/developertools/meta-tag-generator.html"
+              >Meta Tag Generator</a
+            >
+          </li>
+          <li><a href="/developertools/regextester.html">Regex Tester</a></li>
+          <li>
+            <a href="/developertools/markdownhtml.html">Markdown to HTML</a>
+          </li>
+          <li><a href="/developertools/cssminifier.html">CSS Minifier</a></li>
+          <li>
+            <a href="/developertools/unixtimestamp.html">Unix Timestamp</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="hz-mobile-direct-links">
+        <a href="https://huzikit.com/about/">About Huzikit</a>
+        <a href="https://huzikit.com/contact/">Contact Support</a>
+      </div>
+    </div>
+
+    <!-- ========================================================================
+       GLOBAL SEARCH MODAL
+       ======================================================================== -->
+    <div
+      class="hz-modal-backdrop"
+      id="hz-search-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Search Huzikit Tools"
+    >
+      <div class="hz-search-dialog">
+        <div class="hz-search-header">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.2"
+          >
+            <circle cx="11" cy="11" r="8" />
+            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+          </svg>
+          <input
+            type="text"
+            id="hz-search-input"
+            class="hz-search-input"
+            placeholder="Search 30 tools (e.g. json, regex, color, age, pdf)..."
+            autocomplete="off"
+          />
+          <button
+            type="button"
+            class="hz-search-close-btn"
+            id="hz-search-close-btn"
+          >
+            ESC
+          </button>
+        </div>
+        <ul
+          class="hz-search-results"
+          id="hz-search-results-list"
+          role="listbox"
+        >
+          <!-- Dynamically injected real anchor links -->
+        </ul>
+        <div class="hz-search-footer">
+          <span>Navigate tools instantly</span>
+          <span>Press <kbd>ESC</kbd> to exit</span>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <!-- ======================================================================
+         BREADCRUMB
+         ====================================================================== -->
+      <div class="hz-breadcrumb-section">
+        <div class="hz-container">
+          <nav aria-label="Breadcrumb">
+            <ol class="hz-breadcrumb-list">
+              <li><a href="https://huzikit.com/">Home</a></li>
+              <li class="hz-breadcrumb-separator">/</li>
+              <li>
+                <a href="/developertools/JSONFORMATTER.html">Developer</a>
+              </li>
+              <li class="hz-breadcrumb-separator">/</li>
+              <li class="hz-breadcrumb-current" aria-current="page">
+                JSON Formatter
+              </li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+
+      <!-- ======================================================================
+         PREMIUM HERO SECTION (WITH LIGHTWEIGHT CSS 3D DEVELOPER VISUAL)
+         ====================================================================== -->
+      <section class="hz-hero">
+        <div class="hz-container">
+          <div class="hz-hero-grid">
+            <div class="hz-hero-content">
+              <div class="hz-hero-badge">
+                <span class="dot"></span>
+                <span>100% Free Developer Tool — No Limits</span>
+              </div>
+              <h1>Free JSON Formatter &amp; Validator Online</h1>
+              <p class="hz-hero-desc">
+                A high-speed, privacy-first developer utility to format,
+                validate, minify, inspect, search, and compare JSON documents.
+                Process complex data directly in your browser with zero server
+                uploads.
+              </p>
+              <div class="hz-hero-trust">
+                <span class="hz-trust-pill">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                  </svg>
+                  100% Client-Side Privacy
+                </span>
+                <span class="hz-trust-pill">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                  </svg>
+                  Instant In-Memory Parsing
+                </span>
+                <span class="hz-trust-pill">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22 4 12 14.01 9 11.01" />
+                  </svg>
+                  Exact Line &amp; Col Errors
+                </span>
+              </div>
+            </div>
+
+            <!-- Lightweight CSS 3D Visual (No Three.js, Pure CSS Perspective) -->
+            <div class="hz-hero-visual-stage" aria-hidden="true">
+              <div class="hz-3d-card-wrap">
+                <div class="hz-3d-card">
+                  <div class="hz-3d-card-header">
+                    <div class="hz-3d-dots">
+                      <span></span><span></span><span></span>
+                    </div>
+                    <span class="hz-3d-tag">huzikit.json</span>
+                  </div>
+                  <div class="hz-3d-code">
+                    <div>
+                      { <span class="k">"data"</span>:
+                      <span class="s">"raw_unformatted"</span>,
+                      <span class="k">"valid"</span>:
+                      <span class="b">true</span> }
+                    </div>
+                  </div>
+                  <div class="hz-3d-pill-flow">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                    >
+                      <polyline points="6 9 12 15 18 9" />
+                    </svg>
+                    PARSED &amp; FORMATTED
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                    >
+                      <polyline points="6 9 12 15 18 9" />
+                    </svg>
+                  </div>
+                  <div class="hz-3d-code">
+                    <div>{</div>
+                    <div style="padding-left: 14px">
+                      <span class="k">"data"</span>:
+                      <span class="s">"structured"</span>,
+                    </div>
+                    <div style="padding-left: 14px">
+                      <span class="k">"status"</span>:
+                      <span class="s">"production_ready"</span>,
+                    </div>
+                    <div style="padding-left: 14px">
+                      <span class="k">"private"</span>:
+                      <span class="b">true</span>
+                    </div>
+                    <div>}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================================
+         MAIN JSON TOOL WORKSPACE (ABOVE THE FOLD)
+         ====================================================================== -->
+      <section class="hz-tool-section" id="main-tool">
+        <div class="hz-container">
+          <div class="hz-tool-card" id="hz-tool-card">
+            <!-- Primary Action Toolbar -->
+            <div class="hz-toolbar">
+              <div class="hz-toolbar-group">
+                <button
+                  type="button"
+                  class="hz-btn hz-btn-primary"
+                  id="hz-btn-format"
+                  title="Format and pretty-print JSON"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <polyline points="16 18 22 12 16 6" />
+                    <polyline points="8 6 2 12 8 18" />
+                  </svg>
+                  Format JSON
+                </button>
+
+                <button
+                  type="button"
+                  class="hz-btn hz-btn-secondary"
+                  id="hz-btn-validate"
+                  title="Validate JSON syntax and structure"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22 4 12 14.01 9 11.01" />
+                  </svg>
+                  Validate
+                </button>
+
+                <button
+                  type="button"
+                  class="hz-btn hz-btn-secondary"
+                  id="hz-btn-minify"
+                  title="Minify JSON to compact one-line string"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <polyline points="4 14 10 14 10 20" />
+                    <polyline points="20 10 14 10 14 4" />
+                  </svg>
+                  Minify
+                </button>
+
+                <button
+                  type="button"
+                  class="hz-btn hz-btn-secondary"
+                  id="hz-btn-copy"
+                  title="Copy output to clipboard"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.2"
+                  >
+                    <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+                    <path
+                      d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                    />
+                  </svg>
+                  Copy
+                </button>
+
+                <button
+                  type="button"
+                  class="hz-btn hz-btn-secondary"
+                  id="hz-btn-download"
+                  title="Download formatted JSON file"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.2"
+                  >
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                    <polyline points="7 10 12 15 17 10" />
+                    <line x1="12" y1="15" x2="12" y2="3" />
+                  </svg>
+                  Download
+                </button>
+
+                <button
+                  type="button"
+                  class="hz-btn hz-btn-danger"
+                  id="hz-btn-clear"
+                  title="Clear current input"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.2"
+                  >
+                    <polyline points="3 6 5 6 21 6" />
+                    <path
+                      d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+                    />
+                  </svg>
+                  Clear
+                </button>
+              </div>
+
+              <!-- Right Toolbar Utility Dropdowns -->
+              <div class="hz-toolbar-group">
+                <!-- Sample Loader -->
+                <div class="hz-select-wrap">
+                  <select
+                    id="hz-sample-select"
+                    class="hz-select"
+                    aria-label="Load Sample JSON"
+                  >
+                    <option value="" disabled selected>Load Sample...</option>
+                    <option value="basic">Basic Object</option>
+                    <option value="nested">Nested Configuration</option>
+                    <option value="userProfile">User Profile</option>
+                    <option value="apiResponse">API Response</option>
+                    <option value="products">Product Catalog (Array)</option>
+                    <option value="devConfig">TypeScript Config</option>
+                  </select>
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                </div>
+
+                <!-- Indentation Selector -->
+                <div class="hz-select-wrap">
+                  <select
+                    id="hz-indent-select"
+                    class="hz-select"
+                    aria-label="Indentation style"
+                  >
+                    <option value="2">2 Spaces</option>
+                    <option value="4">4 Spaces</option>
+                    <option value="tab">Tabs</option>
+                  </select>
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                </div>
+
+                <!-- Focus Mode & Theme -->
+                <button
+                  type="button"
+                  class="hz-btn hz-btn-icon"
+                  id="hz-btn-focus"
+                  title="Toggle Distraction-Free Focus Mode"
+                >
+                  ⛶ Focus
+                </button>
+                <button
+                  type="button"
+                  class="hz-btn hz-btn-icon"
+                  id="hz-btn-theme"
+                  title="Toggle Editor Dark/Light Theme"
+                >
+                  ☾ Ink
+                </button>
+              </div>
+            </div>
+
+            <!-- Secondary Options Sub-Toolbar -->
+            <div class="hz-sub-toolbar">
+              <div class="hz-toolbar-group">
+                <!-- Recursive Key Sorter -->
+                <div class="hz-select-wrap">
+                  <select
+                    id="hz-sort-select"
+                    class="hz-select"
+                    aria-label="Sort JSON Keys"
+                  >
+                    <option value="" disabled selected>Sort Keys...</option>
+                    <option value="asc">Alphabetical (A → Z)</option>
+                    <option value="desc">Reverse (Z → A)</option>
+                  </select>
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                </div>
+
+                <!-- Remove Empty Values -->
+                <div class="hz-select-wrap">
+                  <select
+                    id="hz-remove-empty-select"
+                    class="hz-select"
+                    aria-label="Remove Empty Values"
+                  >
+                    <option value="" disabled selected>Remove Empty...</option>
+                    <option value="null">Remove Nulls</option>
+                    <option value="strings">Remove Empty Strings ("")</option>
+                    <option value="arrays">Remove Empty Arrays ([])</option>
+                    <option value="objects">Remove Empty Objects ({})</option>
+                    <option value="all">
+                      Remove All Empty (Preserves 0 &amp; false)
+                    </option>
+                  </select>
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                </div>
+
+                <!-- Format on Paste Toggle -->
+                <label class="hz-toggle-label">
+                  <input type="checkbox" id="hz-chk-auto-format" />
+                  <span>Format on paste</span>
+                </label>
+              </div>
+
+              <!-- Undo / Redo Controls -->
+              <div class="hz-toolbar-group">
+                <button
+                  type="button"
+                  class="hz-btn hz-btn-icon"
+                  id="hz-btn-undo"
+                  title="Undo change"
+                  disabled
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <polyline points="1 4 1 10 7 10" />
+                    <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10" />
+                  </svg>
+                </button>
+                <button
+                  type="button"
+                  class="hz-btn hz-btn-icon"
+                  id="hz-btn-redo"
+                  title="Redo change"
+                  disabled
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <polyline points="23 4 23 10 17 10" />
+                    <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <!-- Notification & Validation Banners -->
+            <div class="hz-banner-stack">
+              <!-- Valid Banner -->
+              <div
+                class="hz-banner hz-banner-valid"
+                id="hz-banner-valid"
+                role="alert"
+              >
+                <div class="hz-banner-content">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                    <polyline points="22 4 12 14.01 9 11.01" />
+                  </svg>
+                  <span
+                    ><strong>Valid JSON:</strong> Syntax conforms strictly to
+                    standard ECMA-404 / RFC 8259 specifications.</span
+                  >
+                </div>
+                <button
+                  type="button"
+                  class="hz-banner-close"
+                  onclick="this.parentElement.classList.remove('show')"
+                  aria-label="Dismiss"
+                >
+                  &times;
+                </button>
+              </div>
+
+              <!-- Invalid Banner -->
+              <div
+                class="hz-banner hz-banner-invalid"
+                id="hz-banner-invalid"
+                role="alert"
+              >
+                <div class="hz-banner-content">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <circle cx="12" cy="12" r="10" />
+                    <line x1="12" y1="8" x2="12" y2="12" />
+                    <line x1="12" y1="16" x2="12.01" y2="16" />
+                  </svg>
+                  <span id="hz-invalid-message"
+                    >Syntax Error: Unexpected token</span
+                  >
+                </div>
+                <button
+                  type="button"
+                  class="hz-banner-close"
+                  onclick="this.parentElement.classList.remove('show')"
+                  aria-label="Dismiss"
+                >
+                  &times;
+                </button>
+              </div>
+
+              <!-- Duplicate Key Warning Banner -->
+              <div
+                class="hz-banner hz-banner-warn"
+                id="hz-banner-warn"
+                role="alert"
+              >
+                <div class="hz-banner-content">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <path
+                      d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"
+                    />
+                    <line x1="12" y1="9" x2="12" y2="13" />
+                    <line x1="12" y1="17" x2="12.01" y2="17" />
+                  </svg>
+                  <span id="hz-warn-message"
+                    >Warning: Duplicate keys detected in raw JSON. Standard
+                    parsers will overwrite prior values.</span
+                  >
+                </div>
+                <button
+                  type="button"
+                  class="hz-banner-close"
+                  onclick="this.parentElement.classList.remove('show')"
+                  aria-label="Dismiss"
+                >
+                  &times;
+                </button>
+              </div>
+            </div>
+
+            <!-- Main Split Workspace Grid -->
+            <div class="hz-workspace-grid">
+              <!-- Left Pane: Input Editor -->
+              <div class="hz-pane">
+                <div class="hz-pane-header">
+                  <div class="hz-pane-title">
+                    <svg
+                      width="14"
+                      height="14"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                      />
+                      <polyline points="14 2 14 8 20 8" />
+                    </svg>
+                    <span>JSON Input</span>
+                  </div>
+                  <div class="hz-pane-tools">
+                    <label
+                      for="hz-file-input"
+                      class="hz-btn hz-btn-secondary"
+                      style="
+                        padding: 4px 8px;
+                        font-size: 0.75rem;
+                        cursor: pointer;
+                      "
+                    >
+                      Upload .json
+                    </label>
+                    <input
+                      type="file"
+                      id="hz-file-input"
+                      accept=".json,application/json,text/plain"
+                      style="display: none"
+                    />
+                  </div>
+                </div>
+
+                <div class="hz-editor-container">
+                  <!-- Drag and Drop Overlay -->
+                  <div class="hz-dropzone-overlay" id="hz-dropzone-overlay">
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                      <polyline points="17 8 12 3 7 8" />
+                      <line x1="12" y1="3" x2="12" y2="15" />
+                    </svg>
+                    <span>Drop your .json file here to load instantly</span>
+                  </div>
+
+                  <!-- Synchronized Line Numbers -->
+                  <div
+                    class="hz-line-numbers"
+                    id="hz-input-lines"
+                    aria-hidden="true"
+                  >
+                    1
+                  </div>
+
+                  <!-- Textarea Editor -->
+                  <textarea
+                    id="hz-input-json"
+                    class="hz-textarea"
+                    placeholder="Paste or type raw JSON here..."
+                    spellcheck="false"
+                    aria-label="Raw JSON Input Editor"
+                  ></textarea>
+                </div>
+              </div>
+
+              <!-- Right Pane: Output Views (Code, Tree, Diff, Stats, Converters) -->
+              <div class="hz-pane">
+                <div class="hz-pane-header">
+                  <div class="hz-pane-title">
+                    <span>Output View:</span>
+                  </div>
+                  <!-- View Tabs -->
+                  <div class="hz-view-tabs" role="tablist">
+                    <button
+                      type="button"
+                      class="hz-tab-btn active"
+                      data-tab="code"
+                      role="tab"
+                      aria-selected="true"
+                    >
+                      Formatted
+                    </button>
+                    <button
+                      type="button"
+                      class="hz-tab-btn"
+                      data-tab="tree"
+                      role="tab"
+                      aria-selected="false"
+                    >
+                      Tree View
+                    </button>
+                    <button
+                      type="button"
+                      class="hz-tab-btn"
+                      data-tab="diff"
+                      role="tab"
+                      aria-selected="false"
+                    >
+                      Diff / Compare
+                    </button>
+                    <button
+                      type="button"
+                      class="hz-tab-btn"
+                      data-tab="stats"
+                      role="tab"
+                      aria-selected="false"
+                    >
+                      Analyzer
+                    </button>
+                    <button
+                      type="button"
+                      class="hz-tab-btn"
+                      data-tab="converters"
+                      role="tab"
+                      aria-selected="false"
+                    >
+                      Converters
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Tab 1: Formatted / Minified Code View -->
+                <div
+                  class="hz-tab-content active"
+                  id="hz-tab-code"
+                  role="tabpanel"
+                >
+                  <div class="hz-output-body">
+                    <div
+                      class="hz-output-line-numbers"
+                      id="hz-output-lines"
+                      aria-hidden="true"
+                    >
+                      1
+                    </div>
+                    <pre
+                      class="hz-code-display"
+                      id="hz-output-code"
+                      tabindex="0"
+                    ></pre>
+                  </div>
+                </div>
+
+                <!-- Tab 2: Interactive Tree Viewer -->
+                <div class="hz-tab-content" id="hz-tab-tree" role="tabpanel">
+                  <div class="hz-tree-toolbar">
+                    <div class="hz-tree-search-bar">
+                      <svg
+                        width="14"
+                        height="14"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <circle cx="11" cy="11" r="8" />
+                        <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                      </svg>
+                      <input
+                        type="text"
+                        id="hz-tree-search-input"
+                        placeholder="Search tree keys/values..."
+                        aria-label="Search JSON tree"
+                      />
+                      <span
+                        class="hz-tree-search-count"
+                        id="hz-tree-search-count"
+                      ></span>
+                    </div>
+                    <div class="hz-toolbar-group">
+                      <button
+                        type="button"
+                        class="hz-btn hz-btn-secondary"
+                        id="hz-btn-tree-expand"
+                        style="padding: 4px 8px; font-size: 0.75rem"
+                      >
+                        Expand All
+                      </button>
+                      <button
+                        type="button"
+                        class="hz-btn hz-btn-secondary"
+                        id="hz-btn-tree-collapse"
+                        style="padding: 4px 8px; font-size: 0.75rem"
+                      >
+                        Collapse All
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="hz-tree-view" id="hz-tree-container">
+                    <!-- Dynamically populated safe DOM tree -->
+                  </div>
+
+                  <!-- Path Display Bar -->
+                  <div class="hz-tree-path-bar">
+                    <div
+                      style="
+                        display: flex;
+                        align-items: center;
+                        gap: 6px;
+                        overflow: hidden;
+                      "
+                    >
+                      <span
+                        style="
+                          font-weight: 600;
+                          color: var(--ink-soft);
+                          font-size: 0.75rem;
+                        "
+                        >Path:</span
+                      >
+                      <span class="hz-path-text" id="hz-path-display">$</span>
+                    </div>
+                    <button
+                      type="button"
+                      class="hz-btn hz-btn-secondary"
+                      id="hz-btn-copy-path"
+                      style="padding: 3px 8px; font-size: 0.75rem"
+                    >
+                      Copy Path
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Tab 3: JSON Diff / Compare -->
+                <div class="hz-tab-content" id="hz-tab-diff" role="tabpanel">
+                  <div class="hz-diff-container">
+                    <div class="hz-diff-inputs-grid">
+                      <div class="hz-diff-box">
+                        <label for="hz-diff-input-a">JSON A (Original)</label>
+                        <textarea
+                          id="hz-diff-input-a"
+                          class="hz-diff-textarea"
+                          placeholder="Paste JSON A here..."
+                        ></textarea>
+                      </div>
+                      <div class="hz-diff-box">
+                        <label for="hz-diff-input-b">JSON B (Modified)</label>
+                        <textarea
+                          id="hz-diff-input-b"
+                          class="hz-diff-textarea"
+                          placeholder="Paste JSON B here..."
+                        ></textarea>
+                      </div>
+                    </div>
+
+                    <div style="display: flex; justify-content: flex-end">
+                      <button
+                        type="button"
+                        class="hz-btn hz-btn-primary"
+                        id="hz-btn-run-diff"
+                      >
+                        <svg
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        >
+                          <line x1="18" y1="20" x2="18" y2="10" />
+                          <line x1="12" y1="20" x2="12" y2="4" />
+                          <line x1="6" y1="20" x2="6" y2="14" />
+                        </svg>
+                        Compare JSON
+                      </button>
+                    </div>
+
+                    <div class="hz-diff-results" id="hz-diff-results">
+                      <div class="hz-diff-summary" id="hz-diff-summary">
+                        Compare two JSON structures to view property additions,
+                        deletions, and value variations.
+                      </div>
+                      <ul class="hz-diff-list" id="hz-diff-list">
+                        <!-- Results injected here -->
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Tab 4: Statistics & Size Analyzer -->
+                <div class="hz-tab-content" id="hz-tab-stats" role="tabpanel">
+                  <div class="hz-stats-container">
+                    <div class="hz-stats-grid">
+                      <div class="hz-stat-card">
+                        <div class="hz-stat-value" id="hz-stat-objects">0</div>
+                        <div class="hz-stat-label">Objects</div>
+                      </div>
+                      <div class="hz-stat-card">
+                        <div class="hz-stat-value" id="hz-stat-arrays">0</div>
+                        <div class="hz-stat-label">Arrays</div>
+                      </div>
+                      <div class="hz-stat-card">
+                        <div class="hz-stat-value" id="hz-stat-keys">0</div>
+                        <div class="hz-stat-label">Total Keys</div>
+                      </div>
+                      <div class="hz-stat-card">
+                        <div class="hz-stat-value" id="hz-stat-depth">0</div>
+                        <div class="hz-stat-label">Max Depth</div>
+                      </div>
+                      <div class="hz-stat-card">
+                        <div class="hz-stat-value" id="hz-stat-strings">0</div>
+                        <div class="hz-stat-label">Strings</div>
+                      </div>
+                      <div class="hz-stat-card">
+                        <div class="hz-stat-value" id="hz-stat-numbers">0</div>
+                        <div class="hz-stat-label">Numbers</div>
+                      </div>
+                      <div class="hz-stat-card">
+                        <div class="hz-stat-value" id="hz-stat-booleans">0</div>
+                        <div class="hz-stat-label">Booleans</div>
+                      </div>
+                      <div class="hz-stat-card">
+                        <div class="hz-stat-value" id="hz-stat-nulls">0</div>
+                        <div class="hz-stat-label">Nulls</div>
+                      </div>
+                    </div>
+
+                    <!-- Byte Size Breakdown -->
+                    <div class="hz-size-card">
+                      <div class="hz-size-title">
+                        Payload Byte Size Breakdown (UTF-8)
+                      </div>
+                      <div class="hz-size-bars">
+                        <div class="hz-size-row">
+                          <span>Raw Input Size:</span>
+                          <strong id="hz-size-input">0 B</strong>
+                        </div>
+                        <div class="hz-size-row">
+                          <span>Formatted Size (Indented):</span>
+                          <strong id="hz-size-formatted">0 B</strong>
+                        </div>
+                        <div class="hz-size-row">
+                          <span>Minified Size (Compact):</span>
+                          <strong
+                            id="hz-size-minified"
+                            style="color: var(--valid)"
+                            >0 B</strong
+                          >
+                        </div>
+                        <div class="hz-size-row">
+                          <span>Minification Bandwidth Savings:</span>
+                          <strong
+                            id="hz-size-savings"
+                            style="color: var(--primary)"
+                            >0%</strong
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Tab 5: Converters & String Utilities -->
+                <div
+                  class="hz-tab-content"
+                  id="hz-tab-converters"
+                  role="tabpanel"
+                >
+                  <div class="hz-converters-container">
+                    <!-- JSON to CSV -->
+                    <div class="hz-conv-card">
+                      <div class="hz-conv-title">
+                        JSON Array to CSV Converter
+                      </div>
+                      <p style="font-size: 0.8125rem; color: var(--ink-soft)">
+                        Converts a top-level JSON array of objects into standard
+                        RFC-4180 compliant CSV format with properly escaped
+                        quotes and delimiters.
+                      </p>
+                      <div style="display: flex; gap: 8px; flex-wrap: wrap">
+                        <button
+                          type="button"
+                          class="hz-btn hz-btn-primary"
+                          id="hz-btn-json-csv"
+                          style="padding: 6px 12px; font-size: 0.8125rem"
+                        >
+                          Convert Current JSON to CSV
+                        </button>
+                        <button
+                          type="button"
+                          class="hz-btn hz-btn-secondary"
+                          id="hz-btn-download-csv"
+                          style="padding: 6px 12px; font-size: 0.8125rem"
+                          disabled
+                        >
+                          Download .csv File
+                        </button>
+                      </div>
+                      <textarea
+                        id="hz-csv-output"
+                        class="hz-diff-textarea"
+                        placeholder="CSV output will appear here..."
+                        readonly
+                        style="min-height: 90px"
+                      ></textarea>
+                    </div>
+
+                    <!-- CSV to JSON -->
+                    <div class="hz-conv-card">
+                      <div class="hz-conv-title">CSV to JSON Converter</div>
+                      <textarea
+                        id="hz-csv-input"
+                        class="hz-diff-textarea"
+                        placeholder="Paste CSV text with headers here (e.g. name,age&#10;Huzaifa,24)..."
+                        style="min-height: 80px"
+                      ></textarea>
+                      <div>
+                        <button
+                          type="button"
+                          class="hz-btn hz-btn-secondary"
+                          id="hz-btn-csv-json"
+                          style="padding: 6px 12px; font-size: 0.8125rem"
+                        >
+                          Convert CSV to JSON
+                        </button>
+                      </div>
+                    </div>
+
+                    <!-- JSON String Escape / Unescape -->
+                    <div class="hz-conv-card">
+                      <div class="hz-conv-title">
+                        String Escape / Unescape Utility
+                      </div>
+                      <p style="font-size: 0.8125rem; color: var(--ink-soft)">
+                        Escapes quotes and control characters for embedding raw
+                        text inside JSON strings, or unescapes string payloads
+                        back to normal text.
+                      </p>
+                      <textarea
+                        id="hz-str-escape-input"
+                        class="hz-diff-textarea"
+                        placeholder="Enter string to escape or unescape..."
+                        style="min-height: 80px"
+                      ></textarea>
+                      <div style="display: flex; gap: 8px">
+                        <button
+                          type="button"
+                          class="hz-btn hz-btn-secondary"
+                          id="hz-btn-escape-str"
+                          style="padding: 6px 12px; font-size: 0.8125rem"
+                        >
+                          Escape String
+                        </button>
+                        <button
+                          type="button"
+                          class="hz-btn hz-btn-secondary"
+                          id="hz-btn-unescape-str"
+                          style="padding: 6px 12px; font-size: 0.8125rem"
+                        >
+                          Unescape String
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bottom Tool Footer & Status Indicators -->
+            <div class="hz-tool-footer">
+              <div class="hz-status-indicators">
+                <span class="hz-status-tag">
+                  <span class="hz-status-dot" id="hz-status-indicator"></span>
+                  <span id="hz-status-text">Awaiting input</span>
+                </span>
+                <span class="hz-status-tag" id="hz-status-size">0 B</span>
+                <span class="hz-status-tag" id="hz-status-linecol"
+                  >Ln 1, Col 1</span
+                >
+              </div>
+              <div>
+                <span style="color: var(--ink-faint); font-size: 0.75rem"
+                  >Privacy Guarantee: Local browser processing only. No data
+                  uploaded.</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================================
+         FEATURE SHOWCASE & PRODUCT POSITIONING
+         ====================================================================== -->
+      <section class="hz-features-section">
+        <div class="hz-container">
+          <div class="hz-section-heading">
+            <span class="hz-section-badge">Built for Engineers</span>
+            <h2>Professional Developer Utilities, 100% Free</h2>
+            <p>
+              Huzikit delivers advanced tools designed to streamline everyday
+              software engineering workflows with speed, precision, and privacy.
+            </p>
+          </div>
+
+          <div class="hz-feature-grid">
+            <div class="hz-feature-card">
+              <div class="hz-feature-icon">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.2"
+                >
+                  <polyline points="16 18 22 12 16 6" />
+                  <polyline points="8 6 2 12 8 18" />
+                </svg>
+              </div>
+              <h3>Intelligent Pretty-Printing</h3>
+              <p>
+                Instantly beautify compacted, minified, or disorganized JSON
+                data with custom indentation options (2 spaces, 4 spaces, or
+                tabs) adhering strictly to standard specifications.
+              </p>
+            </div>
+
+            <div class="hz-feature-card">
+              <div class="hz-feature-icon">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.2"
+                >
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                  <polyline points="22 4 12 14.01 9 11.01" />
+                </svg>
+              </div>
+              <h3>Pinpoint Syntax Diagnostics</h3>
+              <p>
+                Identify exact syntax error positions down to the line and
+                column number. Resolve trailing commas, unescaped quotes, and
+                missing brackets without guesswork.
+              </p>
+            </div>
+
+            <div class="hz-feature-card">
+              <div class="hz-feature-icon">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.2"
+                >
+                  <circle cx="18" cy="5" r="3" />
+                  <circle cx="6" cy="12" r="3" />
+                  <circle cx="18" cy="19" r="3" />
+                  <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" />
+                  <line x1="15.41" y1="6.51" x2="8.59" y2="10.49" />
+                </svg>
+              </div>
+              <h3>Interactive Tree Navigation</h3>
+              <p>
+                Navigate complex nested hierarchies visually. Collapse, expand,
+                filter with search, view explicit data types, and copy JSON
+                paths (e.g. <code>$.user.profile.id</code>) in a single click.
+              </p>
+            </div>
+
+            <div class="hz-feature-card">
+              <div class="hz-feature-icon">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.2"
+                >
+                  <line x1="18" y1="20" x2="18" y2="10" />
+                  <line x1="12" y1="20" x2="12" y2="4" />
+                  <line x1="6" y1="20" x2="6" y2="14" />
+                </svg>
+              </div>
+              <h3>Structural JSON Diff</h3>
+              <p>
+                Compare two JSON payloads side-by-side. Detect added keys,
+                deleted attributes, and value changes across nested structures
+                rather than just relying on superficial text diffs.
+              </p>
+            </div>
+
+            <div class="hz-feature-card">
+              <div class="hz-feature-icon">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.2"
+                >
+                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                  <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                </svg>
+              </div>
+              <h3>Strict Zero-Server Privacy</h3>
+              <p>
+                All formatting, validation, analysis, and conversion runs
+                locally inside your browser's V8 engine. Sensitive API tokens,
+                passwords, and private records never touch external servers.
+              </p>
+            </div>
+
+            <div class="hz-feature-card">
+              <div class="hz-feature-icon">
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.2"
+                >
+                  <path
+                    d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                  />
+                  <polyline points="14 2 14 8 20 8" />
+                </svg>
+              </div>
+              <h3>Key Sorting &amp; Cleansing</h3>
+              <p>
+                Alphabetize keys recursively to standardize schema order across
+                development teams. Strip empty strings, null values, or empty
+                containers while safeguarding numeric zeros and booleans.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================================
+         EDUCATIONAL & TECHNICAL GUIDE (1,200–1,700 WORDS)
+         ====================================================================== -->
+      <section class="hz-edu-section">
+        <div class="hz-container">
+          <article class="hz-edu-content">
+            <h2>
+              The Comprehensive Guide to JSON: Architecture, Validation, and
+              Tooling
+            </h2>
+            <p>
+              JavaScript Object Notation (JSON) is the foundational data
+              interchange format of modern software engineering. Originally
+              popularized in the early 2000s as a lightweight alternative to
+              XML, JSON is formally specified under both
+              <strong>RFC 8259</strong> and <strong>ECMA-404</strong>. Today,
+              JSON serves as the universal communication standard for REST APIs,
+              GraphQL payloads, NoSQL document databases (such as MongoDB,
+              CouchDB, and Firestore), software configuration manifests, and
+              microservice communications.
+            </p>
+
+            <div class="hz-callout">
+              <h4>Fundamental Fact</h4>
+              <p>
+                JSON is purely a text-based serialization format representing
+                data structures. Unlike JavaScript code, JSON cannot contain
+                executable functions, expressions, comments, or class instances.
+                It is static, language-independent data.
+              </p>
+            </div>
+
+            <h2>1. What Does a JSON Formatter Do?</h2>
+            <p>
+              In production applications, computer systems transmit JSON in a
+              <strong>minified</strong> state—stripping all extraneous spaces,
+              tabs, and line breaks to minimize network payload size and
+              latency. While this optimization is ideal for network
+              transmission, it leaves the resulting data completely unreadable
+              to human engineers during debugging, code reviews, and API
+              testing.
+            </p>
+            <p>
+              A JSON formatter (often referred to as a
+              <em>JSON beautifier</em> or <em>pretty-printer</em>) parses the
+              raw string into an Abstract Syntax Tree (AST) or in-memory object
+              representation, and then re-serializes the data with consistent
+              typographic rules:
+            </p>
+            <ul>
+              <li>
+                <strong>Uniform Indentation:</strong> Each nested object or
+                array level is indented by an exact number of spaces (commonly 2
+                or 4) or a tab character.
+              </li>
+              <li>
+                <strong>Line Breaks:</strong> Individual key-value pairs and
+                array elements are separated onto distinct vertical lines.
+              </li>
+              <li>
+                <strong>Bracket Alignment:</strong> Opening braces
+                <code>{</code> and brackets <code>[</code> align symmetrically
+                with their respective closing partners <code>}</code> and
+                <code>]</code>.
+              </li>
+              <li>
+                <strong>Visual Structural Hierarchy:</strong> Developers can
+                scan deep hierarchies, identify schema relationships, and
+                isolate errors immediately.
+              </li>
+            </ul>
+
+            <h2>2. The Grammar of JSON: Supported Data Types</h2>
+            <p>
+              JSON defines exactly six valid data types. Any token outside of
+              these six types renders the entire document syntactically invalid:
+            </p>
+            <ul>
+              <li>
+                <strong>Object:</strong> An unordered collection of key-value
+                pairs enclosed in curly braces <code>{ }</code>. Keys must be
+                strings wrapped in double quotation marks <code>" "</code>,
+                followed by a colon <code>:</code>.
+              </li>
+              <li>
+                <strong>Array:</strong> An ordered list of values enclosed in
+                square brackets <code>[ ]</code>, separated by commas. Values
+                within an array can be heterogeneous.
+              </li>
+              <li>
+                <strong>String:</strong> A sequence of zero or more Unicode
+                characters enclosed in double quotation marks. Special control
+                characters (such as double quotes <code>\"</code> and
+                backslashes <code>\\</code>) must be escaped.
+              </li>
+              <li>
+                <strong>Number:</strong> Double-precision floating-point numbers
+                in standard base-10 or scientific exponential notation (e.g.
+                <code>42</code>, <code>-17.5</code>, <code>3.4e5</code>). Note:
+                Octal numbers, hexadecimal prefixes (<code>0x</code>),
+                <code>NaN</code>, and <code>Infinity</code> are strictly
+                forbidden in standard JSON.
+              </li>
+              <li>
+                <strong>Boolean:</strong> Exactly the literal lowercase tokens
+                <code>true</code> or <code>false</code>.
+              </li>
+              <li>
+                <strong>Null:</strong> The literal lowercase token
+                <code>null</code>, representing an empty or non-existent value.
+              </li>
+            </ul>
+
+            <pre class="hz-code-example"><code>{
+  "project": "Huzikit JSON Formatter",
+  "version": 2.5,
+  "stable": true,
+  "author": null,
+  "supportedTypes": [
+    "string",
+    "number",
+    "boolean",
+    "null",
+    "object",
+    "array"
+  ]
+}</code></pre>
+
+            <h2>3. Valid vs. Invalid JSON: The Most Common Syntax Pitfalls</h2>
+            <p>
+              Because JavaScript syntax is more forgiving than JSON, developers
+              frequently introduce subtle syntax defects when manually writing
+              or altering JSON payloads. Here are the most frequent causes of
+              JSON parsing failures:
+            </p>
+            <ol>
+              <li>
+                <strong>Single Quotes Instead of Double Quotes:</strong> In
+                JavaScript, strings can be declared using single quotes
+                (<code>'hello'</code>). In JSON, single quotes are illegal. Keys
+                and string values must always use standard double quotes
+                (<code>"hello"</code>).
+              </li>
+              <li>
+                <strong>Trailing Commas:</strong> Modern JavaScript and
+                TypeScript permit trailing commas after the last item in an
+                object or array (e.g., <code>[1, 2, 3,]</code>). In standard
+                JSON, a trailing comma generates an immediate
+                <em>"Unexpected token"</em> syntax error.
+              </li>
+              <li>
+                <strong>Unquoted Object Keys:</strong> In JavaScript object
+                literals, identifiers like <code>{ name: "Huzaifa" }</code> do
+                not require quotes. In JSON, every key must be wrapped in double
+                quotes: <code>{ "name": "Huzaifa" }</code>.
+              </li>
+              <li>
+                <strong>Comments:</strong> Standard JSON does not permit
+                single-line (<code>//</code>) or multi-line (<code>/* */</code>)
+                comments. Including comments will cause strict parsers to reject
+                the payload.
+              </li>
+              <li>
+                <strong>Unescaped Control Characters:</strong> Newlines, tabs,
+                and unescaped quotes inside string values will break parser
+                tokenization.
+              </li>
+            </ol>
+
+            <h2>4. JSON Formatting vs. JSON Minification</h2>
+            <p>
+              Formatting and minification serve opposing yet complementary roles
+              in modern software pipelines:
+            </p>
+            <ul>
+              <li>
+                <strong>JSON Formatting (Pretty-Printing):</strong> Adds
+                whitespace and indentation. Increases the total byte size by
+                approximately 15% to 35%, but maximizes human comprehension
+                during development, testing, and debugging.
+              </li>
+              <li>
+                <strong>JSON Minification (Compression):</strong> Strips all
+                non-semantic whitespace, tabs, and line breaks. Compresses
+                payloads to their smallest viable byte count, lowering latency
+                and conserving bandwidth across HTTP APIs, CDN edge caches, and
+                mobile networks.
+              </li>
+            </ul>
+
+            <div class="hz-callout">
+              <h4>Bandwidth Example</h4>
+              <p>
+                A nested JSON response containing 1,000 database records may
+                consume 180 KB when formatted with 4 spaces. When minified, that
+                same payload drops to 125 KB—representing a 30% reduction in
+                data transmitted over the wire.
+              </p>
+            </div>
+
+            <h2>5. What is an Interactive JSON Tree Viewer?</h2>
+            <p>
+              When dealing with massive enterprise payloads—such as cloud
+              infrastructure manifests, telemetry logs, or extensive e-commerce
+              catalogs—reading thousands of lines in a flat code editor becomes
+              overwhelming.
+            </p>
+            <p>
+              A <strong>JSON Tree Viewer</strong> organizes the document into an
+              expandable and collapsible DOM node graph. Engineers can:
+            </p>
+            <ul>
+              <li>
+                Collapse unnecessary subtrees to focus strictly on target
+                parameters.
+              </li>
+              <li>
+                Instantly distinguish data types via semantic visual badges
+                (strings, numbers, booleans, objects, arrays).
+              </li>
+              <li>
+                Search across deep paths and isolate matching keys in real time.
+              </li>
+              <li>
+                Extract direct JSONPaths (e.g.
+                <code>$.users[0].credentials.token</code>) for use in automated
+                tests, Postman assertions, and database query scripts.
+              </li>
+            </ul>
+
+            <h2>6. Why Client-Side Browser Processing Matters for Security</h2>
+            <p>
+              JSON documents frequently contain highly sensitive proprietary
+              data: private customer records, session tokens, internal API keys,
+              database connection strings, and financial telemetry.
+            </p>
+            <p>
+              Many free online formatters upload user payloads to remote servers
+              for processing. This presents an immense security risk.
+              <strong>Huzikit processes 100% of your JSON locally</strong>
+              inside your web browser. Using the native
+              <code>JSON.parse()</code> and <code>JSON.stringify()</code> engine
+              built into your device's browser, data is parsed directly into
+              memory. No network requests are dispatched, no copies are cached
+              on external servers, and your confidential information remains
+              strictly within your machine's sandbox.
+            </p>
+
+            <h2>7. How to Compare Two JSON Payloads Structurally</h2>
+            <p>
+              Traditional text-based diff tools (such as Git line diffs)
+              struggle with JSON because changing the indentation or reordering
+              keys creates false positive differences.
+            </p>
+            <p>
+              Huzikit's <strong>JSON Diff / Compare Engine</strong> parses both
+              JSON inputs into memory and conducts a recursive structural
+              evaluation. It compares keys by identity rather than line number,
+              accurately isolating:
+            </p>
+            <ul>
+              <li>
+                <strong>Added Properties:</strong> New keys present in JSON B
+                that did not exist in JSON A.
+              </li>
+              <li>
+                <strong>Removed Properties:</strong> Keys present in JSON A that
+                were deleted in JSON B.
+              </li>
+              <li>
+                <strong>Modified Values:</strong> Matching paths whose primitive
+                values or data types changed between versions.
+              </li>
+              <li>
+                <strong>Array Count Variations:</strong> Length differences and
+                altered element indices.
+              </li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- ======================================================================
+         FREQUENTLY ASKED QUESTIONS (ACCORDION)
+         ====================================================================== -->
+      <section class="hz-faq-section" id="faq">
+        <div class="hz-container">
+          <div class="hz-section-heading">
+            <span class="hz-section-badge">Frequently Asked Questions</span>
+            <h2>Everything You Need to Know About JSON Formatting</h2>
+            <p>
+              Clear, direct answers regarding JSON validation, syntax standards,
+              and browser-based developer tooling.
+            </p>
+          </div>
+
+          <div class="hz-faq-wrapper">
+            <!-- FAQ 1 -->
+            <div class="hz-faq-item">
+              <button
+                type="button"
+                class="hz-faq-btn"
+                aria-expanded="true"
+                aria-controls="faq-ans-1"
+              >
+                <span>What is a JSON Formatter?</span>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </button>
+              <div class="hz-faq-panel open" id="faq-ans-1">
+                A JSON formatter (also known as a JSON beautifier or
+                pretty-printer) is a software utility that takes unorganized,
+                compact, or minified JSON text and structures it with
+                standardized indentation, line breaks, and bracket hierarchy,
+                making the document easy for developers to read, inspect, and
+                debug.
+              </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="hz-faq-item">
+              <button
+                type="button"
+                class="hz-faq-btn"
+                aria-expanded="false"
+                aria-controls="faq-ans-2"
+              >
+                <span>How do I format JSON online with Huzikit?</span>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </button>
+              <div class="hz-faq-panel" id="faq-ans-2">
+                Simply paste your raw JSON string into the editor pane, or click
+                "Upload .json" to load a file from your device. Then click the
+                "Format JSON" button or select your preferred indentation (2
+                spaces, 4 spaces, or tabs). The tool parses the input in real
+                time and displays clean, beautifully indented JSON in the output
+                panel.
+              </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="hz-faq-item">
+              <button
+                type="button"
+                class="hz-faq-btn"
+                aria-expanded="false"
+                aria-controls="faq-ans-3"
+              >
+                <span>How does JSON validation work?</span>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </button>
+              <div class="hz-faq-panel" id="faq-ans-3">
+                Validation verifies that the input strictly adheres to the
+                official JSON specification (RFC 8259). When you click
+                "Validate", the parser checks for missing quotation marks,
+                illegal single quotes, unescaped characters, trailing commas,
+                and unclosed brackets. If an error is detected, Huzikit
+                calculates the exact line and column coordinates so you can fix
+                it immediately.
+              </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="hz-faq-item">
+              <button
+                type="button"
+                class="hz-faq-btn"
+                aria-expanded="false"
+                aria-controls="faq-ans-4"
+              >
+                <span
+                  >What is the difference between JSON beautification and
+                  minification?</span
+                >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </button>
+              <div class="hz-faq-panel" id="faq-ans-4">
+                Beautification formats JSON with indentation and vertical line
+                breaks for human readability. Minification eliminates all
+                unnecessary whitespace, tabs, and carriage returns, generating a
+                single-line compact representation that minimizes byte payload
+                size and optimizes network transfer speeds across web APIs.
+              </div>
+            </div>
+
+            <!-- FAQ 5 -->
+            <div class="hz-faq-item">
+              <button
+                type="button"
+                class="hz-faq-btn"
+                aria-expanded="false"
+                aria-controls="faq-ans-5"
+              >
+                <span>Can I upload a .json file directly?</span>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </button>
+              <div class="hz-faq-panel" id="faq-ans-5">
+                Yes. You can drag and drop any <code>.json</code> file straight
+                into the input pane, or click the "Upload .json" button to
+                choose a file from your computer. The file is read instantly in
+                memory via the browser's FileReader API without sending any data
+                to external servers.
+              </div>
+            </div>
+
+            <!-- FAQ 6 -->
+            <div class="hz-faq-item">
+              <button
+                type="button"
+                class="hz-faq-btn"
+                aria-expanded="false"
+                aria-controls="faq-ans-6"
+              >
+                <span>How can I compare two JSON files or objects?</span>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </button>
+              <div class="hz-faq-panel" id="faq-ans-6">
+                Click on the "Diff / Compare" tab in the right pane. Paste the
+                original object into JSON A and the modified object into JSON B,
+                then click "Compare JSON". The recursive diff engine parses both
+                structures and displays an itemized list of added keys, deleted
+                properties, and altered primitive values.
+              </div>
+            </div>
+
+            <!-- FAQ 7 -->
+            <div class="hz-faq-item">
+              <button
+                type="button"
+                class="hz-faq-btn"
+                aria-expanded="false"
+                aria-controls="faq-ans-7"
+              >
+                <span>Can I search inside large JSON documents?</span>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </button>
+              <div class="hz-faq-panel" id="faq-ans-7">
+                Yes. Switch to the "Tree View" tab, where a built-in search bar
+                allows you to query property names and values. Matches are
+                highlighted, match counters are displayed, and you can jump
+                directly to specific elements in complex nested structures.
+              </div>
+            </div>
+
+            <!-- FAQ 8 -->
+            <div class="hz-faq-item">
+              <button
+                type="button"
+                class="hz-faq-btn"
+                aria-expanded="false"
+                aria-controls="faq-ans-8"
+              >
+                <span>Can I sort JSON keys alphabetically?</span>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </button>
+              <div class="hz-faq-panel" id="faq-ans-8">
+                Yes. Use the "Sort Keys..." dropdown in the sub-toolbar to sort
+                object keys in ascending (A to Z) or descending (Z to A) order.
+                The sorting algorithm operates recursively throughout all nested
+                objects while strictly preserving array element positions.
+              </div>
+            </div>
+
+            <!-- FAQ 9 -->
+            <div class="hz-faq-item">
+              <button
+                type="button"
+                class="hz-faq-btn"
+                aria-expanded="false"
+                aria-controls="faq-ans-9"
+              >
+                <span>Is Huzikit JSON Formatter completely free?</span>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </button>
+              <div class="hz-faq-panel" id="faq-ans-9">
+                Yes, 100% free. There are no subscriptions, paywalls, trial
+                limits, artificial character caps, or locked features. All
+                advanced utilities—including Diff comparison, Tree viewing, and
+                CSV conversion—are freely available to all developers.
+              </div>
+            </div>
+
+            <!-- FAQ 10 -->
+            <div class="hz-faq-item">
+              <button
+                type="button"
+                class="hz-faq-btn"
+                aria-expanded="false"
+                aria-controls="faq-ans-10"
+              >
+                <span>Is my JSON sent to an external server or stored?</span>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </button>
+              <div class="hz-faq-panel" id="faq-ans-10">
+                No. All operations run strictly on client-side JavaScript within
+                your own web browser. No JSON text, payload, token, or file is
+                ever transmitted over the network or saved on our servers.
+              </div>
+            </div>
+
+            <!-- FAQ 11 -->
+            <div class="hz-faq-item">
+              <button
+                type="button"
+                class="hz-faq-btn"
+                aria-expanded="false"
+                aria-controls="faq-ans-11"
+              >
+                <span>Can I convert JSON to CSV?</span>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </button>
+              <div class="hz-faq-panel" id="faq-ans-11">
+                Yes. When working with an array of objects (such as database
+                rows or tabular API records), switch to the "Converters" tab and
+                click "Convert Current JSON to CSV". You can preview the tabular
+                data and download a ready-to-use <code>.csv</code> file.
+              </div>
+            </div>
+
+            <!-- FAQ 12 -->
+            <div class="hz-faq-item">
+              <button
+                type="button"
+                class="hz-faq-btn"
+                aria-expanded="false"
+                aria-controls="faq-ans-12"
+              >
+                <span>Does this tool work on mobile devices?</span>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </button>
+              <div class="hz-faq-panel" id="faq-ans-12">
+                Yes. The entire Huzikit suite is built with a strict
+                mobile-responsive layout that adapts smoothly across screen
+                widths from 320px smartphones to 4K desktop monitors with zero
+                horizontal overflow.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ======================================================================
+         RELATED HUZIKIT DEVELOPER TOOLS
+         ====================================================================== -->
+      <section class="hz-related-section">
+        <div class="hz-container">
+          <div class="hz-section-heading" style="margin-bottom: 28px">
+            <span class="hz-section-badge">More Utilities</span>
+            <h2>Related Developer Tools</h2>
+            <p>
+              Explore other fast, free developer utilities built by Huzikit.
+            </p>
+          </div>
+
+          <div class="hz-related-grid">
+            <a
+              href="/developertools/base64encoderdecoder.html"
+              class="hz-related-card"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <polyline points="16 18 22 12 16 6" />
+                <polyline points="8 6 2 12 8 18" />
+              </svg>
+              <span>Base64 Encoder/Decoder</span>
+            </a>
+
+            <a
+              href="/developertools/urlencoderdecoder.html"
+              class="hz-related-card"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"
+                />
+                <path
+                  d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"
+                />
+              </svg>
+              <span>URL Encoder/Decoder</span>
+            </a>
+
+            <a href="/developertools/regextester.html" class="hz-related-card">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <line x1="12" y1="8" x2="12" y2="12" />
+                <line x1="12" y1="16" x2="12.01" y2="16" />
+              </svg>
+              <span>Regex Tester</span>
+            </a>
+
+            <a
+              href="/developertools/meta-tag-generator.html"
+              class="hz-related-card"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                <line x1="3" y1="9" x2="21" y2="9" />
+                <line x1="9" y1="21" x2="9" y2="9" />
+              </svg>
+              <span>Meta Tag Generator</span>
+            </a>
+
+            <a href="/developertools/markdownhtml.html" class="hz-related-card">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                />
+                <polyline points="14 2 14 8 20 8" />
+              </svg>
+              <span>Markdown to HTML</span>
+            </a>
+
+            <a href="/developertools/cssminifier.html" class="hz-related-card">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <polyline points="4 14 10 14 10 20" />
+                <polyline points="20 10 14 10 14 4" />
+              </svg>
+              <span>CSS Minifier</span>
+            </a>
+
+            <a href="/image&pdf/colorpicker.html" class="hz-related-card">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z" />
+              </svg>
+              <span>Color Picker</span>
+            </a>
+
+            <a
+              href="/developertools/unixtimestamp.html"
+              class="hz-related-card"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+              <span>Unix Timestamp</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ========================================================================
+       GLOBAL HUZIKIT DARK FOOTER
+       ======================================================================== -->
+    <footer class="hz-footer">
+      <div class="hz-container">
+        <div class="hz-footer-grid">
+          <!-- Col 1: Brand Bio & Social -->
+          <div class="hz-footer-brand">
+            <a href="/" class="hz-footer-logo">
+              <span>Huzikit</span>
+            </a>
+            <p class="hz-footer-bio">
+              The ultimate modern suite of lightning-fast, secure online web
+              utilities, calculators, and developer tools.
+            </p>
+            <div class="hz-footer-social">
+              <a
+                href="https://x.com/huzikitoffical"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Huzikit on X (Twitter)"
+              >
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Col 2: Text & Dev Tools -->
+          <div class="hz-footer-col">
+            <h4>Text &amp; Dev Tools</h4>
+            <ul class="hz-footer-links">
+              <li>
+                <a href="/texttools/word-counter.html">Word Counter</a>
+              </li>
+              <li>
+                <a href="/texttools/case-converter.html">Case Converter</a>
+              </li>
+              <li>
+                <a href="/developertools/JSONFORMATTER.html">JSON Formatter</a>
+              </li>
+              <li>
+                <a href="/developertools/base64encoderdecoder.html"
+                  >Base64 Utility</a
+                >
+              </li>
+              <li>
+                <a href="/developertools/regextester.html">Regex Tester</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Col 3: Calculators & Image -->
+          <div class="hz-footer-col">
+            <h4>Calculators &amp; Image</h4>
+            <ul class="hz-footer-links">
+              <li>
+                <a href="/calculator/agecalculator.html">Age Calculator</a>
+              </li>
+              <li>
+                <a href="/calculator/bmi-calculator.html">BMI Calculator</a>
+              </li>
+              <li>
+                <a href="/image&pdf/image-compressor.html">Image Compressor</a>
+              </li>
+              <li>
+                <a href="/image&pdf/QRGenrator.html">QR Code Generator</a>
+              </li>
+              <li>
+                <a href="/image&pdf/colorpicker.html">Color Picker</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Col 4: Company & Legal -->
+          <div class="hz-footer-col">
+            <h4>Company &amp; Legal</h4>
+            <ul class="hz-footer-links">
+              <li><a href="/about.html">About Huzikit</a></li>
+              <li><a href="/disclamier.html">Disclaimer</a></li>
+              <li>
+                <a href="/privacy-policies.html">Privacy Policy</a>
+              </li>
+              <li>
+                <a href="/Termsofservices.html">Terms of Service</a>
+              </li>
+              <li>
+                <a href="/contact-us.html">Contact Support</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="hz-footer-bottom">
+          <div>&copy; 2026 Huzikit.com. All rights reserved.</div>
+          <div>Built with speed, security, and precision.</div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Huzikit Vanilla JavaScript Application Logic -->
+    <script src="/developertools/jsonformatter.js"></script>
+  </body>
+</html>

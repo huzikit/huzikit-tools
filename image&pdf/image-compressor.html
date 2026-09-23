@@ -1,0 +1,2653 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Free Image Compressor Online — Compress JPG, PNG &amp; WebP | Huzikit
+    </title>
+    <meta
+      name="description"
+      content="Free online image compressor to reduce JPG, PNG, and WebP file sizes by up to 80% without losing quality. 100% private browser processing with zero upload limits."
+    />
+    <link
+      rel="canonical"
+      href="https://huzikit.com/image&amp;pdf/image-compressor.html"
+    />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Social Sharing Meta -->
+    <meta
+      property="og:title"
+      content="Free Image Compressor Online — Compress JPG, PNG &amp; WebP | Huzikit"
+    />
+    <meta
+      property="og:description"
+      content="Compress JPG, PNG, and WebP images directly in your browser. Fast, free, private, batch processing without losing quality."
+    />
+    <meta
+      property="og:url"
+      content="https://huzikit.com/image&amp;pdf/image-compressor.html"
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://huzikit.com/og-image-compressor.jpg"
+    />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Free Image Compressor Online — Compress JPG, PNG &amp; WebP | Huzikit"
+    />
+    <meta
+      name="twitter:description"
+      content="Reduce image file sizes instantly without quality loss. 100% private client-side processing with zero server uploads."
+    />
+    <meta name="twitter:creator" content="@huzikitoffical" />
+
+    <!-- Typography: Lexend (Headings) + Inter (Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheet -->
+    <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="/image&pdf/image-compressor.css" />
+
+    <!-- JSON-LD Structured Data: WebApplication, BreadcrumbList, FAQPage -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebApplication",
+            "@id": "https://huzikit.com/image&pdf/image-compressor.html#app",
+            "name": "Huzikit Image Compressor",
+            "url": "https://huzikit.com/image&pdf/image-compressor.html",
+            "applicationCategory": "MultimediaApplication",
+            "operatingSystem": "All",
+            "browserRequirements": "Requires JavaScript and HTML5 Canvas support",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            },
+            "description": "Browser-based image compression utility supporting JPG, PNG, and WebP with zero server uploads, customizable quality presets, dimensions scaling, and batch downloads."
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://huzikit.com/image&pdf/image-compressor.html#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://huzikit.com"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Image & PDF",
+                "item": "https://huzikit.com/toolpage"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Image Compressor",
+                "item": "https://huzikit.com/image&pdf/image-compressor.html"
+              }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://huzikit.com/image&pdf/image-compressor.html#faq",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is an image compressor?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "An image compressor is a tool that reduces the digital file size of photos and graphics by optimizing color data, removing redundant metadata, and applying compression algorithms without perceptibly degrading visual fidelity."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How does this image compressor preserve image privacy?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Huzikit processes your images 100% locally inside your browser using the HTML5 Canvas and Blob APIs. Your files are never uploaded to any remote server or stored in the cloud, guaranteeing complete confidentiality."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Which image formats are supported for compression?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "We support JPEG, JPG, PNG, and WebP formats. You can also cross-convert between formats, such as converting PNG or JPEG to modern WebP for superior byte reduction."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Will compressing my images visibly degrade their quality?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "When using our Balanced (80%) or High Quality (92%) settings, human eyes cannot perceive any loss in clarity or crispness on retina or standard displays, while file size decreases by 50% to 80%."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How does transparency handling work during compression?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "PNG and WebP images retain alpha transparency when saved as PNG or WebP. If you convert transparent assets to JPEG, our engine automatically paints a clean solid white background to avoid unintended black outlines."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is there a limit on how many images I can compress?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "There are no arbitrary file quantity limits or subscription paywalls. You can process single photos or queue batches of images simultaneously directly in your browser."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I resize pixel dimensions while compressing?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, our tool includes an optional Dimension Resizer where you can define exact target width, target height, maintain locked aspect ratio, scale by percentages, and prevent accidental upscaling."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Why is WebP often smaller than JPEG or PNG?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "WebP employs advanced predictive coding and entropy quantization developed by Google, delivering approximately 25–34% smaller file sizes compared to JPEG at equivalent visual SSIM quality indexes."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Why did my compressed file turn out slightly larger?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "If you convert an already heavily compressed, low-bitrate JPEG into a lossless PNG, or re-encode with a 100% quality setting, the output file can occasionally increase in size. Our tool always displays honest byte metrics so you stay fully informed."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How does image compression benefit website SEO and Core Web Vitals?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Smaller image payloads accelerate page load times, lower Largest Contentful Paint (LCP) scores, minimize network bandwidth usage on mobile, and improve Google search ranking performance."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can I use this tool on my iPhone or Android phone?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Huzikit Image Compressor is fully responsive and functions smoothly across modern mobile browsers like Chrome, Safari, Firefox, and Edge with zero app installation needed."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is any software or plugin installation required?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No installation is required. Everything runs natively in standard web browsers using modern web standards."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <!-- ==========================================================================
+       SITE HEADER & GLOBAL NAVBAR
+       ========================================================================== -->
+    <header class="site-header" id="siteHeader">
+      <div class="container">
+        <nav class="navbar" aria-label="Main Navigation">
+          <!-- Brand Logo -->
+          <a href="/" class="nav-brand" aria-label="Huzikit Home">
+            <span class="brand-name">Huzikit</span>
+          </a>
+
+          <!-- Desktop Navigation Menu with Exact 30 Tools -->
+          <ul class="nav-menu" role="menubar">
+            <!-- Text Tools Dropdown -->
+            <li class="nav-item has-dropdown" role="none">
+              <a
+                href="#text-tools"
+                class="nav-link"
+                role="menuitem"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Text Tools
+                <svg
+                  class="dropdown-caret"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  aria-hidden="true"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </a>
+              <ul class="dropdown-menu" role="menu" aria-label="Text Tools">
+                <li role="none">
+                  <a
+                    href="/texttools/word-counter.html"
+                    class="dropdown-link"
+                    role="menuitem"
+                    >Word Counter</a
+                  >
+                </li>
+                <li role="none">
+                  <a
+                    href="/texttools/character-counter.html"
+                    class="dropdown-link"
+                    role="menuitem"
+                    >Character Counter</a
+                  >
+                </li>
+                <li role="none">
+                  <a
+                    href="/texttools/case-converter.html"
+                    class="dropdown-link"
+                    role="menuitem"
+                    >Case Converter</a
+                  >
+                </li>
+                <li role="none">
+                  <a
+                    href="/texttools/remove-duplicate-lines.html"
+                    class="dropdown-link"
+                    role="menuitem"
+                    >Remove Duplicate Lines</a
+                  >
+                </li>
+                <li role="none">
+                  <a
+                    href="/texttools/loremipsumgenerator.html"
+                    class="dropdown-link"
+                    role="menuitem"
+                    >Lorem Ipsum Generator</a
+                  >
+                </li>
+                <li role="none">
+                  <a
+                    href="/texttools/passwordgenerator.html"
+                    class="dropdown-link"
+                    role="menuitem"
+                    >Password Generator</a
+                  >
+                </li>
+                <li role="none">
+                  <a
+                    href="/texttools/text-reverser.html"
+                    class="dropdown-link"
+                    role="menuitem"
+                    >Text Reverser</a
+                  >
+                </li>
+                <li role="none">
+                  <a
+                    href="/texttools/onlinenotepad.html"
+                    class="dropdown-link"
+                    role="menuitem"
+                    >Online Notepad</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- Calculators Dropdown -->
+            <li class="nav-item has-dropdown" role="none">
+              <a
+                href="#calculators"
+                class="nav-link"
+                role="menuitem"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Calculators
+                <svg
+                  class="dropdown-caret"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  aria-hidden="true"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </a>
+              <ul class="dropdown-menu" role="menu" aria-label="Calculators">
+                <li role="none">
+                  <a
+                    href="/calculator/agecalculator.html"
+                    class="dropdown-link"
+                    role="menuitem"
+                    >Age Calculator</a
+                  >
+                </li>
+                <li role="none">
+                  <a
+                    href="/calculator/bmi-calculator.html"
+                    class="dropdown-link"
+                    role="menuitem"
+                    >BMI Calculator</a
+                  >
+                </li>
+                <li role="none">
+                  <a
+                    href="/calculator/percentage-calculator.html"
+                    class="dropdown-link"
+                    role="menuitem"
+                    >Percentage Calculator</a
+                  >
+                </li>
+                <li role="none">
+                  <a
+                    href="/calculator/Calorie-Calculator.html"
+                    class="dropdown-link"
+                    role="menuitem"
+                    >Calorie Calculator</a
+                  >
+                </li>
+                <li role="none">
+                  <a
+                    href="/calculator/discount-calculator.html"
+                    class="dropdown-link"
+                    role="menuitem"
+                    >Discount Calculator</a
+                  >
+                </li>
+                <li role="none">
+                  <a
+                    href="/calculator/saving&amp;goalcalculator.html"
+                    class="dropdown-link"
+                    role="menuitem"
+                    >Saving &amp; Goal Calculator</a
+                  >
+                </li>
+                <li role="none">
+                  <a
+                    href="/calculator/tip-calculator.html"
+                    class="dropdown-link"
+                    role="menuitem"
+                    >Tip Calculator</a
+                  >
+                </li>
+                <li role="none">
+                  <a
+                    href="/calculator/gpa-calculator.html"
+                    class="dropdown-link"
+                    role="menuitem"
+                    >GPA Calculator</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- Image & PDF Dropdown -->
+            <li class="nav-item has-dropdown" role="none">
+              <a
+                href="#image-pdf"
+                class="nav-link"
+                role="menuitem"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Image &amp; PDF
+                <svg
+                  class="dropdown-caret"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  aria-hidden="true"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </a>
+              <ul
+                class="dropdown-menu"
+                role="menu"
+                aria-label="Image and PDF Tools"
+              >
+                <li role="none">
+                  <a
+                    href="/image&amp;pdf/image-compressor.html"
+                    class="dropdown-link"
+                    role="menuitem"
+                    >Image Compressor</a
+                  >
+                </li>
+                <li role="none">
+                  <a
+                    href="/image&amp;pdf/image-resizer.html"
+                    class="dropdown-link"
+                    role="menuitem"
+                    >Image Resizer</a
+                  >
+                </li>
+                <li role="none">
+                  <a
+                    href="/image&amp;pdf/pdftowordconverter.html"
+                    class="dropdown-link"
+                    role="menuitem"
+                    >PDF to Word Converter</a
+                  >
+                </li>
+                <li role="none">
+                  <a
+                    href="/image&amp;pdf/jpg-to-png.html"
+                    class="dropdown-link"
+                    role="menuitem"
+                    >JPG to PNG</a
+                  >
+                </li>
+                <li role="none">
+                  <a
+                    href="/image&amp;pdf/colorpicker.html"
+                    class="dropdown-link"
+                    role="menuitem"
+                    >Color Picker</a
+                  >
+                </li>
+                <li role="none">
+                  <a
+                    href="/image&amp;pdf/QRGenrator.html"
+                    class="dropdown-link"
+                    role="menuitem"
+                    >QR Code Generator</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- Developer Dropdown -->
+            <li class="nav-item has-dropdown" role="none">
+              <a
+                href="#developer"
+                class="nav-link"
+                role="menuitem"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Developer
+                <svg
+                  class="dropdown-caret"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  aria-hidden="true"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </a>
+              <ul
+                class="dropdown-menu"
+                role="menu"
+                aria-label="Developer Tools"
+              >
+                <li role="none">
+                  <a
+                    href="/developertools/JSONFORMATTER.html"
+                    class="dropdown-link"
+                    role="menuitem"
+                    >JSON Formatter</a
+                  >
+                </li>
+                <li role="none">
+                  <a
+                    href="/developertools/base64encoderdecoder.html"
+                    class="dropdown-link"
+                    role="menuitem"
+                    >Base64 Encoder/Decoder</a
+                  >
+                </li>
+                <li role="none">
+                  <a
+                    href="/developertools/urlencoderdecoder.html"
+                    class="dropdown-link"
+                    role="menuitem"
+                    >URL Encoder/Decoder</a
+                  >
+                </li>
+                <li role="none">
+                  <a
+                    href="/developertools/meta-tag-generator.html"
+                    class="dropdown-link"
+                    role="menuitem"
+                    >Meta Tag Generator</a
+                  >
+                </li>
+                <li role="none">
+                  <a
+                    href="/developertools/regextester.html"
+                    class="dropdown-link"
+                    role="menuitem"
+                    >Regex Tester</a
+                  >
+                </li>
+                <li role="none">
+                  <a
+                    href="/developertools/markdownhtml.html"
+                    class="dropdown-link"
+                    role="menuitem"
+                    >Markdown to HTML</a
+                  >
+                </li>
+                <li role="none">
+                  <a
+                    href="/developertools/cssminifier.html"
+                    class="dropdown-link"
+                    role="menuitem"
+                    >CSS Minifier</a
+                  >
+                </li>
+                <li role="none">
+                  <a
+                    href="/developertools/unixtimestamp.html"
+                    class="dropdown-link"
+                    role="menuitem"
+                    >Unix Timestamp</a
+                  >
+                </li>
+              </ul>
+            </li>
+
+            <!-- About Link -->
+            <li class="nav-item" role="none">
+              <a href="/about.html" class="nav-link" role="menuitem">About</a>
+            </li>
+          </ul>
+
+          <!-- Nav Action Buttons: Search & Mobile Hamburger -->
+          <div class="nav-actions">
+            <button
+              type="button"
+              class="search-trigger-btn"
+              id="searchTrigger"
+              aria-label="Search all 30 tools"
+            >
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                aria-hidden="true"
+              >
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <span>Search</span>
+              <kbd class="search-shortcut-badge">Ctrl K</kbd>
+            </button>
+
+            <button
+              type="button"
+              class="hamburger-btn"
+              id="hamburgerBtn"
+              aria-expanded="false"
+              aria-controls="mobileNavDrawer"
+              aria-label="Toggle navigation menu"
+            >
+              <span class="hamburger-bar"></span>
+              <span class="hamburger-bar"></span>
+              <span class="hamburger-bar"></span>
+            </button>
+          </div>
+        </nav>
+      </div>
+
+      <!-- Mobile Navigation Drawer -->
+      <div
+        class="mobile-nav-drawer"
+        id="mobileNavDrawer"
+        aria-label="Mobile Navigation"
+      >
+        <ul class="mobile-menu-list">
+          <!-- Text Tools Category -->
+          <li>
+            <button
+              type="button"
+              class="mobile-category-header"
+              aria-expanded="false"
+            >
+              <span>Text Tools</span>
+              <svg
+                class="arrow-icon"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <ul class="mobile-submenu">
+              <li><a href="/texttools/word-counter.html">Word Counter</a></li>
+              <li>
+                <a href="/texttools/character-counter.html"
+                  >Character Counter</a
+                >
+              </li>
+              <li>
+                <a href="/texttools/case-converter.html">Case Converter</a>
+              </li>
+              <li>
+                <a href="/texttools/remove-duplicate-lines.html"
+                  >Remove Duplicate Lines</a
+                >
+              </li>
+              <li>
+                <a href="/texttools/loremipsumgenerator.html"
+                  >Lorem Ipsum Generator</a
+                >
+              </li>
+              <li>
+                <a href="/texttools/passwordgenerator.html"
+                  >Password Generator</a
+                >
+              </li>
+              <li><a href="/texttools/text-reverser.html">Text Reverser</a></li>
+              <li>
+                <a href="/texttools/onlinenotepad.html">Online Notepad</a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Calculators Category -->
+          <li>
+            <button
+              type="button"
+              class="mobile-category-header"
+              aria-expanded="false"
+            >
+              <span>Calculators</span>
+              <svg
+                class="arrow-icon"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <ul class="mobile-submenu">
+              <li>
+                <a href="/calculator/agecalculator.html">Age Calculator</a>
+              </li>
+              <li>
+                <a href="/calculator/bmi-calculator.html">BMI Calculator</a>
+              </li>
+              <li>
+                <a href="/calculator/percentage-calculator.html"
+                  >Percentage Calculator</a
+                >
+              </li>
+              <li>
+                <a href="/calculator/Calorie-Calculator.html"
+                  >Calorie Calculator</a
+                >
+              </li>
+              <li>
+                <a href="/calculator/discount-calculator.html"
+                  >Discount Calculator</a
+                >
+              </li>
+              <li>
+                <a href="/calculator/saving&amp;goalcalculator.html"
+                  >Saving &amp; Goal Calculator</a
+                >
+              </li>
+              <li>
+                <a href="/calculator/tip-calculator.html">Tip Calculator</a>
+              </li>
+              <li>
+                <a href="/calculator/gpa-calculator.html">GPA Calculator</a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Image & PDF Category -->
+          <li>
+            <button
+              type="button"
+              class="mobile-category-header"
+              aria-expanded="true"
+            >
+              <span>Image &amp; PDF</span>
+              <svg
+                class="arrow-icon"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <ul class="mobile-submenu">
+              <li>
+                <a href="/image&amp;pdf/image-compressor.html"
+                  >Image Compressor</a
+                >
+              </li>
+              <li>
+                <a href="/image&amp;pdf/image-resizer.html">Image Resizer</a>
+              </li>
+              <li>
+                <a href="/image&amp;pdf/pdftowordconverter.html"
+                  >PDF to Word Converter</a
+                >
+              </li>
+              <li><a href="/image&amp;pdf/jpg-to-png.html">JPG to PNG</a></li>
+              <li>
+                <a href="/image&amp;pdf/colorpicker.html">Color Picker</a>
+              </li>
+              <li>
+                <a href="/image&amp;pdf/QRGenrator.html">QR Code Generator</a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Developer Category -->
+          <li>
+            <button
+              type="button"
+              class="mobile-category-header"
+              aria-expanded="false"
+            >
+              <span>Developer</span>
+              <svg
+                class="arrow-icon"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <ul class="mobile-submenu">
+              <li>
+                <a href="/developertools/JSONFORMATTER.html">JSON Formatter</a>
+              </li>
+              <li>
+                <a href="/developertools/base64encoderdecoder.html"
+                  >Base64 Encoder/Decoder</a
+                >
+              </li>
+              <li>
+                <a href="/developertools/urlencoderdecoder.html"
+                  >URL Encoder/Decoder</a
+                >
+              </li>
+              <li>
+                <a href="/developertools/meta-tag-generator.html"
+                  >Meta Tag Generator</a
+                >
+              </li>
+              <li>
+                <a href="/developertools/regextester.html">Regex Tester</a>
+              </li>
+              <li>
+                <a href="/developertools/markdownhtml.html">Markdown to HTML</a>
+              </li>
+              <li>
+                <a href="/developertools/cssminifier.html">CSS Minifier</a>
+              </li>
+              <li>
+                <a href="/developertools/unixtimestamp.html">Unix Timestamp</a>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Direct About Link -->
+          <li>
+            <a href="/about.html" class="mobile-direct-link">About Huzikit</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- ==========================================================================
+       GLOBAL SEARCH MODAL
+       ========================================================================== -->
+    <div
+      class="search-modal-backdrop"
+      id="searchModal"
+      aria-hidden="true"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Search Tools"
+    >
+      <div class="search-dialog" id="searchDialog">
+        <div class="search-header-bar">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            aria-hidden="true"
+          >
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input
+            type="search"
+            class="search-input"
+            id="searchInput"
+            placeholder="Search 30 tools (e.g. compress, word, age, json)..."
+            autocomplete="off"
+            spellcheck="false"
+          />
+          <button
+            type="button"
+            class="search-close-btn"
+            id="searchClose"
+            aria-label="Close search"
+          >
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true"
+            >
+              <line x1="18" y1="6" x2="6" y2="18"></line>
+              <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+        <div
+          class="search-results-box"
+          id="searchResults"
+          role="listbox"
+          aria-label="Search Results"
+        >
+          <!-- Dynamically rendered real <a> anchors -->
+        </div>
+        <div class="search-footer-hint">
+          <span
+            >Navigation: <kbd>↑</kbd> <kbd>↓</kbd> to select,
+            <kbd>Enter</kbd> to navigate</span
+          >
+          <span><kbd>Esc</kbd> to close</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==========================================================================
+       BREADCRUMB
+       ========================================================================== -->
+    <!-- ==========================================================================
+       MAIN CONTENT CONTAINER
+       ========================================================================== -->
+    <main id="mainContent">
+      <!-- ==========================================================================
+         HERO SECTION WITH ZERO-OVERFLOW 3D ISOMETRIC CARD
+         ========================================================================== -->
+      <section class="hero-section" aria-labelledby="heroTitle">
+        <div class="container">
+          <div class="hero-grid">
+            <!-- Left Column: Copy & Value Proposition -->
+            <div class="hero-content">
+              <div class="hero-badge-pill">
+                <span class="badge-dot" aria-hidden="true"></span>
+                <span>100% Client-Side &amp; Private Engine</span>
+              </div>
+
+              <h1 class="hero-title" id="heroTitle">
+                Free <span>Image Compressor</span> Online
+              </h1>
+
+              <p class="hero-desc">
+                Reduce image file sizes by up to 80% without visible loss in
+                quality. Fast, lossless and lossy batch optimization for JPG,
+                PNG, and WebP directly inside your browser. No files are ever
+                sent to a server.
+              </p>
+
+              <div class="hero-features-list">
+                <div class="hero-feature-pill">
+                  <svg
+                    class="feature-check-icon"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    aria-hidden="true"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Zero File Upload Limits</span>
+                </div>
+                <div class="hero-feature-pill">
+                  <svg
+                    class="feature-check-icon"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    aria-hidden="true"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>100% Private Browser Processing</span>
+                </div>
+                <div class="hero-feature-pill">
+                  <svg
+                    class="feature-check-icon"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                    aria-hidden="true"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Batch Compression &amp; Downloads</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Column: 3D Isometric Card Composition (Zero-Overflow Protected) -->
+            <div class="hero-visual-wrapper" aria-hidden="true">
+              <div class="hero-isometric-stage">
+                <div class="iso-card-base">
+                  <div class="iso-card-header">
+                    <div class="iso-mock-dots">
+                      <span class="iso-mock-dot"></span>
+                      <span class="iso-mock-dot"></span>
+                      <span class="iso-mock-dot"></span>
+                    </div>
+                    <span class="iso-mock-tag">Canvas Engine</span>
+                  </div>
+
+                  <div class="iso-preview-split">
+                    <div class="iso-side">
+                      <span class="iso-side-title">Original</span>
+                      <span class="iso-side-size">3.4 MB</span>
+                      <span style="font-size: 0.72rem; color: var(--ink-faint)"
+                        >3840 × 2160 • PNG</span
+                      >
+                    </div>
+                    <div class="iso-side">
+                      <span class="iso-side-title">Optimized</span>
+                      <span class="iso-side-size compressed">748 KB</span>
+                      <span
+                        style="
+                          font-size: 0.72rem;
+                          color: var(--success);
+                          font-weight: 600;
+                        "
+                        >3840 × 2160 • WebP</span
+                      >
+                    </div>
+                  </div>
+
+                  <div class="iso-metrics-row">
+                    <span>Quality Target: <strong>80% Balanced</strong></span>
+                    <span style="color: var(--primary); font-weight: 700"
+                      >Subsampling: 4:2:0</span
+                    >
+                  </div>
+
+                  <div class="iso-savings-float">
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2.5"
+                    >
+                      <polyline
+                        points="23 6 13.5 15.5 8.5 10.5 1 18"
+                      ></polyline>
+                      <polyline points="17 6 23 6 23 12"></polyline>
+                    </svg>
+                    <span>-78% Smaller</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+         IMAGE COMPRESSOR APPLICATION SUITE
+         ========================================================================== -->
+      <section
+        class="tool-section"
+        id="toolApp"
+        aria-labelledby="compressorToolHeading"
+      >
+        <div class="container">
+          <h2 id="compressorToolHeading" class="visually-hidden">
+            Image Compression Tool Application
+          </h2>
+
+          <div class="tool-app-card">
+            <!-- 1. Drag & Drop Upload Zone -->
+            <div
+              class="upload-zone"
+              id="uploadZone"
+              role="button"
+              tabindex="0"
+              aria-label="Drop images here or click to select"
+            >
+              <div class="upload-icon-circle" aria-hidden="true">
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="17 8 12 3 7 8"></polyline>
+                  <line x1="12" y1="3" x2="12" y2="15"></line>
+                </svg>
+              </div>
+              <div class="upload-main-text">
+                Drag &amp; drop images here or <span>browse files</span>
+              </div>
+              <div class="upload-sub-text">
+                Select single or multiple files directly from your computer or
+                phone.
+              </div>
+              <div class="upload-formats-badges">
+                <span class="format-badge">JPG / JPEG</span>
+                <span class="format-badge">PNG</span>
+                <span class="format-badge">WebP</span>
+                <span class="format-badge">Unlimited Size</span>
+              </div>
+              <!-- Hidden Native File Input -->
+              <input
+                type="file"
+                id="uploadInput"
+                class="visually-hidden"
+                accept="image/jpeg,image/png,image/webp"
+                multiple
+                aria-label="Upload image files"
+              />
+            </div>
+
+            <!-- 2. Compression Controls & Settings Panel -->
+            <div class="controls-panel" aria-label="Compression Controls">
+              <div class="controls-header">
+                <span class="controls-title">
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    aria-hidden="true"
+                  >
+                    <circle cx="12" cy="12" r="3"></circle>
+                    <path
+                      d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"
+                    ></path>
+                  </svg>
+                  Compression Settings
+                </span>
+                <div
+                  class="presets-row"
+                  role="group"
+                  aria-label="Compression Presets"
+                >
+                  <button type="button" class="preset-btn" data-preset="max">
+                    Max (60%)
+                  </button>
+                  <button
+                    type="button"
+                    class="preset-btn active"
+                    data-preset="balanced"
+                  >
+                    Balanced (80%)
+                  </button>
+                  <button type="button" class="preset-btn" data-preset="high">
+                    High (92%)
+                  </button>
+                </div>
+              </div>
+
+              <div class="controls-grid">
+                <!-- Quality Slider Control -->
+                <div class="control-group">
+                  <label for="qualitySlider" class="control-label">
+                    <span>Compression Quality</span>
+                    <span class="quality-value-badge" id="qualityValueBadge"
+                      >80%</span
+                    >
+                  </label>
+                  <div class="slider-container">
+                    <input
+                      type="range"
+                      id="qualitySlider"
+                      class="range-slider"
+                      min="10"
+                      max="100"
+                      value="80"
+                      step="1"
+                      aria-valuemin="10"
+                      aria-valuemax="100"
+                      aria-valuenow="80"
+                    />
+                  </div>
+                </div>
+
+                <!-- Output Format Selection -->
+                <div class="control-group">
+                  <label for="formatSelect" class="control-label">
+                    <span>Output Format</span>
+                  </label>
+                  <select id="formatSelect" class="custom-select">
+                    <option value="auto">Auto (Match Original Format)</option>
+                    <option value="image/webp">
+                      Convert to WebP (Recommended)
+                    </option>
+                    <option value="image/jpeg">Convert to JPG / JPEG</option>
+                    <option value="image/png">Convert to PNG</option>
+                  </select>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="control-group" style="justify-content: flex-end">
+                  <div class="action-toolbar">
+                    <button
+                      type="button"
+                      class="btn btn-primary"
+                      id="compressAllBtn"
+                    >
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        aria-hidden="true"
+                      >
+                        <polyline points="20 6 9 17 4 12"></polyline>
+                      </svg>
+                      Compress All
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      id="resetSettingsBtn"
+                      title="Reset all settings to defaults"
+                    >
+                      Reset
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Optional Resize Expandable Section -->
+              <div class="resize-accordion">
+                <button
+                  type="button"
+                  class="resize-toggle-btn"
+                  id="resizeToggle"
+                  aria-expanded="false"
+                  aria-controls="resizePanelBody"
+                >
+                  <span>Optional: Resize Image Dimensions</span>
+                  <svg
+                    class="arrow-icon"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    aria-hidden="true"
+                  >
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </button>
+                <div class="resize-panel-body" id="resizePanelBody">
+                  <div class="resize-inputs-grid">
+                    <div class="input-with-label">
+                      <label for="targetWidth">Target Width (px)</label>
+                      <input
+                        type="number"
+                        id="targetWidth"
+                        class="dimension-input"
+                        placeholder="e.g. 1920"
+                        min="1"
+                        max="10000"
+                      />
+                    </div>
+                    <button
+                      type="button"
+                      class="aspect-ratio-btn is-locked"
+                      id="aspectRatioLockBtn"
+                      title="Aspect Ratio Locked"
+                      aria-label="Toggle aspect ratio lock"
+                    >
+                      <svg
+                        width="18"
+                        height="18"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        aria-hidden="true"
+                      >
+                        <rect
+                          x="3"
+                          y="11"
+                          width="18"
+                          height="11"
+                          rx="2"
+                          ry="2"
+                        ></rect>
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                      </svg>
+                    </button>
+                    <div class="input-with-label">
+                      <label for="targetHeight">Target Height (px)</label>
+                      <input
+                        type="number"
+                        id="targetHeight"
+                        class="dimension-input"
+                        placeholder="e.g. 1080"
+                        min="1"
+                        max="10000"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="scale-quick-buttons">
+                    <span
+                      style="
+                        font-size: 0.8rem;
+                        font-weight: 600;
+                        color: var(--ink-soft);
+                        margin-right: 4px;
+                      "
+                      >Quick Scale:</span
+                    >
+                    <button
+                      type="button"
+                      class="scale-pill-btn active"
+                      data-scale="100"
+                    >
+                      100%
+                    </button>
+                    <button
+                      type="button"
+                      class="scale-pill-btn"
+                      data-scale="75"
+                    >
+                      75%
+                    </button>
+                    <button
+                      type="button"
+                      class="scale-pill-btn"
+                      data-scale="50"
+                    >
+                      50%
+                    </button>
+                    <button
+                      type="button"
+                      class="scale-pill-btn"
+                      data-scale="25"
+                    >
+                      25%
+                    </button>
+                  </div>
+
+                  <label class="checkbox-row">
+                    <input type="checkbox" id="preventUpscaling" checked />
+                    <span
+                      >Prevent upscaling if image is smaller than target
+                      dimensions</span
+                    >
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3. Overall Savings Summary Banner -->
+            <div
+              class="savings-summary-banner"
+              id="savingsSummaryBanner"
+              aria-live="polite"
+            >
+              <div class="savings-stats-group">
+                <div class="savings-stat-block">
+                  <span class="savings-stat-label">Original Total</span>
+                  <span class="savings-stat-value" id="totalOriginalSize"
+                    >0 B</span
+                  >
+                </div>
+                <div class="savings-stat-block">
+                  <span class="savings-stat-label">Compressed Total</span>
+                  <span class="savings-stat-value" id="totalCompressedSize"
+                    >0 B</span
+                  >
+                </div>
+                <div class="savings-stat-block">
+                  <span class="savings-stat-label">Total Saved</span>
+                  <span
+                    class="savings-stat-value highlight"
+                    id="totalSavedPercent"
+                    >0%</span
+                  >
+                </div>
+              </div>
+              <div class="actions-right">
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  id="downloadAllBtn"
+                >
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    aria-hidden="true"
+                  >
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                    <polyline points="7 10 12 15 17 10"></polyline>
+                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                  </svg>
+                  Download All
+                </button>
+              </div>
+            </div>
+
+            <!-- 4. Image Queue & Results List -->
+            <div class="queue-section" aria-labelledby="queueSectionTitle">
+              <div class="queue-section-header">
+                <div class="queue-title-badge">
+                  <span id="queueSectionTitle">Image Queue</span>
+                  <span class="queue-count-pill" id="queueCountBadge"
+                    >0 images</span
+                  >
+                </div>
+                <button
+                  type="button"
+                  class="btn btn-outline-danger btn-sm"
+                  id="clearAllBtn"
+                >
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    aria-hidden="true"
+                  >
+                    <polyline points="3 6 5 6 21 6"></polyline>
+                    <path
+                      d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+                    ></path>
+                  </svg>
+                  Clear All
+                </button>
+              </div>
+
+              <div class="image-queue-list" id="imageQueueList" role="list">
+                <!-- Dynamically populated queue cards -->
+              </div>
+
+              <!-- Empty queue placeholder -->
+              <div class="empty-queue-box" id="emptyQueueState">
+                No images uploaded yet. Drag and drop your JPG, PNG, or WebP
+                files above to begin compressing.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+         BEFORE / AFTER COMPARISON MODAL
+         ========================================================================== -->
+      <div
+        class="preview-modal-backdrop"
+        id="previewModal"
+        aria-hidden="true"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Before and After Comparison"
+      >
+        <div class="preview-dialog">
+          <div class="preview-modal-header">
+            <span class="preview-modal-title">Visual Comparison</span>
+            <button
+              type="button"
+              class="search-close-btn"
+              id="previewModalClose"
+              aria-label="Close comparison"
+            >
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                aria-hidden="true"
+              >
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </button>
+          </div>
+          <div class="preview-modal-body">
+            <div class="preview-comparison-grid">
+              <div class="preview-box-col">
+                <div class="preview-box-title">
+                  <span>Original</span>
+                  <span
+                    id="previewOriginalMeta"
+                    style="
+                      font-weight: 500;
+                      font-size: 0.8rem;
+                      color: var(--ink-faint);
+                    "
+                    >--</span
+                  >
+                </div>
+                <div class="preview-box-frame">
+                  <img id="previewOriginalImg" src="" alt="Original Preview" />
+                </div>
+              </div>
+              <div class="preview-box-col">
+                <div class="preview-box-title">
+                  <span style="color: var(--success)">Compressed Output</span>
+                  <span
+                    id="previewCompressedMeta"
+                    style="
+                      font-weight: 600;
+                      font-size: 0.8rem;
+                      color: var(--success);
+                    "
+                    >--</span
+                  >
+                </div>
+                <div class="preview-box-frame">
+                  <img
+                    id="previewCompressedImg"
+                    src=""
+                    alt="Compressed Output Preview"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==========================================================================
+         HOW IT WORKS SECTION
+         ========================================================================== -->
+      <section class="section section-alt" aria-labelledby="howItWorksHeading">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-eyebrow">Seamless Pipeline</span>
+            <h2 class="section-title" id="howItWorksHeading">
+              How Browser Image Compression Works
+            </h2>
+            <p class="section-desc">
+              Experience lightning-fast client-side compression that maximizes
+              bandwidth savings without compromising image fidelity or user
+              privacy.
+            </p>
+          </div>
+
+          <div class="steps-grid">
+            <!-- Step 1 -->
+            <div class="step-card">
+              <div class="step-number" aria-hidden="true">1</div>
+              <h3 class="step-card-title">Load &amp; Decode</h3>
+              <p class="step-card-desc">
+                Your files are read locally into browser memory via the HTML5
+                File API and decoded into an uncompressed raster bitmap
+                representation using zero remote network calls.
+              </p>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="step-card">
+              <div class="step-number" aria-hidden="true">2</div>
+              <h3 class="step-card-title">Quantize &amp; Scale</h3>
+              <p class="step-card-desc">
+                The high-performance Canvas 2D raster engine resamples
+                dimensions, strips redundant metadata (EXIF/GPS), and applies
+                perceptual frequency quantization tailored to your quality
+                preference.
+              </p>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="step-card">
+              <div class="step-number" aria-hidden="true">3</div>
+              <h3 class="step-card-title">Export &amp; Download</h3>
+              <p class="step-card-desc">
+                The optimized binary blob is generated directly in RAM. Instant
+                download links are prepared, allowing single-click or batch
+                downloads with honest before-and-after byte reductions.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+         SUPPORTED FORMATS COMPARISON
+         ========================================================================== -->
+      <section class="section" aria-labelledby="supportedFormatsHeading">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-eyebrow">Format Intelligence</span>
+            <h2 class="section-title" id="supportedFormatsHeading">
+              Optimized For Every Format
+            </h2>
+            <p class="section-desc">
+              Select the perfect image format for your digital publishing
+              requirements, web platforms, and mobile applications.
+            </p>
+          </div>
+
+          <div class="formats-grid">
+            <!-- JPG Card -->
+            <div class="format-card">
+              <div class="format-card-header">
+                <span class="format-badge-large">JPG / JPEG</span>
+                <span class="format-pill-tag">Photographs</span>
+              </div>
+              <p class="format-card-desc">
+                Ideal for rich natural photos, portraits, and scenic landscapes
+                where subtle gradients and millions of blended hues exist
+                without sharp contrast boundaries.
+              </p>
+              <ul class="format-checklist">
+                <li>
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  Discrete Cosine Transform (DCT) lossy encoding
+                </li>
+                <li>
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  Universal compatibility across all devices
+                </li>
+                <li>
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  Excellent 70–85% reduction potential
+                </li>
+              </ul>
+            </div>
+
+            <!-- WebP Card -->
+            <div class="format-card" style="border-color: var(--primary)">
+              <div class="format-card-header">
+                <span
+                  class="format-badge-large"
+                  style="background: var(--primary); color: var(--white)"
+                  >WebP</span
+                >
+                <span class="format-pill-tag">Recommended</span>
+              </div>
+              <p class="format-card-desc">
+                Modern Google web format that supports both lossy and lossless
+                modes, alpha channel transparency, and 30% smaller files than
+                JPEG.
+              </p>
+              <ul class="format-checklist">
+                <li>
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  Predictive block intra-frame quantization
+                </li>
+                <li>
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  Supports full 8-bit alpha transparency
+                </li>
+                <li>
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  Boosts Core Web Vitals (LCP scores)
+                </li>
+              </ul>
+            </div>
+
+            <!-- PNG Card -->
+            <div class="format-card">
+              <div class="format-card-header">
+                <span class="format-badge-large">PNG</span>
+                <span class="format-pill-tag">Graphics &amp; Logos</span>
+              </div>
+              <p class="format-card-desc">
+                Essential for logos, user interface screenshots, line art,
+                diagrams, and illustrations demanding pixel-perfect crispness
+                and transparent backgrounds.
+              </p>
+              <ul class="format-checklist">
+                <li>
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  Deflate lossless compression algorithm
+                </li>
+                <li>
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  No ringing or blocking compression artifacts
+                </li>
+                <li>
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  Maintains transparent background layers
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+         GEO / AI DIRECT ANSWERS SECTION
+         ========================================================================== -->
+      <section
+        class="section section-alt"
+        aria-labelledby="directAnswersHeading"
+      >
+        <div class="container">
+          <div class="section-header">
+            <span class="section-eyebrow">Quick Knowledge</span>
+            <h2 class="section-title" id="directAnswersHeading">
+              Direct Answers for Search &amp; AI Assist
+            </h2>
+            <p class="section-desc">
+              Concise, authoritative answers to the most common inquiries
+              regarding digital image compression and web performance.
+            </p>
+          </div>
+
+          <div class="geo-qa-grid">
+            <div class="geo-qa-card">
+              <h3 class="geo-qa-question">What is an image compressor?</h3>
+              <p class="geo-qa-answer">
+                An image compressor is a software tool or web application that
+                reduces the byte size of digital graphic files by eliminating
+                redundant metadata, minimizing unnecessary color frequencies,
+                and applying predictive coding algorithms while maintaining
+                visual fidelity.
+              </p>
+            </div>
+
+            <div class="geo-qa-card">
+              <h3 class="geo-qa-question">How does image compression work?</h3>
+              <p class="geo-qa-answer">
+                Image compression transforms raw pixel data through mathematical
+                transforms (such as the Discrete Cosine Transform), chroma
+                subsampling (4:2:0), and entropy quantization. High frequencies
+                least detectable by the human visual cortex are rounded,
+                discarding bytes with negligible perceived quality drop.
+              </p>
+            </div>
+
+            <div class="geo-qa-card">
+              <h3 class="geo-qa-question">
+                How can I compress an image online?
+              </h3>
+              <p class="geo-qa-answer">
+                To compress an image online with Huzikit: 1) Drag and drop your
+                JPG, PNG, or WebP files into the upload box; 2) Select your
+                desired quality preset (such as Balanced 80%); 3) Click
+                "Compress All"; 4) Preview your actual savings and download the
+                compressed files.
+              </p>
+            </div>
+
+            <div class="geo-qa-card">
+              <h3 class="geo-qa-question">
+                Which image formats are supported?
+              </h3>
+              <p class="geo-qa-answer">
+                Huzikit supports JPEG, JPG, PNG, and WebP. You can compress
+                images in their native formats or cross-convert between them
+                (such as transforming heavy PNG files into lightweight WebP
+                format).
+              </p>
+            </div>
+
+            <div class="geo-qa-card">
+              <h3 class="geo-qa-question">Does compression reduce quality?</h3>
+              <p class="geo-qa-answer">
+                Lossy compression removes high-frequency color variations that
+                the human eye cannot easily distinguish. When set to quality
+                factors between 75% and 85%, the compressed image remains
+                visually indistinguishable from the original while dropping file
+                sizes by 60% to 80%.
+              </p>
+            </div>
+
+            <div class="geo-qa-card">
+              <h3 class="geo-qa-question">
+                Is browser-based image compression private?
+              </h3>
+              <p class="geo-qa-answer">
+                Yes. Huzikit Image Compressor executes entirely within your
+                browser via the HTML5 Canvas API. Your source photographs are
+                never transmitted across the network or stored on any remote
+                cloud server.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+         COMPREHENSIVE INFORMATIONAL SEO CONTENT (1,200 - 1,700 WORDS)
+         ========================================================================== -->
+      <section class="section" aria-labelledby="seoArticleHeading">
+        <div class="container">
+          <article class="seo-article-card">
+            <header>
+              <h2 id="seoArticleHeading">
+                Comprehensive Guide to Modern Web Image Compression
+              </h2>
+              <p>
+                In modern web engineering and digital content publishing,
+                digital imagery accounts for over 60% of total webpage payload.
+                As search engine ranking algorithms place unprecedented emphasis
+                on user experience and Core Web Vitals, optimizing visual assets
+                without degrading artistic intent has evolved from an optional
+                tweak into an imperative discipline.
+              </p>
+            </header>
+
+            <section>
+              <h3>Understanding Lossy versus Lossless Compression</h3>
+              <p>
+                At the core of image optimization is the distinction between
+                <strong>lossy</strong> and <strong>lossless</strong> algorithms.
+                Lossless compression, exemplified by the PNG format's DEFLATE
+                algorithm, functions analogously to a ZIP archive: it
+                reconstructs the original uncompressed bitmap matrix
+                byte-for-byte upon decompression. While indispensable for icons,
+                line art, medical scans, and user interface screenshots
+                requiring razor-sharp vector-like edges, lossless compression
+                yields limited file size reductions when applied to real-world
+                photographic imagery.
+              </p>
+              <p>
+                Conversely, lossy compression—the bedrock of JPEG and lossy
+                WebP—exploits the psycho-visual limitations of human optical
+                perception. The human eye possesses significantly higher visual
+                acuity for spatial brightness (luminance) than for chromatic
+                tint (chrominance). Lossy encoders exploit this asymmetry
+                through chroma subsampling (such as 4:2:0 YCbCr), discarding
+                color data resolution by half across horizontal and vertical
+                dimensions before applying Discrete Cosine Transforms (DCT) and
+                quantization. This enables dramatic 70% to 85% reductions in raw
+                byte weight with negligible perceptible loss in apparent
+                sharpness.
+              </p>
+            </section>
+
+            <div class="seo-callout-box">
+              <strong>Key Takeaway for Web Authors:</strong>
+              <span
+                >For photographic portraits and scenery, lossy compression with
+                a balanced quality setting between 75% and 82% yields optimal
+                web load times without visible degradation on high-density
+                Retina or OLED screens.</span
+              >
+            </div>
+
+            <section>
+              <h3>How Browser-Based Canvas Compression Operates</h3>
+              <p>
+                Traditional online image compressors rely on server-side
+                pipelines: a user uploads an image across the network to a
+                distant cloud virtual machine running tools like ImageMagick,
+                libjpeg-turbo, or pngquant, waits for background rendering, and
+                downloads the result back down. This workflow introduces
+                latency, bandwidth waste, file size caps, and serious data
+                privacy risks for confidential documents.
+              </p>
+              <p>
+                Huzikit revolutionizes this process by executing compression
+                100% inside your client browser using standard web APIs:
+              </p>
+              <ol>
+                <li>
+                  <strong>Local File Ingestion:</strong> The browser's
+                  <code>FileReader</code> or <code>createImageBitmap</code> API
+                  reads your selected file into local sandbox memory without
+                  network transmission.
+                </li>
+                <li>
+                  <strong>Canvas Rasterization:</strong> An off-screen HTML5
+                  <code>&lt;canvas&gt;</code> element is instantiated with
+                  precise mathematical dimensions. The image is rendered using
+                  bicubic interpolation for optimal antialiasing.
+                </li>
+                <li>
+                  <strong>Alpha Transparency Preservation:</strong> If you
+                  convert transparent assets into JPEG format, Huzikit
+                  automatically coats the canvas background in pure white
+                  (#FFFFFF), preventing the notorious black-square artifact that
+                  plagues basic conversion scripts.
+                </li>
+                <li>
+                  <strong>Direct Blob Generation:</strong> The browser's native
+                  <code>canvas.toBlob()</code> method executes high-performance
+                  hardware-accelerated quantization in compiled C++ browser
+                  code, returning a compressed binary <code>Blob</code> object
+                  in fractions of a second.
+                </li>
+              </ol>
+            </section>
+
+            <section>
+              <h3>Format Matrix: When to Use JPG, PNG, and WebP</h3>
+              <p>
+                Selecting the appropriate file container is as critical as
+                selecting the compression level:
+              </p>
+              <ul>
+                <li>
+                  <strong>JPEG / JPG:</strong> The universal standard since
+                  1992. Ideal for general photographs and legacy web systems
+                  requiring 100% backward compatibility with vintage email
+                  clients and older software. Does not support transparency.
+                </li>
+                <li>
+                  <strong>PNG:</strong> The industry standard for transparent
+                  overlays, logos, UI badges, charts, and graphics with
+                  high-contrast text. While heavier than lossy formats, it
+                  ensures crisp geometric rendering without halo ringing.
+                </li>
+                <li>
+                  <strong>WebP:</strong> Introduced by Google in 2010 and now
+                  universally supported across modern browsers (Chrome, Safari,
+                  Edge, Firefox, iOS, Android). WebP provides both lossy
+                  compression (averaging 25–34% smaller than JPEG at equal SSIM)
+                  and lossless compression (averaging 26% smaller than PNG),
+                  complete with full 8-bit alpha transparency.
+                </li>
+              </ul>
+            </section>
+
+            <section>
+              <h3>Core Web Vitals, Page Speed, and Search Engine Ranking</h3>
+              <p>
+                Google's search ranking algorithm incorporates page experience
+                metrics known as Core Web Vitals. Among these,
+                <strong>Largest Contentful Paint (LCP)</strong> measures the
+                duration required for the largest visual element in the
+                viewport—overwhelmingly a hero banner image—to load and finish
+                rendering.
+              </p>
+              <p>
+                Uncompressed photographic banners weighing 3MB to 6MB starve
+                mobile network threads, stall the browser's DOM parser, elevate
+                bounce rates, and inflict direct penalties on search rankings.
+                By compressing hero banners into modern WebP files under 250KB,
+                websites achieve instant LCP milestones, preserve visitor mobile
+                data quotas, and rank significantly higher in competitive search
+                engine result pages.
+              </p>
+            </section>
+
+            <section>
+              <h3>Practical Image Optimization Best Practices</h3>
+              <p>
+                Follow these expert recommendations when optimizing images for
+                production websites:
+              </p>
+              <ul>
+                <li>
+                  <strong>Resize Before Publishing:</strong> Never upload a
+                  6000×4000 camera raw photo if the maximum display container
+                  width on desktop is 1200px. Use our built-in dimension scaler
+                  to resize pixel dimensions to match intended layouts.
+                </li>
+                <li>
+                  <strong>Audit Actual Savings:</strong> Always verify
+                  before-and-after metrics. Huzikit calculates genuine byte
+                  comparisons and will explicitly alert you if re-encoding an
+                  already hyper-compressed file would inadvertently result in a
+                  larger payload.
+                </li>
+                <li>
+                  <strong>Leverage Batch Processing:</strong> Queue multiple
+                  product photos or blog assets simultaneously to standardize
+                  quality profiles across your entire media library in a single
+                  workflow.
+                </li>
+              </ul>
+            </section>
+          </article>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+         FREQUENTLY ASKED QUESTIONS (FAQ) ACCORDION
+         ========================================================================== -->
+      <section
+        class="section section-alt"
+        id="faq"
+        aria-labelledby="faqSectionHeading"
+      >
+        <div class="container">
+          <div class="section-header">
+            <span class="section-eyebrow">Got Questions?</span>
+            <h2 class="section-title" id="faqSectionHeading">
+              Frequently Asked Questions
+            </h2>
+            <p class="section-desc">
+              Everything you need to know about Huzikit's free online image
+              compression technology, privacy model, and supported workflows.
+            </p>
+          </div>
+
+          <div
+            class="faq-accordion-list"
+            role="region"
+            aria-label="FAQ Accordion"
+          >
+            <!-- FAQ Item 1 -->
+            <div class="faq-accordion-item">
+              <button
+                type="button"
+                class="faq-question-btn"
+                aria-expanded="false"
+              >
+                <span>What is an image compressor?</span>
+                <svg
+                  class="faq-caret-icon"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  aria-hidden="true"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div class="faq-answer-panel">
+                An image compressor is a utility that minimizes the byte size of
+                digital photos and graphics by eliminating non-essential
+                metadata (such as camera EXIF markers, GPS coordinates, and
+                embedded color profiles) and mathematically quantizing color
+                data to lower storage weight while preserving crisp visual
+                presentation.
+              </div>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="faq-accordion-item">
+              <button
+                type="button"
+                class="faq-question-btn"
+                aria-expanded="false"
+              >
+                <span
+                  >How does this image compressor preserve image privacy?</span
+                >
+                <svg
+                  class="faq-caret-icon"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  aria-hidden="true"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div class="faq-answer-panel">
+                Huzikit processes your images 100% locally on your own computer
+                or smartphone using HTML5 Canvas and Web APIs. Unlike
+                conventional websites that transmit your confidential photos to
+                remote cloud servers, your images never leave your device.
+              </div>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div class="faq-accordion-item">
+              <button
+                type="button"
+                class="faq-question-btn"
+                aria-expanded="false"
+              >
+                <span>Which image formats are supported for compression?</span>
+                <svg
+                  class="faq-caret-icon"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  aria-hidden="true"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div class="faq-answer-panel">
+                We natively support JPEG, JPG, PNG, and WebP formats. You can
+                preserve the original format or cross-convert files—for example,
+                converting heavy PNG graphics into ultra-lightweight WebP format
+                for improved website loading times.
+              </div>
+            </div>
+
+            <!-- FAQ Item 4 -->
+            <div class="faq-accordion-item">
+              <button
+                type="button"
+                class="faq-question-btn"
+                aria-expanded="false"
+              >
+                <span
+                  >Will compressing my images visibly degrade their
+                  quality?</span
+                >
+                <svg
+                  class="faq-caret-icon"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  aria-hidden="true"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div class="faq-answer-panel">
+                With our Balanced (80%) or High Quality (92%) presets, human
+                eyes cannot perceive differences in sharpness or color fidelity
+                on high-resolution Retina or standard displays. If you require
+                maximum file reduction for mobile messaging or email
+                attachments, our Max Compression (60%) preset delivers drastic
+                size reductions.
+              </div>
+            </div>
+
+            <!-- FAQ Item 5 -->
+            <div class="faq-accordion-item">
+              <button
+                type="button"
+                class="faq-question-btn"
+                aria-expanded="false"
+              >
+                <span
+                  >How does transparency handling work during compression?</span
+                >
+                <svg
+                  class="faq-caret-icon"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  aria-hidden="true"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div class="faq-answer-panel">
+                PNG and WebP files retain full alpha transparency when
+                compressed in PNG or WebP modes. If you choose to convert
+                transparent PNG or WebP images to JPEG (which lacks transparency
+                support), our engine automatically fills transparent regions
+                with clean white (#FFFFFF) background pixels to prevent ugly
+                black boxes.
+              </div>
+            </div>
+
+            <!-- FAQ Item 6 -->
+            <div class="faq-accordion-item">
+              <button
+                type="button"
+                class="faq-question-btn"
+                aria-expanded="false"
+              >
+                <span>Is there a limit on how many images I can compress?</span>
+                <svg
+                  class="faq-caret-icon"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  aria-hidden="true"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div class="faq-answer-panel">
+                There are zero file limits, file size restrictions, or
+                subscription requirements. Because processing occurs directly in
+                your browser's RAM, you can queue multiple images simultaneously
+                without restrictions.
+              </div>
+            </div>
+
+            <!-- FAQ Item 7 -->
+            <div class="faq-accordion-item">
+              <button
+                type="button"
+                class="faq-question-btn"
+                aria-expanded="false"
+              >
+                <span>Can I resize pixel dimensions while compressing?</span>
+                <svg
+                  class="faq-caret-icon"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  aria-hidden="true"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div class="faq-answer-panel">
+                Yes. Click "Optional: Resize Image Dimensions" inside the
+                settings panel to specify target width, target height, maintain
+                a locked aspect ratio, scale by percentages (25%, 50%, 75%), or
+                prevent small images from being accidentally upscaled.
+              </div>
+            </div>
+
+            <!-- FAQ Item 8 -->
+            <div class="faq-accordion-item">
+              <button
+                type="button"
+                class="faq-question-btn"
+                aria-expanded="false"
+              >
+                <span>Why is WebP often smaller than JPEG or PNG?</span>
+                <svg
+                  class="faq-caret-icon"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  aria-hidden="true"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div class="faq-answer-panel">
+                WebP uses advanced predictive block coding developed by Google,
+                where pixel blocks are predicted from adjacent neighboring
+                blocks and only difference residues are encoded. This
+                mathematical efficiency delivers 25% to 34% smaller file sizes
+                than JPEG at identical visual quality scores.
+              </div>
+            </div>
+
+            <!-- FAQ Item 9 -->
+            <div class="faq-accordion-item">
+              <button
+                type="button"
+                class="faq-question-btn"
+                aria-expanded="false"
+              >
+                <span
+                  >Why did my compressed file turn out slightly larger?</span
+                >
+                <svg
+                  class="faq-caret-icon"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  aria-hidden="true"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div class="faq-answer-panel">
+                If you upload an image that has already been aggressively
+                compressed with high lossy quantization, or if you convert an
+                efficient JPEG into a lossless PNG container, the output byte
+                weight can occasionally increase. Huzikit always displays
+                genuine, unpadded numbers so you remain fully informed.
+              </div>
+            </div>
+
+            <!-- FAQ Item 10 -->
+            <div class="faq-accordion-item">
+              <button
+                type="button"
+                class="faq-question-btn"
+                aria-expanded="false"
+              >
+                <span
+                  >How does image compression benefit website SEO and Core Web
+                  Vitals?</span
+                >
+                <svg
+                  class="faq-caret-icon"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  aria-hidden="true"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div class="faq-answer-panel">
+                Compressed images load significantly faster, which dramatically
+                lowers Largest Contentful Paint (LCP) load times, preserves
+                mobile bandwidth, lowers server egress bills, and directly
+                improves search engine ranking positions on Google.
+              </div>
+            </div>
+
+            <!-- FAQ Item 11 -->
+            <div class="faq-accordion-item">
+              <button
+                type="button"
+                class="faq-question-btn"
+                aria-expanded="false"
+              >
+                <span>Can I use this tool on my iPhone or Android phone?</span>
+                <svg
+                  class="faq-caret-icon"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  aria-hidden="true"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div class="faq-answer-panel">
+                Yes. Huzikit Image Compressor is designed mobile-first with zero
+                horizontal overflow, responsive touch controls, and smooth
+                compatibility across mobile Safari, Chrome, Samsung Internet,
+                and Firefox.
+              </div>
+            </div>
+
+            <!-- FAQ Item 12 -->
+            <div class="faq-accordion-item">
+              <button
+                type="button"
+                class="faq-question-btn"
+                aria-expanded="false"
+              >
+                <span>Is any software or plugin installation required?</span>
+                <svg
+                  class="faq-caret-icon"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  aria-hidden="true"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div class="faq-answer-panel">
+                No software, browser extensions, or plugins are required.
+                Everything executes smoothly within your standard modern web
+                browser.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+         RELATED TOOLS SECTION
+         ========================================================================== -->
+      <section class="section" aria-labelledby="relatedToolsHeading">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-eyebrow">Explore Suite</span>
+            <h2 class="section-title" id="relatedToolsHeading">
+              Related Huzikit Utilities
+            </h2>
+            <p class="section-desc">
+              Discover more lightning-fast, zero-installation developer, media,
+              and text utilities from Huzikit.
+            </p>
+          </div>
+
+          <div class="related-tools-grid">
+            <a
+              href="/image&amp;pdf/image-resizer.html"
+              class="related-tool-card"
+            >
+              <span class="related-tool-tag">Image &amp; PDF</span>
+              <span class="related-tool-name">Image Resizer</span>
+              <span class="related-tool-desc"
+                >Scale pixel dimensions, change aspect ratios, and crop graphics
+                online.</span
+              >
+            </a>
+
+            <a href="/image&amp;pdf/jpg-to-png.html" class="related-tool-card">
+              <span class="related-tool-tag">Image &amp; PDF</span>
+              <span class="related-tool-name">JPG to PNG Converter</span>
+              <span class="related-tool-desc"
+                >Convert photographic JPEGs into lossless PNG graphics with
+                alpha channels.</span
+              >
+            </a>
+
+            <a href="/image&amp;pdf/colorpicker.html" class="related-tool-card">
+              <span class="related-tool-tag">Image &amp; PDF</span>
+              <span class="related-tool-name">Color Picker</span>
+              <span class="related-tool-desc"
+                >Extract HEX, RGB, and HSL color values with an intuitive visual
+                palette generator.</span
+              >
+            </a>
+
+            <a
+              href="/developertools/JSONFORMATTER.html"
+              class="related-tool-card"
+            >
+              <span class="related-tool-tag">Developer</span>
+              <span class="related-tool-name">JSON Formatter</span>
+              <span class="related-tool-desc"
+                >Beautify, validate, parse, and minify JSON payloads in your
+                browser.</span
+              >
+            </a>
+
+            <a href="/texttools/word-counter.html" class="related-tool-card">
+              <span class="related-tool-tag">Text Tools</span>
+              <span class="related-tool-name">Word Counter</span>
+              <span class="related-tool-desc"
+                >Analyze word counts, character lengths, reading durations, and
+                sentences.</span
+              >
+            </a>
+
+            <a
+              href="/calculator/percentage-calculator.html"
+              class="related-tool-card"
+            >
+              <span class="related-tool-tag">Calculators</span>
+              <span class="related-tool-name">Percentage Calculator</span>
+              <span class="related-tool-desc"
+                >Calculate percent changes, discounts, ratios, and mathematical
+                increments.</span
+              >
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ==========================================================================
+       GLOBAL HUZIKIT DARK FOOTER
+       ========================================================================== -->
+    <footer class="site-footer" id="about">
+      <div class="container">
+        <div class="footer-top-grid">
+          <!-- Brand & Bio Column -->
+          <div class="footer-brand-col">
+            <a href="/" class="footer-logo" aria-label="Huzikit Home">
+              <span>Huzikit</span>
+            </a>
+            <p class="footer-bio">
+              The ultimate modern suite of lightning-fast, secure online web
+              utilities, calculators, and developer tools.
+            </p>
+            <a
+              href="https://x.com/huzikitoffical"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footer-social-link"
+              aria-label="Follow Huzikit on X (formerly Twitter)"
+            >
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+              >
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                ></path>
+              </svg>
+              <span>@huzikitoffical</span>
+            </a>
+          </div>
+
+          <!-- Column 1: Text & Dev Tools -->
+          <div class="footer-col">
+            <div class="footer-col-title">Text &amp; Dev Tools</div>
+            <ul class="footer-links-list">
+              <li><a href="/texttools/word-counter.html">Word Counter</a></li>
+              <li>
+                <a href="/texttools/case-converter.html">Case Converter</a>
+              </li>
+              <li>
+                <a href="/developertools/JSONFORMATTER.html">JSON Formatter</a>
+              </li>
+              <li>
+                <a href="/developertools/base64encoderdecoder.html"
+                  >Base64 Utility</a
+                >
+              </li>
+              <li>
+                <a href="/developertools/regextester.html">Regex Tester</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 2: Calculators & Image -->
+          <div class="footer-col">
+            <div class="footer-col-title">Calculators &amp; Image</div>
+            <ul class="footer-links-list">
+              <li>
+                <a href="/calculator/agecalculator.html">Age Calculator</a>
+              </li>
+              <li>
+                <a href="/calculator/bmi-calculator.html">BMI Calculator</a>
+              </li>
+              <li>
+                <a href="/image&amp;pdf/image-compressor.html"
+                  >Image Compressor</a
+                >
+              </li>
+              <li>
+                <a href="/image&amp;pdf/QRGenrator.html">QR Code Generator</a>
+              </li>
+              <li>
+                <a href="/image&amp;pdf/colorpicker.html">Color Picker</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Company & Legal -->
+          <div class="footer-col">
+            <div class="footer-col-title">Company &amp; Legal</div>
+            <ul class="footer-links-list">
+              <li><a href="/about.html">About Huzikit</a></li>
+              <li><a href="/disclamier.html">Disclaimer</a></li>
+              <li><a href="/privacy-policies.html">Privacy Policy</a></li>
+              <li><a href="/Termsofservices.html">Terms of Service</a></li>
+              <li><a href="/contact-us.html">Contact Support</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom-bar">
+          <span>&copy; 2026 Huzikit.com. All rights reserved.</span>
+          <span class="footer-tagline"
+            >Built with speed, security, and precision.</span
+          >
+        </div>
+      </div>
+    </footer>
+
+    <!-- Vanilla JavaScript -->
+    <script src="/image&pdf/image-compressor.js" defer></script>
+  </body>
+</html>

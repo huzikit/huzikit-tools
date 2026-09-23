@@ -1,0 +1,3258 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary SEO Meta Tags -->
+    <title>
+      Free Unix Timestamp Converter Convert Unix Time to Date | Huzikit
+    </title>
+    <meta
+      name="description"
+      content="Free online Unix timestamp converter tool by Huzikit. Convert Unix timestamps in seconds and milliseconds to human-readable dates, UTC, ISO 8601, and back instantly."
+    />
+    <meta
+      name="keywords"
+      content="Unix Timestamp, Unix timestamp converter, Unix time converter, timestamp converter, Unix timestamp to date, date to Unix timestamp, Unix time calculator, timestamp generator, current Unix timestamp, Unix timestamp milliseconds, Unix timestamp seconds, epoch converter, epoch timestamp converter, Unix epoch time, online timestamp converter"
+    />
+    <meta name="author" content="Huzikit.com" />
+    <meta name="robots" content="index, follow" />
+    <link
+      rel="canonical"
+      href="https://huzikit.com/developertools/unixtimestamp.html"
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://huzikit.com/developertools/unixtimestamp.html"
+    />
+    <meta
+      property="og:title"
+      content="Free Unix Timestamp Converter — Convert Unix Time to Date | Huzikit"
+    />
+    <meta
+      property="og:description"
+      content="Convert Unix timestamps in seconds and milliseconds to human-readable dates, UTC, and ISO 8601. Real-time clock, date differences, and timezone conversion."
+    />
+    <meta
+      property="og:image"
+      content="https://huzikit.com/assets/og-unixtimestamp.png"
+    />
+    <meta property="og:site_name" content="Huzikit" />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:url"
+      content="https://huzikit.com/developertools/unixtimestamp.html"
+    />
+    <meta
+      name="twitter:title"
+      content="Free Unix Timestamp Converter — Convert Unix Time to Date | Huzikit"
+    />
+    <meta
+      name="twitter:description"
+      content="Lightning-fast online Unix timestamp and epoch converter with timezone support, milliseconds precision, and time calculation utilities."
+    />
+    <meta
+      name="twitter:image"
+      content="https://huzikit.com/assets/og-unixtimestamp.png"
+    />
+
+    <!-- Google Fonts: Lexend (Headings) & Inter (UI/Body) & JetBrains Mono (Code) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Lexend:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheet -->
+    <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="/developertools/unixtimestamp.css" />
+
+    <!-- Schema.org JSON-LD Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebApplication",
+            "@id": "https://huzikit.com/developertools/unixtimestamp.html#webapp",
+            "name": "Free Unix Timestamp Converter",
+            "url": "https://huzikit.com/developertools/unixtimestamp.html",
+            "applicationCategory": "DeveloperApplication",
+            "operatingSystem": "All",
+            "description": "Convert Unix epoch timestamps to human-readable dates and convert dates back to Unix timestamps in seconds and milliseconds.",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "Huzikit",
+              "url": "https://huzikit.com"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://huzikit.com/developertools/unixtimestamp.html#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://huzikit.com"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Developer",
+                "item": "https://huzikit.com/toolpage.html"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Unix Timestamp",
+                "item": "https://huzikit.com/developertools/unixtimestamp.html"
+              }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://huzikit.com/developertools/unixtimestamp.html#faq",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is Unix time and a Unix timestamp?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A Unix timestamp is a 32-bit or 64-bit integer representing the total number of elapsed seconds since the Unix Epoch: January 1, 1970 at 00:00:00 Coordinated Universal Time (UTC), not counting leap seconds."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the difference between Unix time in seconds and milliseconds?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Standard Unix time in POSIX systems is recorded in seconds (typically 10 digits, e.g. 1700000000). Modern programming environments like JavaScript (Date.now()) and Java use milliseconds (typically 13 digits, e.g. 1700000000000) for higher sub-second precision."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do I convert a Unix timestamp to a human-readable date?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Enter the numeric timestamp into the input field above. The tool automatically detects whether it is in seconds or milliseconds, computes the local and UTC calendar date, and displays the ISO 8601 representation."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can Unix timestamps represent dates before 1970?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, negative Unix timestamps represent historical dates prior to January 1, 1970. For example, -86400 corresponds to December 31, 1969 00:00:00 UTC."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the Year 2038 Problem (Y2038)?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The Year 2038 problem affects legacy 32-bit signed integer timestamp implementations. On January 19, 2038 at 03:14:07 UTC, the 32-bit integer reaches its maximum capacity (2,147,483,647) and overflows into negative numbers. Modern 64-bit systems resolve this completely."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is this Unix timestamp converter free and secure?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, the Huzikit Unix Timestamp tool is 100% free with unlimited conversions. All calculations are executed client-side directly within your browser, ensuring complete privacy with zero data sent to external servers."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+
+    <!-- Script Execution -->
+    <script defer src="/unixtimestamp.js"></script>
+  </head>
+  <body>
+    <!-- ==========================================================================
+       SITE HEADER & GLOBAL NAVBAR (LOCKED SPECIFICATION)
+       Desktop Navbar:
+       1. Text Tools 2. Calculators 3. Image & PDF 4. Developer 6. About 7. Search icon 8. Mobile hamburger
+       ========================================================================== -->
+    <header class="site-header" id="siteHeader">
+      <div class="container">
+        <div class="nav-inner">
+          <!-- Brand Logo -->
+          <a
+            href="/"
+            class="brand-logo"
+            id="brandLogo"
+            aria-label="Huzikit Home"
+          >
+            <span>Huzikit</span>
+          </a>
+
+          <!-- Desktop Navigation Categories -->
+          <nav
+            class="desktop-nav"
+            id="desktopNav"
+            aria-label="Primary Navigation"
+          >
+            <!-- 1. Text Tools Dropdown -->
+            <div class="nav-item">
+              <button
+                class="nav-link"
+                type="button"
+                aria-haspopup="true"
+                aria-expanded="false"
+                id="navLinkTextTools"
+              >
+                Text Tools
+                <svg
+                  class="nav-arrow"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </button>
+              <div class="dropdown-menu" role="menu">
+                <a
+                  href="/texttools/word-counter.html"
+                  class="dropdown-link"
+                  role="menuitem"
+                  >Word Counter</a
+                >
+                <a
+                  href="/texttools/character-counter.html"
+                  class="dropdown-link"
+                  role="menuitem"
+                  >Character Counter</a
+                >
+                <a
+                  href="/texttools/case-converter.html"
+                  class="dropdown-link"
+                  role="menuitem"
+                  >Case Converter</a
+                >
+                <a
+                  href="/texttools/remove-duplicate-lines.html"
+                  class="dropdown-link"
+                  role="menuitem"
+                  >Remove Duplicate Lines</a
+                >
+                <a
+                  href="/texttools/loremipsumgenerator.html"
+                  class="dropdown-link"
+                  role="menuitem"
+                  >Lorem Ipsum Generator</a
+                >
+                <a
+                  href="/texttools/passwordgenerator.html"
+                  class="dropdown-link"
+                  role="menuitem"
+                  >Password Generator</a
+                >
+                <a
+                  href="/texttools/text-reverser.html"
+                  class="dropdown-link"
+                  role="menuitem"
+                  >Text Reverser</a
+                >
+                <a
+                  href="/texttools/onlinenotepad.html"
+                  class="dropdown-link"
+                  role="menuitem"
+                  >Online Notepad</a
+                >
+              </div>
+            </div>
+
+            <!-- 2. Calculators Dropdown -->
+            <div class="nav-item">
+              <button
+                class="nav-link"
+                type="button"
+                aria-haspopup="true"
+                aria-expanded="false"
+                id="navLinkCalculators"
+              >
+                Calculators
+                <svg
+                  class="nav-arrow"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </button>
+              <div class="dropdown-menu" role="menu">
+                <a
+                  href="/calculator/agecalculator.html"
+                  class="dropdown-link"
+                  role="menuitem"
+                  >Age Calculator</a
+                >
+                <a
+                  href="/calculator/bmi-calculator.html"
+                  class="dropdown-link"
+                  role="menuitem"
+                  >BMI Calculator</a
+                >
+                <a
+                  href="/calculator/percentage-calculator.html"
+                  class="dropdown-link"
+                  role="menuitem"
+                  >Percentage Calculator</a
+                >
+                <a
+                  href="/calculator/Calorie-Calculator.html"
+                  class="dropdown-link"
+                  role="menuitem"
+                  >Calorie Calculator</a
+                >
+                <a
+                  href="/calculator/discount-calculator.html"
+                  class="dropdown-link"
+                  role="menuitem"
+                  >Discount Calculator</a
+                >
+                <a
+                  href="/calculator/saving&goalcalculator.html"
+                  class="dropdown-link"
+                  role="menuitem"
+                  >Savings & Goal Calculator</a
+                >
+                <a
+                  href="/calculator/tip-calculator.html"
+                  class="dropdown-link"
+                  role="menuitem"
+                  >Tip Calculator</a
+                >
+                <a
+                  href="/calculator/gpa-calculator.html"
+                  class="dropdown-link"
+                  role="menuitem"
+                  >GPA Calculator</a
+                >
+              </div>
+            </div>
+
+            <!-- 3. Image & PDF Dropdown -->
+            <div class="nav-item">
+              <button
+                class="nav-link"
+                type="button"
+                aria-haspopup="true"
+                aria-expanded="false"
+                id="navLinkImagePdf"
+              >
+                Image & PDF
+                <svg
+                  class="nav-arrow"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </button>
+              <div class="dropdown-menu" role="menu">
+                <a
+                  href="/image&pdf/image-compressor.html"
+                  class="dropdown-link"
+                  role="menuitem"
+                  >Image Compressor</a
+                >
+                <a
+                  href="/image&pdf/image-resizer.html"
+                  class="dropdown-link"
+                  role="menuitem"
+                  >Image Resizer</a
+                >
+                <a
+                  href="/image&pdf/pdftowordconverter.html"
+                  class="dropdown-link"
+                  role="menuitem"
+                  >PDF to Word</a
+                >
+                <a
+                  href="/image&pdf/jpg-to-png.html"
+                  class="dropdown-link"
+                  role="menuitem"
+                  >JPG to PNG</a
+                >
+                <a
+                  href="/image&pdf/colorpicker.html"
+                  class="dropdown-link"
+                  role="menuitem"
+                  >Color Picker / HEX</a
+                >
+                <a
+                  href="/image&pdf/QRGenrator.html"
+                  class="dropdown-link"
+                  role="menuitem"
+                  >QR Code Generator</a
+                >
+              </div>
+            </div>
+
+            <!-- 4. Developer Dropdown -->
+            <div class="nav-item">
+              <button
+                class="nav-link"
+                type="button"
+                aria-haspopup="true"
+                aria-expanded="false"
+                id="navLinkDeveloper"
+              >
+                Developer
+                <svg
+                  class="nav-arrow"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+              </button>
+              <div class="dropdown-menu" role="menu">
+                <a
+                  href="/developertools/JSONFORMATTER.html"
+                  class="dropdown-link"
+                  role="menuitem"
+                  >JSON Formatter</a
+                >
+                <a
+                  href="/developertools/base64encoderdecoder.html"
+                  class="dropdown-link"
+                  role="menuitem"
+                  >Base64 Encoder/Decoder</a
+                >
+                <a
+                  href="/developertools/urlencoderdecoder.html"
+                  class="dropdown-link"
+                  role="menuitem"
+                  >URL Encoder/Decoder</a
+                >
+                <a
+                  href="/developertools/meta-tag-generator.html"
+                  class="dropdown-link"
+                  role="menuitem"
+                  >Meta Tag Generator</a
+                >
+                <a
+                  href="/developertools/regextester.html"
+                  class="dropdown-link"
+                  role="menuitem"
+                  >Regex Tester</a
+                >
+                <a
+                  href="/developertools/markdownhtml.html"
+                  class="dropdown-link"
+                  role="menuitem"
+                  >Markdown to HTML</a
+                >
+                <a
+                  href="/developertools/cssminifier.html"
+                  class="dropdown-link"
+                  role="menuitem"
+                  >CSS Minifier</a
+                >
+                <a
+                  href="/developertools/unixtimestamp.html"
+                  class="dropdown-link active"
+                  role="menuitem"
+                  >Unix Timestamp</a
+                >
+              </div>
+            </div>
+
+            <!-- 6. About -->
+            <div class="nav-item">
+              <a href="/about.html" class="nav-link" id="navLinkAbout">About</a>
+            </div>
+          </nav>
+
+          <!-- Nav Actions: Search & Mobile Hamburger -->
+          <div class="nav-actions">
+            <!-- 7. Search Trigger -->
+            <button
+              class="search-trigger"
+              id="searchTrigger"
+              type="button"
+              aria-label="Search Tools (Ctrl+K)"
+            >
+              <svg
+                width="16"
+                height="16"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <circle cx="11" cy="11" r="8" stroke-width="2" />
+                <line x1="21" y1="21" x2="16.65" y2="16.65" stroke-width="2" />
+              </svg>
+              <span>Search</span>
+              <kbd class="search-shortcut">⌘K</kbd>
+            </button>
+
+            <!-- 8. Mobile Hamburger -->
+            <button
+              class="mobile-toggle"
+              id="mobileToggle"
+              type="button"
+              aria-expanded="false"
+              aria-controls="mobileDrawer"
+              aria-label="Toggle Mobile Navigation"
+            >
+              <span class="mobile-toggle-bar"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ==========================================================================
+       MOBILE NAVIGATION DRAWER
+       ========================================================================== -->
+    <div
+      class="mobile-nav-drawer"
+      id="mobileDrawer"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Mobile Navigation Menu"
+    >
+      <div class="mobile-nav-panel">
+        <!-- Text Tools Accordion -->
+        <details class="mobile-accordion">
+          <summary class="mobile-accordion-btn">
+            <span>Text Tools</span>
+            <svg viewBox="0 0 20 20" fill="currentColor">
+              <path
+                fill-rule="evenodd"
+                d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </summary>
+          <div class="mobile-accordion-content">
+            <a href="/texttools/word-counter.html" class="mobile-link"
+              >Word Counter</a
+            >
+            <a href="/texttools/character-counter.html" class="mobile-link"
+              >Character Counter</a
+            >
+            <a href="/texttools/case-converter.html" class="mobile-link"
+              >Case Converter</a
+            >
+            <a href="/texttools/remove-duplicate-lines.html" class="mobile-link"
+              >Remove Duplicate Lines</a
+            >
+            <a href="/texttools/loremipsumgenerator.html" class="mobile-link"
+              >Lorem Ipsum Generator</a
+            >
+            <a href="/texttools/passwordgenerator.html" class="mobile-link"
+              >Password Generator</a
+            >
+            <a href="/texttools/text-reverser.html" class="mobile-link"
+              >Text Reverser</a
+            >
+            <a href="/texttools/onlinenotepad.html" class="mobile-link"
+              >Online Notepad</a
+            >
+          </div>
+        </details>
+
+        <!-- Calculators Accordion -->
+        <details class="mobile-accordion">
+          <summary class="mobile-accordion-btn">
+            <span>Calculators</span>
+            <svg viewBox="0 0 20 20" fill="currentColor">
+              <path
+                fill-rule="evenodd"
+                d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </summary>
+          <div class="mobile-accordion-content">
+            <a href="/calculator/agecalculator.html" class="mobile-link"
+              >Age Calculator</a
+            >
+            <a href="/calculator/bmi-calculator.html" class="mobile-link"
+              >BMI Calculator</a
+            >
+            <a href="/calculator/percentage-calculator.html" class="mobile-link"
+              >Percentage Calculator</a
+            >
+            <a href="/calculator/Calorie-Calculator.html" class="mobile-link"
+              >Calorie Calculator</a
+            >
+            <a href="/calculator/discount-calculator.html" class="mobile-link"
+              >Discount Calculator</a
+            >
+            <a href="/calculator/saving&goalcalculator.html" class="mobile-link"
+              >Savings & Goal Calculator</a
+            >
+            <a href="/calculator/tip-calculator.html" class="mobile-link"
+              >Tip Calculator</a
+            >
+            <a href="/calculator/gpa-calculator.html" class="mobile-link"
+              >GPA Calculator</a
+            >
+          </div>
+        </details>
+
+        <!-- Image & PDF Accordion -->
+        <details class="mobile-accordion">
+          <summary class="mobile-accordion-btn">
+            <span>Image & PDF</span>
+            <svg viewBox="0 0 20 20" fill="currentColor">
+              <path
+                fill-rule="evenodd"
+                d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </summary>
+          <div class="mobile-accordion-content">
+            <a href="/image&pdf/image-compressor.html" class="mobile-link"
+              >Image Compressor</a
+            >
+            <a href="/image&pdf/image-resizer.html" class="mobile-link"
+              >Image Resizer</a
+            >
+            <a href="/image&pdf/pdftowordconverter.html" class="mobile-link"
+              >PDF to Word</a
+            >
+            <a href="/image&pdf/jpg-to-png.html" class="mobile-link"
+              >JPG to PNG</a
+            >
+            <a href="/image&pdf/colorpicker.html" class="mobile-link"
+              >Color Picker / HEX</a
+            >
+            <a href="/image&pdf/QRGenrator.html" class="mobile-link"
+              >QR Code Generator</a
+            >
+          </div>
+        </details>
+
+        <!-- Developer Accordion -->
+        <details class="mobile-accordion" open>
+          <summary class="mobile-accordion-btn">
+            <span>Developer Tools</span>
+            <svg viewBox="0 0 20 20" fill="currentColor">
+              <path
+                fill-rule="evenodd"
+                d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </summary>
+          <div class="mobile-accordion-content">
+            <a href="/developertools/JSONFORMATTER.html" class="mobile-link"
+              >JSON Formatter</a
+            >
+            <a
+              href="/developertools/base64encoderdecoder.html"
+              class="mobile-link"
+              >Base64 Encoder/Decoder</a
+            >
+            <a href="/developertools/urlencoderdecoder.html" class="mobile-link"
+              >URL Encoder/Decoder</a
+            >
+            <a
+              href="/developertools/meta-tag-generator.html"
+              class="mobile-link"
+              >Meta Tag Generator</a
+            >
+            <a href="/developertools/regextester.html" class="mobile-link"
+              >Regex Tester</a
+            >
+            <a href="/developertools/markdownhtml.html" class="mobile-link"
+              >Markdown to HTML</a
+            >
+            <a href="/developertools/cssminifier.html" class="mobile-link"
+              >CSS Minifier</a
+            >
+            <a
+              href="/developertools/unixtimestamp.html"
+              class="mobile-link active"
+              >Unix Timestamp</a
+            >
+          </div>
+        </details>
+
+        <!-- Single Mobile Links -->
+        <a href="/about.html" class="mobile-single-link">About Huzikit</a>
+      </div>
+    </div>
+
+    <!-- ==========================================================================
+       GLOBAL SEARCH MODAL
+       ========================================================================== -->
+    <div
+      class="search-modal-backdrop"
+      id="searchModal"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Search all 30 Huzikit Tools"
+    >
+      <div class="search-modal-container">
+        <div class="search-modal-header">
+          <svg
+            width="20"
+            height="20"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            color="var(--primary)"
+            aria-hidden="true"
+          >
+            <circle cx="11" cy="11" r="8" stroke-width="2" />
+            <line x1="21" y1="21" x2="16.65" y2="16.65" stroke-width="2" />
+          </svg>
+          <input
+            type="text"
+            class="search-modal-input"
+            id="searchInput"
+            placeholder="Search 30+ tools (e.g. timestamp, calculator, json, qr)..."
+            autocomplete="off"
+          />
+          <button
+            class="search-modal-close"
+            id="searchClose"
+            type="button"
+            aria-label="Close search dialog"
+          >
+            ✕
+          </button>
+        </div>
+        <ul class="search-results-list" id="searchResults"></ul>
+      </div>
+    </div>
+
+    <!-- ==========================================================================
+       HERO SECTION
+       ========================================================================== -->
+    <section class="hero-section" id="heroSection">
+      <div class="container">
+        <!-- Breadcrumb -->
+        <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+          <ol class="breadcrumb-list">
+            <li><a href="https://huzikit.com">Home</a></li>
+            <li class="breadcrumb-separator">/</li>
+            <li><a href="https://huzikit.com/#developer">Developer</a></li>
+            <li class="breadcrumb-separator">/</li>
+            <li class="breadcrumb-current" aria-current="page">
+              Unix Timestamp
+            </li>
+          </ol>
+        </nav>
+
+        <div class="hero-grid">
+          <div class="hero-content-col">
+            <div class="hero-title-badge">
+              <span class="hero-pulse"></span>
+              <span>Developer Precision Utility</span>
+            </div>
+
+            <h1 class="hero-h1">Unix Timestamp</h1>
+
+            <p class="hero-description">
+              Convert Unix timestamps to readable dates and convert dates back
+              to Unix timestamps instantly. Engineered with nanosecond-ready
+              logic, client-side encryption-grade speed, and comprehensive
+              timezone formatting.
+            </p>
+
+            <div class="hero-features-row">
+              <div class="hero-feature-tag">
+                <svg viewBox="0 0 20 20" fill="currentColor">
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <span>Seconds & Milliseconds</span>
+              </div>
+              <div class="hero-feature-tag">
+                <svg viewBox="0 0 20 20" fill="currentColor">
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <span>100% Client-Side Privacy</span>
+              </div>
+              <div class="hero-feature-tag">
+                <svg viewBox="0 0 20 20" fill="currentColor">
+                  <path
+                    fill-rule="evenodd"
+                    d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                    clip-rule="evenodd"
+                  />
+                </svg>
+                <span>Global Timezone Support</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Lightweight CSS 3D Visual Concept: UNIX -> 1700000000 -> DATE -->
+          <div class="hero-visual-wrapper">
+            <div class="hero-3d-card" id="hero3dCard">
+              <!-- Node 1: Unix Epoch -->
+              <div class="visual-node">
+                <div class="visual-node-icon">
+                  <svg
+                    width="20"
+                    height="20"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <circle cx="12" cy="12" r="10" stroke-width="2" />
+                    <polyline points="12 6 12 12 16 14" stroke-width="2" />
+                  </svg>
+                </div>
+                <div class="visual-node-content">
+                  <div class="visual-node-label">Standard</div>
+                  <div class="visual-node-val">UNIX EPOCH</div>
+                </div>
+              </div>
+
+              <!-- Bridge 1 -->
+              <div class="visual-arrow-bridge">
+                <svg
+                  width="20"
+                  height="20"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <line x1="12" y1="5" x2="12" y2="19" stroke-width="2" />
+                  <polyline points="19 12 12 19 5 12" stroke-width="2" />
+                </svg>
+              </div>
+
+              <!-- Node 2: Raw Numeric Timestamp -->
+              <div
+                class="visual-node"
+                style="
+                  background: var(--primary-light);
+                  border-color: rgba(79, 70, 229, 0.25);
+                "
+              >
+                <div class="visual-node-icon" style="background: var(--accent)">
+                  <svg
+                    width="20"
+                    height="20"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                      stroke-width="2"
+                    />
+                    <polyline points="14 2 14 8 20 8" stroke-width="2" />
+                  </svg>
+                </div>
+                <div class="visual-node-content">
+                  <div class="visual-node-label" style="color: var(--primary)">
+                    Integer Timestamp
+                  </div>
+                  <div
+                    class="visual-node-val"
+                    style="color: var(--primary-dark)"
+                  >
+                    1700000000
+                  </div>
+                </div>
+              </div>
+
+              <!-- Bridge 2 -->
+              <div class="visual-arrow-bridge">
+                <svg
+                  width="20"
+                  height="20"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <line x1="12" y1="5" x2="12" y2="19" stroke-width="2" />
+                  <polyline points="19 12 12 19 5 12" stroke-width="2" />
+                </svg>
+              </div>
+
+              <!-- Node 3: Formatted Date -->
+              <div class="visual-node">
+                <div class="visual-node-icon">
+                  <svg
+                    width="20"
+                    height="20"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <rect
+                      x="3"
+                      y="4"
+                      width="18"
+                      height="18"
+                      rx="2"
+                      ry="2"
+                      stroke-width="2"
+                    />
+                    <line x1="16" y1="2" x2="16" y2="6" stroke-width="2" />
+                    <line x1="8" y1="2" x2="8" y2="6" stroke-width="2" />
+                    <line x1="3" y1="10" x2="21" y2="10" stroke-width="2" />
+                  </svg>
+                </div>
+                <div class="visual-node-content">
+                  <div class="visual-node-label">Human Date (UTC)</div>
+                  <div class="visual-node-val">2023-11-14 22:13:20 UTC</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+       MAIN TOOL WORKSPACE
+       ========================================================================== -->
+    <main class="main-content-wrap" id="mainContent">
+      <div class="container">
+        <!-- 1. LIVE CURRENT TIMESTAMP TICKER CARD -->
+        <section
+          class="live-ticker-card"
+          id="liveTickerCard"
+          aria-label="Real-time Unix Clock"
+        >
+          <div class="live-ticker-header">
+            <div class="live-ticker-title">
+              <span>Current Unix Timestamp</span>
+              <span class="live-badge">Live Ticker</span>
+            </div>
+            <div class="ticker-actions">
+              <button
+                class="btn btn-secondary btn-sm"
+                id="livePauseBtn"
+                type="button"
+                aria-label="Pause or Resume Clock"
+              >
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <rect x="6" y="4" width="4" height="16" />
+                  <rect x="14" y="4" width="4" height="16" />
+                </svg>
+                <span>Pause</span>
+              </button>
+              <button
+                class="btn btn-secondary btn-sm"
+                id="liveSyncBtn"
+                type="button"
+                aria-label="Sync Real-time Clock"
+              >
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <polyline points="23 4 23 10 17 10" />
+                  <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10" />
+                </svg>
+                <span>Refresh</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="ticker-display-grid">
+            <!-- Metric 1: Seconds -->
+            <div class="ticker-metric-box">
+              <div class="metric-header">
+                <span class="metric-label">Seconds (s)</span>
+                <button
+                  class="copy-btn"
+                  type="button"
+                  data-copy-target="#liveSeconds"
+                  title="Copy Seconds"
+                  aria-label="Copy Seconds"
+                >
+                  <svg
+                    width="14"
+                    height="14"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <rect
+                      x="9"
+                      y="9"
+                      width="13"
+                      height="13"
+                      rx="2"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="metric-value" id="liveSeconds">1700000000</div>
+              <div class="metric-sub">Standard 10-digit POSIX integer</div>
+            </div>
+
+            <!-- Metric 2: Milliseconds -->
+            <div class="ticker-metric-box">
+              <div class="metric-header">
+                <span class="metric-label">Milliseconds (ms)</span>
+                <button
+                  class="copy-btn"
+                  type="button"
+                  data-copy-target="#liveMilliseconds"
+                  title="Copy Milliseconds"
+                  aria-label="Copy Milliseconds"
+                >
+                  <svg
+                    width="14"
+                    height="14"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <rect
+                      x="9"
+                      y="9"
+                      width="13"
+                      height="13"
+                      rx="2"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="metric-value" id="liveMilliseconds">
+                1700000000000
+              </div>
+              <div class="metric-sub">JavaScript 13-digit resolution</div>
+            </div>
+
+            <!-- Metric 3: UTC Time -->
+            <div class="ticker-metric-box">
+              <div class="metric-header">
+                <span class="metric-label">Coordinated Universal (UTC)</span>
+                <button
+                  class="copy-btn"
+                  type="button"
+                  data-copy-target="#liveUtc"
+                  title="Copy UTC String"
+                  aria-label="Copy UTC String"
+                >
+                  <svg
+                    width="14"
+                    height="14"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <rect
+                      x="9"
+                      y="9"
+                      width="13"
+                      height="13"
+                      rx="2"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="metric-value" id="liveUtc" style="font-size: 1.05rem">
+                Loading...
+              </div>
+              <div class="metric-sub">Zero Meridian (GMT/UTC)</div>
+            </div>
+
+            <!-- Metric 4: Local Time -->
+            <div class="ticker-metric-box">
+              <div class="metric-header">
+                <span class="metric-label">Your Local Time</span>
+                <button
+                  class="copy-btn"
+                  type="button"
+                  data-copy-target="#liveLocal"
+                  title="Copy Local Time"
+                  aria-label="Copy Local Time"
+                >
+                  <svg
+                    width="14"
+                    height="14"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <rect
+                      x="9"
+                      y="9"
+                      width="13"
+                      height="13"
+                      rx="2"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                      stroke-width="2"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                class="metric-value"
+                id="liveLocal"
+                style="font-size: 1.05rem"
+              >
+                Loading...
+              </div>
+              <div class="metric-sub">Browser hardware system clock</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 2. TOOL WORKSPACE TABS -->
+        <nav
+          class="workspace-tabs-nav"
+          aria-label="Unix Converter Tools Navigation"
+        >
+          <button
+            class="tab-btn active"
+            type="button"
+            data-tab="tabTsToDate"
+            id="tabBtnTsToDate"
+            aria-selected="true"
+          >
+            <svg
+              width="16"
+              height="16"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <polyline points="7 13 12 18 17 13" />
+              <polyline points="7 6 12 11 17 6" />
+            </svg>
+            <span>Timestamp → Date</span>
+          </button>
+          <button
+            class="tab-btn"
+            type="button"
+            data-tab="tabDateToTs"
+            id="tabBtnDateToTs"
+            aria-selected="false"
+          >
+            <svg
+              width="16"
+              height="16"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <polyline points="17 11 12 6 7 11" />
+              <polyline points="17 18 12 13 7 18" />
+            </svg>
+            <span>Date → Timestamp</span>
+          </button>
+          <button
+            class="tab-btn"
+            type="button"
+            data-tab="tabDifference"
+            id="tabBtnDifference"
+            aria-selected="false"
+          >
+            <svg
+              width="16"
+              height="16"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <circle cx="12" cy="12" r="10" />
+              <polyline points="12 6 12 12 14 14" />
+            </svg>
+            <span>Date Difference</span>
+          </button>
+          <button
+            class="tab-btn"
+            type="button"
+            data-tab="tabMath"
+            id="tabBtnMath"
+            aria-selected="false"
+          >
+            <svg
+              width="16"
+              height="16"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <line x1="12" y1="5" x2="12" y2="19" />
+              <line x1="5" y1="12" x2="19" y2="12" />
+            </svg>
+            <span>Add / Subtract Time</span>
+          </button>
+          <button
+            class="tab-btn"
+            type="button"
+            data-tab="tabHistory"
+            id="tabBtnHistory"
+            aria-selected="false"
+          >
+            <svg
+              width="16"
+              height="16"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path d="M12 8v4l3 3" />
+              <circle cx="12" cy="12" r="9" />
+            </svg>
+            <span>History & Saved</span>
+          </button>
+        </nav>
+
+        <!-- TAB PANEL 1: TIMESTAMP TO DATE CONVERTER -->
+        <section
+          class="tool-tab-panel active"
+          id="tabTsToDate"
+          aria-labelledby="tabBtnTsToDate"
+        >
+          <div class="tool-grid-2col">
+            <!-- Input Configuration Card -->
+            <div class="tool-card">
+              <div class="tool-card-header">
+                <div>
+                  <h2 class="tool-card-title">Timestamp to Date</h2>
+                  <p class="tool-card-subtitle">
+                    Enter an integer or float Unix timestamp in seconds or
+                    milliseconds.
+                  </p>
+                </div>
+                <span class="form-label-badge" id="tsDetectedBadge"
+                  >Auto-detecting...</span
+                >
+              </div>
+
+              <!-- Timestamp Input Field -->
+              <div class="form-group">
+                <label for="tsInput" class="form-label">
+                  <span>Unix Timestamp</span>
+                  <span style="font-size: 0.75rem; color: var(--ink-faint)"
+                    >Supports negative values for pre-1970</span
+                  >
+                </label>
+                <div class="input-wrapper">
+                  <input
+                    type="text"
+                    class="form-input mono"
+                    id="tsInput"
+                    value="1700000000"
+                    placeholder="e.g. 1700000000 or 1700000000000"
+                    autocomplete="off"
+                    spellcheck="false"
+                  />
+                </div>
+                <div class="form-error-msg" id="tsErrorMsg">
+                  Please enter a valid numeric Unix timestamp.
+                </div>
+              </div>
+
+              <!-- Unit Selector -->
+              <div class="form-group">
+                <label class="form-label">Timestamp Unit Interpretation</label>
+                <div class="unit-selector-pills" id="tsUnitMode">
+                  <button
+                    type="button"
+                    class="unit-pill active"
+                    data-unit="auto"
+                  >
+                    Auto-Detect
+                  </button>
+                  <button type="button" class="unit-pill" data-unit="seconds">
+                    Seconds (s)
+                  </button>
+                  <button
+                    type="button"
+                    class="unit-pill"
+                    data-unit="milliseconds"
+                  >
+                    Milliseconds (ms)
+                  </button>
+                </div>
+              </div>
+
+              <!-- Timezone Selector -->
+              <div class="form-group">
+                <label for="tsTzSelect" class="form-label"
+                  >Target Timezone Representation</label
+                >
+                <select class="form-select" id="tsTzSelect">
+                  <option value="UTC" selected>
+                    UTC — Coordinated Universal Time (GMT+0)
+                  </option>
+                  <option value="Local">Local Device Timezone</option>
+                  <option value="Asia/Karachi">
+                    Asia/Karachi — Pakistan Standard Time (UTC+5)
+                  </option>
+                  <option value="Asia/Kolkata">
+                    Asia/Kolkata — India Standard Time (UTC+5:30)
+                  </option>
+                  <option value="America/New_York">
+                    America/New_York — Eastern Time (ET)
+                  </option>
+                  <option value="America/Chicago">
+                    America/Chicago — Central Time (CT)
+                  </option>
+                  <option value="America/Denver">
+                    America/Denver — Mountain Time (MT)
+                  </option>
+                  <option value="America/Los_Angeles">
+                    America/Los_Angeles — Pacific Time (PT)
+                  </option>
+                  <option value="Europe/London">
+                    Europe/London — Greenwich Mean Time / BST
+                  </option>
+                  <option value="Europe/Paris">
+                    Europe/Paris — Central European Time (CET)
+                  </option>
+                  <option value="Europe/Berlin">
+                    Europe/Berlin — Germany Time
+                  </option>
+                  <option value="Asia/Tokyo">
+                    Asia/Tokyo — Japan Standard Time (JST)
+                  </option>
+                  <option value="Asia/Singapore">
+                    Asia/Singapore — Singapore Standard Time (SGT)
+                  </option>
+                  <option value="Australia/Sydney">
+                    Australia/Sydney — Australian Eastern Time (AEST)
+                  </option>
+                </select>
+              </div>
+
+              <!-- Action Buttons -->
+              <div
+                style="
+                  display: flex;
+                  flex-wrap: wrap;
+                  gap: 0.5rem;
+                  margin-top: 1rem;
+                "
+              >
+                <button class="btn btn-primary" id="btnTsNow" type="button">
+                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <polyline points="23 4 23 10 17 10" />
+                    <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10" />
+                  </svg>
+                  <span>Use Current Time</span>
+                </button>
+                <button class="btn btn-secondary" id="btnTsClear" type="button">
+                  Clear
+                </button>
+                <button
+                  class="btn btn-outline"
+                  id="btnTsFavorite"
+                  type="button"
+                >
+                  ★ Save
+                </button>
+                <button
+                  class="btn btn-outline"
+                  id="btnTsDownload"
+                  type="button"
+                >
+                  Download .txt
+                </button>
+              </div>
+            </div>
+
+            <!-- Output Results Card -->
+            <div class="tool-card">
+              <div class="tool-card-header">
+                <div>
+                  <h2 class="tool-card-title">Converted Date Formats</h2>
+                  <p class="tool-card-subtitle">
+                    Accurate human-readable formats computed from your
+                    timestamp.
+                  </p>
+                </div>
+              </div>
+
+              <div class="results-card-container">
+                <!-- Result: Local Date -->
+                <div class="result-row">
+                  <span class="result-key">Local Date & Time</span>
+                  <div class="result-val-group">
+                    <span class="result-val" id="outLocal">—</span>
+                    <button
+                      class="copy-btn"
+                      data-copy-target="#outLocal"
+                      title="Copy Local Time"
+                      aria-label="Copy Local Time"
+                    >
+                      <svg
+                        width="14"
+                        height="14"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <rect
+                          x="9"
+                          y="9"
+                          width="13"
+                          height="13"
+                          rx="2"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Result: UTC Date -->
+                <div class="result-row">
+                  <span class="result-key">UTC Standard</span>
+                  <div class="result-val-group">
+                    <span class="result-val" id="outUtc">—</span>
+                    <button
+                      class="copy-btn"
+                      data-copy-target="#outUtc"
+                      title="Copy UTC Time"
+                      aria-label="Copy UTC Time"
+                    >
+                      <svg
+                        width="14"
+                        height="14"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <rect
+                          x="9"
+                          y="9"
+                          width="13"
+                          height="13"
+                          rx="2"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Result: ISO 8601 -->
+                <div class="result-row">
+                  <span class="result-key">ISO 8601</span>
+                  <div class="result-val-group">
+                    <span class="result-val" id="outIso">—</span>
+                    <button
+                      class="copy-btn"
+                      data-copy-target="#outIso"
+                      title="Copy ISO 8601"
+                      aria-label="Copy ISO 8601"
+                    >
+                      <svg
+                        width="14"
+                        height="14"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <rect
+                          x="9"
+                          y="9"
+                          width="13"
+                          height="13"
+                          rx="2"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Result: Relative Time -->
+                <div class="result-row">
+                  <span class="result-key">Relative Interval</span>
+                  <div class="result-val-group">
+                    <span class="result-val" id="outRelative">—</span>
+                    <button
+                      class="copy-btn"
+                      data-copy-target="#outRelative"
+                      title="Copy Relative Time"
+                      aria-label="Copy Relative Time"
+                    >
+                      <svg
+                        width="14"
+                        height="14"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <rect
+                          x="9"
+                          y="9"
+                          width="13"
+                          height="13"
+                          rx="2"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Result: Unix Seconds -->
+                <div class="result-row">
+                  <span class="result-key">Unix Seconds</span>
+                  <div class="result-val-group">
+                    <span class="result-val" id="outSec">—</span>
+                    <button
+                      class="copy-btn"
+                      data-copy-target="#outSec"
+                      title="Copy Unix Seconds"
+                      aria-label="Copy Unix Seconds"
+                    >
+                      <svg
+                        width="14"
+                        height="14"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <rect
+                          x="9"
+                          y="9"
+                          width="13"
+                          height="13"
+                          rx="2"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Result: Unix Milliseconds -->
+                <div class="result-row">
+                  <span class="result-key">Unix Milliseconds</span>
+                  <div class="result-val-group">
+                    <span class="result-val" id="outMs">—</span>
+                    <button
+                      class="copy-btn"
+                      data-copy-target="#outMs"
+                      title="Copy Unix Milliseconds"
+                      aria-label="Copy Unix Milliseconds"
+                    >
+                      <svg
+                        width="14"
+                        height="14"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <rect
+                          x="9"
+                          y="9"
+                          width="13"
+                          height="13"
+                          rx="2"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Result: Selected Timezone Representation -->
+                <div class="result-row">
+                  <span class="result-key">Target Timezone</span>
+                  <div class="result-val-group">
+                    <span class="result-val" id="outTz">—</span>
+                    <button
+                      class="copy-btn"
+                      data-copy-target="#outTz"
+                      title="Copy Timezone String"
+                      aria-label="Copy Timezone String"
+                    >
+                      <svg
+                        width="14"
+                        height="14"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <rect
+                          x="9"
+                          y="9"
+                          width="13"
+                          height="13"
+                          rx="2"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Result: Calendar Day / Week Details -->
+                <div class="result-row">
+                  <span class="result-key">Calendar Context</span>
+                  <div class="result-val-group">
+                    <span
+                      class="result-val"
+                      id="outDayYear"
+                      style="font-size: 0.825rem"
+                      >—</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- TAB PANEL 2: DATE TO TIMESTAMP CONVERTER -->
+        <section
+          class="tool-tab-panel"
+          id="tabDateToTs"
+          aria-labelledby="tabBtnDateToTs"
+        >
+          <div class="tool-grid-2col">
+            <!-- Form Inputs -->
+            <div class="tool-card">
+              <div class="tool-card-header">
+                <div>
+                  <h2 class="tool-card-title">Date to Unix Timestamp</h2>
+                  <p class="tool-card-subtitle">
+                    Specify calendar date, precise time, and origin timezone.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Date Input -->
+              <div class="form-group">
+                <label for="dateInput" class="form-label">Calendar Date</label>
+                <input type="date" class="form-input" id="dateInput" />
+              </div>
+
+              <!-- Time Input -->
+              <div class="form-group">
+                <label for="timeInput" class="form-label"
+                  >Time (24-Hour Format: HH:MM:SS)</label
+                >
+                <input
+                  type="time"
+                  class="form-input mono"
+                  id="timeInput"
+                  step="1"
+                  value="12:00:00"
+                />
+              </div>
+
+              <!-- Timezone Selection -->
+              <div class="form-group">
+                <label for="dateTzSelect" class="form-label"
+                  >Input Timezone Context</label
+                >
+                <select class="form-select" id="dateTzSelect">
+                  <option value="UTC" selected>
+                    UTC — Coordinated Universal Time
+                  </option>
+                  <option value="Local">Local Device Time</option>
+                  <option value="Asia/Karachi">Asia/Karachi (UTC+5)</option>
+                  <option value="Asia/Kolkata">Asia/Kolkata (UTC+5:30)</option>
+                  <option value="America/New_York">
+                    America/New_York (Eastern)
+                  </option>
+                  <option value="America/Chicago">
+                    America/Chicago (Central)
+                  </option>
+                  <option value="America/Denver">
+                    America/Denver (Mountain)
+                  </option>
+                  <option value="America/Los_Angeles">
+                    America/Los_Angeles (Pacific)
+                  </option>
+                  <option value="Europe/London">Europe/London (GMT/BST)</option>
+                  <option value="Europe/Paris">Europe/Paris (CET)</option>
+                  <option value="Europe/Berlin">Europe/Berlin (CET)</option>
+                  <option value="Asia/Tokyo">Asia/Tokyo (JST)</option>
+                  <option value="Asia/Singapore">Asia/Singapore (SGT)</option>
+                  <option value="Australia/Sydney">
+                    Australia/Sydney (AEST)
+                  </option>
+                </select>
+                <div class="form-error-msg" id="dateErrorMsg">
+                  Invalid date selection.
+                </div>
+              </div>
+
+              <!-- Quick Presets -->
+              <div class="form-group">
+                <label class="form-label">Instant Date Presets</label>
+                <div class="quick-presets-row">
+                  <button
+                    type="button"
+                    class="preset-chip"
+                    data-date-preset="now"
+                  >
+                    Current Time
+                  </button>
+                  <button
+                    type="button"
+                    class="preset-chip"
+                    data-date-preset="today_start"
+                  >
+                    Start of Today (00:00)
+                  </button>
+                  <button
+                    type="button"
+                    class="preset-chip"
+                    data-date-preset="today_end"
+                  >
+                    End of Today (23:59:59)
+                  </button>
+                  <button
+                    type="button"
+                    class="preset-chip"
+                    data-date-preset="year_start"
+                  >
+                    Start of Year
+                  </button>
+                  <button
+                    type="button"
+                    class="preset-chip"
+                    data-date-preset="plus_1h"
+                  >
+                    +1 Hour
+                  </button>
+                  <button
+                    type="button"
+                    class="preset-chip"
+                    data-date-preset="plus_1d"
+                  >
+                    +1 Day
+                  </button>
+                </div>
+              </div>
+
+              <div style="display: flex; gap: 0.5rem; margin-top: 1rem">
+                <button
+                  class="btn btn-outline"
+                  id="btnDateDownload"
+                  type="button"
+                >
+                  Download Result (.txt)
+                </button>
+              </div>
+            </div>
+
+            <!-- Converted Output Card -->
+            <div class="tool-card">
+              <div class="tool-card-header">
+                <div>
+                  <h2 class="tool-card-title">Computed Timestamps</h2>
+                  <p class="tool-card-subtitle">
+                    Calculated integers for backend APIs, databases, and
+                    schemas.
+                  </p>
+                </div>
+              </div>
+
+              <div class="results-card-container">
+                <!-- Result: Seconds -->
+                <div class="result-row">
+                  <span class="result-key">Unix Timestamp (Seconds)</span>
+                  <div class="result-val-group">
+                    <span
+                      class="result-val"
+                      id="outDateSec"
+                      style="color: var(--primary); font-size: 1.15rem"
+                      >—</span
+                    >
+                    <button
+                      class="copy-btn"
+                      data-copy-target="#outDateSec"
+                      title="Copy Seconds"
+                      aria-label="Copy Seconds"
+                    >
+                      <svg
+                        width="14"
+                        height="14"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <rect
+                          x="9"
+                          y="9"
+                          width="13"
+                          height="13"
+                          rx="2"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Result: Milliseconds -->
+                <div class="result-row">
+                  <span class="result-key">Unix Timestamp (Millis)</span>
+                  <div class="result-val-group">
+                    <span class="result-val" id="outDateMs">—</span>
+                    <button
+                      class="copy-btn"
+                      data-copy-target="#outDateMs"
+                      title="Copy Milliseconds"
+                      aria-label="Copy Milliseconds"
+                    >
+                      <svg
+                        width="14"
+                        height="14"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <rect
+                          x="9"
+                          y="9"
+                          width="13"
+                          height="13"
+                          rx="2"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Result: ISO 8601 -->
+                <div class="result-row">
+                  <span class="result-key">ISO 8601 UTC</span>
+                  <div class="result-val-group">
+                    <span class="result-val" id="outDateIso">—</span>
+                    <button
+                      class="copy-btn"
+                      data-copy-target="#outDateIso"
+                      title="Copy ISO 8601"
+                      aria-label="Copy ISO 8601"
+                    >
+                      <svg
+                        width="14"
+                        height="14"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <rect
+                          x="9"
+                          y="9"
+                          width="13"
+                          height="13"
+                          rx="2"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Result: UTC String -->
+                <div class="result-row">
+                  <span class="result-key">Formatted UTC</span>
+                  <div class="result-val-group">
+                    <span class="result-val" id="outDateUtc">—</span>
+                    <button
+                      class="copy-btn"
+                      data-copy-target="#outDateUtc"
+                      title="Copy Formatted UTC"
+                      aria-label="Copy Formatted UTC"
+                    >
+                      <svg
+                        width="14"
+                        height="14"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <rect
+                          x="9"
+                          y="9"
+                          width="13"
+                          height="13"
+                          rx="2"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Result: RFC 2822 -->
+                <div class="result-row">
+                  <span class="result-key">RFC 2822 Format</span>
+                  <div class="result-val-group">
+                    <span class="result-val" id="outDateRfc">—</span>
+                    <button
+                      class="copy-btn"
+                      data-copy-target="#outDateRfc"
+                      title="Copy RFC 2822"
+                      aria-label="Copy RFC 2822"
+                    >
+                      <svg
+                        width="14"
+                        height="14"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <rect
+                          x="9"
+                          y="9"
+                          width="13"
+                          height="13"
+                          rx="2"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- TAB PANEL 3: DATE DIFFERENCE CALCULATOR -->
+        <section
+          class="tool-tab-panel"
+          id="tabDifference"
+          aria-labelledby="tabBtnDifference"
+        >
+          <div class="tool-card">
+            <div class="tool-card-header">
+              <div>
+                <h2 class="tool-card-title">
+                  Date Difference & Duration Calculator
+                </h2>
+                <p class="tool-card-subtitle">
+                  Compute the exact duration between two dates in days, hours,
+                  minutes, and seconds.
+                </p>
+              </div>
+            </div>
+
+            <div class="calc-grid-inputs">
+              <!-- Start Date -->
+              <div class="form-group">
+                <label for="diffStartInput" class="form-label">
+                  <span>Start Date & Time</span>
+                  <button
+                    class="btn btn-outline btn-sm"
+                    id="btnDiffNowStart"
+                    type="button"
+                  >
+                    Use Now
+                  </button>
+                </label>
+                <input
+                  type="datetime-local"
+                  class="form-input"
+                  id="diffStartInput"
+                />
+              </div>
+
+              <!-- End Date -->
+              <div class="form-group">
+                <label for="diffEndInput" class="form-label">
+                  <span>End Date & Time</span>
+                  <button
+                    class="btn btn-outline btn-sm"
+                    id="btnDiffNowEnd"
+                    type="button"
+                  >
+                    Use Now
+                  </button>
+                </label>
+                <input
+                  type="datetime-local"
+                  class="form-input"
+                  id="diffEndInput"
+                />
+              </div>
+            </div>
+
+            <!-- Total Duration Summary Banner -->
+            <div class="difference-summary-banner">
+              <div class="diff-hero-text" id="diffHeroText">
+                7 Days (0y 0m 7d 0h 0m 0s)
+              </div>
+              <div
+                style="font-size: 0.875rem; color: var(--ink-soft)"
+                id="diffSubText"
+              >
+                Exact duration between chosen timestamps.
+              </div>
+            </div>
+
+            <!-- Breakdown Metric Boxes -->
+            <div class="diff-breakdown-grid">
+              <div class="diff-unit-box">
+                <div class="diff-unit-val" id="diffDays">7</div>
+                <div class="diff-unit-label">Total Days</div>
+              </div>
+              <div class="diff-unit-box">
+                <div class="diff-unit-val" id="diffHours">168</div>
+                <div class="diff-unit-label">Total Hours</div>
+              </div>
+              <div class="diff-unit-box">
+                <div class="diff-unit-val" id="diffMins">10,080</div>
+                <div class="diff-unit-label">Total Minutes</div>
+              </div>
+              <div class="diff-unit-box">
+                <div class="diff-unit-val" id="diffSecs">604,800</div>
+                <div class="diff-unit-label">Total Seconds</div>
+              </div>
+              <div class="diff-unit-box">
+                <div class="diff-unit-val" id="diffMs">604,800,000</div>
+                <div class="diff-unit-label">Total Millis</div>
+              </div>
+              <div class="diff-unit-box">
+                <div class="diff-unit-val" id="diffWeeks">1.0</div>
+                <div class="diff-unit-label">Approx Weeks</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- TAB PANEL 4: ADD / SUBTRACT TIME -->
+        <section
+          class="tool-tab-panel"
+          id="tabMath"
+          aria-labelledby="tabBtnMath"
+        >
+          <div class="tool-grid-2col">
+            <div class="tool-card">
+              <div class="tool-card-header">
+                <div>
+                  <h2 class="tool-card-title">Add / Subtract Time</h2>
+                  <p class="tool-card-subtitle">
+                    Offset a base date by seconds, minutes, hours, days, weeks,
+                    or years.
+                  </p>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="mathBaseDate" class="form-label"
+                  >Base Date & Time</label
+                >
+                <input
+                  type="datetime-local"
+                  class="form-input"
+                  id="mathBaseDate"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="mathOp" class="form-label">Operation</label>
+                <select class="form-select" id="mathOp">
+                  <option value="add" selected>
+                    + Add Time (Future Offset)
+                  </option>
+                  <option value="subtract">
+                    - Subtract Time (Past Offset)
+                  </option>
+                </select>
+              </div>
+
+              <div
+                style="
+                  display: grid;
+                  grid-template-columns: 1fr 1fr;
+                  gap: 0.75rem;
+                "
+              >
+                <div class="form-group">
+                  <label for="mathAmount" class="form-label">Amount</label>
+                  <input
+                    type="number"
+                    class="form-input mono"
+                    id="mathAmount"
+                    value="30"
+                    min="0"
+                    step="1"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="mathUnit" class="form-label">Unit</label>
+                  <select class="form-select" id="mathUnit">
+                    <option value="seconds">Seconds</option>
+                    <option value="minutes">Minutes</option>
+                    <option value="hours">Hours</option>
+                    <option value="days" selected>Days</option>
+                    <option value="weeks">Weeks</option>
+                    <option value="months">Months</option>
+                    <option value="years">Years</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <!-- Math Result Card -->
+            <div class="tool-card">
+              <div class="tool-card-header">
+                <div>
+                  <h2 class="tool-card-title">Resulting Timestamp</h2>
+                  <p class="tool-card-subtitle">
+                    Calculated date and epoch coordinates.
+                  </p>
+                </div>
+              </div>
+
+              <div class="results-card-container">
+                <div class="result-row">
+                  <span class="result-key">Result Date (Local)</span>
+                  <div class="result-val-group">
+                    <span class="result-val" id="outMathDate">—</span>
+                    <button
+                      class="copy-btn"
+                      data-copy-target="#outMathDate"
+                      title="Copy Local Date"
+                      aria-label="Copy Local Date"
+                    >
+                      <svg
+                        width="14"
+                        height="14"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <rect
+                          x="9"
+                          y="9"
+                          width="13"
+                          height="13"
+                          rx="2"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="result-row">
+                  <span class="result-key">Result Date (UTC)</span>
+                  <div class="result-val-group">
+                    <span class="result-val" id="outMathUtc">—</span>
+                    <button
+                      class="copy-btn"
+                      data-copy-target="#outMathUtc"
+                      title="Copy UTC Date"
+                      aria-label="Copy UTC Date"
+                    >
+                      <svg
+                        width="14"
+                        height="14"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <rect
+                          x="9"
+                          y="9"
+                          width="13"
+                          height="13"
+                          rx="2"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="result-row">
+                  <span class="result-key">Unix Seconds</span>
+                  <div class="result-val-group">
+                    <span
+                      class="result-val"
+                      id="outMathSec"
+                      style="color: var(--primary); font-size: 1.15rem"
+                      >—</span
+                    >
+                    <button
+                      class="copy-btn"
+                      data-copy-target="#outMathSec"
+                      title="Copy Seconds"
+                      aria-label="Copy Seconds"
+                    >
+                      <svg
+                        width="14"
+                        height="14"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <rect
+                          x="9"
+                          y="9"
+                          width="13"
+                          height="13"
+                          rx="2"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="result-row">
+                  <span class="result-key">ISO 8601</span>
+                  <div class="result-val-group">
+                    <span class="result-val" id="outMathIso">—</span>
+                    <button
+                      class="copy-btn"
+                      data-copy-target="#outMathIso"
+                      title="Copy ISO 8601"
+                      aria-label="Copy ISO 8601"
+                    >
+                      <svg
+                        width="14"
+                        height="14"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <rect
+                          x="9"
+                          y="9"
+                          width="13"
+                          height="13"
+                          rx="2"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                          stroke-width="2"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- TAB PANEL 5: CONVERSION HISTORY & SAVED FAVORITES -->
+        <section
+          class="tool-tab-panel"
+          id="tabHistory"
+          aria-labelledby="tabBtnHistory"
+        >
+          <div class="tool-grid-2col">
+            <!-- Recent History -->
+            <div class="tool-card">
+              <div class="history-controls-bar">
+                <div>
+                  <h2 class="tool-card-title">Recent Conversions</h2>
+                  <p class="tool-card-subtitle">
+                    Stored privately in your browser's localStorage.
+                  </p>
+                </div>
+                <button
+                  class="btn btn-outline btn-sm"
+                  id="btnClearHistory"
+                  type="button"
+                >
+                  Clear History
+                </button>
+              </div>
+              <div class="history-list" id="historyList"></div>
+            </div>
+
+            <!-- Saved Favorites -->
+            <div class="tool-card">
+              <div class="history-controls-bar">
+                <div>
+                  <h2 class="tool-card-title">Saved Timestamps</h2>
+                  <p class="tool-card-subtitle">
+                    Bookmarks for quick reference during development.
+                  </p>
+                </div>
+                <button
+                  class="btn btn-outline btn-sm"
+                  id="btnClearFavorites"
+                  type="button"
+                >
+                  Clear All
+                </button>
+              </div>
+              <div class="history-list" id="favoritesList"></div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- ==========================================================================
+       DEVELOPER CODE SNIPPETS
+       ========================================================================== -->
+    <section class="code-snippets-section" id="developerSnippets">
+      <div class="container">
+        <div style="max-width: 860px; margin: 0 auto">
+          <h2 style="font-size: 1.85rem; margin-bottom: 0.5rem">
+            Developer Implementation Snippets
+          </h2>
+          <p style="margin-bottom: 1.5rem">
+            Copy battle-tested code to get current Unix time or convert
+            timestamps in your preferred language.
+          </p>
+
+          <div class="code-tabs-nav">
+            <button class="code-tab-btn active" data-code="javascript">
+              JavaScript / Node.js
+            </button>
+            <button class="code-tab-btn" data-code="python">Python 3</button>
+            <button class="code-tab-btn" data-code="php">PHP</button>
+            <button class="code-tab-btn" data-code="golang">Go (Golang)</button>
+            <button class="code-tab-btn" data-code="sql">
+              SQL (Postgres/MySQL)
+            </button>
+          </div>
+
+          <div class="code-snippet-box">
+            <button class="copy-code-btn" id="copyCodeBtn">Copy Code</button>
+            <pre id="codeDisplayPre">
+// JavaScript / Node.js
+// Get current timestamp (seconds & milliseconds)
+const nowSeconds = Math.floor(Date.now() / 1000);
+const nowMilliseconds = Date.now();
+
+// Convert Unix timestamp (seconds) to Date
+const timestamp = 1700000000;
+const date = new Date(timestamp * 1000);
+console.log(date.toISOString()); // "2023-11-14T22:13:20.000Z"
+
+// Convert Date to Unix timestamp (seconds)
+const specificDate = new Date('2026-09-20T12:00:00Z');
+const unixSeconds = Math.floor(specificDate.getTime() / 1000);</pre
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+       EDUCATIONAL CONTENT (1200 - 1700 WORDS)
+       ========================================================================== -->
+    <article class="educational-section" id="educationalContent">
+      <div class="container">
+        <div class="article-container">
+          <!-- Direct Answer / GEO Box for AI Search Engines & Google Snippets -->
+          <div class="geo-answer-box">
+            <h3>What is a Unix Timestamp?</h3>
+            <p>
+              A <strong>Unix timestamp</strong> (also referred to as Unix Epoch
+              time, POSIX time, or Epoch timestamp) is the total number of
+              elapsed seconds since
+              <strong>January 1, 1970 at 00:00:00 UTC</strong>, excluding leap
+              seconds. Because it is a universal, timezone-agnostic scalar
+              integer, it serves as the foundational standard for computing
+              system clocks, distributed databases, authentication tokens
+              (JWTs), and REST APIs worldwide.
+            </p>
+          </div>
+
+          <h2>Understanding the Unix Epoch: Why January 1, 1970?</h2>
+          <p>
+            In the late 1960s and early 1970s, computer scientists Ken Thompson
+            and Dennis Ritchie developed the Unix operating system at AT&T Bell
+            Laboratories. Modern operating systems required a uniform,
+            computationally efficient method to represent temporal sequences
+            without having to calculate convoluted calendar oddities such as
+            irregular month lengths, leap years, daylight saving time shifts,
+            and regional timezone offsets on every operation.
+          </p>
+          <p>
+            The engineers designated midnight on
+            <strong>January 1, 1970 (00:00:00 UTC)</strong> as the universal
+            starting benchmark—formally christened the
+            <strong>Unix Epoch</strong>. Every single millisecond or second in
+            computing history is measured relative to this singular fixed anchor
+            in spacetime. Positive integer values track the chronology of modern
+            computing into the future, while negative integers accurately chart
+            historical dates prior to 1970.
+          </p>
+
+          <h2>Seconds vs. Milliseconds: The 10-Digit vs. 13-Digit Rule</h2>
+          <p>
+            A frequent source of critical software bugs in web applications,
+            microservices, and databases is unit ambiguity between
+            <strong>seconds</strong> and <strong>milliseconds</strong>:
+          </p>
+          <ul>
+            <li>
+              <strong>Unix Seconds (10 Digits):</strong> The canonical POSIX
+              specification defines timestamps as an integer quantity of elapsed
+              seconds. Throughout the 2020s and beyond, standard Unix seconds
+              comprise 10 decimal digits (for example, <code>1700000000</code>).
+              Unix command-line utilities, PostgreSQL
+              <code>EXTRACT(EPOCH)</code>, MySQL <code>UNIX_TIMESTAMP()</code>,
+              and Python's <code>time.time()</code> natively operate on seconds.
+            </li>
+            <li>
+              <strong>Unix Milliseconds (13 Digits):</strong> High-concurrency
+              applications, financial ledgers, telecommunications metrics, and
+              runtime environments like JavaScript (<code>Date.now()</code>) and
+              Java (<code>System.currentTimeMillis()</code>) measure time in
+              milliseconds for sub-second precision. Throughout the current era,
+              Unix millisecond timestamps comprise 13 digits (for example,
+              <code>1700000000000</code>).
+            </li>
+          </ul>
+          <p>
+            <strong>Rule of Thumb:</strong> If an integer timestamp has 10
+            digits, it is in seconds. If it has 13 digits, it is in
+            milliseconds. If passed to JavaScript's
+            <code>new Date(value)</code> without multiplying by 1,000, a
+            10-digit second timestamp will erroneously evaluate to January 1970
+            due to being treated as milliseconds.
+          </p>
+
+          <h2>Universal Time (UTC) vs. Local Timezones</h2>
+          <p>
+            A fundamental virtue of the Unix timestamp is that it is strictly
+            <strong>timezone-independent</strong>. At any given moment, the
+            current Unix timestamp is mathematically identical across Tokyo,
+            London, New York, Karachi, and Sydney.
+          </p>
+          <p>
+            Timezone offsets, daylight saving time (DST) adjustments, and civil
+            calendar conventions are purely presentation-layer concerns. When an
+            API receives <code>1700000000</code>, the backend storage engine
+            stores an immutable numeric integer. When the frontend presents that
+            timestamp to an end-user, the client's browser localizes it using
+            the host machine's timezone or an explicit IANA timezone identifier
+            (such as <code>America/New_York</code> or
+            <code>Asia/Karachi</code>). This separation of storage and display
+            eliminates catastrophic DST bugs and synchronization collisions.
+          </p>
+
+          <h2>The Year 2038 Problem (Y2038: 32-Bit Overflow)</h2>
+          <p>
+            In early 32-bit computing architectures, Unix timestamps were
+            defined as signed 32-bit integers (<code>int32_t</code>). A signed
+            32-bit integer has a maximum positive integer ceiling of
+            <strong>2,147,483,647</strong>.
+          </p>
+          <p>
+            On <strong>Tuesday, January 19, 2038 at 03:14:07 UTC</strong>,
+            32-bit systems will encounter an integer overflow. The next tick of
+            the second clock will cause the 32-bit binary number to flip from
+            positive to negative: <code>-2,147,483,648</code>, suddenly
+            catapulting system clocks back to December 13, 1901.
+          </p>
+          <p>
+            Modern operating systems, 64-bit processors, database engines, and
+            web browsers have resolved this risk by adopting 64-bit integers
+            (<code>int64_t</code>). A signed 64-bit timestamp will not overflow
+            for approximately <strong>292 billion years</strong>—a timeframe
+            vastly exceeding the projected lifespan of our solar system.
+          </p>
+
+          <h2>JavaScript Date Implementation & Limits</h2>
+          <p>
+            In ECMAScript (JavaScript), dates are represented internally as
+            floating-point milliseconds from the Unix Epoch. The ECMAScript
+            specification guarantees exact integer precision for any date within
+            <strong>±100,000,000 days</strong> (roughly ±273,790 years) of
+            January 1, 1970.
+          </p>
+          <p>
+            This translates to an absolute millisecond limit of
+            <code>±8.64 × 10<sup>15</sup></code> milliseconds. Values exceeding
+            this threshold evaluate to <code>Invalid Date</code> (NaN).
+            JavaScript's
+            <code>Number.MAX_SAFE_INTEGER</code> (9,007,199,254,740,991) is also
+            well capable of storing millisecond timestamps for over 285,000
+            years without numeric degradation or precision loss.
+          </p>
+
+          <h2>Negative Unix Timestamps: Historic Chronology</h2>
+          <p>
+            Contrary to common misconception, Unix timestamps do not stop at
+            zero. Any negative integer represents time elapsed prior to January
+            1, 1970 00:00:00 UTC.
+          </p>
+          <ul>
+            <li>
+              <code>-86400</code> corresponds to December 31, 1969 00:00:00 UTC
+              (exactly 24 hours before the Epoch).
+            </li>
+            <li>
+              <code>-31536000</code> corresponds to January 1, 1969 00:00:00
+              UTC.
+            </li>
+            <li>
+              <code>-2208988800</code> corresponds to January 1, 1900 00:00:00
+              UTC.
+            </li>
+          </ul>
+          <p>
+            The Huzikit Unix Timestamp tool provides first-class support for
+            negative integers, allowing software engineers, historians, and
+            genealogists to calculate, verify, and format pre-1970 timestamps
+            with identical reliability.
+          </p>
+
+          <!-- Reference Table of Landmark Timestamps -->
+          <h2>Notable Landmark Unix Timestamps</h2>
+          <div class="table-responsive-wrapper">
+            <table class="responsive-table">
+              <thead>
+                <tr>
+                  <th>Event / Milestone</th>
+                  <th>Unix Seconds</th>
+                  <th>ISO 8601 (UTC)</th>
+                  <th>Significance</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Unix Epoch Genesis</td>
+                  <td class="mono">0</td>
+                  <td class="mono">1970-01-01T00:00:00Z</td>
+                  <td>The zero-reference point of modern computing.</td>
+                </tr>
+                <tr>
+                  <td>One Billion Seconds</td>
+                  <td class="mono">1000000000</td>
+                  <td class="mono">2001-09-09T01:46:40Z</td>
+                  <td>Celebrated worldwide by Unix hackers and sysadmins.</td>
+                </tr>
+                <tr>
+                  <td>1.5 Billion Seconds</td>
+                  <td class="mono">1500000000</td>
+                  <td class="mono">2017-07-14T02:40:00Z</td>
+                  <td>
+                    Major milestone in cloud and distributed architecture.
+                  </td>
+                </tr>
+                <tr>
+                  <td>1.7 Billion Seconds</td>
+                  <td class="mono">1700000000</td>
+                  <td class="mono">2023-11-14T22:13:20Z</td>
+                  <td>
+                    Frequently used as modern benchmark in tutorials and tests.
+                  </td>
+                </tr>
+                <tr>
+                  <td>Two Billion Seconds</td>
+                  <td class="mono">2000000000</td>
+                  <td class="mono">2033-05-18T03:33:20Z</td>
+                  <td>Upcoming two-billion milestone.</td>
+                </tr>
+                <tr>
+                  <td>32-Bit Signed Max (Y2038)</td>
+                  <td class="mono">2147483647</td>
+                  <td class="mono">2038-01-19T03:14:07Z</td>
+                  <td>Final second before 32-bit signed integer overflow.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2>Common Software Engineering Pitfalls</h2>
+          <ol>
+            <li>
+              <strong>Accidental Second/Millisecond Multiplication:</strong>
+              Multiplying a timestamp that is already in milliseconds by 1,000
+              will send the date millions of years into the future, causing
+              database crashes or <code>RangeError</code> exceptions.
+            </li>
+            <li>
+              <strong>Assuming Floating Point Safety:</strong> When serializing
+              Unix millisecond timestamps in languages like Python or Ruby,
+              using floating point floats can lead to sub-microsecond
+              truncation. Always cast to 64-bit integer values.
+            </li>
+            <li>
+              <strong>Leap Second Glitches:</strong> POSIX specifies that each
+              day has precisely 86,400 seconds. When an astronomical leap second
+              occurs, standard Unix time repeats or smears the 86,400th second.
+              Systems requiring sub-millisecond astronomical accuracy should use
+              International Atomic Time (TAI) or GPS time.
+            </li>
+            <li>
+              <strong>Ignoring Client vs. Server Time Drifts:</strong> Never
+              rely on a browser client's timestamp as authoritative proof of
+              transaction timing. Always establish authoritative timestamps
+              using server-side NTP-synchronized hardware clocks.
+            </li>
+          </ol>
+        </div>
+      </div>
+    </article>
+
+    <!-- ==========================================================================
+       FAQ ACCORDION SECTION (12 COMPREHENSIVE QUESTIONS)
+       ========================================================================== -->
+    <section class="faq-section" id="faqSection">
+      <div class="container">
+        <div class="faq-header">
+          <h2 class="faq-title">Frequently Asked Questions</h2>
+          <p>
+            Everything you need to know about Unix timestamps, conversions, and
+            time standards.
+          </p>
+        </div>
+
+        <div class="faq-accordion-list">
+          <!-- Q1 -->
+          <details class="faq-item" open>
+            <summary class="faq-trigger">
+              <span>What is Unix time and a Unix timestamp?</span>
+              <svg class="faq-chevron" viewBox="0 0 20 20" fill="currentColor">
+                <path
+                  fill-rule="evenodd"
+                  d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </summary>
+            <div class="faq-content">
+              <p>
+                A Unix timestamp is an integer measuring the count of seconds
+                that have elapsed since the Unix Epoch (January 1, 1970 at
+                00:00:00 UTC). It provides a timezone-neutral scalar value for
+                comparing, indexing, and storing time across distributed
+                computing systems.
+              </p>
+            </div>
+          </details>
+
+          <!-- Q2 -->
+          <details class="faq-item">
+            <summary class="faq-trigger">
+              <span
+                >What is the difference between Unix time in seconds and
+                milliseconds?</span
+              >
+              <svg class="faq-chevron" viewBox="0 0 20 20" fill="currentColor">
+                <path
+                  fill-rule="evenodd"
+                  d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </summary>
+            <div class="faq-content">
+              <p>
+                POSIX standard Unix timestamps measure time in seconds (10
+                digits, e.g. <code>1700000000</code>). High-resolution systems
+                like JavaScript and Java record timestamps in milliseconds (13
+                digits, e.g. <code>1700000000000</code>) for sub-second
+                precision. 1 second equals 1,000 milliseconds.
+              </p>
+            </div>
+          </details>
+
+          <!-- Q3 -->
+          <details class="faq-item">
+            <summary class="faq-trigger">
+              <span
+                >How do I convert a Unix timestamp to a human-readable
+                date?</span
+              >
+              <svg class="faq-chevron" viewBox="0 0 20 20" fill="currentColor">
+                <path
+                  fill-rule="evenodd"
+                  d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </summary>
+            <div class="faq-content">
+              <p>
+                Simply paste your numeric timestamp into the converter input on
+                this page. The tool automatically detects whether your input is
+                in seconds or milliseconds, evaluates the corresponding calendar
+                date, and instantly generates local, UTC, and ISO 8601 formats.
+              </p>
+            </div>
+          </details>
+
+          <!-- Q4 -->
+          <details class="faq-item">
+            <summary class="faq-trigger">
+              <span
+                >How do I convert a calendar date into a Unix timestamp?</span
+              >
+              <svg class="faq-chevron" viewBox="0 0 20 20" fill="currentColor">
+                <path
+                  fill-rule="evenodd"
+                  d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </summary>
+            <div class="faq-content">
+              <p>
+                Select the "Date → Timestamp" tab in the tool above. Pick your
+                desired date, enter the time, choose the timezone context (UTC,
+                local, or specific city), and the calculator will output the
+                exact integer timestamp in seconds and milliseconds.
+              </p>
+            </div>
+          </details>
+
+          <!-- Q5 -->
+          <details class="faq-item">
+            <summary class="faq-trigger">
+              <span>Does Unix timestamp use UTC?</span>
+              <svg class="faq-chevron" viewBox="0 0 20 20" fill="currentColor">
+                <path
+                  fill-rule="evenodd"
+                  d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </summary>
+            <div class="faq-content">
+              <p>
+                Yes. By universal convention and POSIX definitions, Unix time is
+                calculated based on UTC (Coordinated Universal Time). It is
+                completely unaffected by local daylight saving time or regional
+                timezones.
+              </p>
+            </div>
+          </details>
+
+          <!-- Q6 -->
+          <details class="faq-item">
+            <summary class="faq-trigger">
+              <span>Can Unix timestamps represent dates before 1970?</span>
+              <svg class="faq-chevron" viewBox="0 0 20 20" fill="currentColor">
+                <path
+                  fill-rule="evenodd"
+                  d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </summary>
+            <div class="faq-content">
+              <p>
+                Yes. Negative integers represent points in time prior to January
+                1, 1970. For example, <code>-86400</code> corresponds to
+                December 31, 1969 00:00:00 UTC.
+              </p>
+            </div>
+          </details>
+
+          <!-- Q7 -->
+          <details class="faq-item">
+            <summary class="faq-trigger">
+              <span
+                >What is the difference between Unix timestamp and ISO
+                8601?</span
+              >
+              <svg class="faq-chevron" viewBox="0 0 20 20" fill="currentColor">
+                <path
+                  fill-rule="evenodd"
+                  d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </summary>
+            <div class="faq-content">
+              <p>
+                A Unix timestamp is a raw scalar number (e.g.
+                <code>1700000000</code>) optimized for CPU efficiency and binary
+                storage. ISO 8601 is a standardized string format (e.g.
+                <code>2023-11-14T22:13:20.000Z</code>) designed for human
+                readability and clear interchange between web services.
+              </p>
+            </div>
+          </details>
+
+          <!-- Q8 -->
+          <details class="faq-item">
+            <summary class="faq-trigger">
+              <span
+                >Why do my timestamps show as January 1970 in JavaScript?</span
+              >
+              <svg class="faq-chevron" viewBox="0 0 20 20" fill="currentColor">
+                <path
+                  fill-rule="evenodd"
+                  d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </summary>
+            <div class="faq-content">
+              <p>
+                JavaScript's <code>new Date(timestamp)</code> expects
+                milliseconds, not seconds. If you pass a 10-digit second
+                timestamp (such as 1700000000), JavaScript treats it as 1.7
+                million milliseconds (only 28 minutes after midnight on January
+                1, 1970). To fix this, multiply your second timestamp by 1,000:
+                <code>new Date(timestamp * 1000)</code>.
+              </p>
+            </div>
+          </details>
+
+          <!-- Q9 -->
+          <details class="faq-item">
+            <summary class="faq-trigger">
+              <span>What happens during leap seconds in Unix time?</span>
+              <svg class="faq-chevron" viewBox="0 0 20 20" fill="currentColor">
+                <path
+                  fill-rule="evenodd"
+                  d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </summary>
+            <div class="faq-content">
+              <p>
+                Unix time ignores astronomical leap seconds to preserve the
+                mathematical rule that every standard day has exactly 86,400
+                seconds. When an official leap second occurs, network time
+                servers either repeat the second or perform "leap smearing,"
+                gently distributing the additional second over a 24-hour window.
+              </p>
+            </div>
+          </details>
+
+          <!-- Q10 -->
+          <details class="faq-item">
+            <summary class="faq-trigger">
+              <span>What is the maximum date supported by this tool?</span>
+              <svg class="faq-chevron" viewBox="0 0 20 20" fill="currentColor">
+                <path
+                  fill-rule="evenodd"
+                  d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </summary>
+            <div class="faq-content">
+              <p>
+                This tool utilizes native ECMAScript 64-bit float math,
+                supporting any timestamp between -100,000,000 days and
+                +100,000,000 days relative to 1970—covering a continuous span of
+                over 547,000 years.
+              </p>
+            </div>
+          </details>
+
+          <!-- Q11 -->
+          <details class="faq-item">
+            <summary class="faq-trigger">
+              <span
+                >Is my data sent to any remote server or stored in the
+                cloud?</span
+              >
+              <svg class="faq-chevron" viewBox="0 0 20 20" fill="currentColor">
+                <path
+                  fill-rule="evenodd"
+                  d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </summary>
+            <div class="faq-content">
+              <p>
+                No. All calculations, timezone formatting, and history
+                operations are executed 100% locally in your web browser. Zero
+                timestamp data is transmitted to Huzikit servers, ensuring
+                privacy for proprietary database records and authentication
+                tokens.
+              </p>
+            </div>
+          </details>
+
+          <!-- Q12 -->
+          <details class="faq-item">
+            <summary class="faq-trigger">
+              <span>Is this Unix timestamp converter free?</span>
+              <svg class="faq-chevron" viewBox="0 0 20 20" fill="currentColor">
+                <path
+                  fill-rule="evenodd"
+                  d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </summary>
+            <div class="faq-content">
+              <p>
+                Yes. Huzikit's Unix Timestamp tool is completely free for
+                individual developers, enterprise engineers, students, and
+                businesses with no account, subscription, or rate limits
+                required.
+              </p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+       RELATED DEVELOPER TOOLS
+       ========================================================================== -->
+    <section class="related-tools-section" id="relatedToolsSection">
+      <div class="container">
+        <h2 style="font-size: 1.85rem; color: var(--ink)">
+          Related Developer Tools
+        </h2>
+        <p style="color: var(--ink-soft)">
+          Discover more lightning-fast utilities crafted for modern software
+          engineering.
+        </p>
+
+        <div class="related-grid">
+          <!-- Related 1 -->
+          <div class="related-card">
+            <div>
+              <h3 class="related-card-title">JSON Formatter</h3>
+              <p class="related-card-desc">
+                Beautify, parse, validate, and minify complex JSON objects with
+                syntax error highlighting.
+              </p>
+            </div>
+            <a
+              href="/developertools/JSONFORMATTER.html"
+              class="related-card-link"
+            >
+              <span>Open Tool</span>
+              <svg
+                width="14"
+                height="14"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
+              </svg>
+            </a>
+          </div>
+
+          <!-- Related 2 -->
+          <div class="related-card">
+            <div>
+              <h3 class="related-card-title">Base64 Encoder/Decoder</h3>
+              <p class="related-card-desc">
+                Safely encode and decode ASCII text, data URIs, and binary
+                strings into Base64 format.
+              </p>
+            </div>
+            <a
+              href="/developertools/base64encoderdecoder.html"
+              class="related-card-link"
+            >
+              <span>Open Tool</span>
+              <svg
+                width="14"
+                height="14"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
+              </svg>
+            </a>
+          </div>
+
+          <!-- Related 3 -->
+          <div class="related-card">
+            <div>
+              <h3 class="related-card-title">URL Encoder/Decoder</h3>
+              <p class="related-card-desc">
+                Sanitize query parameters and URI components to resolve HTTP
+                encoding conflicts.
+              </p>
+            </div>
+            <a
+              href="/developertools/urlencoderdecoder.html"
+              class="related-card-link"
+            >
+              <span>Open Tool</span>
+              <svg
+                width="14"
+                height="14"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
+              </svg>
+            </a>
+          </div>
+
+          <!-- Related 4 -->
+          <div class="related-card">
+            <div>
+              <h3 class="related-card-title">Regex Tester</h3>
+              <p class="related-card-desc">
+                Test regular expressions against custom input strings with
+                real-time match groups and flags.
+              </p>
+            </div>
+            <a
+              href="/developertools/regextester.html"
+              class="related-card-link"
+            >
+              <span>Open Tool</span>
+              <svg
+                width="14"
+                height="14"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <line x1="5" y1="12" x2="19" y2="12" />
+                <polyline points="12 5 19 12 12 19" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+       SITE FOOTER (LOCKED SPECIFICATION)
+       Brand: Huzikit
+       Bio: The ultimate modern suite of lightning-fast, secure online web utilities,
+            calculators, and developer tools.
+       Columns:
+         1. Text & Dev Tools
+         2. Calculators & Image
+         3. Company & Legal
+       Social: https://x.com/huzihuboffical
+       Copyright: © 2026 Huzikit.com. All rights reserved.
+       Tagline: Built with speed, security, and precision.
+       ========================================================================== -->
+    <footer class="site-footer" id="siteFooter">
+      <div class="container">
+        <div class="footer-top-grid">
+          <!-- Brand Bio Column -->
+          <div class="footer-brand-col">
+            <div class="footer-logo">Huzikit</div>
+            <p class="footer-bio">
+              The ultimate modern suite of lightning-fast, secure online web
+              utilities, calculators, and developer tools.
+            </p>
+            <a
+              href="https://x.com/huzikitoffical"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footer-social-link"
+              aria-label="Follow Huzikit on X"
+            >
+              <svg
+                width="16"
+                height="16"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                />
+              </svg>
+              <span>@huzikitoffical</span>
+            </a>
+          </div>
+
+          <!-- Column 1: Text & Dev Tools -->
+          <div>
+            <h4 class="footer-col-title">Text & Dev Tools</h4>
+            <ul class="footer-links-list">
+              <li>
+                <a href="/texttools/word-counter.html">Word Counter</a>
+              </li>
+              <li>
+                <a href="/texttools/case-converter.html">Case Converter</a>
+              </li>
+              <li>
+                <a href="/developertools/JSONFORMATTER.html">JSON Formatter</a>
+              </li>
+              <li>
+                <a href="/developertools/base64encoderdecoder.html"
+                  >Base64 Utility</a
+                >
+              </li>
+              <li>
+                <a href="/developertools/regextester.html">Regex Tester</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 2: Calculators & Image -->
+          <div>
+            <h4 class="footer-col-title">Calculators & Image</h4>
+            <ul class="footer-links-list">
+              <li>
+                <a href="/calculator/agecalculator.html">Age Calculator</a>
+              </li>
+              <li>
+                <a href="/calculator/bmi-calculator.html">BMI Calculator</a>
+              </li>
+              <li>
+                <a href="/image&pdf/image-compressor.html">Image Compressor</a>
+              </li>
+              <li>
+                <a href="/image&pdf/QRGenrator.html">QR Code Generator</a>
+              </li>
+              <li>
+                <a href="/image&pdf/colorpicker.html">Color Picker</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Company & Legal -->
+          <div>
+            <h4 class="footer-col-title">Company & Legal</h4>
+            <ul class="footer-links-list">
+              <li><a href="/about.html">About Huzikit</a></li>
+              <li><a href="/disclamier.html">Disclaimer</a></li>
+              <li>
+                <a href="/privacy-policies.html">Privacy Policy</a>
+              </li>
+              <li>
+                <a href="/Termsofservices.html">Terms of Service</a>
+              </li>
+              <li>
+                <a href="/contact-us.html">Contact Support</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="footer-bottom-bar">
+          <div>&copy; 2026 Huzikit.com. All rights reserved.</div>
+          <div class="footer-tagline">
+            Built with speed, security, and precision.
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="/developertools/unixtimestamp.js"></script>
+  </body>
+</html>

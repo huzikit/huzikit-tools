@@ -1,0 +1,3037 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, minimum-scale=1.0"
+    />
+    <title>
+      Free URL Encoder & Decoder Online — Encode & Decode URLs | Huzikit
+    </title>
+    <meta
+      name="description"
+      content="Encode and decode URLs, components, query parameters, and Unicode text safely in your browser. Free online RFC 3986 percent-encoding tool with live stats, batch mode, and analyzer."
+    />
+    <link
+      rel="canonical"
+      href="https://huzikit.com/developertools/urlencoderdecoder.html"
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://huzikit.com/developertools/urlencoderdecoder.html"
+    />
+    <meta
+      property="og:title"
+      content="Free URL Encoder & Decoder Online — Encode & Decode URLs | Huzikit"
+    />
+    <meta
+      property="og:description"
+      content="Encode and decode URLs, components, query parameters, and Unicode safely in your browser with real-time statistics and RFC 3986 precision."
+    />
+    <meta
+      property="og:image"
+      content="https://huzikit.com/assets/og-url-encoder-decoder.png"
+    />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:url"
+      content="https://huzikit.com/developertools/urlencoderdecoder.html"
+    />
+    <meta
+      name="twitter:title"
+      content="Free URL Encoder & Decoder Online — Encode & Decode URLs | Huzikit"
+    />
+    <meta
+      name="twitter:description"
+      content="Encode and decode URLs, components, query parameters, and Unicode safely in your browser."
+    />
+    <meta
+      name="twitter:image"
+      content="https://huzikit.com/assets/og-url-encoder-decoder.png"
+    />
+
+    <!-- Google Fonts: Lexend (Headings) & Inter (Body/UI) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Master Stylesheet -->
+    <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="/developertools/urlencoderdecoder.css" />
+
+    <!-- Structured Data: WebApplication, BreadcrumbList, FAQPage -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebApplication",
+            "@id": "https://huzikit.com/developertools/urlencoderdecoder.html#app",
+            "name": "URL Encoder / Decoder",
+            "url": "https://huzikit.com/developertools/urlencoderdecoder.html",
+            "applicationCategory": "DeveloperApplication",
+            "operatingSystem": "All",
+            "browserRequirements": "Requires JavaScript. Requires HTML5.",
+            "description": "Fast, browser-based online utility to percent-encode and percent-decode URLs, URI components, query parameters, and Unicode strings according to RFC 3986.",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://huzikit.com/developertools/urlencoderdecoder.html#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://huzikit.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Developer",
+                "item": "https://huzikit.com/toolpage.html/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "URL Encoder / Decoder",
+                "item": "https://huzikit.com/developertools/urlencoderdecoder.html"
+              }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://huzikit.com/developertools/urlencoderdecoder.html#faq",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is URL encoding?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "URL encoding (also known as percent-encoding) converts unsafe, non-ASCII, or reserved characters into a sequence of a percent sign followed by two hexadecimal digits representing the character's UTF-8 byte value (e.g., spaces become %20)."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the difference between encodeURI() and encodeURIComponent()?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "encodeURI() encodes a complete URL while preserving protocol, host, port, and query separators like ://, ?, &, and =. encodeURIComponent() encodes every character that has syntactic meaning, making it essential for query parameter values so they don't break the URL structure."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Why are spaces sometimes encoded as %20 and other times as +?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "%20 is the standard percent-encoding defined in RFC 3986 for generic URIs. The plus sign (+) is used specifically in application/x-www-form-urlencoded MIME types, typically generated by HTML form submissions. Both represent a space in query strings."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What causes URIError: malformed URI sequence during decoding?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "This error occurs when decodeURI() or decodeURIComponent() encounters an invalid percent sign sequence, such as an isolated % not followed by two hexadecimal characters, or a truncated multi-byte UTF-8 byte sequence."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is URL encoding a method of encryption or compression?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. URL encoding is neither encryption nor compression. It is an open, deterministic character representation standard. It actually increases the byte length of encoded characters rather than compressing them."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does Huzikit upload or store my URLs on a server?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. All encoding, decoding, parsing, and query editing operations are executed entirely client-side inside your web browser using JavaScript. No URL data is sent to our servers."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <!-- ========================================================================
+       GLOBAL NAVIGATION (LOCKED 30 TOOLS)
+       ======================================================================== -->
+    <header class="site-header" id="site-header">
+      <div class="container header-inner">
+        <!-- Brand Logo -->
+        <a
+          href="/"
+          class="brand-logo"
+          id="brand-logo"
+          aria-label="Huzikit Home"
+        >
+          <span>Huzikit</span>
+        </a>
+
+        <!-- Desktop Navbar (LOCKED: Text Tools, Calculators, Image & PDF, Developer,  About, Search) -->
+        <nav class="desktop-nav" aria-label="Main Navigation">
+          <!-- 1. Text Tools -->
+          <div class="nav-item">
+            <button
+              class="nav-link"
+              type="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <span>Text Tools</span>
+              <svg
+                class="nav-chevron"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <ul class="nav-dropdown" aria-label="Text Tools Menu">
+              <li>
+                <a class="dropdown-link" href="/texttools/word-counter.html"
+                  >Word Counter</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-link"
+                  href="/texttools/character-counter.html"
+                  >Character Counter</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-link" href="/texttools/case-converter.html"
+                  >Case Converter</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-link"
+                  href="/texttools/remove-duplicate-lines.html"
+                  >Remove Duplicate Lines</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-link"
+                  href="/texttools/loremipsumgenerator.html"
+                  >Lorem Ipsum Generator</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-link"
+                  href="/texttools/passwordgenerator.html"
+                  >Password Generator</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-link" href="/texttools/text-reverser.html"
+                  >Text Reverser</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-link" href="/texttools/onlinenotepad.html"
+                  >Online Notepad</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- 2. Calculators -->
+          <div class="nav-item">
+            <button
+              class="nav-link"
+              type="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <span>Calculators</span>
+              <svg
+                class="nav-chevron"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <ul class="nav-dropdown" aria-label="Calculators Menu">
+              <li>
+                <a class="dropdown-link" href="/calculator/agecalculator.html"
+                  >Age Calculator</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-link" href="/calculator/bmi-calculator.html"
+                  >BMI Calculator</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-link"
+                  href="/calculator/percentage-calculator.html"
+                  >Percentage Calculator</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-link"
+                  href="/calculator/Calorie-Calculator.html"
+                  >Calorie Calculator</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-link"
+                  href="/calculator/discount-calculator.html"
+                  >Discount Calculator</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-link"
+                  href="/calculator/saving&goalcalculator.html"
+                  >Savings & Goal Calculator</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-link" href="/calculator/tip-calculator.html"
+                  >Tip Calculator</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-link" href="/calculator/gpa-calculator.html"
+                  >GPA Calculator</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- 3. Image & PDF -->
+          <div class="nav-item">
+            <button
+              class="nav-link"
+              type="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <span>Image & PDF</span>
+              <svg
+                class="nav-chevron"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <ul class="nav-dropdown" aria-label="Image & PDF Menu">
+              <li>
+                <a class="dropdown-link" href="/image&pdf/image-compressor.html"
+                  >Image Compressor</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-link" href="/image&pdf/image-resizer.html"
+                  >Image Resizer</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-link"
+                  href="/image&pdf/pdftowordconverter.html"
+                  >PDF to Word</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-link" href="/image&pdf/jpg-to-png.html"
+                  >JPG to PNG</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-link" href="/image&pdf/colorpicker.html"
+                  >Color Picker / HEX</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-link" href="/image&pdf/QRGenrator.html"
+                  >QR Code Generator</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- 4. Developer (URL Encoder / Decoder is Active) -->
+          <div class="nav-item">
+            <button
+              class="nav-link"
+              type="button"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              <span>Developer</span>
+              <svg
+                class="nav-chevron"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <ul class="nav-dropdown" aria-label="Developer Tools Menu">
+              <li>
+                <a
+                  class="dropdown-link"
+                  href="/developertools/JSONFORMATTER.html"
+                  >JSON Formatter</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-link"
+                  href="/developertools/base64encoderdecoder.html"
+                  >Base64 Encoder/Decoder</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-link active"
+                  href="/developertools/urlencoderdecoder.html"
+                  >URL Encoder/Decoder
+                  <span class="dropdown-badge">Current</span></a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-link"
+                  href="/developertools/meta-tag-generator.html"
+                  >Meta Tag Generator</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-link" href="/developertools/regextester.html"
+                  >Regex Tester</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-link"
+                  href="/developertools/markdownhtml.html"
+                  >Markdown to HTML</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-link" href="/developertools/cssminifier.html"
+                  >CSS Minifier</a
+                >
+              </li>
+              <li>
+                <a
+                  class="dropdown-link"
+                  href="/developertools/unixtimestamp.html"
+                  >Unix Timestamp</a
+                >
+              </li>
+            </ul>
+          </div>
+          <!-- 6. About -->
+          <div class="nav-item">
+            <a class="nav-link" href="/about.html">About</a>
+          </div>
+        </nav>
+
+        <!-- Right Header Actions: Search Button & Mobile Hamburger -->
+        <div class="header-actions">
+          <button
+            class="btn-icon-search"
+            id="btn-open-search"
+            type="button"
+            aria-label="Search all tools (Ctrl+K)"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              width="16"
+              height="16"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <span>Search</span>
+            <kbd class="search-kbd">Ctrl K</kbd>
+          </button>
+
+          <button
+            class="btn-hamburger"
+            id="btn-hamburger"
+            type="button"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
+            aria-controls="mobile-nav-drawer"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ========================================================================
+       MOBILE NAVIGATION DRAWER & BACKDROP
+       ======================================================================== -->
+    <div class="mobile-nav-backdrop" id="mobile-nav-backdrop"></div>
+    <aside
+      class="mobile-nav-drawer"
+      id="mobile-nav-drawer"
+      aria-label="Mobile Menu"
+      aria-hidden="true"
+    >
+      <div class="mobile-nav-header">
+          </div>
+          <span>Huzikit</span>
+        </div>
+        <button
+          class="btn-close-mobile"
+          id="btn-close-mobile"
+          type="button"
+          aria-label="Close navigation menu"
+        >
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+
+      <div class="mobile-nav-body">
+        <!-- Accordion: Developer Tools -->
+        <div class="mobile-accordion-group">
+          <button
+            class="mobile-accordion-header"
+            type="button"
+            aria-expanded="true"
+          >
+            <span>Developer Tools</span>
+            <svg
+              class="mobile-accordion-chevron"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <ul class="mobile-accordion-content open">
+            <li>
+              <a
+                class="mobile-tool-link"
+                href="/developertools/JSONFORMATTER.html"
+                >JSON Formatter</a
+              >
+            </li>
+            <li>
+              <a
+                class="mobile-tool-link"
+                href="/developertools/base64encoderdecoder.html"
+                >Base64 Encoder/Decoder</a
+              >
+            </li>
+            <li>
+              <a
+                class="mobile-tool-link active"
+                href="/developertools/urlencoderdecoder.html"
+                >URL Encoder/Decoder</a
+              >
+            </li>
+            <li>
+              <a
+                class="mobile-tool-link"
+                href="/developertools/meta-tag-generator.html"
+                >Meta Tag Generator</a
+              >
+            </li>
+            <li>
+              <a
+                class="mobile-tool-link"
+                href="/developertools/regextester.html"
+                >Regex Tester</a
+              >
+            </li>
+            <li>
+              <a
+                class="mobile-tool-link"
+                href="/developertools/markdownhtml.html"
+                >Markdown to HTML</a
+              >
+            </li>
+            <li>
+              <a
+                class="mobile-tool-link"
+                href="/developertools/cssminifier.html"
+                >CSS Minifier</a
+              >
+            </li>
+            <li>
+              <a
+                class="mobile-tool-link"
+                href="/developertools/unixtimestamp.html"
+                >Unix Timestamp</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Accordion: Text Tools -->
+        <div class="mobile-accordion-group">
+          <button
+            class="mobile-accordion-header"
+            type="button"
+            aria-expanded="false"
+          >
+            <span>Text Tools</span>
+            <svg
+              class="mobile-accordion-chevron"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <ul class="mobile-accordion-content">
+            <li>
+              <a class="mobile-tool-link" href="/texttools/word-counter.html"
+                >Word Counter</a
+              >
+            </li>
+            <li>
+              <a
+                class="mobile-tool-link"
+                href="/texttools/character-counter.html"
+                >Character Counter</a
+              >
+            </li>
+            <li>
+              <a class="mobile-tool-link" href="/texttools/case-converter.html"
+                >Case Converter</a
+              >
+            </li>
+            <li>
+              <a
+                class="mobile-tool-link"
+                href="/texttools/remove-duplicate-lines.html"
+                >Remove Duplicate Lines</a
+              >
+            </li>
+            <li>
+              <a
+                class="mobile-tool-link"
+                href="/texttools/loremipsumgenerator.html"
+                >Lorem Ipsum Generator</a
+              >
+            </li>
+            <li>
+              <a
+                class="mobile-tool-link"
+                href="/texttools/passwordgenerator.html"
+                >Password Generator</a
+              >
+            </li>
+            <li>
+              <a class="mobile-tool-link" href="/texttools/text-reverser.html"
+                >Text Reverser</a
+              >
+            </li>
+            <li>
+              <a class="mobile-tool-link" href="/texttools/onlinenotepad.html"
+                >Online Notepad</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Accordion: Calculators -->
+        <div class="mobile-accordion-group">
+          <button
+            class="mobile-accordion-header"
+            type="button"
+            aria-expanded="false"
+          >
+            <span>Calculators</span>
+            <svg
+              class="mobile-accordion-chevron"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <ul class="mobile-accordion-content">
+            <li>
+              <a class="mobile-tool-link" href="/calculator/agecalculator.html"
+                >Age Calculator</a
+              >
+            </li>
+            <li>
+              <a class="mobile-tool-link" href="/calculator/bmi-calculator.html"
+                >BMI Calculator</a
+              >
+            </li>
+            <li>
+              <a
+                class="mobile-tool-link"
+                href="/calculator/percentage-calculator.html"
+                >Percentage Calculator</a
+              >
+            </li>
+            <li>
+              <a
+                class="mobile-tool-link"
+                href="/calculator/Calorie-Calculator.html"
+                >Calorie Calculator</a
+              >
+            </li>
+            <li>
+              <a
+                class="mobile-tool-link"
+                href="/calculator/discount-calculator.html"
+                >Discount Calculator</a
+              >
+            </li>
+            <li>
+              <a
+                class="mobile-tool-link"
+                href="/calculator/saving&goalcalculator.html"
+                >Savings & Goal Calculator</a
+              >
+            </li>
+            <li>
+              <a class="mobile-tool-link" href="/calculator/tip-calculator.html"
+                >Tip Calculator</a
+              >
+            </li>
+            <li>
+              <a class="mobile-tool-link" href="/calculator/gpa-calculator.html"
+                >GPA Calculator</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Accordion: Image & PDF -->
+        <div class="mobile-accordion-group">
+          <button
+            class="mobile-accordion-header"
+            type="button"
+            aria-expanded="false"
+          >
+            <span>Image & PDF</span>
+            <svg
+              class="mobile-accordion-chevron"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+          <ul class="mobile-accordion-content">
+            <li>
+              <a
+                class="mobile-tool-link"
+                href="/image&pdf/image-compressor.html"
+                >Image Compressor</a
+              >
+            </li>
+            <li>
+              <a class="mobile-tool-link" href="/image&pdf/image-resizer.html"
+                >Image Resizer</a
+              >
+            </li>
+            <li>
+              <a
+                class="mobile-tool-link"
+                href="/image&pdf/pdftowordconverter.html"
+                >PDF to Word</a
+              >
+            </li>
+            <li>
+              <a class="mobile-tool-link" href="/image&pdf/jpg-to-png.html"
+                >JPG to PNG</a
+              >
+            </li>
+            <li>
+              <a class="mobile-tool-link" href="/image&pdf/colorpicker.html"
+                >Color Picker / HEX</a
+              >
+            </li>
+            <li>
+              <a class="mobile-tool-link" href="/image&pdf/QRGenrator.html"
+                >QR Code Generator</a
+              >
+            </li>
+          </ul>
+       </div>
+        <!-- Direct Links -->
+        <a class="mobile-direct-link" href="/about.html">
+          <span>About</span>
+          <svg
+            viewBox="0 0 24 24"
+            width="16"
+            height="16"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </a>
+      </div>
+    </aside>
+
+    <!-- ========================================================================
+       GLOBAL SEARCH MODAL
+       ======================================================================== -->
+    <div
+      class="search-modal-backdrop"
+      id="search-modal-backdrop"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Global Tool Search"
+    >
+      <div class="search-modal" id="search-modal">
+        <div class="search-input-wrapper">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <input
+            type="text"
+            class="search-field"
+            id="search-field"
+            placeholder="Search any of 30 Huzikit tools..."
+            autocomplete="off"
+            spellcheck="false"
+          />
+          <button class="search-close-btn" id="btn-close-search" type="button">
+            ESC
+          </button>
+        </div>
+        <div class="search-results-box" id="search-results-box">
+          <!-- Live search results generated via JavaScript -->
+        </div>
+      </div>
+    </div>
+
+    <!-- ========================================================================
+       BREADCRUMB
+       ======================================================================== -->
+    <div class="container breadcrumb-nav">
+      <ol class="breadcrumb-list">
+        <li class="breadcrumb-item"><a href="https://huzikit.com/">Home</a></li>
+        <li class="breadcrumb-sep">/</li>
+        <li class="breadcrumb-item">
+          <a href="/developertools/urlencoderdecoder.html">Developer</a>
+        </li>
+        <li class="breadcrumb-sep">/</li>
+        <li class="breadcrumb-item breadcrumb-current" aria-current="page">
+          URL Encoder / Decoder
+        </li>
+      </ol>
+    </div>
+
+    <!-- ========================================================================
+       HERO SECTION
+       ======================================================================== -->
+    <section class="hero-section" id="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge-row">
+            <span class="hero-tag">RFC 3986 Standard</span>
+            <span class="hero-tag">100% Client-Side</span>
+            <span class="hero-tag">UTF-8 / Unicode Safe</span>
+          </div>
+
+          <h1 class="hero-title" id="main-heading">
+            URL Encoder / <span class="hero-title-accent">Decoder</span>
+          </h1>
+
+          <p class="hero-desc">
+            Encode and decode URLs, URL components, query parameters, and text
+            safely in your browser. Inspect parameters, build queries, process
+            batches, and verify percent-encoded strings with zero server
+            transmission.
+          </p>
+
+          <ul class="hero-features-list">
+            <li class="hero-feature-item">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+              >
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Live Auto-Conversion</span>
+            </li>
+            <li class="hero-feature-item">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+              >
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Component vs Full URI Modes</span>
+            </li>
+            <li class="hero-feature-item">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+              >
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              <span>Query Parameter Analyzer</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contained Technical 3D Flow Visual Card -->
+        <div class="hero-visual-card" aria-hidden="true">
+          <div class="hero-visual-header">
+            <span class="hero-visual-title">
+              <span class="pulse-dot"></span>
+              URL Protocol Engine
+            </span>
+            <span
+              style="
+                font-size: 0.6875rem;
+                color: var(--ink-faint);
+                font-family: var(--font-mono);
+              "
+              >RFC 3986</span
+            >
+          </div>
+
+          <div class="flow-step-container">
+            <div class="flow-node">
+              <span class="flow-node-label">Plain Text</span>
+              <span class="flow-node-val">Developer Tools &amp; Suite</span>
+            </div>
+
+            <div class="flow-arrow">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+              >
+                <polyline points="7 13 12 18 17 13"></polyline>
+                <line x1="12" y1="6" x2="12" y2="18"></line>
+              </svg>
+              <span>ENCODE</span>
+            </div>
+
+            <div
+              class="flow-node"
+              style="
+                background-color: var(--primary-light);
+                border-color: rgba(79, 70, 229, 0.3);
+              "
+            >
+              <span class="flow-node-label" style="color: var(--primary-dark)"
+                >Percent-Encoded</span
+              >
+              <span class="flow-node-val" style="color: var(--primary)"
+                >Developer%20Tools%20%26%20Suite</span
+              >
+            </div>
+
+            <div class="flow-arrow">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+              >
+                <polyline points="7 13 12 18 17 13"></polyline>
+                <line x1="12" y1="6" x2="12" y2="18"></line>
+              </svg>
+              <span>DECODE</span>
+            </div>
+
+            <div class="flow-node">
+              <span class="flow-node-label">Original String</span>
+              <span class="flow-node-val">Developer Tools &amp; Suite</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+       MAIN WORKSPACE (TWO-PANEL DESKTOP / STACKED MOBILE)
+       ======================================================================== -->
+    <main class="tool-section" id="tool-workspace">
+      <div class="container">
+        <div class="workspace-card" id="workspace-card">
+          <!-- Top Controls Bar: Mode Pills & Live Option -->
+          <div class="workspace-controls-bar">
+            <div
+              class="mode-pills-group"
+              role="tablist"
+              aria-label="Encoding Mode"
+            >
+              <button
+                class="btn-mode active"
+                data-mode="encode_component"
+                id="mode-btn-enc-comp"
+                type="button"
+                role="tab"
+                aria-selected="true"
+              >
+                <span>Encode Component</span>
+              </button>
+              <button
+                class="btn-mode"
+                data-mode="decode_component"
+                id="mode-btn-dec-comp"
+                type="button"
+                role="tab"
+                aria-selected="false"
+              >
+                <span>Decode Component</span>
+              </button>
+              <button
+                class="btn-mode"
+                data-mode="encode_uri"
+                id="mode-btn-enc-uri"
+                type="button"
+                role="tab"
+                aria-selected="false"
+              >
+                <span>Encode Full URI</span>
+              </button>
+              <button
+                class="btn-mode"
+                data-mode="decode_uri"
+                id="mode-btn-dec-uri"
+                type="button"
+                role="tab"
+                aria-selected="false"
+              >
+                <span>Decode URI</span>
+              </button>
+            </div>
+
+            <div class="workspace-options">
+              <label class="toggle-switch-label" for="live-toggle">
+                <input
+                  type="checkbox"
+                  id="live-toggle"
+                  class="switch-input"
+                  checked
+                />
+                <span class="switch-slider"></span>
+                <span>Live Mode</span>
+              </label>
+
+              <!-- Examples & Presets -->
+              <select
+                class="presets-select"
+                id="preset-select"
+                aria-label="Load Example Presets"
+              >
+                <option value="">Load Example Preset...</option>
+                <option value="search_url">Search URL with Query</option>
+                <option value="query_param">Company Query Parameter</option>
+                <option value="unicode_arabic">Unicode (Arabic URL)</option>
+                <option value="unicode_asian">
+                  Unicode (Chinese/Japanese/Emoji)
+                </option>
+                <option value="special_chars">
+                  Special Characters &amp; Tokens
+                </option>
+                <option value="complex_api">Complex REST API Endpoint</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Smart Suggestion Banner -->
+          <div class="smart-suggestion-banner" id="smart-suggestion-banner">
+            <div class="smart-suggestion-content">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="16" x2="12" y2="12"></line>
+                <line x1="12" y1="8" x2="12.01" y2="8"></line>
+              </svg>
+              <span id="smart-suggestion-text"
+                >Suggestion message will appear here</span
+              >
+            </div>
+            <button
+              class="smart-action-btn"
+              id="smart-suggestion-btn"
+              type="button"
+            >
+              Apply Suggestion
+            </button>
+          </div>
+
+          <!-- Two Panel Grid: Left Input | Right Output -->
+          <div class="workspace-panels-grid">
+            <!-- Left Column: Input -->
+            <div class="panel-col panel-col-left">
+              <div class="panel-header">
+                <label for="main-input" class="panel-label">
+                  <svg
+                    viewBox="0 0 24 24"
+                    width="16"
+                    height="16"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"
+                    ></path>
+                    <path
+                      d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"
+                    ></path>
+                  </svg>
+                  <span>Input URL / Text</span>
+                </label>
+                <div class="panel-header-actions">
+                  <button
+                    class="btn-text-action"
+                    id="btn-paste-input"
+                    type="button"
+                    onclick="
+                      navigator.clipboard && navigator.clipboard.readText
+                        ? navigator.clipboard.readText().then((t) => {
+                            document.getElementById('main-input').value = t;
+                            document
+                              .getElementById('main-input')
+                              .dispatchEvent(new Event('input'));
+                          })
+                        : null
+                    "
+                  >
+                    Paste
+                  </button>
+                </div>
+              </div>
+              <textarea
+                id="main-input"
+                class="editor-textarea"
+                placeholder="Enter or paste URL, URI component, query parameters, or text here..."
+                spellcheck="false"
+              ></textarea>
+            </div>
+
+            <!-- Right Column: Output -->
+            <div class="panel-col panel-col-right">
+              <div class="panel-header">
+                <span class="panel-label">
+                  <svg
+                    viewBox="0 0 24 24"
+                    width="16"
+                    height="16"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                  <span>Transformed Result</span>
+                </span>
+                <div class="panel-header-actions">
+                  <button
+                    class="btn-text-action"
+                    id="btn-copy-output"
+                    type="button"
+                    aria-label="Copy output"
+                  >
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <rect
+                        x="9"
+                        y="9"
+                        width="13"
+                        height="13"
+                        rx="2"
+                        ry="2"
+                      ></rect>
+                      <path
+                        d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                      ></path>
+                    </svg>
+                    <span>Copy</span>
+                  </button>
+                  <button
+                    class="btn-text-action"
+                    id="btn-download-output"
+                    type="button"
+                    aria-label="Download result as text file"
+                  >
+                    <svg
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <path
+                        d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+                      ></path>
+                      <polyline points="7 10 12 15 17 10"></polyline>
+                      <line x1="12" y1="15" x2="12" y2="3"></line>
+                    </svg>
+                    <span>Download</span>
+                  </button>
+                </div>
+              </div>
+              <div class="output-box-wrapper">
+                <div
+                  id="main-output"
+                  class="editor-output break-url"
+                  tabindex="0"
+                  aria-label="Output text area"
+                  role="region"
+                ></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Action Toolbar -->
+          <div class="workspace-actions-toolbar">
+            <div class="main-actions-row">
+              <button
+                class="btn-primary-action"
+                id="btn-primary-action"
+                type="button"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M5 12h14"></path>
+                  <path d="M12 5l7 7-7 7"></path>
+                </svg>
+                <span class="btn-label">Encode Component</span>
+              </button>
+              <button
+                class="btn-secondary-action"
+                id="btn-swap"
+                type="button"
+                title="Swap Input and Output"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M7 16V4m0 0L3 8m4-4l4 4m6 4v12m0 0l4-4m-4 4l-4-4"
+                  ></path>
+                </svg>
+                <span>Swap</span>
+              </button>
+              <button class="btn-secondary-action" id="btn-clear" type="button">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <polyline points="3 6 5 6 21 6"></polyline>
+                  <path
+                    d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"
+                  ></path>
+                </svg>
+                <span>Clear</span>
+              </button>
+              <button class="btn-secondary-action" id="btn-reset" type="button">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <polyline points="1 4 1 10 7 10"></polyline>
+                  <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path>
+                </svg>
+                <span>Reset</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Statistics Strip -->
+          <div class="stats-strip" id="stats-strip">
+            <div class="stat-item">
+              <span class="stat-title">Input Characters</span>
+              <span class="stat-value" id="stat-input-chars">0</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-title">Output Characters</span>
+              <span class="stat-value" id="stat-output-chars">0</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-title">Char Difference</span>
+              <span class="stat-value" id="stat-diff">0</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-title">Input UTF-8 Bytes</span>
+              <span class="stat-value" id="stat-input-bytes">0 B</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-title">Output UTF-8 Bytes</span>
+              <span class="stat-value" id="stat-output-bytes">0 B</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-title">Percent Sequences</span>
+              <span class="stat-value" id="stat-encoded-count">0</span>
+            </div>
+          </div>
+
+          <!-- Diff / Token Highlighting Panel -->
+          <div class="diff-inspection-panel">
+            <div class="diff-title-row">
+              <span class="diff-title"
+                >Token Inspection &amp; Percent-Escape Highlighting</span
+              >
+            </div>
+            <div class="diff-content-view break-url" id="diff-inspection-box">
+              <!-- Rendered safely via text nodes in JS -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- ========================================================================
+       SECONDARY MODULES SECTION (TABS)
+       ======================================================================== -->
+    <section class="modules-section" id="advanced-tools">
+      <div class="container">
+        <!-- Tab Buttons Navigation -->
+        <div class="modules-nav-tabs" role="tablist">
+          <button
+            class="tab-btn active"
+            data-target="module-analyzer"
+            type="button"
+            role="tab"
+            aria-selected="true"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <span>URL Analyzer</span>
+          </button>
+          <button
+            class="tab-btn"
+            data-target="module-params"
+            type="button"
+            role="tab"
+            aria-selected="false"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <line x1="8" y1="6" x2="21" y2="6"></line>
+              <line x1="8" y1="12" x2="21" y2="12"></line>
+              <line x1="8" y1="18" x2="21" y2="18"></line>
+              <line x1="3" y1="6" x2="3.01" y2="6"></line>
+              <line x1="3" y1="12" x2="3.01" y2="12"></line>
+              <line x1="3" y1="18" x2="3.01" y2="18"></line>
+            </svg>
+            <span>Query Parameters</span>
+          </button>
+          <button
+            class="tab-btn"
+            data-target="module-builder"
+            type="button"
+            role="tab"
+            aria-selected="false"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+              <polyline points="2 17 12 22 22 17"></polyline>
+              <polyline points="2 12 12 17 22 12"></polyline>
+            </svg>
+            <span>URL Builder</span>
+          </button>
+          <button
+            class="tab-btn"
+            data-target="module-batch"
+            type="button"
+            role="tab"
+            aria-selected="false"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+            </svg>
+            <span>Batch Processing</span>
+          </button>
+          <button
+            class="tab-btn"
+            data-target="module-charset"
+            type="button"
+            role="tab"
+            aria-selected="false"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M4 7V4h16v3"></path>
+              <path d="M9 20h6"></path>
+              <path d="M12 4v16"></path>
+            </svg>
+            <span>Special Characters</span>
+          </button>
+          <button
+            class="tab-btn"
+            data-target="module-history"
+            type="button"
+            role="tab"
+            aria-selected="false"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+            <span>History &amp; Snippets</span>
+          </button>
+        </div>
+
+        <!-- MODULE 1: URL Analyzer -->
+        <div class="module-card active" id="module-analyzer" role="tabpanel">
+          <div class="module-header">
+            <h2 class="module-title">URL Analyzer &amp; Inspector</h2>
+            <p class="module-desc">
+              Deconstruct any complete or relative URL into its standardized RFC
+              3986 components using the browser's native URL engine.
+            </p>
+          </div>
+
+          <div
+            style="
+              display: flex;
+              gap: 10px;
+              flex-wrap: wrap;
+              margin-bottom: 16px;
+            "
+          >
+            <input
+              type="text"
+              id="analyzer-url-input"
+              class="form-input"
+              style="flex: 1; min-width: 260px"
+              placeholder="Paste URL to inspect (e.g. https://user:pass@example.com:8080/path?id=10#view)..."
+            />
+            <button
+              class="btn-primary-action"
+              id="btn-analyze-url"
+              type="button"
+            >
+              Inspect URL
+            </button>
+          </div>
+
+          <div class="url-analyzer-grid">
+            <div class="parsed-card">
+              <span class="parsed-card-label">Protocol / Scheme</span>
+              <span class="parsed-card-val break-url" id="parsed-protocol"
+                >https:</span
+              >
+            </div>
+            <div class="parsed-card">
+              <span class="parsed-card-label">Origin</span>
+              <span class="parsed-card-val break-url" id="parsed-origin"
+                >https://huzikit.com</span
+              >
+            </div>
+            <div class="parsed-card">
+              <span class="parsed-card-label">Hostname</span>
+              <span class="parsed-card-val break-url" id="parsed-host"
+                >huzikit.com</span
+              >
+            </div>
+            <div class="parsed-card">
+              <span class="parsed-card-label">Port</span>
+              <span class="parsed-card-val break-url" id="parsed-port"
+                >(default)</span
+              >
+            </div>
+            <div class="parsed-card">
+              <span class="parsed-card-label">Pathname</span>
+              <span class="parsed-card-val break-url" id="parsed-path"
+                >/search</span
+              >
+            </div>
+            <div class="parsed-card">
+              <span class="parsed-card-label">Query / Search String</span>
+              <span class="parsed-card-val break-url" id="parsed-query"
+                >?q=developer tools&amp;category=URL Encoder &amp; Decoder</span
+              >
+            </div>
+            <div class="parsed-card">
+              <span class="parsed-card-label">Hash / Fragment</span>
+              <span class="parsed-card-val break-url" id="parsed-hash"
+                >(none)</span
+              >
+            </div>
+            <div class="parsed-card">
+              <span class="parsed-card-label">Authentication Credentials</span>
+              <span class="parsed-card-val break-url" id="parsed-auth"
+                >None</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- MODULE 2: Query Parameter Editor -->
+        <div class="module-card" id="module-params" role="tabpanel">
+          <div class="module-header">
+            <h2 class="module-title">Interactive Query Parameter Editor</h2>
+            <p class="module-desc">
+              Add, edit, encode, and remove query parameters. Preserves
+              duplicate parameter names without overwriting.
+            </p>
+          </div>
+
+          <div class="params-table-wrapper">
+            <table class="params-table">
+              <thead>
+                <tr>
+                  <th style="width: 25%">Key (Parameter)</th>
+                  <th style="width: 35%">Raw Value</th>
+                  <th style="width: 25%">Decoded Value</th>
+                  <th style="width: 15%">Actions</th>
+                </tr>
+              </thead>
+              <tbody id="params-tbody">
+                <!-- Dynamically populated rows -->
+              </tbody>
+            </table>
+          </div>
+
+          <div class="params-actions-bar">
+            <button
+              class="btn-secondary-action"
+              id="btn-add-param"
+              type="button"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <line x1="12" y1="5" x2="12" y2="19"></line>
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+              </svg>
+              <span>Add Parameter</span>
+            </button>
+
+            <div style="display: flex; gap: 8px; align-items: center">
+              <button
+                class="btn-primary-action"
+                id="btn-rebuild-url"
+                type="button"
+              >
+                <span>Apply to Main Tool</span>
+              </button>
+            </div>
+          </div>
+
+          <div
+            style="
+              margin-top: 14px;
+              padding: 12px;
+              background: var(--bg);
+              border: 1px solid var(--line);
+              border-radius: var(--radius-sm);
+            "
+          >
+            <span
+              style="
+                font-size: 0.75rem;
+                font-weight: 700;
+                color: var(--ink-faint);
+                text-transform: uppercase;
+              "
+              >Reconstructed Query String Preview:</span
+            >
+            <div
+              id="rebuilt-url-preview"
+              class="break-url"
+              style="
+                font-family: var(--font-mono);
+                font-size: 0.875rem;
+                color: var(--primary-dark);
+                font-weight: 600;
+                margin-top: 4px;
+              "
+            >
+              (empty query)
+            </div>
+          </div>
+        </div>
+
+        <!-- MODULE 3: URL Builder -->
+        <div class="module-card" id="module-builder" role="tabpanel">
+          <div class="module-header">
+            <h2 class="module-title">Visual URL Builder</h2>
+            <p class="module-desc">
+              Construct clean, valid URLs from individual components with
+              automatic structural formatting.
+            </p>
+          </div>
+
+          <div class="builder-form-grid">
+            <div class="form-group">
+              <label class="form-label" for="builder-protocol">Protocol</label>
+              <select class="form-select" id="builder-protocol">
+                <option value="https://">https://</option>
+                <option value="http://">http://</option>
+                <option value="ftp://">ftp://</option>
+                <option value="ws://">ws://</option>
+                <option value="wss://">wss://</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="builder-host">Host / Domain</label>
+              <input
+                type="text"
+                class="form-input"
+                id="builder-host"
+                value="example.com"
+                placeholder="api.example.com"
+              />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="builder-port"
+                >Port (Optional)</label
+              >
+              <input
+                type="text"
+                class="form-input"
+                id="builder-port"
+                placeholder="e.g. 8080"
+              />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="builder-path">Path</label>
+              <input
+                type="text"
+                class="form-input"
+                id="builder-path"
+                value="/api/v1/search"
+                placeholder="/v1/endpoint"
+              />
+            </div>
+
+            <div class="form-group form-group-full">
+              <label class="form-label" for="builder-query"
+                >Query String (Key=Value&amp;...)</label
+              >
+              <input
+                type="text"
+                class="form-input"
+                id="builder-query"
+                value="q=developer+tools&amp;sort=asc"
+                placeholder="category=dev&amp;page=1"
+              />
+            </div>
+
+            <div class="form-group form-group-full">
+              <label class="form-label" for="builder-hash"
+                >Hash / Anchor Fragment</label
+              >
+              <input
+                type="text"
+                class="form-input"
+                id="builder-hash"
+                value="results"
+                placeholder="section-id"
+              />
+            </div>
+          </div>
+
+          <div class="builder-result-preview">
+            <span
+              style="
+                font-size: 0.75rem;
+                font-weight: 700;
+                color: var(--ink-faint);
+                text-transform: uppercase;
+              "
+              >Generated URL:</span
+            >
+            <div
+              id="builder-result"
+              class="break-url"
+              style="
+                font-family: var(--font-mono);
+                font-size: 0.9375rem;
+                color: var(--ink);
+                font-weight: 600;
+              "
+            >
+              https://example.com/api/v1/search?q=developer+tools&amp;sort=asc#results
+            </div>
+            <div
+              style="display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px"
+            >
+              <button
+                class="btn-primary-action"
+                id="btn-builder-copy"
+                type="button"
+              >
+                Copy URL
+              </button>
+              <button
+                class="btn-secondary-action"
+                id="btn-builder-send"
+                type="button"
+              >
+                Test in Main Tool
+              </button>
+              <button
+                class="btn-secondary-action"
+                id="btn-builder-clear"
+                type="button"
+              >
+                Reset Builder
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- MODULE 4: Batch URL Processing -->
+        <div class="module-card" id="module-batch" role="tabpanel">
+          <div class="module-header">
+            <h2 class="module-title">Batch URL Encoder / Decoder</h2>
+            <p class="module-desc">
+              Process hundreds of URLs or parameters line-by-line with failure
+              recovery and bulk download.
+            </p>
+          </div>
+
+          <div class="batch-controls-row">
+            <div
+              style="
+                display: flex;
+                gap: 10px;
+                flex-wrap: wrap;
+                align-items: center;
+              "
+            >
+              <label
+                for="batch-mode"
+                style="font-size: 0.875rem; font-weight: 600"
+                >Operation:</label
+              >
+              <select id="batch-mode" class="form-select" style="width: auto">
+                <option value="encode_component">Encode Component</option>
+                <option value="decode_component">Decode Component</option>
+                <option value="encode_uri">Encode Full URI</option>
+                <option value="decode_uri">Decode URI</option>
+              </select>
+
+              <label class="toggle-switch-label" style="margin-left: 8px">
+                <input type="checkbox" id="batch-ignore-empty" checked />
+                <span>Ignore Empty Lines</span>
+              </label>
+
+              <label class="toggle-switch-label">
+                <input type="checkbox" id="batch-trim" checked />
+                <span>Trim Whitespace</span>
+              </label>
+            </div>
+
+            <button
+              class="btn-primary-action"
+              id="btn-process-batch"
+              type="button"
+            >
+              Run Batch Transformation
+            </button>
+          </div>
+
+          <textarea
+            id="batch-input"
+            class="editor-textarea"
+            style="min-height: 140px"
+            placeholder="Paste multiple URLs or query strings (one per line)...&#10;https://example.com/page 1&#10;hello &amp; world&#10;user@example.com&#10;https://example.com/%E2%9C%93"
+          ></textarea>
+
+          <div
+            style="
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              margin-top: 16px;
+              flex-wrap: wrap;
+              gap: 8px;
+            "
+          >
+            <div style="display: flex; gap: 10px; font-size: 0.8125rem">
+              <span>Total: <b id="batch-total-badge">0</b></span>
+              <span style="color: var(--success)"
+                >Success: <b id="batch-success-badge">0</b></span
+              >
+              <span style="color: var(--error)"
+                >Failed: <b id="batch-fail-badge">0</b></span
+              >
+            </div>
+
+            <div style="display: flex; gap: 8px">
+              <button
+                class="btn-text-action"
+                id="btn-batch-copy-all"
+                type="button"
+              >
+                Copy All Results
+              </button>
+              <button
+                class="btn-text-action"
+                id="btn-batch-download"
+                type="button"
+              >
+                Download .TXT
+              </button>
+            </div>
+          </div>
+
+          <div class="batch-results-list" id="batch-results-list">
+            <!-- Populated dynamically -->
+          </div>
+        </div>
+
+        <!-- MODULE 5: Special Characters & Cheat Sheet -->
+        <div class="module-card" id="module-charset" role="tabpanel">
+          <div class="module-header">
+            <h2 class="module-title">
+              Special Characters &amp; RFC 3986 Cheat Sheet
+            </h2>
+            <p class="module-desc">
+              Click any character card to insert and test its percent-encoded
+              representation in the main workspace.
+            </p>
+          </div>
+
+          <div class="charset-grid" id="special-charset-grid">
+            <!-- Dynamically populated character cards -->
+          </div>
+        </div>
+
+        <!-- MODULE 6: History & Saved Snippets -->
+        <div class="module-card" id="module-history" role="tabpanel">
+          <div class="module-header">
+            <h2 class="module-title">Local History &amp; Saved URL Snippets</h2>
+            <p class="module-desc">
+              Operations and custom snippets are stored strictly inside your
+              browser's private localStorage. Never uploaded to a remote server.
+            </p>
+          </div>
+
+          <div class="history-controls">
+            <div style="display: flex; gap: 12px; align-items: center">
+              <label class="toggle-switch-label">
+                <input type="checkbox" id="history-toggle" checked />
+                <span>Enable Local History</span>
+              </label>
+              <button
+                class="btn-text-action"
+                id="btn-clear-history"
+                type="button"
+              >
+                Clear All History
+              </button>
+            </div>
+
+            <button
+              class="btn-secondary-action"
+              id="btn-save-snippet"
+              type="button"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <path
+                  d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"
+                ></path>
+                <polyline points="17 21 17 13 7 13 7 21"></polyline>
+                <polyline points="7 3 7 8 15 8"></polyline>
+              </svg>
+              <span>Save Current Input as Snippet</span>
+            </button>
+          </div>
+
+          <div style="margin-bottom: 24px">
+            <h3
+              style="
+                font-size: 0.9375rem;
+                font-weight: 700;
+                margin-bottom: 10px;
+              "
+            >
+              Saved Snippets
+            </h3>
+            <div class="history-list" id="snippets-list"></div>
+          </div>
+
+          <div>
+            <h3
+              style="
+                font-size: 0.9375rem;
+                font-weight: 700;
+                margin-bottom: 10px;
+              "
+            >
+              Recent Operations Log
+            </h3>
+            <div class="history-list" id="history-list"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+       SECURITY & PRIVACY WARNING BANNER
+       ======================================================================== -->
+    <div class="container">
+      <div class="security-notice-box" role="note">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+        </svg>
+        <div>
+          <h3 class="security-notice-title">
+            Security &amp; Privacy Safeguards
+          </h3>
+          <p class="security-notice-text">
+            All URL encoding, decoding, parsing, and query inspections run 100%
+            locally within your browser using sandboxed JavaScript engines. No
+            URLs, query tokens, or payload strings are ever transmitted over the
+            network or saved to external databases. As a security best practice,
+            avoid pasting live API keys, session tokens, or private credentials
+            into unverified or shared browser tabs.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========================================================================
+       TECHNICAL GUIDE & EDUCATIONAL CONTENT (1,200 - 1,700 WORDS)
+       ======================================================================== -->
+    <article class="edu-section" id="educational-guide">
+      <div class="container edu-article">
+        <header class="edu-header">
+          <span class="edu-badge">Comprehensive RFC 3986 Reference</span>
+          <h2 class="edu-main-title">
+            The Definitive Guide to URL Encoding, Percent-Encoding, and URI
+            Architecture
+          </h2>
+        </header>
+
+        <section class="edu-block">
+          <h3 class="edu-heading-2">What is URL Encoding?</h3>
+          <p class="edu-p">
+            URL encoding, formally referred to in internet specifications as
+            <strong>percent-encoding</strong> (RFC 3986), is a standardized
+            mechanism for representing characters within a Uniform Resource
+            Identifier (URI) that are either outside the permitted US-ASCII
+            range or hold reserved structural roles in URL syntax. Because
+            internet protocols transmit URIs across diverse network gateways and
+            routing layers, arbitrary raw characters—such as spaces,
+            punctuation, quotes, and international scripts—can corrupt routing
+            or cause parsing ambiguities if not systematically encoded.
+          </p>
+          <p class="edu-p">
+            In percent-encoding, any character requiring translation is
+            transformed into its hexadecimal byte sequence preceded by the
+            percent symbol (<code>%</code>). For example, the standard ASCII
+            space character (code point 32, hex <code>0x20</code>) becomes
+            <code>%20</code>. If an application needs to transmit non-ASCII
+            Unicode characters, such as Arabic, Chinese, or emoji, the
+            characters are first transformed into their UTF-8 byte stream, and
+            each individual byte is percent-encoded.
+          </p>
+          <div class="edu-highlight-box">
+            <strong>Direct Technical Summary:</strong> URL encoding maps binary
+            bytes to an invariant triplet: the literal percent sign
+            <code>%</code> followed by two uppercase hexadecimal digits
+            (<code>0-9</code>, <code>A-F</code>). It ensures unambiguous
+            delivery across proxies, caches, HTTP clients, and backends.
+          </div>
+        </section>
+
+        <section class="edu-block">
+          <h3 class="edu-heading-2">What is URL Decoding?</h3>
+          <p class="edu-p">
+            URL decoding is the inverse mathematical operation of
+            percent-encoding. When a web server, API endpoint, or client-side
+            application receives an encoded URL or query parameter, it scans the
+            string for <code>%XX</code> triplets. Upon finding one, it
+            reconstructs the original byte, collates multi-byte UTF-8 sequences
+            when applicable, and translates them back into human-readable
+            characters or original programmatic data.
+          </p>
+          <p class="edu-p">
+            A common runtime failure during decoding is the
+            <code>URIError: malformed URI sequence</code>. This occurs when a
+            decoding parser encounters a stray percent sign not followed by two
+            valid hex digits (e.g., <code>%Z9</code> or <code>%4</code>), or
+            when a multi-byte sequence is truncated (e.g., only the leading byte
+            of a multi-byte Unicode sequence is supplied). The Huzikit URL
+            Encoder / Decoder engine traps these exceptions safely without
+            interrupting user workflow.
+          </p>
+        </section>
+
+        <section class="edu-block">
+          <h3 class="edu-heading-2">
+            Critical Distinction: encodeURI() vs encodeURIComponent()
+          </h3>
+          <p class="edu-p">
+            One of the most frequent sources of subtle bugs in web applications
+            is confusing JavaScript's two native encoding functions:
+            <code>encodeURI()</code> and <code>encodeURIComponent()</code>.
+            While both perform percent-encoding, they target fundamentally
+            different architectural layers:
+          </p>
+
+          <div class="edu-table-wrapper">
+            <table class="edu-table">
+              <thead>
+                <tr>
+                  <th>Feature</th>
+                  <th>encodeURI()</th>
+                  <th>encodeURIComponent()</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Primary Intended Use</strong></td>
+                  <td>
+                    Complete, standalone URLs (e.g.,
+                    <code>https://huzikit.com/search?q=test</code>)
+                  </td>
+                  <td>
+                    Individual query parameter keys or values (e.g.,
+                    <code>q</code> or <code>test &amp; more</code>)
+                  </td>
+                </tr>
+                <tr>
+                  <td><strong>Preserved Delimiters</strong></td>
+                  <td><code>; , / ? : @ &amp; = + $ #</code></td>
+                  <td>None of the structural URL delimiters are preserved</td>
+                </tr>
+                <tr>
+                  <td><strong>Does it encode / and ?</strong></td>
+                  <td>No (keeps path slashes and query marks intact)</td>
+                  <td>
+                    Yes (<code>/</code> becomes <code>%2F</code>,
+                    <code>?</code> becomes <code>%3F</code>)
+                  </td>
+                </tr>
+                <tr>
+                  <td><strong>Does it encode &amp; and =</strong></td>
+                  <td>No (keeps query parameter separations intact)</td>
+                  <td>
+                    Yes (<code>&amp;</code> becomes <code>%26</code>,
+                    <code>=</code> becomes <code>%3D</code>)
+                  </td>
+                </tr>
+                <tr>
+                  <td><strong>What happens if misused?</strong></td>
+                  <td>
+                    Parameter values containing <code>&amp;</code> or
+                    <code>=</code> corrupt the query parser
+                  </td>
+                  <td>
+                    Using on full URL turns <code>https://</code> into
+                    <code>https%3A%2F%2F</code>, breaking navigation
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p class="edu-p">
+            <strong>Rule of Thumb:</strong> When generating dynamic query string
+            parameters, encode every single parameter value using
+            <code>encodeURIComponent()</code> (or modern
+            <code>URLSearchParams</code>), then assemble them into the final URL
+            string. Never use <code>encodeURI()</code> to sanitize user inputs
+            containing ampersands or question marks.
+          </p>
+        </section>
+
+        <section class="edu-block">
+          <h3 class="edu-heading-2">
+            Reserved vs Unreserved Characters in RFC 3986
+          </h3>
+          <p class="edu-p">
+            RFC 3986 partitions the 7-bit ASCII character spectrum into two
+            foundational sets:
+          </p>
+          <ul
+            style="
+              margin-left: 20px;
+              color: var(--ink-soft);
+              line-height: 1.7;
+              margin-bottom: 16px;
+            "
+          >
+            <li>
+              <strong>Unreserved Characters:</strong> Characters that never hold
+              syntactic meaning in URI parsing and do not require encoding:
+              <code>A-Z</code>, <code>a-z</code>, <code>0-9</code>, hyphen
+              (<code>-</code>), underscore (<code>_</code>), period
+              (<code>.</code>), and tilde (<code>~</code>).
+            </li>
+            <li>
+              <strong>Reserved Characters:</strong> Characters that define URI
+              structure or delimit functional segments. These are subdivided
+              into:
+              <ul style="margin-left: 20px">
+                <li>
+                  <em>Gen-delims (General delimiters):</em>
+                  <code>: / ? # [ ] @</code>
+                </li>
+                <li>
+                  <em>Sub-delims (Sub-delimiters):</em>
+                  <code>! $ &amp; ' ( ) * + , ; =</code>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <p class="edu-p">
+            When a reserved character is used for its structural role (such as a
+            <code>?</code> introducing query parameters), it must remain
+            literal. When that same character occurs as literal data within a
+            parameter (for example, searching for the literal phrase
+            <em>"Who is?"</em>), it must be percent-encoded as
+            <code>%3F</code> to prevent premature termination of the query
+            segment.
+          </p>
+        </section>
+
+        <section class="edu-block">
+          <h3 class="edu-heading-2">
+            URI vs URL vs URN: Demystifying the Standards
+          </h3>
+          <p class="edu-p">
+            While developers often use these terms interchangeably in everyday
+            conversation, RFC 3986 establishes distinct hierarchies:
+          </p>
+          <ul
+            style="
+              margin-left: 20px;
+              color: var(--ink-soft);
+              line-height: 1.7;
+              margin-bottom: 16px;
+            "
+          >
+            <li>
+              <strong>URI (Uniform Resource Identifier):</strong> The
+              overarching umbrella specification. A URI is an identifier that
+              names or locates a resource via an explicit scheme. Every URL and
+              URN is a URI.
+            </li>
+            <li>
+              <strong>URL (Uniform Resource Locator):</strong> A specific class
+              of URI that identifies a resource by specifying <em>how</em> to
+              locate it on the network (specifying access protocol, host, and
+              path), such as
+              <code
+                >https://huzikit.com/developertools/urlencoderdecoder.html</code
+              >.
+            </li>
+            <li>
+              <strong>URN (Uniform Resource Name):</strong> A URI that
+              identifies a resource by name in a designated namespace without
+              specifying its network location or access mechanism, such as
+              <code>urn:isbn:0451450523</code> or
+              <code>urn:uuid:6ba7b810-9dad-11d1-80b4-00c04fd430c8</code>.
+            </li>
+          </ul>
+        </section>
+
+        <section class="edu-block">
+          <h3 class="edu-heading-2">Query String Encoding: %20 vs Plus (+)</h3>
+          <p class="edu-p">
+            A frequent cause of confusion is why space characters are encoded as
+            <code>%20</code> in standard URIs, yet appear as <code>+</code> in
+            form submissions or Google search query strings.
+          </p>
+          <p class="edu-p">
+            This divergence stems from two competing legacy specifications:
+          </p>
+          <ul
+            style="
+              margin-left: 20px;
+              color: var(--ink-soft);
+              line-height: 1.7;
+              margin-bottom: 16px;
+            "
+          >
+            <li>
+              <strong>RFC 3986 (URI Standard):</strong> Dictates that spaces
+              within path segments, headers, and generic URI structures must be
+              percent-encoded as <code>%20</code>. In generic RFC 3986 contexts,
+              a literal <code>+</code> represents the plus symbol itself.
+            </li>
+            <li>
+              <strong
+                >W3C HTML Form Specification
+                (application/x-www-form-urlencoded):</strong
+              >
+              Created in the early 1990s specifically for web form submissions.
+              Under this encoding rule, spaces in query parameters are replaced
+              by <code>+</code>, and literal plus characters are encoded as
+              <code>%2B</code>.
+            </li>
+          </ul>
+          <p class="edu-p">
+            Modern web servers and API frameworks (such as Express, Django,
+            Spring, and ASP.NET Core) normalize both representations
+            automatically when reading query strings, treating both
+            <code>%20</code> and <code>+</code> as spaces. However, for clean
+            REST APIs and path parameters, <code>%20</code> remains the
+            universal best practice.
+          </p>
+        </section>
+
+        <section class="edu-block">
+          <h3 class="edu-heading-2">
+            Unicode and Multi-Byte UTF-8 in Modern URLs
+          </h3>
+          <p class="edu-p">
+            Historically, the web was constrained to 7-bit ASCII. In 2005, RFC
+            3987 introduced Internationalized Resource Identifiers (IRIs),
+            allowing direct use of non-Latin scripts (Arabic, Cyrillic, Chinese,
+            Urdu, Japanese, emojis) in web addresses. When an IRI is transmitted
+            across the wire, modern browsers transform the characters into UTF-8
+            bytes and percent-encode each byte:
+          </p>
+          <div class="edu-code-block">
+            Plain Unicode: https://example.com/مرحبا UTF-8 Bytes: 0xD9 0x85 0xD8
+            0xB1 0xD8 0xAD 0xD8 0xA8 0xD8 0xA7 Wire Encoded:
+            https://example.com/%D9%85%D8%B1%D8%AD%D8%A8%D8%A7 Emoji Character:
+            🚀 (Rocket - U+1F680) UTF-8 Bytes: 0xF0 0x9F 0x9A 0x80 Wire Encoded:
+            %F0%9F%9A%80
+          </div>
+          <p class="edu-p">
+            Huzikit's URL Encoder / Decoder fully supports multi-byte Unicode
+            parsing, ensuring seamless encoding and round-trip decoding across
+            all international languages and emoji symbols without character
+            degradation.
+          </p>
+        </section>
+
+        <section class="edu-block">
+          <h3 class="edu-heading-2">
+            Security Considerations: Double-Encoding, Open Redirects &amp; XSS
+          </h3>
+          <p class="edu-p">
+            URL encoding is not a security cipher or an authentication tool.
+            Improper handling of encoded strings in web applications frequently
+            introduces severe security vulnerabilities:
+          </p>
+          <ul
+            style="
+              margin-left: 20px;
+              color: var(--ink-soft);
+              line-height: 1.7;
+              margin-bottom: 16px;
+            "
+          >
+            <li>
+              <strong>Double-Encoding Vulnerabilities:</strong> If a backend
+              service decodes a URL twice (e.g., once at the web application
+              firewall or reverse proxy, and a second time in application
+              business logic), an attacker can bypass path traversal or WAF
+              filters by encoding characters twice. For example,
+              <code>%252F</code> decodes to <code>%2F</code> on the first pass,
+              and then to <code>/</code> on the second pass.
+            </li>
+            <li>
+              <strong>Open Redirect Exploits:</strong> Attackers often supply
+              encoded URLs inside <code>?redirect=</code> parameters (e.g.,
+              <code>?redirect=https%3A%2F%2Fmalicious-site.com</code>).
+              Applications must validate that the decoded target origin matches
+              whitelist policies before issuing 302 redirects.
+            </li>
+            <li>
+              <strong>DOM-based Cross-Site Scripting (XSS):</strong> Extracting
+              parameters from <code>window.location.search</code> or
+              <code>window.location.hash</code> and directly inserting them into
+              the DOM via <code>innerHTML</code> without proper HTML escaping
+              allows execution of arbitrary script payloads, such as
+              <code>javascript:alert(1)</code>.
+            </li>
+          </ul>
+        </section>
+
+        <section class="edu-block">
+          <h3 class="edu-heading-2">
+            Developer Implementations across Popular Languages
+          </h3>
+          <p class="edu-p">
+            Below are the standard, production-ready patterns for encoding and
+            decoding URLs in leading development environments:
+          </p>
+
+          <h4 class="edu-heading-3">
+            JavaScript / TypeScript (Browser &amp; Node.js)
+          </h4>
+          <div class="edu-code-block">
+            // 1. Encoding Query Parameters safely with URLSearchParams const
+            params = new URLSearchParams(); params.append('search', 'Developer
+            Tools &amp; Suite'); params.append('city', 'New York'); const
+            queryString = params.toString(); // Returns:
+            search=Developer+Tools+%26+Suite&amp;city=New+York // 2. Individual
+            Component Encoding const safeParam = encodeURIComponent('John Doe
+            &amp; Co.'); // Returns: John%20Doe%20%26%20Co. // 3. Decoding const
+            decoded = decodeURIComponent('John%20Doe%20%26%20Co.'); // Returns:
+            John Doe &amp; Co.
+          </div>
+
+          <h4 class="edu-heading-3">Python 3 (urllib.parse)</h4>
+          <div class="edu-code-block">
+            from urllib.parse import quote, unquote, urlencode # Parameter
+            encoding params = {'q': 'hello world', 'tag': 'python &amp; url'}
+            query_string = urlencode(params) # Output:
+            q=hello+world&amp;tag=python+%26+url # Component encoding (quote
+            preserves safe characters by default) encoded_value =
+            quote('https://example.com/search?q=1', safe='') # Output:
+            https%3A%2F%2Fexample.com%2Fsearch%3Fq%3D1 # Decoding raw_text =
+            unquote(encoded_value)
+          </div>
+
+          <h4 class="edu-heading-3">PHP</h4>
+          <div class="edu-code-block">
+            // RFC 3986 Compliant Encoding (Space becomes %20) $encoded =
+            rawurlencode("John Doe &amp; Company"); $decoded =
+            rawurldecode($encoded); // Form-style Encoding (Space becomes +)
+            $form_encoded = urlencode("John Doe &amp; Company"); $form_decoded =
+            urldecode($form_encoded);
+          </div>
+        </section>
+      </div>
+    </article>
+
+    <!-- ========================================================================
+       FAQ SECTION (12 REAL INTERACTIVE ACCORDIONS)
+       ======================================================================== -->
+    <section class="faq-section" id="faq-section">
+      <div class="container faq-container">
+        <div class="faq-header">
+          <h2 class="faq-title">Frequently Asked Questions</h2>
+          <p class="faq-subtitle">
+            Everything you need to know about URL encoding, percent-escaping,
+            and RFC 3986 compliance.
+          </p>
+        </div>
+
+        <div class="faq-accordion-stack">
+          <!-- FAQ 1 -->
+          <div class="faq-card">
+            <button class="faq-trigger" type="button" aria-expanded="false">
+              <span>What is URL encoding and why is it necessary?</span>
+              <svg
+                class="faq-chevron"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-panel">
+              URL encoding (percent-encoding) converts non-ASCII characters,
+              control characters, and reserved punctuation characters into a
+              standardized <code>%XX</code> format. It is necessary because the
+              internet's core transmission protocols require URLs to be
+              transmitted using a restricted subset of US-ASCII. Without
+              encoding, characters like spaces, question marks, and ampersands
+              would break the URL structure or cause routing failures.
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-card">
+            <button class="faq-trigger" type="button" aria-expanded="false">
+              <span
+                >What is the difference between encodeURI() and
+                encodeURIComponent()?</span
+              >
+              <svg
+                class="faq-chevron"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-panel">
+              <code>encodeURI()</code> is designed for complete URLs; it leaves
+              structural delimiters like <code>://</code>, <code>?</code>,
+              <code>/</code>, and <code>&amp;</code> untouched so the URL
+              remains navigable. Conversely,
+              <code>encodeURIComponent()</code> encodes all reserved characters,
+              making it the proper function for query parameter values so
+              special characters like <code>&amp;</code> or
+              <code>=</code> inside user data do not get parsed as new
+              parameters.
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-card">
+            <button class="faq-trigger" type="button" aria-expanded="false">
+              <span
+                >Why are spaces sometimes encoded as %20 and sometimes as
+                +?</span
+              >
+              <svg
+                class="faq-chevron"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-panel">
+              <code>%20</code> is the official percent-encoding defined by RFC
+              3986 for general URIs. The plus symbol (<code>+</code>) is an
+              alternative standard used specifically in HTML form submissions
+              (application/x-www-form-urlencoded). Most modern web servers
+              handle both interchangeably in query strings, but
+              <code>%20</code> is required for path segments and REST endpoints.
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-card">
+            <button class="faq-trigger" type="button" aria-expanded="false">
+              <span
+                >What causes "URIError: malformed URI sequence" during
+                decoding?</span
+              >
+              <svg
+                class="faq-chevron"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-panel">
+              This runtime error occurs when
+              <code>decodeURIComponent()</code> encounters a percent sign that
+              is not followed by two valid hexadecimal digits (e.g.,
+              <code>%G1</code> or an unescaped <code>%</code> at the end of a
+              string), or when a multi-byte UTF-8 sequence is cut off midway.
+              The Huzikit tool catches these errors and highlights the exact
+              issue.
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-card">
+            <button class="faq-trigger" type="button" aria-expanded="false">
+              <span>Is URL encoding the same as Base64 encoding?</span>
+              <svg
+                class="faq-chevron"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-panel">
+              No. URL encoding translates individual characters into their
+              hexadecimal byte representations preceded by <code>%</code>.
+              Base64 converts arbitrary binary data into 64 printable ASCII
+              characters (including <code>+</code>, <code>/</code>, and
+              <code>=</code>). Standard Base64 is not URL-safe because it
+              contains slashes and plus signs, requiring URL encoding or
+              Base64URL encoding if placed in a URL.
+            </div>
+          </div>
+
+          <!-- FAQ 6 -->
+          <div class="faq-card">
+            <button class="faq-trigger" type="button" aria-expanded="false">
+              <span
+                >Can this tool encode and decode Unicode characters and
+                emojis?</span
+              >
+              <svg
+                class="faq-chevron"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-panel">
+              Yes. Huzikit's URL Encoder / Decoder fully supports UTF-8
+              multi-byte encoding. You can safely paste text in Arabic, Chinese,
+              Japanese, Cyrillic, Urdu, Greek, or emojis (e.g., 🚀 or 😀). Each
+              Unicode code point is split into its UTF-8 bytes and encoded into
+              matching percent-triplets.
+            </div>
+          </div>
+
+          <!-- FAQ 7 -->
+          <div class="faq-card">
+            <button class="faq-trigger" type="button" aria-expanded="false">
+              <span
+                >How do I properly handle query parameters with duplicate
+                keys?</span
+              >
+              <svg
+                class="faq-chevron"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-panel">
+              URLs frequently contain repeated keys to represent arrays or
+              multi-select filters, such as
+              <code>?tag=javascript&amp;tag=react</code>. The Huzikit Query
+              Parameter Editor does not use lossy object maps; it parses
+              parameters into an ordered sequence, allowing you to add, edit,
+              and duplicate parameters without overwriting duplicate keys.
+            </div>
+          </div>
+
+          <!-- FAQ 8 -->
+          <div class="faq-card">
+            <button class="faq-trigger" type="button" aria-expanded="false">
+              <span>Does Huzikit send or log my URLs on a server?</span>
+              <svg
+                class="faq-chevron"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-panel">
+              No. All transformation, parsing, query breakdown, batch
+              conversions, and history logging happen 100% client-side inside
+              your browser's local sandbox. No data is sent over the network or
+              saved to remote servers.
+            </div>
+          </div>
+
+          <!-- FAQ 9 -->
+          <div class="faq-card">
+            <button class="faq-trigger" type="button" aria-expanded="false">
+              <span>How do I prevent double-encoding bugs in my code?</span>
+              <svg
+                class="faq-chevron"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-panel">
+              Double-encoding occurs when an already-encoded string is run
+              through an encoding function again (e.g., <code>%20</code> becomes
+              <code>%2520</code>). To prevent this, ensure that encoding occurs
+              only once at the immediate boundary where parameters are assembled
+              into the network request, and use standardized classes like
+              <code>URL</code> and <code>URLSearchParams</code>.
+            </div>
+          </div>
+
+          <!-- FAQ 10 -->
+          <div class="faq-card">
+            <button class="faq-trigger" type="button" aria-expanded="false">
+              <span
+                >What characters are considered unreserved under RFC 3986?</span
+              >
+              <svg
+                class="faq-chevron"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-panel">
+              RFC 3986 explicitly designates unreserved characters as uppercase
+              letters (<code>A-Z</code>), lowercase letters (<code>a-z</code>),
+              decimal digits (<code>0-9</code>), hyphen (<code>-</code>),
+              underscore (<code>_</code>), period (<code>.</code>), and tilde
+              (<code>~</code>). These characters never need percent-encoding in
+              standard URLs.
+            </div>
+          </div>
+
+          <!-- FAQ 11 -->
+          <div class="faq-card">
+            <button class="faq-trigger" type="button" aria-expanded="false">
+              <span>Can I encode an entire URL at once?</span>
+              <svg
+                class="faq-chevron"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-panel">
+              Yes, by using the <strong>Encode Full URI</strong> mode (which
+              utilizes <code>encodeURI()</code>). This mode encodes invalid
+              characters like spaces or non-ASCII characters while keeping the
+              protocol, host slashes, and query marks intact so the URL remains
+              a valid link.
+            </div>
+          </div>
+
+          <!-- FAQ 12 -->
+          <div class="faq-card">
+            <button class="faq-trigger" type="button" aria-expanded="false">
+              <span
+                >Is this URL Encoder / Decoder free for commercial use?</span
+              >
+              <svg
+                class="faq-chevron"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+            <div class="faq-panel">
+              Yes. The Huzikit URL Encoder / Decoder is 100% free for
+              developers, testers, analysts, and enterprises. There are no usage
+              quotas, subscription tiers, or feature limitations.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+       RELATED DEVELOPER TOOLS (EXACT LOCKED ROUTES)
+       ======================================================================== -->
+    <section class="related-section" id="related-tools">
+      <div class="container">
+        <h2 class="related-title">Related Developer Tools on Huzikit</h2>
+        <div class="related-grid">
+          <a
+            class="related-card"
+            href="/developertools/base64encoderdecoder.html"
+          >
+            <div class="related-card-top">
+              <span class="related-badge">Developer</span>
+            </div>
+            <h3 class="related-name">Base64 Encoder/Decoder</h3>
+            <p class="related-desc">
+              Encode and decode text, binary files, and Base64URL safe strings
+              in your browser.
+            </p>
+          </a>
+
+          <a class="related-card" href="/developertools/JSONFORMATTER.html">
+            <div class="related-card-top">
+              <span class="related-badge">Developer</span>
+            </div>
+            <h3 class="related-name">JSON Formatter</h3>
+            <p class="related-desc">
+              Prettify, validate, minify, and inspect JSON data structures with
+              syntax tree views.
+            </p>
+          </a>
+
+          <a class="related-card" href="/developertools/regextester.html">
+            <div class="related-card-top">
+              <span class="related-badge">Developer</span>
+            </div>
+            <h3 class="related-name">Regex Tester</h3>
+            <p class="related-desc">
+              Test and debug regular expressions with live syntax highlighting
+              and capture groups.
+            </p>
+          </a>
+
+          <a class="related-card" href="/developertools/markdownhtml.html">
+            <div class="related-card-top">
+              <span class="related-badge">Developer</span>
+            </div>
+            <h3 class="related-name">Markdown to HTML</h3>
+            <p class="related-desc">
+              Convert GitHub-flavored markdown to clean HTML markup with live
+              preview.
+            </p>
+          </a>
+
+          <a class="related-card" href="/developertools/cssminifier.html">
+            <div class="related-card-top">
+              <span class="related-badge">Developer</span>
+            </div>
+            <h3 class="related-name">CSS Minifier</h3>
+            <p class="related-desc">
+              Compress and optimize CSS stylesheets for faster web loading
+              performance.
+            </p>
+          </a>
+
+          <a
+            class="related-card"
+            href="/developertools/meta-tag-generator.html"
+          >
+            <div class="related-card-top">
+              <span class="related-badge">Developer</span>
+            </div>
+            <h3 class="related-name">Meta Tag Generator</h3>
+            <p class="related-desc">
+              Generate OpenGraph, Twitter card, and SEO meta tags for modern web
+              applications.
+            </p>
+          </a>
+
+          <a class="related-card" href="/developertools/unixtimestamp.html">
+            <div class="related-card-top">
+              <span class="related-badge">Developer</span>
+            </div>
+            <h3 class="related-name">Unix Timestamp</h3>
+            <p class="related-desc">
+              Convert epoch timestamps to human-readable dates and UTC times in
+              real time.
+            </p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+       FOOTER (LOCKED - EXACT HUZIKIT BIO, LINKS & COPYRIGHT)
+       ======================================================================== -->
+    <footer class="site-footer" id="site-footer">
+      <div class="container">
+        <div class="footer-top-grid">
+          <!-- Brand Column -->
+          <div class="footer-brand-col">
+            <span class="footer-brand-title">Huzikit</span>
+            <p class="footer-bio">
+              The ultimate modern suite of lightning-fast, secure online web
+              utilities, calculators, and developer tools.
+            </p>
+            <a
+              class="footer-social-link"
+              href="https://x.com/huzikitoffical"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                />
+              </svg>
+              <span>Follow on X</span>
+            </a>
+          </div>
+
+          <!-- Col 1: Text & Dev Tools -->
+          <div>
+            <h3 class="footer-col-title">Text &amp; Dev Tools</h3>
+            <ul class="footer-links-list">
+              <li>
+                <a class="footer-link" href="/texttools/word-counter.html"
+                  >Word Counter</a
+                >
+              </li>
+              <li>
+                <a
+                  class="footer-link"
+                  href="/texttools/case-converter.html"
+                  >Case Converter</a
+                >
+              </li>
+              <li>
+                <a
+                  class="footer-link"
+                  href="/developertools/JSONFORMATTER.html"
+                  >JSON Formatter</a
+                >
+              </li>
+              <li>
+                <a class="footer-link" href="/developertools/base64encoderdecoder.html"
+                  >Base64 Utility</a
+                >
+              </li>
+              <li>
+                <a class="footer-link" href="/developertools/regextester.html"
+                  >Regex Tester</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Col 2: Calculators & Image -->
+          <div>
+            <h3 class="footer-col-title">Calculators &amp; Image</h3>
+            <ul class="footer-links-list">
+              <li>
+                <a
+                  class="footer-link"
+                  href="/calculator/agecalculator.html"
+                  >Age Calculator</a
+                >
+              </li>
+              <li>
+                <a
+                  class="footer-link"
+                  href="/calculator/bmi-calculator.html"
+                  >BMI Calculator</a
+                >
+              </li>
+              <li>
+                <a
+                  class="footer-link"
+                  href="/image&pdf/image-compressor.html"
+                  >Image Compressor</a
+                >
+              </li>
+              <li>
+                <a
+                  class="footer-link"
+                  href="/image&pdf/QRGenrator.html"
+                  >QR Code Generator</a
+                >
+              </li>
+              <li>
+                <a class="footer-link" href="/image&pdf/colorpicker.html"
+                  >Color Picker</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Col 3: Company & Legal -->
+          <div>
+            <h3 class="footer-col-title">Company &amp; Legal</h3>
+            <ul class="footer-links-list">
+              <li>
+                <a class="footer-link" href="/about.html"
+                  >About Huzikit</a
+                >
+              </li>
+              <li>
+                <a class="footer-link" href="/privacy-policies.html"
+                  >Disclaimer</a
+                >
+              </li>
+              <li>
+                <a
+                  class="footer-link"
+                  href="/privacy-policies.html"
+                  >Privacy Policy</a
+                >
+              </li>
+              <li>
+                <a
+                  class="footer-link"
+                  href="/Termsofservices.html"
+                  >Terms of Service</a
+                >
+              </li>
+              <li>
+                <a class="footer-link" href="/contact-us.html"
+                  >Contact Support</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="footer-bottom-bar">
+          <div>&copy; 2026 Huzikit.com. All rights reserved.</div>
+          <div class="footer-tagline">
+            Built with speed, security, and precision.
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Toast Notification Container -->
+    <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+    <!-- Master JavaScript -->
+    <script src="/developertools/urlencoderdecoder.js"></script>
+  </body>
+</html>

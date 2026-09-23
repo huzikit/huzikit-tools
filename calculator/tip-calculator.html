@@ -1,0 +1,1012 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Tip Calculator – Calculate Tips &amp; Split Your Bill | HuziKit
+    </title>
+    <meta
+      name="description"
+      content="Calculate tips instantly, split bills between people, and see your total payment with HuziKit free online Tip Calculator with custom percentages."
+    />
+    <meta
+      name="keywords"
+      content="Tip Calculator, tip calculator online, free tip calculator, restaurant tip calculator, bill tip calculator, tip percentage calculator, tip calculator with bill splitting, tip calculator per person, restaurant bill calculator, gratuity calculator, tip calculator with custom percentage"
+    />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://huziki.com/Calculator/tip-calculator" />
+
+    <meta
+      property="og:title"
+      content="Tip Calculator – Calculate Tips &amp; Split Your Bill | HuziKit"
+    />
+    <meta
+      property="og:description"
+      content="Calculate tips instantly, split bills between people, and see your total payment with HuziKit free online Tip Calculator."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://huzikit.com/calculator/tip-calculator" />
+    <meta property="og:image" content="https://huzikit.com/huzikit.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Tip Calculator | HuziKit" />
+    <meta
+      name="twitter:description"
+      content="Calculate tips instantly, split bills between people, and see your total payment with HuziKit free online Tip Calculator."
+    />
+    <meta name="twitter:image" content="https://huzikit.com/huzikit.png" />
+
+    <link rel="icon" href="huzikit.png" type="image/png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/calculator/tip-calculator.css" />
+    <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "HuziKit Tip Calculator",
+        "url": "https://huzikit.com/calculator/tip-calculator",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "All",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "description": "Calculate tips instantly, split bills between people, and see your total payment with custom percentage controls."
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://huzikit.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Calculators",
+            "item": "https://huzikit.com/toolpage/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Tip Calculator",
+            "item": "https://huzikit.com/calculator/tip-calculator/"
+          }
+        ]
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is a tip calculator?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A tip calculator is an online tool that automatically computes the gratuity amount and overall bill total based on a subtotal and chosen percentage."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I calculate a tip?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Multiply your total bill amount by the tip percentage (in decimal form). For example, a 20% tip on $100 is calculated as 100 × 0.20 = $20."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much should I tip at a restaurant?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "In the United States, standard tipping ranges from 15% to 20% for good sit-down service, 18% to 22% for excellent service, and 10% to 12% for basic service."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How is the tip amount calculated?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Tip Amount = (Bill Amount × Tip Percentage) / 100."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I split a bill between multiple people?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, our calculator divides the total combined bill and tip evenly by the selected number of guests."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I calculate tip per person?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Tip Per Person = Total Tip Amount / Number of People."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I enter a custom tip percentage?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, select the 'Custom' button in our calculator to input any positive percentage value."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does the calculator include the tip in the final total?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, the calculated total reflects the sum of the initial bill plus the tip."
+            }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="nav-container">
+        <a href="/" class="brand-logo">
+          <span>HuziKit</span>
+        </a>
+
+        <nav class="desktop-nav" aria-label="Main Navigation">
+          <ul class="nav-list">
+            <li class="nav-item dropdown-item">
+              <button
+                class="dropdown-toggle"
+                aria-expanded="false"
+                aria-controls="dropdown-text"
+              >
+                Text Tools <span class="arrow">▼</span>
+              </button>
+              <ul class="dropdown-menu" id="dropdown-text">
+                <li><a href="/texttools/word-counter.html">Word Counter</a></li>
+                <li>
+                  <a href="/texttools/character-counter.html"
+                    >Character Counter</a
+                  >
+                </li>
+                <li>
+                  <a href="/texttools/case-converter.html">Case Converter</a>
+                </li>
+                <li>
+                  <a href="/texttools/remove-duplicate-lines.html"
+                    >Remove Duplicate Lines</a
+                  >
+                </li>
+                <li>
+                  <a href="/texttools/loremipsumgenerator.html"
+                    >Lorem Ipsum Generator</a
+                  >
+                </li>
+                <li>
+                  <a href="/texttools/passwordgenerator.html"
+                    >Password Generator</a
+                  >
+                </li>
+                <li>
+                  <a href="/texttools/text-reverser.html">Text Reverser</a>
+                </li>
+                <li>
+                  <a href="/texttools/onlinenotepad.html">Online Notepad</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown-item">
+              <button
+                class="dropdown-toggle active-category"
+                aria-expanded="false"
+                aria-controls="dropdown-calc"
+              >
+                Calculators <span class="arrow">▼</span>
+              </button>
+              <ul class="dropdown-menu" id="dropdown-calc">
+                <li>
+                  <a href="/calculator/agecalculator.html">Age Calculator</a>
+                </li>
+                <li>
+                  <a href="/calculator/bmi-calculator.html">BMI Calculator</a>
+                </li>
+                <li>
+                  <a href="/calculator/percentage-calculator.html"
+                    >Percentage Calculator</a
+                  >
+                </li>
+                <li>
+                  <a href="/calculator/Calorie-Calculator.html"
+                    >Calorie Calculator</a
+                  >
+                </li>
+                <li>
+                  <a href="/calculator/discount-calculator.html"
+                    >Discount Calculator</a
+                  >
+                </li>
+                <li>
+                  <a href="/calculator/saving&goalcalculator.html"
+                    >Savings&Goal Calculator</a
+                  >
+                </li>
+                <li>
+                  <a href="/calculator/tip-calculator.html" class="active-link"
+                    >Tip Calculator</a
+                  >
+                </li>
+                <li>
+                  <a href="/calculator/gpa-calculator.html">GPA Calculator</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown-item">
+              <button
+                class="dropdown-toggle"
+                aria-expanded="false"
+                aria-controls="dropdown-img"
+              >
+                Image &amp; PDF <span class="arrow">▼</span>
+              </button>
+              <ul class="dropdown-menu" id="dropdown-img">
+                <li>
+                  <a href="/image&pdf/image-compressor.html"
+                    >Image Compressor</a
+                  >
+                </li>
+                <li>
+                  <a href="/image&pdf/image-resizer.html">Image Resizer</a>
+                </li>
+                <li>
+                  <a href="/image&pdf/pdftowordconverter.html">PDF to Word</a>
+                </li>
+                <li><a href="/image&pdf/jpg-to-png.html">JPG to PNG</a></li>
+                <li><a href="/image&pdf/colorpicker.html">Color Picker</a></li>
+                <li>
+                  <a href="/image&pdf/QRGenrator.html">QR Code Generator</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown-item">
+              <button
+                class="dropdown-toggle"
+                aria-expanded="false"
+                aria-controls="dropdown-dev"
+              >
+                Developer <span class="arrow">▼</span>
+              </button>
+              <ul class="dropdown-menu" id="dropdown-dev">
+                <li>
+                  <a href="/developertools/JSONFORMATTER.html"
+                    >JSON Formatter</a
+                  >
+                </li>
+                <li>
+                  <a href="/developertools/base64encoderdecoder.html"
+                    >Base64 Encoder/Decoder</a
+                  >
+                </li>
+                <li>
+                  <a href="/developertools/urlencoderdecoder.html"
+                    >URL Encoder/Decoder</a
+                  >
+                </li>
+                <li>
+                  <a href="/developertools/regextester.html">Regex Tester</a>
+                </li>
+                <li>
+                  <a href="/developertools/markdownhtml.html"
+                    >Markdown to HTML</a
+                  >
+                  <li>
+                    hu
+                  </li>
+                </li>
+                <li>
+                  <a href="/developertools/cssminifier.html">CSS Minifier</a>
+                </li>
+                <li>
+                  <a href="/developertools/unixtimestamp.html"
+                    >Unix Timestamp</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="/about.html" class="nav-link">About</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="nav-actions">
+          <button
+            class="search-trigger"
+            id="searchTriggerBtn"
+            aria-label="Open Search (Ctrl+K)"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+          <button
+            class="hamburger-btn"
+            id="hamburgerBtn"
+            aria-expanded="false"
+            aria-controls="mobileMenu"
+            aria-label="Toggle Mobile Menu"
+          >
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <div class="mobile-menu-inner">
+        <div class="mobile-acc-item">
+          <button
+            class="mobile-acc-trigger"
+            aria-expanded="false"
+            aria-controls="mob-text"
+          >
+            Text Tools <span class="arrow">▼</span>
+          </button>
+          <div class="mobile-acc-content" id="mob-text">
+            <a href="/texttools/word-counter.html">Word Counter</a>
+            <a href="/texttools/character-counter.html">Character Counter</a>
+            <a href="/texttools/case-converter.html">Case Converter</a>
+            <a href="/texttools/remove-duplicate-lines.html"
+              >Remove Duplicate Lines</a
+            >
+            <a href="/texttools/loremipsumgenerator.html"
+              >Lorem Ipsum Generator</a
+            >
+            <a href="/texttools/passwordgenerator.html">Password Generator</a>
+            <a href="/texttools/text-reverser.html">Text Reverser</a>
+            <a href="/texttools/onlinenotepad.html">Online Notepad</a>
+          </div>
+        </div>
+        <div class="mobile-acc-item">
+          <button
+            class="mobile-acc-trigger"
+            aria-expanded="false"
+            aria-controls="mob-calc"
+          >
+            Calculators <span class="arrow">▼</span>
+          </button>
+          <div class="mobile-acc-content" id="mob-calc">
+            <a href="/calculator/agecalculator.html">Age Calculator</a>
+            <a href="/calculator/bmi-calculator.html">BMI Calculator</a>
+            <a href="/calculator/percentage-calculator.html"
+              >Percentage Calculator</a
+            >
+            <a href="/calculator/Calorie-Calculator.html">Calorie Calculator</a>
+            <a href="/calculator/discount-calculator.html"
+              >Discount Calculator</a
+            >
+            <a href="/calculator/saving&goalcalculator.html"
+              >Savings&Goal Calculator</a
+            >
+            <a href="/calculator/tip-calculator.html" class="active-link"
+              >Tip Calculator</a
+            >
+            <a href="/calculator/gpa-calculator.html">GPA Calculator</a>
+          </div>
+        </div>
+        <div class="mobile-acc-item">
+          <button
+            class="mobile-acc-trigger"
+            aria-expanded="false"
+            aria-controls="mob-img"
+          >
+            Image &amp; PDF <span class="arrow">▼</span>
+          </button>
+          <div class="mobile-acc-content" id="mob-img">
+            <a href="/image&pdf/image-compressor.html">Image Compressor</a>
+            <a href="/image&pdf/image-resizer.html">Image Resizer</a>
+            <a href="/image&pdf/pdftowordconverter.html">PDF to Word</a>
+            <a href="/image&pdf/jpg-to-png.html">JPG to PNG</a>
+            <a href="/image&pdf/colorpicker.html">Color Picker</a>
+            <a href="/image&pdf/QRGenrator.html">QR Code Generator</a>
+          </div>
+        </div>
+        <div class="mobile-acc-item">
+          <button
+            class="mobile-acc-trigger"
+            aria-expanded="false"
+            aria-controls="mob-dev"
+          >
+            Developer <span class="arrow">▼</span>
+          </button>
+          <div class="mobile-acc-content" id="mob-dev">
+            <a href="/developertools/JSONFORMATTER.html">JSON Formatter</a>
+            <a href="/developertools/base64encoderdecoder.html"
+              >Base64 Encoder/Decoder</a
+            >
+            <a href="/developertools/urlencoderdecoder.html"
+              >URL Encoder/Decoder</a
+            >
+            <a href="/developertools/regextester.html">Regex Tester</a>
+            <a href="/developertools/markdownhtml.html">Markdown to HTML</a>
+            <a href="/developertools/cssminifier.html">CSS Minifier</a>
+            <a href="/developertools/unixtimestamp.html">Unix Timestamp</a>
+          </div>
+        </div>
+        <a href="/about.html" class="mobile-link">About</a>
+      </div>
+    </div>
+
+    <div class="search-overlay" id="searchOverlay" aria-hidden="true">
+      <div class="search-modal">
+        <div class="search-modal-header">
+          <div class="search-input-wrap">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Search tools (e.g. tip, bmi, password)..."
+              aria-label="Search tools"
+            />
+          </div>
+          <button
+            class="search-close-btn"
+            id="searchCloseBtn"
+            aria-label="Close search overlay"
+          >
+            &times;
+          </button>
+        </div>
+        <div class="search-results-container" id="searchResults"></div>
+      </div>
+    </div>
+
+    <main id="main-content">
+      <section class="hero-section">
+        <div class="container hero-grid">
+          <div class="hero-content">
+            <span class="eyebrow">SMART TIP CALCULATOR</span>
+            <h1>Tip Calculator</h1>
+            <p class="hero-desc">
+              Calculate tips instantly, split bills between people, and see your
+              total payment with HuziKit free online Tip Calculator.
+            </p>
+            <div class="hero-ctas">
+              <a href="#calculator-card" class="btn btn-primary"
+                >Calculate Tip</a
+              >
+              <a href="#how-it-works" class="btn btn-secondary">How It Works</a>
+            </div>
+            <ul class="hero-features">
+              <li>
+                <svg class="check-icon" viewBox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                Instant tip calculation
+              </li>
+              <li>
+                <svg class="check-icon" viewBox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                Easy bill splitting
+              </li>
+              <li>
+                <svg class="check-icon" viewBox="0 0 24 24">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                Flexible tip percentages
+              </li>
+            </ul>
+          </div>
+
+          <div class="hero-visual">
+            <div class="scene-3d">
+              <div class="card-3d">
+                <span class="demo-badge">DEMO</span>
+                <div class="d3-row">
+                  <span>BILL</span>
+                  <strong>$120.00</strong>
+                </div>
+                <div class="d3-row">
+                  <span>TIP</span>
+                  <strong>20%</strong>
+                </div>
+                <div class="d3-row">
+                  <span>PEOPLE</span>
+                  <strong>4</strong>
+                </div>
+                <hr class="d3-divider" />
+                <div class="d3-row">
+                  <span>TIP AMOUNT</span>
+                  <strong class="highlight">$24.00</strong>
+                </div>
+                <div class="d3-row total-row">
+                  <span>TOTAL</span>
+                  <strong>$144.00</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="calc-section container" id="calculator-card">
+        <div class="calc-card">
+          <div class="calc-inputs">
+            <div class="form-group">
+              <label for="billAmount">Bill Amount ($)</label>
+              <div class="input-with-symbol">
+                <span class="symbol">$</span>
+                <input
+                  type="number"
+                  id="billAmount"
+                  step="0.01"
+                  min="0"
+                  value="100.00"
+                  placeholder="0.00"
+                />
+              </div>
+              <span class="error-msg" id="billError"></span>
+            </div>
+
+            <div class="form-group">
+              <label>Select Tip Percentage</label>
+              <div class="tip-preset-grid">
+                <button type="button" class="tip-btn" data-percent="10">
+                  10%
+                </button>
+                <button type="button" class="tip-btn" data-percent="15">
+                  15%
+                </button>
+                <button type="button" class="tip-btn" data-percent="18">
+                  18%
+                </button>
+                <button type="button" class="tip-btn active" data-percent="20">
+                  20%
+                </button>
+                <button type="button" class="tip-btn" data-percent="25">
+                  25%
+                </button>
+                <button type="button" class="tip-btn" data-percent="30">
+                  30%
+                </button>
+                <button
+                  type="button"
+                  class="tip-btn custom-toggle-btn"
+                  id="customTipToggle"
+                >
+                  Custom
+                </button>
+              </div>
+              <div class="custom-tip-container hidden" id="customTipContainer">
+                <div class="input-with-symbol">
+                  <input
+                    type="number"
+                    id="customTipInput"
+                    min="0"
+                    max="1000"
+                    step="0.1"
+                    placeholder="Enter custom %"
+                  />
+                  <span class="symbol">%</span>
+                </div>
+              </div>
+              <span class="error-msg" id="tipError"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="peopleCount">Number of People</label>
+              <div class="people-stepper">
+                <button
+                  type="button"
+                  id="decrementPeople"
+                  aria-label="Decrease people"
+                >
+                  &minus;
+                </button>
+                <input
+                  type="number"
+                  id="peopleCount"
+                  min="1"
+                  max="100"
+                  value="1"
+                />
+                <button
+                  type="button"
+                  id="incrementPeople"
+                  aria-label="Increase people"
+                >
+                  &plus;
+                </button>
+              </div>
+              <span class="error-msg" id="peopleError"></span>
+            </div>
+
+            <div class="action-buttons">
+              <button type="button" class="btn btn-outline" id="resetBtn">
+                Reset Calculator
+              </button>
+            </div>
+          </div>
+
+          <div class="calc-results-panel">
+            <div class="results-header">
+              <h2>Payment Breakdown</h2>
+            </div>
+
+            <div class="primary-result-box" id="perPersonBox">
+              <span class="res-label">TOTAL PER PERSON</span>
+              <div class="res-value" id="totalPerPersonVal">$120.00</div>
+              <span class="sub-text" id="tipPerPersonVal"
+                >Tip per person: $20.00</span
+              >
+            </div>
+
+            <div class="secondary-results">
+              <div class="res-item">
+                <span>Tip Amount</span>
+                <strong id="tipAmountVal">$20.00</strong>
+              </div>
+              <div class="res-item">
+                <span>Total Bill</span>
+                <strong id="totalBillVal">$120.00</strong>
+              </div>
+            </div>
+
+            <div class="visual-breakdown">
+              <div class="breakdown-label">
+                <span>Visual Split</span>
+                <span id="visualRatio">83% Bill / 17% Tip</span>
+              </div>
+              <div class="breakdown-bar">
+                <div class="bar-bill" id="barBill" style="width: 83.33%"></div>
+                <div class="bar-tip" id="barTip" style="width: 16.67%"></div>
+              </div>
+              <div class="breakdown-legend">
+                <span class="leg-bill">Bill Subtotal</span>
+                <span class="leg-tip">Tip Portion</span>
+              </div>
+            </div>
+
+            <div class="results-actions">
+              <button
+                type="button"
+                class="btn btn-secondary-light"
+                id="copyBtn"
+              >
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path
+                    d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                  ></path>
+                </svg>
+                Copy Results
+              </button>
+              <button
+                type="button"
+                class="btn btn-secondary-light"
+                id="shareBtn"
+              >
+                <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <circle cx="18" cy="5" r="3"></circle>
+                  <circle cx="6" cy="12" r="3"></circle>
+                  <circle cx="18" cy="19" r="3"></circle>
+                  <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                  <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                </svg>
+                Share Results
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div id="toastContainer" class="toast-container" aria-live="polite"></div>
+
+      <section class="seo-content-section container" id="how-it-works">
+        <article class="content-card">
+          <h2>Understanding Tips and Gratuity</h2>
+          <p>
+            A tip (or gratuity) is a voluntary sum of money given to service
+            staff for performing a service. Calculating the proper tip ensures
+            fair compensation for waiters, drivers, and service personnel while
+            managing your personal or shared budget effectively.
+          </p>
+
+          <h2>How Does a Tip Calculator Work?</h2>
+          <p>
+            A tip calculator automates the math involved in splitting check
+            totals. By inputting the original subtotal, choosing a tip
+            percentage, and indicating the number of diners, the tool
+            immediately separates the baseline bill from the gratuity while
+            allocating exact portions for each individual.
+          </p>
+
+          <h2>How to Calculate a Tip</h2>
+          <p>To calculate a tip manually:</p>
+          <ul>
+            <li>
+              <strong>Step 1:</strong> Convert your desired percentage into a
+              decimal (e.g., 18% becomes 0.18).
+            </li>
+            <li>
+              <strong>Step 2:</strong> Multiply your bill subtotal by that
+              decimal value to get the Tip Amount.
+            </li>
+            <li>
+              <strong>Step 3:</strong> Add the calculated Tip Amount to the
+              original subtotal to calculate the Total Payable.
+            </li>
+          </ul>
+
+          <h2>Tip Percentage Guide</h2>
+          <div class="table-responsive">
+            <table class="seo-table">
+              <thead>
+                <tr>
+                  <th>Service Rating</th>
+                  <th>Tip Percentage</th>
+                  <th>Typical Context</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Standard / Satisfactory</td>
+                  <td>15%</td>
+                  <td>Casual dining, standard service</td>
+                </tr>
+                <tr>
+                  <td>Good Service</td>
+                  <td>18%</td>
+                  <td>Attentive service in upscale or standard restaurants</td>
+                </tr>
+                <tr>
+                  <td>Excellent Service</td>
+                  <td>20% - 25%</td>
+                  <td>Exceptional attention, fine dining, or group dining</td>
+                </tr>
+                <tr>
+                  <td>Delivery &amp; Taxis</td>
+                  <td>10% - 15%</td>
+                  <td>
+                    Food delivery drivers, rideshare drivers, quick service
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <h2>How to Split a Restaurant Bill Fairly</h2>
+          <p>
+            When dining with groups, calculating tip per person prevents awkward
+            billing math. Divide both the main bill and gratuity by the total
+            number of participants. If some guests ordered significantly more
+            expensive items, using custom percentages or calculating individual
+            subtotals ensures maximum fairness.
+          </p>
+
+          <h2>Tip Calculator Formula</h2>
+          <p>Our smart calculator uses the following mathematical formulas:</p>
+          <div class="formula-box">
+            <p>
+              <strong>Tip Amount</strong> = Bill Amount &times; (Tip Percentage
+              &divide; 100)
+            </p>
+            <p><strong>Total Bill</strong> = Bill Amount + Tip Amount</p>
+            <p>
+              <strong>Tip Per Person</strong> = Tip Amount &divide; Number of
+              People
+            </p>
+            <p>
+              <strong>Total Per Person</strong> = Total Bill &divide; Number of
+              People
+            </p>
+          </div>
+        </article>
+      </section>
+
+      <section class="faq-section container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-grid">
+          <div class="faq-card">
+            <h3>What is a tip calculator?</h3>
+            <p>
+              A tip calculator is an online financial utility that allows users
+              to quickly calculate gratuity amounts and total bill costs with
+              options for group splitting.
+            </p>
+          </div>
+          <div class="faq-card">
+            <h3>How do I calculate a tip?</h3>
+            <p>
+              Multiply the initial bill subtotal by your chosen tip rate in
+              decimal form (e.g., $50 × 0.20 = $10 tip).
+            </p>
+          </div>
+          <div class="faq-card">
+            <h3>How much should I tip at a restaurant?</h3>
+            <p>
+              Standard restaurant tipping is generally between 15% and 20% of
+              the pre-tax bill total in North America.
+            </p>
+          </div>
+          <div class="faq-card">
+            <h3>How is the tip amount calculated?</h3>
+            <p>
+              The tip amount is calculated using the formula: Bill Amount × (Tip
+              Percentage / 100).
+            </p>
+          </div>
+          <div class="faq-card">
+            <h3>Can I split a bill between multiple people?</h3>
+            <p>
+              Yes. Enter the total number of individuals in the "Number of
+              People" field, and the tool will calculate total and tip balances
+              per person.
+            </p>
+          </div>
+          <div class="faq-card">
+            <h3>How do I calculate tip per person?</h3>
+            <p>
+              Divide the total tip amount by the number of people sharing the
+              check.
+            </p>
+          </div>
+          <div class="faq-card">
+            <h3>Can I enter a custom tip percentage?</h3>
+            <p>
+              Yes. Click the "Custom" percentage button to type in any exact
+              percent value you choose.
+            </p>
+          </div>
+          <div class="faq-card">
+            <h3>Does the calculator include the tip in the final total?</h3>
+            <p>
+              Yes, the total bill figure dynamically adds the gratuity amount to
+              your initial bill subtotal.
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <span class="footer-heading">TEXT TOOLS</span>
+            <ul class="footer-links">
+              <li><a href="/texttools/word-counter.html">Word Counter</a></li>
+              <li><a href="/texttools/character-counter.html">Character Counter</a></li>
+              <li><a href="/texttools/case-converter.html">Case Converter</a></li>
+              <li>
+                <a href="/texttools/remove-duplicate-lines.html">Remove Duplicate Lines</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <span class="footer-heading">CALCULATORS</span>
+            <ul class="footer-links">
+              <li><a href="/calculator/agecalculator.html">Age Calculator</a></li>
+              <li><a href="/calculator/bmi-calculator.html">BMI Calculator</a></li>
+              <li>
+                <a href="/calculator/percentage-calculator.html">Percentage Calculator</a>
+              </li>
+              <li>
+                <a href="/calculator/discount-calculator.html"
+                  >Discount Calculator</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <span class="footer-heading">IMAGE &amp; PDF</span>
+            <ul class="footer-links">
+              <li><a href="/image&pdf/image-compressor.html">Image Compressor</a></li>
+              <li><a href="/image&pdf/image-resizer.html">Image Resizer</a></li>
+              <li><a href="/image&pdf/pdftowordconverter.html">PDF to Word</a></li>
+              <li><a href="/image&pdf/QRGenrator.html">QR Code Generator</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <span class="footer-heading">DEVELOPER</span>
+            <ul class="footer-links">
+              <li><a href="/developertools/JSONFORMATTER.html">JSON Formatter</a></li>
+              <li>
+                <a href="/developertools/base64encoderdecoder.html">Base64 Encoder/Decoder</a>
+              </li>
+              <li><a href="/developertools/urlencoderdecoder.html">URL Encoder/Decoder</a></li>
+              <li><a href="/developertools/regextester.html">Regex Tester</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="footer-policies">
+            <a href="/privacy-policies.html">Privacy Policy</a>
+            <a href="/Termsofservices.html">Terms of Service</a>
+            <a href="/disclamier.html">Disclaimer</a>
+            <a href="/contact-us.html">Contact Us</a>
+            <a href="/about.html">About Us</a>
+          </div>
+          <div class="footer-right">
+            <p class="copyright">&copy; 2026 HuziKit. All rights reserved.</p>
+            <div class="footer-socials">
+              <a
+                href="https://x.com/huzikitoffical"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="X (Twitter)"
+              >
+                <svg
+                  width="18"
+                  height="18"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/calculator/tip-calculator.js"></script>
+  </body>
+</html>

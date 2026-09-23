@@ -1,0 +1,1574 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Discount Calculator – Calculate Sale Price & Savings | Huzikit
+    </title>
+    <meta
+      name="description"
+      content="Use Huzikit's free online Discount Calculator to instantly calculate sale prices, discount amounts, and total savings. Fast, accurate, and 100% free with no signup."
+    />
+    <link
+      rel="canonical"
+      href="https://huzikit.com/calculator/discount-calculator"
+    />
+
+    <!-- Open Graph Metadata -->
+    <meta
+      property="og:title"
+      content="Discount Calculator – Calculate Sale Price & Savings | Huzikit"
+    />
+    <meta
+      property="og:description"
+      content="Use Huzikit's free online Discount Calculator to instantly calculate sale prices, discount amounts, and total savings. Fast, accurate, and 100% free with no signup."
+    />
+    <meta
+      property="og:url"
+      content="https://huzikit.com/calculator/discount-calculator"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Huzikit" />
+
+    <!-- Twitter / X Metadata -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Discount Calculator – Calculate Sale Price & Savings | Huzikit"
+    />
+    <meta
+      name="twitter:description"
+      content="Use Huzikit's free online Discount Calculator to instantly calculate sale prices, discount amounts, and total savings. Fast, accurate, and 100% free with no signup."
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheet -->
+    <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="/calculator/discount-calculator.css" />
+
+    <!-- Structured Data JSON-LD -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Huzikit Discount Calculator",
+        "url": "https://huzikit.com/calculator/discount-calculator",
+        "applicationCategory": "CalculatorApplication",
+        "operatingSystem": "All",
+        "browserRequirements": "Requires JavaScript. Requires HTML5.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "description": "Calculate discounts, sale prices, and total savings instantly with Huzikit's free online discount calculator."
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://huzikit.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Calculators",
+            "item": "https://huzikit.com/toolpage/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Discount Calculator",
+            "item": "https://huzikit.com/calculator/discount-calculator"
+          }
+        ]
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is a discount calculator?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A discount calculator is an online tool designed to quickly compute the reduced price of an item after a percentage discount is applied, along with showing the exact dollar or currency amount saved."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I calculate a discount?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "To calculate a discount, multiply the original price by the discount percentage, then divide the result by 100. Subtract that resulting discount amount from the original price to get the final sale price."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the discount formula?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The discount formula is: Discount Amount = Original Price × (Discount Percentage ÷ 100). Final Price = Original Price - Discount Amount."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much is 20% off $100?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "20% off $100 equals a $20 discount, making the final sale price $80 with a total savings of $20."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is Huzikit's Discount Calculator free?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes, Huzikit's Discount Calculator is 100% free to use with no registration, login, or subscriptions required."
+            }
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Top Global Announcement / Navbar Header -->
+    <header class="header" id="header">
+      <div class="nav-container">
+        <a href="/" class="logo" aria-label="Huzikit Home">
+          <span class="logo-text">Huzikit</span>
+        </a>
+
+        <!-- Desktop Navigation Menu -->
+        <nav class="nav-menu" aria-label="Main Navigation">
+          <ul class="nav-list">
+            <!-- Text Tools Dropdown -->
+            <li class="nav-item dropdown">
+              <button
+                class="dropdown-toggle"
+                aria-expanded="false"
+                aria-haspopup="true"
+              >
+                Text Tools
+                <svg
+                  class="dropdown-arrow"
+                  width="12"
+                  height="12"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </button>
+              <div class="dropdown-menu">
+                <a href="/texttools/word-counter.html" class="dropdown-link"
+                  >Word Counter</a
+                >
+                <a
+                  href="/texttools/character-counter.html"
+                  class="dropdown-link"
+                  >Character Counter</a
+                >
+                <a href="/texttools/case-converter.html" class="dropdown-link"
+                  >Case Converter</a
+                >
+                <a
+                  href="/texttools/remove-duplicate-lines.html"
+                  class="dropdown-link"
+                  >Remove Duplicate Lines</a
+                >
+                <a
+                  href="/texttools/loremipsumgenerator.html"
+                  class="dropdown-link"
+                  >Lorem Ipsum Generator</a
+                >
+                <a
+                  href="/texttools/passwordgenerator.html"
+                  class="dropdown-link"
+                  >Password Generator</a
+                >
+                <a href="/texttools/text-reverser.html" class="dropdown-link"
+                  >Text Reverser</a
+                >
+                <a href="/texttools/onlinenotepad.html" class="dropdown-link"
+                  >Online Notepad</a
+                >
+              </div>
+            </li>
+
+            <!-- Calculators Dropdown -->
+            <li class="nav-item dropdown">
+              <button
+                class="dropdown-toggle active"
+                aria-expanded="false"
+                aria-haspopup="true"
+              >
+                Calculators
+                <svg
+                  class="dropdown-arrow"
+                  width="12"
+                  height="12"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </button>
+              <div class="dropdown-menu">
+                <a href="/calculator/agecalculator.html" class="dropdown-link"
+                  >Age Calculator</a
+                >
+                <a href="/calculator/bmi-calculator.html" class="dropdown-link"
+                  >BMI Calculator</a
+                >
+                <a
+                  href="/calculator/percentage-calculator.html"
+                  class="dropdown-link"
+                  >Percentage Calculator</a
+                >
+                <a
+                  href="/calculator/Calorie-Calculator.html"
+                  class="dropdown-link"
+                  >Calorie Calculator</a
+                >
+                <a
+                  href="/calculator/discount-calculator.html"
+                  class="dropdown-link active"
+                  >Discount Calculator</a
+                >
+                <a
+                  href="/calculator/saving&goalcalculator.html"
+                  class="dropdown-link"
+                  >Savings & Goal Calculator</a
+                >
+                <a href="/calculator/tip-calculator.html" class="dropdown-link"
+                  >Tip Calculator</a
+                >
+                <a href="/calculator/gpa-calculator.html" class="dropdown-link"
+                  >GPA Calculator</a
+                >
+              </div>
+            </li>
+
+            <!-- Image & PDF Dropdown -->
+            <li class="nav-item dropdown">
+              <button
+                class="dropdown-toggle"
+                aria-expanded="false"
+                aria-haspopup="true"
+              >
+                Image & PDF
+                <svg
+                  class="dropdown-arrow"
+                  width="12"
+                  height="12"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </button>
+              <div class="dropdown-menu">
+                <a href="/image&pdf/image-compressor.html" class="dropdown-link"
+                  >Image Compressor</a
+                >
+                <a href="/image&pdf/image-resizer.html" class="dropdown-link"
+                  >Image Resizer</a
+                >
+                <a
+                  href="/image&pdf/pdftowordconverter.html"
+                  class="dropdown-link"
+                  >PDF to Word</a
+                >
+                <a href="/image&pdf/jpg-to-png.html" class="dropdown-link"
+                  >JPG to PNG</a
+                >
+                <a href="/image&pdf/colorpicker.html" class="dropdown-link"
+                  >Color Picker / HEX</a
+                >
+                <a href="/image&pdf/QRGenrator.html" class="dropdown-link"
+                  >QR Code Generator</a
+                >
+              </div>
+            </li>
+
+            <!-- Developer Dropdown -->
+            <li class="nav-item dropdown">
+              <button
+                class="dropdown-toggle"
+                aria-expanded="false"
+                aria-haspopup="true"
+              >
+                Developer
+                <svg
+                  class="dropdown-arrow"
+                  width="12"
+                  height="12"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </button>
+              <div class="dropdown-menu">
+                <a
+                  href="/developertools/JSONFORMATTER.html"
+                  class="dropdown-link"
+                  >JSON Formatter</a
+                >
+                <a
+                  href="/developertools/base64encoderdecoder.html"
+                  class="dropdown-link"
+                  >Base64 Encoder/Decoder</a
+                >
+                <a
+                  href="/developertools/urlencoderdecoder.html"
+                  class="dropdown-link"
+                  >URL Encoder/Decoder</a
+                >
+                <a
+                  href="/developertools/meta-tag-generator.html"
+                  class="dropdown-link"
+                  >Meta Tag Generator</a
+                >
+                <a href="/developertools/regextester.html" class="dropdown-link"
+                  >Regex Tester</a
+                >
+                <a
+                  href="/developertools/markdownhtml.html"
+                  class="dropdown-link"
+                  >Markdown to HTML</a
+                >
+                <a href="/developertools/cssminifier.html" class="dropdown-link"
+                  >CSS Minifier</a
+                >
+                <a
+                  href="/developertools/unixtimestamp.html"
+                  class="dropdown-link"
+                  >Unix Timestamp</a
+                >
+              </div>
+            </li>
+            <li class="nav-item">
+              <a href="/about.html" class="nav-link-simple">About</a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Nav Action Controls -->
+        <div class="nav-actions">
+          <button
+            class="search-trigger-btn"
+            id="searchTriggerBtn"
+            aria-label="Search tools (Ctrl + K)"
+          >
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle cx="11" cy="11" r="8" />
+              <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+            <span class="search-label-text">Search...</span>
+            <kbd class="kbd-shortcut">Ctrl K</kbd>
+          </button>
+
+          <button
+            class="hamburger-btn"
+            id="hamburgerBtn"
+            aria-label="Open Mobile Menu"
+            aria-expanded="false"
+            aria-controls="mobileMenu"
+          >
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <div class="mobile-menu-header">
+        <a href="/" class="logo">
+          <span class="logo-text">Huzikit</span>
+        </a>
+        <button
+          class="mobile-close-btn"
+          id="mobileCloseBtn"
+          aria-label="Close Mobile Menu"
+        >
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <line x1="18" y1="6" x2="6" y2="18" />
+            <line x1="6" y1="6" x2="18" y2="18" />
+          </svg>
+        </button>
+      </div>
+      <div class="mobile-menu-content">
+        <!-- Accordion 1: Text Tools -->
+        <div class="mobile-accordion">
+          <button class="mobile-accordion-toggle" aria-expanded="false">
+            Text Tools
+            <svg
+              class="acc-icon"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </button>
+          <div class="mobile-accordion-panel">
+            <a href="/texttools/word-counter.html">Word Counter</a>
+            <a href="/texttools/character-counter.html">Character Counter</a>
+            <a href="/texttools/case-converter.html">Case Converter</a>
+            <a href="/texttools/remove-duplicate-lines.html"
+              >Remove Duplicate Lines</a
+            >
+            <a href="/texttools/loremipsumgenerator.html"
+              >Lorem Ipsum Generator</a
+            >
+            <a href="/texttools/passwordgenerator.html">Password Generator</a>
+            <a href="/texttools/text-reverser.html">Text Reverser</a>
+            <a href="/texttools/onlinenotepad.html">Online Notepad</a>
+          </div>
+        </div>
+
+        <!-- Accordion 2: Calculators -->
+        <div class="mobile-accordion">
+          <button class="mobile-accordion-toggle" aria-expanded="true">
+            Calculators
+            <svg
+              class="acc-icon"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </button>
+          <div class="mobile-accordion-panel open">
+            <a href="/calculator/agecalculator.html">Age Calculator</a>
+            <a href="/calculator/bmi-calculator.html">BMI Calculator</a>
+            <a href="/calculator/percentage-calculator.html"
+              >Percentage Calculator</a
+            >
+            <a href="/calculator/Calorie-Calculator.html">Calorie Calculator</a>
+            <a href="/calculator/discount-calculator.html" class="active"
+              >Discount Calculator</a
+            >
+            <a href="/calculator/saving&goalcalculator.html"
+              >Savings & Goal Calculator</a
+            >
+            <a href="/calculator/tip-calculator.html">Tip Calculator</a>
+            <a href="/calculator/gpa-calculator.html">GPA Calculator</a>
+          </div>
+        </div>
+
+        <!-- Accordion 3: Image & PDF -->
+        <div class="mobile-accordion">
+          <button class="mobile-accordion-toggle" aria-expanded="false">
+            Image & PDF
+            <svg
+              class="acc-icon"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </button>
+          <div class="mobile-accordion-panel">
+            <a href="/image&pdf/image-compressor.html">Image Compressor</a>
+            <a href="/image&pdf/image-resizer.html">Image Resizer</a>
+            <a href="/image&pdf/pdftowordconverter.html">PDF to Word</a>
+            <a href="/image&pdf/jpg-to-png.html">JPG to PNG</a>
+            <a href="/image&pdf/colorpicker.html">Color Picker / HEX</a>
+            <a href="/image&pdf/QRGenrator.html">QR Code Generator</a>
+          </div>
+        </div>
+
+        <!-- Accordion 4: Developer -->
+        <div class="mobile-accordion">
+          <button class="mobile-accordion-toggle" aria-expanded="false">
+            Developer
+            <svg
+              class="acc-icon"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </button>
+          <div class="mobile-accordion-panel">
+            <a href="/developertools/JSONFORMATTER.html">JSON Formatter</a>
+            <a href="/developertools/base64encoderdecoder.html"
+              >Base64 Encoder/Decoder</a
+            >
+            <a href="/developertools/urlencoderdecoder.html"
+              >URL Encoder/Decoder</a
+            >
+            <a href="/developertools/meta-tag-generator.html"
+              >Meta Tag Generator</a
+            >
+            <a href="/developertools/regextester.html">Regex Tester</a>
+            <a href="/developertools/markdownhtml.html">Markdown to HTML</a>
+            <a href="/developertools/cssminifier.html">CSS Minifier</a>
+            <a href="/developertools/unixtimestamp.html">Unix Timestamp</a>
+          </div>
+        </div>
+
+        <div class="mobile-simple-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Search Modal -->
+    <div
+      class="search-modal-backdrop"
+      id="searchModalBackdrop"
+      aria-hidden="true"
+    >
+      <div
+        class="search-modal-container"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Search Tools"
+      >
+        <div class="search-modal-input-wrapper">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <circle cx="11" cy="11" r="8" />
+            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+          </svg>
+          <input
+            type="text"
+            id="searchInputModal"
+            placeholder="Search across all 30 free tools..."
+            autocomplete="off"
+          />
+          <button
+            class="search-modal-close"
+            id="searchModalCloseBtn"
+            aria-label="Close search"
+          >
+            ESC
+          </button>
+        </div>
+        <div class="search-modal-results" id="searchModalResults">
+          <!-- Dynamically populated results -->
+        </div>
+        <div class="search-modal-footer">
+          <span>Use <kbd>↑</kbd> <kbd>↓</kbd> to navigate</span>
+          <span><kbd>ESC</kbd> to close</span>
+        </div>
+      </div>
+    </div>
+    <!-- Main Content -->
+    <main id="main-content">
+      <!-- Luxury Hero Section -->
+      <section class="hero-section">
+        <div class="hero-glow-bg"></div>
+        <div class="container hero-grid">
+          <div class="hero-content">
+            <div class="badge-pill">
+              <span class="pulse-dot"></span> 100% Free & Instant
+            </div>
+            <h1>Free Discount Calculator</h1>
+            <p class="hero-subtitle">
+              Instantly calculate discounted sale prices, exact savings amounts,
+              and optional sales tax with precision. Designed for smart
+              shoppers, retail stores, and online e-commerce platforms.
+            </p>
+            <div class="hero-trust-indicators">
+              <div class="trust-item">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                <span>Instant Results</span>
+              </div>
+              <div class="trust-item">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                <span>No Signup Required</span>
+              </div>
+              <div class="trust-item">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+                <span>Browser-Based Security</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3D Interactive Hero Visual -->
+          <div class="hero-visual-wrapper" id="heroVisualWrapper">
+            <div class="hero-3d-card" id="hero3DCard">
+              <div class="card-glow-effect"></div>
+              <div class="card-badge-top">DISCOUNT SALE</div>
+              <div class="card-discount-big">25% OFF</div>
+              <div class="card-metrics-grid">
+                <div class="metric-row">
+                  <span>Original Price</span>
+                  <span class="val-orig">$200.00</span>
+                </div>
+                <div class="metric-row">
+                  <span>You Save</span>
+                  <span class="val-save">$50.00</span>
+                </div>
+                <div class="metric-row highlight">
+                  <span>Final Price</span>
+                  <span class="val-final">$150.00</span>
+                </div>
+              </div>
+              <div class="floating-badge-pill">
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"
+                  />
+                </svg>
+                <span>Smart Saving</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Calculator Interactive Application Section -->
+      <section class="calculator-section" id="calculator">
+        <div class="container">
+          <div class="calculator-wrapper">
+            <div class="calculator-card">
+              <div class="calc-header-row">
+                <h2>Discount & Sale Calculator</h2>
+                <div class="currency-selector-wrap">
+                  <label for="currencySelect" class="sr-only"
+                    >Select Currency</label
+                  >
+                  <select id="currencySelect" aria-label="Select Currency">
+                    <option value="$" selected>$ USD</option>
+                    <option value="€">€ EUR</option>
+                    <option value="£">£ GBP</option>
+                    <option value="C$">C$ CAD</option>
+                    <option value="A$">A$ AUD</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- Inline Error Alert -->
+              <div
+                class="calc-error-alert"
+                id="calcErrorAlert"
+                role="alert"
+                style="display: none"
+              ></div>
+
+              <div class="calc-form-grid">
+                <!-- Original Price Input -->
+                <div class="input-group">
+                  <label for="originalPrice">Original Price</label>
+                  <div class="input-with-symbol">
+                    <span class="input-symbol-prefix" id="prefixSymbol">$</span>
+                    <input
+                      type="number"
+                      id="originalPrice"
+                      placeholder="100.00"
+                      min="0"
+                      step="any"
+                      value="100"
+                    />
+                  </div>
+                  <span class="field-hint">Enter the regular retail price</span>
+                </div>
+
+                <!-- Discount Percentage Input -->
+                <div class="input-group">
+                  <label for="discountPercentage"
+                    >Discount Percentage (%)</label
+                  >
+                  <div class="input-with-symbol">
+                    <input
+                      type="number"
+                      id="discountPercentage"
+                      placeholder="20"
+                      min="0"
+                      max="100"
+                      step="any"
+                      value="20"
+                    />
+                    <span class="input-symbol-suffix">%</span>
+                  </div>
+                  <span class="field-hint">Enter discount rate (0 - 100%)</span>
+                </div>
+              </div>
+
+              <!-- Quick Discount Buttons -->
+              <div class="quick-discounts-section">
+                <span class="quick-label">Quick Discounts:</span>
+                <div class="quick-btn-group">
+                  <button
+                    type="button"
+                    class="quick-disc-btn"
+                    data-discount="10"
+                  >
+                    10%
+                  </button>
+                  <button
+                    type="button"
+                    class="quick-disc-btn"
+                    data-discount="15"
+                  >
+                    15%
+                  </button>
+                  <button
+                    type="button"
+                    class="quick-disc-btn active"
+                    data-discount="20"
+                  >
+                    20%
+                  </button>
+                  <button
+                    type="button"
+                    class="quick-disc-btn"
+                    data-discount="25"
+                  >
+                    25%
+                  </button>
+                  <button
+                    type="button"
+                    class="quick-disc-btn"
+                    data-discount="30"
+                  >
+                    30%
+                  </button>
+                  <button
+                    type="button"
+                    class="quick-disc-btn"
+                    data-discount="40"
+                  >
+                    40%
+                  </button>
+                  <button
+                    type="button"
+                    class="quick-disc-btn"
+                    data-discount="50"
+                  >
+                    50%
+                  </button>
+                </div>
+              </div>
+
+              <!-- Optional Sales Tax Toggle/Input -->
+              <div class="optional-tax-section">
+                <div class="tax-toggle-row">
+                  <label class="checkbox-container">
+                    <input type="checkbox" id="enableTaxToggle" />
+                    <span class="checkmark"></span>
+                    <span>Add Sales Tax (Optional)</span>
+                  </label>
+                </div>
+                <div
+                  class="tax-input-wrap"
+                  id="taxInputWrap"
+                  style="display: none"
+                >
+                  <label for="taxPercentage">Sales Tax Rate (%)</label>
+                  <div class="input-with-symbol">
+                    <input
+                      type="number"
+                      id="taxPercentage"
+                      placeholder="5"
+                      min="0"
+                      max="100"
+                      step="any"
+                      value="5"
+                    />
+                    <span class="input-symbol-suffix">%</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Action Buttons -->
+              <div class="calc-action-buttons">
+                <button type="button" class="btn-primary" id="calculateBtn">
+                  Calculate Discount
+                </button>
+                <button type="button" class="btn-secondary" id="resetBtn">
+                  Reset
+                </button>
+              </div>
+
+              <!-- Results Dashboard Area -->
+              <div class="results-dashboard" id="resultsDashboard">
+                <div class="main-result-banner">
+                  <span class="result-banner-title">Final Sale Price</span>
+                  <div class="result-banner-number" id="finalPriceDisplay">
+                    $80.00
+                  </div>
+                  <span
+                    class="result-banner-subtitle"
+                    id="taxIncludedSub"
+                    style="display: none"
+                    >(Including Sales Tax)</span
+                  >
+                </div>
+
+                <div class="result-cards-grid">
+                  <div class="res-card">
+                    <span class="res-card-label">Original Price</span>
+                    <span class="res-card-value" id="resOriginalPrice"
+                      >$100.00</span
+                    >
+                  </div>
+                  <div class="res-card">
+                    <span class="res-card-label">Discount Applied</span>
+                    <span class="res-card-value" id="resDiscountRate">20%</span>
+                  </div>
+                  <div class="res-card">
+                    <span class="res-card-label">Discount Amount</span>
+                    <span
+                      class="res-card-value highlight-saved"
+                      id="resDiscountAmount"
+                      >$20.00</span
+                    >
+                  </div>
+                  <div class="res-card" id="resTaxCard" style="display: none">
+                    <span class="res-card-label">Sales Tax</span>
+                    <span class="res-card-value" id="resTaxAmount">$0.00</span>
+                  </div>
+                </div>
+
+                <!-- Price Comparison Flow -->
+                <div class="price-flow-box">
+                  <h3>Price Breakdown Flow</h3>
+                  <div class="flow-steps">
+                    <div class="flow-step">
+                      <span class="step-lbl">Original</span>
+                      <span class="step-val" id="flowOrig">$100.00</span>
+                    </div>
+                    <div class="flow-arrow">↓</div>
+                    <div class="flow-step">
+                      <span class="step-lbl"
+                        >Discount (<span id="flowDiscText">20</span>%)</span
+                      >
+                      <span class="step-val text-red" id="flowDisc"
+                        >-$20.00</span
+                      >
+                    </div>
+                    <div class="flow-arrow">↓</div>
+                    <div class="flow-step highlight-step">
+                      <span class="step-lbl">You Save</span>
+                      <span class="step-val text-green" id="flowSave"
+                        >$20.00</span
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Utility Bar -->
+                <div class="result-utility-bar">
+                  <button type="button" class="btn-copy" id="copyResultBtn">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <rect x="9" y="9" width="13" height="13" rx="2" ry="2" />
+                      <path
+                        d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                      />
+                    </svg>
+                    Copy Result Summary
+                  </button>
+                  <div class="toast-notification" id="copyToast">
+                    Result copied successfully!
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Informational Content Section (SEO & GEO Optimized) -->
+      <section class="content-article-section">
+        <div class="container article-container">
+          <article class="prose-content">
+            <h2>What Is a Discount Calculator?</h2>
+            <p>
+              A <strong>discount calculator</strong> is an advanced web utility
+              engineered to compute the final sale price of a product or service
+              after a percentage markdown or coupon discount is applied. Whether
+              you are shopping during holiday sales, calculating retail margins
+              for your e-commerce store, or budgeting your monthly expenses,
+              this tool eliminates manual arithmetic errors and delivers
+              instantaneous calculations.
+            </p>
+
+            <h2>How Does a Discount Calculator Work?</h2>
+            <p>
+              The tool operates on fundamental percentage mathematics. When you
+              input an original price and a discount percentage, the algorithm
+              computes the reduction by converting the percentage into a decimal
+              factor and multiplying it by the base price. The resulting
+              monetary value represents your direct savings, which is then
+              subtracted from the original cost to produce the final payable
+              amount.
+            </p>
+
+            <h3>The Core Discount Formula</h3>
+            <p>
+              Understanding the underlying mathematical formulas ensures
+              complete transparency in financial calculations:
+            </p>
+            <ul>
+              <li>
+                <strong>Discount Amount</strong> = Original Price × (Discount
+                Percentage ÷ 100)
+              </li>
+              <li>
+                <strong>Final Sale Price</strong> = Original Price - Discount
+                Amount
+              </li>
+              <li><strong>Total Savings</strong> = Discount Amount</li>
+              <li>
+                <strong>With Sales Tax</strong> = Final Sale Price + (Final Sale
+                Price × Tax Percentage ÷ 100)
+              </li>
+            </ul>
+
+            <h2>How to Calculate a Discount Manually</h2>
+            <p>
+              If you ever need to calculate a discount without a digital tool,
+              you can easily do so using a standard calculator or scratchpad.
+              For example, if you want to find <strong>20% off $100</strong>:
+            </p>
+            <ol>
+              <li>
+                Convert the percentage into a decimal by dividing by 100: \(20
+                \div 100 = 0.20\).
+              </li>
+              <li>
+                Multiply the original price by this decimal: \(\$100 \times 0.20
+                = \$20\) (this is your discount amount).
+              </li>
+              <li>
+                Subtract this amount from the original price: \(\$100 - \$20 =
+                \$80\) (this is your final sale price).
+              </li>
+            </ol>
+
+            <h2>Shopping and E-Commerce Use Cases</h2>
+            <p>
+              Modern consumers encounter promotional sales across multiple
+              retail sectors. From apparel stores offering seasonal clearance
+              markdowns to electronics retailers hosting Black Friday and Cyber
+              Monday blowout events, knowing your exact savings is crucial.
+              Store owners and dropshippers also utilize percentage calculators
+              to verify wholesale supplier discounts, promotional voucher codes,
+              and multi-buy bundling margins.
+            </p>
+
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq-accordion-container">
+              <!-- FAQ Item 1 -->
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  <span>What is a discount calculator?</span>
+                  <svg
+                    class="faq-chevron"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                </button>
+                <div class="faq-answer">
+                  <p>
+                    A discount calculator is an online tool designed to quickly
+                    compute the reduced price of an item after a percentage
+                    discount is applied, along with showing the exact dollar or
+                    currency amount saved.
+                  </p>
+                </div>
+              </div>
+
+              <!-- FAQ Item 2 -->
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  <span>How do I calculate a discount?</span>
+                  <svg
+                    class="faq-chevron"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                </button>
+                <div class="faq-answer">
+                  <p>
+                    To calculate a discount, multiply the original price by the
+                    discount percentage, then divide the result by 100. Subtract
+                    that resulting discount amount from the original price to
+                    get the final sale price.
+                  </p>
+                </div>
+              </div>
+
+              <!-- FAQ Item 3 -->
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  <span>What is the discount formula?</span>
+                  <svg
+                    class="faq-chevron"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                </button>
+                <div class="faq-answer">
+                  <p>
+                    The discount formula is:
+                    <code
+                      >Discount Amount = Original Price × (Discount Percentage ÷
+                      100)</code
+                    >
+                    and
+                    <code>Final Price = Original Price - Discount Amount</code>.
+                  </p>
+                </div>
+              </div>
+
+              <!-- FAQ Item 4 -->
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  <span
+                    >How do I calculate the final price after a discount?</span
+                  >
+                  <svg
+                    class="faq-chevron"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                </button>
+                <div class="faq-answer">
+                  <p>
+                    You determine the final price by subtracting the computed
+                    discount amount from the initial retail price. If
+                    applicable, you can also add sales tax on top of the
+                    discounted subtotal.
+                  </p>
+                </div>
+              </div>
+
+              <!-- FAQ Item 5 -->
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  <span>How much is 20% off $100?</span>
+                  <svg
+                    class="faq-chevron"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                </button>
+                <div class="faq-answer">
+                  <p>
+                    20% off $100 equals a $20 discount, making the final sale
+                    price $80 with a total savings of $20.
+                  </p>
+                </div>
+              </div>
+
+              <!-- FAQ Item 6 -->
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  <span>Can I calculate decimal prices?</span>
+                  <svg
+                    class="faq-chevron"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                </button>
+                <div class="faq-answer">
+                  <p>
+                    Yes! The calculator fully supports decimal values such as
+                    $99.99, $49.50, and precise percentage rates like 15.5%.
+                  </p>
+                </div>
+              </div>
+
+              <!-- FAQ Item 7 -->
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  <span>Can I calculate a 100% discount?</span>
+                  <svg
+                    class="faq-chevron"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                </button>
+                <div class="faq-answer">
+                  <p>
+                    Yes, entering a 100% discount results in a final price of
+                    $0.00, indicating the item is completely free.
+                  </p>
+                </div>
+              </div>
+
+              <!-- FAQ Item 8 -->
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  <span>Can I use this calculator for shopping?</span>
+                  <svg
+                    class="faq-chevron"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                </button>
+                <div class="faq-answer">
+                  <p>
+                    Absolutely. It is optimized for mobile browsers so you can
+                    easily check sale prices while browsing in retail stores or
+                    online shops.
+                  </p>
+                </div>
+              </div>
+
+              <!-- FAQ Item 9 -->
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  <span>Can businesses use this calculator?</span>
+                  <svg
+                    class="faq-chevron"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                </button>
+                <div class="faq-answer">
+                  <p>
+                    Yes, retail merchants, boutique owners, and e-commerce staff
+                    use this tool to verify promotional discount structures and
+                    markdown pricing.
+                  </p>
+                </div>
+              </div>
+
+              <!-- FAQ Item 10 -->
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  <span>Does it calculate my savings?</span>
+                  <svg
+                    class="faq-chevron"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                </button>
+                <div class="faq-answer">
+                  <p>
+                    Yes, the dashboard highlights your exact cash savings right
+                    alongside the final sale price.
+                  </p>
+                </div>
+              </div>
+
+              <!-- FAQ Item 11 -->
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  <span>Is Huzikit's Discount Calculator free?</span>
+                  <svg
+                    class="faq-chevron"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                </button>
+                <div class="faq-answer">
+                  <p>
+                    Yes, Huzikit tools are 100% free with no registration or
+                    hidden fees.
+                  </p>
+                </div>
+              </div>
+
+              <!-- FAQ Item 12 -->
+              <div class="faq-item">
+                <button class="faq-question" aria-expanded="false">
+                  <span>Does it work on mobile?</span>
+                  <svg
+                    class="faq-chevron"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                </button>
+                <div class="faq-answer">
+                  <p>
+                    Yes, the web application is fully responsive and optimized
+                    for smartphones, tablets, and desktop computers.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Related Tools Section -->
+      <section class="related-tools-section">
+        <div class="container">
+          <div class="section-title-center">
+            <h2>Related Free Calculators & Tools</h2>
+            <p>
+              Explore more precision utilities engineered to make your daily
+              tasks faster and simpler.
+            </p>
+          </div>
+          <div class="related-grid">
+            <a
+              href="/calculator/percentage-calculator.html"
+              class="related-card"
+            >
+              <div class="rel-icon-wrap">📊</div>
+              <h3>Percentage Calculator</h3>
+              <p>
+                Calculate percentage increases, decreases, ratios, and fractions
+                instantly.
+              </p>
+              <span class="rel-link-text">Use Tool →</span>
+            </a>
+            <a
+              href="/calculator/saving&goalcalculator.html"
+              class="related-card"
+            >
+              <div class="rel-icon-wrap">💰</div>
+              <h3>Savings & Goal Calculator</h3>
+              <p>
+                Plan your financial future and calculate compound savings growth
+                over time.
+              </p>
+              <span class="rel-link-text">Use Tool →</span>
+            </a>
+            <a href="/calculator/tip-calculator.html" class="related-card">
+              <div class="rel-icon-wrap">🧾</div>
+              <h3>Tip Calculator</h3>
+              <p>
+                Calculate gratuities and split restaurant bills easily among
+                friends.
+              </p>
+              <span class="rel-link-text">Use Tool →</span>
+            </a>
+            <a href="/calculator/agecalculator.html" class="related-card">
+              <div class="rel-icon-wrap">⏳</div>
+              <h3>Age Calculator</h3>
+              <p>
+                Calculate exact age in years, months, weeks, days, hours, and
+                minutes.
+              </p>
+              <span class="rel-link-text">Use Tool →</span>
+            </a>
+            <a href="/calculator/bmi-calculator.html" class="related-card">
+              <div class="rel-icon-wrap">⚖️</div>
+              <h3>BMI Calculator</h3>
+              <p>
+                Calculate Body Mass Index and check healthy weight ranges
+                instantly.
+              </p>
+              <span class="rel-link-text">Use Tool →</span>
+            </a>
+            <a href="/calculator/Calorie-Calculator.html" class="related-card">
+              <div class="rel-icon-wrap">🔥</div>
+              <h3>Calorie Calculator</h3>
+              <p>
+                Estimate daily calorie needs and BMR for fitness and nutrition
+                goals.
+              </p>
+              <span class="rel-link-text">Use Tool →</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Call to Action Section -->
+      <section class="cta-banner-section">
+        <div class="container">
+          <div class="cta-banner-box">
+            <h2>More powerful free tools, all in one place.</h2>
+            <p>
+              Explore Huzikit's collection of calculators, text tools, image
+              utilities, and developer tools designed for high performance.
+            </p>
+            <a href="/toolpage.html" class="btn-primary-large"
+              >Explore More Tools</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Premium Dark Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <!-- Brand Bio Column -->
+          <div class="footer-col footer-brand-col">
+            <a href="/" class="footer-logo">
+              <span class="logo-text">Huzikit</span>
+            </a>
+            <p class="footer-bio">
+              The ultimate modern suite of lightning-fast, secure online web
+              utilities, calculators, and developer tools.
+            </p>
+            <div class="social-icons">
+              <a
+                href="https://x.com/huzikitoffical"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="X (Twitter)"
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path
+                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Footer Column 1: Text & Dev Tools -->
+          <div class="footer-col">
+            <h4>Text & Dev Tools</h4>
+            <ul class="footer-links">
+              <li>
+                <a href="/texttools/word-counter.html">Word Counter</a>
+              </li>
+              <li>
+                <a href="/texttools/case-converter.html">Case Converter</a>
+              </li>
+              <li>
+                <a href="/developertools/JSONFORMATTER.html">JSON Formatter</a>
+              </li>
+              <li>
+                <a href="/developertools/base64encoderdecoder.html"
+                  >Base64 Utility</a
+                >
+              </li>
+              <li>
+                <a href="/developertools/regextester.html">Regex Tester</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Footer Column 2: Calculators & Image -->
+          <div class="footer-col">
+            <h4>Calculators & Image</h4>
+            <ul class="footer-links">
+              <li>
+                <a href="/calculator/agecalculator.html">Age Calculator</a>
+              </li>
+              <li>
+                <a href="/calculator/bmi-calculator.html">BMI Calculator</a>
+              </li>
+              <li>
+                <a href="/image&pdf/image-compressor.html">Image Compressor</a>
+              </li>
+              <li>
+                <a href="/image&pdf/QRGenrator.html">QR Code Generator</a>
+              </li>
+              <li>
+                <a href="/image&pdf/colorpicker.html">Color Picker</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Footer Column 3: Company & Legal -->
+          <div class="footer-col">
+            <h4>Company & Legal</h4>
+            <ul class="footer-links">
+              <li><a href="/about.html">About Huzikit</a></li>
+              <li><a href="/disclamier.html">Disclaimer</a></li>
+              <li>
+                <a href="/privacy-policies.html">Privacy Policy</a>
+              </li>
+              <li>
+                <a href="/Termsofservices.html">Terms of Service</a>
+              </li>
+              <li>
+                <a href="/contact-us.html">Contact Support</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2026 Huzikit.com. All rights reserved.</p>
+          <p class="footer-tagline">
+            Built with speed, security, and precision.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript Application Script -->
+    <script src="/calculator/discount-calculator.js"></script>
+  </body>
+</html>

@@ -1,0 +1,1125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calorie Calculator – Estimate Daily Calorie Needs | HuziKit</title>
+    <meta
+      name="description"
+      content="Calculate your daily calorie needs, BMR, and TDEE accurately using the Mifflin-St Jeor equation. Plan your weight loss, maintenance, or weight gain goals with HuziKit."
+    />
+    <link
+      rel="canonical"
+      href="https://huzikit.com/calculator/Calorie-Calculator.html"
+    />
+
+    <!-- Open Graph / Social Metadata -->
+    <meta
+      property="og:title"
+      content="Calorie Calculator – Estimate Daily Calorie Needs | HuziKit"
+    />
+    <meta
+      property="og:description"
+      content="Calculate your daily calorie needs, BMR, and TDEE accurately using the Mifflin-St Jeor equation."
+    />
+    <meta
+      property="og:url"
+      content="https://huzikit.com/calculator/Calorie-Calculator.html"
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Calorie Calculator – Estimate Daily Calorie Needs | HuziKit"
+    />
+    <meta
+      name="twitter:description"
+      content="Calculate your daily calorie needs, BMR, and TDEE accurately using the Mifflin-St Jeor equation."
+    />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lexend:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Stylesheet -->
+    <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/calculator/Calorie-Calculator.css" />
+
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Calorie Calculator",
+        "url": "https://huzikit.com/Calculators/Calorie-calculator.html",
+        "applicationCategory": "CalculatorApplication",
+        "operatingSystem": "All",
+        "description": "Calculate daily calorie requirements, BMR, and TDEE with adjustable goals for weight loss, maintenance, or muscle gain.",
+        "browserRequirements": "Requires JavaScript. Requires HTML5.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <!-- GLOBAL NAVBAR -->
+    <header class="site-header" id="siteHeader">
+      <div class="container nav-container">
+        <a href="/" class="brand-logo" aria-label="HuziKit Home">
+          <span class="logo-text">HuziKit</span>
+        </a>
+
+        <nav class="desktop-nav" aria-label="Main Navigation">
+          <ul class="nav-list">
+            <!-- Text Tools Dropdown -->
+            <li class="nav-item dropdown">
+              <button class="dropdown-toggle" aria-expanded="false">
+                Text Tools
+                <svg
+                  class="chevron"
+                  width="12"
+                  height="12"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </button>
+              <div class="dropdown-menu">
+                <a href="/texttools/word-counter.html">Word Counter</a>
+                <a href="/texttools/character-counter.html"
+                  >Character Counter</a
+                >
+                <a href="/texttools/case-converter.html">Case Converter</a>
+                <a href="/texttools/remove-duplicate-lines.html"
+                  >Remove Duplicate Lines</a
+                >
+                <a href="/texttools/loremipsumgenerator.html"
+                  >Lorem Ipsum Generator</a
+                >
+                <a href="/texttools/passwordgenerator.html"
+                  >Password Generator</a
+                >
+                <a href="/texttools/text-reverser.html">Text Reverser</a>
+                <a href="/texttools/onlinenotepad.html">Online Notepad</a>
+              </div>
+            </li>
+
+            <!-- Calculators Dropdown -->
+            <li class="nav-item dropdown">
+              <button class="dropdown-toggle active" aria-expanded="false">
+                Calculators
+                <svg
+                  class="chevron"
+                  width="12"
+                  height="12"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </button>
+              <div class="dropdown-menu">
+                <a href="/calculator/agecalculator.html">Age Calculator</a>
+                <a href="/calculator/bmi-calculator.html">BMI Calculator</a>
+                <a href="/calculator/percentage-calculator.html"
+                  >Percentage Calculator</a
+                >
+                <a
+                  href="/calculator/Calorie-Calculator.html"
+                  class="current-tool"
+                  >Calorie Calculator</a
+                >
+                <a href="/calculator/discount-calculator.html"
+                  >Discount Calculator</a
+                >
+                <a href="/calculator/saving&goalcalculator.html"
+                  >Savings & Goal Calculator</a
+                >
+                <a href="/calculator/tip-calculator.html">Tip Calculator</a>
+                <a href="/calculator/gpa-calculator.html">GPA Calculator</a>
+              </div>
+            </li>
+
+            <!-- Image & PDF Dropdown -->
+            <li class="nav-item dropdown">
+              <button class="dropdown-toggle" aria-expanded="false">
+                Image & PDF
+                <svg
+                  class="chevron"
+                  width="12"
+                  height="12"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </button>
+              <div class="dropdown-menu">
+                <a href="/image&pdf/image-compressor.html">Image Compressor</a>
+                <a href="/image&pdf/image-resizer.html">Image Resizer</a>
+                <a href="/image&pdf/pdftowordconverter.html">PDF to Word</a>
+                <a href="/image&pdf/jpg-to-png.html">JPG to PNG</a>
+                <a href="/image&pdf/colorpicker.html">Color Picker / HEX</a>
+                <a href="/image&pdf/QRGenrator.html">QR Code Generator</a>
+              </div>
+            </li>
+
+            <!-- Developer Dropdown -->
+            <li class="nav-item dropdown">
+              <button class="dropdown-toggle" aria-expanded="false">
+                Developer
+                <svg
+                  class="chevron"
+                  width="12"
+                  height="12"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <path d="m6 9 6 6 6-6" />
+                </svg>
+              </button>
+              <div class="dropdown-menu">
+                <a href="/developertools/JSONFORMATTER.html">JSON Formatter</a>
+                <a href="/developertools/base64encoderdecoder.html"
+                  >Base64 Encoder/Decoder</a
+                >
+                <a href="/developertools/urlencoderdecoder.html"
+                  >URL Encoder/Decoder</a
+                >
+                <a href="/developertools/meta-tag-generator.html"
+                  >Meta Tag Generator</a
+                >
+                <a href="/developertools/regextester.html">Regex Tester</a>
+                <a href="/developertools/markdownhtml.html">Markdown to HTML</a>
+                <a href="/developertools/cssminifier.html">CSS Minifier</a>
+                <a href="/developertools/unixtimestamp.html">Unix Timestamp</a>
+              </div>
+            </li>
+            <li class="nav-item"><a href="/about.html">About</a></li>
+          </ul>
+        </nav>
+
+        <div class="nav-actions">
+          <button
+            class="search-trigger-btn"
+            id="searchTriggerBtn"
+            aria-label="Search tools (Ctrl+K)"
+          >
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <circle cx="11" cy="11" r="8" />
+              <path d="m21 21-4.3-4.3" />
+            </svg>
+            <span class="search-shortcut">Ctrl K</span>
+          </button>
+          <button
+            class="mobile-menu-toggle"
+            id="mobileMenuToggle"
+            aria-label="Toggle navigation menu"
+            aria-expanded="false"
+          >
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- MOBILE NAVIGATION OVERLAY -->
+    <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+    <div class="mobile-nav-drawer" id="mobileNavDrawer" aria-hidden="true">
+      <div class="mobile-nav-header">
+        <a href="/" class="brand-logo">
+          <span class="logo-text">HuziKit</span>
+        </a>
+        <button
+          class="mobile-close-btn"
+          id="mobileCloseBtn"
+          aria-label="Close menu"
+        >
+          &times;
+        </button>
+      </div>
+      <div class="mobile-nav-body">
+        <div class="mobile-search-prompt" id="mobileSearchPrompt">
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <circle cx="11" cy="11" r="8" />
+            <path d="m21 21-4.3-4.3" />
+          </svg>
+          <span>Search 30+ tools...</span>
+        </div>
+
+        <div class="mobile-accordion">
+          <div class="mobile-acc-item">
+            <button class="mobile-acc-header">
+              Text Tools
+              <svg
+                class="chevron"
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+              >
+                <path d="m6 9 6 6 6-6" />
+              </svg>
+            </button>
+            <div class="mobile-acc-content">
+              <a href="/texttools/word-counter.html">Word Counter</a>
+              <a href="/texttools/character-counter.html">Character Counter</a>
+              <a href="/texttools/case-converter.html">Case Converter</a>
+              <a href="/texttools/remove-duplicate-lines.html"
+                >Remove Duplicate Lines</a
+              >
+              <a href="/texttools/loremipsumgenerator.html"
+                >Lorem Ipsum Generator</a
+              >
+              <a href="/texttools/passwordgenerator.html">Password Generator</a>
+              <a href="/texttools/text-reverser.html">Text Reverser</a>
+              <a href="/texttools/onlinenotepad.html">Online Notepad</a>
+            </div>
+          </div>
+
+          <div class="mobile-acc-item">
+            <button class="mobile-acc-header active">
+              Calculators
+              <svg
+                class="chevron"
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+              >
+                <path d="m6 9 6 6 6-6" />
+              </svg>
+            </button>
+            <div class="mobile-acc-content open">
+              <a href="/calculator/agecalculator.html">Age Calculator</a>
+              <a href="/calculator/bmi-calculator.html">BMI Calculator</a>
+              <a href="/calculator/percentage-calculator.html"
+                >Percentage Calculator</a
+              >
+              <a href="/calculator/Calorie-Calculator.html" class="current-tool"
+                >Calorie Calculator</a
+              >
+              <a href="/calculator/discount-calculator.html"
+                >Discount Calculator</a
+              >
+              <a href="/calculator/saving&goalcalculator.html"
+                >Savings & Goal Calculator</a
+              >
+              <a href="/calculator/tip-calculator.html">Tip Calculator</a>
+              <a href="/calculator/gpa-calculator.html">GPA Calculator</a>
+            </div>
+          </div>
+
+          <div class="mobile-acc-item">
+            <button class="mobile-acc-header">
+              Image & PDF
+              <svg
+                class="chevron"
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+              >
+                <path d="m6 9 6 6 6-6" />
+              </svg>
+            </button>
+            <div class="mobile-acc-content">
+              <a href="/image&pdf/image-compressor.html">Image Compressor</a>
+              <a href="/image&pdf/image-resizer.html">Image Resizer</a>
+              <a href="/image&pdf/pdftowordconverter.html">PDF to Word</a>
+              <a href="/image&pdf/jpg-to-png.html">JPG to PNG</a>
+              <a href="/image&pdf/colorpicker.html">Color Picker / HEX</a>
+              <a href="/image&pdf/QRGenrator.html">QR Code Generator</a>
+            </div>
+          </div>
+
+          <div class="mobile-acc-item">
+            <button class="mobile-acc-header">
+              Developer
+              <svg
+                class="chevron"
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+              >
+                <path d="m6 9 6 6 6-6" />
+              </svg>
+            </button>
+            <div class="mobile-acc-content">
+              <a href="/developertools/JSONFORMATTER.html">JSON Formatter</a>
+              <a href="/developertools/base64encoderdecoder.html"
+                >Base64 Encoder/Decoder</a
+              >
+              <a href="/developertools/urlencoderdecoder.html"
+                >URL Encoder/Decoder</a
+              >
+              <a href="/developertools/meta-tag-generator.html"
+                >Meta Tag Generator</a
+              >
+              <a href="/developertools/regextester.html">Regex Tester</a>
+              <a href="/developertools/markdownhtml.html">Markdown to HTML</a>
+              <a href="/developertools/cssminifier.html">CSS Minifier</a>
+              <a href="/developertools/unixtimestamp.html">Unix Timestamp</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="mobile-footer-links">
+          <a href="/about.html">About</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- SEARCH MODAL -->
+    <div class="search-modal-backdrop" id="searchModalBackdrop">
+      <div
+        class="search-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-label="Search all tools"
+      >
+        <div class="search-modal-header">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <circle cx="11" cy="11" r="8" />
+            <path d="m21 21-4.3-4.3" />
+          </svg>
+          <input
+            type="text"
+            id="searchInputModal"
+            placeholder="Search any of our 30+ developer or utility tools..."
+            autocomplete="off"
+          />
+          <button class="search-modal-close" id="searchModalClose">ESC</button>
+        </div>
+        <div class="search-modal-results" id="searchModalResults">
+          <div class="search-hint">
+            Type to instantly filter tools across Text, Calculators, Image, and
+            Developer categories.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAIN CONTENT WRAPPER -->
+    <main class="main-content">
+      <div class="container">
+        <!-- PREMIUM HERO SECTION -->
+        <section class="hero-section">
+          <div class="hero-content">
+            <span class="badge-eyebrow">CALCULATORS</span>
+            <h1 class="hero-title">Calorie Calculator</h1>
+            <p class="hero-subtitle">
+              Accurately estimate your daily energy requirements, Basal
+              Metabolic Rate (BMR), Total Daily Energy Expenditure (TDEE), and
+              tailored targets for weight management.
+            </p>
+          </div>
+
+          <div class="hero-visual" aria-hidden="true">
+            <div class="floating-glass-card">
+              <div class="card-top-label">DAILY GOAL ESTIMATE</div>
+              <div class="card-main-metric">2,140</div>
+              <div class="card-sub-metric">kcal / day</div>
+              <div class="card-status-pill">
+                <span class="pulse-dot"></span> Maintenance Target
+              </div>
+            </div>
+            <div class="deco-ring-blur"></div>
+          </div>
+        </section>
+
+        <!-- MAIN CALCULATOR INTERFACE -->
+        <section class="calculator-wrapper" id="calculatorSection">
+          <div class="calc-grid-layout">
+            <!-- LEFT COLUMN: INPUTS -->
+            <div class="calc-card input-card">
+              <div class="card-header-row">
+                <h2>Your Information</h2>
+                <div class="unit-system-toggle" role="tablist">
+                  <button
+                    type="button"
+                    class="unit-btn active"
+                    data-unit="metric"
+                    role="tab"
+                    aria-selected="true"
+                  >
+                    Metric (kg/cm)
+                  </button>
+                  <button
+                    type="button"
+                    class="unit-btn"
+                    data-unit="imperial"
+                    role="tab"
+                    aria-selected="false"
+                  >
+                    Imperial (lb/in)
+                  </button>
+                </div>
+              </div>
+
+              <form id="calorieForm" novalidate>
+                <!-- Age & Sex Row -->
+                <div class="form-row-dual">
+                  <div class="form-group">
+                    <label for="ageInput"
+                      >Age <span class="required">*</span></label
+                    >
+                    <div class="input-with-unit">
+                      <input
+                        type="number"
+                        id="ageInput"
+                        min="15"
+                        max="100"
+                        placeholder="25"
+                        required
+                      />
+                      <span class="unit-tag">years</span>
+                    </div>
+                    <div class="error-msg" id="ageError">
+                      Please enter a valid age between 15 and 100.
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label>Sex <span class="required">*</span></label>
+                    <div class="sex-selector">
+                      <label class="sex-pill">
+                        <input type="radio" name="sex" value="male" checked />
+                        <span>Male</span>
+                      </label>
+                      <label class="sex-pill">
+                        <input type="radio" name="sex" value="female" />
+                        <span>Female</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Height & Weight Row -->
+                <div class="form-row-dual">
+                  <div class="form-group" id="heightGroupMetric">
+                    <label for="heightMetricInput"
+                      >Height <span class="required">*</span></label
+                    >
+                    <div class="input-with-unit">
+                      <input
+                        type="number"
+                        id="heightMetricInput"
+                        min="100"
+                        max="250"
+                        placeholder="175"
+                        step="0.5"
+                      />
+                      <span class="unit-tag">cm</span>
+                    </div>
+                    <div class="error-msg" id="heightMetricError">
+                      Please enter a valid height in cm.
+                    </div>
+                  </div>
+
+                  <!-- Imperial Height (Feet & Inches) -->
+                  <div
+                    class="form-group"
+                    id="heightGroupImperial"
+                    style="display: none"
+                  >
+                    <label>Height <span class="required">*</span></label>
+                    <div class="imperial-height-row">
+                      <div class="input-with-unit">
+                        <input
+                          type="number"
+                          id="heightFeetInput"
+                          min="3"
+                          max="8"
+                          placeholder="5"
+                        />
+                        <span class="unit-tag">ft</span>
+                      </div>
+                      <div class="input-with-unit">
+                        <input
+                          type="number"
+                          id="heightInchesInput"
+                          min="0"
+                          max="11"
+                          placeholder="9"
+                        />
+                        <span class="unit-tag">in</span>
+                      </div>
+                    </div>
+                    <div class="error-msg" id="heightImperialError">
+                      Please enter valid height feet/inches.
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="weightInput" id="weightLabel"
+                      >Weight <span class="required">*</span></label
+                    >
+                    <div class="input-with-unit">
+                      <input
+                        type="number"
+                        id="weightInput"
+                        min="30"
+                        max="300"
+                        placeholder="70"
+                        step="0.5"
+                        required
+                      />
+                      <span class="unit-tag" id="weightUnitTag">kg</span>
+                    </div>
+                    <div class="error-msg" id="weightError">
+                      Please enter a valid weight.
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Activity Level -->
+                <div class="form-group">
+                  <label for="activitySelect"
+                    >Activity Level <span class="required">*</span></label
+                  >
+                  <select id="activitySelect" required>
+                    <option value="1.20">
+                      Sedentary — little or no exercise
+                    </option>
+                    <option value="1.375">
+                      Lightly Active — light exercise 1–3 days/week
+                    </option>
+                    <option value="1.55" selected>
+                      Moderately Active — moderate exercise 3–5 days/week
+                    </option>
+                    <option value="1.725">
+                      Very Active — hard exercise 6–7 days/week
+                    </option>
+                    <option value="1.90">
+                      Extra Active — very hard exercise / physical job
+                    </option>
+                  </select>
+                </div>
+
+                <!-- Goal Selection -->
+                <div class="form-group">
+                  <label>Primary Goal <span class="required">*</span></label>
+                  <div class="goal-radio-grid">
+                    <label class="goal-card">
+                      <input type="radio" name="goal" value="lose" />
+                      <div class="goal-card-content">
+                        <strong>Lose Weight</strong>
+                        <span>Moderate deficit (-500 kcal)</span>
+                      </div>
+                    </label>
+                    <label class="goal-card">
+                      <input
+                        type="radio"
+                        name="goal"
+                        value="maintain"
+                        checked
+                      />
+                      <div class="goal-card-content">
+                        <strong>Maintain Weight</strong>
+                        <span>No calorie adjustment</span>
+                      </div>
+                    </label>
+                    <label class="goal-card">
+                      <input type="radio" name="goal" value="gain" />
+                      <div class="goal-card-content">
+                        <strong>Gain Weight</strong>
+                        <span>Moderate surplus (+300 kcal)</span>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="calc-actions">
+                  <button
+                    type="submit"
+                    class="btn btn-primary"
+                    id="calculateBtn"
+                  >
+                    Calculate My Calories
+                  </button>
+                  <button type="button" class="btn btn-secondary" id="resetBtn">
+                    Reset
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            <!-- RIGHT COLUMN: RESULTS -->
+            <div class="calc-card results-card" id="resultsContainer">
+              <div class="results-empty-state" id="resultsEmptyState">
+                <div class="empty-icon-wrapper">
+                  <svg
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.75"
+                  >
+                    <path
+                      d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"
+                    />
+                  </svg>
+                </div>
+                <h3>Your results will appear here</h3>
+                <p>
+                  Fill out your details on the left and click calculate to
+                  discover your customized energy breakdown and macro targets.
+                </p>
+              </div>
+
+              <div
+                class="results-content-active"
+                id="resultsActiveState"
+                style="display: none"
+              >
+                <div class="results-main-banner">
+                  <span class="result-eyebrow">YOUR DAILY ESTIMATE</span>
+                  <div class="result-big-number" id="targetCaloriesVal">
+                    2,140
+                  </div>
+                  <div class="result-unit-label">
+                    kcal / day (<span id="goalModeLabel"
+                      >Maintenance Calories</span
+                    >)
+                  </div>
+                </div>
+
+                <div
+                  class="safety-warning-box"
+                  id="safetyWarningBox"
+                  style="display: none"
+                >
+                  <svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <path
+                      d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"
+                    />
+                    <line x1="12" y1="9" x2="12" y2="13" />
+                    <line x1="12" y1="17" x2="12.01" y2="17" />
+                  </svg>
+                  <span
+                    >This estimate is unusually low. Calorie needs vary by
+                    individual, and very low-calorie diets may require
+                    professional guidance.</span
+                  >
+                </div>
+
+                <div class="breakdown-metrics-grid">
+                  <div class="metric-mini-card">
+                    <span class="mini-label">BMR (Basal Rate)</span>
+                    <span class="mini-value" id="bmrVal">1,650</span>
+                    <span class="mini-unit">kcal</span>
+                  </div>
+                  <div class="metric-mini-card">
+                    <span class="mini-label">TDEE (Maintenance)</span>
+                    <span class="mini-value" id="tdeeVal">2,140</span>
+                    <span class="mini-unit">kcal</span>
+                  </div>
+                </div>
+
+                <!-- Optional Macro Breakdown Section -->
+                <div class="macro-breakdown-section">
+                  <h4>Estimated Macro Breakdown</h4>
+                  <div class="macro-bars-grid">
+                    <div class="macro-item">
+                      <div class="macro-header">
+                        <span>Protein (30%)</span>
+                        <strong id="macroProteinVal">160g</strong>
+                      </div>
+                      <div class="macro-track">
+                        <div
+                          class="macro-fill protein"
+                          id="macroProteinBar"
+                          style="width: 30%"
+                        ></div>
+                      </div>
+                    </div>
+                    <div class="macro-item">
+                      <div class="macro-header">
+                        <span>Carbohydrates (45%)</span>
+                        <strong id="macroCarbsVal">240g</strong>
+                      </div>
+                      <div class="macro-track">
+                        <div
+                          class="macro-fill carbs"
+                          id="macroCarbsBar"
+                          style="width: 45%"
+                        ></div>
+                      </div>
+                    </div>
+                    <div class="macro-item">
+                      <div class="macro-header">
+                        <span>Fat (25%)</span>
+                        <strong id="macroFatVal">59g</strong>
+                      </div>
+                      <div class="macro-track">
+                        <div
+                          class="macro-fill fat"
+                          id="macroFatBar"
+                          style="width: 25%"
+                        ></div>
+                      </div>
+                    </div>
+                  </div>
+                  <p class="macro-disclaimer">
+                    Macros are estimated based on standard nutrient splits for
+                    general fitness planning.
+                  </p>
+                </div>
+
+                <!-- Result Action Buttons -->
+                <div class="result-action-row">
+                  <button
+                    type="button"
+                    class="btn btn-primary-outline"
+                    id="copyResultsBtn"
+                  >
+                    <svg
+                      width="16"
+                      height="16"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    >
+                      <rect width="14" height="14" x="8" y="8" rx="2" ry="2" />
+                      <path
+                        d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"
+                      />
+                    </svg>
+                    Copy Results
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- INFORMATION & SEO CONTENT SECTION -->
+        <article class="info-content-section">
+          <h2>How the Calorie Calculator Works</h2>
+          <p>
+            Understanding your daily energy requirements is the foundational
+            step toward achieving your fitness, weight management, or
+            nutritional goals. This calculator utilizes scientifically validated
+            formulas to estimate how much energy your body consumes on a daily
+            basis.
+          </p>
+
+          <h3>What is BMR (Basal Metabolic Rate)?</h3>
+          <p>
+            Your Basal Metabolic Rate (BMR) represents the total number of
+            calories your body burns while performing basic, life-sustaining
+            functions at complete rest—such as breathing, circulation, cell
+            production, and neurological processing. BMR accounts for roughly
+            60% to 75% of the total energy your body burns every day.
+          </p>
+
+          <h3>What is TDEE (Total Daily Energy Expenditure)?</h3>
+          <p>
+            Total Daily Energy Expenditure (TDEE) is an estimation of how many
+            calories you burn per day when factoring in your physical activity
+            level and daily exercise. We determine this by multiplying your
+            calculated BMR by an activity multiplier ranging from sedentary
+            (1.20) to extra active (1.90).
+          </p>
+
+          <h3>How to Use This Calculator</h3>
+          <ol class="steps-list">
+            <li>
+              <strong>Choose your unit system:</strong> Switch easily between
+              metric (kilograms and centimeters) or imperial (pounds and
+              inches).
+            </li>
+            <li>
+              <strong>Enter your personal biometrics:</strong> Input your age,
+              sex, height, and current body weight.
+            </li>
+            <li>
+              <strong>Select your activity level:</strong> Pick the option that
+              best reflects your typical weekly physical activity.
+            </li>
+            <li>
+              <strong>Choose your goal:</strong> Select whether you want to
+              maintain your current weight, enter a moderate deficit to lose
+              weight, or a surplus to gain weight.
+            </li>
+            <li>
+              <strong>Review your estimates:</strong> Analyze your BMR, TDEE,
+              target goal calories, and recommended macro distribution
+              instantly.
+            </li>
+          </ol>
+
+          <h2>Frequently Asked Questions</h2>
+
+          <div class="faq-accordion-group">
+            <div class="faq-item">
+              <button class="faq-question">
+                What is a calorie calculator?
+              </button>
+              <div class="faq-answer">
+                <p>
+                  A calorie calculator is a digital tool that estimates your
+                  daily energy needs based on biological attributes like age,
+                  height, weight, sex, and daily physical activity level.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question">
+                How accurate is the Mifflin-St Jeor equation?
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Published in 1990, the Mifflin-St Jeor equation is widely
+                  recognized by nutritional scientists and dietitians as the
+                  most accurate standard formula for estimating resting
+                  metabolic rate in healthy individuals.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question">
+                How many calories should I eat to lose weight?
+              </button>
+              <div class="faq-answer">
+                <p>
+                  A safe and sustainable weight loss approach typically involves
+                  a moderate calorie deficit of approximately 500 calories below
+                  your TDEE, which generally correlates to about 0.5 kg of
+                  weight loss per week.
+                </p>
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-question">
+                Can calorie needs change over time?
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Yes. As your body weight, muscle mass, age, or daily activity
+                  levels change, your caloric expenditure shifts. It is
+                  recommended to recalculate your numbers every few weeks as
+                  your fitness progress evolves.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="disclaimer-banner">
+            <strong>Disclaimer:</strong> This calculator provides an estimate
+            for informational and educational purposes only. It does not
+            constitute medical advice. Individual metabolic rates and
+            nutritional requirements can vary based on genetics, body
+            composition, and health conditions.
+          </div>
+        </article>
+      </div>
+    </main>
+
+    <!-- TOAST NOTIFICATION -->
+    <div
+      class="toast-notification"
+      id="toastNotification"
+      role="status"
+      aria-live="polite"
+    >
+      <svg
+        width="18"
+        height="18"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2.5"
+      >
+        <polyline points="20 6 9 17 4 12" />
+      </svg>
+      <span id="toastMessage">Results copied to clipboard!</span>
+    </div>
+
+    <!-- PREMIUM GLOBAL FOOTER -->
+<footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col brand-col">
+            <a
+              href="index.html"
+              class="brand-logo footer-logo"
+              aria-label="HuziKit Home"
+            >
+              <span class="brand-name">HuziKit</span>
+            </a>
+            <p class="footer-tagline">
+              The ultimate modern suite of lightning-fast, secure online web
+              utilities, calculators, and developer tools.
+            </p>
+            <div class="social-links">
+              <a
+                href="https://x.com/huzikitoffical"
+                aria-label="Twitter"
+                target="_blank"
+                rel="noopener"
+              >
+              <i class="fa-brands fa-instagram"></i>
+               <svg
+                  width="18"
+                  height="18"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                    <path
+                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                  />
+
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h4>Text & Dev Tools</h4>
+            <ul class="footer-links">
+              <li><a href="/texttools/word-counter.html">Word Counter</a></li>
+              <li><a href="/texttools/case-converter.html">Case Converter</a></li>
+              <li><a href="/developertools/JSONFORMATTER.html">JSON Formatter</a></li>
+              <li><a href="/developertools/base64encoderdecoder.html">Base64 Utility</a></li>
+              <li><a href="/developertools/regextester.html">Regex Tester</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Calculators & Image</h4>
+            <ul class="footer-links">
+              <li><a href="/calculator/agecalculator.html">Age Calculator</a></li>
+              <li><a href="/calculator/bmi calculator.html">BMI Calculator</a></li>
+              <li><a href="/image&pdf/image-compressor.html">Image Compressor</a></li>
+              <li><a href="/image&pdf/QRGenrator.html">QR Code Generator</a></li>
+              <li><a href="/image&pdf/colorpicker.html">Color Picker</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Company & Legal</h4>
+            <ul class="footer-links">
+              <li><a href="/about.html">About HuziKit</a></li>
+              <li><a href="/disclamier.html">Disclaimer</a></li>
+              <li><a href="/privacy-policies.html">Privacy Policy</a></li>
+              <li><a href="/Termsofservices.html">Terms of Service</a></li>
+              <li><a href="/contact-us.html">Contact Support</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>
+            &copy; 2026 HuziKit.com. All rights reserved. Built with speed,
+            security, and precision.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Global Command Search Modal -->
+    <div class="search-modal-overlay" id="searchModalOverlay">
+      <div class="search-modal-box">
+        <div class="search-modal-header">
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <circle cx="11" cy="11" r="8" />
+            <path d="M21 21l-4.35-4.35" />
+          </svg>
+          <input
+            type="text"
+            id="modalSearchInput"
+            placeholder="Type to search any tool across HuziKit..."
+            autocomplete="off"
+          />
+          <button class="modal-close-btn" id="modalCloseBtn">&times;</button>
+        </div>
+        <div class="search-modal-results" id="modalSearchResults">
+          <div class="search-hint">
+            Start typing a tool name (e.g., 'Word Counter', 'BMI', 'JSON')...
+          </div>
+        </div>
+        <div class="search-modal-footer">
+          <span>Navigate with <kbd>↑</kbd> <kbd>↓</kbd></span>
+          <span>Select with <kbd>Enter</kbd></span>
+          <span>Close with <kbd>Esc</kbd></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript File -->
+    <script src="/calculator/Calorie-Calculator.js"></script>
+  </body>
+</html>

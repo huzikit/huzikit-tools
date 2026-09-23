@@ -1,0 +1,2169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Free CSS Minifier Online — Minify &amp; Optimize CSS | Huzikit
+    </title>
+    <meta
+      name="description"
+      content="Free online CSS Minifier to minify, compress, clean, and optimize your stylesheets instantly. Reduce file size, boost Core Web Vitals, and eliminate dead weight with safe minification."
+    />
+    <link
+      rel="canonical"
+      href="https://huzikit.com/developertools/cssminifier.html"
+    />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://huzikit.com/developertools/cssminifier.html"
+    />
+    <meta
+      property="og:title"
+      content="Free CSS Minifier Online — Minify &amp; Optimize CSS | Huzikit"
+    />
+    <meta
+      property="og:description"
+      content="Free online CSS Minifier to compress, clean, and optimize your stylesheets instantly. Reduce file size, boost Core Web Vitals, and eliminate dead weight."
+    />
+    <meta property="og:site_name" content="Huzikit" />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@huzihuboffical" />
+    <meta
+      name="twitter:title"
+      content="Free CSS Minifier Online — Minify &amp; Optimize CSS | Huzikit"
+    />
+    <meta
+      name="twitter:description"
+      content="Free online CSS Minifier to compress, clean, and optimize your stylesheets instantly. Reduce file size and boost Core Web Vitals."
+    />
+
+    <!-- Google Fonts: Lexend, Inter, JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Lexend:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Linked CSS Stylesheet -->
+    <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon" />
+    <link rel="stylesheet" href="/developertools/cssminifier.css" />
+
+    <!-- Schema.org JSON-LD (WebApplication, BreadcrumbList, FAQPage) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebApplication",
+            "@id": "https://huzikit.com/developertools/cssminifier.html#app",
+            "name": "Huzikit CSS Minifier",
+            "url": "https://huzikit.com/developertools/cssminifier.html",
+            "description": "High-performance online CSS Minifier to compress, format, and optimize stylesheets safely with live analytics and zero horizontal overflow.",
+            "applicationCategory": "DeveloperApplication",
+            "operatingSystem": "All",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "USD"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "https://huzikit.com/developertools/cssminifier.html#breadcrumbs",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://huzikit.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Developer Tools",
+                "item": "https://huzikit.com/toolpage.html/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "CSS Minifier",
+                "item": "https://huzikit.com/developertools/cssminifier.html"
+              }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "@id": "https://huzikit.com/developertools/cssminifier.html#faq",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is CSS minification and why is it important?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "CSS minification is the process of removing unnecessary characters from stylesheet code—such as whitespace, indentation, comments, and redundant declarations—without altering how the CSS renders in the browser. It reduces file size, decreases network transfer times, and improves page speed metrics like Largest Contentful Paint (LCP) and First Contentful Paint (FCP)."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does CSS minification affect how my website looks?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. Standard CSS minification preserves the exact functional styling rules, selectors, media queries, CSS variables, and layout calculations. Only non-functional syntax characters like comments and formatting spacing are stripped away."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the difference between CSS minification and Gzip/Brotli compression?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Minification removes unnecessary code syntax at the source file level, whereas Gzip and Brotli are server-side compression algorithms that run on the web server to compress data before transmission over the network. Both should be used together: minifying your CSS first allows Gzip and Brotli to achieve significantly smaller compressed payload sizes."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is my CSS uploaded to an external server or stored?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. The Huzikit CSS Minifier runs entirely on the client side inside your web browser. Your CSS source code, proprietary styles, and assets never leave your computer, ensuring total security and privacy."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Does this minifier support modern CSS features like var(), calc(), and @layer?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. Huzikit's CSS parser safely isolates CSS custom properties (variables), math expressions in calc() and clamp(), container queries, modern color functions, and at-rules like @layer, @keyframes, and @media."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <!-- Accessible Skip Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- ==========================================================================
+       SITE HEADER & NAVIGATION (LOCKED HUZIKIT 30 TOOLS & EXACT ROUTES)
+       ========================================================================== -->
+    <header class="site-header">
+      <div class="container">
+        <div class="nav-wrap">
+          <!-- Brand Logo -->
+          <a href="/" class="brand-logo" aria-label="Huzikit Home">
+            <span>Huzikit</span>
+          </a>
+
+          <!-- Desktop Navigation Bar -->
+          <nav class="desktop-nav" aria-label="Main Navigation">
+            <!-- Text Tools Dropdown -->
+            <div class="nav-item">
+              <button
+                class="dropdown-trigger"
+                type="button"
+                aria-expanded="false"
+              >
+                <span>Text Tools</span>
+                <svg
+                  class="dropdown-chevron"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </button>
+              <div class="dropdown-menu">
+                <a href="/texttools/word-counter.html" class="dropdown-item"
+                  >Word Counter</a
+                >
+                <a
+                  href="/texttools/character-counter.html"
+                  class="dropdown-item"
+                  >Character Counter</a
+                >
+                <a href="/texttools/case-converter.html" class="dropdown-item"
+                  >Case Converter</a
+                >
+                <a
+                  href="/texttools/remove-duplicate-lines.html"
+                  class="dropdown-item"
+                  >Remove Duplicate Lines</a
+                >
+                <a
+                  href="/texttools/loremipsumgenerator.html"
+                  class="dropdown-item"
+                  >Lorem Ipsum Generator</a
+                >
+                <a
+                  href="/texttools/passwordgenerator.html"
+                  class="dropdown-item"
+                  >Password Generator</a
+                >
+                <a href="/texttools/text-reverser.html" class="dropdown-item"
+                  >Text Reverser</a
+                >
+                <a href="/texttools/onlinenotepad.html" class="dropdown-item"
+                  >Online Notepad</a
+                >
+              </div>
+            </div>
+
+            <!-- Calculators Dropdown -->
+            <div class="nav-item">
+              <button
+                class="dropdown-trigger"
+                type="button"
+                aria-expanded="false"
+              >
+                <span>Calculators</span>
+                <svg
+                  class="dropdown-chevron"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </button>
+              <div class="dropdown-menu">
+                <a href="/calculator/agecalculator.html" class="dropdown-item"
+                  >Age Calculator</a
+                >
+                <a href="/calculator/bmi-calculator.html" class="dropdown-item"
+                  >BMI Calculator</a
+                >
+                <a
+                  href="/calculator/percentage-calculator.html"
+                  class="dropdown-item"
+                  >Percentage Calculator</a
+                >
+                <a
+                  href="/calculator/Calorie-Calculator.html"
+                  class="dropdown-item"
+                  >Calorie Calculator</a
+                >
+                <a
+                  href="/calculator/discount-calculator.html"
+                  class="dropdown-item"
+                  >Discount Calculator</a
+                >
+                <a
+                  href="/calculator/saving&goalcalculator.html"
+                  class="dropdown-item"
+                  >Savings &amp; Goal Calculator</a
+                >
+                <a href="/calculator/tip-calculator.html" class="dropdown-item"
+                  >Tip Calculator</a
+                >
+                <a href="/calculator/gpa-calculator.html" class="dropdown-item"
+                  >GPA Calculator</a
+                >
+              </div>
+            </div>
+
+            <!-- Image & PDF Dropdown -->
+            <div class="nav-item">
+              <button
+                class="dropdown-trigger"
+                type="button"
+                aria-expanded="false"
+              >
+                <span>Image &amp; PDF</span>
+                <svg
+                  class="dropdown-chevron"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </button>
+              <div class="dropdown-menu">
+                <a href="/image&pdf/image-compressor.html" class="dropdown-item"
+                  >Image Compressor</a
+                >
+                <a href="/image&pdf/image-resizer.html" class="dropdown-item"
+                  >Image Resizer</a
+                >
+                <a
+                  href="/image&pdf/pdftowordconverter.html"
+                  class="dropdown-item"
+                  >PDF to Word</a
+                >
+                <a href="/image&pdf/jpg-to-png.html" class="dropdown-item"
+                  >JPG to PNG</a
+                >
+                <a href="/image&pdf/colorpicker.html" class="dropdown-item"
+                  >Color Picker / HEX</a
+                >
+                <a href="/image&pdf/QRGenrator.html" class="dropdown-item"
+                  >QR Code Generator</a
+                >
+              </div>
+            </div>
+
+            <!-- Developer Dropdown -->
+            <div class="nav-item">
+              <button
+                class="dropdown-trigger"
+                type="button"
+                aria-expanded="false"
+              >
+                <span>Developer</span>
+                <svg
+                  class="dropdown-chevron"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </button>
+              <div class="dropdown-menu">
+                <a
+                  href="/developertools/JSONFORMATTER.html"
+                  class="dropdown-item"
+                  >JSON Formatter</a
+                >
+                <a
+                  href="/developertools/base64encoderdecoder.html"
+                  class="dropdown-item"
+                  >Base64 Encoder/Decoder</a
+                >
+                <a
+                  href="/developertools/urlencoderdecoder.html"
+                  class="dropdown-item"
+                  >URL Encoder/Decoder</a
+                >
+                <a
+                  href="/developertools/meta-tag-generator.html"
+                  class="dropdown-item"
+                  >Meta Tag Generator</a
+                >
+                <a href="/developertools/regextester.html" class="dropdown-item"
+                  >Regex Tester</a
+                >
+                <a
+                  href="/developertools/markdownhtml.html"
+                  class="dropdown-item"
+                  >Markdown to HTML</a
+                >
+                <a
+                  href="/developertools/cssminifier.html"
+                  class="dropdown-item active"
+                >
+                  <span>CSS Minifier</span>
+                  <span class="active-pill">Active</span>
+                </a>
+                <a
+                  href="/developertools/unixtimestamp.html"
+                  class="dropdown-item"
+                  >Unix Timestamp</a
+                >
+              </div>
+            </div>
+            <a href="/about.html" class="nav-link">About</a>
+          </nav>
+
+          <!-- Right Nav Actions: Search & Mobile Hamburger -->
+          <div class="nav-actions">
+            <button
+              type="button"
+              id="searchTriggerBtn"
+              class="search-trigger-btn"
+              aria-label="Search tools"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              >
+                <circle cx="11" cy="11" r="8" />
+                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+              </svg>
+              <span>Search...</span>
+              <span class="search-kbd">⌘K</span>
+            </button>
+
+            <!-- Interactive Hamburger Button with ARIA -->
+            <button
+              type="button"
+              id="hamburgerBtn"
+              class="hamburger-btn"
+              aria-expanded="false"
+              aria-controls="mobileNavDrawer"
+              aria-label="Toggle navigation menu"
+            >
+              <span class="hamburger-line line-top"></span>
+              <span class="hamburger-line line-mid"></span>
+              <span class="hamburger-line line-bot"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ==========================================================================
+       MOBILE NAVIGATION DRAWER (INTERACTIVE ACCORDIONS FOR ALL 30 TOOLS)
+       ========================================================================== -->
+    <div
+      id="mobileNavDrawer"
+      class="mobile-nav-drawer"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Mobile Navigation Menu"
+    >
+      <!-- Quick Search on Mobile -->
+      <button type="button" id="mobileSearchBtn" class="mobile-search-btn">
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          style="width: 18px; height: 18px"
+        >
+          <circle cx="11" cy="11" r="8" />
+          <line x1="21" y1="21" x2="16.65" y2="16.65" />
+        </svg>
+        <span>Search 30+ Free Web Tools...</span>
+      </button>
+
+      <div class="mobile-categories">
+        <!-- Text Tools Accordion -->
+        <div class="mobile-acc-item">
+          <button
+            type="button"
+            class="mobile-acc-trigger"
+            aria-expanded="false"
+          >
+            <span>Text Tools (8)</span>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </button>
+          <div class="mobile-acc-content">
+            <a href="/texttools/word-counter.html" class="mobile-tool-link"
+              >Word Counter</a
+            >
+            <a href="/texttools/character-counter.html" class="mobile-tool-link"
+              >Character Counter</a
+            >
+            <a href="/texttools/case-converter.html" class="mobile-tool-link"
+              >Case Converter</a
+            >
+            <a
+              href="/texttools/remove-duplicate-lines.html"
+              class="mobile-tool-link"
+              >Remove Duplicate Lines</a
+            >
+            <a
+              href="/texttools/loremipsumgenerator.html"
+              class="mobile-tool-link"
+              >Lorem Ipsum Generator</a
+            >
+            <a href="/texttools/passwordgenerator.html" class="mobile-tool-link"
+              >Password Generator</a
+            >
+            <a href="/texttools/text-reverser.html" class="mobile-tool-link"
+              >Text Reverser</a
+            >
+            <a href="/texttools/onlinenotepad.html" class="mobile-tool-link"
+              >Online Notepad</a
+            >
+          </div>
+        </div>
+
+        <!-- Calculators Accordion -->
+        <div class="mobile-acc-item">
+          <button
+            type="button"
+            class="mobile-acc-trigger"
+            aria-expanded="false"
+          >
+            <span>Calculators (8)</span>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </button>
+          <div class="mobile-acc-content">
+            <a href="/calculator/agecalculator.html" class="mobile-tool-link"
+              >Age Calculator</a
+            >
+            <a href="/calculator/bmi-calculator.html" class="mobile-tool-link"
+              >BMI Calculator</a
+            >
+            <a
+              href="/calculator/percentage-calculator.html"
+              class="mobile-tool-link"
+              >Percentage Calculator</a
+            >
+            <a
+              href="/calculator/Calorie-Calculator.html"
+              class="mobile-tool-link"
+              >Calorie Calculator</a
+            >
+            <a
+              href="/calculator/discount-calculator.html"
+              class="mobile-tool-link"
+              >Discount Calculator</a
+            >
+            <a
+              href="/calculator/saving&goalcalculator.html"
+              class="mobile-tool-link"
+              >Savings &amp; Goal Calculator</a
+            >
+            <a href="/calculator/tip-calculator.html" class="mobile-tool-link"
+              >Tip Calculator</a
+            >
+            <a href="/calculator/gpa-calculator.html" class="mobile-tool-link"
+              >GPA Calculator</a
+            >
+          </div>
+        </div>
+
+        <!-- Image & PDF Accordion -->
+        <div class="mobile-acc-item">
+          <button
+            type="button"
+            class="mobile-acc-trigger"
+            aria-expanded="false"
+          >
+            <span>Image &amp; PDF (6)</span>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </button>
+          <div class="mobile-acc-content">
+            <a href="/image&pdf/image-compressor.html" class="mobile-tool-link"
+              >Image Compressor</a
+            >
+            <a href="/image&pdf/image-resizer.html" class="mobile-tool-link"
+              >Image Resizer</a
+            >
+            <a
+              href="/image&pdf/pdftowordconverter.html"
+              class="mobile-tool-link"
+              >PDF to Word</a
+            >
+            <a href="/image&pdf/jpg-to-png.html" class="mobile-tool-link"
+              >JPG to PNG</a
+            >
+            <a href="/image&pdf/colorpicker.html" class="mobile-tool-link"
+              >Color Picker / HEX</a
+            >
+            <a href="/image&pdf/QRGenrator.html" class="mobile-tool-link"
+              >QR Code Generator</a
+            >
+          </div>
+        </div>
+
+        <!-- Developer Accordion -->
+        <div class="mobile-acc-item open">
+          <button type="button" class="mobile-acc-trigger" aria-expanded="true">
+            <span>Developer Tools (8)</span>
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <polyline points="6 9 12 15 18 9" />
+            </svg>
+          </button>
+          <div class="mobile-acc-content">
+            <a
+              href="/developertools/JSONFORMATTER.html"
+              class="mobile-tool-link"
+              >JSON Formatter</a
+            >
+            <a
+              href="/developertools/base64encoderdecoder.html"
+              class="mobile-tool-link"
+              >Base64 Encoder/Decoder</a
+            >
+            <a
+              href="/developertools/urlencoderdecoder.html"
+              class="mobile-tool-link"
+              >URL Encoder/Decoder</a
+            >
+            <a
+              href="/developertools/meta-tag-generator.html"
+              class="mobile-tool-link"
+              >Meta Tag Generator</a
+            >
+            <a href="/developertools/regextester.html" class="mobile-tool-link"
+              >Regex Tester</a
+            >
+            <a href="/developertools/markdownhtml.html" class="mobile-tool-link"
+              >Markdown to HTML</a
+            >
+            <a
+              href="/developertools/cssminifier.html"
+              class="mobile-tool-link active"
+            >
+              <span>CSS Minifier</span>
+              <span class="active-pill">Active</span>
+            </a>
+            <a
+              href="/developertools/unixtimestamp.html"
+              class="mobile-tool-link"
+              >Unix Timestamp</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- Direct Links -->
+      <div class="mobile-direct-links">
+        <a href="/about.html" class="mobile-direct-link">About Huzikit</a>
+      </div>
+    </div>
+
+    <!-- ==========================================================================
+       MAIN CONTENT CONTAINER
+       ========================================================================== -->
+    <main id="main-content">
+      <!-- Breadcrumb Bar -->
+      <div class="breadcrumb-bar">
+        <div class="container">
+          <ol
+            class="breadcrumb-list"
+            itemscope
+            itemtype="https://schema.org/BreadcrumbList"
+          >
+            <li
+              itemprop="itemListElement"
+              itemscope
+              itemtype="https://schema.org/ListItem"
+            >
+              <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+              <meta itemprop="position" content="1" />
+            </li>
+            <li class="breadcrumb-separator">/</li>
+            <li
+              itemprop="itemListElement"
+              itemscope
+              itemtype="https://schema.org/ListItem"
+            >
+              <a href="/developertools/" itemprop="item"
+                ><span itemprop="name">Developer Tools</span></a
+              >
+              <meta itemprop="position" content="2" />
+            </li>
+            <li class="breadcrumb-separator">/</li>
+            <li
+              itemprop="itemListElement"
+              itemscope
+              itemtype="https://schema.org/ListItem"
+            >
+              <span class="breadcrumb-current" itemprop="name"
+                >CSS Minifier</span
+              >
+              <meta itemprop="position" content="3" />
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="container">
+          <div class="hero-grid">
+            <!-- Text Details -->
+            <div class="hero-content">
+              <div class="hero-badge">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                </svg>
+                <span>Instant Client-Side CSS Compression</span>
+              </div>
+              <h1 class="hero-title">
+                Free CSS Minifier Online —
+                <span class="hero-title-accent">Minify &amp; Optimize CSS</span>
+              </h1>
+              <p class="hero-description">
+                Compress, clean, and optimize your stylesheets in real time.
+                Strip dead whitespace, remove comments, shorten color hex codes,
+                and maximize your Core Web Vitals score without altering
+                rendering integrity.
+              </p>
+              <div class="hero-quick-features">
+                <span class="quick-pill">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  Zero Horizontal Overflow
+                </span>
+                <span class="quick-pill">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  100% Private &amp; Client-Side
+                </span>
+                <span class="quick-pill">
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2.5"
+                  >
+                    <polyline points="20 6 9 17 4 12" />
+                  </svg>
+                  Modern CSS &amp; Media Queries
+                </span>
+              </div>
+            </div>
+
+            <!-- Responsive 3D Visual Card (Interactive Tilt, Constrained Bounds) -->
+            <div class="hero-visual-wrap" id="heroVisualWrap">
+              <div class="visual-3d-stage" id="visual3dStage">
+                <!-- Back Card (Raw Unminified) -->
+                <div class="card-layer card-layer-back">
+                  <div class="code-mock-header">
+                    <div class="mock-dots">
+                      <span class="mock-dot"></span>
+                      <span class="mock-dot"></span>
+                      <span class="mock-dot"></span>
+                    </div>
+                    <span>style.css — 24.8 KB</span>
+                  </div>
+                  <div class="code-mock-body">
+                    <div class="code-line-dim">/* Unminified stylesheet */</div>
+                    <div>.site-nav {</div>
+                    <div>
+                      &nbsp;&nbsp;<span class="code-prop">display</span>: flex;
+                    </div>
+                    <div>
+                      &nbsp;&nbsp;<span class="code-prop">padding</span>: 20px
+                      20px;
+                    </div>
+                    <div>
+                      &nbsp;&nbsp;<span class="code-prop">color</span>:
+                      <span class="code-val">#ffffff</span>;
+                    </div>
+                    <div>}</div>
+                  </div>
+                </div>
+
+                <!-- Front Card (Minified Output) -->
+                <div class="card-layer card-layer-front">
+                  <div class="code-mock-header">
+                    <div class="mock-dots">
+                      <span class="mock-dot"></span>
+                      <span class="mock-dot"></span>
+                      <span class="mock-dot"></span>
+                    </div>
+                    <span>style.min.css — 13.4 KB</span>
+                  </div>
+                  <div class="code-mock-body">
+                    <div class="code-line-dim">
+                      /* Huzikit Minified Output */
+                    </div>
+                    <div>
+                      .site-nav{<span class="code-prop">display</span
+                      >:flex;<span class="code-prop">padding</span>:20px;<span
+                        class="code-prop"
+                        >color</span
+                      >:<span class="code-val">#fff</span>}
+                    </div>
+                    <div>
+                      .card{<span class="code-prop">border</span>:0;<span
+                        class="code-prop"
+                        >margin</span
+                      >:0}
+                    </div>
+                    <div class="code-line-dim">
+                      @media(max-width:768px){.site-nav{padding:12px}}
+                    </div>
+                  </div>
+                  <div class="code-mock-footer">
+                    <span>Reduction Ratio</span>
+                    <span class="footer-stat-badge">
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        style="width: 14px; height: 14px"
+                      >
+                        <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
+                        <polyline points="17 6 23 6 23 12" />
+                      </svg>
+                      -46.0% Saved
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+         CSS MINIFIER WORKSPACE (INPUT & OUTPUT EDITORS)
+         ========================================================================== -->
+      <section class="workspace-section" id="tool-workspace">
+        <div class="container">
+          <div class="workspace-card">
+            <!-- Toolbar Header -->
+            <div class="toolbar-header">
+              <!-- Mode Selector -->
+              <div
+                class="mode-selector-group"
+                role="tablist"
+                aria-label="Minification Modes"
+              >
+                <button
+                  type="button"
+                  id="modeStandard"
+                  class="mode-btn active"
+                  role="tab"
+                  aria-selected="true"
+                >
+                  Standard
+                </button>
+                <button
+                  type="button"
+                  id="modeAggressive"
+                  class="mode-btn"
+                  role="tab"
+                  aria-selected="false"
+                >
+                  Aggressive
+                </button>
+                <button
+                  type="button"
+                  id="modeCustom"
+                  class="mode-btn"
+                  role="tab"
+                  aria-selected="false"
+                >
+                  Custom
+                </button>
+              </div>
+
+              <!-- Toggles & Custom Settings Trigger -->
+              <div class="toolbar-toggles">
+                <label class="toggle-label" for="liveMinifyCheckbox">
+                  <input type="checkbox" id="liveMinifyCheckbox" checked />
+                  <span>Live Minify</span>
+                </label>
+
+                <button
+                  type="button"
+                  id="btnSettingsToggle"
+                  class="settings-btn"
+                  aria-label="Custom settings"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                  >
+                    <circle cx="12" cy="12" r="3" />
+                    <path
+                      d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"
+                    />
+                  </svg>
+                  <span>Options</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Custom Settings Panel (Collapsible) -->
+            <div id="customSettingsPanel" class="custom-settings-panel">
+              <div class="custom-settings-grid">
+                <label class="toggle-label" for="optComments">
+                  <input type="checkbox" id="optComments" checked />
+                  <span>Remove Comments (/* ... */)</span>
+                </label>
+                <label class="toggle-label" for="optWhitespace">
+                  <input type="checkbox" id="optWhitespace" checked />
+                  <span>Collapse Whitespace &amp; Newlines</span>
+                </label>
+                <label class="toggle-label" for="optSemicolon">
+                  <input type="checkbox" id="optSemicolon" checked />
+                  <span>Strip Trailing Semicolons</span>
+                </label>
+                <label class="toggle-label" for="optZeroUnits">
+                  <input type="checkbox" id="optZeroUnits" checked />
+                  <span>Optimize Zero Units (0px &rarr; 0)</span>
+                </label>
+                <label class="toggle-label" for="optColors">
+                  <input type="checkbox" id="optColors" />
+                  <span>Shorten Hex Colors (#ffffff &rarr; #fff)</span>
+                </label>
+                <label class="toggle-label" for="optUrlQuotes">
+                  <input type="checkbox" id="optUrlQuotes" />
+                  <span>Strip Quotes from Safe URLs</span>
+                </label>
+                <label class="toggle-label" for="optEmptyRules">
+                  <input type="checkbox" id="optEmptyRules" />
+                  <span>Remove Empty Rule Blocks</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Dual Editors Grid (Desktop 2-Col, Mobile 1-Col Stack) -->
+            <div class="editors-grid">
+              <!-- INPUT PANEL -->
+              <div class="editor-panel">
+                <div class="panel-header">
+                  <div class="panel-title-wrap">
+                    <h2 class="panel-title">CSS Input</h2>
+                    <span id="inputSizeBadge" class="panel-size-badge"
+                      >0 B</span
+                    >
+                  </div>
+                  <div class="panel-actions">
+                    <button
+                      type="button"
+                      id="btnUpload"
+                      class="icon-btn"
+                      title="Upload CSS file"
+                    >
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                        <polyline points="17 8 12 3 7 8" />
+                        <line x1="12" y1="3" x2="12" y2="15" />
+                      </svg>
+                      <span>Upload</span>
+                    </button>
+                    <input
+                      type="file"
+                      id="fileInput"
+                      accept=".css,text/css"
+                      class="sr-only"
+                    />
+                    <button
+                      type="button"
+                      id="btnReset"
+                      class="icon-btn"
+                      title="Load sample CSS stylesheet"
+                    >
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <polyline points="1 4 1 10 7 10" />
+                        <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10" />
+                      </svg>
+                      <span>Sample</span>
+                    </button>
+                    <button
+                      type="button"
+                      id="btnClear"
+                      class="icon-btn"
+                      title="Clear input"
+                    >
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <line x1="18" y1="6" x2="6" y2="18" />
+                        <line x1="6" y1="6" x2="18" y2="18" />
+                      </svg>
+                      <span>Clear</span>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Input Code Area -->
+                <div class="code-area-wrapper">
+                  <textarea
+                    id="cssInput"
+                    class="code-textarea"
+                    placeholder="/* Paste or drag your CSS stylesheet here... */"
+                    spellcheck="false"
+                    aria-label="CSS code input area"
+                  ></textarea>
+                  <div id="dragOverlay" class="drag-overlay">
+                    <span>Drop CSS file to load</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- OUTPUT PANEL -->
+              <div class="editor-panel output-panel">
+                <div class="panel-header">
+                  <div class="panel-title-wrap">
+                    <h2 class="panel-title">Minified Output</h2>
+                    <span id="outputSizeBadge" class="panel-size-badge"
+                      >0 B</span
+                    >
+                  </div>
+                  <div class="panel-actions">
+                    <button
+                      type="button"
+                      id="btnCopy"
+                      class="icon-btn"
+                      title="Copy minified CSS to clipboard"
+                    >
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <rect
+                          x="9"
+                          y="9"
+                          width="13"
+                          height="13"
+                          rx="2"
+                          ry="2"
+                        />
+                        <path
+                          d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                        />
+                      </svg>
+                      <span>Copy</span>
+                    </button>
+                    <button
+                      type="button"
+                      id="btnDownload"
+                      class="icon-btn"
+                      title="Download .min.css file"
+                    >
+                      <svg
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2"
+                      >
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                        <polyline points="7 10 12 15 17 10" />
+                        <line x1="12" y1="15" x2="12" y2="3" />
+                      </svg>
+                      <span>Download</span>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Output Code Area -->
+                <div class="code-area-wrapper">
+                  <textarea
+                    id="cssOutput"
+                    class="code-textarea"
+                    placeholder="/* Minified result will appear here... */"
+                    readonly
+                    spellcheck="false"
+                    aria-label="Minified CSS code output area"
+                  ></textarea>
+                </div>
+              </div>
+            </div>
+
+            <!-- Execution Action Toolbar -->
+            <div class="primary-controls-bar">
+              <button
+                type="button"
+                id="btnMinify"
+                class="btn btn-primary"
+                title="Minify CSS (Ctrl + Enter)"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                </svg>
+                <span>Minify CSS</span>
+              </button>
+              <button
+                type="button"
+                id="btnBeautify"
+                class="btn btn-secondary"
+                title="Beautify / Format CSS (Ctrl + Shift + F)"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <line x1="21" y1="10" x2="3" y2="10" />
+                  <line x1="21" y1="6" x2="3" y2="6" />
+                  <line x1="21" y1="14" x2="3" y2="14" />
+                  <line x1="21" y1="18" x2="3" y2="18" />
+                </svg>
+                <span>Beautify CSS</span>
+              </button>
+            </div>
+
+            <!-- Toast / Status Banner -->
+            <div
+              id="statusBanner"
+              class="status-banner"
+              role="status"
+              aria-live="polite"
+            >
+              <span id="statusBannerText">Minified successfully!</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+         STATISTICS CARDS (GENUINELY RESPONSIVE, AUTO-FIT GRID)
+         ========================================================================== -->
+      <section class="stats-section">
+        <div class="container">
+          <div class="stats-grid">
+            <!-- Card 1: Original Size -->
+            <div class="stat-card">
+              <div class="stat-header">
+                <span>Original Size</span>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"
+                  />
+                  <polyline points="14 2 14 8 20 8" />
+                </svg>
+              </div>
+              <div id="statOrigSize" class="stat-value">0 B</div>
+              <span class="stat-subtext">Raw uncompressed CSS</span>
+            </div>
+
+            <!-- Card 2: Minified Size -->
+            <div class="stat-card">
+              <div class="stat-header">
+                <span>Minified Size</span>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+                </svg>
+              </div>
+              <div id="statMinSize" class="stat-value">0 B</div>
+              <span class="stat-subtext">After token optimization</span>
+            </div>
+
+            <!-- Card 3: Saved Bytes -->
+            <div class="stat-card">
+              <div class="stat-header">
+                <span>Saved Space</span>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
+                  <polyline points="17 6 23 6 23 12" />
+                </svg>
+              </div>
+              <div id="statSavedBytes" class="stat-value highlight-saved">
+                0 B
+              </div>
+              <span class="stat-subtext">Total bytes stripped</span>
+            </div>
+
+            <!-- Card 4: Reduction % -->
+            <div class="stat-card">
+              <div class="stat-header">
+                <span>Reduction %</span>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <line x1="19" y1="5" x2="5" y2="19" />
+                  <circle cx="6.5" cy="6.5" r="2.5" />
+                  <circle cx="17.5" cy="17.5" r="2.5" />
+                </svg>
+              </div>
+              <div id="statReduction" class="stat-value highlight-saved">
+                0.0%
+              </div>
+              <span class="stat-subtext">Bandwidth savings ratio</span>
+            </div>
+
+            <!-- Card 5: Lines -->
+            <div class="stat-card">
+              <div class="stat-header">
+                <span>Output Lines</span>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <line x1="4" y1="6" x2="20" y2="6" />
+                  <line x1="4" y1="12" x2="20" y2="12" />
+                  <line x1="4" y1="18" x2="20" y2="18" />
+                </svg>
+              </div>
+              <div id="statLines" class="stat-value">0</div>
+              <span class="stat-subtext">Condensed code lines</span>
+            </div>
+
+            <!-- Card 6: Rules Count -->
+            <div class="stat-card">
+              <div class="stat-header">
+                <span>Rulesets</span>
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path d="M16 18l6-6-6-6" />
+                  <path d="M8 6l-6 6 6 6" />
+                </svg>
+              </div>
+              <div id="statRules" class="stat-value">0</div>
+              <span class="stat-subtext">CSS rule blocks parsed</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+         CSS ANALYZER (DEEP STRUCTURE BREAKDOWN)
+         ========================================================================== -->
+      <section class="analyzer-section">
+        <div class="container">
+          <div class="analyzer-card">
+            <div class="analyzer-header">
+              <h2 class="analyzer-title">Stylesheet Structural Breakdown</h2>
+            </div>
+            <div class="analyzer-grid">
+              <div class="analyzer-item">
+                <span class="analyzer-label">Selectors</span>
+                <span id="azSelectors" class="analyzer-count">0</span>
+              </div>
+              <div class="analyzer-item">
+                <span class="analyzer-label">Declarations</span>
+                <span id="azDeclarations" class="analyzer-count">0</span>
+              </div>
+              <div class="analyzer-item">
+                <span class="analyzer-label">Media Queries</span>
+                <span id="azMediaQueries" class="analyzer-count">0</span>
+              </div>
+              <div class="analyzer-item">
+                <span class="analyzer-label">Keyframes</span>
+                <span id="azKeyframes" class="analyzer-count">0</span>
+              </div>
+              <div class="analyzer-item">
+                <span class="analyzer-label">CSS Variables</span>
+                <span id="azVariables" class="analyzer-count">0</span>
+              </div>
+              <div class="analyzer-item">
+                <span class="analyzer-label">Colors Detected</span>
+                <span id="azColors" class="analyzer-count">0</span>
+              </div>
+              <div class="analyzer-item">
+                <span class="analyzer-label">URLs &amp; Assets</span>
+                <span id="azUrls" class="analyzer-count">0</span>
+              </div>
+              <div class="analyzer-item">
+                <span class="analyzer-label">Comments Removed</span>
+                <span id="azComments" class="analyzer-count">0</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+         EDUCATIONAL CONTENT (SEO / GEO 1200-1700 WORDS, ANSWER-FIRST)
+         ========================================================================== -->
+      <section class="content-section">
+        <div class="container">
+          <article class="article-card">
+            <h2>
+              The Definitive Guide to Modern CSS Minification &amp; Web
+              Performance
+            </h2>
+            <p>
+              In modern web engineering, Cascading Style Sheets (CSS) represent
+              one of the most critical render-blocking resources. When a visitor
+              navigates to your website, the browser's rendering engine must
+              download, parse, and construct the CSS Object Model (CSSOM) before
+              it can paint a single pixel to the screen. Every unnecessary byte,
+              redundant comment, or superfluous line break in your stylesheet
+              directly contributes to network latency, postpones the Critical
+              Rendering Path, and drags down your Google Core Web Vitals scores.
+            </p>
+
+            <div class="callout-box">
+              <p>
+                <strong>Key Performance Principle:</strong> CSS is inherently
+                render-blocking. By minifying stylesheets, you eliminate dead
+                weight before data packets leave the server, significantly
+                accelerating First Contentful Paint (FCP) and Largest Contentful
+                Paint (LCP).
+              </p>
+            </div>
+
+            <h2>How CSS Minification Works: Behind the Parser</h2>
+            <p>
+              CSS minification is the systematic transformation of
+              human-authored stylesheet code into an ultra-dense, mathematically
+              optimized format without modifying its visual rendering behavior.
+              While human developers require semantic whitespace, multi-line
+              indentation, meaningful block comments, and descriptive naming
+              conventions to maintain stylesheets, the browser’s internal CSS
+              lexer only requires syntactic tokens.
+            </p>
+            <p>
+              The Huzikit CSS Minifier employs an advanced multi-stage
+              tokenization pipeline:
+            </p>
+            <ol>
+              <li>
+                <strong>String and Asset Isolation:</strong> Sensitive tokens
+                like background image data URLs (e.g.
+                <code>data:image/svg+xml</code>), literal quoted strings, and
+                font URLs are isolated to ensure special characters like colons,
+                commas, and parentheses are never mutated.
+              </li>
+              <li>
+                <strong>Comment Stripping:</strong> Standard CSS multi-line
+                comments (<code>/* ... */</code>) are excised completely,
+                removing internal developer notes and outdated version tags.
+              </li>
+              <li>
+                <strong>Whitespace Normalization:</strong> Carriage returns,
+                tabs, and multi-space gaps are collapsed. Spaces surrounding
+                delimiters—including curly braces (<code>{ }</code>), colons
+                (<code>:</code>), semicolons (<code>;</code>), and combinator
+                selectors (<code>&gt;</code>, <code>+</code>,
+                <code>~</code>)—are safely eliminated.
+              </li>
+              <li>
+                <strong>Zero Unit Truncation:</strong> In CSS, zero lengths do
+                not require dimensional units. Declarations such as
+                <code>margin: 0px 0rem</code> are converted directly into
+                <code>margin: 0</code>, saving multiple characters per rule.
+              </li>
+              <li>
+                <strong>Trailing Semicolon Elimination:</strong> The final
+                declaration inside any CSS rule block does not require a closing
+                semicolon before the closing curly brace. Stripping this
+                character across thousands of rules yields substantial byte
+                reductions.
+              </li>
+              <li>
+                <strong>Color and Property Optimization:</strong> Redundant
+                6-digit hex color representations with identical character pairs
+                (such as <code>#ffffff</code>, <code>#44bb88</code>) are
+                collapsed to their 3-digit equivalents (<code>#fff</code>,
+                <code>#4b8</code>).
+              </li>
+            </ol>
+
+            <h2>CSS Minification vs. Gzip &amp; Brotli HTTP Compression</h2>
+            <p>
+              A common misconception among web developers is that HTTP-level
+              server compression (such as Gzip or Brotli) makes source code
+              minification obsolete. In reality, minification and compression
+              operate on completely distinct layers of the network stack and are
+              strictly complementary.
+            </p>
+
+            <div class="table-responsive-wrapper">
+              <table class="comparison-table">
+                <thead>
+                  <tr>
+                    <th>Optimization Method</th>
+                    <th>Operating Layer</th>
+                    <th>Primary Mechanism</th>
+                    <th>CPU Impact</th>
+                    <th>Typical Savings</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>CSS Minification</strong></td>
+                    <td>Source Code / Build Layer</td>
+                    <td>
+                      Removes non-functional syntax, comments, and redundant
+                      units
+                    </td>
+                    <td>Zero runtime server CPU cost</td>
+                    <td>20% &ndash; 50%</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Gzip Compression</strong></td>
+                    <td>HTTP Transport Layer</td>
+                    <td>
+                      Deflate algorithm (LZ77 + Huffman coding) finds repeated
+                      patterns
+                    </td>
+                    <td>Moderate server &amp; client decompression overhead</td>
+                    <td>60% &ndash; 75%</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Brotli Compression</strong></td>
+                    <td>HTTP Transport Layer</td>
+                    <td>Context-modeled dictionary compression</td>
+                    <td>
+                      Higher compression CPU cost, fast client decompression
+                    </td>
+                    <td>70% &ndash; 85%</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Combined (Minified + Brotli)</strong></td>
+                    <td>Full Stack Optimization</td>
+                    <td>
+                      Eliminates syntax dead weight first, then compresses
+                      entropy
+                    </td>
+                    <td>Optimal network transmission and parsing speed</td>
+                    <td>80% &ndash; 92%</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p>
+              When unminified code containing thousands of spaces and comments
+              is passed to Brotli or Gzip, the compression dictionary fills up
+              with repetitive spacing patterns, reducing its capacity to
+              compress meaningful CSS logic. Minifying your code beforehand
+              maximizes compression efficiency and reduces total packet
+              round-trips over high-latency mobile networks.
+            </p>
+
+            <h2>Impact on Core Web Vitals &amp; Page Experience</h2>
+            <p>
+              Google's Core Web Vitals are quantitative benchmarks measuring
+              user-centric real-world loading speed, interactivity, and visual
+              stability:
+            </p>
+            <ul>
+              <li>
+                <strong>Largest Contentful Paint (LCP):</strong> LCP marks when
+                the main content of a page has likely loaded. Because CSS is
+                render-blocking, the browser cannot render hero images or
+                prominent text until the entire stylesheet has been retrieved
+                and parsed. Minifying CSS shortens the critical path, directly
+                improving LCP scores.
+              </li>
+              <li>
+                <strong>First Contentful Paint (FCP):</strong> FCP measures the
+                time from navigation to when the browser renders the first bit
+                of DOM content. Leaner CSS unlocks immediate paints, avoiding
+                white-screen delays on 3G and 4G mobile connections.
+              </li>
+              <li>
+                <strong>Interaction to Next Paint (INP):</strong> Parsing
+                massive, uncompressed stylesheets consumes main-thread CPU
+                budget. Streamlining your stylesheet reduces memory pressure and
+                CPU parse times during initial hydration.
+              </li>
+            </ul>
+
+            <h2>Standard vs. Aggressive Minification Modes</h2>
+            <p>
+              Huzikit provides multiple minification profiles to adapt to
+              different development environments:
+            </p>
+            <ul>
+              <li>
+                <strong>Standard Mode (Recommended for Production):</strong>
+                Applies completely non-destructive optimizations. Comments and
+                formatting whitespace are stripped, zero units are simplified,
+                and trailing semicolons are removed. CSS custom variables,
+                modern color gamuts, calc() equations, and keyframes remain
+                completely untouched.
+              </li>
+              <li>
+                <strong>Aggressive Mode:</strong> In addition to standard
+                optimizations, aggressive mode shortens hex color codes, cleans
+                duplicate semicolons, strips empty rule blocks, and removes
+                quotes from safe URL references. This produces the absolute
+                smallest file footprint.
+              </li>
+              <li>
+                <strong>Custom Mode:</strong> Offers granular checkbox toggles
+                so you can enable or disable individual rules according to your
+                team’s engineering standards.
+              </li>
+            </ul>
+
+            <h2>Best Practices for Maintaining Production Stylesheets</h2>
+            <p>
+              To achieve sustainable long-term web performance, integrate these
+              best practices into your deployment workflow:
+            </p>
+            <ol>
+              <li>
+                <strong>Preserve Unminified Source Files:</strong> Always write
+                and maintain your CSS in clean, well-commented source files,
+                using minification exclusively for your deployed distribution
+                assets (e.g. <code>main.min.css</code>).
+              </li>
+              <li>
+                <strong>Leverage Source Maps:</strong> If debugging production
+                code is necessary, generate CSS source maps alongside your
+                minified assets to map compressed lines back to your original
+                source tree in browser developer tools.
+              </li>
+              <li>
+                <strong>Audit Third-Party Frameworks:</strong> Large third-party
+                CSS bundles from UI libraries often include hundreds of utility
+                classes your site never uses. Combine CSS minification with
+                dead-code elimination (tree-shaking) to prune unused rules.
+              </li>
+              <li>
+                <strong>Automate with Client-Side Verification:</strong> Use the
+                Huzikit CSS Minifier to instantly verify build outputs, optimize
+                inline styles, test CSS snippets, or clean stylesheets before
+                committing them to production.
+              </li>
+            </ol>
+          </article>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+         FAQ ACCORDION SECTION (10 KEY QUESTIONS & ANSWERS)
+         ========================================================================== -->
+      <section class="faq-section" id="faq">
+        <div class="container">
+          <div class="section-header-center">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <p class="section-subtitle">
+              Everything you need to know about CSS minification, safety, and
+              performance.
+            </p>
+          </div>
+
+          <div class="faq-list">
+            <!-- FAQ 1 -->
+            <div class="faq-card">
+              <button
+                type="button"
+                class="faq-question-btn"
+                aria-expanded="false"
+              >
+                <span>What is CSS minification and how does it work?</span>
+                <svg
+                  class="faq-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  CSS minification removes non-executable characters—including
+                  whitespace, tabs, line breaks, developer comments, and
+                  redundant syntax—from your stylesheet. It converts a verbose
+                  stylesheet into a compact, single-line or condensed block that
+                  browser rendering engines can parse faster without changing
+                  how pages look.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ 2 -->
+            <div class="faq-card">
+              <button
+                type="button"
+                class="faq-question-btn"
+                aria-expanded="false"
+              >
+                <span
+                  >Can minification break my CSS or corrupt layout rules?</span
+                >
+                <svg
+                  class="faq-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  No. Standard CSS minification respects CSS syntax
+                  specifications. Quoted strings, font family names with spaces,
+                  embedded data URIs, mathematical expressions inside
+                  <code>calc()</code>, and CSS custom properties (variables) are
+                  safely preserved by our tokenization engine.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ 3 -->
+            <div class="faq-card">
+              <button
+                type="button"
+                class="faq-question-btn"
+                aria-expanded="false"
+              >
+                <span
+                  >Does CSS minification replace Gzip or Brotli
+                  compression?</span
+                >
+                <svg
+                  class="faq-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  No, they operate at different layers. Minification removes
+                  syntax dead weight from the file itself, while Gzip and Brotli
+                  compress data during network transmission. For optimal web
+                  speed, minify your CSS first, then serve it with Gzip or
+                  Brotli enabled on your web server.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ 4 -->
+            <div class="faq-card">
+              <button
+                type="button"
+                class="faq-question-btn"
+                aria-expanded="false"
+              >
+                <span>How much file size reduction can I expect?</span>
+                <svg
+                  class="faq-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Typical stylesheets experience a 20% to 50% file size
+                  reduction depending on the volume of comments and whitespace.
+                  Heavily commented design system files or large utility
+                  libraries can see reductions exceeding 60%.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ 5 -->
+            <div class="faq-card">
+              <button
+                type="button"
+                class="faq-question-btn"
+                aria-expanded="false"
+              >
+                <span
+                  >Is my CSS uploaded to your servers or stored anywhere?</span
+                >
+                <svg
+                  class="faq-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Never. The Huzikit CSS Minifier runs 100% client-side inside
+                  your web browser. Your CSS code, custom designs, and assets
+                  never leave your device, ensuring complete privacy, security,
+                  and GDPR compliance.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ 6 -->
+            <div class="faq-card">
+              <button
+                type="button"
+                class="faq-question-btn"
+                aria-expanded="false"
+              >
+                <span>What is the difference between Minify and Beautify?</span>
+                <svg
+                  class="faq-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Minify strips all formatting to produce the smallest possible
+                  file size for production deployment. Beautify does the
+                  reverse: it takes dense or minified CSS and formats it with
+                  proper indentation, line breaks, and clear spacing so
+                  developers can inspect and edit it easily.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ 7 -->
+            <div class="faq-card">
+              <button
+                type="button"
+                class="faq-question-btn"
+                aria-expanded="false"
+              >
+                <span
+                  >Does this tool support CSS variables and @media
+                  queries?</span
+                >
+                <svg
+                  class="faq-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Yes. Huzikit fully supports CSS custom properties (e.g.
+                  <code>--primary-color: #4F46E5;</code>), complex media
+                  queries, container queries,
+                  <code>@keyframes</code> animations,
+                  <code>@font-face</code> definitions, and modern CSS
+                  pseudo-selectors.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ 8 -->
+            <div class="faq-card">
+              <button
+                type="button"
+                class="faq-question-btn"
+                aria-expanded="false"
+              >
+                <span>How does Live Minify work?</span>
+                <svg
+                  class="faq-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  When Live Minify is active, any edits, typing, or pastes in
+                  the input editor automatically trigger the minification and
+                  analysis engines with a high-performance 250ms debounce,
+                  giving you immediate before-and-after metrics in real time.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ 9 -->
+            <div class="faq-card">
+              <button
+                type="button"
+                class="faq-question-btn"
+                aria-expanded="false"
+              >
+                <span>Can I upload and download files directly?</span>
+                <svg
+                  class="faq-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Yes. You can drag and drop any <code>.css</code> file directly
+                  onto the editor or click the Upload button. Once minified,
+                  simply click Download to save your compressed
+                  <code>huzikit-style.min.css</code> file instantly.
+                </p>
+              </div>
+            </div>
+
+            <!-- FAQ 10 -->
+            <div class="faq-card">
+              <button
+                type="button"
+                class="faq-question-btn"
+                aria-expanded="false"
+              >
+                <span>What keyboard shortcuts are supported?</span>
+                <svg
+                  class="faq-icon"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <polyline points="6 9 12 15 18 9" />
+                </svg>
+              </button>
+              <div class="faq-answer">
+                <p>
+                  Press <code>Ctrl + Enter</code> (or
+                  <code>Cmd + Enter</code> on macOS) to instantly minify your
+                  CSS. Press <code>Ctrl + Shift + F</code> (or
+                  <code>Cmd + Shift + F</code>) to beautify,
+                  <code>Ctrl + K</code> to open global tool search, and
+                  <code>Escape</code> to close modals or menus.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+         RELATED DEVELOPER TOOLS (EXACT ROUTES)
+         ========================================================================== -->
+      <section class="related-tools-section">
+        <div class="container">
+          <div class="section-header-center">
+            <h2 class="section-title">Explore Related Developer Tools</h2>
+            <p class="section-subtitle">
+              Complementary utilities built for frontend engineers and web
+              developers.
+            </p>
+          </div>
+          <div class="tools-grid">
+            <a href="/developertools/JSONFORMATTER.html" class="tool-card">
+              <div class="tool-card-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <polyline points="16 18 22 12 16 6" />
+                  <polyline points="8 6 2 12 8 18" />
+                </svg>
+              </div>
+              <h3 class="tool-card-title">JSON Formatter</h3>
+              <p class="tool-card-desc">
+                Format, validate, and minify JSON data structures with syntax
+                highlighting.
+              </p>
+            </a>
+
+            <a
+              href="/developertools/base64encoderdecoder.html"
+              class="tool-card"
+            >
+              <div class="tool-card-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <rect x="2" y="2" width="20" height="8" rx="2" ry="2" />
+                  <rect x="2" y="14" width="20" height="8" rx="2" ry="2" />
+                  <line x1="6" y1="6" x2="6.01" y2="6" />
+                  <line x1="6" y1="18" x2="6.01" y2="18" />
+                </svg>
+              </div>
+              <h3 class="tool-card-title">Base64 Encoder/Decoder</h3>
+              <p class="tool-card-desc">
+                Convert plain text, images, and binary files to and from Base64
+                encoding.
+              </p>
+            </a>
+
+            <a href="/developertools/regextester.html" class="tool-card">
+              <div class="tool-card-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <circle cx="12" cy="12" r="10" />
+                  <line x1="12" y1="8" x2="12" y2="12" />
+                  <line x1="12" y1="16" x2="12.01" y2="16" />
+                </svg>
+              </div>
+              <h3 class="tool-card-title">Regex Tester</h3>
+              <p class="tool-card-desc">
+                Test and debug regular expressions in real time with detailed
+                match groups.
+              </p>
+            </a>
+
+            <a href="/developertools/urlencoderdecoder.html" class="tool-card">
+              <div class="tool-card-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <path
+                    d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"
+                  />
+                  <path
+                    d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"
+                  />
+                </svg>
+              </div>
+              <h3 class="tool-card-title">URL Encoder/Decoder</h3>
+              <p class="tool-card-desc">
+                Encode special characters into percent-encoded query format or
+                decode URIs.
+              </p>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ==========================================================================
+       GLOBAL SEARCH MODAL (ALL 30 HUZIKIT TOOLS FILTERED LIVE)
+       ========================================================================== -->
+    <div
+      id="searchModalBackdrop"
+      class="search-modal-backdrop"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Global Tool Search"
+    >
+      <div class="search-modal-dialog">
+        <div class="search-input-wrap">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <circle cx="11" cy="11" r="8" />
+            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+          </svg>
+          <input
+            type="text"
+            id="searchInput"
+            class="search-input"
+            placeholder="Search 30+ tools by name, category, or keyword..."
+            autocomplete="off"
+          />
+          <button
+            type="button"
+            id="searchCloseBtn"
+            class="search-close-btn"
+            aria-label="Close search"
+          >
+            ESC
+          </button>
+        </div>
+        <ul id="searchResultsList" class="search-results-list" role="listbox">
+          <!-- Injected via JavaScript -->
+        </ul>
+        <div class="search-footer">
+          <span>Use &uarr; &darr; to navigate, Enter to select</span>
+          <span>Huzikit Fast Navigation</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==========================================================================
+       EXACT HUZIKIT FOOTER (BRAND, BIO, X, 3 COLUMNS, LEGAL & COPYRIGHT)
+       ========================================================================== -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <!-- Brand Column -->
+          <div class="footer-brand-col">
+            <a href="/" class="brand-logo" aria-label="Huzikit Home">
+              <div class="brand-icon">
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                >
+                  <polygon points="12 2 2 7 12 12 22 7 12 2" />
+                  <polyline points="2 17 12 22 22 17" />
+                  <polyline points="2 12 12 17 22 12" />
+                </svg>
+              </div>
+              <span>Huzikit</span>
+            </a>
+            <p class="footer-bio">
+              The ultimate modern suite of lightning-fast, secure online web
+              utilities, calculators, and developer tools.
+            </p>
+            <a
+              href="https://x.com/huzikitoffical"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="footer-social-link"
+              aria-label="Follow Huzikit on X"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                style="width: 16px; height: 16px"
+              >
+                <path
+                  d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+                />
+              </svg>
+              <span>@huzikitoffical</span>
+            </a>
+          </div>
+
+          <!-- Column 1: Text & Dev Tools -->
+          <div class="footer-col">
+            <h4 class="footer-col-title">Text &amp; Dev Tools</h4>
+            <ul class="footer-links-list">
+              <li><a href="/texttools/word-counter.html">Word Counter</a></li>
+              <li>
+                <a href="/texttools/case-converter.html">Case Converter</a>
+              </li>
+              <li>
+                <a href="/developertools/JSONFORMATTER.html">JSON Formatter</a>
+              </li>
+              <li>
+                <a href="/developertools/base64encoderdecoder.html"
+                  >Base64 Utility</a
+                >
+              </li>
+              <li>
+                <a href="/developertools/regextester.html">Regex Tester</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Column 2: Calculators & Image -->
+          <div class="footer-col">
+            <h4 class="footer-col-title">Calculators &amp; Image</h4>
+            <ul class="footer-links-list">
+              <li>
+                <a href="/calculator/agecalculator.html">Age Calculator</a>
+              </li>
+              <li>
+                <a href="/calculator/bmi-calculator.html">BMI Calculator</a>
+              </li>
+              <li>
+                <a href="/image&pdf/image-compressor.html">Image Compressor</a>
+              </li>
+              <li>
+                <a href="/image&pdf/QRGenrator.html">QR Code Generator</a>
+              </li>
+              <li><a href="/image&pdf/colorpicker.html">Color Picker</a></li>
+            </ul>
+          </div>
+
+          <!-- Column 3: Company & Legal -->
+          <div class="footer-col">
+            <h4 class="footer-col-title">Company &amp; Legal</h4>
+            <ul class="footer-links-list">
+              <li><a href="/about.html">About Huzikit</a></li>
+              <li><a href="/disclamier.html">Disclaimer</a></li>
+              <li><a href="/privacy-policies.html">Privacy Policy</a></li>
+              <li><a href="/Termsofservices.html">Terms of Service</a></li>
+              <li><a href="/contact-us.html">Contact Support</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Footer Bottom Bar -->
+        <div class="footer-bottom">
+          <div>&copy; 2026 Huzikit.com. All rights reserved.</div>
+          <div class="footer-tagline">
+            Built with speed, security, and precision.
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Core JavaScript Module -->
+    <script src="/developertools/cssminifier.js"></script>
+  </body>
+</html>
