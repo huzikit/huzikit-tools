@@ -109,13 +109,13 @@
       name: "Image Compressor",
       category: "Image & PDF",
       description: "Compress JPEG, PNG, and WebP images securely.",
-      url: "/image&pdf/image-compressor.html",
+      url: "/image-pdf/image-compressor.html",
     },
     {
       name: "Image Resizer",
       category: "Image & PDF",
       description: "Resize images by pixel dimensions or percentages.",
-      url: "/image&pdf/image-resizer.html",
+      url: "/image-pdf/image-resizer.html",
     },
     {
       name: "PDF to Word",
@@ -127,19 +127,19 @@
       name: "JPG to PNG",
       category: "Image & PDF",
       description: "Convert image file formats seamlessly.",
-      url: "/image&pdf/jpg-to-png.html",
+      url: "/image-pdf/jpg-to-png.html",
     },
     {
       name: "Color Picker",
       category: "Image & PDF",
       description: "Pick and convert HEX, RGB, and HSL color codes.",
-      url: "/image&pdf/colorpicker.html",
+      url: "/image-pdf/colorpicker.html",
     },
     {
       name: "QR Code Generator",
       category: "Image & PDF",
       description: "Generate custom QR codes for URLs and text.",
-      url: "/image&pdf/QRGenrator.html",
+      url: "/image-pdf/QRGenrator.html",
     },
 
     {

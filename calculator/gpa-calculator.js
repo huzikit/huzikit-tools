@@ -107,37 +107,37 @@ const huzikitTools = [
   {
     name: "Image Compressor",
     category: "Image & PDF",
-    url: "/image&pdf/image-compressor.html",
+    url: "/image-pdf/image-compressor.html",
     keywords: ["compress", "image", "jpg", "png"],
   },
   {
     name: "Image Resizer",
     category: "Image & PDF",
-    url: "/image&pdf/image-resizer.html",
+    url: "/image-pdf/image-resizer.html",
     keywords: ["resize", "dimensions", "image"],
   },
   {
     name: "PDF to Word",
     category: "Image & PDF",
-    url: "/image&pdf/pdftowordconverter.html",
+    url: "/image-pdf/pdftowordconverter.html",
     keywords: ["pdf", "word", "convert"],
   },
   {
     name: "JPG to PNG",
     category: "Image & PDF",
-    url: "/image&pdf/jpg-to-png.html",
+    url: "/image-pdf/jpg-to-png.html",
     keywords: ["jpg", "png", "convert"],
   },
   {
     name: "Color Picker / HEX",
     category: "Image & PDF",
-    url: "/image&pdf/colorpicker.html",
+    url: "/image-pdf/colorpicker.html",
     keywords: ["color", "hex", "picker"],
   },
   {
     name: "QR Code Generator",
     category: "Image & PDF",
-    url: "/image&pdf/QRGenrator.html",
+    url: "/image-pdf/QRGenrator.html",
     keywords: ["qr code", "barcode", "generator"],
   },
 

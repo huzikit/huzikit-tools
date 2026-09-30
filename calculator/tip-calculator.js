@@ -132,14 +132,14 @@ const HUZIHUB_TOOLS = [
     category: "Image & PDF",
     description: "Compress image file sizes without losing quality.",
     keywords: ["compress", "image", "jpg", "png"],
-    url: "/image&pdf/image-compressor.html",
+    url: "/image-pdf/image-compressor.html",
   },
   {
     name: "Image Resizer",
     category: "Image & PDF",
     description: "Resize images by dimension or percentage.",
     keywords: ["resize", "dimensions", "crop"],
-    url: "/image&pdf/image-resizer.html",
+    url: "/image-pdf/image-resizer.html",
   },
   {
     name: "PDF to Word",
@@ -153,21 +153,21 @@ const HUZIHUB_TOOLS = [
     category: "Image & PDF",
     description: "Convert JPG image files into transparent PNG format.",
     keywords: ["jpg", "png", "image", "convert"],
-    url: "/image&pdf/jpg-to-png.html",
+    url: "/image-pdf/jpg-to-png.html",
   },
   {
     name: "Color Picker",
     category: "Image & PDF",
     description: "Pick colors and copy HEX, RGB, and HSL values.",
-    url: "/image&pdf/colorpicker.html",
-    url: "/image&pdf/jpg-to-png.html",
+    url: "/image-pdf/colorpicker.html",
+    url: "/image-pdf/jpg-to-png.html",
   },
   {
     name: "QR Code Generator",
     category: "Image & PDF",
     description: "Generate custom QR codes for web links and text.",
     keywords: ["qr", "code", "barcode", "link"],
-    url: "/image&pdf/QRGenrator.html",
+    url: "/image-pdf/QRGenrator.html",
   },
 
   {

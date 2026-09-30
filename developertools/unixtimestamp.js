@@ -115,37 +115,37 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       name: "Image Compressor",
       category: "Image & PDF",
-      url: "/image&pdf/image-compressor.html",
+      url: "/image-pdf/image-compressor.html",
       keywords: "optimize size shrink webp",
     },
     {
       name: "Image Resizer",
       category: "Image & PDF",
-      url: "/image&pdf/image-resizer.html",
+      url: "/image-pdf/image-resizer.html",
       keywords: "scale dimensions pixels crop",
     },
     {
       name: "PDF to Word",
       category: "Image & PDF",
-      url: "/image&pdf/pdftowordconverter.html",
+      url: "/image-pdf/pdftowordconverter.html",
       keywords: "convert docx document pdf",
     },
     {
       name: "JPG to PNG",
       category: "Image & PDF",
-      url: "/image&pdf/jpg-to-png.html",
+      url: "/image-pdf/jpg-to-png.html",
       keywords: "convert image format transparent",
     },
     {
       name: "Color Picker / HEX",
       category: "Image & PDF",
-      url: "/image&pdf/colorpicker.html",
+      url: "/image-pdf/colorpicker.html",
       keywords: "palette rgb hsl hex eyedropper",
     },
     {
       name: "QR Code Generator",
       category: "Image & PDF",
-      url: "/image&pdf/QRGenrator.html",
+      url: "/image-pdf/QRGenrator.html",
       keywords: "barcode 2d scan url link",
     },
 

@@ -99,32 +99,32 @@
     {
       name: "Image Compressor",
       category: "Image & PDF",
-      url: "/image&pdf/image-compressor.html",
+      url: "/image-pdf/image-compressor.html",
     },
     {
       name: "Image Resizer",
       category: "Image & PDF",
-      url: "/image&pdf/image-resizer.html",
+      url: "/image-pdf/image-resizer.html",
     },
     {
       name: "PDF to Word",
       category: "Image & PDF",
-      url: "/image&pdf/pdftowordconverter.html",
+      url: "/image-pdf/pdftowordconverter.html",
     },
     {
       name: "JPG to PNG",
       category: "Image & PDF",
-      url: "/image&pdf/jpg-to-png.html",
+      url: "/image-pdf/jpg-to-png.html",
     },
     {
       name: "Color Picker / HEX",
       category: "Image & PDF",
-      url: "/image&pdf/colorpicker.html",
+      url: "/image-pdf/colorpicker.html",
     },
     {
       name: "QR Code Generator",
       category: "Image & PDF",
-      url: "/image&pdf/QRGenrator.html",
+      url: "/image-pdf/QRGenrator.html",
     },
 
     // DEVELOPER

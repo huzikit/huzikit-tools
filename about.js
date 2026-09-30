@@ -161,7 +161,7 @@
       name: "Image Compressor",
       category: "media",
       categoryLabel: "Image & PDF",
-      url: "/image&pdf/image-compressor.html",
+      url: "/image-pdf/image-compressor.html",
       description:
         "Reduce image file size for JPG, PNG, and WebP without sacrificing visual clarity.",
       keywords: "shrink compress photo picture optimize mb kb",
@@ -170,7 +170,7 @@
       name: "Image Resizer",
       category: "media",
       categoryLabel: "Image & PDF",
-      url: "/image&pdf/image-resizer.html",
+      url: "/image-pdf/image-resizer.html",
       description:
         "Scale image dimensions, change width and height, and lock aspect ratios.",
       keywords: "resize scale width height pixels crop dimensions",
@@ -179,7 +179,7 @@
       name: "PDF to Word Converter",
       category: "media",
       categoryLabel: "Image & PDF",
-      url: "/image&pdf/pdftowordconverter.html",
+      url: "/image-pdf/pdftowordconverter.html",
       description:
         "Extract and convert PDF documents into editable Word (.docx) formats.",
       keywords: "convert doc docx document text extract pdf",
@@ -188,7 +188,7 @@
       name: "JPG to PNG Converter",
       category: "media",
       categoryLabel: "Image & PDF",
-      url: "/image&pdf/jpg-to-png.html",
+      url: "/image-pdf/jpg-to-png.html",
       description:
         "Convert raster JPG/JPEG images into transparent PNG graphics.",
       keywords: "convert format jpeg transparency raster",
@@ -197,7 +197,7 @@
       name: "Color Picker / HEX",
       category: "media",
       categoryLabel: "Image & PDF",
-      url: "/image&pdf/colorpicker.html",
+      url: "/image-pdf/colorpicker.html",
       description:
         "Sample colors, inspect palettes, and convert between HEX, RGB, and HSL codes.",
       keywords: "palette hex rgb hsl color design css web",
@@ -206,7 +206,7 @@
       name: "QR Code Generator",
       category: "media",
       categoryLabel: "Image & PDF",
-      url: "/image&pdf/QRGenrator.html",
+      url: "/image-pdf/QRGenrator.html",
       description:
         "Generate high-resolution scannable QR codes for links, text, and Wi-Fi networks.",
       keywords: "qr code barcode scan link url wifi generator",

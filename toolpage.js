@@ -344,7 +344,7 @@
       name: "Image Compressor",
       category: "image",
       categoryLabel: "Image & PDF",
-      url: "/image&pdf/image-compressor.html",
+      url: "/image-pdf/image-compressor.html",
       description:
         "Compress JPEG, PNG, and WebP images directly in your browser without quality loss.",
       keywords: [
@@ -366,7 +366,7 @@
       name: "Image Resizer",
       category: "image",
       categoryLabel: "Image & PDF",
-      url: "/image&pdf/image-resizer.html",
+      url: "/image-pdf/image-resizer.html",
       description:
         "Resize pictures by dimensions or aspect ratio with fast browser-based processing.",
       keywords: [
@@ -387,7 +387,7 @@
       name: "PDF to Word",
       category: "image",
       categoryLabel: "Image & PDF",
-      url: "/image&pdf/pdftowordconverter.html",
+      url: "/image-pdf/pdftowordconverter.html",
       description:
         "Convert portable document files into editable Word documents quickly.",
       keywords: [
@@ -408,7 +408,7 @@
       name: "JPG to PNG",
       category: "image",
       categoryLabel: "Image & PDF",
-      url: "/image&pdf/jpg-to-png.html",
+      url: "/image-pdf/jpg-to-png.html",
       description:
         "Convert JPG images to transparent PNG format with high-fidelity output.",
       keywords: [
@@ -428,7 +428,7 @@
       name: "Color Picker / HEX",
       category: "image",
       categoryLabel: "Image & PDF",
-      url: "/image&pdf/colorpicker.html",
+      url: "/image-pdf/colorpicker.html",
       description:
         "Inspect and copy HEX, RGB, HSL values and inspect color palettes with ease.",
       keywords: [
@@ -449,7 +449,7 @@
       name: "QR Code Generator",
       category: "image",
       categoryLabel: "Image & PDF",
-      url: "/image&pdf/QRGenrator.html",
+      url: "/image-pdf/QRGenrator.html",
       description:
         "Generate custom QR codes for URLs, contact cards, text, and Wi-Fi credentials.",
       keywords: [

@@ -473,13 +473,13 @@ function initSearch() {
     {
       name: "Image Compressor",
       category: "Image & PDF",
-      url: "/image&pdf/image-compressor.html",
+      url: "/image-pdf/image-compressor.html",
       tag: "image",
     },
     {
       name: "Image Resizer",
       category: "Image & PDF",
-      url: "/image&pdf/image-resizer.html",
+      url: "/image-pdf/image-resizer.html",
       tag: "image",
     },
     {
@@ -491,19 +491,19 @@ function initSearch() {
     {
       name: "JPG to PNG Converter",
       category: "Image & PDF",
-      url: "/image&pdf/jpg-to-png.html",
+      url: "/image-pdf/jpg-to-png.html",
       tag: "image",
     },
     {
       name: "Color Picker & HEX Converter",
       category: "Image & PDF",
-      url: "/image&pdf/colorpicker.html",
+      url: "/image-pdf/colorpicker.html",
       tag: "image",
     },
     {
       name: "QR Code Generator",
       category: "Image & PDF",
-      url: "/image&pdf/QRGenrator.html",
+      url: "/image-pdf/QRGenrator.html",
       tag: "image",
     },
 

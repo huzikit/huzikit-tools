@@ -157,7 +157,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       name: "Image Compressor",
       category: "Image & PDF",
-      url: "/image&pdf/image-compressor.html",
+      url: "/image-pdf/image-compressor.html",
       keywords: [
         "shrink photo",
         "reduce size",
@@ -168,31 +168,31 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       name: "Image Resizer",
       category: "Image & PDF",
-      url: "/image&pdf/image-resizer.html",
+      url: "/image-pdf/image-resizer.html",
       keywords: ["scale dimensions", "pixels", "aspect ratio", "crop"],
     },
     {
       name: "PDF to Word",
       category: "Image & PDF",
-      url: "/image&pdf/pdftowordconverter.html",
+      url: "/image-pdf/pdftowordconverter.html",
       keywords: ["convert pdf", "docx", "extract text", "document conversion"],
     },
     {
       name: "JPG to PNG",
       category: "Image & PDF",
-      url: "/image&pdf/jpg-to-png.html",
+      url: "/image-pdf/jpg-to-png.html",
       keywords: ["image convert", "transparency", "format shift", "graphics"],
     },
     {
       name: "Color Picker / HEX",
       category: "Image & PDF",
-      url: "/image&pdf/colorpicker.html",
+      url: "/image-pdf/colorpicker.html",
       keywords: ["hex codes", "rgb", "hsl", "color palette", "eyedropper"],
     },
     {
       name: "QR Code Generator",
       category: "Image & PDF",
-      url: "/image&pdf/QRGenrator.html",
+      url: "/image-pdf/QRGenrator.html",
       keywords: ["qr code", "barcode", "scan", "url barcode", "vector qr"],
     },
 

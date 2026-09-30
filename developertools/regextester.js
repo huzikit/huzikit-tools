@@ -164,37 +164,37 @@
     // Image & PDF
     {
       title: "Image Compressor",
-      url: "/image&pdf/image-compressor.html",
+      url: "/image-pdf/image-compressor.html",
       category: "Image & PDF",
       keywords: "image compress reduce size jpg png webp",
     },
     {
       title: "Image Resizer",
-      url: "/image&pdf/image-resizer.html",
+      url: "/image-pdf/image-resizer.html",
       category: "Image & PDF",
       keywords: "image resize dimensions scale width height",
     },
     {
       title: "PDF to Word Converter",
-      url: "/image&pdf/pdftowordconverter.html",
+      url: "/image-pdf/pdftowordconverter.html",
       category: "Image & PDF",
       keywords: "pdf word doc docx convert document",
     },
     {
       title: "JPG to PNG Converter",
-      url: "/image&pdf/jpg-to-png.html",
+      url: "/image-pdf/jpg-to-png.html",
       category: "Image & PDF",
       keywords: "jpg jpeg png format convert transparent",
     },
     {
       title: "Color Picker",
-      url: "/image&pdf/colorpicker.html",
+      url: "/image-pdf/colorpicker.html",
       category: "Image & PDF",
       keywords: "color picker hex rgb hsl palette",
     },
     {
       title: "QR Code Generator",
-      url: "/image&pdf/QRGenrator.html",
+      url: "/image-pdf/QRGenrator.html",
       category: "Image & PDF",
       keywords: "qr code barcode generator create scan",
     },

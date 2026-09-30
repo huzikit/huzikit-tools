@@ -184,32 +184,32 @@
     {
       title: "Image Compressor",
       cat: "Image & PDF",
-      url: "/image&pdf/image-compressor.html",
+      url: "/image-pdf/image-compressor.html",
     },
     {
       title: "Image Resizer",
       cat: "Image & PDF",
-      url: "/image&pdf/image-resizer.html",
+      url: "/image-pdf/image-resizer.html",
     },
     {
       title: "PDF to Word",
       cat: "Image & PDF",
-      url: "/image&pdf/pdftowordconverter.html",
+      url: "/image-pdf/pdftowordconverter.html",
     },
     {
       title: "JPG to PNG",
       cat: "Image & PDF",
-      url: "/image&pdf/jpg-to-png.html",
+      url: "/image-pdf/jpg-to-png.html",
     },
     {
       title: "Color Picker / HEX",
       cat: "Image & PDF",
-      url: "/image&pdf/colorpicker.html",
+      url: "/image-pdf/colorpicker.html",
     },
     {
       title: "QR Code Generator",
       cat: "Image & PDF",
-      url: "/image&pdf/QRGenrator.html",
+      url: "/image-pdf/QRGenrator.html",
     },
     {
       title: "JSON Formatter",

@@ -104,32 +104,32 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       name: "Image Compressor",
       category: "Image & PDF",
-      url: "https://huzikit.com/image&pdf/image-compressor.html",
+      url: "https://huzikit.com/image-pdf/image-compressor.html",
     },
     {
       name: "Image Resizer",
       category: "Image & PDF",
-      url: "https://huzikit.com/image&pdf/image-resizer.html",
+      url: "https://huzikit.com/image-pdf/image-resizer.html",
     },
     {
       name: "PDF to Word",
       category: "Image & PDF",
-      url: "https://huzikit.com/image&pdf/pdftowordconverter.html",
+      url: "https://huzikit.com/image-pdf/pdftowordconverter.html",
     },
     {
       name: "JPG to PNG",
       category: "Image & PDF",
-      url: "https://huzikit.com/image&pdf/jpg-to-png.html",
+      url: "https://huzikit.com/image-pdf/jpg-to-png.html",
     },
     {
       name: "Color Picker / HEX",
       category: "Image & PDF",
-      url: "https://huzikit.com/image&pdf/colorpicker.html",
+      url: "https://huzikit.com/image-pdf/colorpicker.html",
     },
     {
       name: "QR Code Generator",
       category: "Image & PDF",
-      url: "https://huzikit.com/image&pdf/QRGenrator.html",
+      url: "https://huzikit.com/image-pdf/QRGenrator.html",
     },
 
     // Developer (8)

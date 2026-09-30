@@ -122,37 +122,37 @@
     {
       name: "Image Compressor",
       category: "Image & PDF",
-      url: "/image&pdf/image-compressor.html",
+      url: "/image-pdf/image-compressor.html",
       keywords: "compress jpg png webp optimize reduce size photo compression",
     },
     {
       name: "Image Resizer",
       category: "Image & PDF",
-      url: "/image&pdf/image-resizer.html",
+      url: "/image-pdf/image-resizer.html",
       keywords: "resize dimension scale crop width height pixel aspect ratio",
     },
     {
       name: "PDF to Word",
       category: "Image & PDF",
-      url: "/image&pdf/pdftowordconverter.html",
+      url: "/image-pdf/pdftowordconverter.html",
       keywords: "pdf docx convert document word extract text",
     },
     {
       name: "JPG to PNG",
       category: "Image & PDF",
-      url: "/image&pdf/jpg-to-png.html",
+      url: "/image-pdf/jpg-to-png.html",
       keywords: "image convert format transparent png jpeg",
     },
     {
       name: "Color Picker / HEX",
       category: "Image & PDF",
-      url: "/image&pdf/colorpicker.html",
+      url: "/image-pdf/colorpicker.html",
       keywords: "hex rgb hsl color palette eyedropper design css",
     },
     {
       name: "QR Code Generator",
       category: "Image & PDF",
-      url: "/image&pdf/QRGenrator.html",
+      url: "/image-pdf/QRGenrator.html",
       keywords: "qr code barcode generator url text wifi scan download",
     },
 

@@ -367,14 +367,14 @@ const toolsIndex = [
     category: "Image & PDF",
     description: "Compress JPG and PNG images without losing quality.",
     keywords: ["image compressor", "shrink image", "optimize photo"],
-    url: "/image&pdf/image-compressor.html",
+    url: "/image-pdf/image-compressor.html",
   },
   {
     name: "Image Resizer",
     category: "Image & PDF",
     description: "Resize images to custom dimensions in pixels.",
     keywords: ["image resizer", "scale image", "dimensions"],
-    url: "/image&pdf/image-resizer.html",
+    url: "/image-pdf/image-resizer.html",
   },
   {
     name: "PDF to Word",
@@ -388,21 +388,21 @@ const toolsIndex = [
     category: "Image & PDF",
     description: "Convert image file formats instantly.",
     keywords: ["jpg to png", "image converter", "format"],
-    url: "/image&pdf/jpg-to-png.html",
+    url: "/image-pdf/jpg-to-png.html",
   },
   {
     name: "Color Picker / HEX",
     category: "Image & PDF",
     description: "Pick colors and get HEX, RGB, and HSL codes.",
     keywords: ["color picker", "hex code", "rgb", "palette"],
-    url: "/image&pdf/colorpicker.html",
+    url: "/image-pdf/colorpicker.html",
   },
   {
     name: "QR Code Generator",
     category: "Image & PDF",
     description: "Generate custom QR codes for URLs and text.",
     keywords: ["qr code generator", "barcode", "scan"],
-    url: "/image&pdf/QRGenrator.html",
+    url: "/image-pdf/QRGenrator.html",
   },
 
   {
