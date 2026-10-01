@@ -145,42 +145,42 @@
     },
     {
       title: "Age Calculator",
-      cat: "Calculators",
+      cat: "calculator",
       url: "/calculator/agecalculator.html",
     },
     {
       title: "BMI Calculator",
-      cat: "Calculators",
+      cat: "calculator",
       url: "/calculator/bmi-calculator.html",
     },
     {
       title: "Percentage Calculator",
-      cat: "Calculators",
+      cat: "calculator",
       url: "/calculator/percentage-calculator.html",
     },
     {
       title: "Calorie Calculator",
-      cat: "Calculators",
+      cat: "calculator",
       url: "/calculator/Calorie-Calculator.html",
     },
     {
       title: "Discount Calculator",
-      cat: "Calculators",
+      cat: "calculator",
       url: "/calculator/discount-calculator.html",
     },
     {
       title: "Savings&Goal Calculator",
-      cat: "Calculators",
-      url: "/calculator/saving&goalcalculator.html",
+      cat: "calculator",
+      url: "/calculator/saving-goal-calculator.html",
     },
     {
       title: "Tip Calculator",
-      cat: "Calculators",
-      url: "/calculators/tip-calculator.html",
+      cat: "calculator",
+      url: "/calculator/tip-calculator.html",
     },
     {
       title: "GPA Calculator",
-      cat: "Calculators",
+      cat: "calculator",
       url: "/calculator/gpa-calculator.html",
     },
     {

@@ -280,7 +280,7 @@
       name: "Savings & Goal Calculator",
       category: "calc",
       categoryLabel: "Calculators",
-      url: "/calculator/saving&goalcalculator.html",
+      url: "/calculator/saving-goal-calculator.html",
       description:
         "Plan personal savings, interest accumulation, and milestone timelines.",
       keywords: [

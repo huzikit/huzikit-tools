@@ -95,7 +95,7 @@
     {
       name: "Savings & Goal Calculator",
       category: "Calculators",
-      url: "/calculator/saving&goalcalculator.html",
+      url: "/calculator/saving-goal-calculator.html",
       keywords: "investment interest target future wealth",
     },
     {

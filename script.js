@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       name: "Saving&Goal Calculator",
       category: "Calculators",
-      url: "/calculator/saving&goalcalculator.html",
+      url: "/calculator/saving-goal-calculator.html",
       tag: "calc",
     },
     {

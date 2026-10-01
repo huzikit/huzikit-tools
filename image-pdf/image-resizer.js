@@ -108,7 +108,7 @@
     {
       name: "Savings & Goal Calculator",
       category: "Calculators",
-      url: "/calculator/saving&goalcalculator.html",
+      url: "/calculator/saving-goal-calculator.html",
       desc: "Project compound interest, investment returns, and milestone savings timelines.",
       keywords: ["savings", "interest", "compound", "goal", "investment"],
     },

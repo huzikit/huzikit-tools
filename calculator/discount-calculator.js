@@ -345,7 +345,7 @@ const toolsIndex = [
     category: "Calculators",
     description: "Plan financial goals and compound savings over time.",
     keywords: ["savings calculator", "goal", "compound interest"],
-    url: "/calculator/saving&goalcalculator.html",
+    url: "/calculator/saving-goal-calculator.html",
   },
   {
     name: "Tip Calculator",

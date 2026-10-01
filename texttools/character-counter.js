@@ -58,49 +58,49 @@
 
     {
       name: "Age Calculator",
-      category: "Calculators",
+      category: "calculator",
       description: "Calculate exact age in years, months, and days.",
       url: "/calculator/agecalculator.html",
     },
     {
       name: "BMI Calculator",
-      category: "Calculators",
+      category: "calculator",
       description: "Calculate Body Mass Index and health status.",
       url: "https://huzihub.com/bmi-calculator/",
     },
     {
       name: "Percentage Calculator",
-      category: "Calculators",
+      category: "calculator",
       description: "Calculate percentages, increases, and decreases.",
       url: "/calculator/percentage-calculator.html",
     },
     {
       name: "Calorie Calculator",
-      category: "Calculators",
+      category: "calculator",
       description: "Estimate daily caloric requirements and BMR.",
       url: "/calculator/Calorie-Calculator.html",
     },
     {
       name: "Discount Calculator",
-      category: "Calculators",
+      category: "calculator",
       description: "Calculate sale discounts and final savings.",
       url: "/calculator/discount-calculator.html",
     },
     {
       name: "Savings Calculator",
-      category: "Calculators",
+      category: "calculator",
       description: "Project compound savings growth over time.",
-      url: "/calculator/saving&goalcalculator.html",
+      url: "/calculator/saving-goal-calculator.html",
     },
     {
       name: "Tip Calculator",
-      category: "Calculators",
+      category: "calculator",
       description: "Calculate restaurant tips and bill splits.",
-      url: "/calculators/tip-calculator.html",
+      url: "/calculator/tip-calculator.html",
     },
     {
       name: "GPA Calculator",
-      category: "Calculators",
+      category: "calculator",
       description: "Calculate Grade Point Average and academic standing.",
       url: "/calculator/gpa-calculator.html",
     },
@@ -425,7 +425,7 @@
     if (!textInput) return;
 
     const sampleTextContent =
-      "HuziHub is the ultimate modern suite of lightning-fast, secure online web utilities, calculators, and developer tools. Designed with precision, elegance, and high performance, HuziHub empowers developers, writers, students, and professionals worldwide to accomplish tasks effortlessly without signups or artificial limits.";
+      "HuziHub is the ultimate modern suite of lightning-fast, secure online web utilities, calculator, and developer tools. Designed with precision, elegance, and high performance, HuziHub empowers developers, writers, students, and professionals worldwide to accomplish tasks effortlessly without signups or artificial limits.";
 
     const updateStats = () => {
       const val = textInput.value;

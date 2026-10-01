@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       name: "Savings & Goal Calculator",
       category: "Calculators",
-      url: "https://huzikit.com/calculator/saving&goalcalculator.html",
+      url: "https://huzikit.com/calculator/saving-goal-calculator.html",
     },
     {
       name: "Tip Calculator",

@@ -111,7 +111,7 @@
       name: "Savings Calculator",
       category: "Calculators",
       description: "Plan financial goals with compound interest growth models.",
-      url: "/calculator/saving&goalcalculator.html",
+      url: "/calculator/saving-goal-calculator.html",
       keywords: ["savings", "interest", "finance", "money", "calculator"],
     },
     {

@@ -51,42 +51,42 @@ document.addEventListener("DOMContentLoaded", () => {
 
     {
       name: "Age Calculator",
-      category: "Calculators",
+      category: "calculator",
       url: "/calculator/agecalculator.html",
     },
     {
       name: "BMI Calculator",
-      category: "Calculators",
+      category: "calculator",
       url: "/calculator/bmi-calculator.html",
     },
     {
       name: "Percentage Calculator",
-      category: "Calculators",
+      category: "calculator",
       url: "/calculator/percentage-calculator.html",
     },
     {
       name: "Calorie Calculator",
-      category: "Calculators",
+      category: "calculator",
       url: "/calculator/Calorie-Calculator.html",
     },
     {
       name: "Discount Calculator",
-      category: "Calculators",
+      category: "calculator",
       url: "/calculator/discount-calculator.html",
     },
     {
       name: "Savings&Goal Calculator",
-      category: "Calculators",
-      url: "/calculator/saving&goalcalculator.html",
+      category: "calculator",
+      url: "/calculator/saving-goal-calculator.html",
     },
     {
       name: "Tip Calculator",
-      category: "Calculators",
-      url: "/calculators/tip-calculator.html",
+      category: "calculator",
+      url: "/calculator/tip-calculator.html",
     },
     {
       name: "GPA Calculator",
-      category: "Calculators",
+      category: "calculator",
       url: "/calculator/gpa-calculator.html",
     },
 

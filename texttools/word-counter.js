@@ -61,53 +61,53 @@
       keywords: "notes scratchpad online editor write",
     },
 
-    // CALCULATORS
+    // calculator
     {
       name: "Age Calculator",
       url: "/calculator/agecalculator.html",
-      category: "Calculators",
+      category: "calculator",
       keywords: "age birthdate years months days birthday",
     },
     {
       name: "BMI Calculator",
       url: "/calculator/bmi-calculator.html",
-      category: "Calculators",
+      category: "calculator",
       keywords: "body mass index health weight fitness",
     },
     {
       name: "Percentage Calculator",
       url: "/calculator/percentage-calculator.html",
-      category: "Calculators",
+      category: "calculator",
       keywords: "percentage percent discount math ratio",
     },
     {
       name: "Calorie Calculator",
       url: "/calculator/Calorie-Calculator.html",
-      category: "Calculators",
+      category: "calculator",
       keywords: "calories diet bmr tdee nutrition weight",
     },
     {
       name: "Discount Calculator",
       url: "/calculator/discount-calculator.html",
-      category: "Calculators",
+      category: "calculator",
       keywords: "discount sale savings price off shopping",
     },
     {
       name: "Savings & Goal Calculator",
-      url: "/calculator/saving&goalcalculator.html",
-      category: "Calculators",
+      url: "/calculator/saving-goal-calculator.html",
+      category: "calculator",
       keywords: "finance savings money target goal investment",
     },
     {
       name: "Tip Calculator",
       url: "/calculator/tip-calculator.html",
-      category: "Calculators",
+      category: "calculator",
       keywords: "tip bill split restaurant gratuity",
     },
     {
       name: "GPA Calculator",
       url: "/calculator/gpa-calculator.html",
-      category: "Calculators",
+      category: "calculator",
       keywords: "grade point average college school academic",
     },
 
@@ -1864,7 +1864,7 @@ Processed 100% locally in your browser. No text is stored on external servers.
         ).toLowerCase();
         let cat = "All";
         if (filterVal.includes("text")) cat = "Text Tools";
-        else if (filterVal.includes("calc")) cat = "Calculators";
+        else if (filterVal.includes("calc")) cat = "calculator";
         else if (filterVal.includes("image") || filterVal.includes("pdf"))
           cat = "Image & PDF";
         else if (filterVal.includes("dev")) cat = "Developer";

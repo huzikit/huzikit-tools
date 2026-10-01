@@ -102,7 +102,7 @@ const HUZIHUB_TOOLS = [
     category: "Calculators",
     description: "Project savings growth over time with compounding.",
     keywords: ["compound", "interest", "investment", "savings"],
-    url: "/calculator/saving&goalcalculator.html",
+    url: "/calculator/saving-goal-calculator.html",
   },
   {
     name: "Tip Calculator",

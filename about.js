@@ -132,7 +132,7 @@
       name: "Saving & Goal Calculator",
       category: "calc",
       categoryLabel: "Calculators",
-      url: "/calculator/saving&goalcalculator.html",
+      url: "/calculator/saving-goal-calculator.html",
       description:
         "Plan future savings balance with recurring deposits and compound interest.",
       keywords: "money finance compound interest deposit future wealth",

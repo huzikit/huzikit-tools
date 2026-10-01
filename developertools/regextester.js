@@ -144,7 +144,7 @@
     },
     {
       title: "Saving & Goal Calculator",
-      url: "/calculator/saving&goalcalculator.html",
+      url: "/calculator/saving-goal-calculator.html",
       category: "Calculators",
       keywords: "savings finance investment interest compound goal",
     },

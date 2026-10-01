@@ -104,7 +104,7 @@
       name: "Savings&Goal Calculator",
       category: "Calculators",
       description: "Project compound interest and financial savings.",
-      url: "/calculator/saving&goalcalculator.html",
+      url: "/calculator/saving-goal-calculator.html",
       keywords: "savings compound interest finance",
     },
     {

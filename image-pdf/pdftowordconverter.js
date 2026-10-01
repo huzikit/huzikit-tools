@@ -214,7 +214,7 @@
     {
       name: "Saving & Goal Calculator",
       category: "Calculators",
-      url: "/calculator/saving&goalcalculator.html",
+      url: "/calculator/saving-goal-calculator.html",
       description:
         "Calculate compound interest growth and monthly savings targets.",
       keywords: [
