@@ -1,160 +1,161 @@
+
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <!-- Homepage -->
     <url>
-        <loc>https://huzikit.com/</loc>
+        <loc>https://huzikit-tools.vercel.app/</loc>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
 
     <!-- Text Tools -->
     <url>
-        <loc>https://huzikit.com/texttools/word-counter.html</loc>
+        <loc>https://huzikit-tools.vercel.app/texttools/word-counter.html</loc>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://huzikit.com/texttools/character-counter.html</loc>
+        <loc>https://huzikit-tools.vercel.app/texttools/character-counter.html</loc>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://huzikit.com/texttools/case-converter.html</loc>
+        <loc>https://huzikit-tools.vercel.app/texttools/case-converter.html</loc>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://huzikit.com/texttools/remove-duplicate-lines.html</loc>
+        <loc>https://huzikit-tools.vercel.app/texttools/remove-duplicate-lines.html</loc>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://huzikit.com/texttools/loremipsumgenerator.html</loc>
+        <loc>https://huzikit-tools.vercel.app/texttools/loremipsumgenerator.html</loc>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://huzikit.com/texttools/passwordgenerator.html</loc>
+        <loc>https://huzikit-tools.vercel.app/texttools/passwordgenerator.html</loc>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://huzikit.com/texttools/text-reverser.html</loc>
+        <loc>https://huzikit-tools.vercel.app/texttools/text-reverser.html</loc>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://huzikit.com/texttools/onlinenotepad.html</loc>
+        <loc>https://huzikit-tools.vercel.app/texttools/onlinenotepad.html</loc>
         <priority>0.8</priority>
     </url>
 
     <!-- Calculators -->
     <url>
-        <loc>https://huzikit.com/calculator/agecalculator.html</loc>
+        <loc>https://huzikit-tools.vercel.app/calculator/agecalculator.html</loc>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://huzikit.com/calculator/bmi-calculator.html</loc>
+        <loc>https://huzikit-tools.vercel.app/calculator/bmi-calculator.html</loc>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://huzikit.com/calculator/percentage-calculator.html</loc>
+        <loc>https://huzikit-tools.vercel.app/calculator/percentage-calculator.html</loc>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://huzikit.com/calculator/Calorie-Calculator.html</loc>
+        <loc>https://huzikit-tools.vercel.app/calculator/Calorie-Calculator.html</loc>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://huzikit.com/calculator/discount-calculator.html</loc>
+        <loc>https://huzikit-tools.vercel.app/calculator/discount-calculator.html</loc>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://huzikit.com/calculator/saving-goal-calculator.html</loc>
+        <loc>https://huzikit-tools.vercel.app/calculator/saving-goal-calculator.html</loc>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://huzikit.com/calculator/tip-calculator.html</loc>
+        <loc>https://huzikit-tools.vercel.app/calculator/tip-calculator.html</loc>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://huzikit.com/calculator/gpa-calculator.html</loc>
+        <loc>https://huzikit-tools.vercel.app/calculator/gpa-calculator.html</loc>
         <priority>0.8</priority>
     </url>
 
-    <!-- Image & PDF -->
+    <!-- Image and PDF Tools -->
     <url>
-        <loc>https://huzikit.com/image-pdf/image-compressor.html</loc>
+        <loc>https://huzikit-tools.vercel.app/image-pdf/image-compressor.html</loc>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://huzikit.com/image-pdf/image-resizer.html</loc>
+        <loc>https://huzikit-tools.vercel.app/image-pdf/image-resizer.html</loc>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://huzikit.com/image-pdf/pdftowordconverter.html</loc>
+        <loc>https://huzikit-tools.vercel.app/image-pdf/pdftowordconverter.html</loc>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://huzikit.com/image-pdf/jpg-to-png.html</loc>
+        <loc>https://huzikit-tools.vercel.app/image-pdf/jpg-to-png.html</loc>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://huzikit.com/image-pdf/colorpicker.html</loc>
+        <loc>https://huzikit-tools.vercel.app/image-pdf/colorpicker.html</loc>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://huzikit.com/image-pdf/QRGenrator.html</loc>
+        <loc>https://huzikit-tools.vercel.app/image-pdf/QRGenrator.html</loc>
         <priority>0.8</priority>
     </url>
 
     <!-- Developer Tools -->
     <url>
-        <loc>https://huzikit.com/developertools/JSONFORMATTER.html</loc>
+        <loc>https://huzikit-tools.vercel.app/developertools/JSONFORMATTER.html</loc>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://huzikit.com/developertools/base64encoderdecoder.html</loc>
+        <loc>https://huzikit-tools.vercel.app/developertools/base64encoderdecoder.html</loc>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://huzikit.com/developertools/urlencoderdecoder.html</loc>
+        <loc>https://huzikit-tools.vercel.app/developertools/urlencoderdecoder.html</loc>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://huzikit.com/developertools/meta-tag-generator.html</loc>
+        <loc>https://huzikit-tools.vercel.app/developertools/meta-tag-generator.html</loc>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://huzikit.com/developertools/regextester.html</loc>
+        <loc>https://huzikit-tools.vercel.app/developertools/regextester.html</loc>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://huzikit.com/developertools/markdownhtml.html</loc>
+        <loc>https://huzikit-tools.vercel.app/developertools/markdownhtml.html</loc>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://huzikit.com/developertools/cssminifier.html</loc>
+        <loc>https://huzikit-tools.vercel.app/developertools/cssminifier.html</loc>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://huzikit.com/developertools/unixtimestamp.html</loc>
+        <loc>https://huzikit-tools.vercel.app/developertools/unixtimestamp.html</loc>
         <priority>0.8</priority>
     </url>
 
-    <!-- Main / Company Pages -->
+    <!-- Company and Legal Pages -->
     <url>
-        <loc>https://huzikit.com/about.html</loc>
+        <loc>https://huzikit-tools.vercel.app/about.html</loc>
         <priority>0.4</priority>
     </url>
     <url>
-        <loc>https://huzikit.com/disclamier.html</loc>
+        <loc>https://huzikit-tools.vercel.app/disclamier.html</loc>
         <priority>0.4</priority>
     </url>
     <url>
-        <loc>https://huzikit.com/privacy-policies.html</loc>
+        <loc>https://huzikit-tools.vercel.app/privacy-policies.html</loc>
         <priority>0.4</priority>
     </url>
     <url>
-        <loc>https://huzikit.com/Termsofservices.html</loc>
+        <loc>https://huzikit-tools.vercel.app/Termsofservices.html</loc>
         <priority>0.4</priority>
     </url>
     <url>
-        <loc>https://huzikit.com/contact-us.html</loc>
+        <loc>https://huzikit-tools.vercel.app/contact-us.html</loc>
         <priority>0.5</priority>
     </url>
 
