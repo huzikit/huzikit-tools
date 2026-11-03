@@ -725,7 +725,7 @@ button {
    2. Brand Trust / Stats Banner
    ========================================================================== */
 
-.trust-banner {
+/* .trust-banner {
   background: var(--white);
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
@@ -751,7 +751,7 @@ button {
   font-size: 0.9375rem;
   color: var(--ink-soft);
   font-weight: 500;
-}
+} */
 
 /* ==========================================================================
    Common Section Styles
