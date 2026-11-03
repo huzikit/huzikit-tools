@@ -583,9 +583,9 @@ button {
   gap: 16px;
   margin-bottom: 60px;
 }
-
+/* /* 
 /* Floating 3D Mockup */
-.hero-showcase-mockup {
+/* .hero-showcase-mockup {
   width: 100%;
   max-width: 900px;
   background: var(--white);
@@ -693,10 +693,10 @@ button {
   background: var(--bg-soft);
   border-radius: var(--radius-sm);
   border: 1px solid var(--line);
-}
+} */
 
 /* Shimmer Animation */
-.shimmer {
+/* .shimmer {
   position: relative;
   overflow: hidden;
 }
@@ -719,40 +719,8 @@ button {
   100% {
     transform: translateX(100%);
   }
-}
-
-/* ==========================================================================
-   2. Brand Trust / Stats Banner
-   ========================================================================== */
-
-/* .trust-banner {
-  background: var(--white);
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  padding: 40px 0;
-}
-
-.trust-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-  text-align: center;
-}
-
-.trust-number {
-  font-family: var(--font-heading);
-  font-size: 2.25rem;
-  font-weight: 800;
-  color: var(--primary);
-  margin-bottom: 4px;
-}
-
-.trust-label {
-  font-size: 0.9375rem;
-  color: var(--ink-soft);
-  font-weight: 500;
 } */
-
+*/
 /* ==========================================================================
    Common Section Styles
    ========================================================================== */
