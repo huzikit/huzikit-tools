@@ -583,9 +583,9 @@ button {
   gap: 16px;
   margin-bottom: 60px;
 }
-/* /* 
+
 /* Floating 3D Mockup */
-/* .hero-showcase-mockup {
+.hero-showcase-mockup {
   width: 100%;
   max-width: 900px;
   background: var(--white);
@@ -693,7 +693,7 @@ button {
   background: var(--bg-soft);
   border-radius: var(--radius-sm);
   border: 1px solid var(--line);
-} */
+}
 
 /* Shimmer Animation */
 .shimmer {
@@ -720,6 +720,7 @@ button {
     transform: translateX(100%);
   }
 }
+
 /* ==========================================================================
    Common Section Styles
    ========================================================================== */
