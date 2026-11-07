@@ -8,7 +8,7 @@
     </title>
     <meta
       name="description"
-      content="Free online image compressor to reduce JPG, PNG, and WebP file sizes by up to 80% without losing quality. 100% private browser processing with zero upload limits."
+      content="Free online image compressor to reduce JPG, PNG, and WebP file sizes by up to 80% with minimal quality loss. 100% private browser processing wwith no upload needed.
     />
     <link
       rel="canonical"
@@ -32,9 +32,12 @@
     <meta property="og:type" content="website" />
     <meta
       property="og:image"
-      content="https://huzikit.com/og-image-compressor.jpg"
+      content="https://huzikit.com/assets/og-image.png"
     />
-
+    <meta
+      name="twitter:image"
+      content="https://huzikit.com/assets/og-image.png"
+    />
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta
@@ -43,7 +46,7 @@
     />
     <meta
       name="twitter:description"
-      content="Reduce image file sizes instantly without quality loss. 100% private client-side processing with zero server uploads."
+      content="Reduce image file sizes instantly with minimal quality loss. 100% private client-side processing with zero server uploads."
     />
     <meta name="twitter:creator" content="@huzikitoffical" />
 
@@ -945,10 +948,10 @@
               </h1>
 
               <p class="hero-desc">
-                Reduce image file sizes by up to 80% without visible loss in
-                quality. Fast, lossless and lossy batch optimization for JPG,
-                PNG, and WebP directly inside your browser. No files are ever
-                sent to a server.
+                Reduce image file sizes by up to 80% with minimal visible
+                quality loss. Fast, lossless and lossy batch optimization for
+                JPG, PNG, and WebP directly inside your browser. No files are
+                ever sent to a server.
               </p>
 
               <div class="hero-features-list">
@@ -965,7 +968,7 @@
                   >
                     <polyline points="20 6 9 17 4 12"></polyline>
                   </svg>
-                  <span>Zero File Upload Limits</span>
+                  <span>No Account Required</span>
                 </div>
                 <div class="hero-feature-pill">
                   <svg
@@ -1010,7 +1013,7 @@
                       <span class="iso-mock-dot"></span>
                       <span class="iso-mock-dot"></span>
                     </div>
-                    <span class="iso-mock-tag">Canvas Engine</span>
+                    <span class="iso-mock-tag">Example Preview</span>
                   </div>
 
                   <div class="iso-preview-split">
@@ -1114,7 +1117,7 @@
                 <span class="format-badge">JPG / JPEG</span>
                 <span class="format-badge">PNG</span>
                 <span class="format-badge">WebP</span>
-                <span class="format-badge">Unlimited Size</span>
+                <span class="format-badge">Batch Supported</span>
               </div>
               <!-- Hidden Native File Input -->
               <input
@@ -1797,7 +1800,7 @@
           <div class="section-header">
             <span class="section-eyebrow">Quick Knowledge</span>
             <h2 class="section-title" id="directAnswersHeading">
-              Direct Answers for Search &amp; AI Assist
+              Direct Answers for Search & AI Assist
             </h2>
             <p class="section-desc">
               Concise, authoritative answers to the most common inquiries
@@ -1891,7 +1894,7 @@
               </h2>
               <p>
                 In modern web engineering and digital content publishing,
-                digital imagery accounts for over 60% of total webpage payload.
+                digital imagery often accounts for around half of total webpage payload.
                 As search engine ranking algorithms place unprecedented emphasis
                 on user experience and Core Web Vitals, optimizing visual assets
                 without degrading artistic intent has evolved from an optional
@@ -1950,8 +1953,7 @@
                 privacy risks for confidential documents.
               </p>
               <p>
-                Huzikit revolutionizes this process by executing compression
-                100% inside your client browser using standard web APIs:
+                Huzikit handles this differently by running compression entirely inside your browser using standard web APIs:
               </p>
               <ol>
                 <li>
@@ -1975,9 +1977,7 @@
                 </li>
                 <li>
                   <strong>Direct Blob Generation:</strong> The browser's native
-                  <code>canvas.toBlob()</code> method executes high-performance
-                  hardware-accelerated quantization in compiled C++ browser
-                  code, returning a compressed binary <code>Blob</code> object
+                  <code>canvas.toBlob()</code> method executes fast quantization in compiled browser code returning a compressed binary <code>Blob</code> object
                   in fractions of a second.
                 </li>
               </ol>
@@ -2049,10 +2049,7 @@
                 </li>
                 <li>
                   <strong>Audit Actual Savings:</strong> Always verify
-                  before-and-after metrics. Huzikit calculates genuine byte
-                  comparisons and will explicitly alert you if re-encoding an
-                  already hyper-compressed file would inadvertently result in a
-                  larger payload.
+                  before-and-after metrics. Huzikit shows the real before-and-after file sizes, so you can see when re-encoding an already compressed file makes it larger.
                 </li>
                 <li>
                   <strong>Leverage Batch Processing:</strong> Queue multiple
@@ -2271,10 +2268,7 @@
                 </svg>
               </button>
               <div class="faq-answer-panel">
-                There are zero file limits, file size restrictions, or
-                subscription requirements. Because processing occurs directly in
-                your browser's RAM, you can queue multiple images simultaneously
-                without restrictions.
+              We do not set a limit on the number or size of images, and there is no subscription or sign-up. Because processing happens in your browser's memory, very large images or very large batches may be limited by your device.
               </div>
             </div>
 
