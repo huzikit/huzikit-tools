@@ -117,7 +117,7 @@ const HUZIHUB_TOOLS = [
       "split",
       "diners",
     ],
-    url: "/calculators/tip-calculator.html",
+    url: "/calculator/tip-calculator.html",
   },
   {
     name: "GPA Calculator",
@@ -146,7 +146,7 @@ const HUZIHUB_TOOLS = [
     category: "Image & PDF",
     description: "Convert PDF documents into editable Word files.",
     keywords: ["pdf", "word", "convert", "doc"],
-    url: "/image-pdf/pdf-to-word.html",
+    url: "/image-pdf/pdftowordconverter.html",
   },
   {
     name: "JPG to PNG",

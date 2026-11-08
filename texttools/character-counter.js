@@ -121,7 +121,7 @@
       name: "PDF to Word",
       category: "Image & PDF",
       description: "Convert PDF documents into editable Word files.",
-      url: "/image-pdf/pdf-to-word.html",
+      url: "/image-pdf/pdftowordconverter.html",
     },
     {
       name: "JPG to PNG",

@@ -352,7 +352,7 @@ const toolsIndex = [
     category: "Calculators",
     description: "Calculate gratuities and split restaurant bills.",
     keywords: ["tip calculator", "gratuity", "bill split"],
-    url: "/calculators/tip-calculator.html",
+    url: "/calculator/tip-calculator.html",
   },
   {
     name: "GPA Calculator",
@@ -381,7 +381,7 @@ const toolsIndex = [
     category: "Image & PDF",
     description: "Convert PDF documents to editable Word files.",
     keywords: ["pdf to word", "convert pdf", "document"],
-    url: "/image-pdf/pdf-to-word.html",
+    url: "/image-pdf/pdftowordconverter.html",
   },
   {
     name: "JPG to PNG",

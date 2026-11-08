@@ -118,7 +118,7 @@
       name: "Tip Calculator",
       category: "Calculators",
       description: "Calculate restaurant tips and split bills among groups.",
-      url: "/calculators/tip-calculator.html",
+      url: "/calculator/tip-calculator.html",
       keywords: ["tip", "restaurant", "bill", "split", "calculator"],
     },
     {
@@ -147,7 +147,7 @@
       name: "PDF to Word",
       category: "Image & PDF",
       description: "Convert PDF documents into editable Word files securely.",
-      url: "/image-pdf/pdf-to-word.html",
+      url: "/image-pdf/pdftowordconverter.html",
       keywords: ["pdf", "word", "convert", "document"],
     },
     {

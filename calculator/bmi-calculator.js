@@ -111,7 +111,7 @@
       name: "Tip Calculator",
       category: "Calculators",
       description: "Calculate tips and split bills among groups.",
-      url: "/calculators/tip-calculator.html",
+      url: "/calculator/tip-calculator.html",
       keywords: "tip calculator bill split",
     },
     {
@@ -140,7 +140,7 @@
       name: "PDF to Word",
       category: "Image & PDF",
       description: "Convert PDF documents to editable Word files.",
-      url: "/image-pdf/pdf-to-word.html",
+      url: "/image-pdf/pdftowordconverter.html",
       keywords: "pdf to word converter document",
     },
     {

@@ -459,7 +459,7 @@ function initSearch() {
     {
       name: "Tip Calculator",
       category: "Calculators",
-      url: "/calculators/tip-calculator.html",
+      url: "/calculator/tip-calculator.html",
       tag: "calc",
     },
     {
@@ -485,7 +485,7 @@ function initSearch() {
     {
       name: "PDF to Word Converter",
       category: "Image & PDF",
-      url: "/image-pdf/pdf-to-word.html",
+      url: "/image-pdf/pdftowordconverter.html",
       tag: "image",
     },
     {

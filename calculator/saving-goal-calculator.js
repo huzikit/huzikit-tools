@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       name: "Tip Calculator",
       category: "Calculators",
-      url: "/calculators/tip-calculator.html",
+      url: "/calculator/tip-calculator.html",
       desc: "Split bills & tips easily",
     },
     {
@@ -123,7 +123,7 @@ document.addEventListener("DOMContentLoaded", () => {
     {
       name: "PDF to Word",
       category: "Image & PDF",
-      url: "/image-pdf/pdf-to-word.html",
+      url: "/image-pdf/pdftowordconverter.html",
       desc: "Document format conversion",
     },
     {

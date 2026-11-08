@@ -101,7 +101,7 @@
     {
       name: "Tip Calculator",
       cat: "Calculators",
-      url: "/calculators/tip-calculator.html",
+      url: "/calculator/tip-calculator.html",
       keywords: "bill split dining gratuity percentage",
     },
     {
@@ -127,7 +127,7 @@
     {
       name: "PDF to Word",
       cat: "Image & PDF",
-      url: "/image-pdf/pdf-to-word.html",
+      url: "/image-pdf/pdftowordconverter.html",
       keywords: "document convert docx extract pdf",
     },
     {

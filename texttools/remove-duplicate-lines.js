@@ -196,7 +196,7 @@
     {
       title: "PDF to Word",
       cat: "Image & PDF",
-      url: "/image-pdf/pdf-to-word.html",
+      url: "/image-pdf/pdftowordconverter.html",
     },
     {
       title: "JPG to PNG",
