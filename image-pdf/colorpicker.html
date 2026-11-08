@@ -2228,19 +2228,19 @@
               black).
             </li>
             <li>
-              <strong>Hue Slider (0):</strong> Selects the dominant wavelength
+              <strong>Hue Slider (θ):</strong> Selects the dominant wavelength
               angle on a 360-degree color circle, spanning red (0°), yellow
               ($60^\circ$), green ($120^\circ$), cyan ($180^\circ$), blue
               ($240^\circ$), magenta ($300^\circ$), and returning to red
               ($360^\circ$).
             </li>
             <li>
-              <strong>Alpha Slider (0):</strong> Maps transparency from 0.0
+              <strong>Alpha Slider (a):</strong> Maps transparency from 0.0
               (completely invisible) to 1.0 (fully opaque).
             </li>
           </ol>
           <p>
-            Once the HSV ($Hue, Saturation, Value$) coordinates are determined,
+            Once the HSV (Hue, Saturation, Value) coordinates are determined,
             mathematical transformation algorithms instantly convert these
             values into additive RGB channels, hexadecimal strings, and
             perceptual HSL coordinates in real time.
@@ -2280,7 +2280,7 @@
           <p>
             Eight-digit hex notation (such as <code>#4F46E580</code>) appends
             two additional hex digits representing the alpha transparency
-            channel (<code>80</code> in hex = 128 / 255 $\approx$ 50% opacity).
+            channel (<code>80</code> in hex = 128 / 255 ≈ 50% opacity).
           </p>
 
           <h2>What is RGB and RGBA?</h2>
@@ -2288,16 +2288,16 @@
             <strong>RGB</strong> (Red, Green, Blue) is an additive color model
             based on human trichromatic vision. Because digital monitors and
             phone screens emit light directly into the viewer's eyes, combining
-            red, green, and blue light at full strength ($255, 255, 255$)
-            produces pure white, while turning off all subpixels ($0, 0, 0$)
-            produces pure black.
+            red, green, and blue light at full strength (255, 255, 255) produces
+            pure white, while turning off all subpixels ($0, 0, 0) produces pure
+            black.
           </p>
           <p>
-            <strong>RGBA</strong> extends RGB by including an alpha channel
-            ($A$), represented either as a floating-point number from $0.0$ to
-            $1.0$ or a percentage. RGBA enables designers to construct
-            translucent overlays, tinted modal backdrops, and glassy surface
-            effects without affecting child element opacity.
+            <strong>RGBA</strong> extends RGB by including an alpha channel (A),
+            represented either as a floating-point number from 0.0 to 1.0 or a
+            percentage. RGBA enables designers to construct translucent
+            overlays, tinted modal backdrops, and glassy surface effects without
+            affecting child element opacity.
           </p>
 
           <h2>What is HSL and HSLA?</h2>
@@ -2322,7 +2322,7 @@
               <tbody>
                 <tr>
                   <td><strong>Hue (H)</strong></td>
-                  <td>$0^\circ - 360^\circ$</td>
+                  <td>0° - 360°</td>
                   <td>
                     The color family angle on the chromatic wheel (e.g.,
                     $243^\circ$ for indigo).
@@ -2330,7 +2330,7 @@
                 </tr>
                 <tr>
                   <td><strong>Saturation (S)</strong></td>
-                  <td>$0\% - 100\%$</td>
+                  <td>0% - 100%</td>
                   <td>
                     Color purity: 0% is dull neutral gray; 100% is maximum vivid
                     pigment.
@@ -2338,7 +2338,7 @@
                 </tr>
                 <tr>
                   <td><strong>Lightness (L)</strong></td>
-                  <td>$0\% - 100\%$</td>
+                  <td>0% - 100%</td>
                   <td>
                     Photometric brightness: 0% is pitch black, 50% is pure
                     color, 100% is white.
@@ -2441,8 +2441,8 @@
             color blindness.
           </p>
           <p>
-            Contrast is expressed as a ratio from $1:1$ (identical colors, zero
-            contrast) to $21:1$ (pure black on pure white). To satisfy WCAG
+            Contrast is expressed as a ratio from $1:$ (identical colors, zero
+            contrast) to 21:1 (pure black on pure white). To satisfy WCAG
             conformance:
           </p>
           <ul
@@ -2705,8 +2705,8 @@
                 HSL represents Hue, Saturation, and Lightness. It is especially
                 useful when creating hover states, accessible button variations,
                 or dynamic dark-mode color themes because you can adjust
-                brightness ($L$) or vibrancy ($S$) while keeping the fundamental
-                color hue ($H$) constant.
+                brightness (L) or vibrancy (S) while keeping the fundamental
+                color hue (H) constant.
               </p>
             </div>
           </div>
