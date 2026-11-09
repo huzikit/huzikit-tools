@@ -21,10 +21,14 @@
       property="og:url"
       content="https://huzikit.com/developertools/base64encoderdecoder.html"
     />
+    <meta property="og:image" content="https://huzikit.com/assets/og-image.png">
+    <meta name="twitter:image" content="https://huzikit.com/assets/og-image.png"> 
+    <meta name="robots" content="index, follow">
     <meta
       property="og:title"
       content="Free Base64 Encoder & Decoder Online — Text, Files & Images | Huzikit"
     />
+    <meta name="twitter:site" content="@huzikitoffical">
     <meta
       property="og:description"
       content="Encode and decode text, binary files, and image data with full UTF-8 Unicode, URL-safe Base64, and Data URI support directly in your browser."
@@ -626,9 +630,7 @@
             <h1 class="hero-title">Free Base64 Encoder & Decoder Online</h1>
             <p class="hero-description">
               Encode and decode text, files, and supported image data while
-              working with UTF-8, URL-safe Base64, and Data URLs. Built for
-              developers, designers, and API engineers with zero data
-              transmission.
+              working with UTF-8, URL-safe Base64, and Data URLs. Built for developers, designers, and API engineers. Your data stays in your browser.
             </p>
 
             <div class="hero-trust-badges">
@@ -1165,9 +1167,7 @@
                 Drag & Drop Any File or Image to Encode
               </div>
               <p class="dropzone-subtitle">
-                Supports PNG, JPEG, WebP, SVG, PDF, TXT, JSON, CSV, ZIP, and
-                binary files up to 25 MB. Processed 100% locally in browser
-                memory.
+               Supports PNG, JPEG, WebP, SVG, PDF, TXT, JSON, CSV, ZIP, and other files up to 25 MB. Processed locally in your browser's memory.
               </p>
             </div>
 
@@ -1353,154 +1353,6 @@
         </div>
       </div>
     </main>
-
-    <!-- =========================================================================
-       EDUCATIONAL SECTIONS & MICRO-CARDS (GEO & AI Search Answer-First)
-       ========================================================================= -->
-    <section class="education-section" id="education-section">
-      <div class="container">
-        <div class="section-head">
-          <span class="section-eyebrow">Developer Knowledge Base</span>
-          <h2 class="section-h2">
-            Understanding Base64 Encoding, UTF-8 & Architecture
-          </h2>
-          <p class="section-lead">
-            Technical insights into how 24-bit binary chunks map to 64 ASCII
-            characters, why Base64 is not encryption, and how modern developers
-            avoid Unicode truncation defects.
-          </p>
-        </div>
-
-        <!-- Educational Micro-cards -->
-        <div class="microcards-grid">
-          <div class="microcard">
-            <div class="microcard-icon">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path d="M4 7V4h16v3M9 20h6M12 4v16" />
-              </svg>
-            </div>
-            <h3 class="microcard-title">What is Base64?</h3>
-            <p class="microcard-body">
-              Base64 is a binary-to-text encoding format formalized in RFC 4648.
-              It takes raw binary data (such as compiled code, files, or UTF-8
-              bytes) and represents it using a safe 64-character subset of ASCII
-              printable characters.
-            </p>
-          </div>
-
-          <div class="microcard">
-            <div class="microcard-icon">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-              </svg>
-            </div>
-            <h3 class="microcard-title">Is Base64 Encryption?</h3>
-            <p class="microcard-body">
-              <strong>No, never.</strong> Base64 is an encoding method, not
-              encryption. It contains no secret key, provides zero data
-              confidentiality, and can be reversed instantaneously by any
-              machine or human with a Base64 table.
-            </p>
-          </div>
-
-          <div class="microcard">
-            <div class="microcard-icon">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
-                <polyline points="17 6 23 6 23 12"></polyline>
-              </svg>
-            </div>
-            <h3 class="microcard-title">Does Base64 Compress Files?</h3>
-            <p class="microcard-body">
-              <strong>No.</strong> Base64 actually increases data volume by
-              ~33.3%. Every 3 bytes of raw binary (24 bits) are expanded into 4
-              ASCII characters (32 bits), plus occasional padding characters.
-            </p>
-          </div>
-
-          <div class="microcard">
-            <div class="microcard-icon">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <circle cx="12" cy="12" r="10"></circle>
-                <line x1="2" y1="12" x2="22" y2="12"></line>
-                <path
-                  d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
-                ></path>
-              </svg>
-            </div>
-            <h3 class="microcard-title">What is URL-Safe Base64?</h3>
-            <p class="microcard-body">
-              Standard Base64 uses <code>+</code> and <code>/</code>, which have
-              reserved syntactic meanings in URL paths and query strings.
-              URL-safe Base64 substitutes <code>-</code> for <code>+</code> and
-              <code>_</code> for <code>/</code>.
-            </p>
-          </div>
-
-          <div class="microcard">
-            <div class="microcard-icon">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                <circle cx="8.5" cy="8.5" r="1.5"></circle>
-                <polyline points="21 15 16 10 5 21"></polyline>
-              </svg>
-            </div>
-            <h3 class="microcard-title">What is a Base64 Data URI?</h3>
-            <p class="microcard-body">
-              A Data URI prefixes raw Base64 data with a MIME descriptor:
-              <code>data:[mime-type];base64,[payload]</code>. This allows
-              embedding images, fonts, or SVGs directly in HTML and CSS without
-              separate HTTP roundtrips.
-            </p>
-          </div>
-
-          <div class="microcard">
-            <div class="microcard-icon">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-              </svg>
-            </div>
-            <h3 class="microcard-title">Is Base64 Safe for Passwords?</h3>
-            <p class="microcard-body">
-              <strong>Absolutely not.</strong> Storing passwords as Base64 is
-              equivalent to storing them in clear plaintext. Passwords must
-              always be salted and hashed using modern cryptographic algorithms
-              like Argon2id or bcrypt.
-            </p>
-          </div>
-        </div>
-
         <!-- Comprehensive Technical Content (1,200+ Words) -->
         <div class="deep-content-wrap">
           <div class="content-block">
@@ -1620,9 +1472,7 @@
               <code>Uint8Array</code>. We then convert those discrete byte
               octets in safe chunks of 8,192 bytes before applying Base64
               framing. On decode, the binary stream is decoded back into text
-              using <code>TextDecoder('utf-8', { fatal: true })</code>, ensuring
-              flawless multi-byte fidelity without memory leaks or call stack
-              overflow.
+              using <code>TextDecoder('utf-8', { fatal: true })</code>, so multi-byte characters are handled correctly.
             </p>
           </div>
 
@@ -1955,8 +1805,7 @@
               Yes. Huzikit incorporates complete UTF-8 encoding support via the
               native <code>TextEncoder</code> and <code>TextDecoder</code> web
               standards. Accented characters, Urdu, Arabic, Chinese, Japanese,
-              Korean, Cyrillic, and emojis (e.g., 🚀, 👋) encode and decode with
-              100% precision.
+              Korean, Cyrillic, and emojis (e.g., 🚀, 👋) encode and decode correctly
             </div>
           </div>
 
@@ -1979,8 +1828,7 @@
               </svg>
             </button>
             <div class="faq-content" id="faq-ans-11">
-              Yes, completely free. There are no subscriptions, no premium
-              feature locks, no usage limits, and no accounts required. All
+              Yes, completely free. There are no subscriptions, no premium feature locks, and no accounts required. All
               advanced capabilities (URL-safe mode, batch queues, binary file
               exports, and hex conversion) are accessible to all users.
             </div>
