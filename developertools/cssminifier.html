@@ -3,9 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      Free CSS Minifier – Compress & Optimize CSS | HuziKit
-    </title>
+    <title>Free CSS Minifier – Compress & Optimize CSS | HuziKit</title>
     <meta
       name="description"
       content="Minify and optimize CSS online with HuziKit’s free CSS Minifier. Remove unnecessary spaces and comments, reduce file size, and improve stylesheet loading performance."
@@ -22,25 +20,34 @@
       content="https://huzikit.com/developertools/cssminifier.html"
     />
     <meta
+      property="og:image"
+      content="https://huzikit.com/assets/og-image.png"
+    />
+    <meta
+      name="twitter:image"
+      content="https://huzikit.com/assets/og-image.png"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta
       property="og:title"
       content="Free CSS Minifier Online — Minify &amp; Optimize CSS | Huzikit"
     />
     <meta
       property="og:description"
-      content="Free online CSS Minifier to compress, clean, and optimize your stylesheets instantly. Reduce file size, boost Core Web Vitals, and eliminate dead weight."
+      content="Free online CSS Minifier to compress, clean, and optimize your stylesheets instantly. Reduce file size and remove dead weight."
     />
     <meta property="og:site_name" content="Huzikit" />
 
     <!-- Twitter / X -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@huzihuboffical" />
+    <meta name="twitter:site" content="@huzikitoffical" />
     <meta
       name="twitter:title"
       content="Free CSS Minifier Online — Minify &amp; Optimize CSS | Huzikit"
     />
     <meta
       name="twitter:description"
-      content="Free online CSS Minifier to compress, clean, and optimize your stylesheets instantly. Reduce file size and boost Core Web Vitals."
+      content="Free online CSS Minifier to compress, clean, and optimize your stylesheets instantly.Reduce file size and remove dead weight."
     />
 
     <!-- Google Fonts: Lexend, Inter, JetBrains Mono -->
@@ -680,7 +687,7 @@
               itemscope
               itemtype="https://schema.org/ListItem"
             >
-              <a href="/developertools/" itemprop="item"
+              <a href="/toolpage.html" itemprop="item"
                 ><span itemprop="name">Developer Tools</span></a
               >
               <meta itemprop="position" content="2" />
@@ -724,8 +731,7 @@
               <p class="hero-description">
                 Compress, clean, and optimize your stylesheets in real time.
                 Strip dead whitespace, remove comments, shorten color hex codes,
-                and maximize your Core Web Vitals score without altering
-                rendering integrity.
+                and help your pages load faster without changing how they look.
               </p>
               <div class="hero-quick-features">
                 <span class="quick-pill">
@@ -737,7 +743,7 @@
                   >
                     <polyline points="20 6 9 17 4 12" />
                   </svg>
-                  Zero Horizontal Overflow
+                  Works on Mobile
                 </span>
                 <span class="quick-pill">
                   <svg
@@ -775,7 +781,7 @@
                       <span class="mock-dot"></span>
                       <span class="mock-dot"></span>
                     </div>
-                    <span>style.css — 24.8 KB</span>
+                    <span>Example: style.css</span>
                   </div>
                   <div class="code-mock-body">
                     <div class="code-line-dim">/* Unminified stylesheet */</div>
@@ -803,7 +809,7 @@
                       <span class="mock-dot"></span>
                       <span class="mock-dot"></span>
                     </div>
-                    <span>style.min.css — 13.4 KB</span>
+                    <span>Example: style.min.css</span>
                   </div>
                   <div class="code-mock-body">
                     <div class="code-line-dim">
@@ -1656,11 +1662,13 @@
               </button>
               <div class="faq-answer">
                 <p>
-                  No. Standard CSS minification respects CSS syntax
-                  specifications. Quoted strings, font family names with spaces,
-                  embedded data URIs, mathematical expressions inside
-                  <code>calc()</code>, and CSS custom properties (variables) are
-                  safely preserved by our tokenization engine.
+                  It should not. The tool is built to keep quoted strings, font
+                  family names with spaces, embedded data URIs,
+                  <code>calc()</code> expressions, and CSS custom properties
+                  (variables) intact. Even so, Aggressive mode makes more
+                  changes than Standard mode, so always test your minified CSS
+                  on your own pages before deploying it, and keep your original
+                  file as a backup.
                 </p>
               </div>
             </div>
@@ -1749,8 +1757,7 @@
                 <p>
                   Never. The Huzikit CSS Minifier runs 100% client-side inside
                   your web browser. Your CSS code, custom designs, and assets
-                  never leave your device, ensuring complete privacy, security,
-                  and GDPR compliance.
+                  never leave your device, so your code stays private.
                 </p>
               </div>
             </div>
