@@ -346,7 +346,7 @@
       categoryLabel: "Image & PDF",
       url: "/image-pdf/image-compressor.html",
       description:
-        "Compress JPEG, PNG, and WebP images directly in your browser without quality loss.",
+        "Compress JPEG, PNG, and WebP images directly in your browser with minimal quality loss.",
       keywords: [
         "compress",
         "image compressor",
@@ -409,8 +409,7 @@
       category: "image",
       categoryLabel: "Image & PDF",
       url: "/image-pdf/jpg-to-png.html",
-      description:
-        "Convert JPG images to transparent PNG format with high-fidelity output.",
+      description: "Convert JPG images to PNG format directly in your browser.",
       keywords: [
         "jpg",
         "png",
