@@ -4,157 +4,199 @@
     <!-- Homepage -->
     <url>
         <loc>https://www.huzikit.com/</loc>
+        <lastmod>2026-11-11</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
+    </url>
+    <!-- toolpage -->
+    <url>
+        <loc>https://www.huzikit.com/toolpage.html</loc>
+        <lastmod>2026-11-11</lastmod>
+        <priority>0.8</priority>
     </url>
 
     <!-- Text Tools -->
     <url>
         <loc>https://www.huzikit.com/texttools/word-counter.html</loc>
+        <lastmod>2026-11-11</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.huzikit.com/texttools/character-counter.html</loc>
+        <lastmod>2026-11-11</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.huzikit.com/texttools/case-converter.html</loc>
+        <lastmod>2026-11-11</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.huzikit.com/texttools/remove-duplicate-lines.html</loc>
+        <lastmod>2026-11-11</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.huzikit.com/texttools/loremipsumgenerator.html</loc>
+        <lastmod>2026-11-11</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.huzikit.com/texttools/passwordgenerator.html</loc>
+        <lastmod>2026-11-11</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.huzikit.com/texttools/text-reverser.html</loc>
+        <lastmod>2026-11-11</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.huzikit.com/texttools/onlinenotepad.html</loc>
+        <lastmod>2026-11-11</lastmod>
         <priority>0.8</priority>
     </url>
 
     <!-- Calculators -->
     <url>
         <loc>https://www.huzikit.com/calculator/agecalculator.html</loc>
+        <lastmod>2026-11-11</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.huzikit.com/calculator/bmi-calculator.html</loc>
+        <lastmod>2026-11-11</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.huzikit.com/calculator/percentage-calculator.html</loc>
+        <lastmod>2026-11-11</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.huzikit.com/calculator/Calorie-Calculator.html</loc>
+        <lastmod>2026-11-11</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.huzikit.com/calculator/discount-calculator.html</loc>
+        <lastmod>2026-11-11</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.huzikit.com/calculator/saving-goal-calculator.html</loc>
+        <lastmod>2026-11-11</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.huzikit.com/calculator/tip-calculator.html</loc>
+        <lastmod>2026-11-11</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.huzikit.com/calculator/gpa-calculator.html</loc>
+        <lastmod>2026-11-11</lastmod>
         <priority>0.8</priority>
     </url>
 
     <!-- Image and PDF Tools -->
     <url>
         <loc>https://www.huzikit.com/image-pdf/image-compressor.html</loc>
+        <lastmod>2026-11-11</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.huzikit.com/image-pdf/image-resizer.html</loc>
+        <lastmod>2026-11-11</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.huzikit.com/image-pdf/pdftowordconverter.html</loc>
+        <lastmod>2026-11-11</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.huzikit.com/image-pdf/jpg-to-png.html</loc>
+        <lastmod>2026-11-11</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.huzikit.com/image-pdf/colorpicker.html</loc>
+        <lastmod>2026-11-11</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.huzikit.com/image-pdf/QRGenrator.html</loc>
+        <lastmod>2026-11-11</lastmod>
         <priority>0.8</priority>
     </url>
 
     <!-- Developer Tools -->
     <url>
         <loc>https://www.huzikit.com/developertools/JSONFORMATTER.html</loc>
+        <lastmod>2026-11-11</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.huzikit.com/developertools/base64encoderdecoder.html</loc>
+        <lastmod>2026-11-11</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.huzikit.com/developertools/urlencoderdecoder.html</loc>
+        <lastmod>2026-11-11</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.huzikit.com/developertools/meta-tag-generator.html</loc>
+        <lastmod>2026-11-11</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.huzikit.com/developertools/regextester.html</loc>
+        <lastmod>2026-11-11</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.huzikit.com/developertools/markdownhtml.html</loc>
+        <lastmod>2026-11-11</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.huzikit.com/developertools/cssminifier.html</loc>
+        <lastmod>2026-11-11</lastmod>
         <priority>0.8</priority>
     </url>
     <url>
         <loc>https://www.huzikit.com/developertools/unixtimestamp.html</loc>
+        <lastmod>2026-11-11</lastmod>
         <priority>0.8</priority>
     </url>
 
     <!-- Company and Legal Pages -->
     <url>
         <loc>https://www.huzikit.com/about.html</loc>
+        <lastmod>2026-11-11</lastmod>
         <priority>0.4</priority>
     </url>
     <url>
         <loc>https://www.huzikit.com/disclamier.html</loc>
+        <lastmod>2026-11-11</lastmod>
         <priority>0.4</priority>
     </url>
     <url>
         <loc>https://www.huzikit.com/privacy-policies.html</loc>
+        <lastmod>2026-11-11</lastmod>
         <priority>0.4</priority>
     </url>
     <url>
         <loc>https://www.huzikit.com/Termsofservices.html</loc>
+        <lastmod>2026-11-11</lastmod>
         <priority>0.4</priority>
     </url>
     <url>
         <loc>https://www.huzikit.com/contact-us.html</loc>
+        <lastmod>2026-11-11</lastmod>
         <priority>0.5</priority>
     </url>
 
