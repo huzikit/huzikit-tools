@@ -175,7 +175,7 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   ];
 
-  const SUPPORT_EMAIL = "support@huzikit.com";
+  const SUPPORT_EMAIL = "huzikitoffical@gmail.com";
   const GMAIL_BASE = "https://mail.google.com/mail/?view=cm&fs=1";
 
   // Topic subject map
@@ -261,7 +261,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         showToast("Email address copied.");
       } catch (err) {
-        showToast("Email: support@huzikit.com");
+        showToast("Email: huzikitoffical@gmail.com");
       }
     });
   });
